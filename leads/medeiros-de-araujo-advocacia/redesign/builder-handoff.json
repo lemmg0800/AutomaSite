@@ -1,18 +1,18 @@
 {
-  "slug": "pedro-de-queiroz-advocacia",
-  "company_name": "Pedro de Queiroz Advocacia",
-  "original_website": "https://pedrodequeiroz.adv.br/",
-  "platform_preview_url": "/preview/pedro-de-queiroz-advocacia",
-  "platform_production_url": "/pedro-de-queiroz-advocacia",
-  "niche": "Direito Cível Estratégico, Contratos & Família",
+  "slug": "medeiros-de-araujo-advocacia",
+  "company_name": "Medeiros de Araújo Advocacia",
+  "original_website": "https://www.medeirosdearaujo.adv.br/",
+  "platform_preview_url": "/preview/medeiros-de-araujo-advocacia",
+  "platform_production_url": "/medeiros-de-araujo-advocacia",
+  "niche": "Direito Empresarial, Societário & Tributário",
   "city": "Florianópolis - SC",
   "status": "draft",
-  "created_at": "2026-09-17T23:16:07.552Z",
-  "gap_resolved": "Nome de prestígio no judiciário catarinense, porém site não transmite a exclusividade e autoridade do titular.",
+  "created_at": "2026-09-17T23:16:09.907Z",
+  "gap_resolved": "Localizado no maior polo tecnológico de Florianópolis (SC-401), mas comunica-se através de um portal corporativo de 2015.",
   "top_problems_fixed": [
-    "Design baseado em tema pré-fabricado genérico que enfraquece a autoridade pessoal do titular",
-    "Ausência de canal direto e simplificado de agendamento de consulta cível",
-    "Tipografia pequena com baixo contraste prejudicando leitura em telas de celular"
+    "Design corporativo tradicional e estático, desconectado do ecossistema de inovação da SC-401",
+    "Layout shift severo (CLS 0.22) na abertura de banners no celular",
+    "Falta de linguagem visual orientada a startups, contratos SaaS e governança societária"
   ],
   "components_used": [
     "Header",
@@ -33,7 +33,7 @@
   ],
   "primary_cta": {
     "label": "Agendar Atendimento",
-    "destination": "https://wa.me/5548996552233"
+    "destination": "https://wa.me/5548999881122"
   },
   "brand_identity_preserved": [
     "Cores institucionais e identidade da marca preservadas com design tokens",
@@ -41,7 +41,7 @@
     "Canais oficiais de atendimento da empresa"
   ],
   "pagespeed": {
-    "original_mobile": "44",
+    "original_mobile": "42",
     "redesign_mobile": "98"
   },
   "screenshots": {

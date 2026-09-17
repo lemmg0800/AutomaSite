@@ -1,9 +1,9 @@
-﻿# Relatório de Transformação Digital & Redesign — Pedro de Queiroz Advocacia
+﻿# Relatório de Transformação Digital & Redesign — Medeiros de Araújo Advocacia
 
 **Data de Conclusão:** 17/09/2026  
-**Segmento:** Direito Cível Estratégico, Contratos & Família  
+**Segmento:** Direito Empresarial, Societário & Tributário  
 **Localização:** Florianópolis - SC  
-**Site Original:** [https://pedrodequeiroz.adv.br/](https://pedrodequeiroz.adv.br/)  
+**Site Original:** [https://www.medeirosdearaujo.adv.br/](https://www.medeirosdearaujo.adv.br/)  
 **Status do Projeto:** `aguardando_aprovacao` (Pronto para apresentação comercial)
 
 ---
@@ -12,7 +12,7 @@
 
 | Dimensão | Antes (Site Original) | Depois (Redesign Demonstrativo) | Ganho Estratégico |
 | :--- | :--- | :--- | :--- |
-| **Performance Mobile** | **44/100** (LCP 4.5s) | **Instantânea** (<0.8s) | Retenção máxima de tráfego 4G |
+| **Performance Mobile** | **42/100** (LCP 4.9s) | **Instantânea** (<0.8s) | Retenção máxima de tráfego 4G |
 | **Identidade Visual** | Padrão genérico de 2017 | Editorial boutique contemporâneo | Percepção de altíssimo valor |
 | **Canal de Conversão** | Formulário oculto/longo | Botão WhatsApp 1-clique fixo | Aumento imediato de contatos |
 | **Adequação Mobile** | Elementos comprimidos | Ergonomia total para o polegar | Fluidez em qualquer tela |
@@ -21,15 +21,15 @@
 
 ## 2. O Principal Contraste Superado (GAP)
 
-> **Antes:** *"Nome de prestígio no judiciário catarinense, porém site não transmite a exclusividade e autoridade do titular."*  
-> **Depois:** O redesign posiciona a **Pedro de Queiroz Advocacia** com a imponência e rigor estético compatíveis com uma das principais bancas de Direito Cível Estratégico, Contratos & Família de Florianópolis.
+> **Antes:** *"Localizado no maior polo tecnológico de Florianópolis (SC-401), mas comunica-se através de um portal corporativo de 2015."*  
+> **Depois:** O redesign posiciona a **Medeiros de Araújo Advocacia** com a imponência e rigor estético compatíveis com uma das principais bancas de Direito Empresarial, Societário & Tributário de Florianópolis.
 
 ---
 
 ## 3. Os 3 Problemas Críticos Solucionados
 
 ### 1. Lentidão no Smartphone
-- **Como era:** Site original demorava mais de 4.5s para interagir no mobile.
+- **Como era:** Site original demorava mais de 4.9s para interagir no mobile.
 - **Como ficou:** Arquitetura limpa em HTML5/Tailwind sem scripts de bloqueio, garantindo carregamento instantâneo.
 - **Evidência:** Captura comparativa mobile.
 
@@ -47,7 +47,7 @@
 
 ## 4. Arquivos Entregues pelo Builder
 
-- **Código do Site:** `leads/pedro-de-queiroz-advocacia/redesign/site/index.html` (com `styles.css` e `script.js`)
+- **Código do Site:** `leads/medeiros-de-araujo-advocacia/redesign/site/index.html` (com `styles.css` e `script.js`)
 - **Capturas de Evidência:**
   - `redesign/screenshots/home-desktop.png`
   - `redesign/screenshots/home-mobile.png`

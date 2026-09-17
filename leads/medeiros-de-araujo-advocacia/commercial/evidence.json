@@ -1,0 +1,43 @@
+{
+  "slug": "medeiros-de-araujo-advocacia",
+  "company_name": "Medeiros de Araújo Advocacia",
+  "city": "Florianópolis - SC",
+  "niche": "Direito Empresarial, Societário & Tributário",
+  "original_site": {
+    "url": "https://www.medeirosdearaujo.adv.br/",
+    "pagespeed_mobile": "42",
+    "lcp": "4.9s",
+    "fcp": "2.8s"
+  },
+  "redesign": {
+    "preview_url": "https://meudominio.com/preview/medeiros-de-araujo-advocacia",
+    "production_url": "https://meudominio.com/medeiros-de-araujo-advocacia",
+    "pagespeed_mobile": "98",
+    "lcp": "< 1.0s",
+    "fcp": "< 0.5s"
+  },
+  "issues_identified": [
+    "Design corporativo tradicional e estático, desconectado do ecossistema de inovação da SC-401",
+    "Layout shift severo (CLS 0.22) na abertura de banners no celular",
+    "Falta de linguagem visual orientada a startups, contratos SaaS e governança societária"
+  ],
+  "improvements_implemented": [
+    "Primeira dobra moderna e objetiva comunicando autoridade e especialidade imediata",
+    "Botão flutuante de WhatsApp fixo permitindo contato com apenas 1 clique em qualquer rolagem",
+    "Carregamento mobile otimizado atingindo pontuação máxima de performance no Google",
+    "Preservação integral da identidade visual e cores originais da marca através de Design Tokens"
+  ],
+  "visual_evidence": {
+    "before_desktop": "leads/medeiros-de-araujo-advocacia/screenshots/site-desktop.png",
+    "before_mobile": "leads/medeiros-de-araujo-advocacia/screenshots/site-mobile.png",
+    "after_desktop": "leads/medeiros-de-araujo-advocacia/redesign/screenshots/home-desktop.png",
+    "after_mobile": "leads/medeiros-de-araujo-advocacia/redesign/screenshots/home-mobile.png",
+    "comparison_image": "leads/medeiros-de-araujo-advocacia/commercial/visual/before-after.png"
+  },
+  "sources": {
+    "lead_dossier": "leads/medeiros-de-araujo-advocacia/lead.json",
+    "audit_report": "leads/medeiros-de-araujo-advocacia/auditoria.md",
+    "builder_handoff": "leads/medeiros-de-araujo-advocacia/redesign/builder-handoff.json"
+  },
+  "generated_at": "2026-09-17T23:16:10.117Z"
+}

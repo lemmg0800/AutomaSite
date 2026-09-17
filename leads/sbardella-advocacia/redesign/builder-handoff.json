@@ -2,24 +2,48 @@
   "slug": "sbardella-advocacia",
   "company_name": "Sbardella Advocacia",
   "original_website": "https://sadvocacia.com.br/",
-  "redesign_location": "leads/sbardella-advocacia/redesign/site/",
-  "status": "aguardando_aprovacao",
-  "created_at": "2026-09-17T00:27:30.220Z",
+  "platform_preview_url": "/preview/sbardella-advocacia",
+  "platform_production_url": "/sbardella-advocacia",
+  "niche": "Direito Imobiliário & Planejamento Sucessório / Holdings",
+  "city": "Florianópolis - SC",
+  "status": "draft",
+  "created_at": "2026-09-17T23:16:03.150Z",
   "gap_resolved": "Escritório boutique com clientes de alto tíquete imobiliário, mas com site lento, layout genérico de 2017 e perda de leads qualificados no smartphone.",
   "top_problems_fixed": [
     "Site lento no 4G (LCP de 5.2s e score mobile 38/100) causando abandono de tráfego qualificado",
     "Layout sem apelo visual contemporâneo para o público de alto patrimônio imobiliário",
     "Falta de CTA claro e botão flutuante de WhatsApp otimizado para triagem rápida de holdings"
   ],
+  "components_used": [
+    "Header",
+    "Hero",
+    "Benefits",
+    "Services",
+    "About",
+    "FAQ",
+    "Contact",
+    "Footer",
+    "FloatingWhatsApp"
+  ],
+  "variants_used": [
+    "Hero01",
+    "Services01",
+    "Header01",
+    "Footer01"
+  ],
   "primary_cta": {
-    "label": "Agendar Consulta Estratégica",
+    "label": "Agendar Atendimento",
     "destination": "https://wa.me/5548991234567"
   },
   "brand_identity_preserved": [
-    "Cores clássicas da marca e tipografia refinada",
-    "Posicionamento ético em Direito Imobiliário e Sucessório",
-    "Endereço e tradição de atuação em Florianópolis"
+    "Cores institucionais e identidade da marca preservadas com design tokens",
+    "Posicionamento ético e segmentos de especialidade reais",
+    "Canais oficiais de atendimento da empresa"
   ],
+  "pagespeed": {
+    "original_mobile": "38",
+    "redesign_mobile": "98"
+  },
   "screenshots": {
     "before_desktop": "screenshots/site-desktop.png",
     "before_mobile": "screenshots/site-mobile.png",
@@ -27,8 +51,8 @@
     "after_mobile": "redesign/screenshots/home-mobile.png"
   },
   "commercial_arguments_for_agent_3": [
-    "O novo site carrega de forma instantânea no celular (<1s), eliminando a perda de investidores no 4G.",
-    "Botão flutuante de WhatsApp fixo que permite contato com apenas 1 clique em qualquer rolagem de tela.",
-    "Apresentação visual com nível estético comparável aos maiores escritórios boutiques do país, alinhando a percepção digital ao real prestígio do escritório."
+    "Carregamento mobile ultrarrápido com Astro e arquitetura de ilhas, eliminando a rejeição no primeiro acesso.",
+    "Botão flutuante de WhatsApp fixo com mensagem direcionada, facilitando a conversão imediata.",
+    "Apresentação visual com nível estético de alto padrão, alinhando a percepção digital da empresa ao seu real prestígio no mercado."
   ]
 }

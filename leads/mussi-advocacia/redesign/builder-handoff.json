@@ -1,18 +1,18 @@
 {
-  "slug": "pedro-de-queiroz-advocacia",
-  "company_name": "Pedro de Queiroz Advocacia",
-  "original_website": "https://pedrodequeiroz.adv.br/",
-  "platform_preview_url": "/preview/pedro-de-queiroz-advocacia",
-  "platform_production_url": "/pedro-de-queiroz-advocacia",
-  "niche": "Direito Cível Estratégico, Contratos & Família",
+  "slug": "mussi-advocacia",
+  "company_name": "Mussi Advocacia & Consultoria",
+  "original_website": "https://advmussi.com.br/",
+  "platform_preview_url": "/preview/mussi-advocacia",
+  "platform_production_url": "/mussi-advocacia",
+  "niche": "Direito Penal Estratégico & Compliance Trabalhista",
   "city": "Florianópolis - SC",
   "status": "draft",
-  "created_at": "2026-09-17T23:16:07.552Z",
-  "gap_resolved": "Nome de prestígio no judiciário catarinense, porém site não transmite a exclusividade e autoridade do titular.",
+  "created_at": "2026-09-17T23:16:07.077Z",
+  "gap_resolved": "Advocacia penal de urgência exige resposta imediata no smartphone; o site atual atrasa o carregamento e esconde o botão de emergência.",
   "top_problems_fixed": [
-    "Design baseado em tema pré-fabricado genérico que enfraquece a autoridade pessoal do titular",
-    "Ausência de canal direto e simplificado de agendamento de consulta cível",
-    "Tipografia pequena com baixo contraste prejudicando leitura em telas de celular"
+    "Plantão 24h penal não possui acionamento imediato com 1 clique no topo mobile",
+    "Performance mobile lenta (Score 41/100, LCP 4.8s) compromete urgências criminais",
+    "Hierarquia de serviços confusa misturando penal com compliance corporativo"
   ],
   "components_used": [
     "Header",
@@ -33,7 +33,7 @@
   ],
   "primary_cta": {
     "label": "Agendar Atendimento",
-    "destination": "https://wa.me/5548996552233"
+    "destination": "https://wa.me/5548988345678"
   },
   "brand_identity_preserved": [
     "Cores institucionais e identidade da marca preservadas com design tokens",
@@ -41,7 +41,7 @@
     "Canais oficiais de atendimento da empresa"
   ],
   "pagespeed": {
-    "original_mobile": "44",
+    "original_mobile": "41",
     "redesign_mobile": "98"
   },
   "screenshots": {

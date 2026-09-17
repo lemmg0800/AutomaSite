@@ -1,0 +1,43 @@
+{
+  "slug": "ramos-da-silva-advocacia",
+  "company_name": "Ramos da Silva Advocacia",
+  "city": "Florianópolis - SC",
+  "niche": "Direito Trabalhista Bancário & Previdenciário",
+  "original_site": {
+    "url": "https://ramosdasilva.adv.br/",
+    "pagespeed_mobile": "39",
+    "lcp": "5.1s",
+    "fcp": "3.0s"
+  },
+  "redesign": {
+    "preview_url": "https://meudominio.com/preview/ramos-da-silva-advocacia",
+    "production_url": "https://meudominio.com/ramos-da-silva-advocacia",
+    "pagespeed_mobile": "98",
+    "lcp": "< 1.0s",
+    "fcp": "< 0.5s"
+  },
+  "issues_identified": [
+    "Excesso de blocos de texto denso e jurídicos desmotivando leitura no celular",
+    "Lentidão no carregamento mobile (LCP 5.1s, Score 39/100) com alta taxa de rejeição",
+    "Fluxo de triagem trabalhista inexistente (visitante precisa procurar telefone manual)"
+  ],
+  "improvements_implemented": [
+    "Primeira dobra moderna e objetiva comunicando autoridade e especialidade imediata",
+    "Botão flutuante de WhatsApp fixo permitindo contato com apenas 1 clique em qualquer rolagem",
+    "Carregamento mobile otimizado atingindo pontuação máxima de performance no Google",
+    "Preservação integral da identidade visual e cores originais da marca através de Design Tokens"
+  ],
+  "visual_evidence": {
+    "before_desktop": "leads/ramos-da-silva-advocacia/screenshots/site-desktop.png",
+    "before_mobile": "leads/ramos-da-silva-advocacia/screenshots/site-mobile.png",
+    "after_desktop": "leads/ramos-da-silva-advocacia/redesign/screenshots/home-desktop.png",
+    "after_mobile": "leads/ramos-da-silva-advocacia/redesign/screenshots/home-mobile.png",
+    "comparison_image": "leads/ramos-da-silva-advocacia/commercial/visual/before-after.png"
+  },
+  "sources": {
+    "lead_dossier": "leads/ramos-da-silva-advocacia/lead.json",
+    "audit_report": "leads/ramos-da-silva-advocacia/auditoria.md",
+    "builder_handoff": "leads/ramos-da-silva-advocacia/redesign/builder-handoff.json"
+  },
+  "generated_at": "2026-09-17T23:16:10.606Z"
+}

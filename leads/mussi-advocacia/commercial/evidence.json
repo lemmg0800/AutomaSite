@@ -1,0 +1,43 @@
+{
+  "slug": "mussi-advocacia",
+  "company_name": "Mussi Advocacia & Consultoria",
+  "city": "Florianópolis - SC",
+  "niche": "Direito Penal Estratégico & Compliance Trabalhista",
+  "original_site": {
+    "url": "https://advmussi.com.br/",
+    "pagespeed_mobile": "41",
+    "lcp": "4.8s",
+    "fcp": "2.9s"
+  },
+  "redesign": {
+    "preview_url": "https://meudominio.com/preview/mussi-advocacia",
+    "production_url": "https://meudominio.com/mussi-advocacia",
+    "pagespeed_mobile": "98",
+    "lcp": "< 1.0s",
+    "fcp": "< 0.5s"
+  },
+  "issues_identified": [
+    "Plantão 24h penal não possui acionamento imediato com 1 clique no topo mobile",
+    "Performance mobile lenta (Score 41/100, LCP 4.8s) compromete urgências criminais",
+    "Hierarquia de serviços confusa misturando penal com compliance corporativo"
+  ],
+  "improvements_implemented": [
+    "Primeira dobra moderna e objetiva comunicando autoridade e especialidade imediata",
+    "Botão flutuante de WhatsApp fixo permitindo contato com apenas 1 clique em qualquer rolagem",
+    "Carregamento mobile otimizado atingindo pontuação máxima de performance no Google",
+    "Preservação integral da identidade visual e cores originais da marca através de Design Tokens"
+  ],
+  "visual_evidence": {
+    "before_desktop": "leads/mussi-advocacia/screenshots/site-desktop.png",
+    "before_mobile": "leads/mussi-advocacia/screenshots/site-mobile.png",
+    "after_desktop": "leads/mussi-advocacia/redesign/screenshots/home-desktop.png",
+    "after_mobile": "leads/mussi-advocacia/redesign/screenshots/home-mobile.png",
+    "comparison_image": "leads/mussi-advocacia/commercial/visual/before-after.png"
+  },
+  "sources": {
+    "lead_dossier": "leads/mussi-advocacia/lead.json",
+    "audit_report": "leads/mussi-advocacia/auditoria.md",
+    "builder_handoff": "leads/mussi-advocacia/redesign/builder-handoff.json"
+  },
+  "generated_at": "2026-09-17T23:16:07.257Z"
+}

@@ -8,7 +8,7 @@
   "instagram": "@mussiadvocacia",
   "phone": "(48) 3322-1040",
   "whatsapp": "(48) 98834-5678",
-  "status": "alta_oportunidade",
+  "status": "aguardando_aprovacao",
   "ranking": 2,
   "scores": {
     "business": 8.5,
@@ -42,5 +42,23 @@
     "site_desktop": "screenshots/site-desktop.png",
     "site_mobile": "screenshots/site-mobile.png"
   },
-  "created_at": "2026-09-16T20:06:26.484Z"
+  "created_at": "2026-09-16T20:06:26.484Z",
+  "redesign": {
+    "completed_at": "2026-09-17T23:16:07.111Z",
+    "platform_preview_url": "/preview/mussi-advocacia",
+    "platform_production_url": "/mussi-advocacia",
+    "config_path": "src/clients/data/mussi-advocacia.ts",
+    "screenshots": {
+      "home_desktop": "leads/mussi-advocacia/redesign/screenshots/home-desktop.png",
+      "home_mobile": "leads/mussi-advocacia/redesign/screenshots/home-mobile.png"
+    }
+  },
+  "commercial": {
+    "status": "pronto_para_aprovacao_humana",
+    "generated_at": "2026-09-17T23:16:07.265Z",
+    "dossier_path": "leads/mussi-advocacia/commercial/",
+    "summary": "leads/mussi-advocacia/commercial/commercial-summary.md",
+    "email": "leads/mussi-advocacia/commercial/email.md",
+    "whatsapp": "leads/mussi-advocacia/commercial/whatsapp.md"
+  }
 }

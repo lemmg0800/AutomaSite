@@ -124,9 +124,10 @@ Para garantir velocidade e alta densidade de valor, trabalhe em formato de funil
 - **Associação de Evidências:** Cada problema deve ter comprovação (métrica ou screenshot).
 - **Melhor Gancho Comercial:** O tema principal para abordagem do Agente 3 (ex: "Foco na perda de agendamentos no mobile e na discrepância visual entre o Instagram e o site").
 
-### Etapas 24 a 27: Ranking, Dossiês e Handoff para o Agente 2
-- Gere o **Ranking Geral** e destaque o **Top 5**.
-- Para cada lead do Top 5, crie a pasta persistente:
+### Etapas 24 a 27: Ranking, Dossiês e Handoff para o Agente 2 e Agente 3
+- Gere o **Ranking Geral de Oportunidades** e estabeleça a lista oficial do **Top 5 (do 1º ao 5º lugar)**.
+- Os 5 primeiros colocados do ranking constituem o lote prioritário que será processado sequencialmente pelo **Agente 2 (Builder)** para criação dos sites e, logo em seguida, pelo **Agente 3 (Comercial)** para geração dos materiais de venda.
+- Para cada lead do Top 5, crie e estruture a pasta persistente:
   ```text
   leads/[slug-da-empresa]/
   ├── lead.json
@@ -137,7 +138,8 @@ Para garantir velocidade e alta densidade de valor, trabalhe em formato de funil
       ├── site-mobile.png
       └── ...
   ```
-- **Aprovação Humana:** Pare o fluxo e apresente os resultados ao usuário. **Nunca avance para etapas de redesign ou contato sem aprovação explícita do usuário.**
+- **Handoff em Lote Top 5:** Os 5 primeiros colocados do ranking são disparados para o pipeline (`npm run pipeline:top5`), garantindo a geração dos 5 sites personalizados na plataforma compartilhada Astro e seus respectivos kits comerciais.
+- **Aprovação Humana:** Todo envio de abordagem real (WhatsApp ou e-mail) exige aprovação explícita do usuário.
 
 ---
 

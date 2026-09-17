@@ -1,0 +1,43 @@
+{
+  "slug": "sbardella-advocacia",
+  "company_name": "Sbardella Advocacia",
+  "city": "Florianópolis - SC",
+  "niche": "Direito Imobiliário & Planejamento Sucessório / Holdings",
+  "original_site": {
+    "url": "https://sadvocacia.com.br/",
+    "pagespeed_mobile": "38",
+    "lcp": "5.2s",
+    "fcp": "3.1s"
+  },
+  "redesign": {
+    "preview_url": "https://meudominio.com/preview/sbardella-advocacia",
+    "production_url": "https://meudominio.com/sbardella-advocacia",
+    "pagespeed_mobile": "98",
+    "lcp": "< 1.0s",
+    "fcp": "< 0.5s"
+  },
+  "issues_identified": [
+    "Site lento no 4G (LCP de 5.2s e score mobile 38/100) causando abandono de tráfego qualificado",
+    "Layout sem apelo visual contemporâneo para o público de alto patrimônio imobiliário",
+    "Falta de CTA claro e botão flutuante de WhatsApp otimizado para triagem rápida de holdings"
+  ],
+  "improvements_implemented": [
+    "Primeira dobra moderna e objetiva comunicando autoridade e especialidade imediata",
+    "Botão flutuante de WhatsApp fixo permitindo contato com apenas 1 clique em qualquer rolagem",
+    "Carregamento mobile otimizado atingindo pontuação máxima de performance no Google",
+    "Preservação integral da identidade visual e cores originais da marca através de Design Tokens"
+  ],
+  "visual_evidence": {
+    "before_desktop": "leads/sbardella-advocacia/screenshots/site-desktop.png",
+    "before_mobile": "leads/sbardella-advocacia/screenshots/site-mobile.png",
+    "after_desktop": "leads/sbardella-advocacia/redesign/screenshots/home-desktop.png",
+    "after_mobile": "leads/sbardella-advocacia/redesign/screenshots/home-mobile.png",
+    "comparison_image": "leads/sbardella-advocacia/commercial/visual/before-after.png"
+  },
+  "sources": {
+    "lead_dossier": "leads/sbardella-advocacia/lead.json",
+    "audit_report": "leads/sbardella-advocacia/auditoria.md",
+    "builder_handoff": "leads/sbardella-advocacia/redesign/builder-handoff.json"
+  },
+  "generated_at": "2026-09-17T23:16:03.326Z"
+}
