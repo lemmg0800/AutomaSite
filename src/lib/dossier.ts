@@ -124,23 +124,28 @@ export function formatDossierForDashboard(d: LeadDossier) {
     }
   }
 
+  const rawCity = lj.city || biz.city || biz.cidade || 'Florianópolis';
+  const cleanCity = rawCity.replace(/\s*-\s*SC$/, '').trim();
+
   return {
     slug: d.slug,
-    name: biz.name || biz.nome || d.slug,
-    niche: biz.niche || biz.nicho || 'Geral',
-    city: biz.city || biz.cidade || 'Florianópolis',
-    state: biz.state || biz.uf || 'SC',
+    name: lj.name || biz.name || biz.nome || d.slug,
+    niche: lj.segment || lj.niche || biz.niche || biz.nicho || 'Geral',
+    city: cleanCity,
+    state: lj.state || biz.state || biz.uf || 'SC',
+    ranking: lj.ranking || 999,
+    score: lj.scores?.opportunity || lj.score || lj.pontuacao || 0,
     status: lj.status || 'ativo',
     isPublished: lj.status === 'published' || lj.status === 'ativo',
     pipeline: {
       prospector: true,
-      builder: !!d.builderHandoff || !!d.assets.afterDesktop,
-      comercial: !!d.emailMd || !!d.whatsappMd
+      builder: !!d.builderHandoff || !!d.assets.afterDesktop || !!d.relatorioMd,
+      comercial: !!d.emailMd || !!d.whatsappMd || !!d.commercialSummaryMd
     },
     prospector: {
-      score: lj.score || lj.pontuacao || '8.5',
-      pagespeedMobile: ps.mobileScore || ps.performance || 45,
-      mainGap: lj.mainGap || lj.gargaloPrincipal || 'Baixa velocidade mobile e layout desatualizado.',
+      score: lj.scores?.opportunity || lj.score || lj.pontuacao || '8.5',
+      pagespeedMobile: lj.pagespeed?.mobile_performance || ps.mobileScore || ps.performance || 45,
+      mainGap: lj.main_gap || lj.mainGap || lj.gargaloPrincipal || 'Baixa velocidade mobile e layout desatualizado.',
       auditoriaMarkdown: d.auditoriaMd || '',
       originalDesktopScreenshot: d.assets.beforeDesktop,
       originalMobileScreenshot: d.assets.beforeMobile
@@ -160,12 +165,12 @@ export function formatDossierForDashboard(d: LeadDossier) {
       objectionsMarkdown: d.objectionsMd || ''
     },
     contacts: {
-      phone: biz.phone || contacts.telefone || biz.telefone || '',
-      whatsapp: biz.whatsapp || contacts.whatsapp || biz.whatsapp || '',
-      email: biz.email || contacts.email || biz.email || '',
-      instagram: biz.instagram || contacts.instagram || '',
-      address: biz.address || biz.endereco || '',
-      website: lj.url || biz.website || ''
+      phone: lj.phone || biz.phone || contacts.telefone || biz.telefone || '',
+      whatsapp: lj.whatsapp || biz.whatsapp || contacts.whatsapp || biz.whatsapp || '',
+      email: lj.email || biz.email || contacts.email || biz.email || '',
+      instagram: lj.instagram || biz.instagram || contacts.instagram || '',
+      address: lj.address || biz.address || biz.endereco || '',
+      website: lj.website || lj.url || biz.website || ''
     }
   };
 }
