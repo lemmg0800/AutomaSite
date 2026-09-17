@@ -130,14 +130,33 @@ Capriche especialmente no **Hero**:
 
 ---
 
-## 5. Arquitetura da Plataforma Compartilhada & Componentes
+## 5. Arquitetura da Plataforma, Isolamento de Clientes & Componentes
 
 O site é gerado configurando `src/clients/data/[slug].ts` conforme o schema Zod (`src/clients/schema.ts`).
 
-### Biblioteca de Componentes (18 Categorias):
-`Header01-02`, `Hero01-03`, `Services01-02`, `Products01`, `Projects01`, `Gallery01`, `About01`, `Team01`, `Benefits01`, `Process01`, `Stats01`, `Credentials01`, `Testimonials01`, `FAQ01`, `Contact01`, `Map01`, `CTA01`, `Footer01-02`, `FloatingWhatsApp`.
+### 🛡️ REGRA CRÍTICA: NÃO DESCARACTERIZAR SITES EXISTENTES
+O Builder **NUNCA** pode alterar componentes de forma que modifique ou quebre sites já criados anteriormente.
+Componentes compartilhados já em uso são **IMUTÁVEIS E CONGELADOS**.
 
-**Estabilidade dos Componentes:** Componentes em uso por clientes em status `published` (ex: `sbardella-advocacia`) são **CONGELADOS**. Resolva customizações via configuração ou crie uma nova variante.
+Se um novo lead exigir alterações estruturais ou visuais profundas em um componente compartilhado:
+1. **Opção A — Clonar para o Cliente (Eject - Recomendado):**
+   Copie o componente para a pasta exclusiva do cliente em `src/clients/components/[slug]/`:
+   ```bash
+   npm run client:eject -- --client [slug] --component hero/Hero01
+   ```
+   A plataforma Astro resolverá automaticamente a cópia local para esse cliente, permitindo qualquer customização sem risco de afetar outros sites.
+2. **Opção B — Criar Nova Variante Global:**
+   Crie uma variante versionada (ex: `Hero04.astro`, `Services03.astro`) em `src/components/` e registre-a no `COMPONENT_REGISTRY`.
+
+### Biblioteca de Componentes Expandida:
+- **Header:** `Header01-02`
+- **Hero:** `Hero01-03`, `Hero04` (moderno tech com 3D tilt, cards flutuantes e parallax)
+- **Services:** `Services01-02`, `Services03` (Bento Grid moderno com cartões modulares)
+- **Products, Projects, Gallery, About, Team, Benefits, Process, Stats, Credentials, Testimonials, FAQ, Contact, Map, CTA, Footers**
+- **Efeitos e Backgrounds (configuráveis no `theme`):**
+  - `enableCursor: true` -> Ativa cursor magnético interativo com rastro suave (`CustomCursor.astro`).
+  - `backgroundEffect: 'mesh' | 'dots' | 'prism' | 'none'` -> Ativa backgrounds ambientais dinâmicos.
+  - `enableParallax: true` -> Ativa animações de entrada com IntersectionObserver e efeito tilt 3D nos cards.
 
 ---
 

@@ -1,0 +1,24 @@
+---
+interface Props {
+  dotSize?: number;
+  gap?: number;
+  opacity?: number;
+}
+
+const { dotSize = 1.5, gap = 28, opacity = 0.22 } = Astro.props;
+---
+
+<div class="dot-matrix-wrap pointer-events-none fixed inset-0 -z-10 overflow-hidden select-none">
+  <!-- Dotted Canvas / Pattern -->
+  <div 
+    class="dot-grid absolute inset-0"
+    style={`
+      background-image: radial-gradient(var(--color-accent, #6366f1) ${dotSize}px, transparent ${dotSize}px);
+      background-size: ${gap}px ${gap}px;
+      opacity: ${opacity};
+    `}
+  ></div>
+
+  <!-- Radial Vignette to soften edges -->
+  <div class="vignette absolute inset-0" style="background: radial-gradient(circle at 50% 30%, transparent 20%, var(--color-bg, #090d16) 85%);"></div>
+</div>

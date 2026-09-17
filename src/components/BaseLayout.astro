@@ -1,6 +1,11 @@
 ---
 import type { ClientConfig } from '../clients/schema';
 import FloatingWhatsApp from './ui/FloatingWhatsApp.astro';
+import CustomCursor from './effects/CustomCursor.astro';
+import ParallaxScroll from './effects/ParallaxScroll.astro';
+import MeshGradientBackground from './backgrounds/MeshGradientBackground.astro';
+import DotMatrixBackground from './backgrounds/DotMatrixBackground.astro';
+import PrismBackground from './backgrounds/PrismBackground.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -30,11 +35,14 @@ const defaultTheme = {
   headingFont: 'Playfair Display',
   bodyFont: 'Plus Jakarta Sans',
   borderRadius: 'md' as const,
-  mode: 'dark' as const
+  mode: 'dark' as const,
+  enableCursor: false,
+  backgroundEffect: 'none' as const,
+  enableParallax: true
 };
 
 const biz = client?.business || defaultBusiness;
-const theme = client?.theme || defaultTheme;
+const theme = { ...defaultTheme, ...(client?.theme || {}) };
 
 const pageTitle = title || client?.pages?.[0]?.seo?.title || biz.name;
 const cityState = biz.state ? `${biz.city} - ${biz.state}` : biz.city;
@@ -91,6 +99,17 @@ const fontBodyParam = encodeURIComponent(bodyFontName).replace(/%20/g, '+');
   />
 </head>
 <body class="min-h-screen flex flex-col antialiased selection:bg-[var(--color-accent)] selection:text-[var(--color-bg)]" style="background-color: var(--color-bg); color: var(--color-text); font-family: var(--font-body);">
+
+  <!-- Efeitos de Fundo Dinâmicos -->
+  {theme.backgroundEffect === 'mesh' && <MeshGradientBackground />}
+  {theme.backgroundEffect === 'dots' && <DotMatrixBackground />}
+  {theme.backgroundEffect === 'prism' && <PrismBackground />}
+
+  <!-- Cursor Personalizado Opcional -->
+  {theme.enableCursor && <CustomCursor color={theme.accentColor} />}
+
+  <!-- Efeitos de Parallax e Scroll-Reveal -->
+  {theme.enableParallax && <ParallaxScroll />}
 
   {isPrivatePreview && client && (
     <div class="bg-amber-500 text-slate-950 px-4 py-2 text-xs font-bold text-center flex items-center justify-center gap-2 shadow-md z-50 sticky top-0">

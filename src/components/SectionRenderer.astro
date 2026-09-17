@@ -1,4 +1,4 @@
-﻿---
+---
 import type { ClientConfig, SectionConfig } from '../clients/schema';
 import { getComponent } from './registry';
 
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { section, client } = Astro.props;
-const Component = getComponent(section.type, section.variant);
+const Component = getComponent(section.type, section.variant, client?.slug);
 ---
 
 <Component content={section.content} client={client} />

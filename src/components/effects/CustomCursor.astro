@@ -1,0 +1,92 @@
+---
+interface Props {
+  color?: string;
+  glowColor?: string;
+  size?: number;
+}
+
+const { 
+  color = "var(--color-accent, #6366f1)", 
+  glowColor = "rgba(99, 102, 241, 0.35)", 
+  size = 32 
+} = Astro.props;
+---
+
+<div id="custom-cursor" class="custom-cursor pointer-events-none fixed top-0 left-0 z-[9999] opacity-0 transition-opacity duration-300 hidden md:block">
+  <div class="cursor-dot fixed w-2 h-2 rounded-full transform -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-transform duration-75 ease-out" style={`background-color: ${color};`}></div>
+  <div class="cursor-ring fixed rounded-full border transform -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-all duration-200 ease-out" style={`width: ${size}px; height: ${size}px; border-color: ${color}; box-shadow: 0 0 16px ${glowColor};`}></div>
+</div>
+
+<script is:inline>
+  (() => {
+    // Only activate on devices with fine pointer (mouse)
+    if (window.matchMedia('(pointer: fine)').matches) {
+      const cursorWrap = document.getElementById('custom-cursor');
+      if (!cursorWrap) return;
+
+      const dot = cursorWrap.querySelector('.cursor-dot');
+      const ring = cursorWrap.querySelector('.cursor-ring');
+      if (!dot || !ring) return;
+
+      let mouseX = -100;
+      let mouseY = -100;
+      let ringX = -100;
+      let ringY = -100;
+      let isHovering = false;
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursorWrap.classList.remove('opacity-0');
+        cursorWrap.classList.add('opacity-100');
+        dot.style.left = `${mouseX}px`;
+        dot.style.top = `${mouseY}px`;
+      }, { passive: true });
+
+      window.addEventListener('mouseleave', () => {
+        cursorWrap.classList.remove('opacity-100');
+        cursorWrap.classList.add('opacity-0');
+      });
+
+      // Smooth trailing ring loop
+      function render() {
+        ringX += (mouseX - ringX) * 0.18;
+        ringY += (mouseY - ringY) * 0.18;
+        ring.style.left = `${ringX}px`;
+        ring.style.top = `${ringY}px`;
+
+        if (isHovering) {
+          ring.style.transform = 'translate(-50%, -50%) scale(1.6)';
+          ring.style.backgroundColor = 'rgba(99, 102, 241, 0.15)';
+        } else {
+          ring.style.transform = 'translate(-50%, -50%) scale(1)';
+          ring.style.backgroundColor = 'transparent';
+        }
+
+        requestAnimationFrame(render);
+      }
+      requestAnimationFrame(render);
+
+      // Magnetic hover feedback on clickable elements
+      document.addEventListener('mouseover', (e) => {
+        const target = e.target;
+        if (target && (target.closest('a, button, input, select, textarea, [data-cursor="pointer"]'))) {
+          isHovering = true;
+        }
+      });
+
+      document.addEventListener('mouseout', (e) => {
+        const target = e.target;
+        if (target && (target.closest('a, button, input, select, textarea, [data-cursor="pointer"]'))) {
+          isHovering = false;
+        }
+      });
+    }
+  })();
+</script>
+
+<style>
+  .custom-cursor {
+    mix-blend-mode: screen;
+  }
+</style>

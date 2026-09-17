@@ -42,7 +42,10 @@ export const ThemeTokensSchema = z.object({
   headingFont: z.string().min(2, 'Nome da fonte de título inválido').default('Playfair Display'),
   bodyFont: z.string().min(2, 'Nome da fonte de corpo inválido').default('Plus Jakarta Sans'),
   borderRadius: z.enum(['none', 'sm', 'md', 'lg', 'full']).default('md'),
-  mode: z.enum(['dark', 'light']).default('dark')
+  mode: z.enum(['dark', 'light']).default('dark'),
+  enableCursor: z.boolean().optional().default(false),
+  backgroundEffect: z.enum(['none', 'mesh', 'dots', 'prism']).optional().default('none'),
+  enableParallax: z.boolean().optional().default(true)
 });
 
 export const SECTION_TYPES = [

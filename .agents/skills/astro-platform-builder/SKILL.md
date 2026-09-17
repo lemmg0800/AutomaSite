@@ -72,31 +72,28 @@ Consulte o **shadcn MCP** (`search_items_in_registries`, `view_items_in_registri
 
 ---
 
-## 4. Biblioteca de Componentes da Plataforma (18 Categorias)
+## 4. Biblioteca de Componentes da Plataforma
 
 - **Header:** `Header01` (moderno com blur), `Header02` (minimalista com moldura)
-- **Hero:** `Hero01` (split com badge e CTA), `Hero02` (centralizado imersivo), `Hero03` (elegante clássico)
-- **Services:** `Services01` (grid de cards com hover), `Services02` (lista detalhada)
-- **Products:** `Products01` (vitrine de itens/produtos com tags)
-- **Projects:** `Projects01` (grid de cases/projetos com modal)
-- **Gallery:** `Gallery01` (galeria visual imersiva)
-- **About:** `About01` (split institucional com estatísticas em destaque)
-- **Team:** `Team01` (grid de sócios/equipe com bio e credenciais)
-- **Benefits:** `Benefits01` (vantagens e diferenciais com ícones)
-- **Process:** `Process01` (linha do tempo passo a passo numerada)
-- **Stats:** `Stats01` (faixa de números e métricas comprovadas)
-- **Credentials:** `Credentials01` (certificações, registros e autoridade)
-- **Testimonials:** `Testimonials01` (depoimentos de clientes reais)
-- **FAQ:** `FAQ01` (accordion expansível para dúvidas frequentes)
-- **Contact:** `Contact01` (split com canais diretos e formulário rápido)
-- **Map:** `Map01` (mapa integrado e localização física)
-- **CTA:** `CTA01` (banner final persuasivo para conversão)
-- **Footer:** `Footer01` (institucional com links), `Footer02` (editorial clássico)
+- **Hero:** `Hero01` (split clássico), `Hero02` (centralizado), `Hero03` (editorial), `Hero04` (moderno tech com 3D tilt e cards flutuantes)
+- **Services:** `Services01` (grid de cards), `Services02` (lista detalhada), `Services03` (Bento Grid moderno)
+- **Products, Projects, Gallery, About, Team, Benefits, Process, Stats, Credentials, Testimonials, FAQ, Contact, Map, CTA, Footers**
+- **Efeitos e Backgrounds Dinâmicos:**
+  - `CustomCursor.astro`: cursor magnético fluido (`theme.enableCursor: true`).
+  - `ParallaxScroll.astro`: scroll-reveal e 3D tilt (`theme.enableParallax: true`).
+  - Backgrounds: `MeshGradientBackground.astro`, `DotMatrixBackground.astro`, `PrismBackground.astro`.
 
 ---
 
-## 5. Regra de Estabilidade de Componentes
-Componentes em uso por clientes com status `published` (ex: `sbardella-advocacia`) estão **CONGELADOS**. Resolva personalizações via configuração, escolha outra variante ou crie uma variante nova (ex: `Hero04`).
+## 5. Regra Crítica: Isolamento e Não-Descaracterização de Sites
+Componentes compartilhados já em uso são **IMUTÁVEIS E CONGELADOS**.
+Ao criar ou customizar um site:
+1. **Clonar para o cliente:** Se precisar modificar o código ou estilo do componente para um lead específico, clone-o com:
+   ```bash
+   npm run client:eject -- --client [slug] --component hero/Hero01
+   ```
+   A plataforma usará `src/clients/components/[slug]/Hero01.astro` com exclusividade para esse cliente, preservando todos os demais.
+2. **Criar nova variante:** Crie `Hero05.astro`, `Services04.astro`, etc., na biblioteca compartilhada.
 
 ---
 

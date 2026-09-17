@@ -12,7 +12,8 @@
         "preview": "astro preview",
         "client:validate": "tsx scripts/validate-clients.ts",
         "client:audit": "tsx scripts/audit-component-usage.ts",
-        "client:new": "tsx scripts/new-client.ts"
+        "client:new": "tsx scripts/new-client.ts",
+        "client:eject": "tsx scripts/clone-component-to-client.ts"
     },
     "keywords": [
         "prospector",

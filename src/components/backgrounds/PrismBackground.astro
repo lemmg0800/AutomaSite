@@ -1,0 +1,75 @@
+---
+interface Props {
+  intensity?: number;
+}
+
+const { intensity = 0.4 } = Astro.props;
+---
+
+<div class="prism-container pointer-events-none fixed inset-0 -z-10 overflow-hidden select-none">
+  <canvas id="prism-canvas" class="w-full h-full block absolute inset-0"></canvas>
+  <div class="prism-vignette absolute inset-0" style="background: radial-gradient(circle at 50% 50%, transparent 30%, var(--color-bg, #090d16) 90%);"></div>
+</div>
+
+<script is:inline define:vars={{ intensity }}>
+  (() => {
+    const canvas = document.getElementById('prism-canvas');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let width, height;
+    let time = 0;
+
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize, { passive: true });
+    resize();
+
+    function draw() {
+      time += 0.005;
+      ctx.clearRect(0, 0, width, height);
+
+      const centerX = width * 0.5;
+      const centerY = height * 0.4;
+      const radius = Math.min(width, height) * 0.45;
+
+      // Draw multi-layered glowing polygon prism
+      for (let layer = 0; layer < 3; layer++) {
+        ctx.save();
+        ctx.translate(centerX, centerY);
+        ctx.rotate(time * (layer % 2 === 0 ? 1 : -0.7) + layer);
+
+        ctx.beginPath();
+        const sides = 3 + layer;
+        for (let i = 0; i <= sides; i++) {
+          const angle = (i / sides) * Math.PI * 2;
+          const r = radius * (0.6 + layer * 0.2) + Math.sin(time * 2 + i) * 15;
+          const x = Math.cos(angle) * r;
+          const y = Math.sin(angle) * r;
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.closePath();
+
+        const grad = ctx.createLinearGradient(-radius, -radius, radius, radius);
+        grad.addColorStop(0, `rgba(99, 102, 241, ${intensity * (0.35 - layer * 0.08)})`);
+        grad.addColorStop(0.5, `rgba(168, 85, 247, ${intensity * (0.25 - layer * 0.06)})`);
+        grad.addColorStop(1, `rgba(56, 189, 248, ${intensity * (0.3 - layer * 0.08)})`);
+
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = 1.5 + layer;
+        ctx.stroke();
+
+        ctx.restore();
+      }
+
+      requestAnimationFrame(draw);
+    }
+
+    draw();
+  })();
+</script>
