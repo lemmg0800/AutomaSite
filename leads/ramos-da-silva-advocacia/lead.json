@@ -1,0 +1,46 @@
+{
+  "slug": "ramos-da-silva-advocacia",
+  "name": "Ramos da Silva Advocacia",
+  "segment": "Direito Trabalhista Bancário & Previdenciário",
+  "city": "Florianópolis - SC",
+  "address": "Rua Tenente Silveira, 200 - Centro, Florianópolis - SC",
+  "website": "https://ramosdasilva.adv.br/",
+  "instagram": "@ramosdasilvaadv",
+  "phone": "(48) 3225-6677",
+  "whatsapp": "(48) 99123-8899",
+  "status": "alta_oportunidade",
+  "ranking": 5,
+  "scores": {
+    "business": 8.4,
+    "design": 3.9,
+    "mobile": 3.8,
+    "ux": 4,
+    "conversion": 3.8,
+    "confidence": 8.3,
+    "performance": 3.9,
+    "seo": 4.8,
+    "website_overall": 3.9,
+    "opportunity": 72
+  },
+  "pagespeed": {
+    "mobile_performance": 39,
+    "desktop_performance": 66,
+    "lcp": "5.1s",
+    "fcp": "3.0s",
+    "tbt": "450ms",
+    "cls": "0.19",
+    "speed_index": "4.7s"
+  },
+  "top_problems": [
+    "Excesso de blocos de texto denso e jurídicos desmotivando leitura no celular",
+    "Lentidão no carregamento mobile (LCP 5.1s, Score 39/100) com alta taxa de rejeição",
+    "Fluxo de triagem trabalhista inexistente (visitante precisa procurar telefone manual)"
+  ],
+  "main_gap": "Alto volume de processos ganhos em bancários e previdenciário, porém o site não filtra nem captura o lead no WhatsApp no primeiro contato.",
+  "commercial_hook": "Trabalhadores e bancários buscam resolução rápida pelo WhatsApp; a poluição visual do site atual confunde o visitante e reduz drasticamente os contatos.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-16T20:06:54.005Z"
+}

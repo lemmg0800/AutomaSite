@@ -1,0 +1,15 @@
+- **Tailwind CSS** — utility-first CSS framework powering all layout and styling (compiled into the vendored Vite bundle `index-BIISZeGo.css`)
+- **Vite** — build tool that produced the bundled CSS/JS assets used by the original React app
+- **React** — JavaScript framework used to render the original SPA (the captured page is a hydrated React snapshot)
+- **Radix UI** — primitive component library used for the FAQ accordion (`data-radix-collection-item`, `data-state`, `data-orientation` attributes)
+- **Sonner** — toast notification library (the `[data-sonner-toaster]` styles in `assets/css/sonner-toaster.css`)
+- **Lucide** — icon library; chevron-down icons in the FAQ accordion are rendered via `<i data-lucide>` and the runtime loaded from unpkg
+- **Lovable** — AI app builder used to create the original site (signaled by the persistent `#lovable-badge` corner widget and `lovable.dev` references)
+- **Inter** — sans-serif font family loaded from Google Fonts
+- **Satoshi** — display font family loaded from Fontshare (`api.fontshare.com`)
+- **CameraPlainVariable** — variable font used exclusively by the Lovable badge widget
+- **Vimeo Player** — embedded video player used by the hero showreel iframe (player.vimeo.com)
+- **Google Cast Sender SDK** — `cast_sender.js` and `cast_framework.js` loaded for video-cast support
+- **GSAP / ScrollTrigger** — referenced indirectly by `offline-fix.js`, which revives scroll-triggered animations parked at opacity:0+slide when the GSAP runtime is missing
+- **UnicornStudio** — WebGL widget runtime; `offline-fix.js` calls `UnicornStudio.init()` defensively if the engine is preloaded but its inline init guard bails
+- **CSS keyframe animations** — `marquee`, `marquee2`, `sticker-float-0/1/2`, `floatBubble`, `fade-in-up`, `scale-in`, `pulse-dot`, `underline-draw`, `ticket-wiggle`, `accordion-down/up`, `footer-breathe`, `footer-scroll-marquee`, `footer-heartbeat`, `sonner-fade-in/out`, `sonner-spin`, `swipe-out-*`

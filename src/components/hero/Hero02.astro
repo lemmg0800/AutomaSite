@@ -1,0 +1,58 @@
+﻿---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    headline: string;
+    subheadline: string;
+    primaryCtaLabel?: string;
+    secondaryCtaLabel?: string;
+    secondaryCtaHref?: string;
+    trustPoints?: string[];
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const cleanWhats = (client.business.whatsapp || client.business.phone).replace(/[^0-9]/g, '');
+const whatsLink = `https://wa.me/55${cleanWhats}?text=Urgente`;
+---
+
+<section class="relative pt-20 pb-24 text-center">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    {content.badge && (
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6 border border-white/10" style="background-color: var(--color-secondary); color: var(--color-accent);">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        {content.badge}
+      </div>
+    )}
+
+    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6" style="font-family: var(--font-heading);">
+      {content.headline}
+    </h1>
+
+    <p class="text-base sm:text-lg leading-relaxed mb-10 opacity-80 max-w-2xl mx-auto">
+      {content.subheadline}
+    </p>
+
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+      <a 
+        href={whatsLink}
+        target="_blank"
+        class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wider shadow-xl transition-transform hover:scale-105"
+        style="background-color: var(--color-accent); color: var(--color-bg);"
+      >
+        {content.primaryCtaLabel || "Falar no WhatsApp"}
+      </a>
+      {content.secondaryCtaLabel && (
+        <a 
+          href={content.secondaryCtaHref || "#servicos"}
+          class="w-full sm:w-auto px-6 py-4 rounded-xl border border-white/15 text-sm font-medium hover:bg-white/5 transition-colors"
+        >
+          {content.secondaryCtaLabel}
+        </a>
+      )}
+    </div>
+  </div>
+</section>

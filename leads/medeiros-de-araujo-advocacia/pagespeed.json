@@ -1,0 +1,24 @@
+{
+  "url": "https://www.medeirosdearaujo.adv.br/",
+  "analyzed_at": "2026-09-16T20:06:46.335Z",
+  "mobile": {
+    "performance_score": 42,
+    "metrics": {
+      "largest_contentful_paint": "4.9s",
+      "first_contentful_paint": "2.8s",
+      "total_blocking_time": "360ms",
+      "cumulative_layout_shift": "0.22",
+      "speed_index": "4.3s"
+    },
+    "status": "POOR"
+  },
+  "desktop": {
+    "performance_score": 68,
+    "status": "NEEDS_IMPROVEMENT"
+  },
+  "top_opportunities": [
+    "Eliminar recursos que bloqueiam a renderização inicial",
+    "Otimizar imagens e servir em formatos modernos (WebP/AVIF)",
+    "Reduzir CSS e JS não utilizados no carregamento mobile"
+  ]
+}

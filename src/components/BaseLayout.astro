@@ -1,0 +1,115 @@
+---
+import type { ClientConfig } from '../clients/schema';
+import FloatingWhatsApp from './ui/FloatingWhatsApp.astro';
+import '../styles/global.css';
+
+interface Props {
+  client?: ClientConfig;
+  title?: string;
+  description?: string;
+  isPrivatePreview?: boolean;
+}
+
+const { client, title, description, isPrivatePreview = false } = Astro.props;
+
+const defaultBusiness = {
+  name: 'Plataforma Multi-Tenant',
+  niche: 'Gerenciamento Institucional',
+  city: 'Florianópolis',
+  state: 'SC',
+  phone: undefined,
+  whatsapp: undefined
+};
+
+const defaultTheme = {
+  primaryColor: '#0f172a',
+  secondaryColor: '#1e293b',
+  accentColor: '#6366f1',
+  backgroundColor: '#090d16',
+  textColor: '#f8fafc',
+  headingFont: 'Playfair Display',
+  bodyFont: 'Plus Jakarta Sans',
+  borderRadius: 'md' as const,
+  mode: 'dark' as const
+};
+
+const biz = client?.business || defaultBusiness;
+const theme = client?.theme || defaultTheme;
+
+const pageTitle = title || client?.pages?.[0]?.seo?.title || biz.name;
+const cityState = biz.state ? `${biz.city} - ${biz.state}` : biz.city;
+const pageDesc = description || client?.pages?.[0]?.seo?.description || `${biz.name} — ${biz.niche} em ${cityState}.`;
+
+const radiusMap: Record<string, string> = {
+  none: '0px',
+  sm: '0.25rem',
+  md: '0.5rem',
+  lg: '1rem',
+  full: '9999px'
+};
+
+const radiusVal = radiusMap[theme.borderRadius] || '0.5rem';
+
+const headingFontName = theme.headingFont || 'Playfair Display';
+const bodyFontName = theme.bodyFont || 'Plus Jakarta Sans';
+
+const fontHeadingParam = encodeURIComponent(headingFontName).replace(/%20/g, '+');
+const fontBodyParam = encodeURIComponent(bodyFontName).replace(/%20/g, '+');
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth" style={`
+  --color-primary: ${theme.primaryColor};
+  --color-secondary: ${theme.secondaryColor};
+  --color-accent: ${theme.accentColor};
+  --color-bg: ${theme.backgroundColor};
+  --color-text: ${theme.textColor};
+  --font-heading: '${headingFontName}', serif;
+  --font-body: '${bodyFontName}', sans-serif;
+  --radius-base: ${radiusVal};
+`}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDesc} />
+
+  {isPrivatePreview && (
+    <meta name="robots" content="noindex, nofollow" />
+  )}
+
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={pageDesc} />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts dinâmicas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link 
+    href={`https://fonts.googleapis.com/css2?family=${fontHeadingParam}:wght@400;600;700&family=${fontBodyParam}:wght@300;400;500;600;700&display=swap`} 
+    rel="stylesheet" 
+  />
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-[var(--color-accent)] selection:text-[var(--color-bg)]" style="background-color: var(--color-bg); color: var(--color-text); font-family: var(--font-body);">
+
+  {isPrivatePreview && client && (
+    <div class="bg-amber-500 text-slate-950 px-4 py-2 text-xs font-bold text-center flex items-center justify-center gap-2 shadow-md z-50 sticky top-0">
+      <span>🔒 MODO DEMONSTRAÇÃO</span>
+      <span>•</span>
+      <span>Status: [{(client.status || 'ativo').toUpperCase()}]</span>
+      <span>•</span>
+      <span>Página protegida com NOINDEX</span>
+    </div>
+  )}
+
+  <slot />
+
+  {(biz.whatsapp || biz.phone) && (
+    <FloatingWhatsApp 
+      phone={biz.phone} 
+      whatsapp={biz.whatsapp} 
+      companyName={biz.name} 
+    />
+  )}
+</body>
+</html>

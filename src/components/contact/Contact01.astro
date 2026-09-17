@@ -1,0 +1,97 @@
+﻿---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    title: string;
+    formTitle?: string;
+    formSubtitle?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const cleanWhats = (client.business.whatsapp || client.business.phone || '').replace(/[^0-9]/g, '');
+const cityState = client.business.state ? `${client.business.city} - ${client.business.state}` : client.business.city;
+---
+
+<section id="contato" class="py-20 border-t border-white/10" style="background-color: color-mix(in srgb, var(--color-secondary) 50%, transparent);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div>
+        {content.badge && (
+          <span class="text-xs font-bold uppercase tracking-widest" style="color: var(--color-accent);">
+            {content.badge}
+          </span>
+        )}
+        <h2 class="text-3xl font-bold mt-2 mb-6" style="font-family: var(--font-heading);">
+          {content.title}
+        </h2>
+
+        <div class="space-y-4 text-sm opacity-90">
+          {client.business.address ? (
+            <div class="flex items-start gap-3">
+              <span class="text-lg">📍</span>
+              <div>
+                <strong>Endereço:</strong>
+                <div>{client.business.address}</div>
+              </div>
+            </div>
+          ) : (
+            <div class="flex items-start gap-3">
+              <span class="text-lg">📍</span>
+              <div>
+                <strong>Atendimento:</strong>
+                <div>{cityState}</div>
+              </div>
+            </div>
+          )}
+
+          {client.business.phone && (
+            <div class="flex items-start gap-3">
+              <span class="text-lg">📞</span>
+              <div>
+                <strong>Telefone:</strong>
+                <div><a href={`tel:${client.business.phone.replace(/[^0-9]/g, '')}`} class="hover:underline">{client.business.phone}</a></div>
+              </div>
+            </div>
+          )}
+
+          {client.business.whatsapp && (
+            <div class="flex items-start gap-3">
+              <span class="text-lg">💬</span>
+              <div>
+                <strong>WhatsApp:</strong>
+                <div><a href={`https://wa.me/55${cleanWhats}`} target="_blank" class="hover:underline" style="color: var(--color-accent);">{client.business.whatsapp}</a></div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div class="p-8 rounded-2xl border border-white/10 shadow-xl" style="background-color: var(--color-bg);">
+        <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading);">
+          {content.formTitle || "Solicitar Contato"}
+        </h3>
+        <p class="text-xs opacity-75 mb-6">
+          {content.formSubtitle || "Retornaremos com brevidade durante o horário de atendimento."}
+        </p>
+
+        <form onsubmit="event.preventDefault(); alert('Solicitação registrada com sucesso nesta demonstração comercial!');" class="space-y-4 text-sm">
+          <div>
+            <label class="block text-xs mb-1 opacity-80">Nome Completo</label>
+            <input type="text" required placeholder="Seu nome" class="w-full px-3.5 py-2.5 rounded-lg border border-white/10 bg-white/5 focus:outline-none focus:ring-1" style="color: var(--color-text);" />
+          </div>
+          <div>
+            <label class="block text-xs mb-1 opacity-80">Telefone / WhatsApp</label>
+            <input type="tel" required placeholder="(00) 00000-0000" class="w-full px-3.5 py-2.5 rounded-lg border border-white/10 bg-white/5 focus:outline-none focus:ring-1" style="color: var(--color-text);" />
+          </div>
+          <button type="submit" class="w-full py-3 rounded-lg font-bold text-xs uppercase tracking-wider transition-opacity hover:opacity-90" style="background-color: var(--color-accent); color: var(--color-bg);">
+            Enviar Solicitação
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

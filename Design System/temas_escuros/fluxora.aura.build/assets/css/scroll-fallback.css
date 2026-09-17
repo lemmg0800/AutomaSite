@@ -1,0 +1,31 @@
+/* Scroll fallback - ensures native scroll works if JS scroll fails */
+html, body {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  height: auto !important;
+  min-height: 100vh !important;
+}
+
+/* Remove position:fixed from wrappers that may block scroll */
+body > div:first-child,
+.wrapper,
+main,
+#__next,
+#root,
+#app {
+  position: static !important;
+  overflow: visible !important;
+  height: auto !important;
+}
+
+/* Ensure body is visible even if JS opacity:0 fails */
+body {
+  opacity: 1 !important;
+}
+
+/* Force content to be scrollable */
+section, article, div[class*="container"] {
+  position: relative !important;
+}
+</content>
+</invoke>

@@ -1,0 +1,11 @@
+.font-serif-custom { font-family: 'Playfair Display', serif; }
+.font-sans-custom { font-family: 'Inter', sans-serif; }
+/* Marquee Animation */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}

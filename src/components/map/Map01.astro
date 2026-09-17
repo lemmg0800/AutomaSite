@@ -1,0 +1,29 @@
+﻿---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    title?: string;
+    instructions?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+---
+
+<section class="py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl font-bold" style="font-family: var(--font-heading);">{content.title || "Nossa Localização"}</h2>
+      {client.business.address && <p class="text-sm opacity-80 mt-2">📍 {client.business.address}</p>}
+    </div>
+    <div class="w-full aspect-[21/9] rounded-2xl border border-white/10 flex items-center justify-center p-8 text-center" style="background-color: var(--color-secondary);">
+      <div class="space-y-2 max-w-md">
+        <span class="text-3xl">🗺️</span>
+        <div class="font-bold text-sm">Florianópolis — SC</div>
+        <p class="text-xs opacity-70">{content.instructions || "Atendimento presencial mediante agendamento prévio."}</p>
+      </div>
+    </div>
+  </div>
+</section>

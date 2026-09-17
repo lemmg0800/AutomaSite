@@ -1,0 +1,35 @@
+﻿---
+export const prerender = false;
+
+import { resolveClient } from '../../../clients/registry';
+import BaseLayout from '../../../components/BaseLayout.astro';
+import SectionRenderer from '../../../components/SectionRenderer.astro';
+
+const { slug, page: pagePath } = Astro.params;
+
+if (!slug) {
+  return new Response("Slug não informado", { status: 400 });
+}
+
+const client = await resolveClient(slug);
+
+if (!client) {
+  return new Response(`Cliente "${slug}" não localizado.`, { status: 404 });
+}
+
+const page = client.pages.find(p => p.path === pagePath);
+
+if (!page) {
+  return new Response(`Página "${pagePath}" não localizada para o cliente "${slug}".`, { status: 404 });
+}
+
+Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+---
+
+<BaseLayout client={client} title={`[PREVIEW] ${page.seo.title}`} description={page.seo.description} isPrivatePreview={true}>
+  <main>
+    {page.sections.map(section => (
+      <SectionRenderer section={section} client={client} />
+    ))}
+  </main>
+</BaseLayout>

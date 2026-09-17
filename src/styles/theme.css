@@ -1,0 +1,10 @@
+﻿:root {
+  --color-primary: #0a192f;
+  --color-secondary: #0f2444;
+  --color-accent: #c5a059;
+  --color-bg: #0a192f;
+  --color-text: #f8fafc;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --radius-base: 0.75rem;
+}

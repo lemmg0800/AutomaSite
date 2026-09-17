@@ -1,0 +1,12 @@
+- **Tailwind CSS** — utility-first CSS framework loaded via the bundled `assets/resource_3fa48481346f.es` runtime; powers all layout, spacing, color, and effect utilities on the page
+- **Iconify (iconify-icon web component)** — icon runtime that renders every `<iconify-icon icon="lucide:...">` tag (arrows, plus, check-circle, scan-face, layers, diamond, credit-card, social glyphs, etc.) using the Lucide icon set
+- **Lucide icon set** — referenced indirectly through Iconify's `lucide:*` namespace for all interface icons
+- **Inter** — primary sans-serif body font loaded from Google Fonts (`assets/css2_19fd9cc6b396.css` and accompanying `.woff2` files)
+- **Manrope** — display/heading font loaded via `assets/css2_9b8bf743d4a8.css` and applied through the `.font-manrope` utility
+- **Google Fonts** — `fonts.googleapis.com` / `fonts.gstatic.com` preconnect plus locally cached `.woff2` files serve the Inter and Manrope families
+- **Google Analytics 4 (gtag.js)** — site analytics; loader `assets/js_19c0e2c2c8a8.js` plus inline `dataLayer` + `gtag('config', ...)` for measurement IDs `G-2M6V79H761` and `G-YNQ2E4NBMY`
+- **Aura Supabase token firewall** — security shim that patches `localStorage`/`sessionStorage`, `document.cookie`, `fetch`, `XMLHttpRequest`, `navigator.sendBeacon`, and `WebSocket` to block requests and storage keys associated with the `hoirqrkdgbmvpwutwuwj.supabase.co` Supabase project
+- **Image fallback handler** — small inline script that detects `<img>` load errors and deterministically rewrites `src` to one of five known-good Supabase-hosted fallback assets
+- **Supabase Storage CDN** — hosts background imagery (logo PNG, hero badge JPG, fallback assets) referenced via `hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/...`
+- **grainy-gradients.vercel.app** — external SVG noise texture (`/noise.svg`) used as a soft-light overlay in the Benefits section
+- **Aura platform (aura.build)** — host/build environment that ships the bundled Tailwind runtime, the Iconify runtime, and the GA4 loader (filenames in `assets/` follow Aura's content-hashed naming convention)

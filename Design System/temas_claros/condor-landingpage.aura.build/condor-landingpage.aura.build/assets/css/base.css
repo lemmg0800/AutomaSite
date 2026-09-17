@@ -1,0 +1,13 @@
+body { font-family: 'Plus Jakarta Sans', sans-serif; }
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #d4d4d4; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #a3a3a3; }
+.toggle-checkbox:checked {
+right: 0;
+border-color: #ccf32f;
+}
+.toggle-checkbox:checked + .toggle-label {
+background-color: #ccf32f;
+}

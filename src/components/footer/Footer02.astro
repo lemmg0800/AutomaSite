@@ -1,0 +1,28 @@
+﻿---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    disclaimer?: string;
+    oabInfo?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+---
+
+<footer class="mt-auto py-10 border-t border-white/10 text-xs opacity-75" style="background-color: var(--color-bg);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+    <div>
+      <p class="font-bold text-sm" style="font-family: var(--font-heading);">{client.business.name}</p>
+      {content.oabInfo && <p class="mt-1">{content.oabInfo}</p>}
+    </div>
+    <div>
+      <p>© {new Date().getFullYear()} {client.business.name}. Todos os direitos reservados.</p>
+      {content.disclaimer && (
+        <p class="text-[11px] opacity-70 mt-0.5">{content.disclaimer}</p>
+      )}
+    </div>
+  </div>
+</footer>

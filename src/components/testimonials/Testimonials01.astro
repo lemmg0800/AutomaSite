@@ -1,0 +1,30 @@
+﻿---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    title: string;
+    items: Array<{ quote: string; author: string; role?: string }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+---
+
+<section class="py-20" style="background-color: color-mix(in srgb, var(--color-secondary) 30%, transparent);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <h2 class="text-3xl font-bold text-center mb-14" style="font-family: var(--font-heading);">{content.title}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {content.items.map(t => (
+        <div class="p-8 rounded-2xl border border-white/10 flex flex-col justify-between" style="background-color: var(--color-secondary);">
+          <p class="text-sm italic opacity-90 leading-relaxed mb-6">"{t.quote}"</p>
+          <div>
+            <strong class="block text-sm">{t.author}</strong>
+            {t.role && <span class="text-xs opacity-70">{t.role}</span>}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

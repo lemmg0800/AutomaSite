@@ -1,0 +1,8 @@
+@font-face{font-family:'Mona Sans';src:url("../Mona-Sans-870dff5a10221ba7d01c_1ef0d130f620.woff2") format('woff2');font-weight:200 900;font-display:swap}
+@font-face{font-family:'WF Visual Sans';src:url("../WFVisualSans-RegularText-46461_47fc955b1e25.woff2") format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'WF Visual Sans';src:url("../WFVisualSans-SemiBold-aa0e5535_ce6b8e826577.woff2") format('woff2');font-weight:600;font-display:swap}
+body{font-family:'WF Visual Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#0D0C22}
+.font-brand{font-family:'Mona Sans',sans-serif}
+.no-scrollbar::-webkit-scrollbar{display:none}
+.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+iconify-icon{stroke-width:1.5}

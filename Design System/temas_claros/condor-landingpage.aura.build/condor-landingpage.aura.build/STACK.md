@@ -1,0 +1,8 @@
+- **Tailwind CSS** — utility-first CSS framework loaded as a runtime script that compiles every utility class used in the markup
+- **Lucide** — icon library used for all interface icons via `<i data-lucide>` tags
+- **Plus Jakarta Sans (Google Fonts)** — primary typeface served from a local `css2_*.css` stylesheet referencing local `.woff2` files
+- **HTML `<details>`/`<summary>`** — native disclosure widget powering the FAQ accordion
+- **Aura Supabase token firewall** — inline IIFE that proxies `localStorage`, `sessionStorage`, `document.cookie`, `fetch`, `XMLHttpRequest`, `sendBeacon`, and `WebSocket` to block reading or transmitting Supabase auth tokens
+- **Image fallback handler** — IIFE that swaps broken `<img>` sources with hashed Supabase storage URLs on `error` or after load
+- **Aura build platform (aura.build)** — origin of the page export, evidenced by the firewall script ID and the bundled `resource_*.es` runtime
+- **Supabase Storage** — remote asset host used for the image fallback list (`hoirqrkdgbmvpwutwuwj.supabase.co`)

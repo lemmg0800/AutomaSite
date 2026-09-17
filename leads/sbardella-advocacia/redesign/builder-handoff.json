@@ -1,0 +1,34 @@
+{
+  "slug": "sbardella-advocacia",
+  "company_name": "Sbardella Advocacia",
+  "original_website": "https://sadvocacia.com.br/",
+  "redesign_location": "leads/sbardella-advocacia/redesign/site/",
+  "status": "aguardando_aprovacao",
+  "created_at": "2026-09-17T00:27:30.220Z",
+  "gap_resolved": "Escritório boutique com clientes de alto tíquete imobiliário, mas com site lento, layout genérico de 2017 e perda de leads qualificados no smartphone.",
+  "top_problems_fixed": [
+    "Site lento no 4G (LCP de 5.2s e score mobile 38/100) causando abandono de tráfego qualificado",
+    "Layout sem apelo visual contemporâneo para o público de alto patrimônio imobiliário",
+    "Falta de CTA claro e botão flutuante de WhatsApp otimizado para triagem rápida de holdings"
+  ],
+  "primary_cta": {
+    "label": "Agendar Consulta Estratégica",
+    "destination": "https://wa.me/5548991234567"
+  },
+  "brand_identity_preserved": [
+    "Cores clássicas da marca e tipografia refinada",
+    "Posicionamento ético em Direito Imobiliário e Sucessório",
+    "Endereço e tradição de atuação em Florianópolis"
+  ],
+  "screenshots": {
+    "before_desktop": "screenshots/site-desktop.png",
+    "before_mobile": "screenshots/site-mobile.png",
+    "after_desktop": "redesign/screenshots/home-desktop.png",
+    "after_mobile": "redesign/screenshots/home-mobile.png"
+  },
+  "commercial_arguments_for_agent_3": [
+    "O novo site carrega de forma instantânea no celular (<1s), eliminando a perda de investidores no 4G.",
+    "Botão flutuante de WhatsApp fixo que permite contato com apenas 1 clique em qualquer rolagem de tela.",
+    "Apresentação visual com nível estético comparável aos maiores escritórios boutiques do país, alinhando a percepção digital ao real prestígio do escritório."
+  ]
+}

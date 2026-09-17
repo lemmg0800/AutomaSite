@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Inteligência Comercial — Prospector & Builder</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    .tab-active { border-bottom: 2px solid #3b82f6; color: #3b82f6; font-weight: 600; }
+  </style>
+</head>
+<body class="bg-transparent text-[var(--foreground)] antialiased p-2">
+  <div class="bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)] rounded-2xl p-5 shadow-lg max-w-xl mx-auto space-y-5">
+    
+    <!-- Cabeçalho com Abas dos Agentes -->
+    <div class="border-b border-[var(--border)] pb-3">
+      <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center space-x-2.5">
+          <div class="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-sm shadow-md">
+            ⚡
+          </div>
+          <div>
+            <h2 class="text-sm font-bold text-[var(--foreground)]">Pipeline Comercial de 3 Agentes</h2>
+            <p class="text-[11px] text-[var(--muted-foreground)]">Sistema de Prospecção, Redesign & Abordagem</p>
+          </div>
+        </div>
+        <span class="text-[10px] font-mono bg-blue-500/10 text-blue-600 px-2 py-0.5 rounded-full font-bold">Fase 2 Ativa</span>
+      </div>
+
+      <!-- Abas -->
+      <div class="flex space-x-6 text-xs text-[var(--muted-foreground)] pt-1">
+        <button onclick="switchTab('tab-prospector')" id="btn-prospector" class="tab-active pb-2 transition-colors">
+          1. Prospector (Pesquisa)
+        </button>
+        <button onclick="switchTab('tab-builder')" id="btn-builder" class="pb-2 hover:text-[var(--foreground)] transition-colors">
+          2. Builder (Redesign Ativo)
+        </button>
+      </div>
+    </div>
+
+    <!-- TAB 1: PROSPECTOR -->
+    <div id="tab-prospector" class="space-y-4">
+      <form id="prospectForm" class="space-y-4" onsubmit="handleExecute(event)">
+        <div>
+          <label class="block text-xs font-medium text-[var(--foreground)] mb-1">Nicho a pesquisar:</label>
+          <input 
+            type="text" 
+            id="nicheInput" 
+            placeholder="Ex: Escritórios de Advocacia, Clínicas..."
+            class="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border)] bg-[var(--background)] text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-[var(--foreground)]"
+            required
+          />
+          <div class="flex flex-wrap gap-1.5 mt-2">
+            <button type="button" onclick="setNiche('Escritórios de Advocacia')" class="text-[11px] px-2.5 py-1 rounded-lg border border-[var(--border)] bg-[var(--background)] text-[var(--muted-foreground)] hover:text-blue-500">Advogados</button>
+            <button type="button" onclick="setNiche('Clínicas de Estética')" class="text-[11px] px-2.5 py-1 rounded-lg border border-[var(--border)] bg-[var(--background)] text-[var(--muted-foreground)] hover:text-blue-500">Estética</button>
+            <button type="button" onclick="setNiche('Odontologia e Implantes')" class="text-[11px] px-2.5 py-1 rounded-lg border border-[var(--border)] bg-[var(--background)] text-[var(--muted-foreground)] hover:text-blue-500">Dentistas</button>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-[var(--foreground)] mb-1">Cidade ou região:</label>
+          <input 
+            type="text" 
+            id="cityInput" 
+            placeholder="Ex: Florianópolis - SC, Curitiba - PR..."
+            class="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border)] bg-[var(--background)] text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-[var(--foreground)]"
+            required
+          />
+        </div>
+
+        <div class="flex items-center justify-between pt-1">
+          <div class="flex items-center space-x-2">
+            <label class="text-xs text-[var(--muted-foreground)]">Meta:</label>
+            <select id="volumeSelect" class="text-xs px-2.5 py-1.5 rounded-lg border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)]">
+              <option value="20" selected>20 empresas</option>
+              <option value="30">30 empresas</option>
+            </select>
+          </div>
+          <button type="submit" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold shadow flex items-center gap-1.5">
+            <span>🚀 Disparar Prospecção</span>
+          </button>
+        </div>
+      </form>
+
+      <div id="outputBox" class="hidden border border-blue-500/30 bg-blue-500/5 rounded-xl p-3 space-y-2">
+        <div class="flex items-center justify-between text-xs font-semibold text-blue-600">
+          <span>✨ Comando Gerado</span>
+          <span id="copiedToast" class="text-[11px] text-green-500 opacity-0 transition-opacity">Copiado!</span>
+        </div>
+        <div class="p-2 rounded-lg bg-[var(--background)] border border-[var(--border)] font-mono text-xs select-all" id="generatedCmd"></div>
+      </div>
+    </div>
+
+    <!-- TAB 2: BUILDER -->
+    <div id="tab-builder" class="hidden space-y-4">
+      <div class="p-3.5 rounded-xl bg-purple-500/10 border border-purple-500/20 space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-purple-600 dark:text-purple-400 flex items-center gap-1.5">
+            <span>🎨</span> Redesign Demonstrativo Concluído
+          </span>
+          <span class="text-[10px] bg-purple-500/20 text-purple-600 dark:text-purple-400 px-2 py-0.5 rounded font-bold">#1 Sbardella</span>
+        </div>
+        <p class="text-xs text-[var(--muted-foreground)] leading-relaxed">
+          O Agente 2 transformou o dossiê da <strong>Sbardella Advocacia</strong> em um site institucional de alta conversão, responsivo e com carregamento instantâneo.
+        </p>
+      </div>
+
+      <!-- Links Rápidos de Inspeção -->
+      <div class="space-y-2 text-xs">
+        <div class="font-semibold text-[var(--foreground)]">Arquivos de Demonstração Gerados:</div>
+        <div class="grid grid-cols-2 gap-2">
+          <a href="leads/sbardella-advocacia/redesign/site/index.html" target="_blank" class="p-2.5 rounded-lg border border-[var(--border)] bg-[var(--background)] hover:border-blue-500 transition-colors flex items-center justify-between group">
+            <span>🌐 Abrir Site Funcional</span>
+            <span class="text-blue-500 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+          </a>
+          <a href="leads/sbardella-advocacia/redesign/relatorio.md" target="_blank" class="p-2.5 rounded-lg border border-[var(--border)] bg-[var(--background)] hover:border-purple-500 transition-colors flex items-center justify-between group">
+            <span>📊 Relatório Antes/Depois</span>
+            <span class="text-purple-500 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+          </a>
+          <a href="leads/sbardella-advocacia/redesign/screenshots/home-desktop.png" target="_blank" class="p-2.5 rounded-lg border border-[var(--border)] bg-[var(--background)] hover:border-emerald-500 transition-colors flex items-center justify-between group">
+            <span>🖥️ Captura Desktop</span>
+            <span class="text-emerald-500 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+          </a>
+          <a href="leads/sbardella-advocacia/redesign/screenshots/home-mobile.png" target="_blank" class="p-2.5 rounded-lg border border-[var(--border)] bg-[var(--background)] hover:border-emerald-500 transition-colors flex items-center justify-between group">
+            <span>📱 Captura Mobile</span>
+            <span class="text-emerald-500 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Outros Leads na Fila -->
+      <div class="border-t border-[var(--border)] pt-3">
+        <span class="text-xs font-semibold text-[var(--foreground)] block mb-2">Próximos Leads Prontos para Redesign:</span>
+        <div class="space-y-1.5 text-xs">
+          <div class="flex items-center justify-between p-2 rounded-lg bg-[var(--background)] border border-[var(--border)]">
+            <span>#2 Mussi Advocacia (Penal 24h)</span>
+            <span class="text-[10px] text-amber-500 font-medium">Aguardando Aprovação</span>
+          </div>
+          <div class="flex items-center justify-between p-2 rounded-lg bg-[var(--background)] border border-[var(--border)]">
+            <span>#3 Pedro de Queiroz (Cível/Família)</span>
+            <span class="text-[10px] text-amber-500 font-medium">Aguardando Aprovação</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function switchTab(tabId) {
+      document.getElementById('tab-prospector').classList.add('hidden');
+      document.getElementById('tab-builder').classList.add('hidden');
+      document.getElementById('btn-prospector').className = 'pb-2 hover:text-[var(--foreground)] transition-colors';
+      document.getElementById('btn-builder').className = 'pb-2 hover:text-[var(--foreground)] transition-colors';
+
+      document.getElementById(tabId).classList.remove('hidden');
+      if (tabId === 'tab-prospector') {
+        document.getElementById('btn-prospector').className = 'tab-active pb-2 transition-colors';
+      } else {
+        document.getElementById('btn-builder').className = 'tab-active pb-2 transition-colors';
+      }
+    }
+
+    function setNiche(name) {
+      document.getElementById('nicheInput').value = name;
+      document.getElementById('cityInput').focus();
+    }
+
+    function handleExecute(e) {
+      e.preventDefault();
+      const niche = document.getElementById('nicheInput').value.trim();
+      const city = document.getElementById('cityInput').value.trim();
+      const volume = document.getElementById('volumeSelect').value;
+      if (!niche || !city) return;
+
+      const cmdText = `Prospectar ${volume} empresas de ${niche} em ${city}`;
+      const outBox = document.getElementById('outputBox');
+      const genCmd = document.getElementById('generatedCmd');
+      genCmd.textContent = cmdText;
+      outBox.classList.remove('hidden');
+
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(cmdText).then(() => {
+          const toast = document.getElementById('copiedToast');
+          toast.classList.remove('opacity-0');
+          setTimeout(() => toast.classList.add('opacity-0'), 2500);
+        }).catch(() => {});
+      }
+    }
+  </script>
+</body>
+</html>

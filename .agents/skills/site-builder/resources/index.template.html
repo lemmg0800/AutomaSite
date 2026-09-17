@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITULO_PAGINA}}</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta property="og:title" content="{{TITULO_PAGINA}}">
+  <meta property="og:description" content="{{META_DESCRIPTION}}">
+  <meta property="og:type" content="website">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0a192f',
+              navy: '#0f2444',
+              card: '#162e52',
+              gold: '#c5a059',
+              goldHover: '#dfba73',
+              light: '#f8fafc',
+              muted: '#94a3b8'
+            }
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-brand-gold selection:text-brand-dark min-h-screen flex flex-col">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-brand-navy border-b border-brand-gold/20 text-xs py-2 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-brand-muted">
+      <div class="flex items-center space-x-4">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          {{ENDERECO}}
+        </span>
+      </div>
+      <div class="flex items-center space-x-4 text-slate-300">
+        <span class="flex items-center gap-1.5 text-brand-gold">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Plantão Consultivo Florianópolis
+        </span>
+        <span>|</span>
+        <a href="tel:{{TELEFONE_NUM}}" class="hover:text-brand-gold transition-colors font-medium">{{TELEFONE}}</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-white/5 transition-all">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-brand-gold to-brand-goldHover p-0.5 shadow-md flex items-center justify-center text-brand-dark font-serif font-bold text-xl tracking-wider">
+          {{LOGO_INICIAL}}
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-lg font-bold tracking-wide text-white group-hover:text-brand-gold transition-colors">
+            {{NOME_EMPRESA_UPPER}}
+          </span>
+          <span class="text-[10px] tracking-[0.25em] text-brand-gold uppercase font-semibold">
+            Advocacia Especializada
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#especialidades" class="hover:text-brand-gold transition-colors">Especialidades</a>
+        <a href="#escritorio" class="hover:text-brand-gold transition-colors">O Escritório</a>
+        <a href="#diferenciais" class="hover:text-brand-gold transition-colors">Diferenciais</a>
+        <a href="#contato" class="hover:text-brand-gold transition-colors">Localização</a>
+      </nav>
+
+      <div class="hidden sm:flex items-center gap-4">
+        <a 
+          href="{{WHATSAPP_LINK}}" 
+          target="_blank"
+          class="px-5 py-2.5 rounded-lg bg-brand-gold hover:bg-brand-goldHover text-brand-dark font-semibold text-xs tracking-wider uppercase shadow-lg shadow-brand-gold/10 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
+        >
+          <span>Agendar Consulta</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Abrir menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden bg-brand-navy border-b border-brand-gold/20 px-6 py-5 space-y-4">
+      <a href="#especialidades" class="block text-sm font-medium text-slate-200 hover:text-brand-gold">Especialidades</a>
+      <a href="#escritorio" class="block text-sm font-medium text-slate-200 hover:text-brand-gold">O Escritório</a>
+      <a href="#diferenciais" class="block text-sm font-medium text-slate-200 hover:text-brand-gold">Diferenciais</a>
+      <a href="#contato" class="block text-sm font-medium text-slate-200 hover:text-brand-gold">Localização & Contato</a>
+      <a href="{{WHATSAPP_LINK}}" target="_blank" class="block text-center py-3 rounded-lg bg-brand-gold text-brand-dark font-bold text-xs uppercase">
+        Falar no WhatsApp
+      </a>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 sm:pt-20 sm:pb-28 overflow-hidden bg-gradient-to-b from-brand-dark via-brand-navy/60 to-brand-dark">
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-gold/5 blur-[120px] pointer-events-none rounded-full"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-xs font-semibold tracking-wide uppercase mb-6">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          Assessoria Jurídica de Alto Padrão
+        </div>
+
+        <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.15] mb-6">
+          {{HERO_HEADLINE}}
+        </h1>
+
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl font-light">
+          {{HERO_SUBHEADLINE}}
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12">
+          <a 
+            href="{{WHATSAPP_LINK}}"
+            target="_blank"
+            class="px-8 py-4 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-brand-dark font-bold text-sm tracking-wider uppercase text-center shadow-xl shadow-brand-gold/20 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
+          >
+            <span>Consultar Advogado Especialista</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+          </a>
+
+          <a 
+            href="#especialidades" 
+            class="px-6 py-4 rounded-xl border border-white/10 hover:border-brand-gold/40 text-slate-300 hover:text-white font-medium text-sm text-center transition-all bg-white/[0.02] hover:bg-white/[0.05]"
+          >
+            Conhecer Áreas de Atuação
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-6 border-t border-white/10 text-xs text-brand-muted">
+          <div class="flex items-center gap-2">
+            <span class="text-brand-gold font-bold text-base">✓</span>
+            <span>Atuação Preventiva & Contenciosa</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-brand-gold font-bold text-base">✓</span>
+            <span>Centro de Florianópolis</span>
+          </div>
+          <div class="flex items-center gap-2 col-span-2 sm:col-span-1">
+            <span class="text-brand-gold font-bold text-base">✓</span>
+            <span>Sigilo Profissional Estrito</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Especialidades Section -->
+  <section id="especialidades" class="py-20 bg-brand-navy/40 border-y border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.2em]">Áreas de Concentração</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">
+          Soluções Jurídicas Estratégicas
+        </h2>
+        <p class="text-slate-400 text-sm mt-3">
+          Atuação focada em casos de alta complexidade patrimonial e proteção jurídica.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {{CARDS_ESPECIALIDADES}}
+      </div>
+    </div>
+  </section>
+
+  <!-- O Escritório Section -->
+  <section id="escritorio" class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 text-brand-gold text-xs font-bold uppercase tracking-wider">
+            Compromisso & Rigor
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white leading-tight">
+            Advocacia Artesanal com Foco no Seu Caso
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
+            A **{{NOME_EMPRESA}}** atua com modelo boutique: cada demanda é conduzida de forma direta e personalizada pelos titulares, garantindo atenção minuciosa a cada detalhe contratual e processual.
+          </p>
+          <p class="text-slate-400 text-sm leading-relaxed font-light">
+            Localizado estrategicamente no Centro de Florianópolis, o escritório oferece um ambiente discreto para reuniões consultivas, alinhando a tradição jurídica às mais modernas ferramentas de proteção.
+          </p>
+
+          <div class="pt-2 flex flex-col sm:flex-row gap-4">
+            <div class="border-l-2 border-brand-gold pl-4 py-1">
+              <span class="block text-2xl font-bold text-white font-serif">100%</span>
+              <span class="text-xs text-brand-muted">Dedicação dos sócios titulares</span>
+            </div>
+            <div class="border-l-2 border-brand-gold pl-4 py-1">
+              <span class="block text-2xl font-bold text-white font-serif">SC</span>
+              <span class="text-xs text-brand-muted">Forte presença na Grande Fpolis</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="bg-gradient-to-br from-brand-card to-brand-navy p-8 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-gold/10 rounded-full blur-2xl"></div>
+            <h3 class="font-serif text-xl font-bold text-white mb-6 flex items-center gap-2">
+              <span class="text-brand-gold">⚖️</span>
+              Por que escolher nosso atendimento:
+            </h3>
+
+            <ul class="space-y-4 text-sm text-slate-300">
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">1</span>
+                <span><strong>Comunicação Clara:</strong> Pareceres objetivos sem excesso de jargões técnicos incompreensíveis.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">2</span>
+                <span><strong>Visão Pragmática:</strong> Avaliação séria de riscos, custos e benefícios reais de cada medida.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">3</span>
+                <span><strong>Respostas Rápidas no WhatsApp:</strong> Canal direto de acompanhamento sem intermediários ou burocracia.</span>
+              </li>
+            </ul>
+
+            <div class="mt-8 pt-6 border-t border-white/10 text-center">
+              <a 
+                href="{{WHATSAPP_LINK}}" 
+                target="_blank"
+                class="w-full inline-block py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs tracking-wider uppercase transition-all"
+              >
+                Agendar Reunião Presencial ou Online
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Localização & Contato -->
+  <section id="contato" class="py-20 bg-brand-navy/60 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.2em]">Onde Estamos</span>
+          <h2 class="font-serif text-3xl font-bold text-white mt-2 mb-6">
+            Atendimento em Florianópolis
+          </h2>
+
+          <div class="space-y-4 text-sm text-slate-300">
+            <div class="flex items-start gap-3.5">
+              <div class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-brand-gold flex-shrink-0 mt-1">
+                📍
+              </div>
+              <div>
+                <strong class="block text-white font-medium">Endereço</strong>
+                <span>{{ENDERECO}}</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-brand-gold flex-shrink-0 mt-1">
+                📞
+              </div>
+              <div>
+                <strong class="block text-white font-medium">Telefone Comercial</strong>
+                <a href="tel:{{TELEFONE_NUM}}" class="text-brand-gold hover:underline">{{TELEFONE}}</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-brand-gold flex-shrink-0 mt-1">
+                💬
+              </div>
+              <div>
+                <strong class="block text-white font-medium">WhatsApp Profissional</strong>
+                <a href="{{WHATSAPP_LINK}}" target="_blank" class="text-brand-gold hover:underline">{{WHATSAPP}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-brand-card p-8 rounded-2xl border border-white/10 shadow-xl">
+          <h3 class="font-serif text-xl font-bold text-white mb-2">Solicitar Contato</h3>
+          <p class="text-xs text-brand-muted mb-6">Retornaremos com brevidade durante o horário de atendimento.</p>
+
+          <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+            <div>
+              <label class="block text-xs text-slate-300 mb-1">Seu Nome Completo</label>
+              <input type="text" required placeholder="Ex: Dr. Carlos Mendes" class="w-full px-3.5 py-2.5 rounded-lg bg-brand-dark/80 border border-white/10 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors">
+            </div>
+            <div>
+              <label class="block text-xs text-slate-300 mb-1">Telefone / WhatsApp</label>
+              <input type="tel" required placeholder="(48) 90000-0000" class="w-full px-3.5 py-2.5 rounded-lg bg-brand-dark/80 border border-white/10 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors">
+            </div>
+            <button type="submit" class="w-full py-3 rounded-lg bg-brand-gold hover:bg-brand-goldHover text-brand-dark font-bold text-xs uppercase tracking-wider transition-all">
+              Enviar Solicitação de Contato
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-auto bg-brand-dark border-t border-white/5 py-10 text-xs text-brand-muted">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+      <div>
+        <p class="font-serif font-bold text-white text-sm">{{NOME_EMPRESA}}</p>
+        <p class="mt-1">Inscrita na Ordem dos Advogados do Brasil — Seccional de Santa Catarina (OAB/SC).</p>
+      </div>
+      <div>
+        <p>© {{ANO_ATUAL}} {{NOME_EMPRESA}}. Todos os direitos reservados.</p>
+        <p class="text-[11px] text-slate-500 mt-0.5">Caráter informativo em consonância com o Provimento 205/2021 do CFOAB.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <div class="fixed bottom-6 right-6 z-50 flex items-center group">
+    <a 
+      href="{{WHATSAPP_LINK}}" 
+      target="_blank"
+      class="relative w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center shadow-2xl transition-all hover:scale-110 active:scale-95"
+      aria-label="Abrir WhatsApp"
+    >
+      <span class="absolute -top-1 -right-1 w-4 h-4 bg-brand-gold rounded-full border-2 border-brand-dark flex items-center justify-center text-[9px] font-bold text-brand-dark">1</span>
+      <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

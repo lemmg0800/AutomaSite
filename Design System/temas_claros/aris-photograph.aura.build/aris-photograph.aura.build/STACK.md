@@ -1,0 +1,13 @@
+- **Tailwind CSS 3.4.17** — utility-first CSS framework (loaded via CDN runtime) used for all layout, spacing, color, typography, and responsive breakpoints
+- **Iconify (iconify-icon web component 1.0.7)** — icon runtime that renders every `<iconify-icon>` (Solar duotone/linear icons, Simple Icons brand logos like NASA, SpaceX, Uber, Visa, Bose, Discover, DJI, Sony)
+- **Lucide** — icon library used for the mobile menu hamburger (`<i data-lucide="menu">`)
+- **Google Fonts** — webfont delivery for Inter, Plus Jakarta Sans, Geist, Manrope, Bricolage Grotesque, and Playfair Display
+- **Plus Jakarta Sans** — primary display typeface used for headings and the Aris wordmark
+- **Geist** — secondary sans typeface used for body copy, captions, and nav links
+- **Inter** — fallback body font set on `body { font-family: 'Inter', sans-serif }`
+- **Custom CSS animations** — `slideDownLetter` (hero letter reveal), `beam` (animated button border sweep), `sonar` (pulsing ring around accent dots), `marquee` (infinite horizontal scroller)
+- **Card flashlight effect** — radial-gradient `::before`/`::after` layers tracked via CSS variables (`--mouse-x`, `--mouse-y`) updated by JS on `mousemove`
+- **Parallax scroll engine** — vanilla JS using `requestAnimationFrame` and `data-parallax-speed` attributes on `.parallax-layer` elements
+- **WebGL image reveal** — custom GLSL fragment shader (4-column staggered cubic-out reveal) applied to every `<img>` via canvas overlay, triggered by `IntersectionObserver`
+- **ASCII Dither Background** — fullscreen canvas-based decorative background (`assets/e7b74fe24dbb237b_ascii-dither-background_3_.js`) layered behind the page
+- **HTML/CSS/JS** — vanilla stack, no build tooling, no framework runtime

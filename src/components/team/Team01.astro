@@ -1,0 +1,39 @@
+﻿---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    title: string;
+    subtitle?: string;
+    members: Array<{
+      name: string;
+      role: string;
+      bio?: string;
+    }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+---
+
+<section class="py-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold" style="font-family: var(--font-heading);">{content.title}</h2>
+      {content.subtitle && <p class="text-sm mt-3 opacity-75">{content.subtitle}</p>}
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {content.members.map(m => (
+        <div class="p-6 rounded-2xl border border-white/10 text-center" style="background-color: var(--color-secondary);">
+          <div class="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center font-bold text-xl" style="background-color: color-mix(in srgb, var(--color-accent) 20%, transparent); color: var(--color-accent);">
+            {m.name.charAt(0)}
+          </div>
+          <h3 class="font-bold text-lg" style="font-family: var(--font-heading);">{m.name}</h3>
+          <span class="text-xs block mt-0.5 font-medium" style="color: var(--color-accent);">{m.role}</span>
+          {m.bio && <p class="text-xs opacity-75 mt-3">{m.bio}</p>}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

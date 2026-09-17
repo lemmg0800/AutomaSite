@@ -1,0 +1,58 @@
+---
+export const prerender = false;
+
+import { resolveClient } from '../../clients/registry';
+import BaseLayout from '../../components/BaseLayout.astro';
+import SectionRenderer from '../../components/SectionRenderer.astro';
+
+const { slug } = Astro.params;
+
+if (!slug) {
+  return new Response("Slug não informado", { status: 400 });
+}
+
+const client = await resolveClient(slug);
+
+if (!client) {
+  return new Response(`Cliente com slug "${slug}" não localizado no sistema.`, { status: 404 });
+}
+
+// Inativo se o status for especificamente aprovado, nao_aprovado ou arquivado
+const isInactive = ['aprovado', 'nao_aprovado', 'arquivado'].includes(client.status);
+
+Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+
+const homePage = client.pages.find(p => p.path === "") || client.pages[0];
+---
+
+{isInactive ? (
+  <BaseLayout title={`Demonstração Inativa | ${client.business.name}`}>
+    <div style="min-height: 80vh; display: flex; align-items: center; justify-content: center; background: #090d16; color: #f1f5f9; padding: 2rem; font-family: system-ui, sans-serif;">
+      <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 2.5rem; max-width: 540px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
+        <h1 style="font-size: 1.5rem; margin: 0 0 0.5rem 0; color: #ffffff;">Demonstração Inativa</h1>
+        <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">
+          A demonstração do site <strong>{client.business.name}</strong> encontra-se inativa nesta plataforma.
+        </p>
+        
+        <div style="display: inline-block; background: rgba(255, 255, 255, 0.06); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); font-size: 0.85rem; color: #cbd5e1; margin-bottom: 1.5rem;">
+          Classificação Atual: <strong style="color: #38bdf8; text-transform: uppercase;">{client.status.replace('_', ' ')}</strong>
+        </div>
+
+        <div>
+          <a href="/" style="display: inline-block; background: #4f46e5; color: white; padding: 0.65rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.85rem;">
+            Voltar ao Dashboard
+          </a>
+        </div>
+      </div>
+    </div>
+  </BaseLayout>
+) : (
+  <BaseLayout client={client} title={homePage.seo.title} description={homePage.seo.description} isPrivatePreview={true}>
+    <main>
+      {homePage.sections.map(section => (
+        <SectionRenderer section={section} client={client} />
+      ))}
+    </main>
+  </BaseLayout>
+)}

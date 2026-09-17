@@ -1,0 +1,24 @@
+{
+  "url": "https://advmussi.com.br/",
+  "analyzed_at": "2026-09-16T20:06:26.485Z",
+  "mobile": {
+    "performance_score": 41,
+    "metrics": {
+      "largest_contentful_paint": "4.8s",
+      "first_contentful_paint": "2.9s",
+      "total_blocking_time": "380ms",
+      "cumulative_layout_shift": "0.15",
+      "speed_index": "4.4s"
+    },
+    "status": "POOR"
+  },
+  "desktop": {
+    "performance_score": 69,
+    "status": "NEEDS_IMPROVEMENT"
+  },
+  "top_opportunities": [
+    "Eliminar recursos que bloqueiam a renderização inicial",
+    "Otimizar imagens e servir em formatos modernos (WebP/AVIF)",
+    "Reduzir CSS e JS não utilizados no carregamento mobile"
+  ]
+}

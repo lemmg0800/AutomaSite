@@ -1,0 +1,58 @@
+﻿{
+  "slug": "{{SLUG}}",
+  "company_name": "{{NOME_EMPRESA}}",
+  "original_website": "{{URL_SITE}}",
+  "platform_preview_url": "/preview/{{SLUG}}",
+  "platform_production_url": "/{{SLUG}}",
+  "niche": "{{NICHO}}",
+  "city": "{{CIDADE}}",
+  "status": "draft",
+  "created_at": "{{TIMESTAMP}}",
+  "gap_resolved": "{{GAP_RESOLVIDO}}",
+  "top_problems_fixed": [
+    "{{PROBLEMA_1}}",
+    "{{PROBLEMA_2}}",
+    "{{PROBLEMA_3}}"
+  ],
+  "components_used": [
+    "Header",
+    "Hero",
+    "Benefits",
+    "Services",
+    "About",
+    "FAQ",
+    "Contact",
+    "Footer",
+    "FloatingWhatsApp"
+  ],
+  "variants_used": [
+    "{{HERO_VARIANT}}",
+    "{{SERVICES_VARIANT}}",
+    "{{HEADER_VARIANT}}",
+    "{{FOOTER_VARIANT}}"
+  ],
+  "primary_cta": {
+    "label": "{{CTA_LABEL}}",
+    "destination": "{{CTA_DESTINATION}}"
+  },
+  "brand_identity_preserved": [
+    "Cores institucionais e identidade da marca preservadas com design tokens",
+    "Posicionamento ético e segmentos de especialidade reais",
+    "Canais oficiais de atendimento da empresa"
+  ],
+  "pagespeed": {
+    "original_mobile": "{{PS_ORIGINAL}}",
+    "redesign_mobile": "{{PS_REDESIGN}}"
+  },
+  "screenshots": {
+    "before_desktop": "screenshots/site-desktop.png",
+    "before_mobile": "screenshots/site-mobile.png",
+    "after_desktop": "redesign/screenshots/home-desktop.png",
+    "after_mobile": "redesign/screenshots/home-mobile.png"
+  },
+  "commercial_arguments_for_agent_3": [
+    "Carregamento mobile ultrarrápido com Astro e arquitetura de ilhas, eliminando a rejeição no primeiro acesso.",
+    "Botão flutuante de WhatsApp fixo com mensagem direcionada, facilitando a conversão imediata.",
+    "Apresentação visual com nível estético de alto padrão, alinhando a percepção digital da empresa ao seu real prestígio no mercado."
+  ]
+}

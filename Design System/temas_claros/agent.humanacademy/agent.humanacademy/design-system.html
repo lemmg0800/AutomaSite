@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Agent Lab — Workshop de Agentes Criativos | Human Academy</title>
+<meta content="Monte seu sistema de agentes criativos do zero em dois dias. Workshop ao vivo de IA para criadores, designers e empreendedores." name="description"/>
+<meta content="Human Academy" name="author"/>
+<!-- head-only js -->
+<!-- asset-resolve: must run before any img/iframe/script to intercept src/href/srcset setters and rewrite external URLs (e.g. player.vimeo.com, fonts.gstatic.com) to local asset paths via the embedded ASSET_MAP -->
+<script src="assets/js/asset-resolve.js"></script>
+<link href="assets/a5f3d2b62bd375f6_favicon.png" rel="icon" type="image/png"/>
+<link href="assets/a5f3d2b62bd375f6_favicon.png" rel="shortcut icon" type="image/png"/>
+<link href="assets/a5f3d2b62bd375f6_favicon.png" rel="apple-touch-icon"/>
+<meta content="website" property="og:type"/>
+<meta content="Agent Lab — Workshop de Agentes Criativos | Human Academy" property="og:title"/>
+<meta content="Agent Lab — Workshop de Agentes Criativos | Human Academy" name="twitter:title"/>
+<meta content="Monte seu sistema de agentes criativos do zero em dois dias. Workshop ao vivo de IA para criadores, designers e empreendedores." property="og:description"/>
+<meta content="Monte seu sistema de agentes criativos do zero em dois dias. Workshop ao vivo de IA para criadores, designers e empreendedores." name="twitter:description"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<!-- fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin/>
+<link href="assets/47c0ef8a05416e93_css.css" rel="stylesheet"/>
+<link href="assets/78640e9d233d4d32_css2.css" rel="stylesheet"/>
+<!-- css -->
+<!-- main vendored Tailwind/Vite bundle: utility classes, theme tokens, custom keyframes (marquee, marquee2, sticker-float, fade-in-up, ticket-wiggle, scale-in, accordion, pulse-dot, underline-draw), heading-h1/h2/h3, btn-cta, btn-dark, sticky-bar, label-tag, section-header-line, container-main, section-spacing, glass-card, glass-dark, ticket-card, countdown-pill -->
+<link href="assets/14c235b7e4d46905_index-BIISZeGo.css" rel="stylesheet"/>
+<!-- sonner toast notifications -->
+<link href="assets/css/sonner-toaster.css" rel="stylesheet"/>
+<!-- floatBubble keyframe used by social-proof avatar bubbles -->
+<link href="assets/css/custom-animations.css" rel="stylesheet"/>
+<!-- cinematic footer styles: aurora glow, scroll marquee, glass pill, text glow -->
+<link href="assets/css/cinematic-footer.css" rel="stylesheet"/>
+<!-- lovable badge fixed bottom-right corner -->
+<link href="assets/css/lovable-badge.css" rel="stylesheet"/>
+<!-- offline visibility safety net -->
+<link href="assets/css/offline-visibility.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="root">
+<div aria-label="Notifications (F8)" role="region" style="pointer-events: none;" tabindex="-1">
+<ol class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]" tabindex="-1"></ol></div>
+<!-- sonner-notifications -->
+<section aria-atomic="false" aria-label="Notifications alt+T" aria-live="polite" aria-relevant="additions text" tabindex="-1"></section>
+<div class="min-h-screen bg-background text-foreground">
+<!-- top-marquee -->
+<div class="w-full overflow-hidden relative z-40" style="background: rgb(17, 17, 17); height: 36px; border-bottom: 1px solid rgba(255, 255, 255, 0.06);">
+<div class="flex items-center h-full">
+<div class="flex animate-marquee whitespace-nowrap">
+<span class="mx-6 text-[11px] font-medium whitespace-nowrap tracking-[0.2em] uppercase" style="color: rgba(255, 255, 255, 0.5);">Ao vivo em Zoom <span class="mx-6" style="color: rgba(255, 255, 255, 0.15);">✦</span></span>
+<span class="mx-6 text-[11px] font-medium whitespace-nowrap tracking-[0.2em] uppercase" style="color: rgba(255, 255, 255, 0.5);">Vagas limitadas <span class="mx-6" style="color: rgba(255, 255, 255, 0.15);">✦</span></span>
+<span class="mx-6 text-[11px] font-medium whitespace-nowrap tracking-[0.2em] uppercase" style="color: rgba(255, 255, 255, 0.5);">Ao vivo em Zoom <span class="mx-6" style="color: rgba(255, 255, 255, 0.15);">✦</span></span>
+<span class="mx-6 text-[11px] font-medium whitespace-nowrap tracking-[0.2em] uppercase" style="color: rgba(255, 255, 255, 0.5);">Vagas limitadas <span class="mx-6" style="color: rgba(255, 255, 255, 0.15);">✦</span></span>
+<span class="mx-6 text-[11px] font-medium whitespace-nowrap tracking-[0.2em] uppercase" style="color: rgba(255, 255, 255, 0.5);">Ao vivo em Zoom <span class="mx-6" style="color: rgba(255, 255, 255, 0.15);">✦</span></span>
+<span class="mx-6 text-[11px] font-medium whitespace-nowrap tracking-[0.2em] uppercase" style="color: rgba(255, 255, 255, 0.5);">Vagas limitadas <span class="mx-6" style="color: rgba(255, 255, 255, 0.15);">✦</span></span>
+<span class="mx-6 text-[11px] font-medium whitespace-nowrap tracking-[0.2em] uppercase" style="color: rgba(255, 255, 255, 0.5);">Ao vivo em Zoom <span class="mx-6" style="color: rgba(255, 255, 255, 0.15);">✦</span></span>
+<span class="mx-6 text-[11px] font-medium whitespace-nowrap tracking-[0.2em] uppercase" style="color: rgba(255, 255, 255, 0.5);">Vagas limitadas <span class="mx-6" style="color: rgba(255, 255, 255, 0.15);">✦</span></span></div>
+<div class="flex animate-marquee2 whitespace-nowrap absolute">
+<span class="mx-6 text-[11px] font-medium whitespace-nowrap tracking-[0.2em] uppercase" style="color: rgba(255, 255, 255, 0.5);">Ao vivo em Zoom <span class="mx-6" style="color: rgba(255, 255, 255, 0.15);">✦</span></span>
+<span class="mx-6 text-[11px] font-medium whitespace-nowrap tracking-[0.2em] uppercase" style="color: rgba(255, 255, 255, 0.5);">Vagas limitadas <span class="mx-6" style="color: rgba(255, 255, 255, 0.15);">✦</span></span>
+<span class="mx-6 text-[11px] font-medium whitespace-nowrap tracking-[0.2em] uppercase" style="color: rgba(255, 255, 255, 0.5);">Ao vivo em Zoom <span class="mx-6" style="color: rgba(255, 255, 255, 0.15);">✦</span></span>
+<span class="mx-6 text-[11px] font-medium whitespace-nowrap tracking-[0.2em] uppercase" style="color: rgba(255, 255, 255, 0.5);">Vagas limitadas <span class="mx-6" style="color: rgba(255, 255, 255, 0.15);">✦</span></span>
+<span class="mx-6 text-[11px] font-medium whitespace-nowrap tracking-[0.2em] uppercase" style="color: rgba(255, 255, 255, 0.5);">Ao vivo em Zoom <span class="mx-6" style="color: rgba(255, 255, 255, 0.15);">✦</span></span>
+<span class="mx-6 text-[11px] font-medium whitespace-nowrap tracking-[0.2em] uppercase" style="color: rgba(255, 255, 255, 0.5);">Vagas limitadas <span class="mx-6" style="color: rgba(255, 255, 255, 0.15);">✦</span></span>
+<span class="mx-6 text-[11px] font-medium whitespace-nowrap tracking-[0.2em] uppercase" style="color: rgba(255, 255, 255, 0.5);">Ao vivo em Zoom <span class="mx-6" style="color: rgba(255, 255, 255, 0.15);">✦</span></span>
+<span class="mx-6 text-[11px] font-medium whitespace-nowrap tracking-[0.2em] uppercase" style="color: rgba(255, 255, 255, 0.5);">Vagas limitadas <span class="mx-6" style="color: rgba(255, 255, 255, 0.15);">✦</span></span></div></div></div>
+<!-- nav -->
+<nav class="fixed left-0 right-0 z-50 transition-all duration-500" style="top: 52px; background: transparent; backdrop-filter: none;">
+<div class="flex items-center justify-between h-16 mx-auto px-6 md:px-12 lg:px-20" style="max-width: 1320px;">
+<div class="flex items-center gap-3">
+<a href="#">
+<img alt="Agent Lab" class="h-5 md:h-9 w-auto cursor-pointer" src="assets/c11881c1ea957696_agent-lab.png"/></a>
+<span class="text-[11px] text-white/70 font-medium tracking-[0.1em] uppercase lg:hidden">30–31 Mai</span></div>
+<div class="hidden lg:flex items-center gap-8">
+<span class="text-[13px] tracking-[0.15em] uppercase font-medium" style="color: rgb(255, 255, 255);">30 E 31 DE MAIO</span>
+<img alt="" class="h-9 w-auto" src="assets/d759489f2431f258_icon-center.png"/>
+<span class="text-[13px] tracking-[0.15em] uppercase font-medium" style="color: rgb(255, 255, 255);">12 HORAS AO VIVO</span></div>
+<div class="grid place-items-center">
+<a class="col-start-1 row-start-1 inline-flex items-center justify-center font-semibold text-[13px] rounded-full px-6 py-3 min-h-[44px] transition-all duration-500 text-white border border-white/30 hover:bg-white/10" href="#garanta-sua-vaga" style="opacity: 1; pointer-events: auto; transform: scale(1);">Garantir Ingresso</a>
+<img alt="Human Academy" class="col-start-1 row-start-1 h-4 md:h-5 w-auto transition-all duration-500" src="assets/b0242641afe25861_HUMANACA.png" style="opacity: 0; pointer-events: none; transform: scale(0.9);"/></div></div></nav>
+<!-- hero -->
+<section class="relative min-h-screen overflow-hidden" style='background-color: rgb(236, 94, 38); background-image: url("assets/0dbb4e84a15b43e7_bg.jpg"); background-size: cover; background-position: center center; background-repeat: no-repeat;'>
+<div class="relative z-10 pt-32 md:pt-36 pb-16 md:pb-16 min-h-screen flex flex-col mx-auto px-6 md:px-12 lg:px-20" style="max-width: 1320px;">
+<div class="flex-1 flex flex-col lg:flex-row gap-8 lg:gap-16 items-center lg:items-center">
+<div class="flex-1 max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
+<div class="flex items-center justify-center lg:justify-start gap-2 mb-5 md:mb-6 animate-fade-in-up [animation-delay:0ms]">
+<img alt="Human Academy" class="h-3.5 md:h-5 w-auto opacity-50" src="assets/b0242641afe25861_HUMANACA.png"/>
+<span class="text-[9px] md:text-[11px] uppercase tracking-[0.15em] font-medium" style="color: rgba(255, 255, 255, 0.35);">apresenta</span></div>
+<h1 class="heading-h1 text-white text-center lg:text-left text-[36px] md:text-[56px] lg:text-[64px] xl:text-[72px] animate-fade-in-up [animation-delay:0ms]" style="font-weight: 500;">Monte seu sistema<br class="lg:hidden"/> de<br class="hidden lg:inline"/> agentes criativos<br/>do zero em <span class="relative whitespace-nowrap">2 dias.<img alt="" class="absolute left-0 -bottom-1 md:-bottom-2 w-full h-auto pointer-events-none" src="assets/f055c4e3e743eb56_subli.png"/></span></h1>
+<p class="text-sm md:text-lg max-w-md leading-relaxed mt-6 md:mt-12 mx-auto lg:mx-0 animate-fade-in-up [animation-delay:200ms]" style="color: rgba(255, 255, 255, 0.7);">Um workshop ao vivo para quem quer usar IA como equipe criativa. De imagens e vídeos a campanhas automatizadas, tudo na prática.</p></div>
+<div class="flex-1 flex flex-col items-center lg:items-end gap-3 md:gap-5 w-full lg:w-auto">
+<div class="w-full max-w-sm hidden lg:block animate-fade-in-up [animation-delay:300ms]">
+<div class="flex items-center justify-between mb-2">
+<p class="text-sm font-semibold" style="color: rgb(234, 250, 168);">Lote 04</p>
+<p class="text-sm" style="color: rgb(234, 250, 168);">
+<span class="line-through mr-1 opacity-60">R$84,00</span>
+<span class="font-semibold">R$62,00</span></p></div>
+<div class="relative w-full rounded-full overflow-hidden" style="background: rgb(26, 26, 26); height: 14px;">
+<div class="absolute inset-y-0 left-0 rounded-full transition-all duration-1000" style="width: 21.0106%; background: rgb(234, 250, 168);"></div></div></div>
+<div class="relative w-full max-w-[320px] lg:max-w-[480px] h-44 lg:h-[340px] mx-auto lg:mx-0 pointer-events-none select-none animate-fade-in-up [animation-delay:400ms]">
+<img alt="" class="absolute w-36 lg:w-52 top-[5%] lg:top-[15%] -left-[2%] lg:left-0" height="208" src="assets/8feaa847f4570cc1_asterisk.png" style="animation: 6s ease-in-out 0s infinite normal none running sticker-float-0;" width="208"/>
+<img alt="" class="absolute w-40 lg:w-56 top-[0%] lg:top-[5%] left-[22%] lg:left-[28%] z-10" height="224" src="assets/8736e3b2e76bc0f5_cross.png" style="animation: 6s ease-in-out 300ms infinite normal none running sticker-float-1;" width="224"/>
+<img alt="" class="absolute w-28 lg:w-44 top-[8%] lg:top-0 right-[-2%] lg:right-[8%]" height="176" src="assets/e9777ddae9f925b6_arrows.png" style="animation: 6s ease-in-out 600ms infinite normal none running sticker-float-2;" width="176"/>
+<img alt="" class="absolute w-36 lg:w-52 bottom-[-5%] lg:bottom-0 right-[2%] lg:right-0" height="208" src="assets/353bf4e5ed435714_globe.png" style="animation: 6s ease-in-out 900ms infinite normal none running sticker-float-0;" width="208"/></div>
+<div class="w-full max-w-sm animate-fade-in-up [animation-delay:500ms]">
+<div class="bg-white rounded-[28px] overflow-hidden shadow-lg ticket-card transition-transform">
+<div class="flex items-center px-6 py-5">
+<div class="flex-1">
+<p class="text-base font-bold text-black">30 e 31 de Maio</p>
+<p class="text-sm text-black/50">Online ao vivo</p></div>
+<div class="w-px h-10 bg-black/15 mx-4"></div>
+<div class="flex-1 text-right">
+<p class="text-base font-bold text-black">Agent Lab</p>
+<p class="text-sm text-black/50">12 horas de workshop</p></div></div>
+<a class="block w-full text-center text-black font-semibold text-sm tracking-wide py-4 hover:brightness-95 transition-all" href="#garanta-sua-vaga" style="background: rgb(234, 250, 168);">GARANTIR INGRESSO</a></div></div>
+<div class="w-full max-w-sm lg:hidden mt-4 animate-fade-in-up [animation-delay:600ms]">
+<div class="text-center mb-4">
+<span class="text-white/40 text-sm line-through mr-2">R$84,00</span>
+<span class="font-heading font-bold text-3xl" style="color: rgb(234, 250, 168);">R$62,00</span></div>
+<div class="flex items-center justify-between mb-1.5">
+<p class="text-xs font-semibold" style="color: rgb(234, 250, 168);">Lote 04</p>
+<p class="text-[10px]" style="color: rgba(234, 250, 168, 0.5);">R$62,00</p></div>
+<div class="relative w-full rounded-full overflow-hidden" style="background: rgb(26, 26, 26); height: 10px;">
+<div class="absolute inset-y-0 left-0 rounded-full transition-all duration-1000" style="width: 21.0106%; background: rgb(234, 250, 168);"></div></div></div></div></div>
+<div class="mt-14 lg:mt-auto pt-0 text-center overflow-hidden animate-fade-in-up [animation-delay:700ms]">
+<p class="text-[10px] tracking-[0.2em] uppercase mb-8 font-medium" style="color: rgba(255, 255, 255, 0.85);">Marcas que confiam na Human</p>
+<div class="relative w-full overflow-hidden" style="mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);">
+<div class="flex items-center gap-12 md:gap-16 animate-marquee whitespace-nowrap">
+<img alt="" class="w-auto object-contain shrink-0" height="56" loading="lazy" src="assets/423917a68b2da6c2_africa.svg" style="filter: brightness(0) invert(1); opacity: 0.75; height: 56px;" width="120"/>
+<img alt="" class="w-auto object-contain shrink-0" height="56" loading="lazy" src="assets/9fc293b660777157_betmgm.svg" style="filter: brightness(0) invert(1); opacity: 0.75; height: 56px;" width="120"/>
+<img alt="" class="w-auto object-contain shrink-0" height="56" loading="lazy" src="assets/27bad53f566b5ee2_dga.svg" style="filter: brightness(0) invert(1); opacity: 0.75; height: 56px;" width="120"/>
+<img alt="" class="w-auto object-contain shrink-0" height="56" loading="lazy" src="assets/85a1f451f0f9d8e3_dpz.svg" style="filter: brightness(0) invert(1); opacity: 0.75; height: 56px;" width="120"/>
+<img alt="" class="w-auto object-contain shrink-0" height="56" loading="lazy" src="assets/31dfb6515bc89095_dreamers.svg" style="filter: brightness(0) invert(1); opacity: 0.75; height: 56px;" width="120"/>
+<img alt="" class="w-auto object-contain shrink-0" height="56" loading="lazy" src="assets/759e68ed1644e7bc_h.svg" style="filter: brightness(0) invert(1); opacity: 0.75; height: 56px;" width="120"/>
+<img alt="" class="w-auto object-contain shrink-0" height="56" loading="lazy" src="assets/c648e238152e15f1_nio.svg" style="filter: brightness(0) invert(1); opacity: 0.75; height: 56px;" width="120"/>
+<img alt="" class="w-auto object-contain shrink-0" height="56" loading="lazy" src="assets/2974c11a65eb8cd3_trident.svg" style="filter: brightness(0) invert(1); opacity: 0.75; height: 56px;" width="120"/>
+<img alt="" class="w-auto object-contain shrink-0" height="56" loading="lazy" src="assets/58788ce38d28a8f6_will.svg" style="filter: brightness(0) invert(1); opacity: 0.75; height: 56px;" width="120"/>
+<img alt="" class="w-auto object-contain shrink-0" height="56" loading="lazy" src="assets/423917a68b2da6c2_africa.svg" style="filter: brightness(0) invert(1); opacity: 0.75; height: 56px;" width="120"/>
+<img alt="" class="w-auto object-contain shrink-0" height="56" loading="lazy" src="assets/9fc293b660777157_betmgm.svg" style="filter: brightness(0) invert(1); opacity: 0.75; height: 56px;" width="120"/>
+<img alt="" class="w-auto object-contain shrink-0" height="56" loading="lazy" src="assets/27bad53f566b5ee2_dga.svg" style="filter: brightness(0) invert(1); opacity: 0.75; height: 56px;" width="120"/>
+<img alt="" class="w-auto object-contain shrink-0" height="56" loading="lazy" src="assets/85a1f451f0f9d8e3_dpz.svg" style="filter: brightness(0) invert(1); opacity: 0.75; height: 56px;" width="120"/>
+<img alt="" class="w-auto object-contain shrink-0" height="56" loading="lazy" src="assets/31dfb6515bc89095_dreamers.svg" style="filter: brightness(0) invert(1); opacity: 0.75; height: 56px;" width="120"/>
+<img alt="" class="w-auto object-contain shrink-0" height="56" loading="lazy" src="assets/759e68ed1644e7bc_h.svg" style="filter: brightness(0) invert(1); opacity: 0.75; height: 56px;" width="120"/>
+<img alt="" class="w-auto object-contain shrink-0" height="56" loading="lazy" src="assets/c648e238152e15f1_nio.svg" style="filter: brightness(0) invert(1); opacity: 0.75; height: 56px;" width="120"/>
+<img alt="" class="w-auto object-contain shrink-0" height="56" loading="lazy" src="assets/2974c11a65eb8cd3_trident.svg" style="filter: brightness(0) invert(1); opacity: 0.75; height: 56px;" width="120"/>
+<img alt="" class="w-auto object-contain shrink-0" height="56" loading="lazy" src="assets/58788ce38d28a8f6_will.svg" style="filter: brightness(0) invert(1); opacity: 0.75; height: 56px;" width="120"/></div></div></div></div></section>
+<!-- video-cta -->
+<section class="bg-background py-10 md:py-16">
+<div style="max-width: 1100px; margin: 0px auto; padding: 0px 16px;">
+<div class="relative w-full overflow-hidden rounded-2xl shadow-xl aspect-[4/5] md:aspect-[4/3]">
+<iframe allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" class="absolute inset-0 w-full h-full scale-[1.667] md:scale-100" src="https://player.vimeo.com/video/1185321512?h=3841b58a3b&amp;autoplay=1&amp;muted=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0&amp;dnt=1&amp;loop=1" title="Agent Lab"></iframe>
+<button aria-label="Ativar som" class="absolute inset-0 z-10 flex items-center justify-center cursor-pointer group">
+<div class="flex flex-col items-center justify-center gap-4 rounded-3xl px-12 py-10 md:px-16 md:py-12 transition-all duration-300 group-hover:scale-105 group-active:scale-95" style="background: rgb(236, 94, 38); box-shadow: rgba(236, 94, 38, 0.6) 0px 12px 40px, rgba(236, 94, 38, 0.2) 0px 0px 0px 6px;">
+<svg class="md:w-16 md:h-16" fill="none" height="56" viewbox="0 0 24 24" width="56">
+<path d="M11 5L6 9H2v6h4l5 4V5z" fill="rgba(255,255,255,0.9)"></path>
+<path d="M16 8.5c.94.94 1.5 2.24 1.5 3.5s-.56 2.56-1.5 3.5" stroke="rgba(255,255,255,0.4)" stroke-linecap="round" stroke-width="1.5"></path>
+<path d="M19 5.5c1.73 1.73 2.75 4.1 2.75 6.5s-1.02 4.77-2.75 6.5" stroke="rgba(255,255,255,0.2)" stroke-linecap="round" stroke-width="1.5"></path>
+<line stroke="#fff" stroke-linecap="round" stroke-width="2" x1="3" x2="21" y1="3" y2="21"></line></svg>
+<span class="text-white font-semibold text-xs md:text-sm tracking-widest uppercase">Ativar som</span></div></button></div></div></section>
+<!-- context -->
+<section class="py-[40px] md:py-[60px] lg:py-[80px] relative overflow-hidden bg-background">
+<div class="container-main relative z-10">
+<div class="relative">
+<img alt="" class="absolute -top-10 -right-6 md:-top-14 md:-right-10 w-28 md:w-44 pointer-events-none select-none z-20" loading="lazy" src="assets/353bf4e5ed435714_globe.png" style="animation: 6s ease-in-out 0s infinite normal none running sticker-float-0;"/>
+<img alt="" class="absolute -bottom-8 -left-6 md:-bottom-12 md:-left-10 w-24 md:w-36 pointer-events-none select-none z-20" loading="lazy" src="assets/8feaa847f4570cc1_asterisk.png" style="animation: 6s ease-in-out 400ms infinite normal none running sticker-float-1;"/>
+<img alt="" class="absolute -bottom-8 -right-4 md:-bottom-12 md:-right-8 w-24 md:w-36 pointer-events-none select-none z-20" loading="lazy" src="assets/e9777ddae9f925b6_arrows.png" style="animation: 6s ease-in-out 800ms infinite normal none running sticker-float-2;"/>
+<div class="relative z-10 p-8 md:p-14 lg:p-16" style='background-color: rgb(241, 241, 241); mask-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABZkAAAKrCAYAAACTJoN3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAGFWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgMTAuMC1jMDAwIDc5LmQyMGU0NjYzMCwgMjAyNS8xMi8wOS0wMjoxMToyMyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI3LjYgKDIwMjYwNDA4Lm0uMzQ5NyBlN2JhY2UzKSAgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDI2LTA0LTEzVDIxOjQxOjExLTAzOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyNi0wNC0xM1QyMjoxNTozMy0wMzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyNi0wNC0xM1QyMjoxNTozMy0wMzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ZTNkN2ZkZjYtYzBhOS00MjJhLWEyNGUtMTgyNWI1YmNmODhlIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjkxZDVjNWYxLTJjYjUtNDNkYi05YzgwLWRmMDY2ZGQxZTVkOCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjkxZDVjNWYxLTJjYjUtNDNkYi05YzgwLWRmMDY2ZGQxZTVkOCI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6OTFkNWM1ZjEtMmNiNS00M2RiLTljODAtZGYwNjZkZDFlNWQ4IiBzdEV2dDp3aGVuPSIyMDI2LTA0LTEzVDIxOjQxOjExLTAzOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjcuNiAoMjAyNjA0MDgubS4zNDk3IGU3YmFjZTMpICAoTWFjaW50b3NoKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZTNkN2ZkZjYtYzBhOS00MjJhLWEyNGUtMTgyNWI1YmNmODhlIiBzdEV2dDp3aGVuPSIyMDI2LTA0LTEzVDIyOjE1OjMzLTAzOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjcuNiAoMjAyNjA0MDgubS4zNDk3IGU3YmFjZTMpICAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4d8d1AAAAf/UlEQVR4nO3dvXIc153G4dO9iTNjs80MXYHoiGQkSJEzU1cgKtuAA1JXQLGKuUQMcslXQCna2shQSCWis3UkKHNm6AKE3jqspoqfwPSLme6ewfNU0SwTAudwPv595jeDnubx48clde/evb2maQ5KKR+VUvZLKTdKKXv9r41o2/aDJ0+enJYJLBaL7n1fWy6XTZnAvXv39pum+fk9Xz5dLpcflAkcHh4edF339/d8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AAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAQExkBgAAAAAgJjIDAAAAABATmQEAAAAAiInMAAAAAADERGYAAAAAAGIiMwAAAAAAMZEZAAAAAICYyAwAAAAAwJUi81n+7QAAAAAAXGNnIjMAAAAAAKnTGpmfx98OAAAAAEC57u9k/mXqVQAAAAAAsJX+USPzydSrAAAAAABgK500Z2dne03T/FxK2Zt6NQAAAAAAbI+u6/6zPT4+rh/857zMAAAAAAAM8X3ty/V0GaVpmkeDvhUAAAAAgOvu2/o/LyLz0dFRPS/z6dQrAgAAAABgK5wul8vvfo/MvS+mWw8AAAAAAFvk97Nj/B6Z++pc39EMAAAAAADv83y5XL44Vcab72SunwT4eSmlfhAgAAAAAAC86axt209f/YPXIvPx8XE9L7MPAQQAAAAA4F0ePXny5PS9kblaLpdfC80AAAAAALzhUd+Py4WRuVoul18KzQAAAAAAvBKYazcuK0XmSmgGAAAAAKBcEJgvjMxV/41f+DBAAAAAAIBr56z24YsC86WRuarn2Oi67s+llOdrXR4AAAAAAHN10rbtn991DuY3NY8fP175b10sFndLKQ9LKftXXSEAAAAAALNz2r97+btVv2FQZH5psVjcKaV8VkqpvwMAAAAAsN2nxXjeNM2jo6Ojk6HfHEXml+7du7fXNM1BKaX++rCUste/y7n+DgAAAABAmZUalF9E5VLKL/W0GF3XnRwfH8efy/f/YCf56T0rmPAAAAAASUVORK5CYII="); mask-size: 100% 100%; mask-repeat: no-repeat;'>
+<div class="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
+<div>
+<div class="animate-fade-in-up">
+<p class="heading-h2 text-foreground">Agentes de IA estão em todo lugar.</p></div>
+<div class="mt-8 animate-fade-in-up" style="animation-delay: 200ms;">
+<p class="text-base md:text-lg leading-relaxed text-secondary-content">Você vê no feed: gente criando imagens, montando vídeos, automatizando conteúdo, tudo pelo terminal.</p></div></div>
+<div class="md:mt-4">
+<div class="animate-fade-in-up" style="animation-delay: 300ms;">
+<p class="text-base md:text-lg leading-relaxed text-secondary-content">Parece mágica. Parece complicado. Parece que precisa saber programar.</p></div>
+<div class="mt-10 animate-fade-in-up" style="animation-delay: 500ms;">
+<p class="font-heading tracking-tight" style="font-size: clamp(24px, 3vw, 40px); line-height: 1.15; color: rgb(236, 94, 38); font-weight: 500;">Em 2 dias, você aprende isso na prática, ao vivo.</p></div></div></div></div>
+<div class="mt-4 px-8 md:px-14 py-5 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 animate-fade-in-up" style='background-color: rgb(236, 94, 38); mask-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABZkAAACoCAYAAACCLeDwAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAErpJREFUeAHt3UFyFFeaB/CXWUB3xGxEgB3RO3nRmIhZNJygxQkM+25bnKDhBIYT2D4Bkn0A4xNYPoHxYiIAL0ZeTcQYB5pFR9jCyjf5SpItsKjK96qyMgW/X4QdQJWoj6rM//vyq6ysKizg+eb62kG4sBFj/HsV6vUqhGshxrUYwloAAAAAAGBU2hnuXvu/3RiqvRiaR1VVfTMJ+zsXt3b3QqEqFPhx8+pGFePH7X/XDJQBAAAAAM64qnoYqrh9eevpw5Apa8j87B9XblZ19UkMcT0AAAAAAPBGaQfGuzHG+5e/+H4r42fme755df0gxgchxo0AAAAAAMAbrR0cP6rr+tbFrce78+5bz7vDTx++/6+mab41YAYAAAAAeDvEEK4dtHPhH//5/p159515JvNPH175uP3L7gUAAAAAAN5K7RD53qXPn96fcfvpDJgBAAAAAEhmDZpPHTIbMAMAAAAAcNLrBs1/GDKnazDHED8NAAAAAABwQozV3Xe+ePLS/PilIfPzzavr6Uv+YghrAQAAAAAAXrY3qevrF7ce7x7/QX3y1iY2XxowAwAAAADwGmsHMT44+Qe/DZmf/fPqZozhWgAAAAAAgNeJcePZ5pWbx7/9bchcVfHjAAAAAAAAc1RN+OT419Mh87N/XLkZQ1wPAAAAAAAwRwxh/cfNqxvp14dnMk/CRwEAAAAAADqq4uHVMarnm+trB82F5wEAAAAAALrbm9T779UHv17YCAAAAAAAkGftIFzYqEMdNwIAAAAAAORqYjtkruq/BQAAAAAAyBRDvV5XMa4FAAAAAADIVIX4tzqGsB4AAAAAACDfWp3+FwAAAAAAIN90yAwAAAAAAEUMmQEAAAAAKGbIDAAAAABAMUNmAAAAAACKGTIDAAAAAFDMkBkAAAAAgGKGzAAAAAAAFDNkBgAAAACgmCEzAAAAAADFDJkBAAAAAChmyAwAAAAAQDFDZgAAAAAAihkyAwAAAABQzJAZAAAAAIBihswAAAAAABQzZAYAAAAAoJghMwAAAAAAxQyZAQAAAAAoZsgMAAAAAEAxQ2YAAAAAAIoZMgMAAAAAUMyQGQAAAACAYobMAAAAAAAUM2QGAAAAAKCYITMAAAAAAMUMmQEAAAAAKGbIDAAAAABAMUNmAAAAAACKGTIDAAAAAFDMkBkAAAAAgGKGzAAAAAAAFDNkBgAAAACgmCEzAAAAAADFDJkBAAAAAChmyAwAAAAAQDFDZgAAAAAAihkyAwAAAABQzJAZAAAAAIBihswAAAAAABQzZAYAAAAAoJghMwAAAAAAxQyZAQAAAAAoZsgMAAAAAEAxQ2YAAAAAAIoZMgMAAAAAUMyQGQAAAACAYobMAAAAAAAUM2QGAAAAAKCYITMAAAAAAMUMmQEAAAAAKGbIDAAAAABAMUNmAAAAAACKGTIDAAAAAFDMkBkAAAAAgGKGzAAAAAAAFDNkBgAAAACgmCEzAAAAAADFDJkBAAAAAChmyAwAAAAAQDFDZgAAAAAAihkyAwAAAABQzJAZAAAAAIBihswAAAAAABQzZAYAAAAAoJghMwAAAAAAxQyZAQAAAAAoZsgMAAAAAEAxQ2YAAAAAAIoZMgMAAAAAUMyQGQAAAACAYobMAAAAAAAUM2QGAAAAAKCYITMAAAAAAMUMmQEAAAAAKGbIDAAAAABAMUNmAAAAAACKGTIDAAAAAFDMkBkAAAAAgGKGzAAAAAAAFDNkBgAAAACgmCEzAAAAAADFDJkBAAAAAChmyAwAAAAAQDFDZgAAAAAAihkyAwAAAABQzJAZAAAAAIBihswAAAAAABQzZAYAAAAAoJghMwAAAAAAxQyZAQAAAAAoZsgMAAAAAEAxQ2YAAAAAAIoZMgMAAAAAUMyQGQAAAACAYobMAAAAAAAUM2QGAAAAAKCYITMAAAAAAMUMmQEAAAAAKGbIDAAAAABAMUNmAAAAAACKGTIDAAAAAFDMkBkAAAAAgGKGzAAAAAAAFDNkBgAAAACgmCEzAAAAAADFDJkBAAAAAChmyAwAAAAAQDFDZgAAAAAAihkyAwAAAABQzJAZAAAAAIBihswAAAAAABQzZAYAAAAAoJghMwAAAAAAxQyZAQAAAAAoZsgMAAAAAEAxQ2YAAAAAAIoZMgMAAAAAUMyQGQAAAACAYobMAAAAAAAUM2QGAAAAAKCYITMAAAAAAMUMmQEAAAAAKGbIDAAAAABAMUNmAAAAAACKGTIDAAAAAFAsDZn3AgAA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"); mask-size: 100% 100%; mask-repeat: no-repeat; animation-delay: 600ms;'>
+<p class="text-[10px] tracking-[0.2em] uppercase font-semibold text-white/70 whitespace-nowrap">Ferramentas que você vai dominar</p>
+<div class="flex items-center gap-6 md:gap-8 flex-wrap justify-center">
+<div class="h-5 flex items-center justify-center" style="opacity: 0.85; transition: opacity 0.6s;">
+<img alt="Claude" class="h-4 md:h-5 w-auto object-contain" src="assets/a3101f3047a119aa_claude.svg" style="filter: brightness(0) invert(1);"/></div>
+<div class="h-5 flex items-center justify-center" style="opacity: 0.85; transition: opacity 0.6s;">
+<img alt="Recraft" class="h-4 md:h-5 w-auto object-contain" src="assets/ccb97a588aebf55a_recraft.svg" style="filter: brightness(0) invert(1);"/></div>
+<div class="h-5 flex items-center justify-center" style="opacity: 0.85; transition: opacity 0.6s;">
+<img alt="Remotion" class="h-4 md:h-5 w-auto object-contain" src="assets/2512708909957119_remotion.svg" style="filter: brightness(0) invert(1);"/></div>
+<div class="h-5 flex items-center justify-center" style="opacity: 0.85; transition: opacity 0.6s;">
+<img alt="ElevenLabs" class="h-4 md:h-5 w-auto object-contain" src="assets/152a4a89fd522892_elevenlabs.svg" style="filter: brightness(0) invert(1);"/></div>
+<div class="h-5 flex items-center justify-center" style="opacity: 0.85; transition: opacity 0.6s;">
+<img alt="Midjourney" class="h-4 md:h-5 w-auto object-contain" src="assets/e09640ccbf6f643b_midjourney.svg" style="filter: brightness(0) invert(1);"/></div>
+<div class="h-5 flex items-center justify-center" style="opacity: 0.85; transition: opacity 0.6s;">
+<img alt="Nano Banana" class="h-4 md:h-5 w-auto object-contain" src="assets/1fd02b099e6d07d6_nanobanana.svg" style="filter: brightness(0) invert(1);"/></div></div></div></div></div></section>
+<div class="section-divider"></div>
+<!-- learn-grid -->
+<section class="section-spacing">
+<div class="container-main">
+<div class="text-center mb-12 md:mb-16 animate-fade-in-up">
+<div class="section-header-line">
+<span class="label-tag">Conteúdo</span></div>
+<h2 class="heading-h2 mt-5">O que você vai aprender</h2></div>
+<div class="grid md:grid-cols-3 gap-5 mb-5 items-start">
+<div class="group relative animate-fade-in-up" style="animation-delay: 0ms;">
+<div class="relative rounded-[24px] overflow-hidden p-3" style="background: rgb(28, 26, 24);">
+<div class="h-[220px] md:h-[240px] rounded-[14px]" style="background: radial-gradient(at 50% 60%, rgb(140, 26, 0) 0%, rgb(236, 94, 38) 38%, rgb(245, 160, 74) 65%, rgb(253, 232, 204) 100%);"></div>
+<div class="px-5 pt-5 pb-6 h-[140px] flex flex-col justify-start">
+<h3 class="font-heading font-medium text-white text-[22px] leading-snug tracking-tight">Introdução aos Agentes de IA</h3>
+<p class="text-xs mt-1.5" style="color: rgba(255, 255, 255, 0.38); line-height: 1.45;">Entenda o ecossistema, configure seu ambiente e monte seu primeiro agente criativo do zero.</p></div></div>
+<div class="relative mx-3 rounded-b-[16px] px-5 py-4 flex items-center justify-between" style="background: rgb(42, 39, 37);">
+<div class="absolute -left-2.5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-background"></div>
+<div class="absolute -right-2.5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-background"></div>
+<div class="w-full flex justify-center">
+<span class="text-[9px] font-semibold uppercase tracking-[0.14em] px-4 py-1.5 rounded-full" style="background: rgba(255, 255, 255, 0.03); color: rgba(255, 255, 255, 0.9); border: 1px solid rgba(255, 255, 255, 0.03);">Fundamentos</span></div></div></div>
+<div class="group relative animate-fade-in-up" style="animation-delay: 120ms;">
+<div class="relative rounded-[24px] overflow-hidden p-3" style="background: rgb(28, 26, 24);">
+<div class="h-[220px] md:h-[240px] rounded-[14px]" style="background: radial-gradient(at 15% 85%, rgb(236, 94, 38) 0%, rgb(196, 74, 26) 30%, transparent 65%), radial-gradient(at 85% 15%, rgb(245, 160, 74) 0%, transparent 55%), linear-gradient(135deg, rgb(28, 8, 0) 0%, rgb(46, 18, 0) 50%, rgb(14, 6, 0) 100%);"></div>
+<div class="px-5 pt-5 pb-6 h-[140px] flex flex-col justify-start">
+<h3 class="font-heading font-medium text-white text-[22px] leading-snug tracking-tight">Criação Visual e Vídeo</h3>
+<p class="text-xs mt-1.5" style="color: rgba(255, 255, 255, 0.38); line-height: 1.45;">Gere imagens de estúdio, product shots, motion graphics e vídeos. Tudo via agentes.</p></div></div>
+<div class="relative mx-3 rounded-b-[16px] px-5 py-4 flex items-center justify-between" style="background: rgb(42, 39, 37);">
+<div class="absolute -left-2.5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-background"></div>
+<div class="absolute -right-2.5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-background"></div>
+<div class="w-full flex justify-center">
+<span class="text-[9px] font-semibold uppercase tracking-[0.14em] px-4 py-1.5 rounded-full" style="background: rgba(255, 255, 255, 0.03); color: rgba(255, 255, 255, 0.9); border: 1px solid rgba(255, 255, 255, 0.03);">Produção</span></div></div></div>
+<div class="group relative animate-fade-in-up" style="animation-delay: 240ms;">
+<div class="relative rounded-[24px] overflow-hidden p-3" style="background: rgb(28, 26, 24);">
+<div class="h-[220px] md:h-[240px] rounded-[14px]" style="background: conic-gradient(from 200deg at 60% 55%, rgb(253, 232, 204) 0deg, rgb(245, 160, 74) 60deg, rgb(236, 94, 38) 120deg, rgb(196, 74, 26) 180deg, rgb(122, 26, 0) 240deg, rgb(196, 74, 26) 300deg, rgb(253, 232, 204) 360deg);"></div>
+<div class="px-5 pt-5 pb-6 h-[140px] flex flex-col justify-start">
+<h3 class="font-heading font-medium text-white text-[22px] leading-snug tracking-tight">Automação e Escala</h3>
+<p class="text-xs mt-1.5" style="color: rgba(255, 255, 255, 0.38); line-height: 1.45;">Monte pipelines que produzem conteúdo em escala sem perder qualidade criativa.</p></div></div>
+<div class="relative mx-3 rounded-b-[16px] px-5 py-4 flex items-center justify-between" style="background: rgb(42, 39, 37);">
+<div class="absolute -left-2.5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-background"></div>
+<div class="absolute -right-2.5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-background"></div>
+<div class="w-full flex justify-center">
+<span class="text-[9px] font-semibold uppercase tracking-[0.14em] px-4 py-1.5 rounded-full" style="background: rgba(255, 255, 255, 0.03); color: rgba(255, 255, 255, 0.9); border: 1px solid rgba(255, 255, 255, 0.03);">Avançado</span></div></div></div></div>
+<div class="mt-10 md:mt-14 rounded-2xl overflow-hidden" style="border: 1px solid rgba(0, 0, 0, 0.06);">
+<div class="grid grid-cols-1 md:grid-cols-3">
+<div class="group flex items-center gap-4 px-6 py-5 md:px-7 md:py-6 transition-colors duration-300 hover:bg-black/[0.02] animate-fade-in-up" style="border-bottom: 1px solid rgba(0, 0, 0, 0.06); animation-delay: 400ms;">
+<span class="shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold" style="background: rgba(236, 94, 38, 0.08); color: rgb(236, 94, 38);">01</span>
+<div class="flex-1 min-w-0">
+<h4 class="font-heading font-semibold text-[15px] md:text-base tracking-tight text-foreground">Agentes de IA</h4>
+<span class="text-[11px] tracking-wide uppercase" style="color: rgba(0, 0, 0, 0.3);">Fundamentos</span></div>
+<svg class="w-4 h-4 shrink-0 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2" style="color: rgba(0, 0, 0, 0.25);" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+<div class="group flex items-center gap-4 px-6 py-5 md:px-7 md:py-6 transition-colors duration-300 hover:bg-black/[0.02] animate-fade-in-up" style="border-bottom: 1px solid rgba(0, 0, 0, 0.06); animation-delay: 450ms;">
+<span class="shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold" style="background: rgba(236, 94, 38, 0.08); color: rgb(236, 94, 38);">02</span>
+<div class="flex-1 min-w-0">
+<h4 class="font-heading font-semibold text-[15px] md:text-base tracking-tight text-foreground">Claude Code</h4>
+<span class="text-[11px] tracking-wide uppercase" style="color: rgba(0, 0, 0, 0.3);">Ferramenta</span></div>
+<svg class="w-4 h-4 shrink-0 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2" style="color: rgba(0, 0, 0, 0.25);" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+<div class="group flex items-center gap-4 px-6 py-5 md:px-7 md:py-6 transition-colors duration-300 hover:bg-black/[0.02] animate-fade-in-up" style="border-bottom: 1px solid rgba(0, 0, 0, 0.06); animation-delay: 500ms;">
+<span class="shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold" style="background: rgba(236, 94, 38, 0.08); color: rgb(236, 94, 38);">03</span>
+<div class="flex-1 min-w-0">
+<h4 class="font-heading font-semibold text-[15px] md:text-base tracking-tight text-foreground">DNA Criativo</h4>
+<span class="text-[11px] tracking-wide uppercase" style="color: rgba(0, 0, 0, 0.3);">Identidade</span></div>
+<svg class="w-4 h-4 shrink-0 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2" style="color: rgba(0, 0, 0, 0.25);" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+<div class="group flex items-center gap-4 px-6 py-5 md:px-7 md:py-6 transition-colors duration-300 hover:bg-black/[0.02] animate-fade-in-up" style="border-bottom: 1px solid rgba(0, 0, 0, 0.06); animation-delay: 550ms;">
+<span class="shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold" style="background: rgba(236, 94, 38, 0.08); color: rgb(236, 94, 38);">04</span>
+<div class="flex-1 min-w-0">
+<h4 class="font-heading font-semibold text-[15px] md:text-base tracking-tight text-foreground">Branding com IA</h4>
+<span class="text-[11px] tracking-wide uppercase" style="color: rgba(0, 0, 0, 0.3);">Design</span></div>
+<svg class="w-4 h-4 shrink-0 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2" style="color: rgba(0, 0, 0, 0.25);" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+<div class="group flex items-center gap-4 px-6 py-5 md:px-7 md:py-6 transition-colors duration-300 hover:bg-black/[0.02] animate-fade-in-up" style="border-bottom: 1px solid rgba(0, 0, 0, 0.06); animation-delay: 600ms;">
+<span class="shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold" style="background: rgba(236, 94, 38, 0.08); color: rgb(236, 94, 38);">05</span>
+<div class="flex-1 min-w-0">
+<h4 class="font-heading font-semibold text-[15px] md:text-base tracking-tight text-foreground">Product Shots</h4>
+<span class="text-[11px] tracking-wide uppercase" style="color: rgba(0, 0, 0, 0.3);">Fotografia</span></div>
+<svg class="w-4 h-4 shrink-0 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2" style="color: rgba(0, 0, 0, 0.25);" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+<div class="group flex items-center gap-4 px-6 py-5 md:px-7 md:py-6 transition-colors duration-300 hover:bg-black/[0.02] animate-fade-in-up" style="border-bottom: 1px solid rgba(0, 0, 0, 0.06); animation-delay: 650ms;">
+<span class="shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold" style="background: rgba(236, 94, 38, 0.08); color: rgb(236, 94, 38);">06</span>
+<div class="flex-1 min-w-0">
+<h4 class="font-heading font-semibold text-[15px] md:text-base tracking-tight text-foreground">Pipelines Criativas</h4>
+<span class="text-[11px] tracking-wide uppercase" style="color: rgba(0, 0, 0, 0.3);">Automação</span></div>
+<svg class="w-4 h-4 shrink-0 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2" style="color: rgba(0, 0, 0, 0.25);" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+<div class="group flex items-center gap-4 px-6 py-5 md:px-7 md:py-6 transition-colors duration-300 hover:bg-black/[0.02] animate-fade-in-up" style="border-bottom: 1px solid rgba(0, 0, 0, 0.06); animation-delay: 700ms;">
+<span class="shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold" style="background: rgba(236, 94, 38, 0.08); color: rgb(236, 94, 38);">07</span>
+<div class="flex-1 min-w-0">
+<h4 class="font-heading font-semibold text-[15px] md:text-base tracking-tight text-foreground">Skills e MCP</h4>
+<span class="text-[11px] tracking-wide uppercase" style="color: rgba(0, 0, 0, 0.3);">Extensões</span></div>
+<svg class="w-4 h-4 shrink-0 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2" style="color: rgba(0, 0, 0, 0.25);" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+<div class="group flex items-center gap-4 px-6 py-5 md:px-7 md:py-6 transition-colors duration-300 hover:bg-black/[0.02] animate-fade-in-up" style="border-bottom: 1px solid rgba(0, 0, 0, 0.06); animation-delay: 750ms;">
+<span class="shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold" style="background: rgba(236, 94, 38, 0.08); color: rgb(236, 94, 38);">08</span>
+<div class="flex-1 min-w-0">
+<h4 class="font-heading font-semibold text-[15px] md:text-base tracking-tight text-foreground">Automação de Ads</h4>
+<span class="text-[11px] tracking-wide uppercase" style="color: rgba(0, 0, 0, 0.3);">Marketing</span></div>
+<svg class="w-4 h-4 shrink-0 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2" style="color: rgba(0, 0, 0, 0.25);" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+<div class="group flex items-center gap-4 px-6 py-5 md:px-7 md:py-6 transition-colors duration-300 hover:bg-black/[0.02] animate-fade-in-up" style="border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor; animation-delay: 800ms;">
+<span class="shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold" style="background: rgba(236, 94, 38, 0.08); color: rgb(236, 94, 38);">09</span>
+<div class="flex-1 min-w-0">
+<h4 class="font-heading font-semibold text-[15px] md:text-base tracking-tight text-foreground">Repurposing de Conteúdo</h4>
+<span class="text-[11px] tracking-wide uppercase" style="color: rgba(0, 0, 0, 0.3);">Escala</span></div>
+<svg class="w-4 h-4 shrink-0 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2" style="color: rgba(0, 0, 0, 0.25);" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></div></section>
+<div class="section-divider"></div>
+<!-- build-section -->
+<section class="py-24 md:py-32 relative overflow-hidden" style='background: url("assets/0dbb4e84a15b43e7_bg.jpg") center center / cover;'>
+<div class="container-main relative z-10">
+<div class="text-center mb-14 animate-fade-in-up">
+<span class="inline-block rounded-full px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-white border border-white/30">Na prática</span></div>
+<div class="grid md:grid-cols-2 border border-white/20 rounded-sm">
+<div class="p-8 md:p-10 border-white/20 border-b md:border-r animate-fade-in-up" style="animation-delay: 0ms;">
+<h3 class="heading-h3 mb-4 text-white">Do zero ao seu primeiro agente</h3>
+<p class="text-white/60 leading-relaxed text-sm">Você começa instalando, configurando e entendendo como agentes funcionam. A diferença entre um chatbot e um agente. O ecossistema Claude: Chat, Projects, Cowork e Code. Quando usar cada um. Seu primeiro comando no terminal.</p></div>
+<div class="p-8 md:p-10 border-white/20 border-b animate-fade-in-up" style="animation-delay: 100ms;">
+<h3 class="heading-h3 mb-4 text-white">Criação visual com qualidade de estúdio</h3>
+<p class="text-white/60 leading-relaxed text-sm">Imagens profissionais com 7 setups de iluminação cinematográfica. Branding completo: logo, produto e marketing. Product shots que custariam milhares em estúdio, feitos com IA. Tudo seguindo seu estilo visual, definido no seu DNA criativo.</p></div>
+<div class="p-8 md:p-10 border-white/20 md:border-r animate-fade-in-up" style="animation-delay: 200ms;">
+<h3 class="heading-h3 mb-4 text-white">Pipelines que fazem o trabalho por você</h3>
+<p class="text-white/60 leading-relaxed text-sm">Você escreve um brief. O Claude gera imagens, escreve copy, cria voiceover e organiza tudo numa pasta. Depois, você aprende a conectar ferramentas externas via Skills e MCP para expandir o que o Claude consegue fazer.</p></div>
+<div class="p-8 md:p-10 border-white/20 animate-fade-in-up" style="animation-delay: 300ms;">
+<h3 class="heading-h3 mb-4 text-white">Vídeo, automação e escala</h3>
+<p class="text-white/60 leading-relaxed text-sm">Motion graphics pelo terminal com Remotion. Time de 10 agentes criativos trabalhando em sequência. Automação de ads e UGC com Higgsfield e Seedance. Repurposing: um vídeo vira conteúdo pra 5 plataformas. E um plano pra monetizar tudo isso.</p></div></div></div></section>
+<div class="section-divider"></div>
+<!-- content-blocks -->
+<section class="section-spacing">
+<div class="container-main">
+<div class="grid md:grid-cols-[1fr,1.4fr] gap-12 md:gap-20">
+<div class="md:sticky md:top-32 md:self-start animate-fade-in-up">
+<span class="label-tag">Resultado</span>
+<h2 class="heading-h2 mt-5" style="max-width: 380px;">O que você sai construindo</h2>
+<p class="text-secondary-content mt-4 text-base leading-relaxed max-w-sm">6 entregas concretas ao final dos 2 dias. Não é teoria, é coisa funcionando.</p></div>
+<div>
+<div class="group animate-fade-in-up" style="animation-delay: 0ms;">
+<div class="flex items-baseline gap-6 py-8 md:py-9" style="border-top: 1px solid rgba(0, 0, 0, 0.08);">
+<span class="text-[11px] font-mono tracking-widest shrink-0 mt-px" style="color: rgba(0, 0, 0, 0.2);">01</span>
+<div class="flex-1">
+<h3 class="font-heading text-xl md:text-2xl tracking-tight text-foreground transition-colors duration-300 group-hover:text-[#EC5E26]" style="font-weight: 500;">DNA Criativo</h3>
+<p class="text-secondary-content text-sm md:text-base leading-relaxed mt-2 max-w-md">Seu estilo visual configurado. A IA lê seu padrão e segue toda vez.</p></div>
+<svg class="w-5 h-5 shrink-0 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 hidden md:block" fill="none" stroke="currentColor" stroke-width="1.5" style="color: rgb(236, 94, 38);" viewbox="0 0 24 24">
+<path d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+<div class="group animate-fade-in-up" style="animation-delay: 80ms;">
+<div class="flex items-baseline gap-6 py-8 md:py-9" style="border-top: 1px solid rgba(0, 0, 0, 0.08);">
+<span class="text-[11px] font-mono tracking-widest shrink-0 mt-px" style="color: rgba(0, 0, 0, 0.2);">02</span>
+<div class="flex-1">
+<h3 class="font-heading text-xl md:text-2xl tracking-tight text-foreground transition-colors duration-300 group-hover:text-[#EC5E26]" style="font-weight: 500;">Imagens de estúdio</h3>
+<p class="text-secondary-content text-sm md:text-base leading-relaxed mt-2 max-w-md">Product shots e branding gerados no seu padrão visual, sem Photoshop.</p></div>
+<svg class="w-5 h-5 shrink-0 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 hidden md:block" fill="none" stroke="currentColor" stroke-width="1.5" style="color: rgb(236, 94, 38);" viewbox="0 0 24 24">
+<path d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+<div class="group animate-fade-in-up" style="animation-delay: 160ms;">
+<div class="flex items-baseline gap-6 py-8 md:py-9" style="border-top: 1px solid rgba(0, 0, 0, 0.08);">
+<span class="text-[11px] font-mono tracking-widest shrink-0 mt-px" style="color: rgba(0, 0, 0, 0.2);">03</span>
+<div class="flex-1">
+<h3 class="font-heading text-xl md:text-2xl tracking-tight text-foreground transition-colors duration-300 group-hover:text-[#EC5E26]" style="font-weight: 500;">Pipeline automática</h3>
+<p class="text-secondary-content text-sm md:text-base leading-relaxed mt-2 max-w-md">Um brief entra, conteúdo pronto sai. Copy, imagem, voiceover, tudo junto.</p></div>
+<svg class="w-5 h-5 shrink-0 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 hidden md:block" fill="none" stroke="currentColor" stroke-width="1.5" style="color: rgb(236, 94, 38);" viewbox="0 0 24 24">
+<path d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+<div class="group animate-fade-in-up" style="animation-delay: 240ms;">
+<div class="flex items-baseline gap-6 py-8 md:py-9" style="border-top: 1px solid rgba(0, 0, 0, 0.08);">
+<span class="text-[11px] font-mono tracking-widest shrink-0 mt-px" style="color: rgba(0, 0, 0, 0.2);">04</span>
+<div class="flex-1">
+<h3 class="font-heading text-xl md:text-2xl tracking-tight text-foreground transition-colors duration-300 group-hover:text-[#EC5E26]" style="font-weight: 500;">Vídeo pelo terminal</h3>
+<p class="text-secondary-content text-sm md:text-base leading-relaxed mt-2 max-w-md">Motion graphics e vídeos criados via código com Remotion e IA.</p></div>
+<svg class="w-5 h-5 shrink-0 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 hidden md:block" fill="none" stroke="currentColor" stroke-width="1.5" style="color: rgb(236, 94, 38);" viewbox="0 0 24 24">
+<path d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+<div class="group animate-fade-in-up" style="animation-delay: 320ms;">
+<div class="flex items-baseline gap-6 py-8 md:py-9" style="border-top: 1px solid rgba(0, 0, 0, 0.08);">
+<span class="text-[11px] font-mono tracking-widest shrink-0 mt-px" style="color: rgba(0, 0, 0, 0.2);">05</span>
+<div class="flex-1">
+<h3 class="font-heading text-xl md:text-2xl tracking-tight text-foreground transition-colors duration-300 group-hover:text-[#EC5E26]" style="font-weight: 500;">Equipe de agentes</h3>
+<p class="text-secondary-content text-sm md:text-base leading-relaxed mt-2 max-w-md">10 agentes especializados trabalhando em sequência, como uma equipe real.</p></div>
+<svg class="w-5 h-5 shrink-0 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 hidden md:block" fill="none" stroke="currentColor" stroke-width="1.5" style="color: rgb(236, 94, 38);" viewbox="0 0 24 24">
+<path d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+<div class="group animate-fade-in-up" style="animation-delay: 400ms;">
+<div class="flex items-baseline gap-6 py-8 md:py-9" style="border-top: 1px solid rgba(0, 0, 0, 0.08);">
+<span class="text-[11px] font-mono tracking-widest shrink-0 mt-px" style="color: rgba(0, 0, 0, 0.2);">06</span>
+<div class="flex-1">
+<h3 class="font-heading text-xl md:text-2xl tracking-tight text-foreground transition-colors duration-300 group-hover:text-[#EC5E26]" style="font-weight: 500;">Automação 24/7</h3>
+<p class="text-secondary-content text-sm md:text-base leading-relaxed mt-2 max-w-md">Fluxos que rodam enquanto você dorme. Ads, repurposing, publicação.</p></div>
+<svg class="w-5 h-5 shrink-0 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 hidden md:block" fill="none" stroke="currentColor" stroke-width="1.5" style="color: rgb(236, 94, 38);" viewbox="0 0 24 24">
+<path d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></div></div></section>
+<div class="section-divider"></div>
+<!-- tools-section -->
+<section class="section-spacing" style="background: rgb(28, 26, 24); color: rgb(255, 255, 255);">
+<div class="container-main">
+<div class="text-center mb-14 animate-fade-in-up">
+<div class="section-header-line">
+<span class="label-tag">Stack</span></div>
+<h2 class="heading-h2 mt-5">Ferramentas que você vai usar</h2></div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+<div class="p-8 flex flex-col items-center justify-center gap-5 text-center group rounded-2xl transition-all duration-400 animate-fade-in-up" style="animation-delay: 0ms; min-height: 160px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06);">
+<div class="w-10 h-10 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+<img alt="Claude Code" class="w-10 h-10 object-contain" src="assets/a3101f3047a119aa_claude.svg" style="filter: brightness(0) invert(1);"/></div>
+<span class="text-sm font-medium tracking-wide transition-colors duration-300" style="color: rgba(255, 255, 255, 0.6);">Claude Code</span></div>
+<div class="p-8 flex flex-col items-center justify-center gap-5 text-center group rounded-2xl transition-all duration-400 animate-fade-in-up" style="animation-delay: 60ms; min-height: 160px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06);">
+<div class="w-10 h-10 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+<img alt="Claude Cowork" class="w-10 h-10 object-contain" src="assets/a3101f3047a119aa_claude.svg" style="filter: brightness(0) invert(1);"/></div>
+<span class="text-sm font-medium tracking-wide transition-colors duration-300" style="color: rgba(255, 255, 255, 0.6);">Claude Cowork</span></div>
+<div class="p-8 flex flex-col items-center justify-center gap-5 text-center group rounded-2xl transition-all duration-400 animate-fade-in-up" style="animation-delay: 120ms; min-height: 160px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06);">
+<div class="w-10 h-10 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+<img alt="Remotion" class="w-10 h-10 object-contain" src="assets/2512708909957119_remotion.svg" style="filter: brightness(0) invert(1);"/></div>
+<span class="text-sm font-medium tracking-wide transition-colors duration-300" style="color: rgba(255, 255, 255, 0.6);">Remotion</span></div>
+<div class="p-8 flex flex-col items-center justify-center gap-5 text-center group rounded-2xl transition-all duration-400 animate-fade-in-up" style="animation-delay: 180ms; min-height: 160px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06);">
+<div class="w-10 h-10 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+<img alt="fal.ai" class="w-10 h-10 object-contain" src="assets/622cdc2ccc3aefe5_fal.svg" style="filter: brightness(0) invert(1);"/></div>
+<span class="text-sm font-medium tracking-wide transition-colors duration-300" style="color: rgba(255, 255, 255, 0.6);">fal.ai</span></div>
+<div class="p-8 flex flex-col items-center justify-center gap-5 text-center group rounded-2xl transition-all duration-400 animate-fade-in-up" style="animation-delay: 240ms; min-height: 160px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06);">
+<div class="w-10 h-10 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+<img alt="ElevenLabs" class="w-10 h-10 object-contain" src="assets/152a4a89fd522892_elevenlabs.svg" style="filter: brightness(0) invert(1);"/></div>
+<span class="text-sm font-medium tracking-wide transition-colors duration-300" style="color: rgba(255, 255, 255, 0.6);">ElevenLabs</span></div>
+<div class="p-8 flex flex-col items-center justify-center gap-5 text-center group rounded-2xl transition-all duration-400 animate-fade-in-up" style="animation-delay: 300ms; min-height: 160px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06);">
+<div class="w-10 h-10 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+<img alt="Nano Banana Pro" class="w-10 h-10 object-contain" src="assets/1fd02b099e6d07d6_nanobanana.svg" style="filter: brightness(0) invert(1);"/></div>
+<span class="text-sm font-medium tracking-wide transition-colors duration-300" style="color: rgba(255, 255, 255, 0.6);">Nano Banana Pro</span></div>
+<div class="p-8 flex flex-col items-center justify-center gap-5 text-center group rounded-2xl transition-all duration-400 animate-fade-in-up" style="animation-delay: 360ms; min-height: 160px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06);">
+<div class="w-10 h-10 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+<img alt="Recraft" class="w-10 h-10 object-contain" src="assets/ccb97a588aebf55a_recraft.svg" style="filter: brightness(0) invert(1);"/></div>
+<span class="text-sm font-medium tracking-wide transition-colors duration-300" style="color: rgba(255, 255, 255, 0.6);">Recraft</span></div>
+<div class="p-8 flex flex-col items-center justify-center gap-5 text-center group rounded-2xl transition-all duration-400 animate-fade-in-up" style="animation-delay: 420ms; min-height: 160px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06);">
+<div class="w-10 h-10 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+<img alt="Flux" class="w-10 h-10 object-contain" src="assets/c7d557466f39a895_flux.svg" style="filter: brightness(0) invert(1);"/></div>
+<span class="text-sm font-medium tracking-wide transition-colors duration-300" style="color: rgba(255, 255, 255, 0.6);">Flux</span></div>
+<div class="p-8 flex flex-col items-center justify-center gap-5 text-center group rounded-2xl transition-all duration-400 animate-fade-in-up" style="animation-delay: 480ms; min-height: 160px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06);">
+<div class="w-10 h-10 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+<img alt="Midjourney" class="w-10 h-10 object-contain" src="assets/e09640ccbf6f643b_midjourney.svg" style="filter: brightness(0) invert(1);"/></div>
+<span class="text-sm font-medium tracking-wide transition-colors duration-300" style="color: rgba(255, 255, 255, 0.6);">Midjourney</span></div>
+<div class="p-8 flex flex-col items-center justify-center gap-5 text-center group rounded-2xl transition-all duration-400 animate-fade-in-up" style="animation-delay: 540ms; min-height: 160px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06);">
+<div class="w-10 h-10 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+<img alt="Higgsfield" class="w-10 h-10 object-contain" src="assets/77edee005ae63f78_higgsfield.png" style="filter: brightness(0) invert(1);"/></div>
+<span class="text-sm font-medium tracking-wide transition-colors duration-300" style="color: rgba(255, 255, 255, 0.6);">Higgsfield</span></div>
+<div class="p-8 flex flex-col items-center justify-center gap-5 text-center group rounded-2xl transition-all duration-400 animate-fade-in-up" style="animation-delay: 600ms; min-height: 160px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06);">
+<div class="w-10 h-10 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+<svg class="w-10 h-10" fill="white" viewbox="0 0 24 24">
+<path d="M12 22V12" fill="none" stroke="white" stroke-linecap="round" stroke-width="1.5"></path>
+<path d="M12 12C12 12 7 8.5 7 5C7 2.5 9.5 1 12 4C14.5 1 17 2.5 17 5C17 8.5 12 12 12 12Z" fill="white"></path>
+<path d="M8 18C8 18 10 16.5 12 16.5C14 16.5 16 18 16 18" fill="none" stroke="white" stroke-linecap="round" stroke-width="1.5"></path></svg></div>
+<span class="text-sm font-medium tracking-wide transition-colors duration-300" style="color: rgba(255, 255, 255, 0.6);">Seedance</span></div>
+<div class="p-8 flex flex-col items-center justify-center gap-5 text-center group rounded-2xl transition-all duration-400 animate-fade-in-up" style="animation-delay: 660ms; min-height: 160px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06);">
+<div class="w-10 h-10 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+<img alt="Notion MCP" class="w-10 h-10 object-contain" src="assets/8ada8628489d6e29_notion.svg" style="filter: brightness(0) invert(1);"/></div>
+<span class="text-sm font-medium tracking-wide transition-colors duration-300" style="color: rgba(255, 255, 255, 0.6);">Notion MCP</span></div></div></div></section>
+<!-- mid-cta -->
+<section class="relative overflow-hidden">
+<img alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" src="assets/eec21794f06e79c5_mid-cta-bg.jpg"/>
+<div class="absolute inset-0 bg-black/40"></div>
+<img alt="" class="absolute right-6 md:right-16 bottom-8 md:bottom-16 w-28 md:w-40 pointer-events-none select-none z-10 hidden md:block" height="160" loading="lazy" src="assets/353bf4e5ed435714_globe.png" style="animation: 6s ease-in-out 0s infinite normal none running sticker-float-1; filter: drop-shadow(rgba(0, 0, 0, 0.3) 0px 8px 24px);" width="160"/>
+<div class="container-main py-[80px] md:py-[140px] lg:py-[180px] relative z-10">
+<div class="text-center md:text-left max-w-2xl animate-fade-in-up">
+<span class="text-[11px] font-medium uppercase tracking-[0.15em]" style="color: rgba(255, 255, 255, 0.4);">30 e 31 de maio, ao vivo</span>
+<h2 class="font-heading mt-5" style="font-size: clamp(36px, 5vw, 64px); letter-spacing: -0.04em; line-height: 1.05; color: rgb(255, 255, 255); font-weight: 500;">Menos tutorial.<br/>Mais resultado.</h2>
+<p class="mt-5 text-base leading-relaxed max-w-md mx-auto md:mx-0" style="color: rgba(255, 255, 255, 0.5);">Dois dias intensivos pra você sair criando. Com sistema, repertório e as ferramentas certas.</p></div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-2.5 md:gap-3 mt-10 md:mt-14 animate-fade-in-up" style="animation-delay: 200ms;">
+<div class="rounded-2xl px-4 py-4 md:py-5 text-center transition-all duration-300 hover:scale-[1.03]" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); will-change: transform;">
+<span class="text-white/80 text-sm font-semibold tracking-tight">Criadores de conteúdo</span></div>
+<div class="rounded-2xl px-4 py-4 md:py-5 text-center transition-all duration-300 hover:scale-[1.03]" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); will-change: transform;">
+<span class="text-white/80 text-sm font-semibold tracking-tight">Designers</span></div>
+<div class="rounded-2xl px-4 py-4 md:py-5 text-center transition-all duration-300 hover:scale-[1.03]" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); will-change: transform;">
+<span class="text-white/80 text-sm font-semibold tracking-tight">Founders</span></div>
+<div class="rounded-2xl px-4 py-4 md:py-5 text-center transition-all duration-300 hover:scale-[1.03]" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); will-change: transform;">
+<span class="text-white/80 text-sm font-semibold tracking-tight">Social media</span></div>
+<div class="rounded-2xl px-4 py-4 md:py-5 text-center transition-all duration-300 hover:scale-[1.03]" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); will-change: transform;">
+<span class="text-white/80 text-sm font-semibold tracking-tight">Freelancers</span></div>
+<div class="rounded-2xl px-4 py-4 md:py-5 text-center transition-all duration-300 hover:scale-[1.03]" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); will-change: transform;">
+<span class="text-white/80 text-sm font-semibold tracking-tight">Videomakers</span></div>
+<div class="rounded-2xl px-4 py-4 md:py-5 text-center transition-all duration-300 hover:scale-[1.03]" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); will-change: transform;">
+<span class="text-white/80 text-sm font-semibold tracking-tight">Marketeiros</span></div>
+<div class="rounded-2xl px-4 py-4 md:py-5 text-center transition-all duration-300 hover:scale-[1.03]" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); will-change: transform;">
+<span class="text-white/80 text-sm font-semibold tracking-tight">Curiosos sobre IA</span></div></div>
+<div class="mt-10 text-center animate-fade-in-up" style="animation-delay: 350ms;">
+<a class="inline-flex items-center justify-center font-semibold text-base px-10 py-4 min-h-[48px] rounded-full transition-all duration-300 hover:scale-105 hover:brightness-110 cursor-pointer" href="#garanta-sua-vaga" style="background: rgb(234, 250, 168); color: rgb(26, 26, 26);">GARANTIR INGRESSO</a></div></div>
+<div class="absolute top-0 left-0 w-full h-[1px] z-10" style="background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08) 20%, rgba(255, 255, 255, 0.08) 80%, transparent);"></div></section>
+<!-- testimonials -->
+<section class="section-spacing overflow-hidden">
+<div>
+<div class="text-center mb-14 container-main animate-fade-in-up">
+<div class="section-header-line">
+<span class="label-tag">Depoimentos</span></div>
+<h2 class="heading-h2 mt-5">O que os alunos estão dizendo</h2></div>
+<div class="flex items-stretch gap-6 overflow-x-auto pl-6 md:pl-12 lg:pl-20 pb-2 snap-x snap-mandatory animate-fade-in-up" style="animation-delay: 200ms; scrollbar-width: none;">
+<div class="shrink-0 flex flex-col snap-start" style="width: min(380px, 85vw); border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.06) 0px 2px 4px;">
+<div class="p-8 md:p-10 flex-1" style="background: rgb(250, 249, 248); border-radius: 24px 24px 16px 16px; margin: 12px 12px 0px;">
+<p class="text-[15px] leading-relaxed" style="color: rgb(26, 26, 26);">"Abrindo caminhos para entender na prática como criar utilizando IA como ferramenta. Desmitifica os processos, abre o jogo, sem enrolação."</p></div>
+<div class="px-8 md:px-10 pt-6 pb-8 flex items-center gap-3">
+<img alt="Leandra Lambert" class="w-11 h-11 rounded-full shrink-0 object-cover" src="assets/d7d2744e3e91940c_leandralambert.jpg" style="border: 2px solid rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;"/>
+<div>
+<p class="text-sm font-semibold" style="color: rgb(26, 26, 26);">Leandra Lambert</p>
+<p class="text-xs" style="color: rgba(0, 0, 0, 0.4);">@leandralambert</p></div></div></div>
+<div class="shrink-0 flex flex-col snap-start" style="width: min(380px, 85vw); border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.06) 0px 2px 4px;">
+<div class="p-8 md:p-10 flex-1" style="background: rgb(250, 249, 248); border-radius: 24px 24px 16px 16px; margin: 12px 12px 0px;">
+<p class="text-[15px] leading-relaxed" style="color: rgb(26, 26, 26);">"Muito bom! O conteúdo foi bem completo, apresentaram todas as ferramentas usadas no mercado e mostraram muitos exemplos."</p></div>
+<div class="px-8 md:px-10 pt-6 pb-8 flex items-center gap-3">
+<img alt="Lara Magatag" class="w-11 h-11 rounded-full shrink-0 object-cover" src="assets/2984ebc11bf55241_laramagatag.jpg" style="border: 2px solid rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;"/>
+<div>
+<p class="text-sm font-semibold" style="color: rgb(26, 26, 26);">Lara Magatag</p>
+<p class="text-xs" style="color: rgba(0, 0, 0, 0.4);">@lara_magatag</p></div></div></div>
+<div class="shrink-0 flex flex-col snap-start" style="width: min(380px, 85vw); border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.06) 0px 2px 4px;">
+<div class="p-8 md:p-10 flex-1" style="background: rgb(250, 249, 248); border-radius: 24px 24px 16px 16px; margin: 12px 12px 0px;">
+<p class="text-[15px] leading-relaxed" style="color: rgb(26, 26, 26);">"O que me chamou mais atenção, foi a forma direta e didática. Sou iniciante no estudo e fiquei com a cabeça borbulhando com ideia."</p></div>
+<div class="px-8 md:px-10 pt-6 pb-8 flex items-center gap-3">
+<img alt="Thamires Abino" class="w-11 h-11 rounded-full shrink-0 object-cover" src="assets/826a53c6a63c0cb6_thamiresabino.jpg" style="border: 2px solid rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;"/>
+<div>
+<p class="text-sm font-semibold" style="color: rgb(26, 26, 26);">Thamires Abino</p>
+<p class="text-xs" style="color: rgba(0, 0, 0, 0.4);">@thamiresabino</p></div></div></div>
+<div class="shrink-0 flex flex-col snap-start" style="width: min(380px, 85vw); border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.06) 0px 2px 4px;">
+<div class="p-8 md:p-10 flex-1" style="background: rgb(250, 249, 248); border-radius: 24px 24px 16px 16px; margin: 12px 12px 0px;">
+<p class="text-[15px] leading-relaxed" style="color: rgb(26, 26, 26);">"Sabe quando você encontra um curso que não ensina só a ferramenta, mas desbloqueia uma nova forma de pensar?"</p></div>
+<div class="px-8 md:px-10 pt-6 pb-8 flex items-center gap-3">
+<img alt="Recarinhato" class="w-11 h-11 rounded-full shrink-0 object-cover" src="assets/e3f8ba41724ccbe7_recarinhato.jpg" style="border: 2px solid rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;"/>
+<div>
+<p class="text-sm font-semibold" style="color: rgb(26, 26, 26);">Recarinhato</p>
+<p class="text-xs" style="color: rgba(0, 0, 0, 0.4);">@recarinhato</p></div></div></div>
+<div class="shrink-0 flex flex-col snap-start" style="width: min(380px, 85vw); border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.06) 0px 2px 4px;">
+<div class="p-8 md:p-10 flex-1" style="background: rgb(250, 249, 248); border-radius: 24px 24px 16px 16px; margin: 12px 12px 0px;">
+<p class="text-[15px] leading-relaxed" style="color: rgb(26, 26, 26);">"Vocês são Humans. Conteúdo de qualidade."</p></div>
+<div class="px-8 md:px-10 pt-6 pb-8 flex items-center gap-3">
+<img alt="Asaph Guedes" class="w-11 h-11 rounded-full shrink-0 object-cover" src="assets/8183a5592e6859d5_asaphguedes.jpg" style="border: 2px solid rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;"/>
+<div>
+<p class="text-sm font-semibold" style="color: rgb(26, 26, 26);">Asaph Guedes</p>
+<p class="text-xs" style="color: rgba(0, 0, 0, 0.4);">@asaph.guedes</p></div></div></div>
+<div class="shrink-0 flex flex-col snap-start" style="width: min(380px, 85vw); border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.06) 0px 2px 4px;">
+<div class="p-8 md:p-10 flex-1" style="background: rgb(250, 249, 248); border-radius: 24px 24px 16px 16px; margin: 12px 12px 0px;">
+<p class="text-[15px] leading-relaxed" style="color: rgb(26, 26, 26);">"Muito bom!! As ferramentas que foram apresentadas explodiram minha mente."</p></div>
+<div class="px-8 md:px-10 pt-6 pb-8 flex items-center gap-3">
+<img alt="Aline Messias" class="w-11 h-11 rounded-full shrink-0 object-cover" src="assets/0953a592a025d538_alinemessias.jpg" style="border: 2px solid rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;"/>
+<div>
+<p class="text-sm font-semibold" style="color: rgb(26, 26, 26);">Aline Messias</p>
+<p class="text-xs" style="color: rgba(0, 0, 0, 0.4);">@alinemessias_dev</p></div></div></div>
+<div class="shrink-0 flex flex-col snap-start" style="width: min(380px, 85vw); border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.06) 0px 2px 4px;">
+<div class="p-8 md:p-10 flex-1" style="background: rgb(250, 249, 248); border-radius: 24px 24px 16px 16px; margin: 12px 12px 0px;">
+<p class="text-[15px] leading-relaxed" style="color: rgb(26, 26, 26);">"Mesmo pra quem não nasceu com o mouse na mão ou um perfil de rede social feito, o curso superou as expectativas."</p></div>
+<div class="px-8 md:px-10 pt-6 pb-8 flex items-center gap-3">
+<img alt="Ricardo Galego" class="w-11 h-11 rounded-full shrink-0 object-cover" src="assets/f8f2149e92d04fee_ricardogalego.jpg" style="border: 2px solid rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;"/>
+<div>
+<p class="text-sm font-semibold" style="color: rgb(26, 26, 26);">Ricardo Galego</p>
+<p class="text-xs" style="color: rgba(0, 0, 0, 0.4);">@ricardo__galego</p></div></div></div>
+<div class="shrink-0 flex flex-col snap-start" style="width: min(380px, 85vw); border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.06) 0px 2px 4px;">
+<div class="p-8 md:p-10 flex-1" style="background: rgb(250, 249, 248); border-radius: 24px 24px 16px 16px; margin: 12px 12px 0px;">
+<p class="text-[15px] leading-relaxed" style="color: rgb(26, 26, 26);">"Valeu a pena cada minuto. Impressionado com a capacidade de gerar vídeos com a IA, e os caminhos apresentados pela turma do Human."</p></div>
+<div class="px-8 md:px-10 pt-6 pb-8 flex items-center gap-3">
+<img alt="Lopes Dia" class="w-11 h-11 rounded-full shrink-0 object-cover" src="assets/7b06a1d4044c5d62_lopesdia.jpg" style="border: 2px solid rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;"/>
+<div>
+<p class="text-sm font-semibold" style="color: rgb(26, 26, 26);">Lopes Dia</p>
+<p class="text-xs" style="color: rgba(0, 0, 0, 0.4);">@lopesdia</p></div></div></div>
+<div class="shrink-0 w-12"></div></div>
+<div class="flex items-center justify-center gap-4 mt-10 animate-fade-in-up" style="animation-delay: 300ms;">
+<div class="flex items-center gap-1.5 rounded-full px-5 py-2" style="background: rgba(0, 0, 0, 0.04);">
+<button class="relative flex items-center justify-center min-w-[28px] min-h-[28px]">
+<span class="block rounded-full transition-all duration-400" style="width: 6px; height: 6px; background: rgba(0, 0, 0, 0.1);"></span></button>
+<button class="relative flex items-center justify-center min-w-[28px] min-h-[28px]">
+<span class="block rounded-full transition-all duration-400" style="width: 20px; height: 6px; background: rgba(0, 0, 0, 0.5);"></span></button>
+<button class="relative flex items-center justify-center min-w-[28px] min-h-[28px]">
+<span class="block rounded-full transition-all duration-400" style="width: 6px; height: 6px; background: rgba(0, 0, 0, 0.1);"></span></button>
+<button class="relative flex items-center justify-center min-w-[28px] min-h-[28px]">
+<span class="block rounded-full transition-all duration-400" style="width: 6px; height: 6px; background: rgba(0, 0, 0, 0.1);"></span></button>
+<button class="relative flex items-center justify-center min-w-[28px] min-h-[28px]">
+<span class="block rounded-full transition-all duration-400" style="width: 6px; height: 6px; background: rgba(0, 0, 0, 0.1);"></span></button>
+<button class="relative flex items-center justify-center min-w-[28px] min-h-[28px]">
+<span class="block rounded-full transition-all duration-400" style="width: 6px; height: 6px; background: rgba(0, 0, 0, 0.1);"></span></button>
+<button class="relative flex items-center justify-center min-w-[28px] min-h-[28px]">
+<span class="block rounded-full transition-all duration-400" style="width: 6px; height: 6px; background: rgba(0, 0, 0, 0.1);"></span></button>
+<button class="relative flex items-center justify-center min-w-[28px] min-h-[28px]">
+<span class="block rounded-full transition-all duration-400" style="width: 6px; height: 6px; background: rgba(0, 0, 0, 0.1);"></span></button></div>
+<button class="w-9 h-9 rounded-full flex items-center justify-center transition-all hover:bg-black/10 relative" style="background: rgba(0, 0, 0, 0.04);">
+<svg fill="rgba(0,0,0,0.4)" height="10" viewbox="0 0 8 10" width="8">
+<rect height="10" rx="0.5" width="2.5" x="0" y="0"></rect>
+<rect height="10" rx="0.5" width="2.5" x="5.5" y="0"></rect></svg></button></div></div></section>
+<div class="section-divider"></div>
+<div class="section-divider"></div>
+<!-- schedule -->
+<section class="py-[80px] md:py-[120px] lg:py-[160px]" style="background: rgb(28, 26, 24); color: rgb(255, 255, 255);">
+<div class="container-main">
+<div class="grid md:grid-cols-2 gap-12 md:gap-8">
+<div class="md:sticky md:top-32 md:self-start">
+<div class="animate-fade-in-up">
+<span class="inline-block text-[11px] font-medium uppercase tracking-[0.15em] mb-6" style="color: rgb(236, 94, 38);">Horários</span>
+<h2 class="font-heading" style="font-size: clamp(40px, 5vw, 72px); letter-spacing: -0.04em; line-height: 0.95; font-weight: 500;">Crono­<br class="hidden md:block"/>grama</h2>
+<div class="hidden md:block glass-dark mt-8 rounded-2xl px-6 py-5 max-w-[280px]">
+<p class="text-[13px] leading-relaxed" style="color: rgba(255, 255, 255, 0.5);">Ambos os dias seguem esse cronograma. Possibilidade de extensão caso haja interesse em aprofundar algum tema.</p></div>
+<p class="md:hidden text-[13px] leading-relaxed mt-4" style="color: rgba(255, 255, 255, 0.35);">Ambos os dias seguem esse cronograma. Possibilidade de extensão caso haja interesse.</p></div></div>
+<div class="glass-dark rounded-[24px] overflow-hidden animate-fade-in-up" style="animation-delay: 150ms;">
+<div class="flex items-center justify-between px-7 md:px-9 py-6 md:py-7 group hover:bg-white/[0.03] transition-colors" style="border-bottom: 1px solid rgba(255, 255, 255, 0.06);">
+<div class="flex-1">
+<p class="font-heading font-semibold text-xl md:text-2xl" style="color: rgba(255, 255, 255, 0.55); letter-spacing: -0.02em;">Início</p>
+<p class="text-xs mt-1" style="color: rgba(255, 255, 255, 0.3);">Abertura e início do workshop ao vivo</p></div>
+<div class="flex items-center gap-4">
+<span class="text-sm font-mono" style="color: rgba(255, 255, 255, 0.25);">10:00</span>
+<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="color: rgba(255, 255, 255, 0.2);" viewbox="0 0 24 24" width="16">
+<path d="M7 17L17 7"></path>
+<path d="M7 7h10v10"></path></svg></div></div>
+<div class="flex items-center justify-between px-7 md:px-9 py-6 md:py-7 group hover:bg-white/[0.03] transition-colors" style="border-bottom: 1px solid rgba(255, 255, 255, 0.06);">
+<div class="flex-1">
+<p class="font-heading font-semibold text-xl md:text-2xl" style="color: rgba(255, 255, 255, 0.55); letter-spacing: -0.02em;">Almoço</p>
+<p class="text-xs mt-1" style="color: rgba(255, 255, 255, 0.3);">Pausa para almoço</p></div>
+<div class="flex items-center gap-4">
+<span class="text-sm font-mono" style="color: rgba(255, 255, 255, 0.25);">12:00</span>
+<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="color: rgba(255, 255, 255, 0.2);" viewbox="0 0 24 24" width="16">
+<path d="M7 17L17 7"></path>
+<path d="M7 7h10v10"></path></svg></div></div>
+<div class="flex items-center justify-between px-7 md:px-9 py-6 md:py-7 group hover:bg-white/[0.03] transition-colors" style="border-bottom: 1px solid rgba(255, 255, 255, 0.06);">
+<div class="flex-1">
+<p class="font-heading font-semibold text-xl md:text-2xl" style="color: rgba(255, 255, 255, 0.55); letter-spacing: -0.02em;">Retorno</p>
+<p class="text-xs mt-1" style="color: rgba(255, 255, 255, 0.3);">Sessão prática, mão na massa</p></div>
+<div class="flex items-center gap-4">
+<span class="text-sm font-mono" style="color: rgba(255, 255, 255, 0.25);">13:00</span>
+<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="color: rgba(255, 255, 255, 0.2);" viewbox="0 0 24 24" width="16">
+<path d="M7 17L17 7"></path>
+<path d="M7 7h10v10"></path></svg></div></div>
+<div class="flex items-center justify-between px-7 md:px-9 py-6 md:py-7 group hover:bg-white/[0.03] transition-colors" style="border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor;">
+<div class="flex-1">
+<p class="font-heading font-semibold text-xl md:text-2xl" style="color: rgba(255, 255, 255, 0.55); letter-spacing: -0.02em;">Encerramento*</p>
+<p class="text-xs mt-1" style="color: rgba(255, 255, 255, 0.3);">Fim da sessão do dia</p></div>
+<div class="flex items-center gap-4">
+<span class="text-sm font-mono" style="color: rgba(255, 255, 255, 0.25);">17:00</span>
+<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="color: rgba(255, 255, 255, 0.2);" viewbox="0 0 24 24" width="16">
+<path d="M7 17L17 7"></path>
+<path d="M7 7h10v10"></path></svg></div></div>
+<div class="px-7 md:px-9 py-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-3" style="border-top: 1px solid rgba(255, 255, 255, 0.06);">
+<p class="text-xs leading-relaxed" style="color: rgba(255, 255, 255, 0.3);">*Todo o conteúdo será entregue dentro do horário previsto. Caso haja interesse em aprofundar algum tema, poderemos estender a sessão ao final.</p>
+<img alt="" class="h-5 w-auto opacity-30 shrink-0" src="assets/c11881c1ea957696_agent-lab.png"/></div></div></div></div></section>
+<!-- social-proof -->
+<section class="relative overflow-hidden" style='background: url("assets/0dbb4e84a15b43e7_bg.jpg") center center / cover; color: rgb(255, 255, 255); padding: 120px 0px;'>
+<div class="container-main relative z-10 text-center">
+<div class="animate-fade-in-up">
+<img alt="Human Academy" class="h-6 w-auto mx-auto mb-8 opacity-50" src="assets/b0242641afe25861_HUMANACA.png"/>
+<div class="flex justify-center -space-x-3 mb-8">
+<div class="rounded-full overflow-hidden" style="width: clamp(36px, 8vw, 48px); height: clamp(36px, 8vw, 48px); border: 1px solid rgba(255, 255, 255, 0.5); animation: 2s ease-in-out 0s infinite alternate none running floatBubble;">
+<img alt="" class="w-full h-full object-cover" loading="lazy" src="assets/d7d2744e3e91940c_leandralambert.jpg"/></div>
+<div class="rounded-full overflow-hidden" style="width: clamp(36px, 8vw, 48px); height: clamp(36px, 8vw, 48px); border: 1px solid rgba(255, 255, 255, 0.5); animation: 2.3s ease-in-out 0.1s infinite alternate none running floatBubble;">
+<img alt="" class="w-full h-full object-cover" loading="lazy" src="assets/2984ebc11bf55241_laramagatag.jpg"/></div>
+<div class="rounded-full overflow-hidden" style="width: clamp(36px, 8vw, 48px); height: clamp(36px, 8vw, 48px); border: 1px solid rgba(255, 255, 255, 0.5); animation: 2.6s ease-in-out 0.2s infinite alternate none running floatBubble;">
+<img alt="" class="w-full h-full object-cover" loading="lazy" src="assets/826a53c6a63c0cb6_thamiresabino.jpg"/></div>
+<div class="rounded-full overflow-hidden" style="width: clamp(36px, 8vw, 48px); height: clamp(36px, 8vw, 48px); border: 1px solid rgba(255, 255, 255, 0.5); animation: 2.9s ease-in-out 0.3s infinite alternate none running floatBubble;">
+<img alt="" class="w-full h-full object-cover" loading="lazy" src="assets/e3f8ba41724ccbe7_recarinhato.jpg"/></div>
+<div class="rounded-full overflow-hidden" style="width: clamp(36px, 8vw, 48px); height: clamp(36px, 8vw, 48px); border: 1px solid rgba(255, 255, 255, 0.5); animation: 3.2s ease-in-out 0.4s infinite alternate none running floatBubble;">
+<img alt="" class="w-full h-full object-cover" loading="lazy" src="assets/8183a5592e6859d5_asaphguedes.jpg"/></div>
+<div class="rounded-full overflow-hidden" style="width: clamp(36px, 8vw, 48px); height: clamp(36px, 8vw, 48px); border: 1px solid rgba(255, 255, 255, 0.5); animation: 3.5s ease-in-out 0.5s infinite alternate none running floatBubble;">
+<img alt="" class="w-full h-full object-cover" loading="lazy" src="assets/0953a592a025d538_alinemessias.jpg"/></div>
+<div class="rounded-full overflow-hidden" style="width: clamp(36px, 8vw, 48px); height: clamp(36px, 8vw, 48px); border: 1px solid rgba(255, 255, 255, 0.5); animation: 3.8s ease-in-out 0.6s infinite alternate none running floatBubble;">
+<img alt="" class="w-full h-full object-cover" loading="lazy" src="assets/f8f2149e92d04fee_ricardogalego.jpg"/></div>
+<div class="rounded-full overflow-hidden" style="width: clamp(36px, 8vw, 48px); height: clamp(36px, 8vw, 48px); border: 1px solid rgba(255, 255, 255, 0.5); animation: 4.1s ease-in-out 0.7s infinite alternate none running floatBubble;">
+<img alt="" class="w-full h-full object-cover" loading="lazy" src="assets/7b06a1d4044c5d62_lopesdia.jpg"/></div></div>
+<span class="font-heading font-bold block text-white" style="font-size: clamp(60px, 12vw, 180px); letter-spacing: -0.05em; line-height: 0.9;">23.000+</span>
+<p class="text-lg md:text-xl mt-6 mb-2 font-medium" style="color: rgba(255, 255, 255, 0.6);">alunos já passaram pela Human Academy</p>
+<p class="text-sm max-w-md mx-auto" style="color: rgba(255, 255, 255, 0.3);">Uma comunidade de criativos, designers, devs e empreendedores que já estão usando IA para criar coisas incríveis.</p>
+<div class="flex justify-center gap-8 md:gap-16 mt-12" style="animation-delay: 300ms;">
+<div class="text-center">
+<p class="font-heading font-bold text-2xl md:text-3xl" style="color: rgb(255, 255, 255); letter-spacing: -0.03em;">9.7</p>
+<p class="text-xs mt-1" style="color: rgba(255, 255, 255, 0.35);">NPS</p></div>
+<div class="text-center">
+<p class="font-heading font-bold text-2xl md:text-3xl" style="color: rgb(255, 255, 255); letter-spacing: -0.03em;">8</p>
+<p class="text-xs mt-1" style="color: rgba(255, 255, 255, 0.35);">cursos na plataforma</p></div>
+<div class="text-center">
+<p class="font-heading font-bold text-2xl md:text-3xl" style="color: rgb(255, 255, 255); letter-spacing: -0.03em;">98%</p>
+<p class="text-xs mt-1" style="color: rgba(255, 255, 255, 0.35);">recomendariam</p></div></div></div></div></section>
+<!-- certificate -->
+<section class="relative overflow-hidden" style="background: linear-gradient(140deg, rgb(236, 94, 38) 0%, rgb(196, 74, 26) 55%, rgb(143, 50, 16) 100%);">
+<div class="absolute inset-0 pointer-events-none" style='background-image: url("assets/0dbb4e84a15b43e7_bg.jpg"); background-size: cover; background-position: center center; opacity: 0.08;'></div>
+<div class="relative z-10 overflow-hidden" style="background: rgb(234, 250, 168); border-bottom: 1px solid rgba(26, 26, 26, 0.12);">
+<div class="flex items-center gap-10 whitespace-nowrap animate-marquee py-3.5">
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em] text-[#1a1a1a]">Human Academy<span class="text-[#EC5E26]">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em] text-[#1a1a1a]">Certificação Oficial<span class="text-[#EC5E26]">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em] text-[#1a1a1a]">Edition 2026<span class="text-[#EC5E26]">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em] text-[#1a1a1a]">Agent Lab<span class="text-[#EC5E26]">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em] text-[#1a1a1a]">12h Reconhecidas<span class="text-[#EC5E26]">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em] text-[#1a1a1a]">Assinatura Digital<span class="text-[#EC5E26]">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em] text-[#1a1a1a]">Human Academy<span class="text-[#EC5E26]">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em] text-[#1a1a1a]">Certificação Oficial<span class="text-[#EC5E26]">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em] text-[#1a1a1a]">Edition 2026<span class="text-[#EC5E26]">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em] text-[#1a1a1a]">Agent Lab<span class="text-[#EC5E26]">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em] text-[#1a1a1a]">12h Reconhecidas<span class="text-[#EC5E26]">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em] text-[#1a1a1a]">Assinatura Digital<span class="text-[#EC5E26]">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em] text-[#1a1a1a]">Human Academy<span class="text-[#EC5E26]">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em] text-[#1a1a1a]">Certificação Oficial<span class="text-[#EC5E26]">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em] text-[#1a1a1a]">Edition 2026<span class="text-[#EC5E26]">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em] text-[#1a1a1a]">Agent Lab<span class="text-[#EC5E26]">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em] text-[#1a1a1a]">12h Reconhecidas<span class="text-[#EC5E26]">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em] text-[#1a1a1a]">Assinatura Digital<span class="text-[#EC5E26]">✦</span></span></div></div>
+<div class="container-main relative z-10 py-[80px] md:py-[120px] lg:py-[140px]">
+<div class="grid md:grid-cols-12 gap-8 md:gap-10 items-end mb-14 md:mb-20">
+<div class="md:col-span-8 animate-fade-in-up">
+<div class="flex items-center gap-4 mb-6 md:mb-8">
+<span class="text-[10px] md:text-[11px] uppercase tracking-[0.22em] font-mono font-semibold" style="color: rgba(255, 255, 255, 0.55);">[ H.A · CERT — 001 ]</span>
+<span class="flex-1 h-px" style="background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));"></span>
+<span class="text-[10px] md:text-[11px] uppercase tracking-[0.22em] font-mono" style="color: rgba(255, 255, 255, 0.4);">EDITION 2026</span></div>
+<h2 class="font-heading text-white" style="font-size: clamp(40px, 7vw, 110px); letter-spacing: -0.045em; line-height: 0.95; font-weight: 500;">Você sai com um <span class="relative inline-block">
+<span style="color: rgb(234, 250, 168);">certificado</span>
+<span class="absolute left-0 -bottom-1 md:-bottom-2 h-[4px] md:h-[6px] w-full origin-left" style="background: rgb(234, 250, 168); border-radius: 2px; animation: 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s 1 normal forwards running underline-draw; transform: scaleX(0);"></span></span>
+<br/>de conclusão</h2></div>
+<div class="md:col-span-4 md:pl-6 md:border-l md:border-white/10 animate-fade-in-up" style="animation-delay: 200ms;">
+<p class="text-[11px] uppercase tracking-[0.22em] font-semibold mb-4" style="color: rgb(234, 250, 168);">Human Academy · Certificação</p>
+<p class="text-base md:text-[17px] leading-relaxed" style="color: rgba(255, 255, 255, 0.8);">Ao concluir o Agent Lab, você recebe um certificado oficial da Human Academy — reconhecimento pelo seu aprendizado e dedicação ao longo das 12 horas de workshop.</p></div></div>
+<div class="relative animate-fade-in-up" style="animation-delay: 350ms;">
+<img alt="" class="hidden md:block absolute -top-14 -left-10 w-24 md:w-32 z-30 pointer-events-none select-none" height="160" src="assets/8feaa847f4570cc1_asterisk.png" style="animation: 6s ease-in-out 0s infinite normal none running sticker-float-1;" width="160"/>
+<img alt="" class="hidden md:block absolute -bottom-14 -right-8 w-24 md:w-32 z-30 pointer-events-none select-none" height="160" src="assets/e9777ddae9f925b6_arrows.png" style="animation: 6s ease-in-out 500ms infinite normal none running sticker-float-2;" width="160"/>
+<div class="relative rounded-[28px] p-6 md:p-10 lg:p-14 overflow-hidden" style="background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(234, 250, 168, 0.15); backdrop-filter: blur(8px);">
+<div class="absolute inset-0 pointer-events-none opacity-[0.07]" style="background-image: linear-gradient(rgba(234, 250, 168, 0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(234, 250, 168, 0.6) 1px, transparent 1px); background-size: 32px 32px;"></div>
+<svg aria-hidden="true" class="absolute top-4 left-4" fill="none" height="22" style="transform: scale(1, 1);" viewbox="0 0 22 22" width="22">
+<path d="M1 1 L10 1 M1 1 L1 10" stroke="#EAFAA8" stroke-linecap="square" stroke-width="1.2"></path></svg>
+<svg aria-hidden="true" class="absolute top-4 right-4" fill="none" height="22" style="transform: scale(-1, 1);" viewbox="0 0 22 22" width="22">
+<path d="M1 1 L10 1 M1 1 L1 10" stroke="#EAFAA8" stroke-linecap="square" stroke-width="1.2"></path></svg>
+<svg aria-hidden="true" class="absolute bottom-4 left-4" fill="none" height="22" style="transform: scale(1, -1);" viewbox="0 0 22 22" width="22">
+<path d="M1 1 L10 1 M1 1 L1 10" stroke="#EAFAA8" stroke-linecap="square" stroke-width="1.2"></path></svg>
+<svg aria-hidden="true" class="absolute bottom-4 right-4" fill="none" height="22" style="transform: scale(-1, -1);" viewbox="0 0 22 22" width="22">
+<path d="M1 1 L10 1 M1 1 L1 10" stroke="#EAFAA8" stroke-linecap="square" stroke-width="1.2"></path></svg>
+<div class="relative flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-6 md:mb-10 pb-5 md:pb-8 border-b border-white/10">
+<div>
+<p class="text-[10px] uppercase tracking-[0.28em] font-mono" style="color: rgba(255, 255, 255, 0.35);">Specimen / Exemplar</p>
+<p class="font-heading mt-1" style="color: rgb(234, 250, 168); font-size: clamp(18px, 2vw, 24px); letter-spacing: -0.02em; font-weight: 600;">Agent Lab · Certificate of Completion</p></div>
+<div class="flex items-center gap-6 md:gap-10">
+<div>
+<p class="text-[9px] uppercase tracking-[0.22em] font-mono text-white/35">Série</p>
+<p class="text-[13px] font-mono text-white/85 mt-0.5">HA · 001 / 2026</p></div>
+<div>
+<p class="text-[9px] uppercase tracking-[0.22em] font-mono text-white/35">Emissão</p>
+<p class="text-[13px] font-mono text-white/85 mt-0.5">31.MAIO.2026</p></div>
+<div class="hidden md:block">
+<p class="text-[9px] uppercase tracking-[0.22em] font-mono text-white/35">Status</p>
+<p class="text-[13px] font-mono mt-0.5 flex items-center gap-1.5" style="color: rgb(234, 250, 168);">
+<span class="w-1.5 h-1.5 rounded-full" style="background: rgb(234, 250, 168); animation: 2s ease-in-out 0s infinite normal none running pulse-dot;"></span>Verified</p></div></div></div>
+<div class="relative grid grid-cols-1 md:grid-cols-[140px_1fr_140px] gap-5 md:gap-8 items-center">
+<div class="hidden md:flex flex-col gap-5 text-right">
+<div>
+<p class="text-[9px] uppercase tracking-[0.22em] font-mono text-white/40 mb-1">Instituição</p>
+<p class="text-xs text-white/85 leading-snug">Human Academy</p></div>
+<div>
+<p class="text-[9px] uppercase tracking-[0.22em] font-mono text-white/40 mb-1">Formato</p>
+<p class="text-xs text-white/85 leading-snug">Digital · PNG/PDF</p></div>
+<div>
+<p class="text-[9px] uppercase tracking-[0.22em] font-mono text-white/40 mb-1">Entrega</p>
+<p class="text-xs text-white/85 leading-snug">E-mail · 7 dias</p></div></div>
+<div class="relative">
+<div class="absolute -inset-4 rounded-2xl blur-2xl opacity-50 pointer-events-none" style="background: radial-gradient(rgba(234, 250, 168, 0.3), transparent 65%);"></div>
+<div class="relative rounded-lg overflow-hidden" style="box-shadow: rgba(0, 0, 0, 0.45) 0px 30px 80px, rgba(234, 250, 168, 0.15) 0px 0px 0px 1px, rgba(234, 250, 168, 0.06) 0px 0px 0px 6px;">
+<img alt="Certificado Agent Lab – Human Academy" class="w-full block" loading="lazy" src="assets/dc9a659a20d3556c_certificado.png"/></div>
+<img alt="" class="absolute -top-6 -right-6 md:-top-8 md:-right-8 w-16 md:w-20 pointer-events-none select-none" height="96" src="assets/8736e3b2e76bc0f5_cross.png" style="animation: 7s ease-in-out 0s infinite normal none running sticker-float-0; filter: drop-shadow(rgba(0, 0, 0, 0.35) 0px 6px 16px);" width="96"/></div>
+<div class="hidden md:flex flex-col gap-5">
+<div>
+<p class="text-[9px] uppercase tracking-[0.22em] font-mono text-white/40 mb-1">Carga</p>
+<p class="text-xs text-white/85 leading-snug">12 horas reconhecidas</p></div>
+<div>
+<p class="text-[9px] uppercase tracking-[0.22em] font-mono text-white/40 mb-1">Programa</p>
+<p class="text-xs text-white/85 leading-snug">Workshop de Agentes Criativos</p></div>
+<div>
+<p class="text-[9px] uppercase tracking-[0.22em] font-mono text-white/40 mb-1">Assinatura</p>
+<p class="font-heading italic text-white/85" style="font-size: 16px; font-weight: 400; letter-spacing: -0.01em;">Marioo</p></div></div></div>
+<div class="relative mt-8 md:mt-10 pt-5 md:pt-6 border-t border-white/10 flex items-center justify-between gap-6">
+<div class="flex items-end gap-[2px] h-7">
+<span style="width: 3px; height: 9px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 2px; height: 21px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 2px; height: 12px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 2px; height: 18px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 3px; height: 9px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 2px; height: 24px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 2px; height: 6px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 2px; height: 15px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 3px; height: 21px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 2px; height: 12px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 2px; height: 9px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 2px; height: 18px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 3px; height: 15px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 2px; height: 21px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 2px; height: 9px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 2px; height: 24px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 3px; height: 12px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 2px; height: 18px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 2px; height: 15px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 2px; height: 21px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 3px; height: 9px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 2px; height: 15px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 2px; height: 24px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 2px; height: 12px; background: rgb(234, 250, 168); opacity: 0.85;"></span>
+<span style="width: 3px; height: 18px; background: rgb(234, 250, 168); opacity: 0.85;"></span></div>
+<p class="text-[10px] font-mono tracking-[0.22em] uppercase text-white/40">HA-2026-AGENTLAB-001</p></div></div></div></div>
+<div class="relative z-10 overflow-hidden" style="background: rgb(26, 26, 26); border-top: 1px solid rgba(234, 250, 168, 0.2);">
+<div class="flex items-center gap-10 whitespace-nowrap animate-marquee2 py-3.5">
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em]" style="color: rgb(234, 250, 168);">N° HA · 2026<span class="text-white/50">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em]" style="color: rgb(234, 250, 168);">High Resolution<span class="text-white/50">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em]" style="color: rgb(234, 250, 168);">Entregue em até 7 dias<span class="text-white/50">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em]" style="color: rgb(234, 250, 168);">Authentic<span class="text-white/50">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em]" style="color: rgb(234, 250, 168);">Human Academy™<span class="text-white/50">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em]" style="color: rgb(234, 250, 168);">Signed &amp; Sealed<span class="text-white/50">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em]" style="color: rgb(234, 250, 168);">N° HA · 2026<span class="text-white/50">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em]" style="color: rgb(234, 250, 168);">High Resolution<span class="text-white/50">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em]" style="color: rgb(234, 250, 168);">Entregue em até 7 dias<span class="text-white/50">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em]" style="color: rgb(234, 250, 168);">Authentic<span class="text-white/50">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em]" style="color: rgb(234, 250, 168);">Human Academy™<span class="text-white/50">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em]" style="color: rgb(234, 250, 168);">Signed &amp; Sealed<span class="text-white/50">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em]" style="color: rgb(234, 250, 168);">N° HA · 2026<span class="text-white/50">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em]" style="color: rgb(234, 250, 168);">High Resolution<span class="text-white/50">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em]" style="color: rgb(234, 250, 168);">Entregue em até 7 dias<span class="text-white/50">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em]" style="color: rgb(234, 250, 168);">Authentic<span class="text-white/50">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em]" style="color: rgb(234, 250, 168);">Human Academy™<span class="text-white/50">✦</span></span>
+<span class="flex items-center gap-10 text-[13px] font-heading font-semibold uppercase tracking-[0.18em]" style="color: rgb(234, 250, 168);">Signed &amp; Sealed<span class="text-white/50">✦</span></span></div></div></section>
+<!-- faq -->
+<section class="section-spacing">
+<div class="container-main">
+<div class="text-center mb-14 animate-fade-in-up">
+<div class="section-header-line">
+<span class="label-tag">Dúvidas</span></div>
+<h2 class="heading-h2 mt-5">Perguntas frequentes</h2></div>
+<div class="grid lg:grid-cols-[1fr,340px] gap-10 lg:gap-14 max-w-5xl mx-auto">
+<div class="space-y-2" data-orientation="vertical">
+<div class="glass-card px-6 border-0 animate-fade-in-up" data-orientation="vertical" data-state="closed" style="animation-delay: 0ms;">
+<h3 class="flex" data-orientation="vertical" data-state="closed">
+<button aria-controls="radix-:r4d:" aria-expanded="false" class="flex flex-1 items-center justify-between transition-all [&amp;[data-state=open]&gt;svg]:rotate-180 text-left font-medium hover:no-underline py-5 text-[15px]" data-orientation="vertical" data-radix-collection-item="" data-state="closed" id="radix-:r4c:" type="button">Preciso ter experiência prévia com IA para participar?<i data-lucide="chevron-down" class="h-4 w-4 shrink-0 transition-transform duration-200"></i></button></h3>
+<div aria-labelledby="radix-:r4c:" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-state="closed" hidden="" id="radix-:r4d:" role="region" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"></div></div>
+<div class="glass-card px-6 border-0 animate-fade-in-up" data-orientation="vertical" data-state="closed" style="animation-delay: 60ms;">
+<h3 class="flex" data-orientation="vertical" data-state="closed">
+<button aria-controls="radix-:r4f:" aria-expanded="false" class="flex flex-1 items-center justify-between transition-all [&amp;[data-state=open]&gt;svg]:rotate-180 text-left font-medium hover:no-underline py-5 text-[15px]" data-orientation="vertical" data-radix-collection-item="" data-state="closed" id="radix-:r4e:" type="button">Quais ferramentas de IA serão utilizadas durante o workshop?<i data-lucide="chevron-down" class="h-4 w-4 shrink-0 transition-transform duration-200"></i></button></h3>
+<div aria-labelledby="radix-:r4e:" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-state="closed" hidden="" id="radix-:r4f:" role="region" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"></div></div>
+<div class="glass-card px-6 border-0 animate-fade-in-up" data-orientation="vertical" data-state="closed" style="animation-delay: 120ms;">
+<h3 class="flex" data-orientation="vertical" data-state="closed">
+<button aria-controls="radix-:r4h:" aria-expanded="false" class="flex flex-1 items-center justify-between transition-all [&amp;[data-state=open]&gt;svg]:rotate-180 text-left font-medium hover:no-underline py-5 text-[15px]" data-orientation="vertical" data-radix-collection-item="" data-state="closed" id="radix-:r4g:" type="button">Vou receber algum material de apoio após o workshop?<i data-lucide="chevron-down" class="h-4 w-4 shrink-0 transition-transform duration-200"></i></button></h3>
+<div aria-labelledby="radix-:r4g:" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-state="closed" hidden="" id="radix-:r4h:" role="region" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"></div></div>
+<div class="glass-card px-6 border-0 animate-fade-in-up" data-orientation="vertical" data-state="closed" style="animation-delay: 180ms;">
+<h3 class="flex" data-orientation="vertical" data-state="closed">
+<button aria-controls="radix-:r4j:" aria-expanded="false" class="flex flex-1 items-center justify-between transition-all [&amp;[data-state=open]&gt;svg]:rotate-180 text-left font-medium hover:no-underline py-5 text-[15px]" data-orientation="vertical" data-radix-collection-item="" data-state="closed" id="radix-:r4i:" type="button">O workshop é totalmente online ou presencial?<i data-lucide="chevron-down" class="h-4 w-4 shrink-0 transition-transform duration-200"></i></button></h3>
+<div aria-labelledby="radix-:r4i:" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-state="closed" hidden="" id="radix-:r4j:" role="region" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"></div></div>
+<div class="glass-card px-6 border-0 animate-fade-in-up" data-orientation="vertical" data-state="closed" style="animation-delay: 240ms;">
+<h3 class="flex" data-orientation="vertical" data-state="closed">
+<button aria-controls="radix-:r4l:" aria-expanded="false" class="flex flex-1 items-center justify-between transition-all [&amp;[data-state=open]&gt;svg]:rotate-180 text-left font-medium hover:no-underline py-5 text-[15px]" data-orientation="vertical" data-radix-collection-item="" data-state="closed" id="radix-:r4k:" type="button">Terei acesso às gravações caso não possa assistir algum momento ao vivo?<i data-lucide="chevron-down" class="h-4 w-4 shrink-0 transition-transform duration-200"></i></button></h3>
+<div aria-labelledby="radix-:r4k:" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-state="closed" hidden="" id="radix-:r4l:" role="region" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"></div></div>
+<div class="glass-card px-6 border-0 animate-fade-in-up" data-orientation="vertical" data-state="closed" style="animation-delay: 300ms;">
+<h3 class="flex" data-orientation="vertical" data-state="closed">
+<button aria-controls="radix-:r4n:" aria-expanded="false" class="flex flex-1 items-center justify-between transition-all [&amp;[data-state=open]&gt;svg]:rotate-180 text-left font-medium hover:no-underline py-5 text-[15px]" data-orientation="vertical" data-radix-collection-item="" data-state="closed" id="radix-:r4m:" type="button">Qual a diferença entre só usar o ChatGPT e o que vou aprender aqui?<i data-lucide="chevron-down" class="h-4 w-4 shrink-0 transition-transform duration-200"></i></button></h3>
+<div aria-labelledby="radix-:r4m:" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-state="closed" hidden="" id="radix-:r4n:" role="region" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"></div></div>
+<div class="glass-card px-6 border-0 animate-fade-in-up" data-orientation="vertical" data-state="closed" style="animation-delay: 360ms;">
+<h3 class="flex" data-orientation="vertical" data-state="closed">
+<button aria-controls="radix-:r4p:" aria-expanded="false" class="flex flex-1 items-center justify-between transition-all [&amp;[data-state=open]&gt;svg]:rotate-180 text-left font-medium hover:no-underline py-5 text-[15px]" data-orientation="vertical" data-radix-collection-item="" data-state="closed" id="radix-:r4o:" type="button">Vou conseguir criar projetos completos após o workshop?<i data-lucide="chevron-down" class="h-4 w-4 shrink-0 transition-transform duration-200"></i></button></h3>
+<div aria-labelledby="radix-:r4o:" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-state="closed" hidden="" id="radix-:r4p:" role="region" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"></div></div>
+<div class="glass-card px-6 border-0 animate-fade-in-up" data-orientation="vertical" data-state="closed" style="animation-delay: 420ms;">
+<h3 class="flex" data-orientation="vertical" data-state="closed">
+<button aria-controls="radix-:r4r:" aria-expanded="false" class="flex flex-1 items-center justify-between transition-all [&amp;[data-state=open]&gt;svg]:rotate-180 text-left font-medium hover:no-underline py-5 text-[15px]" data-orientation="vertical" data-radix-collection-item="" data-state="closed" id="radix-:r4q:" type="button">Terei oportunidade de tirar dúvidas e interagir durante o workshop?<i data-lucide="chevron-down" class="h-4 w-4 shrink-0 transition-transform duration-200"></i></button></h3>
+<div aria-labelledby="radix-:r4q:" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-state="closed" hidden="" id="radix-:r4r:" role="region" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"></div></div>
+<div class="glass-card px-6 border-0 animate-fade-in-up" data-orientation="vertical" data-state="closed" style="animation-delay: 480ms;">
+<h3 class="flex" data-orientation="vertical" data-state="closed">
+<button aria-controls="radix-:r4t:" aria-expanded="false" class="flex flex-1 items-center justify-between transition-all [&amp;[data-state=open]&gt;svg]:rotate-180 text-left font-medium hover:no-underline py-5 text-[15px]" data-orientation="vertical" data-radix-collection-item="" data-state="closed" id="radix-:r4s:" type="button">Tem certificado?<i data-lucide="chevron-down" class="h-4 w-4 shrink-0 transition-transform duration-200"></i></button></h3>
+<div aria-labelledby="radix-:r4s:" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-state="closed" hidden="" id="radix-:r4t:" role="region" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"></div></div>
+<div class="glass-card px-6 border-0 animate-fade-in-up" data-orientation="vertical" data-state="closed" style="animation-delay: 540ms;">
+<h3 class="flex" data-orientation="vertical" data-state="closed">
+<button aria-controls="radix-:r4v:" aria-expanded="false" class="flex flex-1 items-center justify-between transition-all [&amp;[data-state=open]&gt;svg]:rotate-180 text-left font-medium hover:no-underline py-5 text-[15px]" data-orientation="vertical" data-radix-collection-item="" data-state="closed" id="radix-:r4u:" type="button">Qual IA preciso ter para fazer as atividades do workshop?<i data-lucide="chevron-down" class="h-4 w-4 shrink-0 transition-transform duration-200"></i></button></h3>
+<div aria-labelledby="radix-:r4u:" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-state="closed" hidden="" id="radix-:r4v:" role="region" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"></div></div></div>
+<div class="lg:sticky lg:top-32 lg:self-start animate-fade-in-up" style="animation-delay: 200ms;">
+<div class="rounded-2xl p-8" style="background: rgba(0, 0, 0, 0.04); border: 1px solid rgba(0, 0, 0, 0.06);">
+<div class="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style="background: rgba(236, 94, 38, 0.1);">
+<svg fill="none" height="20" stroke="#EC5E26" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+<h3 class="font-heading text-lg font-medium" style="color: rgb(26, 26, 26); letter-spacing: -0.02em;">Entre em contato com nossa equipe e tire suas dúvidas!</h3>
+<p class="text-sm mt-3 leading-relaxed" style="color: rgba(0, 0, 0, 0.45);">Se ainda estiver com dúvidas, nossa equipe está à disposição.</p>
+<a class="inline-flex items-center gap-2 mt-6 px-5 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:brightness-110" href="https://bit.ly/atendimentohumanacademy" rel="noopener noreferrer" style="background: rgb(236, 94, 38); color: rgb(255, 255, 255);" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Falar com nosso suporte</a></div></div></div></div></section>
+<!-- ticket-cta -->
+<section class="section-spacing relative overflow-hidden" id="garanta-sua-vaga" style='background: url("assets/0dbb4e84a15b43e7_bg.jpg") center center / cover;'>
+<div class="container-main text-center relative z-10">
+<div class="animate-fade-in-up">
+<div class="countdown-pill mx-auto mb-10 w-fit">
+<span class="dot"></span>
+<span class="text-white/70 font-semibold">Faltam <span class="font-mono tabular-nums">3d 03h 49m 18s</span></span></div></div>
+<div class="animate-fade-in-up" style="animation-delay: 100ms;">
+<div class="flex justify-center mb-6">
+<span class="px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider" style="background: rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.6);">Lote 04</span></div>
+<h2 class="font-heading text-white" style="font-size: clamp(36px, 6vw, 80px); letter-spacing: -0.04em; line-height: 1; font-weight: 500;">Garanta sua vaga</h2>
+<div class="flex items-center justify-center gap-4 mt-6">
+<span class="text-white/30 text-xl md:text-2xl line-through font-heading">R$84,00</span>
+<span class="font-heading font-bold text-3xl md:text-5xl" style="color: rgb(234, 250, 168); letter-spacing: -0.03em;">R$62,00</span></div></div>
+<div class="animate-fade-in-up mt-6" style="animation-delay: 200ms;">
+<p class="text-lg max-w-md mx-auto" style="color: rgba(255, 255, 255, 0.5);">Vagas limitadas, garanta a sua agora.</p></div>
+<div class="hidden" style="animation-delay: 250ms;">
+<div class="rounded-2xl p-5 text-left" style="background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
+<p class="text-[10px] uppercase tracking-[0.18em] font-semibold mb-3" style="color: rgba(255, 255, 255, 0.35);">O que está incluído</p>
+<ul class="space-y-2.5">
+<li class="flex items-center gap-2.5">
+<span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(234, 250, 168, 0.15); border: 1px solid rgba(234, 250, 168, 0.2);">
+<svg aria-hidden="true" fill="none" height="11" viewbox="0 0 11 11" width="11">
+<path d="M2 5.5l2.5 2.5L9 2.5" stroke="#EAFAA8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span>
+<span class="text-sm" style="color: rgba(255, 255, 255, 0.75);">2 dias de workshop ao vivo (30 e 31 de maio)</span></li>
+<li class="flex items-center gap-2.5">
+<span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(234, 250, 168, 0.15); border: 1px solid rgba(234, 250, 168, 0.2);">
+<svg aria-hidden="true" fill="none" height="11" viewbox="0 0 11 11" width="11">
+<path d="M2 5.5l2.5 2.5L9 2.5" stroke="#EAFAA8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span>
+<span class="text-sm" style="color: rgba(255, 255, 255, 0.75);">12 horas de conteúdo prático com agentes reais</span></li>
+<li class="flex items-center gap-2.5">
+<span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(234, 250, 168, 0.15); border: 1px solid rgba(234, 250, 168, 0.2);">
+<svg aria-hidden="true" fill="none" height="11" viewbox="0 0 11 11" width="11">
+<path d="M2 5.5l2.5 2.5L9 2.5" stroke="#EAFAA8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span>
+<span class="text-sm" style="color: rgba(255, 255, 255, 0.75);">Certificado oficial da Human Academy</span></li>
+<li class="flex items-center gap-2.5">
+<span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(234, 250, 168, 0.15); border: 1px solid rgba(234, 250, 168, 0.2);">
+<svg aria-hidden="true" fill="none" height="11" viewbox="0 0 11 11" width="11">
+<path d="M2 5.5l2.5 2.5L9 2.5" stroke="#EAFAA8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span>
+<span class="text-sm" style="color: rgba(255, 255, 255, 0.75);">Material de apoio e templates prontos</span></li></ul></div></div>
+<div class="animate-scale-in mt-12 flex justify-center px-4" style="animation-delay: 280ms;">
+<div class="relative ticket-card" style="max-width: 580px; width: 100%;">
+<div class="relative rounded-2xl overflow-hidden" style="background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.12) 0px 20px 60px; width: calc(100% - 70px);">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-6 h-6 rounded-full" style="background: inherit;">
+<div class="w-full h-full rounded-full" style="background: rgb(26, 26, 26);"></div></div>
+<div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-6 h-6 rounded-full" style="background: inherit;">
+<div class="w-full h-full rounded-full" style="background: rgb(26, 26, 26);"></div></div>
+<div class="p-6 md:p-8 text-left">
+<p class="font-heading font-bold text-black text-lg md:text-xl tracking-tight">AGENT LAB</p>
+<p class="text-black/30 text-[10px] md:text-xs mt-1 font-mono tracking-wider uppercase">Workshop de Agentes Criativos</p>
+<div class="border-t border-dashed border-black/10 my-5 md:my-6 mx-2"></div>
+<div class="grid grid-cols-3 gap-3 md:gap-4">
+<div>
+<p class="text-black/30 text-[9px] md:text-[10px] uppercase tracking-widest font-mono">Data</p>
+<p class="text-black font-heading font-bold text-sm mt-1">30/31 Mai</p></div>
+<div>
+<p class="text-black/30 text-[9px] md:text-[10px] uppercase tracking-widest font-mono">Formato</p>
+<p class="text-black font-heading font-bold text-sm mt-1">Online</p></div>
+<div>
+<p class="text-black/30 text-[9px] md:text-[10px] uppercase tracking-widest font-mono">Duração</p>
+<p class="text-black font-heading font-bold text-sm mt-1">12 horas</p></div></div></div></div>
+<div class="absolute right-0 top-3 md:top-4 w-[80px] md:w-[90px] rounded-xl md:rounded-2xl" style="background: rgb(17, 17, 17); transform: rotate(6deg); z-index: -1; box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 60px; height: calc(100% - 6px);">
+<div class="p-3 md:p-4 text-right">
+<p class="text-white/30 text-[8px] md:text-[9px] uppercase tracking-widest font-mono">Lote</p>
+<p class="text-white font-heading font-bold text-xl md:text-3xl mt-1">04</p></div></div></div></div>
+<div class="animate-fade-in-up mt-10" style="animation-delay: 420ms;">
+<button class="btn-dark text-base px-10 py-4 min-h-[48px] cursor-pointer">GARANTIR INGRESSO</button></div>
+<div class="animate-fade-in-up mt-4" style="animation-delay: 480ms;">
+<button class="text-xs md:text-sm underline underline-offset-4 transition-colors duration-200 cursor-pointer hover:text-white/80" style="color: rgba(255, 255, 255, 0.45);">Quero somente as gravações</button></div>
+<div class="animate-fade-in-up mt-12 md:mt-14 max-w-md mx-auto px-2" style="animation-delay: 560ms;">
+<div class="rounded-2xl p-5 text-left" style="background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
+<p class="text-[10px] uppercase tracking-[0.18em] font-semibold mb-3" style="color: rgba(234, 250, 168, 0.7);">O que está incluso</p>
+<ul class="space-y-2.5">
+<li class="flex items-center gap-2.5">
+<span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(234, 250, 168, 0.15); border: 1px solid rgba(234, 250, 168, 0.2);">
+<svg aria-hidden="true" fill="none" height="11" viewbox="0 0 11 11" width="11">
+<path d="M2 5.5l2.5 2.5L9 2.5" stroke="#EAFAA8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span>
+<span class="text-sm" style="color: rgba(255, 255, 255, 0.85);">2 dias de workshop ao vivo (30 e 31 de maio)</span></li>
+<li class="flex items-center gap-2.5">
+<span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(234, 250, 168, 0.15); border: 1px solid rgba(234, 250, 168, 0.2);">
+<svg aria-hidden="true" fill="none" height="11" viewbox="0 0 11 11" width="11">
+<path d="M2 5.5l2.5 2.5L9 2.5" stroke="#EAFAA8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span>
+<span class="text-sm" style="color: rgba(255, 255, 255, 0.85);">12 horas de conteúdo prático com agentes reais</span></li>
+<li class="flex items-center gap-2.5">
+<span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(234, 250, 168, 0.15); border: 1px solid rgba(234, 250, 168, 0.2);">
+<svg aria-hidden="true" fill="none" height="11" viewbox="0 0 11 11" width="11">
+<path d="M2 5.5l2.5 2.5L9 2.5" stroke="#EAFAA8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span>
+<span class="text-sm" style="color: rgba(255, 255, 255, 0.85);">Certificado oficial da Human Academy</span></li>
+<li class="flex items-center gap-2.5">
+<span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(234, 250, 168, 0.15); border: 1px solid rgba(234, 250, 168, 0.2);">
+<svg aria-hidden="true" fill="none" height="11" viewbox="0 0 11 11" width="11">
+<path d="M2 5.5l2.5 2.5L9 2.5" stroke="#EAFAA8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span>
+<span class="text-sm" style="color: rgba(255, 255, 255, 0.85);">Material de apoio e templates prontos</span></li></ul></div></div>
+<div class="animate-fade-in-up mt-6 flex justify-center" style="animation-delay: 640ms;">
+<button class="group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-medium tracking-wide text-white/90 transition-all duration-300 hover:bg-white/10 hover:text-white cursor-pointer" style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12);">
+<span>GARANTIR INGRESSO</span>
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12">
+<line x1="5" x2="19" y1="12" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline></svg></button></div>
+<div class="animate-fade-in-up mt-12" style="animation-delay: 600ms;">
+<p class="text-sm mb-4" style="color: rgba(255, 255, 255, 0.35);">Ficou com alguma dúvida? Fale agora com nosso time pelo WhatsApp.</p>
+<a class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all duration-300 hover:scale-105" href="https://bit.ly/atendimentohumanacademy" rel="noopener noreferrer" style="background: rgb(255, 255, 255); color: rgb(0, 0, 0);" target="_blank">Falar pelo WhatsApp</a></div></div></section>
+<div class="relative h-screen w-full" style="clip-path: polygon(0% 0px, 100% 0%, 100% 100%, 0px 100%);">
+<!-- cinematic-footer -->
+<footer class="fixed bottom-0 left-0 flex h-screen w-full flex-col justify-between overflow-hidden text-white cinematic-footer-wrapper" style="background: rgb(28, 26, 24);">
+<div class="footer-aurora absolute left-1/2 top-1/2 h-[60vh] w-[80vw] -translate-x-1/2 -translate-y-1/2 animate-footer-breathe rounded-[50%] blur-[80px] pointer-events-none z-0"></div>
+<div class="absolute inset-0 pointer-events-none z-[5] hidden md:block" style="opacity: 0.7;">
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 82px; left: 2%; top: 6%; animation: 4s ease-in-out 0s infinite normal none running sticker-float-0; transform: rotate(-10deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 52px; left: 8%; top: 78%; animation: 5s ease-in-out 0.4s infinite normal none running sticker-float-1; transform: rotate(15deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 36px; left: 4%; top: 42%; animation: 6s ease-in-out 0.8s infinite normal none running sticker-float-2; transform: rotate(-5deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 68px; left: 12%; top: 12%; animation: 4s ease-in-out 1.2s infinite normal none running sticker-float-0; transform: rotate(20deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 84px; left: 88%; top: 8%; animation: 5s ease-in-out 1.6s infinite normal none running sticker-float-1; transform: rotate(12deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 38px; left: 92%; top: 72%; animation: 6s ease-in-out 2s infinite normal none running sticker-float-2; transform: rotate(-18deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 52px; left: 85%; top: 40%; animation: 4s ease-in-out 2.4s infinite normal none running sticker-float-0; transform: rotate(8deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 68px; left: 94%; top: 22%; animation: 5s ease-in-out 2.8s infinite normal none running sticker-float-1; transform: rotate(-12deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 36px; left: 15%; top: 88%; animation: 6s ease-in-out 0.2s infinite normal none running sticker-float-2; transform: rotate(22deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 82px; left: 82%; top: 85%; animation: 4s ease-in-out 0.6s infinite normal none running sticker-float-0; transform: rotate(-8deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 52px; left: 6%; top: 55%; animation: 5s ease-in-out 1s infinite normal none running sticker-float-1; transform: rotate(18deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 36px; left: 90%; top: 55%; animation: 6s ease-in-out 1.4s infinite normal none running sticker-float-2; transform: rotate(-15deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 68px; left: 10%; top: 30%; animation: 4s ease-in-out 1.8s infinite normal none running sticker-float-0; transform: rotate(-22deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 38px; left: 86%; top: 62%; animation: 6s ease-in-out 2.2s infinite normal none running sticker-float-2; transform: rotate(10deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 84px; left: 5%; top: 92%; animation: 5s ease-in-out 2.6s infinite normal none running sticker-float-1; transform: rotate(-6deg);"/></div>
+<div class="absolute inset-0 pointer-events-none z-[5] md:hidden" style="opacity: 0.5;">
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 90px; left: -6%; top: 3%; animation: 4s ease-in-out 0s infinite normal none running sticker-float-0; transform: rotate(-10deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 44px; left: -5%; top: 75%; animation: 5s ease-in-out 0.4s infinite normal none running sticker-float-1; transform: rotate(15deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 70px; left: 78%; top: 4%; animation: 6s ease-in-out 0.8s infinite normal none running sticker-float-2; transform: rotate(12deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 80px; left: 80%; top: 74%; animation: 4s ease-in-out 1.2s infinite normal none running sticker-float-0; transform: rotate(-8deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 36px; left: -4%; top: 40%; animation: 5s ease-in-out 1.6s infinite normal none running sticker-float-1; transform: rotate(18deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 50px; left: 82%; top: 40%; animation: 6s ease-in-out 2s infinite normal none running sticker-float-2; transform: rotate(-15deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 56px; left: 30%; top: 12%; animation: 4s ease-in-out 2.4s infinite normal none running sticker-float-0; transform: rotate(8deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 42px; left: 55%; top: 68%; animation: 5s ease-in-out 2.8s infinite normal none running sticker-float-1; transform: rotate(-12deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 34px; left: 60%; top: 10%; animation: 6s ease-in-out 0.2s infinite normal none running sticker-float-2; transform: rotate(20deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 64px; left: 15%; top: 72%; animation: 4s ease-in-out 0.6s infinite normal none running sticker-float-0; transform: rotate(-6deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 38px; left: 45%; top: 82%; animation: 5s ease-in-out 1s infinite normal none running sticker-float-1; transform: rotate(14deg);"/>
+<img alt="" class="absolute" src="assets/68212e6f00f46f7c_robot.png" style="width: 46px; left: 10%; top: 18%; animation: 6s ease-in-out 1.4s infinite normal none running sticker-float-2; transform: rotate(-18deg);"/></div>
+<div class="absolute top-12 left-0 w-full overflow-hidden border-y py-4 z-10 -rotate-2 scale-110 shadow-2xl" style="border-color: rgba(255, 255, 255, 0.05); background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(12px);">
+<div class="flex w-max animate-footer-scroll-marquee text-xs md:text-sm font-bold tracking-[0.3em] uppercase" style="color: rgba(255, 255, 255, 0.3);">
+<div class="flex items-center space-x-12 px-6">
+<span>Agentes Criativos</span> <span style="color: rgba(231, 249, 154, 0.4);">✦</span>
+<span>12 Horas ao Vivo</span> <span style="color: rgba(184, 165, 227, 0.4);">✦</span>
+<span>IA com Método</span> <span style="color: rgba(231, 249, 154, 0.4);">✦</span>
+<span>Do Zero à Automação</span> <span style="color: rgba(184, 165, 227, 0.4);">✦</span>
+<span>Vagas Limitadas</span> <span style="color: rgba(231, 249, 154, 0.4);">✦</span></div>
+<div class="flex items-center space-x-12 px-6">
+<span>Agentes Criativos</span> <span style="color: rgba(231, 249, 154, 0.4);">✦</span>
+<span>12 Horas ao Vivo</span> <span style="color: rgba(184, 165, 227, 0.4);">✦</span>
+<span>IA com Método</span> <span style="color: rgba(231, 249, 154, 0.4);">✦</span>
+<span>Do Zero à Automação</span> <span style="color: rgba(184, 165, 227, 0.4);">✦</span>
+<span>Vagas Limitadas</span> <span style="color: rgba(231, 249, 154, 0.4);">✦</span></div></div></div>
+<div class="relative z-10 flex flex-1 flex-col items-center justify-center px-6 mt-20 w-full max-w-5xl mx-auto">
+<img alt="Human Academy" class="h-4 w-auto opacity-40 mb-6" src="assets/b0242641afe25861_HUMANACA.png"/>
+<h2 class="heading-h2 mb-12 text-center" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 50px);">Pronto para começar?</h2>
+<div class="flex flex-wrap justify-center gap-4 w-full" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 50px);">
+<a class="cursor-pointer px-10 py-5 rounded-full font-bold text-sm md:text-base flex items-center justify-center transition-all duration-300 hover:brightness-110 hover:scale-[1.03]" href="#garanta-sua-vaga" style="background: rgb(236, 94, 38); color: rgb(255, 255, 255);">GARANTIR INGRESSO</a>
+<a class="cursor-pointer px-10 py-5 rounded-full font-bold text-sm md:text-base flex items-center justify-center transition-all duration-300 hover:scale-[1.03]" href="https://bit.ly/atendimentohumanacademy" rel="noopener noreferrer" style="background: rgba(255, 255, 255, 0.1); color: rgb(255, 255, 255); border: 1px solid rgba(255, 255, 255, 0.15);" target="_blank">Falar com o time</a></div></div>
+<div class="relative z-20 w-full pb-8 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="text-[10px] md:text-xs font-semibold tracking-widest uppercase order-2 md:order-1" style="color: rgba(255, 255, 255, 0.3);">© 2026 Human Academy. Todos os direitos reservados.</div>
+<button class="cursor-pointer w-12 h-12 rounded-full footer-glass-pill flex items-center justify-center group order-3" style="color: rgba(255, 255, 255, 0.4);">
+<svg class="w-5 h-5 transform group-hover:-translate-y-1.5 transition-transform duration-300" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button></div></footer></div>
+<!-- sticky-bar -->
+<div class="fixed bottom-6 left-1/2 z-50 transition-all duration-500" style="transform: translateX(-50%) translateY(120px); opacity: 0; pointer-events: none; padding-bottom: env(safe-area-inset-bottom, 0px);">
+<div class="sticky-bar hidden md:flex items-center gap-4" style="padding: 6px 6px 6px 20px;">
+<div class="flex items-center gap-2.5">
+<span class="w-1.5 h-1.5 rounded-full animate-pulse shrink-0" style="background: rgb(236, 94, 38);"></span>
+<p class="text-foreground text-sm whitespace-nowrap">
+<span class="font-semibold">Lote 04</span>
+<span class="text-muted-foreground"> · Faltam </span>
+<span class="font-heading font-bold tabular-nums" style="color: rgb(236, 94, 38);">3d 03h 49m 18s</span></p></div>
+<a class="btn-cta text-sm py-2.5 px-5 min-h-[40px] whitespace-nowrap" href="#garanta-sua-vaga">Garantir Ingresso</a></div>
+<div class="sticky-bar md:hidden flex items-center gap-3" style="padding: 6px 6px 6px 16px;">
+<div class="flex items-center gap-2 shrink-0">
+<span class="w-1.5 h-1.5 rounded-full animate-pulse shrink-0" style="background: rgb(236, 94, 38);"></span>
+<p class="text-foreground text-[11px] whitespace-nowrap">
+<span class="font-semibold">Lote 04</span>
+<span class="text-muted-foreground"> · </span>
+<span class="font-heading font-bold tabular-nums" style="color: rgb(236, 94, 38);">3d 03h 49m 18s</span></p></div>
+<a class="btn-cta text-xs py-2.5 px-5 min-h-[40px] whitespace-nowrap shrink-0" href="#garanta-sua-vaga">Garantir Ingresso</a></div></div></div></div>
+<!-- lovable-badge -->
+<aside aria-label="Edit with Lovable" dir="ltr" id="lovable-badge" lang="en" role="complementary">
+<a aria-label="Edit with Lovable" href="https://lovable.dev/projects/dbdfcd72-da20-45c6-acaf-8b9d43f80432?utm_source=lovable-badge" id="lovable-badge-cta" rel="noopener nofollow" target="_blank">
+<span id="lovable-badge-text">Edit with</span>
+<svg fill="none" height="16" viewbox="0 0 52 16" width="52" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M20.318 5.25c.643 0 1.206.14 1.69.418a2.81 2.81 0 0 1 1.118 1.191c.266.513.4 1.115.4 1.807s-.134 1.296-.4 1.812a2.81 2.81 0 0 1-1.118 1.193c-.484.278-1.047.418-1.69.418s-1.208-.14-1.695-.418a2.85 2.85 0 0 1-1.125-1.193c-.262-.516-.393-1.12-.393-1.812s.131-1.294.393-1.807a2.848 2.848 0 0 1 1.125-1.191c.487-.279 1.052-.418 1.695-.418Zm0 1.425c-.27 0-.504.076-.7.228-.193.147-.34.37-.443.67-.102.295-.153.66-.153 1.093 0 .435.05.801.153 1.1.102.3.25.524.443.676.196.147.43.22.7.22.27 0 .502-.073.694-.22.193-.152.341-.375.443-.67.103-.299.153-.667.153-1.106 0-.65-.112-1.145-.337-1.481a1.08 1.08 0 0 0-.953-.51ZM32.7 5.25c.61 0 1.127.1 1.549.3.422.197.74.48.953.849.217.368.325.809.325 1.32v2.704c0 .29.02.562.062.812.044.245.108.4.19.466V12h-1.935a5.895 5.895 0 0 1-.105-.684 7.745 7.745 0 0 1-.02-.228 2.293 2.293 0 0 1-.151.203c-.205.242-.47.437-.793.584-.32.143-.685.215-1.094.215-.406 0-.77-.08-1.094-.24a1.845 1.845 0 0 1-.756-.682 1.984 1.984 0 0 1-.27-1.045c0-.606.178-1.069.535-1.388.356-.324.87-.534 1.542-.633l1.125-.16c.225-.032.403-.074.534-.123a.622.622 0 0 0 .288-.196.549.549 0 0 0 .093-.327.65.65 0 0 0-.11-.367.702.702 0 0 0-.32-.27c-.14-.07-.31-.105-.51-.105-.32 0-.576.083-.768.251-.193.164-.298.39-.314.676h-1.923c.016-.434.147-.82.393-1.155.25-.34.596-.604 1.039-.792.442-.189.954-.283 1.535-.283Zm.99 3.498a.98.98 0 0 1-.215.14 2.49 2.49 0 0 1-.584.178l-.473.092c-.315.061-.553.156-.713.283-.155.127-.233.305-.233.534 0 .23.084.412.252.547.168.135.383.203.645.203s.494-.058.694-.173c.201-.118.355-.282.461-.49.11-.21.166-.448.166-.714v-.6Zm4.526-2.375c.065-.125.138-.243.221-.349.197-.25.437-.44.719-.571.282-.135.6-.203.952-.203.528 0 .988.138 1.377.412.389.275.688.67.896 1.186.21.512.314 1.12.314 1.824 0 .7-.107 1.309-.32 1.825-.213.512-.518.906-.915 1.18-.393.275-.854.412-1.383.412-.352 0-.667-.062-.946-.184a1.832 1.832 0 0 1-.7-.554 2.2 2.2 0 0 1-.234-.383V12h-1.843V3h1.862v3.373Zm1.284.296c-.274 0-.51.085-.707.253-.192.163-.338.397-.436.7a3.376 3.376 0 0 0-.148 1.05c0 .406.05.759.148 1.058.098.299.243.53.436.694.197.164.433.246.707.246.279 0 .512-.082.7-.246.193-.164.336-.395.43-.694.099-.3.148-.652.148-1.058 0-.405-.05-.757-.147-1.056-.095-.299-.238-.53-.43-.694a1.015 1.015 0 0 0-.7-.253Zm9.416-1.419c.602 0 1.136.131 1.604.393.466.262.829.643 1.086 1.143.263.5.394 1.097.394 1.794 0 .25-.002.449-.006.596H47.51c.018.288.071.538.164.75a1.3 1.3 0 0 0 .491.596c.214.13.465.196.757.196.319 0 .583-.082.792-.246.209-.167.34-.403.393-.706h1.862a2.48 2.48 0 0 1-.485 1.235 2.54 2.54 0 0 1-1.051.805c-.439.188-.949.283-1.53.283-.655 0-1.225-.125-1.708-.375a2.672 2.672 0 0 1-1.13-1.143c-.267-.508-.4-1.137-.4-1.887 0-.712.14-1.327.418-1.843a2.86 2.86 0 0 1 1.155-1.186c.491-.27 1.051-.405 1.678-.405Zm-.044 1.345c-.274 0-.516.068-.725.203a1.29 1.29 0 0 0-.479.59 2.045 2.045 0 0 0-.132.498h2.562a1.873 1.873 0 0 0-.138-.602 1.061 1.061 0 0 0-.418-.516 1.243 1.243 0 0 0-.67-.173Z" fill="#FCFBF8" fill-rule="evenodd"></path>
+<path d="m26.605 9.995 1.342-4.566h1.924L27.628 12h-2.07l-2.33-6.57h1.98l1.397 4.565Zm-13.013.143h2.256c1.632 0 1.421 1.837 1.418 1.861h-5.603V3h1.93v7.138Zm31.516 1.861h-1.862V3h1.862v8.999Z" fill="#FCFBF8"></path>
+<path clip-rule="evenodd" d="M2.7 3c1.492 0 2.7 1.192 2.7 2.663v1.012h.9c1.49 0 2.7 1.192 2.7 2.662S7.791 12 6.3 12H0V5.663C0 4.193 1.209 3 2.7 3Z" fill="url(#a)" fill-rule="evenodd"></path>
+<defs>
+<radialgradient cx="0" cy="0" gradienttransform="matrix(-1.54236 7.07838 -10.231 -2.15602 4.627 5.022)" gradientunits="userSpaceOnUse" id="a" r="1">
+<stop offset=".106" stop-color="#FE7B02"></stop>
+<stop offset=".394" stop-color="#FE3F21"></stop>
+<stop offset=".608" stop-color="#F858BC"></stop>
+<stop offset=".929" stop-color="#575ECF"></stop></radialgradient></defs></svg>
+</a>
+<span aria-hidden="true" id="lovable-badge-divider"></span>
+<button aria-label="Dismiss" id="lovable-badge-close" title="Dismiss" type="button">
+<svg aria-hidden="true" fill="none" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.646 4.646a.5.5 0 1 1 .707.708L8.707 8l2.646 2.646a.5.5 0 1 1-.707.707L8 8.707l-2.646 2.646a.5.5 0 1 1-.708-.707L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708L8 7.293l2.646-2.647Z"></path></svg>
+</button>
+</aside>
+<!-- js -->
+<!-- lucide icons: renders all <i data-lucide="..."> placeholders (used by the FAQ chevron-down indicators) -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>lucide.createIcons();</script>
+<!-- offline-fix: rewrites img/iframe src to local asset paths via the asset map; reveals scroll-triggered elements parked at opacity:0+slide; calls UnicornStudio.init() if a WebGL engine was preloaded but its inline init guard bailed -->
+<script src="assets/js/offline-fix.js"></script>
+</body>
+</html>

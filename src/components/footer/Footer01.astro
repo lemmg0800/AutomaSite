@@ -1,0 +1,21 @@
+﻿---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    disclaimer?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+---
+
+<footer class="mt-auto py-8 border-t border-white/10 text-xs opacity-75 text-center">
+  <div class="max-w-6xl mx-auto px-4">
+    <p>© {new Date().getFullYear()} {client.business.name}. Todos os direitos reservados.</p>
+    {content.disclaimer && (
+      <p class="text-[11px] mt-1 opacity-70">{content.disclaimer}</p>
+    )}
+  </div>
+</footer>

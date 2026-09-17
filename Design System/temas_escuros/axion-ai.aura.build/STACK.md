@@ -1,0 +1,8 @@
+- **Tailwind CSS** — utility-first CSS framework loaded via the bundled `assets/resource_3fa48481346f.es` runtime; powers all layout, color, spacing, and responsive utilities throughout the page
+- **Iconify (iconify-icon web component)** — icon system used everywhere via `<iconify-icon icon="solar:...">` tags; loaded from `assets/iconify-icon_e19829e7f0e8.js`
+- **Solar icon set (Iconify)** — specific icon collection providing every icon referenced (e.g. `solar:cpu-linear`, `solar:shield-check-bold`, `solar:arrow-right-linear`)
+- **Google Fonts (self-hosted .woff2)** — over 20 font families bundled locally (Inter, JetBrains Mono, Geist, Roboto, Montserrat, Poppins, Playfair Display, Instrument Serif, Merriweather, Bricolage Grotesque, Plus Jakarta Sans, Manrope, Space Grotesk, Work Sans, PT Serif, Geist Mono, Space Mono, Quicksand, Nunito, Newsreader, Google Sans Flex, Oswald, DM Sans, Cormorant Garamond) each exposed via a `.font-*` utility class
+- **UnicornStudio (v1.4.29)** — WebGL background-effects library loaded from the jsDelivr CDN at runtime; renders the `.aura-background-component` data-driven projects (`yWZ2Tbe094Fsjgy9NRnD` in the hero and `UtvhDctN8AjL6tvf1yKd` in the final CTA)
+- **IntersectionObserver (vanilla JS)** — drives the `.sys-reveal`, `.sys-flicker-anim`, `.sys-bar-fill`, and `data-sys-counter` scroll-triggered reveal/counter/bar-fill animations
+- **Supabase Storage CDN** — hosts the pricing-section background image and the fallback image pool used by `img-fallback.js`
+- **Aura.build runtime (`resource_3fa48481346f.es`)** — proprietary Aura page-builder runtime that bundles Tailwind and ships with the export

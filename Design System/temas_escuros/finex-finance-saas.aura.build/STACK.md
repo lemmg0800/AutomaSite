@@ -1,0 +1,8 @@
+- **Tailwind CSS** — utility-first CSS framework used for all layout, spacing, color, and typography styling (loaded via Aura runtime in `assets/resource_3fa48481346f.es`)
+- **Lucide** — icon library used throughout the interface, rendered via `<i data-lucide>` and `lucide.createIcons()`
+- **Google Fonts** — webfont service providing Newsreader, Oswald, and Cormorant Garamond families used in headings (loaded via local copies of the `css2_*.css` files and `.woff2` font binaries)
+- **UnicornStudio** — fluid/animated background renderer (loaded from `cdn.jsdelivr.net` for the hero `data-us-project` block)
+- **Aura** — site builder/runtime that bundles Tailwind plus a Supabase token firewall and image fallback handler (`assets/resource_3fa48481346f.es`)
+- **Vanilla JavaScript** — IntersectionObserver-based scroll reveal, looping dashboard counter animations, and the testimonials carousel
+- **CSS animations / keyframes** — custom keyframes (`fadeInUp`, `blurIn`, `marquee`, `beam-spin`, `lines-slide`, `draw-path-loop`, `width-grow-loop`, `fade-in-up-loop`, `scale-in-loop`, `spin-slow`, `spin-slow-reverse`) drive the entire motion system
+- **SVG / `<foreignObject>`** — used for predictive-analytics charts (line/area, radar, progress bars) with embedded HTML labels

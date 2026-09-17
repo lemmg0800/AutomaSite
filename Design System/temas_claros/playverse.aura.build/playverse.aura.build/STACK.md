@@ -1,0 +1,17 @@
+- **Tailwind CSS** — utility-first CSS framework loaded via CDN runtime, used for all layout, spacing, color, and responsive styling
+- **Tailwind 3D plugin (custom)** — inline plugin extending Tailwind with rotate-x/y/z, perspective, and transform-style utilities for the hero card
+- **Iconify Icon (web component)** — `<iconify-icon>` element used to render Solar icon-set icons throughout nav, cards, footer, and CTAs
+- **Solar Icons (Iconify icon set)** — primary line icon set (gamepad, alt-arrow-down, stars, heart, eye, videocamera, star, hashtag, global, camera, play-circle, etc.)
+- **Lucide Icons** — used inline as raw SVG (bell, users, mic, phone-off, monitor, video, maximize) and via `<i data-lucide>` for the Play Now arrow
+- **GSAP** — animation library powering the virtual-workspace reveal timeline (grid, canvas, hero text, main card, walls, room labels)
+- **WebGL (raw API + GLSL shader)** — custom fragment shader rendering animated aura blobs on a canvas inside the virtual-workspace section
+- **UnicornStudio** — third-party background renderer loaded from jsDelivr CDN, used for the top decorative `aura-background-component`
+- **Google Analytics 4 (gtag.js)** — page analytics, measurement ID `G-2M6V79H761`
+- **Google Fonts** — loads Geist, Roboto, Montserrat, Poppins, Playfair, Instrument Serif, Merriweather, Bricolage, Plus Jakarta, Manrope, Space Grotesk, Work Sans, PT Serif, Geist Mono, Space Mono, Quicksand, Nunito, Newsreader, Google Sans Flex, Oswald, DM Sans, Cormorant — exposed as `.font-*` utility classes
+- **Mona Sans** — locally hosted variable font (woff2) used for brand headings via `.font-brand`
+- **WF Visual Sans** — locally hosted body font (woff2, regular and semibold) set as the default body family
+- **Aura Supabase Token Firewall** — page-level security script that blocks Supabase auth keys in storage and rejects Supabase auth/REST/functions network calls
+- **Supabase Storage** — public CDN host (`hoirqrkdgbmvpwutwuwj.supabase.co`) serving game cover images, avatars, and category thumbnails
+- **Midjourney CDN** — hosts the autoplaying hero and workspace background videos (`cdn.midjourney.com/video/...`)
+- **HTML5 video** — autoplay/loop/muted/playsinline backgrounds in hero card and championship workspace card
+- **Image Fallback Handler** — inline script that swaps broken `<img>` sources with a curated pool of Supabase fallback URLs

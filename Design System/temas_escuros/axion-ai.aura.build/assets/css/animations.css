@@ -1,0 +1,45 @@
+@media (prefers-reduced-motion: no-preference) {
+  .sys-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(4px);
+    transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 1.8s cubic-bezier(0.16, 1, 0.3, 1),
+      filter 1.8s ease-out;
+    will-change: opacity, transform;
+  }
+  .sys-rise { transform: translateY(34px); }
+  .sys-slide-l { transform: translateX(-34px); }
+  .sys-slide-r { transform: translateX(34px); }
+  .sys-scale { transform: scale(0.92); }
+  .sys-active {
+    opacity: 1;
+    transform: translate(0) scale(1);
+    filter: blur(0);
+  }
+  .sys-delay-100 { transition-delay: 160ms; }
+  .sys-delay-200 { transition-delay: 320ms; }
+  .sys-delay-300 { transition-delay: 480ms; }
+  .sys-delay-400 { transition-delay: 640ms; }
+  .sys-delay-500 { transition-delay: 800ms; }
+  @keyframes sys-flicker {
+    0% { opacity: 0.08; }
+    6% { opacity: 1; }
+    12% { opacity: 0.08; }
+    18% { opacity: 1; }
+    100% { opacity: 1; }
+  }
+  .sys-flicker-anim {
+    animation: sys-flicker 2.4s linear forwards;
+    opacity: 0;
+  }
+  .sys-active.sys-flicker-anim { opacity: 1; }
+  .sys-bar-fill {
+    transition: width 2.4s cubic-bezier(0.22, 1, 0.36, 1);
+    width: 0 !important;
+  }
+  .sys-active .sys-bar-fill,
+  .sys-bar-fill.sys-active {
+    width: var(--sys-width) !important;
+  }
+}

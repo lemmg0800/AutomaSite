@@ -1,0 +1,47 @@
+{
+  "slug": "{{SLUG}}",
+  "name": "{{NOME_EMPRESA}}",
+  "segment": "{{SEGMENTO}}",
+  "city": "{{CIDADE}}",
+  "address": "{{ENDERECO}}",
+  "website": "{{URL_SITE}}",
+  "instagram": "{{INSTAGRAM}}",
+  "phone": "{{TELEFONE}}",
+  "whatsapp": "{{WHATSAPP}}",
+  "status": "alta_oportunidade",
+  "scores": {
+    "business": 0.0,
+    "design": 0.0,
+    "mobile": 0.0,
+    "ux": 0.0,
+    "conversion": 0.0,
+    "confidence": 0.0,
+    "performance": 0.0,
+    "seo": 0.0,
+    "website_overall": 0.0,
+    "opportunity": 0
+  },
+  "pagespeed": {
+    "mobile_performance": 0,
+    "desktop_performance": 0,
+    "lcp": "N/A",
+    "fcp": "N/A",
+    "tbt": "N/A",
+    "cls": "N/A",
+    "speed_index": "N/A"
+  },
+  "top_problems": [
+    "Problema 1",
+    "Problema 2",
+    "Problema 3"
+  ],
+  "main_gap": "Contraste evidente entre a qualidade do negócio e o site atual.",
+  "commercial_hook": "Principal argumento para a abordagem comercial do Agente 3.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png",
+    "pagespeed_mobile": "screenshots/pagespeed-mobile.png",
+    "pagespeed_desktop": "screenshots/pagespeed-desktop.png"
+  },
+  "created_at": "{{TIMESTAMP}}"
+}

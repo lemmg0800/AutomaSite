@@ -1,0 +1,24 @@
+{
+  "url": "https://ramosdasilva.adv.br/",
+  "analyzed_at": "2026-09-16T20:06:54.006Z",
+  "mobile": {
+    "performance_score": 39,
+    "metrics": {
+      "largest_contentful_paint": "5.1s",
+      "first_contentful_paint": "3.0s",
+      "total_blocking_time": "450ms",
+      "cumulative_layout_shift": "0.19",
+      "speed_index": "4.7s"
+    },
+    "status": "POOR"
+  },
+  "desktop": {
+    "performance_score": 66,
+    "status": "NEEDS_IMPROVEMENT"
+  },
+  "top_opportunities": [
+    "Eliminar recursos que bloqueiam a renderização inicial",
+    "Otimizar imagens e servir em formatos modernos (WebP/AVIF)",
+    "Reduzir CSS e JS não utilizados no carregamento mobile"
+  ]
+}

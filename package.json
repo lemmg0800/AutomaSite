@@ -1,0 +1,38 @@
+{
+    "name": "site-automatico-prospector",
+    "version": "1.0.0",
+    "description": "Sistema de ProspecÃ§Ã£o Comercial AutÃ´noma - Agente 1 Prospector",
+    "main": "index.html",
+    "scripts": {
+        "audit:pagespeed": "node .agents/skills/pagespeed-analyzer/scripts/audit_pagespeed.js",
+        "audit:screenshots": "node .agents/skills/website-auditor/scripts/capture_screenshots.js",
+        "score": "node .agents/skills/dossier-builder/scripts/score_opportunity.js",
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "client:validate": "tsx scripts/validate-clients.ts",
+        "client:audit": "tsx scripts/audit-component-usage.ts",
+        "client:new": "tsx scripts/new-client.ts"
+    },
+    "keywords": [
+        "prospector",
+        "antigravity",
+        "automation",
+        "sales-pipeline"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@astrojs/vercel": "^11.0.10",
+        "@supabase/ssr": "^0.12.7",
+        "@supabase/supabase-js": "^2.116.0",
+        "@tailwindcss/vite": "^4.3.3",
+        "astro": "^7.3.3",
+        "tailwindcss": "^4.3.3",
+        "zod": "^4.6.5"
+    },
+    "type": "module",
+    "devDependencies": {
+        "tsx": "^4.23.13"
+    }
+}

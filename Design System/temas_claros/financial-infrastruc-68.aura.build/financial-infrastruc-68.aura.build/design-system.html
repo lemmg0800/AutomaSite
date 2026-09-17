@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Swipeeely - Plataforma de Infraestrutura Financeira</title>
+
+<!-- security firewall (must run early to patch storage/fetch/etc.) -->
+<script src="assets/js/supabase-firewall.js"></script>
+
+<!-- Tailwind CSS runtime (kept in head so utility classes resolve before render) -->
+<script src="assets/resource_3fa48481346f.es"></script>
+
+<!-- Iconify icon-component runtime (renders <iconify-icon icon="lucide:..."> tags throughout the page) -->
+<script src="assets/iconify-icon_e19829e7f0e8.js"></script>
+
+<!-- fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="assets/css2_19fd9cc6b396.css" rel="stylesheet"/>
+<link href="assets/css2_9b8bf743d4a8.css" rel="stylesheet"/>
+
+<!-- css -->
+<!-- base typography (Inter body, Manrope display utility, hide-scrollbar helpers) -->
+<link rel="stylesheet" href="assets/css/base.css"/>
+<!-- scroll fixes for offline preview (forces visibility, neutralizes hidden-for-animation utility classes) -->
+<link rel="stylesheet" href="assets/css/scroll-fixes.css"/>
+
+<!-- Google Analytics loader (async tag) -->
+<script async="" src="assets/js_19c0e2c2c8a8.js"></script>
+<!-- GA4 dataLayer + gtag config — must run after the loader script tag is in the DOM -->
+<script src="assets/js/analytics.js"></script>
+</head>
+<body class="antialiased selection:bg-emerald-500 selection:text-white text-gray-900 bg-gray-200">
+
+<!-- main-wrapper -->
+<div class="mx-auto max-w-7xl border-l border-r border-dashed border-gray-300 min-h-screen relative bg-gray-50/50">
+<div class="absolute inset-0 pointer-events-none flex justify-between px-4 opacity-20 z-0">
+<div class="w-px h-full bg-gray-300"></div>
+<div class="w-px h-full bg-gray-300"></div>
+<div class="w-px h-full bg-gray-300"></div>
+</div>
+<main class="relative z-10 p-4 md:p-6 lg:p-8 space-y-6">
+
+<!-- hero -->
+<section class="relative w-full rounded-[2.5rem] overflow-hidden bg-[#0f1115] text-white min-h-[600px] flex flex-col justify-between p-8 lg:p-12 shadow-2xl shadow-gray-200">
+<div class="absolute inset-0 z-0">
+<img alt="Abstrato 3D" class="opacity-60 mix-blend-overlay w-full h-full object-cover" src="assets/1f147f7d-661c-4181-a17e-e2ca53_f75361268fa8.webp"/>
+<div class="bg-gradient-to-t from-[#0f1115] via-transparent to-[#0f1115]/80 absolute top-0 right-0 bottom-0 left-0"></div>
+</div>
+<div class="relative z-10 w-full flex justify-center">
+<nav class="bg-white/5 backdrop-blur-md border border-white/10 rounded-full py-2 px-3 flex items-center gap-6 text-sm">
+<a class="inline-flex items-center justify-center bg-center w-[100px] h-[40px] bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/52ee558b-0436-4cc7-9737-33c078b5b091_1600w.png)] bg-cover rounded" href="#"></a>
+<a class="text-gray-300 hover:text-white transition-colors font-sans" href="#">Produtos</a>
+<a class="text-gray-300 hover:text-white transition-colors font-sans" href="#">Soluções</a>
+<a class="text-gray-300 hover:text-white transition-colors font-sans" href="#">Desenvolvedores</a>
+<button class="bg-white text-black px-4 py-1.5 rounded-full text-sm hover:bg-emerald-50 transition-colors font-sans">Painel</button>
+</nav>
+</div>
+<div class="relative z-10 mt-auto max-w-4xl">
+<h1 class="text-5xl md:text-7xl leading-[1.1] mb-8 text-white font-manrope font-medium tracking-tighter">
+A API unificada para <br/>
+<span class="text-gray-400 font-manrope font-medium tracking-tighter">a infraestrutura financeira</span> <br/>
+moderna.
+</h1>
+</div>
+<div class="absolute bottom-12 right-12 z-20 hidden md:flex items-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 p-2 pr-5 rounded-2xl">
+<div class="overflow-hidden w-12 h-16 bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/e1a3863d-784c-4cf0-9cb1-c0a79691ce9a_320w.jpg)] bg-cover bg-center rounded-xl relative shadow-lg">
+<div class="bg-black/20 absolute top-0 right-0 bottom-0 left-0"></div>
+</div>
+<div>
+<p class="text-xs text-gray-400 uppercase tracking-widest font-sans">Status</p>
+<p class="text-sm text-white font-sans">Todos os Sistemas Operacionais</p>
+</div>
+<div class="flex gap-2 ml-4">
+<button class="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
+<iconify-icon class="text-white text-base" icon="lucide:arrow-left"></iconify-icon>
+</button>
+<button class="h-8 w-8 rounded-full bg-white flex items-center justify-center hover:bg-gray-200 transition">
+<iconify-icon class="text-black text-base" icon="lucide:arrow-right"></iconify-icon>
+</button>
+</div>
+</div>
+</section>
+
+<!-- three-column-grid -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-12">
+<div class="lg:col-span-4 flex flex-col justify-between space-y-12 py-4">
+<div class="flex justify-between border-b border-gray-200 pb-4">
+<span class="text-sm text-black font-sans">01</span>
+<div class="flex gap-2 text-gray-400 text-xs font-mono">
+<span class="font-sans">02</span>
+<span class="font-sans">03</span>
+<span class="font-sans">04</span>
+</div>
+</div>
+<div>
+<h3 class="text-3xl lg:text-4xl text-gray-900 leading-tight mb-6 font-manrope font-medium tracking-tighter">
+Construído para <br/>
+<span class="text-gray-400 font-manrope font-medium tracking-tighter">Escala &amp; Velocidade</span> <br/>
+desde o Primeiro Commit.
+</h3>
+<p class="text-lg text-gray-500 leading-relaxed mb-8 font-sans">
+Abstraímos a complexidade dos trilhos bancários para que você possa focar em construir seu produto, não em manter a infraestrutura.
+</p>
+<button class="group flex items-center gap-3 bg-gray-900 text-white pl-5 pr-2 py-2 rounded-full text-base font-medium hover:bg-gray-800 transition-all">
+<span class="font-sans">Ler Documentação</span>
+<span class="bg-white text-black rounded-full w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform">
+<iconify-icon class="text-lg" icon="lucide:arrow-up-right"></iconify-icon>
+</span>
+</button>
+</div>
+</div>
+
+<div class="lg:col-span-4 relative group cursor-pointer">
+<div class="relative h-[500px] w-full rounded-3xl overflow-hidden bg-gray-200">
+<img alt="Textura de Areia" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/2e062daf-ac81-41e0-a217-47ea64_ec1b0497241d.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"></div>
+<div class="absolute top-6 left-6 text-white mix-blend-difference">
+<p class="text-lg tracking-tight font-sans">Liquidação Instantânea</p>
+<p class="text-sm text-gray-300 font-sans">Alcance Global</p>
+</div>
+<div class="absolute bottom-6 w-full px-6 flex justify-between items-end text-white">
+<div>
+<p class="text-xl font-manrope font-medium tracking-tighter">Trilhos em Tempo Real</p>
+<button class="mt-4 flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm hover:bg-white/30 transition font-sans">
+Explorar <iconify-icon class="text-base" icon="lucide:plus"></iconify-icon>
+</button>
+</div>
+<span class="text-5xl opacity-50 font-manrope font-medium tracking-tighter">02</span>
+</div>
+</div>
+</div>
+
+<div class="lg:col-span-4 relative group cursor-pointer">
+<div class="relative h-[500px] w-full rounded-3xl overflow-hidden bg-[#1a1a1a]">
+<img alt="Textura Escura" class="w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105" src="assets/61714d78-adc9-4724-b65b-b53759_9ade30586294.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-b from-black/20 to-black/80"></div>
+<div class="absolute top-6 left-6 text-white">
+<p class="text-lg tracking-tight font-sans">Segurança de Cofre</p>
+<p class="text-sm text-gray-400 font-sans">SOC2 Tipo II</p>
+</div>
+<div class="absolute bottom-6 w-full px-6 flex justify-between items-end text-white">
+<div class="max-w-[70%]">
+<p class="text-xl mb-2 font-manrope font-medium tracking-tighter">Arquitetura Zero-Trust</p>
+<p class="text-sm text-gray-400 line-clamp-2 font-sans">Credenciais tokenizadas e criptografia ponta a ponta para cada transação.</p>
+<button class="mt-4 flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full text-sm hover:bg-gray-200 transition font-sans">
+Ler Mais <iconify-icon class="text-base" icon="lucide:arrow-right"></iconify-icon>
+</button>
+</div>
+<span class="absolute bottom-6 right-6 text-5xl opacity-50 font-manrope font-medium tracking-tighter">03</span>
+</div>
+</div>
+<div class="flex justify-end mt-4 gap-3">
+<button class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:border-gray-900 transition text-gray-500 hover:text-gray-900">
+<iconify-icon class="text-lg" icon="lucide:arrow-left"></iconify-icon>
+</button>
+<button class="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center hover:bg-black transition">
+<iconify-icon class="text-lg" icon="lucide:arrow-right"></iconify-icon>
+</button>
+</div>
+</div>
+</section>
+
+<!-- benefits -->
+<section class="py-24 relative overflow-hidden border-b border-gray-200/60 bg-white/50">
+<div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-soft-light pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+<div class="text-center max-w-3xl mx-auto mb-20">
+<div class="inline-flex items-center rounded-full border border-gray-200 bg-white/80 backdrop-blur-sm px-3 py-1 text-xs text-gray-500 mb-6 shadow-sm font-sans">Benefícios</div>
+<h2 class="text-4xl md:text-5xl text-gray-900 mb-6 leading-[1.1] font-manrope font-medium tracking-tighter">
+Aprimore cada etapa do <br class="hidden md:block"/> ciclo de vida financeiro
+</h2>
+<p class="text-lg text-gray-500 leading-relaxed max-w-2xl mx-auto font-sans">
+Converta mais rápido, automatize a reconciliação, reduza o overhead operacional e impulsione a retenção líquida de receita com uma única integração.
+</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+
+<div class="group flex flex-col items-center text-center">
+<div class="relative h-48 w-full flex items-center justify-center mb-8">
+<div class="w-64 bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 p-5 relative z-10 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_20px_40px_rgb(0,0,0,0.06)]">
+<div class="flex items-center gap-3 mb-5">
+<div class="w-9 h-9 rounded-full bg-emerald-50 flex items-center justify-center border border-emerald-100">
+<iconify-icon class="text-emerald-600 text-sm" icon="lucide:scan-face"></iconify-icon>
+</div>
+<div class="text-left space-y-1.5">
+<div class="h-2 w-24 bg-gray-100 rounded-full"></div>
+<div class="h-1.5 w-16 bg-gray-50 rounded-full"></div>
+</div>
+</div>
+<div class="space-y-2.5 mb-5">
+<div class="h-1.5 w-full bg-gray-50 rounded-full overflow-hidden">
+<div class="h-full w-2/3 bg-emerald-500/20 rounded-full group-hover:w-full transition-all duration-1000 ease-out"></div>
+</div>
+<div class="h-1.5 w-5/6 bg-gray-50 rounded-full"></div>
+</div>
+<div class="flex items-center justify-between border-t border-gray-50 pt-3">
+<div class="h-1.5 w-10 bg-gray-100 rounded-full"></div>
+<span class="flex items-center gap-1.5 text-[10px] text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100/50 font-sans">
+<iconify-icon class="text-xs" icon="lucide:check-circle-2"></iconify-icon> KYB Verificado
+</span>
+</div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-b from-emerald-50/40 to-transparent rounded-full blur-3xl -z-10 transform scale-75 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+</div>
+<h3 class="text-lg text-gray-900 mb-3 tracking-tight font-sans">Acelere o Onboarding</h3>
+<p class="text-[15px] text-gray-500 leading-relaxed max-w-xs mx-auto font-sans">
+Não deixe a conformidade matar negócios. A Swipeeely transforma revisões manuais de KYB em aprovações totalmente automatizadas e instantâneas.
+</p>
+</div>
+
+<div class="group flex flex-col items-center text-center">
+<div class="relative h-48 w-full flex items-center justify-center mb-8">
+<div class="relative w-32 h-32 flex items-center justify-center">
+<svg class="absolute inset-0 w-full h-full rotate-[-90deg]" viewbox="0 0 100 100"><circle cx="50" cy="50" fill="none" r="38" stroke="#f3f4f6" stroke-width="3"></circle><circle class="transition-all duration-[1.5s] ease-out group-hover:stroke-dashoffset-0" cx="50" cy="50" fill="none" r="38" stroke="#10b981" stroke-dasharray="238" stroke-dashoffset="238" stroke-linecap="round" stroke-width="3"></circle></svg>
+<div class="w-16 h-16 bg-white shadow-[0_10px_30px_-5px_rgba(16,185,129,0.15)] rounded-2xl flex items-center justify-center border border-gray-100 z-10 relative transform transition-transform duration-500 group-hover:scale-110">
+<iconify-icon class="text-2xl text-emerald-500" icon="lucide:arrow-left-right"></iconify-icon>
+</div>
+<div class="absolute w-2 h-2 bg-emerald-400 rounded-full top-0 right-1/4 opacity-0 group-hover:opacity-100 transition-opacity delay-300 duration-500"></div>
+<div class="absolute w-1.5 h-1.5 bg-emerald-300 rounded-full bottom-2 left-1/3 opacity-0 group-hover:opacity-100 transition-opacity delay-500 duration-500"></div>
+</div>
+</div>
+<h3 class="text-lg text-gray-900 mb-3 tracking-tight font-sans">Automatize a Reconciliação</h3>
+<p class="text-[15px] text-gray-500 leading-relaxed max-w-xs mx-auto font-sans">
+Dê superpoderes ao seu time financeiro. Cada transação é reconciliada automaticamente em tempo real, sem qualquer entrada manual.
+</p>
+</div>
+
+<div class="group flex flex-col items-center text-center">
+<div class="relative h-48 w-full flex items-center justify-center mb-8">
+<div class="relative w-64 h-32 pl-4">
+<div class="absolute -top-4 right-2 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-gray-100 px-3 py-2 rounded-lg text-center z-20 transform transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2">
+<span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-0.5 font-sans">Retenção Líquida</span>
+<span class="block text-sm text-gray-900 flex items-center gap-1 font-sans">
+130%
+<iconify-icon class="text-emerald-500 text-xs" icon="lucide:arrow-up"></iconify-icon>
+</span>
+</div>
+<svg class="w-full h-full overflow-visible" viewbox="0 0 240 100"><line stroke="#f3f4f6" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="240" y1="25" y2="25"></line><line stroke="#f3f4f6" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="240" y1="55" y2="55"></line><line stroke="#f3f4f6" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="240" y1="85" y2="85"></line><path class="drop-shadow-sm" d="M0,85 C50,80 80,60 120,50 S180,30 240,15" fill="none" stroke="#10b981" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path><path class="opacity-0 group-hover:opacity-100 transition-opacity duration-700" d="M0,85 C50,80 80,60 120,50 S180,30 240,15 V110 H0 Z" fill="url(#chartGradient)"></path><defs><lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#10b981" stop-opacity="0.1"></stop><stop offset="100%" stop-color="#10b981" stop-opacity="0"></stop></lineargradient></defs><circle class="group-hover:scale-125 transition-transform duration-300" cx="240" cy="15" fill="#ffffff" r="4" stroke="#10b981" stroke-width="2"></circle></svg>
+</div>
+</div>
+<h3 class="text-lg text-gray-900 mb-3 tracking-tight font-sans">Maximize a Receita</h3>
+<p class="text-[15px] text-gray-500 leading-relaxed max-w-xs mx-auto font-sans">
+O roteamento inteligente direciona automaticamente as transações para as redes de melhor desempenho, reduzindo significativamente o churn.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- customers -->
+<section class="overflow-hidden bg-gray-50 border-gray-200/60 border-b pt-24 pb-24 relative">
+<div class="lg:px-8 max-w-[1400px] mr-auto ml-auto pr-6 pl-6">
+<div class="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-20 gap-8">
+<h2 class="text-4xl md:text-5xl lg:text-6xl text-gray-900 max-w-4xl leading-[1.05] font-manrope font-medium tracking-tighter">
+Ajudando fintechs ambiciosas <span class="text-gray-400 font-manrope font-medium tracking-tighter">a criar experiências financeiras que empoderam usuários globalmente.</span>
+</h2>
+<a class="group inline-flex items-center text-sm text-gray-900 hover:text-emerald-600 transition-colors border-b border-gray-900 hover:border-emerald-600 pb-0.5 whitespace-nowrap font-sans" href="#">
+Ver Clientes
+<iconify-icon class="ml-1 text-lg transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" icon="lucide:arrow-up-right"></iconify-icon>
+</a>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+<div class="bg-white p-8 min-h-[520px] flex flex-col justify-between hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-shadow duration-500 group rounded-3xl">
+<div>
+<h3 class="text-xl text-gray-900 mb-6 leading-snug font-manrope font-medium tracking-tighter">
+Pagamentos que escalam.<br/>Confiabilidade que você confia.
+</h3>
+<p class="text-gray-500 leading-relaxed text-[15px] font-sans">
+"A Swipeeely capturou a complexidade do nosso ledger e a traduziu em uma API afiada, rápida e inegavelmente eficaz para a nossa escala."
+</p>
+</div>
+<div class="flex items-center gap-3 pt-6 border-t border-gray-100 mt-auto">
+<img alt="Perfil" class="w-10 h-10 rounded-full object-cover bg-gray-100 grayscale group-hover:grayscale-0 transition-all duration-500" src="assets/photo-1438761681033-6461ffad8d_b71b72f9c7d1.avif"/>
+<div>
+<p class="text-sm text-gray-900 font-sans">Sarah J.</p>
+<p class="text-xs text-gray-500 font-sans">VP de Engenharia</p>
+</div>
+</div>
+</div>
+
+<div class="relative min-h-[520px] bg-gray-900 overflow-hidden group rounded-3xl">
+<img alt="Abstrato" class="group-hover:scale-105 group-hover:opacity-60 transition-all duration-700 opacity-70 w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0" src="assets/8188a0ea-1b46-4f51-b821-9271bd_eaed60c1032e.jpg"/>
+<div class="bg-gradient-to-t from-black/80 via-transparent to-black/20 absolute top-0 right-0 bottom-0 left-0"></div>
+<div class="absolute top-8 left-8 right-8 flex justify-between items-start z-10">
+<span class="text-white text-lg tracking-tight mix-blend-overlay font-sans">Rede Global©</span>
+</div>
+<div class="absolute bottom-8 right-8 z-10">
+<span class="text-white/60 text-xs uppercase tracking-widest font-sans">Desde '21</span>
+</div>
+</div>
+
+<div class="min-h-[520px] flex flex-col overflow-hidden group text-center bg-white pt-8 pr-8 pb-8 pl-8 relative items-center justify-between rounded-3xl">
+<p class="text-gray-500 text-lg mt-8 font-sans">Aumento nas <br/> taxas de autorização</p>
+<div class="relative flex items-center justify-center w-56 h-56 my-8">
+<svg class="w-full h-full transform -rotate-90 drop-shadow-xl" viewbox="0 0 200 200"><circle cx="100" cy="100" fill="none" r="90" stroke="#f3f4f6" stroke-width="1.5"></circle><circle class="transition-all duration-1000 ease-out group-hover:stroke-[3]" cx="100" cy="100" fill="none" r="90" stroke="#10b981" stroke-dasharray="565" stroke-dashoffset="141" stroke-width="1.5"></circle></svg>
+<div class="absolute inset-0 flex items-center justify-center flex-col">
+<span class="text-5xl text-gray-900 font-manrope font-medium tracking-tighter">+14%</span>
+</div>
+</div>
+</div>
+
+<div class="min-h-[520px] flex flex-col group overflow-hidden text-white bg-[#0f1115] pt-8 pr-8 pb-8 pl-8 relative justify-between rounded-3xl">
+<div class="flex justify-between items-start z-10">
+<span class="text-xl font-manrope font-medium tracking-tighter">Integração</span>
+<iconify-icon class="text-gray-500 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" icon="lucide:arrow-up-right"></iconify-icon>
+</div>
+<div class="z-10 relative">
+<p class="text-gray-400 leading-relaxed mb-12 max-w-[260px] text-[15px] font-sans">
+Vamos começar a integração — seja você dono de um marketplace complexo, uma ideia de neobank ou apenas curioso, nossa documentação está pronta.
+</p>
+<div class="space-y-2 text-sm text-gray-400 font-mono">
+<a class="block hover:text-emerald-400 transition-colors font-sans" href="#">dev@swipeeely.com</a>
+<a class="block hover:text-emerald-400 transition-colors font-sans" href="#">+1 (555) 123-4567</a>
+<a class="block hover:text-emerald-400 transition-colors font-sans" href="#">docs.swipeeely.com</a>
+</div>
+</div>
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-[80px] group-hover:bg-emerald-500/20 transition-all duration-700 pointer-events-none"></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- pricing -->
+<section class="relative bg-[#0f1115] rounded-[2.5rem] p-8 lg:p-16 overflow-hidden shadow-2xl mt-8">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 select-none pointer-events-none w-full text-center">
+<span class="text-[12rem] lg:text-[18rem] text-white/[0.02] leading-none font-manrope font-medium tracking-tighter">PLANOS</span>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center max-w-2xl mx-auto mb-16">
+<span class="inline-flex items-center rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-400 mb-6 font-sans">Preços Simples</span>
+<h2 class="text-4xl md:text-5xl text-white mb-4 font-manrope font-medium tracking-tighter">
+Pague conforme <br/> cresce.
+</h2>
+<p class="text-gray-400 text-sm md:text-base max-w-md mx-auto leading-relaxed font-sans">
+Comece grátis no sandbox. Faça upgrade quando estiver pronto para ir ao ar. Sem taxas ocultas ou mínimos mensais.
+</p>
+</div>
+
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+
+<div class="group relative flex flex-col p-8 bg-white/[0.03] border border-white/10 rounded-3xl hover:bg-white/[0.05] transition-colors duration-300">
+<div class="mb-6 flex items-start justify-between">
+<div class="h-10 w-10 rounded-xl bg-white/10 flex items-center justify-center border border-white/10">
+<iconify-icon class="text-white text-xl" icon="lucide:box"></iconify-icon>
+</div>
+</div>
+<div class="mb-6">
+<div class="flex items-baseline gap-1">
+<span class="text-3xl text-white font-manrope font-medium tracking-tighter">R$29</span>
+<span class="text-sm text-gray-500 font-sans">/mês</span>
+</div>
+<h3 class="text-lg text-white mt-4 font-sans">Startup</h3>
+<p class="text-sm text-gray-400 mt-2 leading-relaxed font-sans">Para validação e produtos em estágio inicial.</p>
+</div>
+<button class="w-full bg-white text-black py-3 rounded-xl text-sm mb-8 hover:bg-gray-200 transition-colors flex items-center justify-center gap-2 font-sans">
+Começar a Construir <iconify-icon class="text-base" icon="lucide:arrow-right"></iconify-icon>
+</button>
+<div class="space-y-4 mt-auto">
+<p class="text-xs text-gray-500 uppercase tracking-wider font-sans">Inclui</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-gray-300 font-sans">
+<iconify-icon class="text-gray-500" icon="lucide:check-circle"></iconify-icon> 5.000 requisições de API ao vivo
+</li>
+<li class="flex items-center gap-3 text-sm text-gray-300 font-sans">
+<iconify-icon class="text-gray-500" icon="lucide:check-circle"></iconify-icon> Acesso completo ao sandbox
+</li>
+<li class="flex items-center gap-3 text-sm text-gray-300 font-sans">
+<iconify-icon class="text-gray-500" icon="lucide:check-circle"></iconify-icon> Suporte por e-mail
+</li>
+</ul>
+</div>
+</div>
+
+<div class="group relative flex flex-col p-8 bg-white/[0.08] border border-white/20 rounded-3xl overflow-hidden shadow-2xl">
+<div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-emerald-500/20 to-transparent pointer-events-none"></div>
+<div class="mb-6 flex items-start justify-between relative z-10">
+<div class="h-10 w-10 rounded-xl bg-emerald-400/20 flex items-center justify-center border border-emerald-400/30">
+<iconify-icon class="text-emerald-400 text-xl" icon="lucide:layers"></iconify-icon>
+</div>
+<span class="bg-emerald-400 text-black text-[10px] px-2 py-1 rounded uppercase tracking-wider font-sans">Mais Popular</span>
+</div>
+<div class="mb-6 relative z-10">
+<div class="flex items-baseline gap-1">
+<span class="text-3xl text-white font-manrope font-medium tracking-tighter">R$99</span>
+<span class="text-sm text-gray-500 font-sans">/mês</span>
+</div>
+<h3 class="text-lg text-white mt-4 font-sans">Scale</h3>
+<p class="text-sm text-gray-400 mt-2 leading-relaxed font-sans">Para apps de produção de alto volume.</p>
+</div>
+<button class="relative z-10 w-full bg-[#10b981] text-white py-3 rounded-xl text-sm mb-8 hover:bg-[#059669] transition-colors flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(16,185,129,0.3)] font-sans">
+Fazer Upgrade Agora <iconify-icon class="text-base" icon="lucide:arrow-right"></iconify-icon>
+</button>
+<div class="space-y-4 mt-auto relative z-10">
+<p class="text-xs text-gray-500 uppercase tracking-wider font-sans">Tudo do Startup mais</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-white font-sans">
+<iconify-icon class="text-emerald-400" icon="lucide:check-circle"></iconify-icon> 100.000 requisições de API ao vivo
+</li>
+<li class="flex items-center gap-3 text-sm text-white font-sans">
+<iconify-icon class="text-emerald-400" icon="lucide:check-circle"></iconify-icon> Suporte prioritário 24/7
+</li>
+<li class="flex items-center gap-3 text-sm text-white font-sans">
+<iconify-icon class="text-emerald-400" icon="lucide:check-circle"></iconify-icon> Regras avançadas de fraude
+</li>
+</ul>
+</div>
+</div>
+
+<div class="group relative flex flex-col p-8 bg-white/[0.03] border border-white/10 rounded-3xl hover:bg-white/[0.05] transition-colors duration-300">
+<div class="mb-6 flex items-start justify-between">
+<div class="h-10 w-10 rounded-xl bg-white/10 flex items-center justify-center border border-white/10">
+<iconify-icon class="text-white text-xl" icon="lucide:diamond"></iconify-icon>
+</div>
+</div>
+<div class="mb-6">
+<div class="flex items-baseline gap-1">
+<span class="text-3xl text-white font-manrope font-medium tracking-tighter">Personalizado</span>
+</div>
+<h3 class="text-lg text-white mt-4 font-sans">Platform</h3>
+<p class="text-sm text-gray-400 mt-2 leading-relaxed font-sans">Para marketplaces e grandes plataformas.</p>
+</div>
+<button class="w-full bg-white text-black py-3 rounded-xl text-sm mb-8 hover:bg-gray-200 transition-colors flex items-center justify-center gap-2 font-sans">
+Falar com Vendas <iconify-icon class="text-base" icon="lucide:arrow-right"></iconify-icon>
+</button>
+<div class="space-y-4 mt-auto">
+<p class="text-xs text-gray-500 uppercase tracking-wider font-sans">Recursos</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-gray-300 font-sans">
+<iconify-icon class="text-gray-500" icon="lucide:check-circle"></iconify-icon> Descontos por volume
+</li>
+<li class="flex items-center gap-3 text-sm text-gray-300 font-sans">
+<iconify-icon class="text-gray-500" icon="lucide:check-circle"></iconify-icon> Gerente de sucesso dedicado
+</li>
+<li class="flex items-center gap-3 text-sm text-gray-300 font-sans">
+<iconify-icon class="text-gray-500" icon="lucide:check-circle"></iconify-icon> SLA de Uptime 99,99%
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- faq -->
+<section class="py-16 px-4">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-12">
+<span class="text-sm text-gray-500 mb-2 block font-sans">/ Suporte</span>
+<h2 class="text-3xl text-gray-900 font-manrope font-medium tracking-tighter">Perguntas Frequentes</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+
+<div class="group">
+<h3 class="text-lg text-gray-900 mb-2 flex items-center gap-2 font-sans">
+<span class="bg-gray-100 rounded-lg p-1 group-hover:bg-gray-200 transition-colors">
+<iconify-icon class="text-gray-400 text-sm" icon="lucide:plus"></iconify-icon>
+</span>
+Posso mudar meu plano depois?
+</h3>
+<p class="text-gray-500 text-sm leading-relaxed pl-8 font-sans">
+Com certeza. Você pode fazer upgrade, downgrade ou pausar sua assinatura instantaneamente pelo painel. O uso é proporcional ao segundo.
+</p>
+</div>
+
+<div class="group">
+<h3 class="text-lg text-gray-900 mb-2 flex items-center gap-2 font-sans">
+<span class="bg-gray-100 rounded-lg p-1 group-hover:bg-gray-200 transition-colors">
+<iconify-icon class="text-gray-400 text-sm" icon="lucide:plus"></iconify-icon>
+</span>
+Como funciona o Sandbox?
+</h3>
+<p class="text-gray-500 text-sm leading-relaxed pl-8 font-sans">
+O Sandbox é um espelho exato do nosso ambiente de produção. Você pode simular cobranças, disputas e repasses sem movimentar dinheiro real.
+</p>
+</div>
+
+<div class="group">
+<h3 class="text-lg text-gray-900 mb-2 flex items-center gap-2 font-sans">
+<span class="bg-gray-100 rounded-lg p-1 group-hover:bg-gray-200 transition-colors">
+<iconify-icon class="text-gray-400 text-sm" icon="lucide:plus"></iconify-icon>
+</span>
+Meus dados estão seguros?
+</h3>
+<p class="text-gray-500 text-sm leading-relaxed pl-8 font-sans">
+Somos certificados SOC2 Tipo II. Todos os dados sensíveis são criptografados em repouso e em trânsito usando protocolos AES-256 de padrão bancário.
+</p>
+</div>
+
+<div class="group">
+<h3 class="text-lg text-gray-900 mb-2 flex items-center gap-2 font-sans">
+<span class="bg-gray-100 rounded-lg p-1 group-hover:bg-gray-200 transition-colors">
+<iconify-icon class="text-gray-400 text-sm" icon="lucide:plus"></iconify-icon>
+</span>
+O que acontece se eu atingir meu limite de taxa?
+</h3>
+<p class="text-gray-500 text-sm leading-relaxed pl-8 font-sans">
+Oferecemos limites flexíveis e iremos alertá-lo antes de qualquer throttling. Para picos inesperados, oferecemos capacidade de burst para mantê-lo no ar.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- footer -->
+<footer class="mt-8 w-full bg-[#050505] rounded-[2.5rem] overflow-hidden relative shadow-2xl border border-white/5">
+<div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-600/10 rounded-full blur-[120px] pointer-events-none -translate-x-1/3 translate-y-1/3"></div>
+
+<div class="pt-24 pb-16 px-8 text-center relative z-10">
+<div class="mx-auto w-20 h-20 bg-emerald-900/20 rounded-2xl flex items-center justify-center mb-8 border border-emerald-500/20 shadow-[0_0_40px_rgba(16,185,129,0.15)] backdrop-blur-sm">
+<div class="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center border border-emerald-500/30">
+<iconify-icon class="text-emerald-400 text-2xl drop-shadow-[0_0_8px_rgba(52,211,153,0.5)]" icon="lucide:credit-card"></iconify-icon>
+</div>
+</div>
+<h2 class="text-4xl md:text-5xl lg:text-6xl text-white mb-6 font-manrope font-medium tracking-tighter">Pronto para construir o futuro?</h2>
+<p class="text-gray-400 text-lg mb-10 max-w-lg mx-auto leading-relaxed font-sans">Junte-se a milhares de desenvolvedores construindo a próxima geração de produtos financeiros com a Swipeeely.</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="px-8 py-3 rounded-full bg-gradient-to-b from-emerald-500 to-emerald-700 text-white hover:brightness-110 transition-all shadow-[0_0_25px_rgba(16,185,129,0.2)] flex items-center gap-2 border border-emerald-400/20 font-sans">
+Começar a construir agora <iconify-icon class="text-lg" icon="lucide:arrow-right"></iconify-icon>
+</button>
+<button class="px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-all font-sans">
+Ver Documentação
+</button>
+</div>
+</div>
+
+<div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent w-full my-8 opacity-50"></div>
+
+<div class="px-8 md:px-16 pb-16 grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+<div class="lg:col-span-5 space-y-6">
+<h3 class="text-3xl text-white font-manrope font-medium tracking-tighter">Swipeeely<span class="text-emerald-500 font-manrope font-medium tracking-tighter">.</span></h3>
+<p class="text-gray-500 text-sm leading-relaxed max-w-sm font-sans">
+Democratizando a infraestrutura financeira para a economia da internet.
+</p>
+<div class="flex gap-4 pt-2">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors text-gray-400 hover:text-white border border-white/5" href="#">
+<iconify-icon class="text-lg" icon="lucide:instagram"></iconify-icon>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors text-gray-400 hover:text-white border border-white/5" href="#">
+<iconify-icon class="text-lg" icon="lucide:facebook"></iconify-icon>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors text-gray-400 hover:text-white border border-white/5" href="#">
+<iconify-icon class="text-lg" icon="lucide:twitter"></iconify-icon>
+</a>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8 lg:pl-12">
+<div class="space-y-6"><h4 class="text-white font-sans">Produto</h4>
+<ul class="space-y-3 text-sm text-gray-500">
+<li><a class="hover:text-emerald-400 transition-colors font-sans" href="#">Pagamentos</a></li>
+<li><a class="hover:text-emerald-400 transition-colors font-sans" href="#">Cobrança</a></li>
+<li><a class="hover:text-emerald-400 transition-colors font-sans" href="#">Connect</a></li>
+</ul>
+</div>
+<div class="space-y-6"><h4 class="text-white font-sans">Desenvolvedores</h4>
+<ul class="space-y-3 text-sm text-gray-500">
+<li><a class="hover:text-emerald-400 transition-colors font-sans" href="#">Documentação</a></li>
+<li><a class="hover:text-emerald-400 transition-colors font-sans" href="#">Referência da API</a></li>
+<li><a class="hover:text-emerald-400 transition-colors font-sans" href="#">Bibliotecas</a></li>
+</ul>
+</div>
+<div class="space-y-6 hidden sm:block"><h4 class="text-white font-sans">Empresa</h4>
+<ul class="space-y-3 text-sm text-gray-500">
+<li><a class="hover:text-emerald-400 transition-colors font-sans" href="#">Sobre Nós</a></li>
+<li><a class="hover:text-emerald-400 transition-colors font-sans" href="#">Carreiras</a></li>
+<li><a class="hover:text-emerald-400 transition-colors font-sans" href="#">Jurídico</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+
+</main>
+</div>
+
+<!-- js -->
+<!-- broken-image fallback handler — listens for image error events and rewrites failed src to a stable Supabase asset -->
+<script src="assets/js/img-fallback.js"></script>
+</body>
+</html>

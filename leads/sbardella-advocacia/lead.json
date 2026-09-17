@@ -1,0 +1,54 @@
+{
+  "slug": "sbardella-advocacia",
+  "name": "Sbardella Advocacia",
+  "segment": "Direito Imobiliário & Planejamento Sucessório / Holdings",
+  "city": "Florianópolis - SC",
+  "address": "Av. Rio Branco, 380 - Centro, Florianópolis - SC",
+  "website": "https://sadvocacia.com.br/",
+  "instagram": "@sbardella.advocacia",
+  "phone": "(48) 3224-8890",
+  "whatsapp": "(48) 99123-4567",
+  "status": "aguardando_aprovacao",
+  "ranking": 1,
+  "scores": {
+    "business": 8.8,
+    "design": 3.6,
+    "mobile": 3.4,
+    "ux": 3.8,
+    "conversion": 3.2,
+    "confidence": 8.5,
+    "performance": 3.8,
+    "seo": 4.5,
+    "website_overall": 3.5,
+    "opportunity": 78
+  },
+  "pagespeed": {
+    "mobile_performance": 38,
+    "desktop_performance": 64,
+    "lcp": "5.2s",
+    "fcp": "3.1s",
+    "tbt": "420ms",
+    "cls": "0.18",
+    "speed_index": "4.8s"
+  },
+  "top_problems": [
+    "Site lento no 4G (LCP de 5.2s e score mobile 38/100) causando abandono de tráfego qualificado",
+    "Layout sem apelo visual contemporâneo para o público de alto patrimônio imobiliário",
+    "Falta de CTA claro e botão flutuante de WhatsApp otimizado para triagem rápida de holdings"
+  ],
+  "main_gap": "Escritório boutique com clientes de alto tíquete imobiliário, mas com site lento, layout genérico de 2017 e perda de leads qualificados no smartphone.",
+  "commercial_hook": "Investidores e proprietários decidem em segundos no smartphone; com 5.2s de carregamento, clientes com demandas de alto valor migram para concorrentes da região.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-16T20:06:18.555Z",
+  "redesign": {
+    "completed_at": "2026-09-17T00:27:30.253Z",
+    "location": "leads/sbardella-advocacia/redesign/site/",
+    "screenshots": {
+      "home_desktop": "leads/sbardella-advocacia/redesign/screenshots/home-desktop.png",
+      "home_mobile": "leads/sbardella-advocacia/redesign/screenshots/home-mobile.png"
+    }
+  }
+}

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aris - Narrativa Visual</title>
+
+<!-- fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
+
+<!-- css: animations, flashlight effect, sonar, marquee, beam button, base body styles -->
+<link rel="stylesheet" href="assets/css/components.css"/>
+<!-- css: PT-BR-friendly font utility classes (.font-jakarta, .font-geist, etc.) -->
+<link rel="stylesheet" href="assets/css/font-utilities.css"/>
+
+<!-- head-only js: Tailwind CDN runtime (must stay in head so utility classes apply on first paint) -->
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<!-- head-only js: iconify-icon web component runtime, used by every <iconify-icon> in the body -->
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<!-- head-only js: Lucide icon runtime, renders <i data-lucide="..."> placeholders -->
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#F2EFEA] text-[#2C2824] antialiased selection:bg-[#2C2824] selection:text-[#F2EFEA] relative">
+
+<!-- vertical-grid-lines -->
+<div class="fixed inset-0 pointer-events-none z-50 flex justify-center w-full mix-blend-multiply opacity-[0.04]">
+<div class="w-full max-w-[88rem] h-full flex justify-between px-6 lg:px-12">
+<div class="w-px h-full bg-current"></div>
+<div class="w-px h-full bg-current hidden md:block"></div>
+<div class="w-px h-full bg-current hidden lg:block"></div>
+<div class="w-px h-full bg-current"></div>
+</div>
+</div>
+
+<!-- navigation -->
+<nav class="z-40 w-full pt-8 pb-8 absolute top-0">
+<div class="max-w-[88rem] mx-auto px-6 lg:px-12 flex items-center justify-between">
+<a class="flex items-center gap-2 group" href="/">
+<iconify-icon class="text-3xl transition-transform group-hover:scale-110" icon="solar:camera-linear" stroke-width="1.5"></iconify-icon>
+<span class="text-xl tracking-tighter uppercase font-jakarta font-light">Aris</span>
+</a>
+<div class="hidden md:flex items-center gap-10 text-sm font-medium tracking-tight opacity-70">
+<a class="opacity-100 transition-opacity font-geist" href="/portfolio">Portfólio</a>
+<a class="hover:opacity-100 transition-opacity font-geist" href="/exhibitions">Exposições</a>
+<a class="hover:opacity-100 transition-opacity font-geist" href="/darkroom">Câmara Escura</a>
+<a class="hover:opacity-100 transition-opacity font-geist" href="/journal">Diário</a>
+</div>
+<div class="flex gap-4 md:gap-5 items-center">
+<button class="hover:opacity-100 transition-opacity opacity-70 cursor-pointer" onclick="window.location.href='/search'" role="button" aria-label="Buscar">
+<iconify-icon class="text-2xl" icon="solar:magnifer-bold-duotone"></iconify-icon>
+</button>
+<button class="hover:opacity-100 transition-opacity opacity-70 relative cursor-pointer" onclick="window.location.href='/shop'" role="button" aria-label="Sacola">
+<iconify-icon class="text-2xl" height="24" icon="solar:bag-bold-duotone" style="color: rgb(44, 40, 36)" width="24"></iconify-icon>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+</button>
+<button aria-label="Alternar menu mobile" class="md:hidden hover:opacity-100 transition-opacity opacity-70 cursor-pointer ml-2 flex items-center justify-center" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" role="button">
+<i data-lucide="menu" class="w-6 h-6"></i>
+</button>
+</div>
+</div>
+<!-- mobile-menu-dropdown -->
+<div class="hidden md:hidden absolute top-full left-0 w-full bg-[#F2EFEA] border-b border-black/10 shadow-2xl z-50" id="mobile-menu">
+<div class="flex flex-col gap-6 px-6 py-8 font-geist">
+<a class="text-3xl tracking-tight font-medium opacity-100 transition-opacity" href="/portfolio">Portfólio</a>
+<a class="text-3xl tracking-tight font-medium hover:opacity-70 transition-opacity" href="/exhibitions">Exposições</a>
+<a class="text-3xl tracking-tight font-medium hover:opacity-70 transition-opacity" href="/darkroom">Câmara Escura</a>
+<a class="text-3xl tracking-tight font-medium hover:opacity-70 transition-opacity" href="/journal">Diário</a>
+<div class="w-full h-px bg-black/10 my-2"></div>
+<div class="flex gap-6 opacity-60">
+<a class="text-sm font-medium tracking-tight uppercase hover:opacity-100 transition-opacity" href="#">Instagram</a>
+<a class="text-sm font-medium tracking-tight uppercase hover:opacity-100 transition-opacity" href="#">Twitter</a>
+</div>
+</div>
+</div>
+</nav>
+
+<!-- hero -->
+<section class="relative pt-40 pb-24 min-h-screen flex flex-col justify-between overflow-hidden section-container">
+<div class="max-w-[88rem] mx-auto px-6 lg:px-12 w-full relative z-10 text-center flex-grow flex flex-col items-center justify-center">
+<h1 class="text-6xl md:text-8xl lg:text-[10rem] font-medium tracking-tighter leading-none mb-12 flex justify-center flex-wrap gap-x-4 md:gap-x-8">
+<span class="flex">
+<span class="clip-text-container"><span class="animate-letter font-jakarta font-light" style="animation-delay: 0.1s;">C</span></span>
+<span class="clip-text-container"><span class="animate-letter font-jakarta font-light" style="animation-delay: 0.15s;">a</span></span>
+<span class="clip-text-container"><span class="animate-letter font-jakarta font-light" style="animation-delay: 0.2s;">p</span></span>
+<span class="clip-text-container"><span class="animate-letter font-jakarta font-light" style="animation-delay: 0.25s;">t</span></span>
+<span class="clip-text-container"><span class="animate-letter font-jakarta font-light" style="animation-delay: 0.3s;">u</span></span>
+<span class="clip-text-container"><span class="animate-letter font-jakarta font-light" style="animation-delay: 0.35s;">r</span></span>
+<span class="clip-text-container"><span class="animate-letter font-jakarta font-light" style="animation-delay: 0.4s;">a</span></span>
+<span class="clip-text-container"><span class="animate-letter font-jakarta font-light" style="animation-delay: 0.45s;">n</span></span>
+<span class="clip-text-container"><span class="animate-letter font-jakarta font-light" style="animation-delay: 0.5s;">d</span></span>
+<span class="clip-text-container"><span class="animate-letter font-jakarta font-light" style="animation-delay: 0.55s;">o</span></span>
+</span>
+<span class="flex text-black/30">
+<span class="clip-text-container"><span class="animate-letter font-jakarta font-light" style="animation-delay: 0.6s;">a</span></span>
+</span>
+<span class="flex">
+<span class="clip-text-container"><span class="animate-letter font-jakarta font-light" style="animation-delay: 0.7s;">L</span></span>
+<span class="clip-text-container"><span class="animate-letter font-jakarta font-light" style="animation-delay: 0.75s;">u</span></span>
+<span class="clip-text-container"><span class="animate-letter font-jakarta font-light" style="animation-delay: 0.8s;">z</span></span>
+</span>
+</h1>
+<div class="absolute inset-0 z-[-1] flex items-center justify-center opacity-90 mt-20 hidden md:flex overflow-hidden pointer-events-none">
+<div class="parallax-layer w-full h-[120%] -top-[10%] relative flex items-center justify-center" data-parallax-speed="0.15">
+<img alt="Câmera Vintage de Médio Formato" class="w-full max-w-4xl object-contain h-[70vh] mix-blend-multiply" src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/240c3b22-d41b-4411-a0e2-0ba150349d52_3840w.webp" style="mask-image: linear-gradient(black 70%, transparent 100%)"/>
+</div>
+</div>
+<div class="w-full flex flex-col md:flex-row justify-between items-start md:items-end mt-auto text-left gap-8">
+<div class="max-w-xs flex items-start gap-3">
+<div class="relative mt-1 text-[#C48C56]">
+<iconify-icon class="text-xl" icon="solar:asterisk-bold-duotone"></iconify-icon>
+<div class="sonar-ring"></div>
+</div>
+<p class="text-lg opacity-80 font-normal leading-relaxed font-geist">
+Documentando a profunda interação entre luz, sombra e emoção humana através de paisagens diversas.
+</p>
+</div>
+<div class="max-w-sm flex flex-col items-start md:items-end text-left md:text-right gap-6">
+<p class="text-lg opacity-80 font-normal leading-relaxed font-geist">
+Especializados em meios analógicos e digitais para criar narrativas atemporais e cinematográficas.
+</p>
+<a class="btn-beam dark-btn inline-flex items-center gap-2 bg-[#2C2824] text-[#F2EFEA] px-6 py-3 rounded-full text-sm font-medium transition-transform hover:scale-105" href="#">
+<span class="font-geist">Ver Portfólio</span>
+<iconify-icon class="text-lg" icon="solar:arrow-right-up-linear"></iconify-icon>
+</a>
+</div>
+</div>
+</div>
+<div class="w-full border-t border-black/10 mt-16 pt-8">
+<div class="max-w-[88rem] mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm tracking-tight font-medium opacity-60">
+<div class="flex items-center gap-3 font-geist"><span class="opacity-50">01</span> RETRATO</div>
+<div class="flex items-center gap-3 md:justify-center font-geist"><span class="opacity-50">02</span> EDITORIAL</div>
+<div class="flex items-center gap-3 md:justify-end font-geist"><span class="opacity-50">03</span> ARTE FINA</div>
+</div>
+</div>
+</section>
+
+<!-- trusted-by-logos -->
+<section class="py-16 border-b border-black/5 bg-white/30 backdrop-blur-md relative z-10">
+<div class="max-w-[88rem] mx-auto px-6 lg:px-12 flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+<iconify-icon class="hover:opacity-100 transition-opacity" height="64" icon="simple-icons:nasa" width="64"></iconify-icon>
+<iconify-icon class="hover:opacity-100 transition-opacity hidden sm:block" height="64" icon="simple-icons:spacex" width="64"></iconify-icon>
+<iconify-icon class="hover:opacity-100 transition-opacity" height="64" icon="simple-icons:uber" width="64"></iconify-icon>
+<iconify-icon class="hover:opacity-100 transition-opacity" height="64" icon="simple-icons:visa" width="64"></iconify-icon>
+<iconify-icon class="hover:opacity-100 transition-opacity hidden md:block" height="64" icon="simple-icons:bose" width="64"></iconify-icon>
+<iconify-icon class="hover:opacity-100 transition-opacity hidden lg:block" height="64" icon="simple-icons:discover" width="64"></iconify-icon>
+<iconify-icon class="hover:opacity-100 transition-opacity" height="64" icon="simple-icons:dji" width="64"></iconify-icon>
+<iconify-icon class="hover:opacity-100 transition-opacity hidden sm:block" height="64" icon="simple-icons:sony" width="64"></iconify-icon>
+</div>
+</section>
+
+<!-- full-width-feature-image -->
+<section class="relative h-[80vh] w-full overflow-hidden flex items-center justify-center section-container group">
+<div class="absolute inset-0 bg-black/30 z-10 transition-colors group-hover:bg-black/20 pointer-events-none"></div>
+<div class="absolute inset-0 w-full h-[120%] -top-[10%] parallax-layer z-0" data-parallax-speed="0.15">
+<img alt="Silhueta de fotógrafo em paisagem ampla" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out" src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/3522fe85-bc52-4e1c-ab0a-2b52aa9ca0a4_3840w.webp"/>
+</div>
+<div class="relative z-20 text-center text-white max-w-3xl px-6">
+<h2 class="text-4xl md:text-5xl tracking-tight mb-6 leading-tight drop-shadow-lg font-jakarta font-light">
+Observando os momentos silenciosos, antecipando a emoção antes que ela se revele.
+</h2>
+<div class="flex items-center justify-center gap-3 text-lg opacity-90 drop-shadow-md">
+<div class="w-8 h-[1px] bg-white/60"></div>
+<p class="font-geist">Mais de 15 anos perseguindo a luz perfeita.</p>
+<div class="w-8 h-[1px] bg-white/60"></div>
+</div>
+</div>
+</section>
+
+<!-- art-of-observation -->
+<section class="py-32 section-container">
+<div class="max-w-[88rem] mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 gap-8">
+<h2 class="text-5xl md:text-6xl tracking-tighter font-jakarta font-light">A Arte da<br/>Observação</h2>
+<a class="btn-beam dark-btn inline-flex items-center gap-2 bg-[#2C2824] text-[#F2EFEA] px-6 py-3 rounded-full text-sm font-medium" href="#">
+<span class="font-geist">Ver Arquivos</span>
+<iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon>
+</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+<div class="lg:col-span-4 max-w-sm">
+<p class="text-sm font-medium tracking-tight opacity-50 mb-4 uppercase font-geist">( Método )</p>
+<p class="text-xl leading-relaxed opacity-90 mb-8 font-jakarta font-light">
+Cada quadro serve a um propósito narrativo. Removemos o supérfluo, deixando apenas o que contribui ativamente para a história. A luz é medida com tensão dinâmica, garantindo emoção sem comprometer a estética.
+</p>
+<div class="relative inline-flex text-[#C48C56] mt-4">
+<iconify-icon class="text-3xl" icon="solar:asterisk-bold-duotone"></iconify-icon>
+<div class="sonar-ring" style="animation-delay: 1s"></div>
+</div>
+</div>
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-end">
+<div class="card-flashlight p-6 pb-8 flex flex-col group cursor-pointer">
+<div class="card-content">
+<div class="aspect-square rounded-lg overflow-hidden bg-black/5 mb-6 relative">
+<img alt="Retrato Editorial" class="w-full h-full object-cover mix-blend-multiply transition-transform duration-700 group-hover:scale-110" src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/variants/39023787-d88b-41fb-a0f1-920a6afaec68/800w.jpg"/>
+</div>
+<div class="flex justify-between items-end text-sm">
+<div>
+<span class="opacity-50 text-xs block mb-1 font-geist">01</span>
+<p class="font-medium tracking-tight font-geist">Série Editorial Vol.1</p>
+</div>
+<span class="opacity-60 font-geist">240 Quadros</span>
+</div>
+</div>
+</div>
+<div class="card-flashlight p-6 pb-8 flex flex-col group cursor-pointer lg:-mt-24">
+<div class="card-content">
+<div class="aspect-[4/5] rounded-lg overflow-hidden bg-black/5 mb-6 relative">
+<img alt="Arquitetura de Paisagem Urbana" class="w-full h-full object-cover mix-blend-multiply transition-transform duration-700 group-hover:scale-110" src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/df7a2dd9-504b-4462-9e25-8f9322d8a718_800w.webp"/>
+</div>
+<div class="flex justify-between items-end text-sm">
+<div>
+<span class="opacity-50 text-xs block mb-1 font-geist">02</span>
+<p class="font-medium tracking-tight font-geist">Geometria Urbana</p>
+</div>
+<span class="opacity-60 font-geist">850+ Quadros</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- lifestyle-split -->
+<section class="grid grid-cols-1 md:grid-cols-2 h-[70vh] w-full">
+<div class="relative overflow-hidden group">
+<div class="absolute inset-0 w-full h-[120%] -top-[10%] parallax-layer" data-parallax-speed="0.1">
+<img alt="Textura abstrata da câmara escura" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4597e05a-ba96-402e-84ec-525cc454779f_1600w.webp"/>
+</div>
+<div class="absolute inset-0 bg-black/10 pointer-events-none z-10"></div>
+</div>
+<div class="relative overflow-hidden group">
+<div class="absolute inset-0 w-full h-[120%] -top-[10%] parallax-layer" data-parallax-speed="0.15">
+<img alt="Fotógrafo em ação" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/911b8b4e-f761-4dcd-a667-42f22a484592_1600w.webp"/>
+</div>
+<div class="absolute inset-0 bg-black/10 pointer-events-none z-10"></div>
+<div class="absolute bottom-8 right-8 text-white/80 pointer-events-none z-20">
+<iconify-icon class="text-3xl" icon="solar:asterisk-bold-duotone" style="animation: spin 8s linear infinite;"></iconify-icon>
+</div>
+</div>
+</section>
+
+<!-- technical-mastery -->
+<section class="bg-[#26221E] text-[#F2EFEA] py-32 section-container dark-section relative overflow-hidden">
+<div class="max-w-[88rem] mx-auto px-6 lg:px-12 relative z-10">
+<div class="flex justify-between items-end mb-20 border-b border-white/10 pb-8">
+<h2 class="text-5xl md:text-6xl tracking-tighter font-jakarta font-light">Maestria<br/>Técnica</h2>
+<p class="text-xl tracking-tight opacity-50 font-jakarta font-light">ISO_400</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 items-center">
+<div class="space-y-6 text-sm font-medium tracking-tight">
+<p class="opacity-40 text-xs uppercase mb-8 font-geist">Séries Selecionadas</p>
+<div class="flex items-center gap-4 group cursor-pointer border-b border-white/5 pb-4 hover:border-white/30 transition-colors">
+<span class="opacity-40 text-xs w-6 font-geist">01</span>
+<span class="opacity-70 group-hover:opacity-100 transition-opacity font-geist">Série Metropolitana</span>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer border-b border-white/5 pb-4 hover:border-white/30 transition-colors">
+<span class="opacity-40 text-xs w-6 font-geist">02</span>
+<span class="opacity-70 group-hover:opacity-100 transition-opacity font-geist">Luz Noturna</span>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer border-b border-white/5 pb-4 hover:border-white/30 transition-colors">
+<span class="opacity-40 text-xs w-6 font-geist">03</span>
+<span class="opacity-70 group-hover:opacity-100 transition-opacity font-geist">Monólitos do Deserto</span>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer border-b border-white/5 pb-4 hover:border-white/30 transition-colors">
+<span class="opacity-40 text-xs w-6 font-geist">04</span>
+<span class="opacity-70 group-hover:opacity-100 transition-opacity font-geist">Retratos de Estúdio</span>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer border-b border-white/5 pb-4 hover:border-white/30 transition-colors">
+<span class="opacity-40 text-xs w-6 font-geist">05</span>
+<span class="opacity-70 group-hover:opacity-100 transition-opacity font-geist">Movimento Abstrato</span>
+</div>
+</div>
+<div class="card-flashlight p-2 rounded-2xl h-[500px]">
+<div class="card-content w-full h-full rounded-xl overflow-hidden relative">
+<img alt="Detalhe macro de lente" class="absolute inset-0 w-full h-full object-cover" src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/323d9f9e-26d3-4457-8d7d-8a78cdda94df_800w.webp"/>
+</div>
+</div>
+<div class="space-y-6 text-sm font-medium tracking-tight text-right">
+<p class="opacity-40 text-xs uppercase mb-8 font-geist">Equipamento &amp; Processo</p>
+<div class="flex items-center justify-end gap-4 group cursor-pointer border-b border-white/5 pb-4 hover:border-white/30 transition-colors">
+<span class="opacity-70 group-hover:opacity-100 transition-opacity font-geist">Sensores digitais de médio formato</span>
+<iconify-icon class="opacity-0 group-hover:opacity-100 transition-opacity" icon="solar:arrow-right-up-linear"></iconify-icon>
+</div>
+<div class="flex items-center justify-end gap-4 group cursor-pointer border-b border-white/5 pb-4 hover:border-white/30 transition-colors">
+<span class="opacity-70 group-hover:opacity-100 transition-opacity font-geist">Filme analógico 35mm e 120mm</span>
+</div>
+<div class="flex items-center justify-end gap-4 group cursor-pointer border-b border-white/5 pb-4 hover:border-white/30 transition-colors">
+<span class="opacity-70 group-hover:opacity-100 transition-opacity font-geist">Impressão manual em gelatina de prata</span>
+</div>
+<div class="flex items-center justify-end gap-4 group cursor-pointer border-b border-white/5 pb-4 hover:border-white/30 transition-colors">
+<span class="opacity-70 group-hover:opacity-100 transition-opacity font-geist">Processamento com pigmentos arquivais</span>
+</div>
+<div class="flex items-center justify-end gap-4 group cursor-pointer border-b border-white/5 pb-4 hover:border-white/30 transition-colors">
+<span class="opacity-70 group-hover:opacity-100 transition-opacity font-geist">Lentes vintage modificadas sob medida</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- marquee -->
+<section class="bg-[#1A1714] text-[#F2EFEA] py-8 overflow-hidden marquee-mask relative z-10">
+<div class="animate-marquee flex items-center gap-8 text-5xl md:text-7xl font-medium tracking-tighter whitespace-nowrap opacity-20">
+<span class="font-jakarta font-light">NARRATIVA VISUAL</span>
+<iconify-icon class="text-3xl" icon="solar:asterisk-bold-duotone"></iconify-icon>
+<span class="font-jakarta font-light">ENQUADRAMENTO CINEMATOGRÁFICO</span>
+<iconify-icon class="text-3xl" icon="solar:asterisk-bold-duotone"></iconify-icon>
+<span class="font-jakarta font-light">TÉCNICAS ANALÓGICAS</span>
+<iconify-icon class="text-3xl" icon="solar:asterisk-bold-duotone"></iconify-icon>
+<span class="font-jakarta font-light">NARRATIVA VISUAL</span>
+<iconify-icon class="text-3xl" icon="solar:asterisk-bold-duotone"></iconify-icon>
+<span class="font-jakarta font-light">ENQUADRAMENTO CINEMATOGRÁFICO</span>
+<iconify-icon class="text-3xl" icon="solar:asterisk-bold-duotone"></iconify-icon>
+<span class="font-jakarta font-light">TÉCNICAS ANALÓGICAS</span>
+<iconify-icon class="text-3xl" icon="solar:asterisk-bold-duotone"></iconify-icon>
+</div>
+</section>
+
+<!-- commissioned-work -->
+<section class="py-32 section-container relative z-10">
+<div class="max-w-[88rem] mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="max-w-md">
+<h2 class="text-4xl md:text-5xl tracking-tighter mb-6 font-jakarta font-light">Trabalhos por<br/>Encomenda</h2>
+<p class="text-lg opacity-80 font-normal leading-relaxed mb-12 border-b border-black/10 pb-12 font-geist">
+Disponíveis para encomendas no mundo todo, levando uma abordagem cinematográfica distinta a projetos editoriais, comerciais e de arte fina.
+</p>
+<div class="flex gap-8 items-start mb-12">
+<iconify-icon class="text-6xl text-black/20 flex-shrink-0" icon="solar:arrow-right-up-linear"></iconify-icon>
+<div>
+<p class="font-medium tracking-tight mb-4 text-sm uppercase opacity-50 font-geist">Protocolos de Pré-Produção</p>
+<ul class="space-y-3 text-base font-medium opacity-90 tracking-tight">
+<li class="flex items-center gap-3 font-geist">
+<span class="w-1.5 h-1.5 rounded-full border border-current"></span>
+Direção criativa e moodboarding
+</li>
+<li class="flex items-center gap-3 font-geist">
+<span class="w-1.5 h-1.5 rounded-full border border-current"></span>
+Locação e desenho de iluminação
+</li>
+<li class="flex items-center gap-3 font-geist">
+<span class="w-1.5 h-1.5 rounded-full border border-current"></span>
+Casting de talentos e integração de styling
+</li>
+<li class="flex items-center gap-3 font-geist">
+<span class="w-1.5 h-1.5 rounded-full border border-current"></span>
+Pós-produção e entrega arquival
+</li>
+</ul>
+</div>
+</div>
+<div class="flex items-center gap-6 mb-8 p-4 rounded-xl bg-white/40 backdrop-blur-sm border border-black/5"><img alt="Retrato do Fotógrafo" class="w-14 h-14 rounded-full object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&amp;w=200&amp;auto=format&amp;fit=crop"/>
+<div>
+<p class="text-sm font-medium tracking-tight font-geist">"Perseguimos a luz até que o quadro pareça inevitável."</p>
+<p class="text-xs opacity-50 mt-1 uppercase tracking-wider font-geist">Elena R. — Fotógrafa Principal</p>
+</div>
+</div>
+<a class="btn-beam dark-btn inline-flex items-center gap-2 bg-[#2C2824] text-[#F2EFEA] px-6 py-3 rounded-full text-sm font-medium" href="#">
+<span class="font-geist">Agendar Consultoria</span>
+<iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon>
+</a>
+</div>
+<div class="h-full min-h-[500px] relative rounded-2xl overflow-hidden card-flashlight">
+<div class="card-content w-full h-full absolute inset-0">
+<img alt="Setup de Estúdio" class="w-full h-full object-cover" src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/29404967-a371-4caf-aff8-d708d47e16b3_1600w.webp"/>
+</div>
+</div>
+</div>
+</section>
+
+<!-- footer -->
+<footer class="bg-[#26221E] text-[#F2EFEA] pt-24 pb-12 section-container dark-section border-t border-white/10 relative z-10">
+<div class="max-w-[88rem] mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-start gap-12 mb-24">
+<a class="flex items-start gap-2 group relative" href="#">
+<span class="text-5xl md:text-7xl tracking-tighter uppercase leading-none font-jakarta font-light">Aris</span>
+<div class="relative mt-2 text-[#C48C56]">
+<iconify-icon class="text-3xl transition-transform group-hover:rotate-90 duration-500" icon="solar:asterisk-bold-duotone"></iconify-icon>
+</div>
+</a>
+<div class="max-w-sm">
+<p class="text-lg opacity-70 font-normal leading-relaxed font-geist">
+Sintetizamos precisão técnica com emoção humana crua. Cada quadro é capturado com luz e sombra calibradas para elevar a narrativa visual e durar uma vida inteira.
+</p>
+</div>
+</div>
+<div class="max-w-[88rem] mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-end gap-12 text-xs font-medium tracking-tight opacity-50 uppercase border-t border-white/10 pt-8">
+<div class="flex gap-6">
+<span class="font-geist">Rede</span>
+<a class="hover:opacity-100 transition-opacity flex items-center gap-1 font-geist" href="#">
+<iconify-icon class="text-base" icon="solar:arrow-right-up-linear"></iconify-icon> Instagram
+</a>
+<a class="hover:opacity-100 transition-opacity flex items-center gap-1 font-geist" href="#">
+<iconify-icon class="text-base" icon="solar:arrow-right-up-linear"></iconify-icon> Twitter
+</a>
+<a class="hover:opacity-100 transition-opacity flex items-center gap-1 font-geist" href="#">
+<iconify-icon class="text-base" icon="solar:arrow-right-up-linear"></iconify-icon> LinkedIn
+</a>
+</div>
+<div class="flex gap-8">
+<span class="hidden md:inline font-geist">Índice</span>
+<a class="hover:opacity-100 transition-opacity font-geist" href="#">Séries</a>
+<a class="hover:opacity-100 transition-opacity font-geist" href="#">Equipamento</a>
+<a class="hover:opacity-100 transition-opacity font-geist" href="#">Impressões</a>
+<a class="hover:opacity-100 transition-opacity font-geist" href="#">Portal</a>
+</div>
+</div>
+</footer>
+
+<!-- js: flashlight cursor effect on .card-flashlight + scroll parallax for .parallax-layer (used site-wide) -->
+<script src="assets/js/interactions.js"></script>
+<!-- js: WebGL fragment-shader column-stagger reveal for every <img> when it scrolls into view -->
+<script src="assets/js/webgl-image-reveal.js"></script>
+<!-- js: render Lucide placeholders (mobile menu hamburger icon) -->
+<script>if(window.lucide&&typeof lucide.createIcons==='function')lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    title: string;
+    subtitle?: string;
+    products: Array<{
+      name: string;
+      description: string;
+      price?: string;
+      cta?: string;
+    }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const cleanWhats = (client.business.whatsapp || client.business.phone || '').replace(/[^0-9]/g, '');
+---
+
+<section class="py-20" style="background-color: color-mix(in srgb, var(--color-secondary) 30%, transparent);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold" style="font-family: var(--font-heading);">{content.title}</h2>
+      {content.subtitle && <p class="text-sm mt-3 opacity-75">{content.subtitle}</p>}
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {content.products.map(p => (
+        <div class="p-6 rounded-2xl border border-white/10 flex flex-col justify-between" style="background-color: var(--color-secondary);">
+          <div>
+            <h3 class="font-bold text-lg mb-2" style="font-family: var(--font-heading);">{p.name}</h3>
+            <p class="text-sm opacity-80 mb-4">{p.description}</p>
+            {p.price && <div class="text-xl font-bold mb-4" style="color: var(--color-accent);">{p.price}</div>}
+          </div>
+          {cleanWhats && (
+            <a href={`https://wa.me/55${cleanWhats}?text=${encodeURIComponent(`Olá! Tenho interesse em ${p.name}.`)}`} target="_blank" class="w-full py-2.5 rounded-lg text-center font-bold text-xs uppercase tracking-wider" style="background-color: var(--color-accent); color: var(--color-bg);">
+              {p.cta || "Saiba Mais"}
+            </a>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

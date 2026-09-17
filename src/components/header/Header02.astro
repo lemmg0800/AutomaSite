@@ -1,0 +1,84 @@
+﻿---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    announcement?: string;
+    navLinks?: Array<{ label: string; href: string }>;
+    ctaLabel?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const cityState = client.business.state ? `${client.business.city} - ${client.business.state}` : client.business.city;
+const announcement = content.announcement || `Atendimento em ${cityState}`;
+const navLinks = content.navLinks || [];
+const ctaLabel = content.ctaLabel || "Agendar Consulta";
+
+const rawNumber = client.business.whatsapp || client.business.phone || '';
+const cleanWhats = rawNumber.replace(/[^0-9]/g, '');
+const whatsLink = cleanWhats ? `https://wa.me/55${cleanWhats}?text=Ol%C3%A1!` : '#contato';
+---
+
+<!-- Top Announcement Bar -->
+{(client.business.address || client.business.phone || announcement) && (
+  <div class="border-b border-white/10 text-xs py-2 px-4" style="background-color: var(--color-secondary);">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 opacity-80">
+      {client.business.address ? (
+        <div class="flex items-center space-x-2">
+          <span>📍</span>
+          <span>{client.business.address}</span>
+        </div>
+      ) : <div></div>}
+      <div class="flex items-center space-x-4">
+        <span class="flex items-center gap-1.5" style="color: var(--color-accent);">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          {announcement}
+        </span>
+        {client.business.phone && (
+          <>
+            <span>|</span>
+            <a href={`tel:${client.business.phone.replace(/[^0-9]/g, '')}`} class="hover:underline">{client.business.phone}</a>
+          </>
+        )}
+      </div>
+    </div>
+  </div>
+)}
+
+<!-- Main Sticky Nav -->
+<header class="sticky top-0 z-40 backdrop-blur-md border-b border-white/5" style="background-color: color-mix(in srgb, var(--color-bg) 90%, transparent);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+    <a href={`/${client.status === 'published' ? client.slug : `preview/${client.slug}`}`} class="flex items-center gap-3">
+      <div class="w-11 h-11 rounded-lg flex items-center justify-center font-bold text-xl shadow" style="background-color: var(--color-accent); color: var(--color-bg); font-family: var(--font-heading);">
+        {client.business.name.charAt(0)}
+      </div>
+      <div class="flex flex-col">
+        <span class="text-base sm:text-lg font-bold tracking-wide" style="font-family: var(--font-heading);">
+          {client.business.name.toUpperCase()}
+        </span>
+        <span class="text-[10px] uppercase font-semibold tracking-widest" style="color: var(--color-accent);">
+          {client.business.niche}
+        </span>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium opacity-80">
+      {navLinks.map(link => (
+        <a href={link.href} class="hover:opacity-100 transition-opacity">{link.label}</a>
+      ))}
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a 
+        href={whatsLink} 
+        target={cleanWhats ? "_blank" : undefined}
+        class="hidden sm:inline-flex px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all hover:scale-105 active:scale-95 shadow-lg"
+        style="background-color: var(--color-accent); color: var(--color-bg);"
+      >
+        {ctaLabel}
+      </a>
+    </div>
+  </div>
+</header>

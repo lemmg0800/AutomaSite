@@ -1,0 +1,32 @@
+﻿---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    title: string;
+    services: Array<{ title: string; description: string }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+---
+
+<section class="py-20">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <h2 class="text-3xl font-bold text-center mb-12" style="font-family: var(--font-heading);">{content.title}</h2>
+    <div class="space-y-6">
+      {content.services.map((s, idx) => (
+        <div class="p-6 rounded-xl border border-white/10 flex gap-4 items-start" style="background-color: var(--color-secondary);">
+          <span class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs" style="background-color: var(--color-accent); color: var(--color-bg);">
+            {idx + 1}
+          </span>
+          <div>
+            <h3 class="font-bold text-lg mb-1">{s.title}</h3>
+            <p class="text-sm opacity-80">{s.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

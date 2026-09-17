@@ -1,0 +1,11 @@
+- **Tailwind CSS** — utility-first CSS framework (loaded via the bundled `resource_3fa48481346f.es` runtime) that drives every layout, color, spacing, and responsive breakpoint in the page
+- **Google Fonts (Playfair Display + Inter)** — Playfair Display powers the editorial serif headings; Inter is the sans-serif body face
+- **Iconify Web Component** — `<iconify-icon>` element used for every UI icon (solar arrow set, plus simple-icons brand marks for the marquee)
+- **Solar icon set (via Iconify)** — directional arrows used in nav, buttons, and the contact form
+- **Simple Icons (via Iconify)** — brand logos (NASA, SpaceX, Uber, Visa, Sony, Bose) shown in the trusted-by marquee
+- **GSAP** — animation engine loaded for site-wide motion
+- **GSAP ScrollTrigger** — companion plugin for scroll-driven animations such as the parallax banner and reveal text
+- **Three.js** — WebGL runtime that powers the hover image effects on `.webgl-measure` containers
+- **Google Analytics 4** — page analytics via `gtag.js` (measurement ID `G-2M6V79H761`)
+- **Aura platform image-fallback shim** — inline script that swaps broken `<img>` sources to remote Supabase-hosted backups
+- **Aura Supabase token firewall** — security shim from the original export that blocks Supabase auth tokens from leaking into storage/network calls (omitted from `design-system.html`, present only in the original export)

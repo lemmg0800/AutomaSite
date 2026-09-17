@@ -1,0 +1,73 @@
+﻿---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    headline: string;
+    subheadline: string;
+    primaryCtaLabel?: string;
+    secondaryCtaLabel?: string;
+    secondaryCtaHref?: string;
+    trustPoints?: string[];
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const cleanWhats = (client.business.whatsapp || client.business.phone).replace(/[^0-9]/g, '');
+const whatsLink = `https://wa.me/55${cleanWhats}?text=${encodeURIComponent(`Olá! Gostaria de falar sobre uma consulta com ${client.business.name}.`)}`;
+---
+
+<section class="relative pt-16 pb-20 sm:pt-24 sm:pb-28 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+    <div class="max-w-3xl">
+      {content.badge && (
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase mb-6 border border-white/10" style="background-color: color-mix(in srgb, var(--color-accent) 15%, transparent); color: var(--color-accent);">
+          <span>🛡️</span>
+          <span>{content.badge}</span>
+        </div>
+      )}
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.15] mb-6" style="font-family: var(--font-heading);">
+        {content.headline}
+      </h1>
+
+      <p class="text-base sm:text-lg leading-relaxed mb-8 opacity-80 font-light max-w-2xl">
+        {content.subheadline}
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12">
+        <a 
+          href={whatsLink}
+          target="_blank"
+          class="px-8 py-4 rounded-xl font-bold text-sm tracking-wider uppercase text-center shadow-xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
+          style="background-color: var(--color-accent); color: var(--color-bg);"
+        >
+          <span>{content.primaryCtaLabel || "Consultar Especialista"}</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+
+        {content.secondaryCtaLabel && (
+          <a 
+            href={content.secondaryCtaHref || "#servicos"}
+            class="px-6 py-4 rounded-xl border border-white/10 hover:border-white/30 text-sm font-medium text-center transition-all bg-white/[0.02] hover:bg-white/[0.05]"
+          >
+            {content.secondaryCtaLabel}
+          </a>
+        )}
+      </div>
+
+      {content.trustPoints && content.trustPoints.length > 0 && (
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-6 border-t border-white/10 text-xs opacity-75">
+          {content.trustPoints.map(point => (
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-base" style="color: var(--color-accent);">✓</span>
+              <span>{point}</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+</section>

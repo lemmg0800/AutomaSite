@@ -1,0 +1,43 @@
+﻿{
+  "slug": "{{SLUG}}",
+  "company_name": "{{NOME_EMPRESA}}",
+  "city": "{{CIDADE}}",
+  "niche": "{{NICHO}}",
+  "original_site": {
+    "url": "{{URL_SITE}}",
+    "pagespeed_mobile": "{{PS_ORIGINAL}}",
+    "lcp": "{{LCP_ORIGINAL}}",
+    "fcp": "{{FCP_ORIGINAL}}"
+  },
+  "redesign": {
+    "preview_url": "{{URL_PREVIEW}}",
+    "production_url": "{{URL_PRODUCAO}}",
+    "pagespeed_mobile": "{{PS_REDESIGN}}",
+    "lcp": "< 1.0s",
+    "fcp": "< 0.5s"
+  },
+  "issues_identified": [
+    "{{PROBLEMA_1_DESC}}",
+    "{{PROBLEMA_2_DESC}}",
+    "{{PROBLEMA_3_DESC}}"
+  ],
+  "improvements_implemented": [
+    "Primeira dobra moderna e objetiva comunicando autoridade e especialidade imediata",
+    "Botão flutuante de WhatsApp fixo permitindo contato com apenas 1 clique em qualquer rolagem",
+    "Carregamento mobile otimizado atingindo pontuação máxima de performance no Google",
+    "Preservação integral da identidade visual e cores originais da marca através de Design Tokens"
+  ],
+  "visual_evidence": {
+    "before_desktop": "leads/{{SLUG}}/screenshots/site-desktop.png",
+    "before_mobile": "leads/{{SLUG}}/screenshots/site-mobile.png",
+    "after_desktop": "leads/{{SLUG}}/redesign/screenshots/home-desktop.png",
+    "after_mobile": "leads/{{SLUG}}/redesign/screenshots/home-mobile.png",
+    "comparison_image": "leads/{{SLUG}}/commercial/visual/before-after.png"
+  },
+  "sources": {
+    "lead_dossier": "leads/{{SLUG}}/lead.json",
+    "audit_report": "leads/{{SLUG}}/auditoria.md",
+    "builder_handoff": "leads/{{SLUG}}/redesign/builder-handoff.json"
+  },
+  "generated_at": "{{TIMESTAMP}}"
+}

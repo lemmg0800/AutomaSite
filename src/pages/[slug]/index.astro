@@ -1,0 +1,29 @@
+﻿---
+import { getPublishedClients } from '../../clients/registry';
+import type { ClientConfig } from '../../clients/schema';
+import BaseLayout from '../../components/BaseLayout.astro';
+import SectionRenderer from '../../components/SectionRenderer.astro';
+
+export async function getStaticPaths() {
+  const published = await getPublishedClients();
+  return published.map(client => ({
+    params: { slug: client.slug },
+    props: { client }
+  }));
+}
+
+interface Props {
+  client: ClientConfig;
+}
+
+const { client } = Astro.props;
+const homePage = client.pages.find(p => p.path === "") || client.pages[0];
+---
+
+<BaseLayout client={client} title={homePage.seo.title} description={homePage.seo.description} isPrivatePreview={false}>
+  <main>
+    {homePage.sections.map(section => (
+      <SectionRenderer section={section} client={client} />
+    ))}
+  </main>
+</BaseLayout>

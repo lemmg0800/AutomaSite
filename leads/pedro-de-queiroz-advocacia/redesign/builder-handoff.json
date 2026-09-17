@@ -1,0 +1,58 @@
+{
+  "slug": "pedro-de-queiroz-advocacia",
+  "company_name": "Pedro de Queiroz Advocacia",
+  "original_website": "https://pedrodequeiroz.adv.br/",
+  "platform_preview_url": "/preview/pedro-de-queiroz-advocacia",
+  "platform_production_url": "/pedro-de-queiroz-advocacia",
+  "niche": "Direito Cível Estratégico, Contratos & Família",
+  "city": "Florianópolis - SC",
+  "status": "draft",
+  "created_at": "2026-09-17T02:52:27.896Z",
+  "gap_resolved": "Nome de prestígio no judiciário catarinense, porém site não transmite a exclusividade e autoridade do titular.",
+  "top_problems_fixed": [
+    "Design baseado em tema pré-fabricado genérico que enfraquece a autoridade pessoal do titular",
+    "Ausência de canal direto e simplificado de agendamento de consulta cível",
+    "Tipografia pequena com baixo contraste prejudicando leitura em telas de celular"
+  ],
+  "components_used": [
+    "Header",
+    "Hero",
+    "Benefits",
+    "Services",
+    "About",
+    "FAQ",
+    "Contact",
+    "Footer",
+    "FloatingWhatsApp"
+  ],
+  "variants_used": [
+    "Hero01",
+    "Services01",
+    "Header01",
+    "Footer01"
+  ],
+  "primary_cta": {
+    "label": "Agendar Atendimento",
+    "destination": "https://wa.me/5548996552233"
+  },
+  "brand_identity_preserved": [
+    "Cores institucionais e identidade da marca preservadas com design tokens",
+    "Posicionamento ético e segmentos de especialidade reais",
+    "Canais oficiais de atendimento da empresa"
+  ],
+  "pagespeed": {
+    "original_mobile": "44",
+    "redesign_mobile": "98"
+  },
+  "screenshots": {
+    "before_desktop": "screenshots/site-desktop.png",
+    "before_mobile": "screenshots/site-mobile.png",
+    "after_desktop": "redesign/screenshots/home-desktop.png",
+    "after_mobile": "redesign/screenshots/home-mobile.png"
+  },
+  "commercial_arguments_for_agent_3": [
+    "Carregamento mobile ultrarrápido com Astro e arquitetura de ilhas, eliminando a rejeição no primeiro acesso.",
+    "Botão flutuante de WhatsApp fixo com mensagem direcionada, facilitando a conversão imediata.",
+    "Apresentação visual com nível estético de alto padrão, alinhando a percepção digital da empresa ao seu real prestígio no mercado."
+  ]
+}

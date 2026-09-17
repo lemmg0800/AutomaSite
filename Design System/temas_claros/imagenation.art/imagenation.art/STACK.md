@@ -1,0 +1,18 @@
+- **WordPress 6.9** — CMS que originalmente gerou esta página (page-id 2535).
+- **Elementor / Elementor Pro 3.20** — page builder responsável pela enorme árvore de divs `e-con e-parent`/`e-child`, animações `animated fadeInUp`, e widgets de heading/image/accordion/icon-box/n-carousel.
+- **Hello Elementor theme** — tema mínimo do WordPress que provê o stylesheet global e os handlers do frontend.
+- **jQuery + jQuery Migrate + jQuery UI Core + jquery.bind-first** — utilidades DOM exigidas pelos scripts do Elementor frontend.
+- **Swiper** — biblioteca de carrosséis usada pelo widget `n-carousel` (slider "Todos os cursos") e pelas faixas de especialistas.
+- **Yoast SEO 26.4** — gera o JSON-LD `schema.org` e meta tags do `<head>`.
+- **PixelYourSite (PYS) 11.1.4** — orquestra eventos do Meta Pixel.
+- **Google Tag Manager (GTM-PRF6LJPC)** — container de tags carregado duas vezes no head.
+- **Microsoft Clarity (jco15ul9th, obzrzswmex)** — analytics de gravação de sessão / heatmap.
+- **Meta / Facebook Pixel (id 723388489623777)** — pageview e conversões.
+- **Cloudflare Beacon (cf-beacon / Speed Brain)** — RUM enviado via tag `<script data-cf-beacon>`.
+- **Panda Video (player.pandavideo.com.br/api.v2.js)** — player do vídeo "Conheça por dentro" (id `5d60660d-d9e3-489a-93bb-413a44a09cc0`).
+- **Hotmart (pay.hotmart.com)** — checkout dos botões "Inscreva-se" (planos anual `H86613425J` e mensal `O87048163T`).
+- **AJJS / cache optimizer customizado** — script inline no head que injeta JS dinâmico via `wp-admin/admin-ajax.php?action=ajjs_run`.
+- **Inter** — tipografia sans-serif do corpo, navegação e UI.
+- **Instrument Serif** — display serif editorial usado em headings, hero e preços.
+- **Lucide** — biblioteca de ícones usada na reescrita (`<i data-lucide>`) para chevrons, plays, setas e ícones sociais.
+- **HTML5 + CSS3 + Vanilla JS** — stack do `design-system.html` reescrito (sem build, sem framework).

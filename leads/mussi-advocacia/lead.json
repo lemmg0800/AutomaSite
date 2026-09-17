@@ -1,0 +1,46 @@
+{
+  "slug": "mussi-advocacia",
+  "name": "Mussi Advocacia & Consultoria",
+  "segment": "Direito Penal Estratégico & Compliance Trabalhista",
+  "city": "Florianópolis - SC",
+  "address": "Rua Felipe Schmidt, 515 - Centro, Florianópolis - SC",
+  "website": "https://advmussi.com.br/",
+  "instagram": "@mussiadvocacia",
+  "phone": "(48) 3322-1040",
+  "whatsapp": "(48) 98834-5678",
+  "status": "alta_oportunidade",
+  "ranking": 2,
+  "scores": {
+    "business": 8.5,
+    "design": 4,
+    "mobile": 3.5,
+    "ux": 3.8,
+    "conversion": 3.6,
+    "confidence": 8.2,
+    "performance": 4.1,
+    "seo": 5,
+    "website_overall": 3.8,
+    "opportunity": 75
+  },
+  "pagespeed": {
+    "mobile_performance": 41,
+    "desktop_performance": 69,
+    "lcp": "4.8s",
+    "fcp": "2.9s",
+    "tbt": "380ms",
+    "cls": "0.15",
+    "speed_index": "4.4s"
+  },
+  "top_problems": [
+    "Plantão 24h penal não possui acionamento imediato com 1 clique no topo mobile",
+    "Performance mobile lenta (Score 41/100, LCP 4.8s) compromete urgências criminais",
+    "Hierarquia de serviços confusa misturando penal com compliance corporativo"
+  ],
+  "main_gap": "Advocacia penal de urgência exige resposta imediata no smartphone; o site atual atrasa o carregamento e esconde o botão de emergência.",
+  "commercial_hook": "Em emergências criminais, quem busca no celular liga para o primeiro botão acessível; seu site esconde o contato direto no mobile.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-16T20:06:26.484Z"
+}

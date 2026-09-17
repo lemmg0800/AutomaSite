@@ -1,0 +1,7 @@
+- **Tailwind CSS** — framework CSS utility-first (via CDN) usado para todo o layout, espaçamento, cores e estados de hover
+- **Inter** — família tipográfica do Google Fonts usada em toda a interface (a classe `font-geist` do template original cai para Inter)
+- **iconify-icon** — runtime de ícones como web component `<iconify-icon>`; renderiza os conjuntos Solar e Simple Icons (Claude, Gemini, OpenAI) em toda a página
+- **GSAP** — biblioteca de animação que controla a entrada do herói e as revelações de palavras/blocos
+- **GSAP ScrollTrigger** — plugin do GSAP que dispara as animações de revelação conforme a rolagem da página
+- **Unicorn Studio** — SDK WebGL que renderiza a cena de gradiente animada do fundo do herói (cena local em `assets/6d061648bbf85b06_Gp9cUMaCN53bOLjWagWZ.js`)
+- **React / React DOM / React Router** — stack original do app aura.build (SPA multipágina); substituídos por HTML estático nesta extração de design

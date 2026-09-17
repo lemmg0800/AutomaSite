@@ -1,0 +1,7 @@
+- **Tailwind CSS** — utility-first CSS framework powering all layout, color, spacing, and effect classes (loaded as a runtime script in head)
+- **Iconify (Solar Duotone icon set)** — icon web component (`<iconify-icon>`) used for nav, buttons, pricing checks, and social links
+- **Unicorn Studio** — WebGL/animation runtime (`v1.4.29`) embedding the animated `data-us-project` background scene
+- **Google Fonts (Geist, Roboto, Montserrat, Poppins, Playfair Display, Instrument Serif, Merriweather, Bricolage Grotesque, Plus Jakarta Sans, Manrope, Space Grotesk, Work Sans, PT Serif, Geist Mono, Space Mono, Quicksand, Nunito)** — hosted webfonts referenced via `css2_*.css` files plus matching `.font-*` utility classes
+- **Aura (page builder)** — origin tooling that generated the original markup (visible in `aura-background-component` classes and Supabase asset CDN)
+- **Supabase Storage** — public CDN hosting logo, social-icon backgrounds, and module images
+- **HTML / CSS / JavaScript (vanilla)** — no build step, no framework; carousels, tabs, pricing toggle, and image-fallback are plain ES5/ES6 IIFEs
