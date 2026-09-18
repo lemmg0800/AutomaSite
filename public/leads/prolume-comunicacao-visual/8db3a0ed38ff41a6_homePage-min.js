@@ -1,0 +1,2 @@
+if($(".l-headerHome").length){var swiper__headerHome=new Swiper(".swiper__headerHome",{speed:400,spaceBetween:100,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});$(".l-headerHome .c-btn.js-scrollLink").on("click",function(e){e.preventDefault();var r=$(this).attr("href");goToSection__scroll(r,0,0,700,10)}),$(".l-headerHome .linkScroll").on("click",function(e){e.preventDefault();var r=$(this).attr("href");goToSection__scroll(r,0,0,700,10)})}
+//# sourceMappingURL=homePage-min.js.map

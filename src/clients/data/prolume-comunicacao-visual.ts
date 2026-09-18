@@ -1,36 +1,36 @@
-import type { ClientConfig } from '../schema';
+﻿import type { ClientConfig } from '../schema';
 
 const client: ClientConfig = {
   slug: "prolume-comunicacao-visual",
   status: "ativo",
-  createdAt: "2026-09-18T19:03:03.010Z",
-  updatedAt: "2026-09-18T20:00:00.000Z",
+  createdAt: "2026-09-18T19:03:02.670Z",
+  updatedAt: "2026-09-18T20:45:00.000Z",
 
   business: {
     name: "Prolume Comunicação Visual",
-    legalName: "Prolume Comunicação Visual & Iluminação Ltda",
-    niche: "Engenharia de Luminosos, Totens em LED & Fachadas de Alto Impacto Noturno",
+    legalName: "Prolume Comunicação Visual Ltda",
+    niche: "Totens Luminosos, Back-lights, Placas em ACM e PVC & Corte a Laser",
     city: "Criciúma",
     state: "SC",
-    address: "Rodovia Jorge Lacerda, Criciúma - SC",
-    phone: "(48) 3462-1188",
-    whatsapp: "(48) 99180-4550",
-    googleRating: 4.8,
-    instagram: "@prolumecomunicacao"
+    address: "Rua Júlio de Castilho, 48 - São Luiz, Criciúma - SC",
+    phone: "(48) 3433-3577",
+    whatsapp: "(48) 98403-7906",
+    googleRating: 4.9,
+    instagram: "@prolume"
   },
 
   theme: {
-    primaryColor: "#080e1a",
-    secondaryColor: "#111c30",
-    accentColor: "#06b6d4",
-    backgroundColor: "#030712",
+    primaryColor: "#071120",
+    secondaryColor: "#0f1d36",
+    accentColor: "#0ea5e9",
+    backgroundColor: "#040810",
     textColor: "#f8fafc",
-    headingFont: "Outfit",
-    bodyFont: "Plus Jakarta Sans",
-    borderRadius: "md",
+    headingFont: "Montserrat",
+    bodyFont: "Inter",
+    borderRadius: "lg",
     mode: "dark",
     enableCursor: false,
-    backgroundEffect: "mesh",
+    backgroundEffect: "dots",
     enableParallax: true
   },
 
@@ -38,128 +38,47 @@ const client: ClientConfig = {
     {
       path: "",
       seo: {
-        title: "Prolume Comunicação Visual | Luminosos, Totens LED e Fachadas em Criciúma",
-        description: "Engenharia de letreiros luminosos, fachadas com tecnologia LED IP67, totens comerciais e sinalização noturna de alto impacto em Criciúma e Sul de SC."
+        title: "Prolume Comunicação Visual | Totens, Back-lights e Corte a Laser em Criciúma",
+        description: "Fabricação própria de totens luminosos, caixas back-light com LED, placas em ACM e corte a laser CNC no bairro São Luiz, Criciúma - SC."
       },
       sections: [
         {
           id: "header-prolume",
           type: "header",
-          variant: "Header02",
+          variant: "Header01",
           content: {
-            announcement: "Luminosos com Módulos LED Samsung IP67 e Garantia de 2 Anos",
             navLinks: [
-              { label: "Luminosos & Letreiros", href: "#servicos" },
-              { label: "Totens LED", href: "#servicos" },
-              { label: "Obras Noturnas", href: "#projetos" },
-              { label: "Tecnologia LED", href: "#diferenciais" },
-              { label: "Orçamento", href: "#contato" }
+              { label: "Totens & Back-lights", href: "#produtos" },
+              { label: "Placas ACM & PVC", href: "#produtos" },
+              { label: "Corte a Laser", href: "#produtos" },
+              { label: "Sobre a Prolume", href: "#sobre" },
+              { label: "Contato", href: "#contato" }
             ],
-            ctaLabel: "Solicitar Luminoso"
+            ctaLabel: "Orçamento no WhatsApp"
           }
         },
         {
           id: "hero-prolume",
           type: "hero",
-          variant: "Hero04",
+          variant: "Hero02",
           content: {
-            badge: "Especialistas em Fachadas e Sinalização Noturna",
-            headline: "Faça sua Marca Brilhar com Máxima Visibilidade 24 Horas por Dia",
-            subheadline: "Projetamos letreiros luminosos de alto impacto, totens verticais e fachadas com engenharia elétrica segura, luz uniforme e módulos LED de alta durabilidade para o comércio de Criciúma e região.",
-            primaryCtaLabel: "Pedir Consultoria no WhatsApp",
-            primaryCtaHref: "https://wa.me/5548991804550",
-            secondaryCtaLabel: "Ver Obras Iluminadas",
-            secondaryCtaHref: "#projetos",
-            stats: [
-              { value: "50.000h", label: "Vida Útil dos LEDs" },
-              { value: "-70%", label: "Consumo de Energia" },
-              { value: "IP67", label: "Proteção à Prova d'Água" }
-            ]
+            badge: "Estruturas Luminosas & Corte a Laser em Criciúma",
+            headline: "Totens Luminosos, Back-lights e Placas de Alta Durabilidade",
+            subheadline: "Fabricação própria de totens de grande porte, painéis luminosos backlight com LED de alta potência e placas em ACM com corte computadorizado a laser na Rua Júlio de Castilho, São Luiz.",
+            primaryCtaLabel: "Solicitar Orçamento no WhatsApp",
+            primaryCtaHref: "https://wa.me/5548984037906",
+            secondaryCtaLabel: "Ver Produtos Fabricados",
+            secondaryCtaHref: "#produtos"
           }
         },
         {
-          id: "benefits-prolume",
-          type: "benefits",
-          variant: "Benefits01",
+          id: "products-prolume",
+          type: "products",
+          variant: "Products01",
           content: {
-            title: "Diferenciais da Engenharia Luminosa da Prolume",
-            subtitle: "Por que investir em letreiros com componentes industriais de primeira linha faz toda a diferença.",
-            benefits: [
-              {
-                title: "Módulos LED de Alta Intensidade com Lente 160°",
-                description: "Distribuição homogênea da luz sem pontos escuros (sombras) na face do letreiro ou na lona.",
-                icon: "award"
-              },
-              {
-                title: "Fontes Seladas com Proteção contra Picos de Tensão",
-                description: "Fontes blindadas Mean Well e similares que protegem os circuitos contra quedas e raios comuns no verão catarinense.",
-                icon: "shield"
-              },
-              {
-                title: "Economia e Baixa Manutenção",
-                description: "Eficiência energética que reduz a conta de luz comercial em até 70% comparado a sistemas fluorescentes antigos.",
-                icon: "clock"
-              }
-            ]
-          }
-        },
-        {
-          id: "services-prolume",
-          type: "services",
-          variant: "Services03",
-          content: {
-            tagline: "Iluminação & Sinalização",
-            title: "Sistemas Completos em Letreiros e Fachadas Luminosas",
-            description: "Do projeto de iluminação à fabricação de estruturas metálicas e montagem elétrica no local.",
-            items: [
-              {
-                title: "Letras Caixa com Iluminação Indireta 'Halo Effect'",
-                description: "Efeito de auréola traseira contra a parede que proporciona elegância incomparável para fachadas comerciais.",
-                icon: "💫",
-                featured: true
-              },
-              {
-                title: "Totens Verticais com Iluminação Interna LED",
-                description: "Totens monumentais para postos de combustíveis, concessionárias e centros comerciais com visibilidade a centenas de metros.",
-                icon: "🗼"
-              },
-              {
-                title: "Fachadas Luminosas em ACM Vazado e Backlight",
-                description: "Chapas de alumínio composto com usinagem a laser, acrílico leitoso e iluminação interna de alta potência.",
-                icon: "🏢"
-              },
-              {
-                title: "Retrofit e Conversão de Luminosos Antigos para LED",
-                description: "Modernização completa da estrutura elétrica de fachadas existentes, trocando lâmpadas queimadas por LED de longa vida útil.",
-                icon: "⚡"
-              }
-            ]
-          }
-        },
-        {
-          id: "projects-prolume",
-          type: "projects",
-          variant: "Projects01",
-          content: {
-            title: "Projetos Noturnos em Operação na Região",
-            subtitle: "Veja a nitidez e o impacto visual dos nossos luminosos após o entardecer.",
-            projects: [
-              {
-                title: "Fachada Noturna Completa de Auto Posto Rodoviário",
-                category: "Postos & Rodovias",
-                description: "Cobertura de pista com iluminação em fitas LED industriais e totem de preços de alta visibilidade."
-              },
-              {
-                title: "Totem Dupla Face Centro Comercial Av. Centenário",
-                category: "Totem Comercial",
-                description: "Altura de 8 metros com acrílico termoformado e módulos de LED branco frio de 6500K."
-              },
-              {
-                title: "Letreiro Halo Effect Concessionária Automotiva",
-                category: "Concessionária",
-                description: "Letras em aço galvanizado pintadas a pó eletrostático com projeção de luz traseira contínua."
-              }
-            ]
+            badge: "Linha de Fabricação Própria",
+            title: "Catálogo de Produtos em Comunicação Visual",
+            subtitle: "Desenvolvemos projetos sob medida para indústrias, comércio e serviços em Criciúma e Sul de SC."
           }
         },
         {
@@ -167,29 +86,33 @@ const client: ClientConfig = {
           type: "about",
           variant: "About01",
           content: {
-            badge: "Engenharia & Eletricidade",
-            title: "Especialistas em Comunicação Visual Noturna",
-            description: "A Prolume nasceu com a missão de elevar a visibilidade das empresas do Sul de Santa Catarina através da tecnologia de iluminação. Desenvolvemos desde o projeto de cargas elétricas até a confecção estrutural das peças, garantindo segurança contra incêndios e conformidade técnica.",
-            stats: [
-              { number: "Criciúma / SC", label: "Sede Fabril Própria" },
-              { number: "2 Anos", label: "Garantia Integral" }
-            ]
+            badge: "Parque Fabril Próprio",
+            title: "Tradição e Tecnologia no Bairro São Luiz em Criciúma",
+            description: "A Prolume Comunicação Visual conta com sede própria equipada com centros de usinagem e corte a laser CNC, cabine de pintura automotiva e setor especializado em montagem de estruturas metálicas na Rua Júlio de Castilho. Atendemos indústrias, comércios e arquitetos com rigor técnico e pontualidade na entrega."
           }
         },
         {
-          id: "faq-prolume",
-          type: "faq",
-          variant: "FAQ01",
+          id: "benefits-prolume",
+          type: "benefits",
+          variant: "Benefits01",
           content: {
-            title: "Dúvidas Frequentes sobre Letreiros Luminosos",
-            items: [
+            title: "Por que empresas e indústrias confiam na Prolume",
+            subtitle: "Estrutura fabril completa sem terceirização para garantia de prazos e acabamento superior.",
+            benefits: [
               {
-                question: "O letreiro pode ligar e desligar automaticamente?",
-                answer: "Sim! Instalamos temporizadores digitais ou relés fotoelétricos que acendem o letreiro automaticamente no pôr do sol e desligam no horário programado por você."
+                title: "Engenharia e Serralheria Pesada",
+                description: "Projetos com cálculo estrutural de resistência a vento e intempéries para totens e pórticos.",
+                icon: "shield"
               },
               {
-                question: "O que acontece se chover forte na fachada luminosa?",
-                answer: "Todos os nossos módulos LED e conexões elétricas possuem grau de proteção IP67 e IP68 com drenos de respiro na estrutura metálica, garantindo funcionamento ininterrupto mesmo sob temporais intensos."
+                title: "Iluminação LED de Alta Eficiência",
+                description: "Módulos LED de padrão industrial com difusão uniforme sem sombras nem manchas escuras.",
+                icon: "award"
+              },
+              {
+                title: "Atendimento Consultivo e Rápido",
+                description: "Visita técnica no local para medições exatas e elaboração de orçamento transparente sem surpresas.",
+                icon: "clock"
               }
             ]
           }
@@ -199,19 +122,18 @@ const client: ClientConfig = {
           type: "contact",
           variant: "Contact01",
           content: {
-            badge: "Projetos Luminosos",
-            title: "Destaque a Fachada da sua Empresa à Noite",
-            formTitle: "Solicite um Projeto Luminoso Sob Medida",
-            formSubtitle: "Envie uma foto do local da sua empresa para calcularmos a luminosidade e os componentes ideais."
+            badge: "Atendimento Ágil",
+            title: "Pronto para Desenvolver a Comunicação Visual da sua Empresa?",
+            formTitle: "Solicite uma Cotação Técnica",
+            formSubtitle: "Preencha o formulário ou envie uma mensagem direta no WhatsApp da Prolume para atendimento prioritário."
           }
         },
         {
           id: "footer-prolume",
           type: "footer",
-          variant: "Footer02",
+          variant: "Footer01",
           content: {
-            disclaimer: "Prolume Comunicação Visual - Especialistas em letreiros luminosos, engenharia LED e totens comerciais de alto alcance.",
-            oabInfo: "Instalações elétricas em conformidade com a NBR 5410"
+            disclaimer: "Prolume Comunicação Visual - Rua Júlio de Castilho, 48, Bairro São Luiz, Criciúma - SC. Fone: (48) 3433-3577 / WhatsApp: (48) 98403-7906."
           }
         }
       ]

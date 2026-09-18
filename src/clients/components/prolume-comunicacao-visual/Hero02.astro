@@ -1,0 +1,135 @@
+﻿---
+interface Props {
+  content?: {
+    badge?: string;
+    headline?: string;
+    subheadline?: string;
+    primaryCtaLabel?: string;
+    primaryCtaHref?: string;
+    secondaryCtaLabel?: string;
+    secondaryCtaHref?: string;
+    stats?: Array<{ value: string; label: string }>;
+  };
+  clientSlug?: string;
+  client?: any;
+}
+
+const { content } = Astro.props;
+
+const badge = content?.badge || "Estruturas Luminosas & Corte a Laser em Criciúma";
+const headline = content?.headline || "Totens Luminosos, Back-lights e Placas de Alta Durabilidade";
+const subheadline = content?.subheadline || "Fabricação própria de totens de grande porte, painéis luminosos backlight com LED de alta potência e placas em ACM com corte computadorizado a laser na Rua Júlio de Castilho, São Luiz.";
+const primaryCtaLabel = content?.primaryCtaLabel || "Solicitar Orçamento no WhatsApp";
+const primaryCtaHref = content?.primaryCtaHref || "https://wa.me/5548984037906";
+const secondaryCtaLabel = content?.secondaryCtaLabel || "Ver Produtos Fabricados";
+const secondaryCtaHref = content?.secondaryCtaHref || "#produtos";
+
+const stats = [
+  { value: "CNC Laser", label: "Corte Computadorizado" },
+  { value: "Módulos LED", label: "Alta Eficiência & IP67" },
+  { value: "São Luiz", label: "Sede Própria em Criciúma" }
+];
+
+const totemImg = "/leads/prolume-comunicacao-visual/2849da31a7218cda_totem_9_capa.jpg";
+const backlightImg = "/leads/prolume-comunicacao-visual/c0294043d6ec51cd_back-light_3_capa.jpg";
+---
+
+<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#071120] via-[#0d1c33] to-[#071120] py-20 lg:py-24">
+  <!-- Subtle lighting effects -->
+  <div class="absolute -top-32 -left-32 w-96 h-96 bg-sky-500/15 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Text Col -->
+      <div class="lg:col-span-7 space-y-8">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 font-bold text-xs uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+          <span>{badge}</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15]">
+          {headline}
+        </h1>
+
+        <p class="text-lg text-slate-300 max-w-2xl leading-relaxed">
+          {subheadline}
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 pt-2">
+          <a
+            href={primaryCtaHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-sky-500 via-blue-600 to-sky-600 text-white font-extrabold text-base shadow-xl shadow-sky-900/40 hover:shadow-sky-500/50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 border border-sky-300/40"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+            </svg>
+            <span>{primaryCtaLabel}</span>
+          </a>
+
+          <a
+            href={secondaryCtaHref}
+            class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 font-bold text-base border border-slate-700/80 hover:border-sky-500/50 transition-all duration-200"
+          >
+            <span>{secondaryCtaLabel}</span>
+            <svg class="w-4 h-4 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800">
+          {stats.map((s) => (
+            <div class="space-y-1">
+              <div class="text-2xl font-black text-sky-400">{s.value}</div>
+              <div class="text-xs font-medium text-slate-400 uppercase tracking-wider">{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Real Visual Dual Cards -->
+      <div class="lg:col-span-5 space-y-6">
+        <!-- Totem Card -->
+        <div class="relative rounded-2xl overflow-hidden border border-sky-500/30 shadow-2xl bg-slate-900 group">
+          <img 
+            src={totemImg} 
+            alt="Totem Luminoso Prolume" 
+            class="w-full h-56 sm:h-64 object-cover transform duration-500 group-hover:scale-105"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-5">
+            <div>
+              <span class="inline-block px-2.5 py-0.5 rounded bg-sky-600 text-white font-bold text-xs uppercase tracking-wider mb-1">
+                Totens Comerciais
+              </span>
+              <h3 class="text-white font-bold text-base">Estruturas Metálicas para Postos e Concessionárias</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backlight Card -->
+        <div class="relative rounded-2xl overflow-hidden border border-blue-500/30 shadow-2xl bg-slate-900 group">
+          <img 
+            src={backlightImg} 
+            alt="Painel Back-light Prolume" 
+            class="w-full h-48 sm:h-52 object-cover transform duration-500 group-hover:scale-105"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-5">
+            <div>
+              <span class="inline-block px-2.5 py-0.5 rounded bg-blue-600 text-white font-bold text-xs uppercase tracking-wider mb-1">
+                Back-light & Front-light
+              </span>
+              <h3 class="text-white font-bold text-base">Iluminação LED Homogênea de Alta Visibilidade</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

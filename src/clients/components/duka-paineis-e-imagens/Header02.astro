@@ -1,0 +1,73 @@
+﻿---
+interface Props {
+  content?: {
+    navLinks?: Array<{ label: string; href: string }>;
+    ctaLabel?: string;
+  };
+  clientSlug?: string;
+  client?: any;
+}
+
+const { content, client } = Astro.props;
+
+const navLinks = content?.navLinks || [
+  { label: "Painéis & Fachadas", href: "#servicos" },
+  { label: "Totens Rodoviários", href: "#servicos" },
+  { label: "Letras Caixa", href: "#servicos" },
+  { label: "Obras Industriais", href: "#obras" },
+  { label: "Contato", href: "#contato" }
+];
+const ctaLabel = content?.ctaLabel || "Falar com Engenharia";
+const phone = client?.business?.phone || "(48) 98482-2827";
+const whatsappUrl = `https://wa.me/55${phone.replace(/\D/g, '')}?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20de%20painel%20industrial!`;
+const logoPath = "/leads/duka-paineis-e-imagens/98622a2151e00787_logo.png";
+---
+
+<header class="sticky top-0 z-50 bg-[#0b0d11]/95 backdrop-blur-md border-b border-amber-500/20 shadow-xl shadow-black/60">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      
+      <!-- Brand Logo -->
+      <a href="/" class="flex items-center gap-3 group">
+        <img 
+          src={logoPath} 
+          alt="Duka Painéis e Imagens" 
+          class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_0_8px_rgba(245,158,11,0.3)]"
+          loading="eager"
+        />
+        <div class="hidden sm:flex flex-col border-l border-amber-500/30 pl-3">
+          <span class="text-xs font-black tracking-widest text-amber-500 uppercase">Painéis Industriais</span>
+          <span class="text-[11px] text-slate-400">Distrito Industrial - Içara / Criciúma</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-7">
+        {navLinks.map((link) => (
+          <a 
+            href={link.href}
+            class="text-sm font-semibold tracking-wide text-slate-300 hover:text-amber-400 transition-colors duration-200"
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- CTA Action -->
+      <div class="flex items-center gap-3">
+        <a 
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-700 hover:from-amber-500 hover:to-yellow-500 text-black font-extrabold text-sm shadow-lg shadow-amber-950/40 transition-all duration-300 transform hover:-translate-y-0.5 border border-amber-400/40"
+        >
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+          </svg>
+          <span>{ctaLabel}</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</header>

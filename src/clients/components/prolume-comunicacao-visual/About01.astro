@@ -1,0 +1,100 @@
+﻿---
+interface Props {
+  content?: {
+    badge?: string;
+    title?: string;
+    description?: string;
+  };
+  clientSlug?: string;
+  client?: any;
+}
+
+const { content } = Astro.props;
+
+const badge = content?.badge || "Parque Fabril Próprio";
+const title = content?.title || "Tradição e Tecnologia no Bairro São Luiz em Criciúma";
+const description = content?.description || "A Prolume Comunicação Visual conta com sede própria equipada com centros de usinagem e corte a laser CNC, cabine de pintura automotiva e setor especializado em montagem de estruturas metálicas na Rua Júlio de Castilho. Atendemos indústrias, comércios e arquitetos com rigor técnico e pontualidade na entrega.";
+
+const instImg = "/leads/prolume-comunicacao-visual/04062ad4a029e2e0_institucional.jpg";
+const machineImg = "/leads/prolume-comunicacao-visual/abcd5df61133a4b5_maquinas-equipamentos_20_capa.jpg";
+---
+
+<section id="sobre" class="py-24 bg-[#071120] border-t border-slate-800 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Visual Column -->
+      <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+        <div class="relative rounded-2xl overflow-hidden border border-slate-700 shadow-xl">
+          <img 
+            src={instImg} 
+            alt="Sede Prolume Comunicação Visual" 
+            class="w-full h-72 object-cover"
+            loading="lazy"
+          />
+          <div class="absolute bottom-0 inset-x-0 bg-black/70 p-3 text-center">
+            <span class="text-xs font-bold text-sky-300">Sede Própria São Luiz</span>
+          </div>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden border border-slate-700 shadow-xl mt-8">
+          <img 
+            src={machineImg} 
+            alt="Maquinário CNC Prolume" 
+            class="w-full h-72 object-cover"
+            loading="lazy"
+          />
+          <div class="absolute bottom-0 inset-x-0 bg-black/70 p-3 text-center">
+            <span class="text-xs font-bold text-sky-300">Usinagem e Corte CNC</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Column -->
+      <div class="lg:col-span-6 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 font-bold text-xs uppercase tracking-wider">
+          {badge}
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+          {title}
+        </h2>
+        <p class="text-slate-300 text-base leading-relaxed">
+          {description}
+        </p>
+
+        <!-- Bullet Highlights -->
+        <div class="space-y-3 pt-2">
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xs mt-0.5">✓</div>
+            <div>
+              <div class="text-white font-bold text-sm">Corte a Laser de Alta Resolução</div>
+              <div class="text-slate-400 text-xs">Acabamento sem rebarbas para peças em acrílico e metais leves.</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xs mt-0.5">✓</div>
+            <div>
+              <div class="text-white font-bold text-sm">Estruturação e Serralheria Própria</div>
+              <div class="text-slate-400 text-xs">Garantia estrutural para totens de até 12 metros de altura com fixação anti-vento.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4">
+          <a 
+            href="https://wa.me/5548984037906?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20um%20projeto!"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm shadow-lg shadow-sky-900/30 transition-all"
+          >
+            <span>Falar com Nossa Equipe Técnica</span>
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

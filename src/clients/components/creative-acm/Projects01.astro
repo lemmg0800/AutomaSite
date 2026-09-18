@@ -1,0 +1,130 @@
+---
+import type { ClientConfig } from '../../schema';
+
+interface Props {
+  content: {
+    title: string;
+    subtitle?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+
+const realProjects = [
+  {
+    title: "Fachada Comercial em ACM 4mm",
+    category: "Revestimento em ACM",
+    description: "Revestimento arquitetônico em chapas de alumínio composto na cor grafite com detalhes amadeirados.",
+    image: "/leads/creative-acm/817d378da7bc9913_acm-01.jpg",
+    location: "Criciúma - SC"
+  },
+  {
+    title: "Totem Publicitário Carro & Cia (Visão Diurna)",
+    category: "Totens Autoportantes",
+    description: "Estrutura metálica de 8 metros com cálculo de carga de vento e acabamento lateral em ACM.",
+    image: "/leads/creative-acm/8ea2e83b19ae7dd8_totem-carro-cia-dia.jpg",
+    location: "Içara / Criciúma - SC"
+  },
+  {
+    title: "Totem Publicitário com Iluminação Noturna",
+    category: "Totens & Luminosos",
+    description: "Módulos LED de alto brilho com iluminação uniforme e visibilidade a mais de 300 metros.",
+    image: "/leads/creative-acm/8f49bfa6b5424cd4_totem-carro-cia-noite.jpg",
+    location: "Rodovia SC-445"
+  },
+  {
+    title: "Letreiro Luminoso em Bloco de Acrílico e LED",
+    category: "Letreiros & LED",
+    description: "Letras caixa usinadas no corte a laser com iluminação frontal em LED branco 6500K.",
+    image: "/leads/creative-acm/8b750f58d09f538d_letreiro-02.jpg",
+    location: "Centro, Criciúma"
+  },
+  {
+    title: "Corte a Laser CNC em Painéis Decorativos",
+    category: "Corte a Laser CNC",
+    description: "Precisão milimétrica em chapas de metal e ACM para painéis vazados e brises arquitetônicos.",
+    image: "/leads/creative-acm/8b2a751d23a67004_corte-laser-01.jpg",
+    location: "Parque Fabril Próprio"
+  },
+  {
+    title: "Brise Metálico e Fachada Industrial",
+    category: "Arquitetura Comercial",
+    description: "Controle solar térmico e estética contemporânea para edifícios corporativos e lojas.",
+    image: "/leads/creative-acm/9dcda9774b02b3e5_brise-01.jpg",
+    location: "Sul Catarinense"
+  }
+];
+---
+
+<section id="obras" class="py-24 bg-[#050814] relative overflow-hidden border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Cabeçalho -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-widest text-orange-400 block mb-2">PORTFÓLIO REAL DE EXECUÇÕES</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-['Montserrat',sans-serif]">
+          {content?.title || "Obras e Fachadas Recentes em Criciúma e Região"}
+        </h2>
+        <p class="text-slate-400 mt-2 max-w-xl text-sm sm:text-base">
+          Fotos reais dos projetos projetados, fabricados e montados pela equipe da Creative ACM.
+        </p>
+      </div>
+
+      <a 
+        href="https://wa.me/5548996528028?text=Ol%C3%A1!%20Gostaria%20de%20ver%20mais%20fotos%20de%20obras%20em%20ACM."
+        target="_blank"
+        class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-orange-500/30 bg-orange-500/10 text-orange-400 hover:bg-orange-500/20 text-xs font-bold uppercase tracking-wider transition-all"
+      >
+        <span>Ver Mais Obras no WhatsApp</span>
+        <span>&rarr;</span>
+      </a>
+    </div>
+
+    <!-- Grid de Imagens Reais -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {realProjects.map((proj) => (
+        <div class="group relative rounded-2xl overflow-hidden bg-slate-900/60 border border-white/10 hover:border-orange-500/50 transition-all duration-300 shadow-xl flex flex-col">
+          <!-- Imagem com Aspect Ratio 16:10 -->
+          <div class="relative aspect-[16/10] overflow-hidden bg-slate-950">
+            <img 
+              src={proj.image} 
+              alt={proj.title} 
+              class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500" 
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            
+            <!-- Categoria Tag -->
+            <span class="absolute top-3 left-3 bg-slate-900/90 text-orange-400 border border-orange-500/30 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md backdrop-blur-md">
+              {proj.category}
+            </span>
+          </div>
+
+          <!-- Conteúdo -->
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1.5 text-xs text-slate-400 mb-2 font-mono">
+                <span>📍</span>
+                <span>{proj.location}</span>
+              </div>
+              <h3 class="font-bold text-lg text-white mb-2 group-hover:text-orange-400 transition-colors">
+                {proj.title}
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                {proj.description}
+              </p>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-white/10 flex items-center justify-between text-xs">
+              <span class="text-slate-400">Padrão Premium ACM</span>
+              <span class="text-orange-400 font-bold group-hover:underline">Consultar acabamento &rarr;</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

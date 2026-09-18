@@ -1,0 +1,105 @@
+﻿---
+interface Props {
+  content?: {
+    title?: string;
+    subtitle?: string;
+  };
+  clientSlug?: string;
+  client?: any;
+}
+
+const { content } = Astro.props;
+
+const title = content?.title || "Obras e Letreiros Entregues pela Duo";
+const subtitle = content?.subtitle || "Confira projetos instalados em Criciúma, Içara, Tubarão e litoral catarinense.";
+
+const galleryItems = [
+  {
+    title: "Estrutura e Letras Caixa Hangar",
+    category: "Eventos & Grandes Espaços",
+    image: "/leads/duo-comunicacao-visual/062456fcd92ef030_letras-caixa-hangar-_349_img.jpg"
+  },
+  {
+    title: "Letreiro Noturno com Iluminação LED",
+    category: "Visibilidade 24h",
+    image: "/leads/duo-comunicacao-visual/0dda6c17cc6f7450_letreiro-10_687_img.jpeg"
+  },
+  {
+    title: "Adesivagem e Padronização de Frota",
+    category: "Frotas Comerciais",
+    image: "/leads/duo-comunicacao-visual/006ce462a8625a4d_frota_816_img.jpeg"
+  },
+  {
+    title: "Identidade Visual e Painel De Bem",
+    category: "Comunicação Interna",
+    image: "/leads/duo-comunicacao-visual/0d22be9d6a98aab7_de-bem_511_img.jpg"
+  },
+  {
+    title: "Fachada Comercial e Letreiro Miliane",
+    category: "Varejo & Moda",
+    image: "/leads/duo-comunicacao-visual/0c70dc4041f803c6_-miliane-_759_img.jpeg"
+  },
+  {
+    title: "Painéis e Quadros Arquitetônicos",
+    category: "Decoração Corporativa",
+    image: "/leads/duo-comunicacao-visual/06a4d4a658eea4fe_quadro-decorativo_420_img.jpg"
+  }
+];
+---
+
+<section id="galeria" class="py-24 bg-[#090714] border-t border-purple-900/30 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div class="space-y-3 max-w-2xl">
+        <span class="text-xs font-bold uppercase tracking-widest text-pink-400">Portfólio em Destaque</span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          {title}
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg">
+          {subtitle}
+        </p>
+      </div>
+
+      <a 
+        href="https://wa.me/5548996226383"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-bold text-sm shadow-lg shadow-pink-900/40 transition-all self-start md:self-auto"
+      >
+        <span>Solicitar Orçamento no WhatsApp</span>
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- 6 Gallery Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {galleryItems.map((item) => (
+        <div class="group relative rounded-2xl overflow-hidden bg-slate-900 border border-purple-500/20 hover:border-pink-500/60 transition-all duration-300">
+          <div class="relative h-64 overflow-hidden">
+            <img 
+              src={item.image} 
+              alt={item.title} 
+              class="w-full h-full object-cover transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <div class="absolute top-3 left-3">
+              <span class="px-2.5 py-1 rounded-full bg-[#090714]/80 backdrop-blur-md text-pink-300 text-xs font-bold border border-pink-500/30">
+                {item.category}
+              </span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-lg font-bold text-white group-hover:text-pink-300 transition-colors">
+                {item.title}
+              </h3>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,105 @@
+﻿---
+interface Props {
+  content?: {
+    title?: string;
+    subtitle?: string;
+  };
+  clientSlug?: string;
+  client?: any;
+}
+
+const { content } = Astro.props;
+
+const title = content?.title || "Obras e Estruturas Entregues";
+const subtitle = content?.subtitle || "Veja projetos fabricados e montados pela equipe Duka no Distrito Industrial e em todo o Sul catarinense.";
+
+const items = [
+  {
+    title: "Fachada Industrial em ACM",
+    category: "Galpão Corporativo",
+    image: "/leads/duka-paineis-e-imagens/539f395682284eea_placaimg12.png"
+  },
+  {
+    title: "Totem Duplo Iluminado",
+    category: "Visibilidade Rodoviária",
+    image: "/leads/duka-paineis-e-imagens/34055dca94a02082_totemimg2.png"
+  },
+  {
+    title: "Letreiro Tridimensional em Metal",
+    category: "Identificação Externa",
+    image: "/leads/duka-paineis-e-imagens/40e6b2f1e7d971e1_letraimg2.png"
+  },
+  {
+    title: "Painel Frontlight e Placa Reforçada",
+    category: "Comunicação Visual",
+    image: "/leads/duka-paineis-e-imagens/37fae4559e2f5245_placaimg10.png"
+  },
+  {
+    title: "Envelopamento Técnico de Frota",
+    category: "Veículos Corporativos",
+    image: "/leads/duka-paineis-e-imagens/09c4f7cfa2176c9b_carroimg2.png"
+  },
+  {
+    title: "Identificação Visual de Caminhões",
+    category: "Frotas Pesadas",
+    image: "/leads/duka-paineis-e-imagens/5ce6674eb65344ee_carroimg3.png"
+  }
+];
+---
+
+<section id="obras" class="py-24 bg-[#0b0d11] border-t border-slate-800 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div class="space-y-3 max-w-2xl">
+        <span class="text-xs font-black uppercase tracking-widest text-amber-500">Portfólio de Engenharia</span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight uppercase">
+          {title}
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg">
+          {subtitle}
+        </p>
+      </div>
+
+      <a 
+        href="https://wa.me/5548984822827"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-black text-sm transition-all self-start md:self-auto shadow-lg shadow-amber-950/40"
+      >
+        <span>Solicitar Orçamento no WhatsApp</span>
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {items.map((item) => (
+        <div class="group relative rounded-2xl overflow-hidden bg-[#12151c] border border-slate-800 hover:border-amber-500/50 transition-all duration-300">
+          <div class="relative h-64 overflow-hidden">
+            <img 
+              src={item.image} 
+              alt={item.title} 
+              class="w-full h-full object-cover transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0b0d11] via-transparent to-transparent"></div>
+            <div class="absolute top-3 left-3">
+              <span class="px-2.5 py-1 rounded bg-[#0b0d11]/80 backdrop-blur-md text-amber-400 text-xs font-bold border border-amber-500/30">
+                {item.category}
+              </span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
+                {item.title}
+              </h3>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

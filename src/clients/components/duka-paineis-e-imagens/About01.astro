@@ -1,0 +1,87 @@
+﻿---
+interface Props {
+  content?: {
+    badge?: string;
+    title?: string;
+    description?: string;
+  };
+  clientSlug?: string;
+  client?: any;
+}
+
+const { content } = Astro.props;
+
+const badge = content?.badge || "Parque Fabril Próprio";
+const title = content?.title || "Estrutura Industrial no Distrito Industrial de Içara / Criciúma";
+const description = content?.description || "A Duka Painéis e Imagens está estrategicamente sediada na Rua Luiza Barp, 230, no Distrito Industrial 1ª Linha. Contamos com maquinário pesado para conformação de chapas, solda estrutural, caminhão munck para içamento e aplicadores com certificação de trabalho em altura NR-35.";
+
+const parkImg = "/leads/duka-paineis-e-imagens/1478253c975ce3b1_Slider.png";
+---
+
+<section id="sobre" class="py-24 bg-[#0e1118] border-t border-slate-800 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Visual Column -->
+      <div class="lg:col-span-6 relative">
+        <div class="relative rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+          <img 
+            src={parkImg} 
+            alt="Fábrica Duka Painéis" 
+            class="w-full h-[400px] object-cover"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-[#0b0d11]/90 backdrop-blur-md border border-amber-500/30">
+            <div class="text-white font-bold text-sm">Parque Fabril no Polo Industrial</div>
+            <div class="text-slate-400 text-xs">Capacidade para projetos de até 30 metros de extensão</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Column -->
+      <div class="lg:col-span-6 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-amber-500/10 border border-amber-500/30 text-amber-400 font-bold text-xs uppercase tracking-wider">
+          {badge}
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight uppercase">
+          {title}
+        </h2>
+        <p class="text-slate-300 text-base leading-relaxed">
+          {description}
+        </p>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800">
+          <div>
+            <div class="text-2xl font-black text-amber-500">Içara / SC</div>
+            <div class="text-xs text-slate-400 font-semibold mt-1">Distrito Industrial</div>
+          </div>
+          <div>
+            <div class="text-2xl font-black text-amber-500">NR-35</div>
+            <div class="text-xs text-slate-400 font-semibold mt-1">Equipe Certificada</div>
+          </div>
+          <div>
+            <div class="text-2xl font-black text-amber-500">Frota Munck</div>
+            <div class="text-xs text-slate-400 font-semibold mt-1">Içamento Próprio</div>
+          </div>
+        </div>
+
+        <div class="pt-4">
+          <a 
+            href="https://wa.me/5548984822827?text=Ol%C3%A1%2C%20gostaria%20de%20um%20atendimento%20t%C3%A9cnico!"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-black text-sm shadow-lg shadow-amber-950/40 transition-all"
+          >
+            <span>Falar com o Setor de Engenharia</span>
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

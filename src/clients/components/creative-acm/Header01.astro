@@ -1,0 +1,65 @@
+---
+import type { ClientConfig } from '../../schema';
+
+interface Props {
+  content: {
+    navLinks?: Array<{ label: string; href: string }>;
+    ctaLabel?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const navLinks = content?.navLinks || [
+  { label: "Fachadas ACM", href: "#servicos" },
+  { label: "Obras Reais", href: "#obras" },
+  { label: "Parque Fabril", href: "#sobre" },
+  { label: "Contato", href: "#contato" }
+];
+const ctaLabel = content?.ctaLabel || "Orçamento no WhatsApp";
+const phone = client?.business?.whatsapp || client?.business?.phone || '(48) 99652-8028';
+const cleanPhone = phone.replace(/\D/g, '');
+const whatsLink = `https://wa.me/55${cleanPhone}?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20fachada%20em%20ACM.`;
+---
+
+<header class="sticky top-0 z-40 backdrop-blur-xl border-b border-white/10 bg-[#030712]/90">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    
+    <!-- Logo Real da Creative ACM -->
+    <a href={`/site/${client.slug}`} class="flex items-center gap-3 group">
+      <img 
+        src="/leads/creative-acm/a5b51d9aaa4f2e48_creativeacm_logo1.png" 
+        alt="Creative ACM Comunicação Visual" 
+        class="h-10 w-auto object-contain" 
+      />
+      <div class="hidden sm:flex flex-col">
+        <span class="font-extrabold text-sm tracking-wider text-white uppercase font-['Montserrat',sans-serif]">
+          CREATIVE ACM
+        </span>
+        <span class="text-[10px] tracking-widest text-orange-400 font-semibold uppercase">
+          COMUNICAÇÃO VISUAL
+        </span>
+      </div>
+    </a>
+
+    <!-- Menu de Navegação -->
+    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+      {navLinks.map(link => (
+        <a href={link.href} class="hover:text-orange-400 transition-colors">{link.label}</a>
+      ))}
+    </nav>
+
+    <!-- Botão de Ação -->
+    <div class="flex items-center gap-3">
+      <a 
+        href={whatsLink} 
+        target="_blank"
+        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg bg-orange-500 hover:bg-orange-600 text-white"
+        style="box-shadow: 0 4px 15px -3px rgba(249, 115, 22, 0.4);"
+      >
+        <span>💬 {ctaLabel}</span>
+      </a>
+    </div>
+
+  </div>
+</header>

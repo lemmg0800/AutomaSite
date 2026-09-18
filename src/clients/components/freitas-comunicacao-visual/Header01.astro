@@ -1,0 +1,73 @@
+﻿---
+interface Props {
+  content?: {
+    navLinks?: Array<{ label: string; href: string }>;
+    ctaLabel?: string;
+  };
+  clientSlug?: string;
+  client?: any;
+}
+
+const { content, client } = Astro.props;
+
+const navLinks = content?.navLinks || [
+  { label: "Envelopamento de Frotas", href: "#servicos" },
+  { label: "Caminhões & Baús", href: "#servicos" },
+  { label: "Frotas Entregues", href: "#projetos" },
+  { label: "Estrutura", href: "#sobre" },
+  { label: "Contato", href: "#contato" }
+];
+const ctaLabel = content?.ctaLabel || "Cotar no WhatsApp";
+const phone = client?.business?.phone || "(48) 99841-3320";
+const whatsappUrl = `https://wa.me/55${phone.replace(/\D/g, '')}?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20de%20envelopamento%20de%20frota!`;
+const logoPath = "/leads/freitas-comunicacao-visual/8334111cfea024f2_a6bf998bb98fe3933a145e4b4b14e6.png";
+---
+
+<header class="sticky top-0 z-50 bg-[#070b14]/90 backdrop-blur-md border-b border-red-500/20 shadow-xl shadow-black/40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      
+      <!-- Brand Logo -->
+      <a href="/" class="flex items-center gap-3 group">
+        <img 
+          src={logoPath} 
+          alt="Freitas Comunicação Visual" 
+          class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_0_8px_rgba(239,68,68,0.3)]"
+          loading="eager"
+        />
+        <div class="hidden sm:flex flex-col border-l border-slate-700/60 pl-3">
+          <span class="text-xs font-black tracking-widest text-red-500 uppercase">Frotas & Comunicação</span>
+          <span class="text-[11px] text-slate-400">Criciúma e Região</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-7">
+        {navLinks.map((link) => (
+          <a 
+            href={link.href}
+            class="text-sm font-semibold tracking-wide text-slate-300 hover:text-red-400 transition-colors duration-200"
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- CTA Action -->
+      <div class="flex items-center gap-3">
+        <a 
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold text-sm shadow-lg shadow-red-900/30 hover:shadow-red-600/40 transition-all duration-300 transform hover:-translate-y-0.5 border border-red-400/30"
+        >
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+          </svg>
+          <span>{ctaLabel}</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</header>

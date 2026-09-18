@@ -1,0 +1,115 @@
+---
+import type { ClientConfig } from '../../schema';
+
+interface Props {
+  content: {
+    title: string;
+    subtitle?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+
+const realServices = [
+  {
+    title: "Fachadas Comerciais em ACM 4mm",
+    description: "Revestimentos elegantes em painéis de alumínio composto com alta resistência térmica, UV e garantia estrutural.",
+    image: "/leads/creative-acm/f59c575be204f8a9_acm-06.jpg",
+    tag: "MAIS PROCURADO",
+    features: ["Pintura Kynar 500", "Sem emendas aparentes", "Laudo com ART"]
+  },
+  {
+    title: "Letras Caixa e Letreiros Luminosos",
+    description: "Letras usinadas a laser em acrílico, aço inox escovado e módulos de LED com proteção IP67 à prova de chuva.",
+    image: "/leads/creative-acm/f3f311739b9cd247_letreiro-01.jpg",
+    tag: "ALTO IMPACTO",
+    features: ["LEDs de alta intensidade", "Efeito frontal e halo", "Consumo reduzido"]
+  },
+  {
+    title: "Totens Publicitários e Pórticos de Entrada",
+    description: "Estruturas verticais e pórticos de grande porte para postos, concessionárias, indústrias e centros comerciais.",
+    image: "/leads/creative-acm/082c99d381110709_totem-bigode.jpg",
+    tag: "RODOVIAS & ACESSOS",
+    features: ["Cálculo de vento NBR", "Fundação dimensionada", "Alta visibilidade"]
+  },
+  {
+    title: "Corte a Laser CNC e Brises Arquitetônicos",
+    description: "Painéis metálicos decorativos recortados a laser com precisão milimétrica para controle solar e fachadas inovadoras.",
+    image: "/leads/creative-acm/7dddb88c0eb29452_corte-laser-04.jpeg",
+    tag: "PRECISÃO INDUSTRIAL",
+    features: ["Corte limpo sem rebarbas", "Chapas até 12mm", "Projetos autorais"]
+  }
+];
+---
+
+<section id="servicos" class="py-24 bg-[#020617] relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-block px-3.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase mb-4 border border-orange-500/30 bg-orange-500/10 text-orange-400">
+        SOLUÇÕES COMPLETAS EM COMUNICAÇÃO VISUAL
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-['Montserrat',sans-serif]">
+        {content?.title || "Soluções em Comunicação Visual de Alto Padrão"}
+      </h2>
+      <p class="text-base sm:text-lg text-slate-400 mt-4">
+        Fabricação própria com materiais premium para quem busca destacar sua marca e valorizar seu imóvel comercial.
+      </p>
+    </div>
+
+    <!-- Grid de Serviços com Fotos Reais -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {realServices.map((service) => (
+        <div class="group relative rounded-2xl overflow-hidden bg-slate-900/60 border border-white/10 hover:border-orange-500/50 transition-all duration-300 shadow-xl flex flex-col justify-between">
+          
+          <!-- Imagem Real do Serviço -->
+          <div class="relative aspect-[16/9] overflow-hidden bg-slate-950">
+            <img 
+              src={service.image} 
+              alt={service.title} 
+              class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500" 
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent"></div>
+            
+            <span class="absolute top-4 left-4 bg-orange-500 text-white font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-lg">
+              {service.tag}
+            </span>
+          </div>
+
+          <!-- Informações e Diferenciais -->
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">
+                {service.title}
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6 font-light">
+                {service.description}
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                {service.features.map(f => (
+                  <span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-lg">
+                    ✓ {f}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <a 
+              href="https://wa.me/5548996528028?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20este%20servi%C3%A7o." 
+              target="_blank"
+              class="w-full py-3.5 rounded-xl border border-orange-500/30 bg-orange-500/10 hover:bg-orange-500 hover:text-white text-orange-400 font-bold text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2"
+            >
+              <span>Pedir Orçamento Desta Solução</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

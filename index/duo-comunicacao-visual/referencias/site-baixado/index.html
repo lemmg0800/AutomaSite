@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="pt-br" style="overflow: hidden; height: 100%;"><head><script data-offline-esm="1">(function(){
+if (location.protocol === 'file:') {
+  // SPA router needs '/' — give it a <base> equal to this doc.
+  try {
+    var bs = document.createElement('base');
+    bs.href = location.href;
+    var h0 = document.head || document.documentElement;
+    h0.insertBefore(bs, h0.firstChild);
+  } catch(e){}
+  // pushState/replaceState throw on a null origin — swallow it.
+  ['pushState','replaceState'].forEach(function(m){
+    var orig = history[m];
+    history[m] = function(){
+      try { return orig.apply(this, arguments); } catch(e){}
+    };
+  });
+}
+var D = {"sources": {"08c4fd72f9d96a7a_v31edd6df95cf4e85bb4c19e7a9bdb.js": "(()=>{var t={116:(t,e)=>{\"use strict\";Object.defineProperty(e,\"__esModule\",{value:!0}),e.cleanLocation=function(t){if(!t)return t;try{const e=new URL(t);return e.username=\"\",e.password=\"\",e.hash=\"\",e.search=\"\",e.toString()}catch(e){let n=t.split(\"?\")[0].split(\"#\")[0];if(n.includes(\"@\")){const t=n.split(\"://\"),e=t[1];if(e){const i=e.split(\"@\")[1];i&&(n=t[0]+\"://\"+i)}}return n}},e.roundWebVitalValue=function(t,e){return\"cls\"===t?e:Math.ceil(e)}},173:function(t,e){!function(t){\"use strict\";class e{t;o=0;i=[];l(t){if(t.hadRecentInput)return;const e=this.i[0],n=this.i.at(-1);this.o&&e&&n&&t.startTime-n.startTime<1e3&&t.startTime-e.startTime<5e3?(this.o+=t.value,this.i.push(t)):(this.o=t.value,this.i=[t]),this.t?.(t)}}const n=()=>{const t=performance.getEntriesByType(\"navigation\")[0];if(t&&t.responseStart>0&&t.responseStart<performance.now())return t},i=t=>{if(\"loading\"===document.readyState)return\"loading\";const e=n();if(e){if(t<e.domInteractive)return\"loading\";if(0===e.domContentLoadedEventStart||t<e.domContentLoadedEventStart)return\"dom-interactive\";if(0===e.domComplete||t<e.domComplete)return\"dom-content-loaded\"}return\"complete\"},o=t=>{const e=t.nodeName;return 1===t.nodeType?e.toLowerCase():e.toUpperCase().replace(/^#/,\"\")},r=t=>{let e=\"\";try{for(;9!==t?.nodeType;){const n=t,i=n.id?\"#\"+n.id:[o(n),...Array.from(n.classList??[]).sort()].join(\".\");if(e.length+i.length>99)return e||i;if(e=e?i+\">\"+e:i,n.id)break;t=n.parentNode}}catch{}return e},a=new WeakMap;function s(t,e){let n=a.get(e);return n||(n=new WeakMap,a.set(e,n)),n.get(t)||n.set(t,new e),n.get(t)}let c=-1;const l=()=>c,d=t=>{addEventListener(\"pageshow\",e=>{e.persisted&&(c=e.timeStamp,t(e))},!0)},u=(t,e,n,i)=>{let o,r;return a=>{e.value>=0&&(a||i)&&(r=e.value-(o??0),(r||void 0===o)&&(o=e.value,e.delta=r,e.rating=((t,e)=>t>e[1]?\"poor\":t>e[0]?\"needs-improvement\":\"good\")(e.value,n),t(e)))}},f=t=>{requestAnimationFrame(()=>requestAnimationFrame(()=>t()))},g=()=>n()?.activationStart??0;let p=-1;const v=new Set,m=()=>\"hidden\"!==document.visibilityState||document.prerendering?1/0:0,y=t=>{if(\"hidden\"===document.visibilityState){if(\"visibilitychange\"===t.type)for(const t of v)t();isFinite(p)||(p=\"visibilitychange\"===t.type?t.timeStamp:0,removeEventListener(\"prerenderingchange\",y,!0))}},h=(t=!1)=>{if(t&&(p=1/0),p<0){const t=g(),e=document.prerendering?void 0:globalThis.performance.getEntriesByType(\"visibility-state\").find(e=>\"hidden\"===e.name&&e.startTime>=t)?.startTime;p=e??m(),addEventListener(\"visibilitychange\",y,!0),addEventListener(\"prerenderingchange\",y,!0),d(()=>{setTimeout(()=>{p=m()})})}return{get firstHiddenTime(){return p},onHidden(t){v.add(t)}}},T=(t,e=-1,i,o=0,r,a,s)=>{const c=n(),d=c?.navigationId||0;let u=\"navigate\";return i?u=i:l()>=0?u=\"back-forward-cache\":c&&(document.prerendering||g()>0?u=\"prerender\":document.wasDiscarded?u=\"restore\":c.type&&(u=c.type.replace(/_/g,\"-\"))),{name:t,value:e,rating:\"good\",delta:0,entries:[],id:`v6-${Date.now()}-${Math.floor(8999999999999*Math.random())+1e12}`,navigationType:u,navigationId:o||d,navigationInteractionId:r,navigationURL:a||c?.name,navigationStartTime:s||0}},S=(t,e,n={})=>{try{const i=t.filter(t=>PerformanceObserver.supportedEntryTypes.includes(t));if(i.length>0){const t=new PerformanceObserver(t=>{queueMicrotask(()=>{const n=t.getEntries();i.length>1&&n.sort((t,e)=>t.startTime+t.duration-(e.startTime+e.duration)),e(n)})});for(const e of i)t.observe({type:e,buffered:!0,...n});return t}}catch{}},b=t=>globalThis.PerformanceObserver?.supportedEntryTypes?.includes(\"soft-navigation\")&&\"function\"==typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint&&t&&t.reportSoftNavs,w=(t,e)=>{if(t.set(e.navigationId,e),t.size>2){const e=t.keys().next().value;void 0!==e&&t.delete(e)}},E=t=>{let e=!1;return()=>{e||(t(),e=!0)}};class I{u}const P=t=>{document.prerendering?addEventListener(\"prerenderingchange\",t,!0):t()},x=[1800,3e3],L=(t,e={})=>{const n=b(e);P(()=>{const i=s(e,I),o=h();let r,a=T(\"FCP\");const c=S([\"paint\"],t=>{for(const e of t)\"first-contentful-paint\"===e.name&&(c.disconnect(),e.startTime<o.firstHiddenTime&&(a.value=Math.max(e.startTime-g(),0),a.entries.push(e),a.navigationId=e.navigationId||a.navigationId,r(!0)))});c&&(r=u(t,a,x,e.reportAllChanges),d(n=>{a=T(\"FCP\",-1,\"back-forward-cache\",a.navigationId,a.navigationInteractionId,a.navigationURL,l()),r=u(t,a,x,e.reportAllChanges),f(()=>{a.value=performance.now()-n.timeStamp,r(!0)})})),n&&S([\"soft-navigation\"],n=>{n.forEach(n=>{i.u&&n.navigationId&&w(i.u,n);const o=Math.max((n.presentationTime||n.paintTime||0)-n.startTime,0);a=T(\"FCP\",o,\"soft-navigation\",n.navigationId,n.interactionId,n.name,n.startTime),r=u(t,a,x,e.reportAllChanges),r(!0)})},e)})},C=[.1,.25],M=t=>t.find(t=>1===t.node?.nodeType)||t[0];let A=0,O=1/0,k=0;const N=t=>{for(const e of t)e.interactionId&&(O=Math.min(O,e.interactionId),k=Math.max(k,e.interactionId),A=k?(k-O)/7+1:0)};let D;const R=()=>D?A:performance.interactionCount??0;class B{h=0;p=[];v=new Map;m;T;M(){return R()-this.h}D(){this.h=R(),this.p.length=0,this.v.clear()}S(t){const e=this.M(),n=Math.min(this.p.length-1,Math.floor(e/50));return!e||-1!==n||\"soft-navigation\"!==t&&\"back-forward-cache\"!==t?this.p[n]:{k:8,id:-1,entries:[]}}l(t){if(this.m?.(t),!t.interactionId)return;const e=this.p.at(-1);let n=this.v.get(t.interactionId);if(n||this.p.length<10||t.duration>e.k){if(n?t.duration>n.k?(n.entries=[t],n.k=t.duration):t.duration===n.k&&t.startTime===n.entries[0].startTime&&n.entries.push(t):(n={id:t.interactionId,entries:[t],k:t.duration},this.v.set(n.id,n),this.p.push(n)),this.p.sort((t,e)=>e.k-t.k),this.p.length>10){const t=this.p.splice(10);for(const e of t)this.v.delete(e.id)}this.T?.(n)}}}const F=t=>{const e=\"requestIdleCallback\"in globalThis?1e3:0,n=globalThis.requestIdleCallback||setTimeout,i=globalThis.cancelIdleCallback||clearTimeout;if(\"hidden\"===document.visibilityState)t();else{const o=E(t);let r=-1;const a=()=>{i(r),o()};addEventListener(\"visibilitychange\",a,{once:!0,capture:!0}),r=n(()=>{removeEventListener(\"visibilitychange\",a,{capture:!0}),o()},{timeout:e})}},j=[200,500];class _{m;u;l(t){this.m?.(t)}}const H=[2500,4e3];let V=50;const U=[];S([\"resource\"],t=>{for(const e of t)U.push(e),U.length>V&&U.shift()});const W=[800,1800],q=t=>{document.prerendering?P(()=>q(t)):\"complete\"!==document.readyState?addEventListener(\"load\",()=>q(t),!0):setTimeout(t)};t.CLSThresholds=C,t.FCPThresholds=x,t.INPThresholds=j,t.LCPThresholds=H,t.TTFBThresholds=W,t.onCLS=(t,n={})=>{const o=s(n=Object.assign({},n),e),a=new WeakMap;o.t=t=>{if(t?.sources?.length){const e=M(t.sources),i=e?.node;if(i){const t=n.generateTarget?.(i)??r(i);a.set(e,t)}}},((t,n={})=>{const i=h();L(E(()=>{let o,r=T(\"CLS\",0);const a=s(n,e),c=(e,i,s,c,l)=>{r=T(\"CLS\",0,e,i,s,c,l),a.o=0,o=u(t,r,C,n.reportAllChanges)},g=(t=!1)=>{a.o>r.value&&(r.value=a.o,r.entries=a.i),o(t)},p=t=>{g(!0),c(\"soft-navigation\",t.navigationId,t.interactionId,t.name,t.startTime)},v=t=>{for(const e of t)\"soft-navigation\"!==e.entryType?a.l(e):p(e);g()},m=[\"layout-shift\"];b(n)&&m.push(\"soft-navigation\");const y=S(m,v);y&&(o=u(t,r,C,n.reportAllChanges),i.onHidden(()=>{v(y.takeRecords()),o(!0)}),d(()=>{c(\"back-forward-cache\",r.navigationId,r.navigationInteractionId,r.navigationURL,l()),f(o)}),setTimeout(o))}))})(e=>{t((t=>{let e={};if(t.entries.length){const n=t.entries.reduce((t,e)=>t.value>e.value?t:e);if(n?.sources?.length){const t=M(n.sources);t&&(e={largestShiftTarget:a.get(t),largestShiftTime:n.startTime,largestShiftValue:n.value,largestShiftSource:t,largestShiftEntry:n,loadState:i(n.startTime)})}}return Object.assign(t,{attribution:e})})(e))},n)},t.onFCP=(t,e={})=>{const o=s(e=Object.assign({},e),I);b(e)&&(o.u=new Map),L(e=>{t((t=>{let e={timeToFirstByte:0,firstByteToFCP:t.value,loadState:i(l())};if(\"soft-navigation\"!==t.navigationType){if(t.entries.length){const o=n(),r=t.entries.at(-1);if(o){const n=o.responseStart,a=o.activationStart||0,s=Math.max(0,n-a);e={timeToFirstByte:s,firstByteToFCP:t.value-s,loadState:i(t.entries[0].startTime),navigationEntry:o,fcpEntry:r}}}}else{const n=o.u?.get(t.navigationId);n&&(e={timeToFirstByte:0,firstByteToFCP:t.value,loadState:\"complete\",navigationEntry:n})}return Object.assign(t,{attribution:e})})(e))},e)},t.onINP=(t,e={})=>{const n=s(e=Object.assign({},e),B);let o=[],a=[],c=0;const f=new WeakMap,g=new WeakMap;let p=!1;const v=()=>{p||(F(m),p=!0)},m=()=>{const t=new Set(n.p.map(t=>f.get(t.entries[0]))),e=a.length-10;a=a.filter((n,i)=>i>=e||t.has(n));const i=new Set;for(const t of a){const e=y(t.startTime,t.processingEnd);for(const t of e)i.add(t)}o=o.filter(t=>t.startTime>c||i.has(t)),p=!1};n.m=t=>{const n=t.startTime+t.duration;let i;c=Math.max(c,t.processingEnd);for(let o=a.length-1;o>=0;o--){const r=a[o];if(Math.abs(n-r.renderTime)<=8){i=r,i.startTime=Math.min(t.startTime,i.startTime),i.processingStart=Math.min(t.processingStart,i.processingStart),i.processingEnd=Math.max(t.processingEnd,i.processingEnd),e.includeProcessedEventEntries&&i.entries.push(t);break}}i||(i={startTime:t.startTime,processingStart:t.processingStart,processingEnd:t.processingEnd,renderTime:n,entries:e.includeProcessedEventEntries?[t]:[]},a.push(i)),t.interactionId&&f.set(t,i),v()},n.T=t=>{if(!g.get(t)){const n=t.entries.find(t=>t.target)?.target;if(n){const i=e.generateTarget?.(n)??r(n);g.set(t,i)}else{const e=t.entries.find(t=>t.targetSelector)?.targetSelector;e&&g.set(t,e)}}};const y=(t,e)=>{const n=[];for(const i of o)if(!(i.startTime+i.duration<t)){if(i.startTime>e)break;n.push(i)}return n};S([\"long-animation-frame\"],t=>{o=o.concat(t),v()},e),((t,e={})=>{if(!globalThis.PerformanceEventTiming||!(\"interactionId\"in PerformanceEventTiming.prototype))return;const n=h();P(()=>{\"interactionCount\"in performance||D||(D=S([\"event\"],N,{durationThreshold:0}));let i,o=T(\"INP\");const r=s(e,B),a=(n,a,s,c,l)=>{r.D(),o=T(\"INP\",-1,n,a,s,c,l),i=u(t,o,j,e.reportAllChanges)},c=()=>{const t=r.S(o.navigationType);t&&t.k!==o.value&&(o.value=t.k,o.entries=t.entries,i())},f=t=>{c(),i(!0),a(\"soft-navigation\",t.navigationId,t.interactionId,t.name,t.startTime)},g=(t,e=!1)=>{F(()=>{for(const e of t)\"soft-navigation\"!==e.entryType?r.l(e):f(e);c(),e&&i(!0)})},p=[\"event\",\"first-input\"];b(e)&&p.push(\"soft-navigation\");const v=S(p,g,{...e,durationThreshold:e.durationThreshold??40});i=u(t,o,j,e.reportAllChanges),v&&(n.onHidden(()=>{g(v.takeRecords(),!0)}),d(()=>{a(\"back-forward-cache\",o.navigationId,o.navigationInteractionId,o.navigationURL,l())}))})})(e=>{t((t=>{if(0===t.entries.length){const e=t.navigationStartTime||0,n={processedEventEntries:[],longAnimationFrameEntries:[],inputDelay:0,processingDuration:0,presentationDelay:t.value,loadState:i(e)};return Object.assign(t,{attribution:n})}const e=t.entries[0],o=f.get(e),r=Math.max(o.processingStart,e.startTime),a=Math.max(e.startTime+e.duration,r),s=Math.min(o.processingEnd,a),c=o.entries.sort((t,e)=>t.processingStart-e.processingStart),l=y(e.startTime,s),d=n.v.get(e.interactionId),u={interactionTarget:g.get(d),interactionType:e.name.startsWith(\"key\")?\"keyboard\":\"pointer\",interactionTime:e.startTime,nextPaintTime:a,processedEventEntries:c,longAnimationFrameEntries:l,inputDelay:r-e.startTime,processingDuration:s-r,presentationDelay:a-s,loadState:i(e.startTime),longestScript:void 0,totalScriptDuration:void 0,totalStyleAndLayoutDuration:void 0,totalPaintDuration:void 0,totalUnattributedDuration:void 0};return(t=>{const e=t.interactionTime,n=t.nextPaintTime;if(!t.longAnimationFrameEntries?.length||!e||!n)return;const i=t.inputDelay,o=t.processingDuration;let r,a,s=0,c=0,l=0,d=0;for(const n of t.longAnimationFrameEntries){c=c+n.startTime+n.duration-n.styleAndLayoutStart;for(const t of n.scripts){const n=t.startTime+t.duration;if(n<e)continue;const l=n-Math.max(e,t.startTime),u=t.duration?l/t.duration*t.forcedStyleAndLayoutDuration:0;s+=l-u,c+=u,l>d&&(a=t.startTime<e+i?\"input-delay\":t.startTime>=e+i+o?\"presentation-delay\":\"processing-duration\",r=t,d=l)}}const u=t.longAnimationFrameEntries.at(-1),f=u?u.startTime+u.duration:0;f>=e+i+o&&(l=n-f),r&&a&&(t.longestScript={entry:r,subpart:a,intersectingDuration:d}),t.totalScriptDuration=s,t.totalStyleAndLayoutDuration=c,t.totalPaintDuration=l,t.totalUnattributedDuration=n-e-s-c-l})(u),Object.assign(t,{attribution:u})})(e))},e)},t.onLCP=(t,e={})=>{null!=(e=Object.assign({},e)).resourceBufferSize&&(V=e.resourceBufferSize);const i=s(e,_),o=new WeakMap;b(e)&&(i.u=new Map),i.m=t=>{const n=t.element;if(n){const i=e.generateTarget?.(n)??r(n);o.set(t,i)}else t.id&&o.set(t,`#${t.id}`)},((t,e={})=>{let n=!1;const i=b(e);P(()=>{let o,r=h(),a=T(\"LCP\");const c=s(e,_),p=(i,s,c,l,d)=>{a=T(\"LCP\",-1,i,s,c,l,d),o=u(t,a,H,e.reportAllChanges),n=!1,\"soft-navigation\"===i&&(r=h(!0))},v=t=>{c.u&&t.navigationId&&w(c.u,t),n||o(!0),p(\"soft-navigation\",t.navigationId,t.interactionId,t.name,t.startTime);const e=t.getLargestInteractionContentfulPaint?.();e&&m([e])},m=t=>{e.reportAllChanges||i||(t=t.slice(-1));for(const e of t){if(!e)continue;if(\"soft-navigation\"===e.entryType){v(e);continue}let t=0,n=[],i=e.startTime;if(\"largest-contentful-paint\"===e.entryType)t=Math.max(e.startTime-g(),0),c.l(e),n=[e];else if(\"interaction-contentful-paint\"===e.entryType){const o=e;if(!a.navigationId)continue;if(\"interactionId\"in o&&o.interactionId!=a.navigationInteractionId)continue;i=o.largestContentfulPaint?.renderTime||0,t=Math.max(i-e.startTime,0),o.largestContentfulPaint&&(c.l(o.largestContentfulPaint),n=[o.largestContentfulPaint])}i<r.firstHiddenTime&&(a.value=t,a.entries=n,o())}},y=[\"largest-contentful-paint\"];i&&y.push(\"interaction-contentful-paint\",\"soft-navigation\");const b=S(y,m);if(b){o=u(t,a,H,e.reportAllChanges);const r=[\"keydown\",\"click\",\"visibilitychange\"],s=t=>{if(t.isTrusted&&!n){const t=a.id;F(()=>{if(!n){if(!i){b.disconnect();for(const t of r)removeEventListener(t,s,{capture:!0})}t===a.id&&(n=!0,o(!0))}})}};for(const t of r)addEventListener(t,s,{capture:!0});d(i=>{p(\"back-forward-cache\",a.navigationId,a.navigationInteractionId,a.navigationURL,l()),o=u(t,a,H,e.reportAllChanges),f(()=>{a.value=performance.now()-i.timeStamp,n=!0,o(!0)})})}})})(e=>{t((t=>{let e={timeToFirstByte:0,resourceLoadDelay:0,resourceLoadDuration:0,elementRenderDelay:t.value};if(t.entries.length){const r=t.entries.at(-1),a=r.url&&(U.findLast(t=>t.name===r.url)||performance.getEntriesByType(\"resource\").findLast(t=>t.name===r.url));let s;e.target=o.get(r),e.lcpEntry=r,r.url&&(e.url=r.url),a&&(e.lcpResourceEntry=a);let c=0,l=0;if(\"soft-navigation\"!==t.navigationType?(s=n(),c=s?.activationStart??0,l=s?.responseStart??0):(c=t.navigationStartTime||0,s=i.u?.get(t.navigationId)),s){const n=Math.max(0,l-c),i=Math.max(n,a?(a.requestStart||a.startTime)-c:0),o=Math.min(t.value,Math.max(i,a?a.responseEnd-c:0));e={...e,timeToFirstByte:n,resourceLoadDelay:i-n,resourceLoadDuration:o-i,elementRenderDelay:t.value-o,navigationEntry:s}}}return Object.assign(t,{attribution:e})})(e))},e)},t.onTTFB=(t,e={})=>{((t,e={})=>{const i=b(e);let o=T(\"TTFB\"),r=u(t,o,W,e.reportAllChanges);q(()=>{const a=n();if(a){const n=a.responseStart;o.value=Math.max(n-g(),0),o.entries=[a],r(!0),d(()=>{o=T(\"TTFB\",0,\"back-forward-cache\",o.navigationId,o.navigationInteractionId,o.navigationURL,l()),r=u(t,o,W,e.reportAllChanges),r(!0)}),i&&S([\"soft-navigation\"],n=>{n.forEach(n=>{n.navigationId&&(o=T(\"TTFB\",0,\"soft-navigation\",n.navigationId,n.interactionId,n.name,n.startTime),o.entries=[n],r=u(t,o,W,e.reportAllChanges),r(!0))})},e)}})})(e=>{t((t=>{const e=t.entries[0];let n={waitingDuration:0,cacheDuration:0,dnsDuration:0,connectionDuration:0,requestDuration:0,navigationEntry:e};if(t.entries.length&&e instanceof PerformanceNavigationTiming){const i=e.activationStart||0,o=Math.max((e.workerStart||e.fetchStart||0)-i,0),r=Math.max(e.domainLookupStart-i,0),a=Math.max(e.connectStart-i,0),s=Math.max(e.connectEnd-i,0);n={waitingDuration:o,cacheDuration:r-o,dnsDuration:a-r,connectionDuration:s-a,requestDuration:t.value-s,navigationEntry:e}}return Object.assign(t,{attribution:n})})(e))},e)}}(e)},323:(t,e,n)=>{\"use strict\";Object.defineProperty(e,\"__esModule\",{value:!0}),e.sendObjectBeacon=function(t,e,n,o=!1,r=null){let a=r||`/cdn-cgi/rum?${t}`,s=!0;if(navigator&&\"string\"==typeof navigator.userAgent)try{const t=navigator.userAgent.match(/Chrome\\/([0-9]+)/);t&&t[0].toLowerCase().indexOf(\"chrome\")>-1&&parseInt(t[1])<81&&(s=!1)}catch(t){}if(navigator&&\"function\"==typeof navigator.sendBeacon&&s&&o){e.st=i.SendType.SendBeacon;const t=JSON.stringify(e),n={type:\"application/json\"},o=navigator.sendBeacon&&navigator.sendBeacon.bind(navigator);null==o||o(a,new Blob([t],n))}else{e.st=i.SendType.XHR;const t=JSON.stringify(e),o=new XMLHttpRequest;n&&(o.onreadystatechange=function(){4==this.readyState&&204==this.status&&n()}),o.open(\"POST\",a,!0),o.setRequestHeader(\"content-type\",\"application/json\"),o.send(t)}};const i=n(696)},458:(t,e)=>{\"use strict\";Object.defineProperty(e,\"__esModule\",{value:!0}),e.uuidv4=function(){return crypto.randomUUID?crypto.randomUUID():\"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx\".replace(/[xy]/g,function(t){const e=16*Math.random()|0;return(\"x\"===t?e:3&e|8).toString(16)})}},674:(t,e)=>{\"use strict\";Object.defineProperty(e,\"__esModule\",{value:!0}),e.positiveOnlyFields=e.timingsV2TargetKeys=e.timingsTargetKeys=void 0,e.buildTimingsObject=function(t,n,i,o){if(void 0!==n)for(const r of i){const i=t[r];if(\"number\"==typeof i){if(e.positiveOnlyFields.has(r)&&i<=o)continue;n[r]=Math.ceil(i)}else\"string\"==typeof i&&(n[r]=i)}},e.timingsTargetKeys=[\"navigationStart\",\"domainLookupStart\",\"domainLookupEnd\",\"connectStart\",\"connectEnd\",\"secureConnectionStart\",\"redirectStart\",\"redirectEnd\",\"requestStart\",\"responseStart\",\"responseEnd\",\"domLoading\",\"domComplete\",\"loadEventStart\",\"loadEventEnd\"],e.timingsV2TargetKeys=[\"nextHopProtocol\",\"domainLookupStart\",\"domainLookupEnd\",\"connectStart\",\"connectEnd\",\"secureConnectionStart\",\"redirectStart\",\"redirectEnd\",\"requestStart\",\"responseStart\",\"responseEnd\",\"domInteractive\",\"domComplete\",\"loadEventStart\",\"loadEventEnd\",\"finalResponseHeadersStart\",\"firstInterimResponseStart\",\"transferSize\",\"decodedBodySize\"],e.positiveOnlyFields=new Set([\"secureConnectionStart\",\"redirectStart\",\"redirectEnd\"])},696:(t,e)=>{\"use strict\";var n,i,o,r,a;Object.defineProperty(e,\"__esModule\",{value:!0}),e.NavigationType=e.SpaMonitoringType=e.FetchPriority=e.EventType=e.SendType=void 0,function(t){t[t.SendBeacon=1]=\"SendBeacon\",t[t.XHR=2]=\"XHR\"}(n||(e.SendType=n={})),function(t){t[t.Load=1]=\"Load\",t[t.Additional=2]=\"Additional\",t[t.WebVitalsV2=3]=\"WebVitalsV2\"}(i||(e.EventType=i={})),function(t){t.High=\"high\",t.Low=\"low\",t.Auto=\"auto\"}(o||(e.FetchPriority=o={})),function(t){t[t.None=0]=\"None\",t[t.HistoryAndNavigationAPI=1]=\"HistoryAndNavigationAPI\",t[t.SoftNavigationHeuristics=2]=\"SoftNavigationHeuristics\"}(r||(e.SpaMonitoringType=r={})),function(t){t.Navigate=\"navigate\",t.Reload=\"reload\",t.BackForward=\"back-forward\",t.BackForwardCache=\"back-forward-cache\",t.Prerender=\"prerender\",t.Restore=\"restore\",t.SoftNavigation=\"soft-navigation\",t.RoutingApis=\"routing-apis\"}(a||(e.NavigationType=a={}))},969:()=>{\"use strict\";\"function\"!=typeof Array.prototype.findLast&&Object.defineProperty(Array.prototype,\"findLast\",{value:function(t,e){for(let n=this.length-1;n>=0;n--)if(t.call(e,this[n],n,this))return this[n]},writable:!0,configurable:!0,enumerable:!1}),\"function\"!=typeof Array.prototype.at&&Object.defineProperty(Array.prototype,\"at\",{value:function(t){const e=Math.trunc(t)||0,n=e>=0?e:this.length+e;if(!(n<0||n>=this.length))return this[n]},writable:!0,configurable:!0,enumerable:!1})}},e={};function n(i){var o=e[i];if(void 0!==o)return o.exports;var r=e[i]={exports:{}};return t[i].call(r.exports,r,r.exports,n),r.exports}(()=>{\"use strict\";n(969);const t=n(696),e=n(323),i=n(173),o=n(458),r=n(674),a=n(116);(()=>{function n(t){let e=\"\";if(e=window.location.origin?window.location.origin:`${window.location.protocol}//${window.location.host}`,t&&\"string\"==typeof t)if(0===t.indexOf(\"/\"))e+=t;else try{return new URL(t).href}catch(t){}else{const t=window.location.pathname;t&&t.length>0&&(e+=t),window.location.search&&(e+=window.location.search)}return e}!function(){const s=window.performance||window.webkitPerformance||window.msPerformance||window.mozPerformance,c=\"data-cf-beacon\",l=document.currentScript||(\"function\"==typeof document.querySelector?document.querySelector(`script[${c}]`):void 0),d=[\"lcp\",\"cls\",\"fcp\",\"ttfb\",\"inp\"];let u=(0,o.uuidv4)(),f=[],g=0;const p=(t,e={})=>{var n;const i=null!==(n=e.when)&&void 0!==n?n:Math.ceil(s.now());!e.referrer&&f[f.length-1]&&(e.referrer=f[f.length-1].url),f.push({id:u,url:t,ts:i,referrer:\"\"!==e.referrer?e.referrer:void 0,navigationType:e.navigationType}),f.length>3&&f.shift()};p(document.location.href,{when:0,referrer:document.referrer,navigationType:t.NavigationType.Navigate});let v=window.__cfBeacon?window.__cfBeacon:{};if(v&&\"single\"===v.load)return;if(l){const t=l.getAttribute(c);if(t)try{v=Object.assign(Object.assign({},v),JSON.parse(t))}catch(t){}else{const t=l.getAttribute(\"src\");if(t&&\"function\"==typeof URLSearchParams){const e=new URLSearchParams(t.replace(/^[^\\?]+\\??/,\"\")),n=e.get(\"token\");n&&(v.token=n),v.spa=e.get(\"spa\")}}v&&\"multi\"!==v.load&&(v.load=\"single\"),window.__cfBeacon=v}if(!s||!v||!v.token)return;let m=n();const y=function(e){let n=e;return null==n||\"true\"===n||!0===n?t.SpaMonitoringType.HistoryAndNavigationAPI:\"false\"===n||!1===n?t.SpaMonitoringType.None:(\"string\"==typeof n&&(n=parseInt(n,10)),\"number\"==typeof n&&n>=t.SpaMonitoringType.None&&n<=t.SpaMonitoringType.SoftNavigationHeuristics?n:t.SpaMonitoringType.HistoryAndNavigationAPI)}(v.spa),h=y!==t.SpaMonitoringType.None;let T=null,S=null;const b=v.send&&v.send.to?v.send.to:void 0===v.version?\"https://cloudflareinsights.com/cdn-cgi/rum\":null,w=/Chrome\\/(\\d+)/,E=/Chromium\\/(\\d+)/,I=/Firefox\\/(\\d+)/,P=/Version\\/(\\d+(?:\\.\\d+)?)/,x=/rv:(\\d+(?:\\.\\d+)*)/,L=/AppleWebKit\\/(\\d+(?:\\.\\d+)*)/,C=function(){const t={};if(\"undefined\"==typeof navigator||\"string\"!=typeof navigator.userAgent)return t;const e=navigator.userAgent;if(-1!==e.indexOf(\"Chrome/\")||-1!==e.indexOf(\"Chromium/\")){t.be=\"Blink\";const n=w.exec(e)||E.exec(e);n&&(t.bev=n[1],t.bv=n[1])}else if(-1!==e.indexOf(\"Firefox/\")||-1!==e.indexOf(\"Gecko/\")){t.be=\"Gecko\";const n=x.exec(e);n&&(t.bev=n[1]);const i=I.exec(e);i&&(t.bv=i[1])}else if(-1!==e.indexOf(\"Safari/\")&&-1!==e.indexOf(\"AppleWebKit/\")){t.be=\"WebKit\";const n=L.exec(e);n&&(t.bev=n[1]);const i=P.exec(e);i&&(t.bv=i[1])}return t}();!function(t){try{\"undefined\"!=typeof navigator&&navigator.userAgentData&&\"function\"==typeof navigator.userAgentData.getHighEntropyValues&&navigator.userAgentData.getHighEntropyValues([\"platformVersion\"]).then(function(e){var n;e.platformVersion&&(t.ov=function(t,e){const n=e.split(\".\"),i=parseInt(n[0],10);return\"Windows\"===t?i>=13?\"11\":i>=1?\"10\":n[0]:(\"iOS\"===t||\"macOS\"===t)&&n.length>=2?n[0]+\".\"+n[1]:n[0]}((null===(n=navigator.userAgentData)||void 0===n?void 0:n.platform)||\"\",e.platformVersion))}).catch(function(){})}catch(t){}}(C);let M,A=!1,O=!1;const k={};function N(t){var e,n,i,o,r,a;const s=window.location.pathname;if(!O){const e=\"string\"==typeof(c=t.navigationType)&&q.has(c)?t.navigationType:void 0;e&&function(t,e){const n=V(t);n&&(n.navigationType=e)}(u,e),O=!0}var c;let l;switch(\"INP\"!==t.name&&(k[t.name.toLowerCase()]={value:t.value,path:s}),t.name){case\"CLS\":l=t.attribution,l&&k.cls&&(k.cls.element=l.largestShiftTarget,k.cls.currentRect=null===(e=l.largestShiftSource)||void 0===e?void 0:e.currentRect,k.cls.previousRect=null===(n=l.largestShiftSource)||void 0===n?void 0:n.previousRect);break;case\"LCP\":l=t.attribution,l&&k.lcp&&(k.lcp.element=l.target,k.lcp.size=null===(i=l.lcpEntry)||void 0===i?void 0:i.size,k.lcp.url=l.url,k.lcp.rld=Math.ceil(l.resourceLoadDelay),k.lcp.rlt=Math.ceil(l.resourceLoadDuration),k.lcp.erd=Math.ceil(l.elementRenderDelay),k.lcp.it=null===(o=l.lcpResourceEntry)||void 0===o?void 0:o.initiatorType,k.lcp.fp=null===(a=null===(r=l.lcpEntry)||void 0===r?void 0:r.element)||void 0===a?void 0:a.getAttribute(\"fetchpriority\"));break;case\"INP\":(null==k.inp||Number(k.inp.value)<Number(t.value))&&(k.inp={value:Number(t.value),path:s},l=t.attribution,l&&k.inp&&(k.inp.element=l.interactionTarget,k.inp.name=l.interactionType,k.inp.idy=Math.ceil(l.inputDelay),k.inp.pdn=Math.ceil(l.processingDuration),k.inp.pdy=Math.ceil(l.presentationDelay)))}}\"PerformanceObserver\"in window&&\"function\"==typeof PerformanceObserver&&PerformanceObserver.supportedEntryTypes&&((0,i.onLCP)(N,{reportAllChanges:!0,reportSoftNavs:!0}),(0,i.onFCP)(N),(0,i.onINP)(N,{reportSoftNavs:!0}),(0,i.onTTFB)(N),PerformanceObserver.supportedEntryTypes&&-1!==PerformanceObserver.supportedEntryTypes.indexOf(\"layout-shift\")&&(0,i.onCLS)(N,{reportAllChanges:!0,reportSoftNavs:!0})),document.addEventListener(\"visibilitychange\",()=>{if(\"hidden\"===document.visibilityState){if(h&&F()){const t=n();(null==M?void 0:M.url)==t&&(null==M?void 0:M.triggered)||D(),p(t)}!A&&M&&(A=!0,R())}});const D=i=>{g++;let o=function(e){const i=K(u)===t.NavigationType.RoutingApis||K(u)===t.NavigationType.SoftNavigation,o=!i,a=s.timing,c=e||n(),l=Object.assign(Object.assign({},z(t.EventType.Load,c)),{memory:{},timings:{},firstPaint:0,firstContentfulPaint:0,versions:{fl:v?v.version:\"\",js:\"2026.9.1\",timings:1}});if(o){if(\"function\"==typeof s.getEntriesByType){const t=s.getEntriesByType(\"navigation\");if(t&&Array.isArray(t)&&t.length>0){l.timingsV2={},l.versions.timings=2,delete l.timings,t[0].deliveryType&&(l.dt=t[0].deliveryType);const e=t[0];(0,r.buildTimingsObject)(e,l.timingsV2,r.timingsV2TargetKeys,e.startTime)}}if(1===l.versions.timings){const t=a;l.timings&&(0,r.buildTimingsObject)(t,l.timings,r.timingsTargetKeys,t.navigationStart)}s.memory?function(t,e){for(const n in t){const i=t[n];void 0!==e&&(\"number\"!=typeof i&&\"string\"!=typeof i||(e[n]=i))}}(s.memory,l.memory):delete l.memory,l.firstPaint=J(\"first-paint\"),l.firstContentfulPaint=J(\"first-contentful-paint\")}return v&&(v.icTag&&(l.icTag=v.icTag),l.siteToken=v.token),i&&(delete l.timings,delete l.timingsV2,delete l.memory,delete l.firstPaint,delete l.firstContentfulPaint,delete l.serverTimings),l}(i);o&&v&&v&&((0,e.sendObjectBeacon)(\"\",o,()=>{},!1,b),void 0!==v.forward&&void 0!==v.forward.url&&(0,e.sendObjectBeacon)(\"\",o,()=>{},!1,v.forward.url))},R=n=>{let i=function(e){const n=Object.assign({},z(t.EventType.WebVitalsV2,e));return v&&(v.version&&(n.versions.fl=v.version),v.icTag&&(n.icTag=v.icTag),n.siteToken=v.token),k&&d.forEach(t=>{k[t]&&void 0!==k[t].value&&(n[t]=k[t],n[t]&&n[t].value&&(n[t].value=(0,a.roundWebVitalValue)(t,n[t].value)))}),n}(n);d.forEach(t=>{delete k[t]}),v&&(0,e.sendObjectBeacon)(\"\",i,()=>{},!0,b)},B=()=>{const t=window.__cfRl&&window.__cfRl.done||window.__cfQR&&window.__cfQR.done;t?t.then(D):D(),M={id:u,url:n(),ts:(new Date).getTime(),triggered:!0}};\"complete\"===window.document.readyState?B():window.addEventListener(\"load\",()=>{window.setTimeout(B)});const F=()=>h&&0===f.filter(t=>t.id===u).length;function j(){u=(0,o.uuidv4)()}var _,H;function V(t){for(let e=f.length-1;e>=0;e--)if(f[e].id===t)return f[e]}function U(t){var e;if(t){let n=null===(e=V(t))||void 0===e?void 0:e.ts;if(n)return Math.ceil(s.timeOrigin+n)}return Math.ceil(s.timeOrigin)}function W(t){var e;return null===(e=V(t))||void 0===e?void 0:e.referrer}h&&(y===t.SpaMonitoringType.SoftNavigationHeuristics&&(T=function(){var e,n;if(!(\"PerformanceObserver\"in window)||!PerformanceObserver.supportedEntryTypes||-1===PerformanceObserver.supportedEntryTypes.indexOf(\"soft-navigation\"))return null;if(\"function\"!=typeof(null===(n=null===(e=window.PerformanceSoftNavigation)||void 0===e?void 0:e.prototype)||void 0===n?void 0:n.getLargestInteractionContentfulPaint))return null;const i=new PerformanceObserver(e=>{for(const n of e.getEntries())R(m),j(),m=n.name,p(n.name,{navigationType:t.NavigationType.SoftNavigation,when:n.startTime}),D(n.name)});if(!i||\"function\"!=typeof i.observe)return null;try{i.observe({type:\"soft-navigation\",buffered:!0})}catch(t){return null}return i}()),T||y!==t.SpaMonitoringType.HistoryAndNavigationAPI&&y!==t.SpaMonitoringType.SoftNavigationHeuristics||(S=function(){if(!(\"navigation\"in window)||!window.navigation)return null;let e=function(e){var n,i;e.canIntercept&&(R(m),!e.destination||\"boolean\"!=typeof e.destination.sameDocument||e.destination.sameDocument?(j(),m=null!==(i=null===(n=null==e?void 0:e.destination)||void 0===n?void 0:n.url)&&void 0!==i?i:m,p(m,{navigationType:t.NavigationType.RoutingApis}),D(m)):A=!0)};return window.navigation.addEventListener(\"navigate\",e),e}(),S||(_=window.history,(H=_.pushState)&&(_.pushState=function(e,i,o){const r=n(o);return m!=r&&(R(m),j(),p(r,{navigationType:t.NavigationType.RoutingApis}),D(r),m=r),H.apply(_,[e,i,o])},window.addEventListener(\"popstate\",function(e){m!=n()&&(R(m),j(),m=n(),p(m,{navigationType:t.NavigationType.RoutingApis}),D(m))})))));const q=new Set(Object.keys(t.NavigationType).map(e=>t.NavigationType[e]));function K(t){var e;return null===(e=V(t))||void 0===e?void 0:e.navigationType}function $(){if(!v||!v.serverTiming)return;let t=[];for(const e of[\"navigation\",\"resource\"])for(const n of s.getEntriesByType(e)){const{name:i,serverTiming:o}=n;if(o){if(\"resource\"===e){const t=v.serverTiming.location_startswith;if(!t||!Array.isArray(t))continue;let e=!1;for(const n of t)if(i.startsWith(n)){e=!0;break}if(!e)continue}for(const{name:n,description:r,duration:a}of o)if(v.serverTiming.name&&v.serverTiming.name[n])try{const o=new URL(i);t.push({location:\"resource\"===e?`${o.origin}${o.pathname}`:void 0,name:n,dur:a,desc:r})}catch(t){}}}return t}function z(e,i){const o=K(u),r=o===t.NavigationType.RoutingApis||o===t.NavigationType.SoftNavigation,s={startTime:U(u),pageloadId:u,n:g>1?g:void 0,eventType:e,nt:o,location:(0,a.cleanLocation)(i||n())||\"\",referrer:(0,a.cleanLocation)(W(u)),serverTimings:r?void 0:$(),versions:{js:\"2026.9.1\"},bi:(c=C,c.bv||c.ov||c.be||c.bev?C:void 0)};var c;return S&&s.nt===t.NavigationType.RoutingApis&&(s.ntapi=1),s}function J(t){var e;if(\"first-contentful-paint\"===t&&k.fcp&&k.fcp.value)return Math.ceil(k.fcp.value);if(\"function\"==typeof s.getEntriesByType){const n=null===(e=s.getEntriesByType(\"paint\"))||void 0===e?void 0:e.filter(e=>e.name===t)[0];return n?Math.ceil(n.startTime):0}return 0}}()})()})()})();"}, "entries": ["08c4fd72f9d96a7a_v31edd6df95cf4e85bb4c19e7a9bdb.js"]};
+var urls = {};
+for (var fn in D.sources) {
+  try { urls[fn] = URL.createObjectURL(
+    new Blob([D.sources[fn]], {type:'text/javascript'})); } catch(e){}
+}
+var imports = {};
+for (var fn in urls) {
+  imports[fn] = urls[fn];
+  imports['./' + fn] = urls[fn];
+  imports['assets/' + fn] = urls[fn];
+}
+var im = document.createElement('script');
+im.type = 'importmap';
+im.textContent = JSON.stringify({imports: imports});
+(document.head || document.documentElement).appendChild(im);
+D.entries.forEach(function(e){
+  if (!urls[e]) return;
+  var s = document.createElement('script');
+  s.type = 'module'; s.src = urls[e];
+  (document.head || document.documentElement).appendChild(s);
+});
+})();</script><script data-offline-runtime="1">(function(){
+var D = {"entries": [{"b": "e30K", "t": "application/json"}, {"b": "eyJzb2Rhcl9xdWVyeV9pZCI6IjZKLXRhck9JQnFTT3U3WVBpdldIQ1EiLCJpbmplY3Rvcl9iYXNlbmFtZSI6InNvZGFyMiIsImJnX2hhc2hfYmFzZW5hbWUiOiJtamRDMFpTcUh2MHlRaGxUZzNkMzJ2TVNWMFZhOG03ekRMYnRGTW5hWENBIiwiYmdfYmluYXJ5IjoiTW9VODBvNDZkYTlCT2ZJSExmYXBpcGpXSkZocGZkSXVCUDNGZE12MGlMaXR6UlZyS3V6M1RmQy9FMUxjR1pSa09HaGV5bFZ6SURtWlBvZUp3OStmaURadkl3aFFsekZEenBtSVhMbUFhQlkyYlZJWUNOWmc3VjZHTCt6bVMzYlh3YXoweUZrd1RnVW5YNGdYTkhId2ZMYnQ5bHBvdmZvTXUyQkRiQkIxdUZEM0Q1d1A0eGg2NHpiUHM3c0hTR1ZnMnZOYkJwbnEvVGhpRHBNVXkzeUNPNFZUcWJCdlY1SGQ2SXkzWUY5dVFKRjZXT1RzWjlVY3dYbVl4cEsrbTVtRkxVU1B2ZExLQjh5Ny90QnVGUDFPT2kyRzRFYlVsRXV4dDhtbEJJU3pTaUNOYUhqRW16b29pSkVoWldxNXViWW5pWHZhNmo4RFl3K25Qdml4Zmw0VmY1TFlRaUlXVjBqN2dmc3pkMEViTVZvcTB4M0Q0SGF2KzM3WThxR1p4dWl3NVBRbzNMenVGbnVVbEpCTlNCWkpEVnRXV0ZpYzV3WnlqR0U0V0d5Ym51dWt3dHJIRm1GbDZiTURsQldtYkd3S2NlaUs1YzR6cDZHK3o4Q0JtZDBYU1RhYjdPWmdicEI1TUJpMnNsczRqWWZObEs5KzBTYTQ5OVpvNkxEbXRWRm9kNXIyMHlzNjBzOXBURzN5Z29sMUg2WGFBSnN3QXNreXFzZTdTY1o2K2M1TktWS0NJOGEwemZKdi8yUEFOMlRUZVpwTmtLLzhuSUp6dUVTZFVZWDMrTDdXQ1gwODVCZ3l4dkkzaWw0OGpuaG04bVdPRUJXMTdTbkM4b3dIYjd6U2xjZTlMT1l2KzMzWis4Q0ZET25VaUVKSnlBY3ZUMURKT3pOR1NKdjY3aGF3R1R6b2s3UUxBU2MxekxBU0tJclEvT0l6T1U5K2hKcnd0VDlVUU9TejV6SWZJdHNIc0Foa21YVjRXeXhRL3VnVURmcEI4T296RGl2ZDhyaTN1YUltUVFyQkJRbDZWNXY0a01kci9IcVNIMWE4RzcwQ1cwcHlISG4xWjZJRmtvR0t1bXdYQ0hXVVVZRlAvZGord1F1SDAybFVTbUhKZlJBaHlVRUR2VXcwUURiVXVvUjRHVEQrVEQyclJzdFhSTnhUblF1Vk1KR2tmeEtwYXZRRkRyS2FqV0FUU29qMEdNTENVWTVMQUJzNnp6TmlyY1o3OUM3dVBHOUU4QVJKc2VFOGhOekpIVjRIZlZTcDJBY1JiSlVXMnhYYjluOEdWcUljYld4K3U5YmF6TThXZzlQaU13eWhFOEx5NnlhK2VxbS9ZQ1hLbFVQdnhKbEtIaFNybXVLRWJZNzBOYjE4KzZPUVd4MFJRQ3ZIOU5qMEdKOVdQbmppRzRPZWR3dFZvWk5KdThwSWlJeGRBZWtXMzdyV0sxRTJKOVNZTGwrSVJwckVweC9BUmQ4RnNwWmFYUStCeTRsMXRsVUpsV3JSR3lqZXdUN3JybmdiNlZDZWhCSHNGd3IyYXNacElvQTlqUTZNbVBNZDgwTlZyak5ZcHM2MCt0eE4yQkhNckNEeG5EanlTcjFFbGlScjBBWlVHM1JtZkNWNnkxRFdTWElNUVVCWFNnbWlheStUNXVjSkUvZmMvbVNFcFVyRDl3M0hPM1l0QVZybWlEM00rMjhKUCtxLzVKUFhWTzh0S1BwQVhDeFovazJiUXJwUWw5YURYN2d6K1NQZ251YWJOSGcxRzUvTXZWdTdEWUJTZ0NGWGVJd3FrbjdPaVNYYkxZSUpvR0g3cU9tcG80dGVCeHQvWVArTGRTZDFYY2hVayszQjJNeks3TVBjMUxvV1l1eHl3aGF4cUZmZnhUYnZmbEt0VFZMdC9EVEF0QnRQUnVyVFFIejl3QnpYV2drMUhXRWVWZGJzTjRneDlUOWphcFk4ZTZNSGt0V3BXMnBkOWVLb2x0aWRScHdQa1FsMS8rSXJGRDZiMTNjQVdLMXh6K0Z3d3Z3S3ZheEp1Q2hDR3BmNUt1L0dnc2I5UG02b295bktpWGZ4Tmc3ZnFSdHZnWHk5NXJ2SUV4U1pXZGFKYUlzbCtYSGtXMEVKSlFxMkJTNW5paWxmcnoxaCtPd05qSzNvbFJzRXBteXFqSGtGMzlFZTF2bFpzNlVXalBkUVBrbzkxQzI5VCtrQjBmem1FeU92QjBqZ01ER2dKQU12UUpNNVhNczhoTWVWeUN0MGQ5emVDaW0vcWxIQTdKN0ZRRnkvUXZVek80cnFyZTRyYjZoc0xMQlZEK0dpZWwwT0VmOE8xQXYyaXJ3b1pDcEt3dFhJc1pFY0N3TkpLdkRWZXBhbFFaSWJlRnpiaWM2RXNCeTdzd1dsQUtQRGZpV3N1K0JoYVNKNFJOUFBkd1doZ0VQWDl3cTF0NnU4NnhDUXBIY1JXR3gwNzZKNHNEY2FlajIxOXRQWWpNRnNsNkF2cDI1aGo3aDRrNk5WSnRSa0d6ZUViTGdqa0VEbjV6SWV2bzZ6a04zUi8vaUFrZktIc3d3UTBObmw3SEJqcy8zVlZlZjdOaEhqK1F3WTFRTjNDTTFlOWxzVTN2UGIxSnF5Mk9vRkVaYnQyQlcwMXNzd0hxQzdGekYrdGJxQkQ4bFVZWG8reE53TDFWUTJBUTFSdUYvRlZuRzRxSm1SdU1qM01KeGN3bVZ2b0FmYm9zQ0FsQ3hXSWdUa1JLcmZrc3o0TWlZSE5mdnRKd2FPMlhmNm1GejRjTWx3UkdsUGwvSUZwd2o5YTVoTGdJUXRVOS9oSXdQVkVvR2txc3ExbXdwelFuWmhtODlMbURaQkJ2ampBOGJIdXFENzhOcEhzM0FhMFZXQmtpRG1tbTF2VWRjUVZ5TlQ2OGZ4TnZwdDM3RFU2Y0l0enNFSWVsTWRQeDBNTXU2TE82QmFleXFQSnBrZHo1bWF6b2I3Nmp2dTFKY2g1cUZBMlpNNXpMNkRjZVo5eUlOOGdJaWtUbDR1aU1vUFZHWkY3VVFKc3pUMFhnT2w5K01vZUNsWHE5VVNaV05wazBhVHZQc2lvSmYxcVFGajFMTm0vZENXUkc5aEFRTkVDeGtLM2d1MFpBZW1JUDlsZWszajRNaWlpck0vMVg0NnYxaXVPdDdIMjJia050VGFaL1RjcHF0S0xzdWFzMkh3S3Z5bG9NUUpZdjI2R0ZQTWR3RTVkTnhKZHdWUjVuaG9XQlhVWVNLcUVvWHFUSGlWUVQ1cVFzdU1KTjZDYSs0MzFLTGVPc1BDQVpqREVoODNJOVpkUk1paXpjQjc3VW1IVlFSODc1SE04OVpLUzZOdlhOOWhsdTEvMEVmNTZpb3VzL0wrRUVtVHFtSGdyOXVtZGV0ZDVmOHNOMG45a2kzQ0N4N3lHNFZYTTdsSkRmeFhsWWZ2N2srdnp6R284YmZDOU1aaUM2dW4rMlhVN0k4UU81bXc0a3BvY2lvVkNVSFRCTVY3d2FZUks3aUNCWjROK3BodjNlN2ZFbjJucUp5RXM0Vm5PVmJPdExIVS9OMndvS2Exd3lBeS9mYjlCcVArM2lMcHY4NmtVSXlZVHFVQWc4RUZ3ZERGV3dmK0hLdjRkREI1WFRFNFoxMXp0dno5K0lFMmd0eExNUVIvTm1Ubjd2WldDZnNsSHVDVXZaZGwxbllQdnVYd1lwOTBCcVFYOWtUaCtzWUxIbXRscDBjSzNBSFc4ZUJHaEhmelFZVldDTU9sc0hYdjJTMzNqeS9sa0Q4SE43Nm9XVGRuY1FNd1liZEVuVXhySTlzKy9KaEgzemVsVFVqd3dCSDRPTlM0MDRvckRhcGIxL3VBbjVaak5Xa01VOE1NZEgwWkRtQ1g3Ym9rcUY4ZncvL25uQzBXT05SV3dMSmxoQWtrbFl3YWhWRmZVYWdzZFBzWHJQd2FOUTUrQ0s4cU5EUTNVWmFVMzlWMUlSQk1mSzV5UThUMGNoSVpVV2xxMEtObEorZWROSjRYQlMzREVtNEo4Zm83YzdyaUNXSXlWMWRyRXhadlFxbVVRSVplWGJkUEQzRGQzcURoN1BoYjRUeHBSZ3FPcFJMaUdRWVdvbW9DL3BScmlFdEFaVmlZb2d3NHJZN3ZFM3l1MFdLVi9uMnlxa1FjZUUySVk5ZEhLVVF6SXlMbVBKVTk4OGhmOWxmZEc3SWtJY1pNVW1HNVk5Y1hCVXE4VFE5OFdkcGIydXRPc0E2UVlQWHNvUmR3c0oxNnM3dlJHU2FWbUN5WGZTNXJhYmsvc0Y2cElhTFgzMHlCUm5obWxwSUNlZWxKUk9TU3N3czZUdVVudnZUTWxWcG8ya1JGamg3OW0vUnpEb29yRHRMVjhVUzgySCtuN1N3S1gwOWJkNnhsaTVWWUxZZzRFeXJsaDZUN2djTGkwZ080UVlVMXhJTVFRSitFWVhKblplTjFFN1NmWk81dG4zek51cmNxb1ZkN3JIYy9BRjdNMExNQnhrSjNZSzl3bFVhM1RPWFd3bit6MDlqN09tWFZRTk9OZnExN0hDQUxvQkZtN01abnBSYnQ1N0VUNVhtaTA0VzhEQkhENUlTVWoxaDFxeS9kRkRJNjV2WGZSeitUZ1NiSkNGWDVmTm9XcnU5dnQvWjl6T0JFUXV0ZFlvaVBmMnUzdHRGenRwK09TNTVNZThvcU9OY2ZMYTluM1FSYVBqcFdDR0VUcmNwY0FYbWRuY01NRDRLZEp0LzNoVHoydjlmUzhUQW1DbnhkL2ZHZDBpN0dQSzkyekw4cHpmMTk5R20veG1yUlgrUDZ2UGFCZU4wWVNHZlA4VnhodEc4YlpMTFZJaGhXSXVSSVlkNzgrZm1VWjRqTHhJWG80c2JZRDNwNUhDREU5NVFaMjBXWW8rempkdUE3c21nWEFBcWY1YW9VU0FHNjduczBVZjJ4dU9uYnRNZ0VKcDRmSUlNRGdMQnYvZEsyRC8rWjEyWW50UEhnMFh0eFB5dVV4b2swc05YMVNHajYzcFoxOEpsdEJJNk9yUkVzeGVEL3BxS1E1TzhpL3hsV1hMNnJqdmdxWjh0NmtwamIzNCtqNUtaNnpmNFJVd1dDVjU1R0QrS0U3bW9md3F3cmc4V3FITVpEQ0YyYWVDSUJYNDIwbFYrU2M0U1A0eUd6U0EyVk1RZDdYSzZHRFdQekd6b0N4RS9HYzhBcW94U2J3M1Vvc3dKL2g0c0dPZWRtZDVLYkMxaXhjcldoK2dNSXQ3RGV4Zk9iSG1ad3hKQnNlOGYvbmxvYklXZjRzQXBZVkxFek5QQXhJMStoUDdBQ2tOSEwwMDVEMlRudy83azFhMDJyWUpWYmpDYm1aakp0cGViZ3hYd3RJN0p2N1NSVGxZSEVCWWRuSmF4T2JDOFJhT2taS1FlWWUzbEJaWGF6K3F6bzRrMnhJa2JZODc3SVNhdjhkejIvdy9JNWx1d1IxRllVdGFDaldXWkF1endEd3J0c0l0MHY5dFpVOU1lK004NkhQb1pGSWdQa2NQMHM4azlaaFRodGNYamlSc3IzcHpKTkwyd1JsS20xeit3TzduU1owTFVwQTMzUVhXVGwraC9sNUUzNUpVY1pVay8rek92WlpJQkp3U09renJLRmhVVFl5UFc0UTZJUllkbUYwUDRDNWJUc3VuaCt6NDlnUUhCSkw0cmRXVlMrNm1XaUp2YldjOU9JZ2tPREEzMjZPeUVuNStYd09UTGlnYi9uWGd4NWFaN09SdW1QOE5vVjBEcnc0bDlDSmF3OHVQSUFUUWd1ZWpWSGdtS1drd0liZE8rN2ZiTGFjY3JKNCtTWHU1Y0ltUlNMZXBqR3gvV3E5V0U0QlJMbDI3RTViMTZpT3lVRWdHNkUvQ1hoLzBLMkJrQTlWeGpUcy90TUl4UFVGK1pjQlUzTUN5WjBzcEZWMUhIT1dkMEs0dlJpdFlPc1ozZ0RoK2JMSUg2NEl0MExielZIdDMrME5UZStGblVqRjJUQjN5Q3ZHWllLMlZMNzdZZThMZUwwUVRNU2YrTTN2REVUK3J3L2w5L3lKd3AvZjA4QXFHaGxXczd3NU44OEl1eEN5elphbUdjMTJHa0t3Q1BmMXN3ejVGSjhkbzFBWFJOR0JJYkduM1kzTDBjU3ZCdUhRQ0dndnhPcTBsSmtSSWxHaVNERmNReEVqcmVVMGhvZ0JmaU1XRkx0ZGM4MjdVZlJQQWVPdU9scVFWSW1nQU0rckNlc3FvbzdWU0lKcWdMeUpQZHZkelVVaENNVTk0UFRJNTd0SStFdmk3VW9kNFo1ay9POTdUVU9HTXduTVBFam9VbFBBZ2xBZ2RRU1EzeGlGczFEaVIrNmd5YjJPV2xKWHR4NmtZNE1TWWY2czNkT212UWZleEYvYXdxWCt0eEF6aHNYZFdiVmVpUEpzMFBzZ3FjaHZpT3RLUjRFMGwzbEhSQ1krRnRTZkwvNElzcjh3RUNGUFd3OTZ2bGQ0bzdqajFEOHFNNmh4czcvVFFtM3JEaVVQTStiUjlsWWZaK1c4elRDdGV2cU5XRVhpUzR2cnMvU1VZVjJTUDJ3U0Rac3dpc0wzTWJyS0FzeHJ6Ty83bm0zU09iOFkrcGJYNlNuYjVOR2dLR0taelZNUUFhbENkRTczWVp6LzF1VkZESGszbWxKS2NmeG1rN3A4YjdEak5XcG8ycXovdkJOa2NWclpWVEZNbGlacUNnbmI1dDE4eDVpWUlvK2g5NXZaWmJYdlErc0hTWlg5dEMvZ2U4bFZvMC9VbW9wem5OeEV3cjd4a2xBUkdYMWJabGRicjVBZHAzL0dmVkdFa25VV3ladE5PVlhucnhsazBnRit4azQ3eWRkdjBMQk5LVjZjbzhEN2FQK283ZWs2Z0ZIUnZsODRZcTB2Q3hFMU1JL1VNa1J3ZEdmb3pDWGVSVEJaazNMa1lmM2M0L082c0FNY0tWeTRjTW1LblJzS3BvaHVnOEdrT0dxZ0tsaEU5dGhaN1F0b3YwQUlxMU5jYnBGU3Q0Vmd1Mzd5VTY0TWdDZVBuSy9RWlJxZk5RUXVGcnBJYituaWdtait3Y3R1WVBtWEJ6Y3BNcEpBVGlDYldMOGdXc3V5LytaY2dUOHU1ZWo3cHpQNjRFNUFhaWN3VXFVOFlQMWQvYVpRREg4cmcxYWpDOFpqTWd1TzdCcGtwYjZ2L1dvVmdVMGVWcHY0dldsZHVUZDllbHZkV1RFc3UzbXJkRHNvcXFLbkpueTQ4ZXBFWUdibnVXY0x1VHZ3ai9idFJPYm5pV2VvSE0xaDE2Y25Rcyt5NUlqN3JuVE43T2JYREs1TUlFYXh2RGpVT1VhREozaGJEUVZMOGtSVXFzcS9Ha2ZUREZHd25uL0J0ekdOMkhJTlZtVW5HbnFRbDlySG5pQzRvcUhjVkt5aDhZcWpHNnJ2K2ZRNHNoVmtsQWc1WjJWandKUTJJRmtESnJhZHI0dUM4M05nQVlzRXlwUmplS1hUdTBmc09EbmRSWmUzZGVDNWVZM0lYTlFTd3RGN3FUckg2Y1hKU3ZVaE9QaDBBODBpRU9rWW9BaXpkeTNPOU1pQTd1d2g0YzNJZ1BkbFE4UDFYZ0Y4TTU2dURwcmx5d3o2S1BzeHRieEdMSGRlanJra2oxcVZPRm1nTVNFelJlV3duNUFYOERqUEtDMlo3VHdZMTR2ZnV4K1VOQXk5cjZsNHl6TC9CWkVqSkJzV05RVmtKMVhNQ0txOE9qN0tmdW9IT3ZQcmUwWXZhc1ZZUUhWMHFVUXRodER5SUltR0ZCYnRjcnhvcjFhemFmdTRlQ0twbVNhWGQzVFZpNlhyQjc3TTRYbDdqVE9NRzZoaDFIYUxodjFpczJzR1ozM1Qycy9UTlFWQUNHNTY2b2x5clVkMmVuNmQwa25kZFh1elVXa1ZGZ0dUMlJwUVkxaVJMRDMwM0ZwZklpRjNCNjNYaFdhWkg0QUhOcHRoRFRJRWdBbHM1L1hmZWE5ZFJ4Q1VNd3NWMExjejlwRE0zTFpiMkNNd0xjS0V3amRVWVAwOThuT3hPQm0vVTFYSTNqWC9DZ1J1OG1xem9aL2piNEZlSFcxZm10QlJ0SVluZlY0NXFXMllPckRDR0R6blF1U2tNM000bU4xa0ljUlh2UUNOdVpBeGlLNThLSzZ2cDZYdTk1clpnNUNhOGxJcWJ5Tk5EU2ZWeWdjY3BnSWdzZGEyR2dMVkgwM0dSSUl1NjdRUVJjMjFpL1NjekxqK21jZWV5Ylh1cytZYUZlU0h1Zm1vc1JlSTZPeW1ZL2lKWHRNa25hYnBLK1dNSnRrbTNpQ3BPZzZ4WU4zUHNlN1d3MUkwdDdKZE1kSERETThkN0lJWFlmVnBrU0dqYTJnUWdJNXpUeFZ2c2dDZ0NhaVU1VGZRVUl2Z0FwRzZaOTVTakRYd3ZZTWNHdEIyM3J2SWV4SzhkN1ljUWhlRUhPZ2gvNmFaa2VMQWlhdFhMbnFIa01PckpTRlJSMEJOMnFlZFk5K01xWE9zZi9HSzRGeTVFRHVyQmcrcnNINmhTZ0lvT2pOZkpYM0tFb1A2N0c0cFpEUmpLeFk5c3dHbTMyMERjZGFKVjdET1BDU3NSQ2tkeGdoOHg2VkU1Yit0bmZ6TXdQZ0tBSVNJa3RtNlIyb3VCVnpOVFhjSXBBOXIwVWQ2WUlpRkYyeGoyYkVPY3p3OWJxTVllWlRyTnFwMHNDV091d01KY0hXZFpyNHFSSGtmZzB2RHFLOXdIVzNEaWhFd2ZwdW5kaTZMRDBBaCtPQUJLRTI2b05Lc0t5NHAxREV4L01RLzhQaVNOK1lzNXRnaHRjVW15NmhSSWVXSis4S0RyU2tZQjNUN2pITkNNa3pkbUxtRG81a2JrNlpLWUNiNGNqQWc0cnBrbnU4RTdhd1JEN2syMEtyQ2x0ZkxWWE5aTEFNdmxkRnRaRlY1R25VMDl5TXdkMmE0M0hBYWdxeitrQ2F2SW5VVjJ6YTBzbUFrOHQ4MEE2eDBtcWRPUFdKNXorNCt0Szk2R3FQbVpCc2tESVNWb0pScUJNVVZQdXpmNkpKVmVjT2lkZnArZnB1dG93bVNqenN2TXNQbTRnU21uM0o5eXpRRWloa0hZaE9FWWc0MUFvTnE1MHJZam16dXRXckgrN0RRNTZhRjg3UTl0eUR5ZjNDSm8wOVpkQ0ZhR3ZHcUE4UWplUU9VVDdzOFArdDNCYkh0Q25acm1jZjlYeE5ZNjlvRXhaSUlvSzk4Yll3Q3lxOGFRVVpEWGtveFFkSW9EY3BjQ1F1S2xMTTI0TG9xckp0YW45cExiTExkWkY1Y3BNV1JNWlpObER0cXpDaTRqT3FOQUF5Q3daVS9nVkc0OE1vZnM5QTNuL003NGRCcGJZdnhCTGhNN0tBMCtHZy9EaDExaHM2YUllbHljKzlhNFpObGxGUnpzdkxGVzlzR0tpdlAzWGdndjJIM3F0eitXeTdXWTFBcjl5QUVxaWdreW1jNFdEY2w3RUxyQUNWU3E2UGhqZ1NCU3dTZ3g3NVZBaUNPSk1tR2c1bnJjTFg5WjJiMWdpRDR3L3JhMm5Hb0xJQ1YvYVVwejhyckNYWmYwSm5ra0xGVVQ3T3o2dm9LelZvek94d2F3UzdxNkpodUV4Z1FmQ1psM3lJRU1NTkw3TCtPbXNpNUtjNzEvQUtnT3dLRnBHUXB0ckdrdkdTUEZVaytZTUNsYWp3VWw1ZEt0b3JHd1UyeFJQTVoyQjcySmhVSkppY29RZ3BoMklWVXo4bEIxUEVndGtKbFpFWWE3ZkR1elQ2QUJmejJoWGFib1VsTE9vVzROcGxCWlhzQ3BQVHRWN1cwa3hhRVJTWitBWS9ncnd1TmVsN2l5TzRRUmJjU3dKR213aEJGSkIxRGd5ZkpCajNFREZPNERudTFXOFpBMVh3a3hoQ1lWYXczZEFBS3JLVGhSNDRGbEpMZHphSUlBNVFackxxWU41ZUIrbysvZUE4TGUydzlNZlIrc0VUN01PdnZrWU5QUFQxOGVySGlzVDFmK1p6aitSQ0NoLzlwbVVxM3h4SldrK0duenVaT0VTS2lvWHE5Y2RBL0N1ZEtNdWd6alAyTlE5bWdhaGNiMFlCY3lTVjNhV1R1NDgwd3YwWko3WDlQdGJsSjBqaFdwYnRwYkJneDFQUFllbkJlOUpNOWhrZEJvUXJNU0hJWWgzY043T2x1blVnSHFLZ0MrUFdmNGNxYUZvR1hJeEJMK0tUYkkrOGNYajFTRDg3MVBMcUFJNHdnN29OREh3bFNqZHN3OUtmYVNsTXhhMzF6MnBaYnlXZlhJVktFdUl4MFpIVFRYakZ0TXlxc05GQUIrczR5TlFXTkdHeFlUR3RQK1BwQ2pZWEt6aFBPZzVTUmdWMFNTT1lQUkxWNlhTN2d1czJnU2xmZjQzeGt5US9ZU1ptMWdmNGVTZ3FJVzlidjIyK2Rrd0Iwd2RLaUVFZnpmQmFlSlUzTk1uTnREYnJvZjRYQzhWYzhOb3hpSUNHclFRc1pBRTU1bEtadGwvaEg3SnhmL0prZlF1QmY3VGlmTjNVOVVxMWl2WGpTeDJvTEpOekpqblN5VU8wVU45bGEyRGkyeStRWUg5UENqYnE3YWdNTE1TUHVZVUtHN1FkSlVVMlFoOERwOTBtV01peDRlRE1SdjNhOTZHVkQwSXZKbUFQUktselhERUtHckdiTzQ2Vm9UZ0MxdFpmb3llSXVIY1hObEtTTkdGU3l5dHRCRnFZdHNvSlB2RTlEajRaeDk4MW9CMFQzbWRUZDhYajA1N2FRdjFPUVhhaGM0SjlBakZZRm13V1cvb2lDMlNXRjVEWXl0Q1FQQjFiejE0dVg3OGxkVnR6Zi9hWFpUUktCSmoyYXo4YlNNZWY5SXpLSllOR2ZaT3VmcjU0U1BOOVJXZU9OOE80aTh2dTdxMDZldlV0YVVPbDN6TTlSKzd1dDRoTmlEVFJEZXR4N3F0OXhISy9lRFhzNmNRd2IvVVVYd1ZrWFZTTUxBd3B4d2s0ZjBuWnV2ek4zNWI5SFc5eFNaZUNjVmszSVhaVVB2SW5zcUZTOFkrMTUxMi95aVR4blFPQmxCcCtLdm9qYmg3c284MWcrZzJlVkZnNm1KdFdXRDN4QjFObG9JKzVzaGQ5b2ptSy8rUWROUzgwRlRlZDBhTDVTL3h5dlJ6anhUMUN2K1hjTzZSU1RjcTk2blNGdk0xSDNlU3BoOE82bTIzMk92UTRFZFNrVXlJM1RxSlhDVm9ENkxTS2xyV0pYVDE1cU4wL3plSHIwNkZuTWZPSTVlMFhvSkpoelA5VXBFQXV1TWRTTWx1K1NpVFFDMkpoeG5RVXpNYUg2OWk0RC9ONFAwSG1Jb2VtVGhIWnhuUUtuY3FxZlVpMlBpRW0wTmNJRnRQZkFkc3dLcmg3bHJqdmdTeE9sU2VOVWdQNHV2TVRjZFozRlM4dVZCSTBHR1B4TDdjb0tuVkRkVlRQSmNxYUw2V1RrbHZZZXBScTVIQ0xwL2pDanJOTHNVRnR0NjVIOTJDYWJvaWMxbVJoM1lCa2xVSEN3YmVJSm4rTWRJZERLY1NsRjJvTjZJdWJoVkVLQXB5VllxSTBWYm1FeC9US1J4SHY0TDB5S0QrejN5SjJXMW9wbUtvUG1pUzhtUURVNWNPaFFrV3dpa3gvM2M2NDFHcVZEcmJRV09HZ2RQN01RcnpKdWFXODd0RWdjaXNYdFhNVWFEL3RiTS8zNERQbW9SSE1NVTN4cmoyd3JZMVZsUm9paGJ5ODVkYVAyZ2NTQ1BzTHltRXk5OWx5VExnR1EvT2xXS3Fsb1YzQlNtZEhaRXFLU0wzUS83TGl1NDNCcVJMNnEzekU0bzVrZUowSUxVM3EyRXNsS0dWNzJVVVg0VVhYTmVVZ0MrR2lJZXUwL3dodmFiNkFIQUlOVDBTUzZIYkNpV2g2aDhaZWF6eWwrQ3VVM3o2Z2JLbmZwZTZsVG1naVBQTTdaL2diMmdaejBPNkxzalpLdFlkZkx5Tnp5TGwrcXZvM1BsUzc4MWVoQy82YWEwMzJEZ3Voc1ZCdlFTNUlBQktveUd1ZXA2bDRPdm9YaDY4STVmWHp5ejlKUHcvYy9xNEZuU1Qzbm9vYmtjenlQRC9IVTB6WG9ZelByaTVSVTI5dnBBU2poa2RybkJiWFRGQ0U5TkFpQzRDa1hXa25Mb2MvYStnMEg1VndFSjJmNnFNUlI5dEhBVUpjRDdLNmJMMDViUHFYWmlzcTJRUUwxSUdBVmg5R1JQbGhYU2NXWjVISnAvdGwwNnphZFQ3WmNBTWtyZzVGTkFnNzg3N0pmQlpVd09odHEyVS93UUM4Q050eVUzZkFMOFB6dzVQNys1WkxlSFEwUC9qbFJ3Y2ZkU1hsTUdvMUtGMFl2eDZXZzl1Q29oTjlvUVg0YXRMTEt3cnh5OHMxVFVzcW1SREFSd0U5T2oydjA4WHhnTW9Ec0xQZm5nRWxqOFdQMkFxamp1a2RuYlc0NmRkeENlSjhxVU5FTkNVTStaL2phQjArSUZGU043TG85V28rSnV1MTBiTmk3dU9qQ29ERWUzN3NoUHJaWmpNVWdML1REMmlXaXQrbkFCNURaZ3RxODhBZGloM1RIQkJVR3FEZHptWWJUM01UTjgxeFJJcm5Ca2VOYlpNM09rd2xiZGpIUzRUa3pPOEkxZ2VhZE93cDdWL0ZvMlB0WVVleDBwTGxyRzRIZEovWUVLdy9mRVhEWFJZNDZObFJ4WW1vVDNCVzVBaWMyUkNHTm1MeDVycXBtVjU4RzZYQmo5VnNsbE5iVVNuY3hkbFo4MWE4VHJWbkpVZjRCZm5RSWd5bTFvTWRWQlN3U2d4ZmNYZCtOM0hod1VkWGFiY3NQSVBoeDk5VVVMcUVEdjhMNTg2QjlDS1V6NnBXdEVCTXJlN3V5U0JVZWhPUlNDOUU0UUhWY0VTMmgvL3dHaTVPVGpCL1E3bGl3N1hZUnFRZExSeXQvak9jUTBqb1BUUUs4dlB4TlZwUEJoeDYzdm9mVlFCVDBpQlFsOFRCSkNuaXU5dk9vbU9CUHZLV00ydTJnallaZGtyd05NL2kvWlRvNVRFSU9BK2dOL28rZ3JseEpKaDVvMUVoMjVFektCNlJoc0RiRVZZZmpSR04xMXFQV29iVDZDUEdWTER1bk1qeVBqcHQ3bFJUajF1dEJVNDBQNmI4TUVXc0xRb0ZPYml4ZXJzTEtUTzZYdHkwWEt4aDh5Q2I3VHVUYU15TjdJKzlvNU02eWFka2VhcDFyMHV2eGVsREtqekhSN2JxUHNNMXJ2blZBQ29HV2dsZFJxUmI1UGFiSHV4ekxSVVBVdi9UT0dNQ0VKYTBpOFVTQlZoNU5QSFJiZnU3Z1dCN2hYNklZd251Sm4xV1lvZHVoQzRQellpazYwbDY5VW1kUHlVOXpVMlNLajYxckJLSEpzWXIwZ2QyNHRHK2hGTkxmQUVaWHNyUGludEczOTA0SjljYkpjZlhIWE1HRGxXNHNRK3dIY1AxT3c1ZXNaUmZNN1RUVWZCaWRRNWRNeDN3bTJ0UkNGTE1wbis4Z3gvTkR0WWVPQW9XeGNxcE1tSmRURHhjWVUzOWtlc1I5ZlhOOXo5emRLZFk3N3dvYTlQZ3lqUHBCNEpNOUJ3UXVyN0pnbWp6cHNNOERpRTV1LzZvSnlqUm5aWGdyNy9SY0F6VFltRmFJTDAzVmlGUW02eHlmZjlFaGs2dWttV1ZXTUJVODJLbitKTDk4QTdyS21taFZCQWJRRzFZbDBRN0Q0SSt2bXdDQU5HNlJpU2xzSGtnUFZrKy8xZ1dMWkg5TlVMQlNZbkR3NG5zYXZWck9OT25VdFhjOENTM2wxdERHWEVubW1aQXlWV3ZLUlRwTEcyczZjSG0yQTlob2svRllTak82elIyTGdYK0RsemNMWmx2QVcyeEZGbnhyS0ZpSklGVTRua1lwaEJnTHQvTUNKQmhiUmtOM3dGR1gwUEJHNkNZRGJtL0tKcmMyZGhJaThPQVdjT0k1SlpwYndUd2JEeDVLL1FIK01iMVlJOW81RGdCMmpHNnZDMEFWdksyLzJBT0x2dndPWUdjZkRCTXc2d1lqRkFuc3gxajlWTUNXTDF6bGRYWEt1MEs3UkE2VmJPcDJ0Wk5ndVJLTm15MkRsSnZ3MTlxS3Y1TDRoVERDZ3hBajVwQnpGMmdlcGFzZDk3NUpOS3dDbzZQU0xaU3lkTEpWQXVQbXVhOHN4T2wwUER3aEpON2E4NjNnejdLOEF5dTFmWkhEVFpXZmZZM0dNdVJOamV5Q3NieG54UmlGZEh1Ym4rMTlqTTlheW9LaGtBakpzY0VDZE5ZZVA2ZFlDeVhWRk9KVUxKNEVIenp4OHFjaUNZUENuN2ovZHh6aThXUFVwNmp0V0xtcU1wcWYzbkhEOVpmaVFjdS82UEZHdGVpK2FaS2R6UVpGdkhWY1EzeUVDR3pJVXpwUEJzUEUvcVhmbWVudnVUZGVLTENrMThjUnVMY1lsYWR6ekswNW82czQrcmIrM1EyVElFd2ZJMVBUOHFJL2l4MVFLVkdDcXhueDZiazFYdU5LYkMzMDBZRi8za0ZaS1BUd2pkWjBtZGVQUGdLSnBpNThuUmVaaTBGZGwyM0t6N2J0ak9FWkxuOGZ5R0ozTUcrd1U1eFNTN0ZWb0psNHhWTHNWVEdiTGtJYXY0MGlCTHlmVnZDdExvaDJBU244TjRSNEExaTAxMjY2VjNRUGlZTUI5S1hXQWdxSXRmOUZwbzlkVkNWUlNSK05ZTHFsVDBydHpySi9ZQTQvY3BYck9xdkd3K3JKdjMrcm44RGlxdmcrUlIrUS9RYnV0amIxR1MwY3c2ZVNnUVZIaFptSmZEMHRtc0J1R1BKcGs5ZjhIMEJxeUNwTkJzVWpuNW1aSkRrK051cXFqRmxqRnYyd2lET0lWQmZ3cW9URjc4L293Vmx4ZGNQMHdtOFVhZUlRZWd1SlFWRDNCZTZ3WlovaUhabHpPRkppMnBERHNLRjgxRnRsczViVkx6M1VsVGNLVm5FN09rUTNILzFYR1BvRnBGM1NDZllLV0hjczdmS2hvQXBwNEIvZzhXblgveUNmazh2TDRqd1hBd3daOXZwUUY5a1JGM3Z5VktucjNhVVBwWXVCRlBXNUJJNUxYTW8zNnJBb1RzTjFrY0xUZXZ0TzVVS2czWDdteUpDeUs0ZGdybG9YZ1RZVTFxc0taeDRQYUJQeG1FUEdBK25kMFlzcFZ5WWhRQkIvZDNJbVd1OU5zUER5dkVUblloQmZWbDJrS0ZTOFczbjlVK2JuSnZWbERlUHB1NXoxSW55TmVrbktYeWdLajErNEUrQUY3MnlNYTRmc0d5RC91akN5ZVArYWYycWJwNUNtNHpMSEgxRE1jWVprYlQ1QU1FVC9zaDgvbkFOd1AxcWhoNUZTSU1HdWFpVlh0ZFk3SjE1b3lOYWVzTEtJV1dRUXh4RTk0S2xPZ0JaSHlDaXQrOGI0RHltbk1hakRzM3J6YVNPT2FYVXI2WWR0QUREa1N2Vkd1ZFNHUVJUQVZ6WkRtT09ueEdzbEdqa1FiVHZ6ZHlFWmRBWUVZVVdjTGdHRjdtd1NiR0orQUhSeEp5S2VFSStYc1d6ZFVua0tqR3Z0WjFLRHg3M2NYYTNlN1Zyc21lUnhMRlVxelFxSGFPc2htd0I4YUF5eDhva3h4R0xUTDN5YWE5QXNvdkNUMjVyUm5ibjNaTUFvbTV2U3JXcGF1V0o2RjlHR2pJUHI0L2dpTFBXMDlzWnIrdllsLzVRQmRoN2FHVWpXa1JEb3lONm5hcDBXVDd5a004WmxWbENYSzN6Y0JER2ZuL1pYVlR2ZXZGZzJnUXY0bDNoa3BkK2lHc1g2c2FVKzd6eTZWMkkxbmdObXZwa245R1o0VTRVRzNJVWNPMDljak94a0hGVzFjSWo3YUxhbGdKV1ZQR2l2VUVBZkVYdW5iek9vbk91Z3J4VUNHN0lZc1Q3TTVsZkMxbzdSRVpBZ3lSSWk4SDZjVUNDV05jYjVJeVhaVXVScmlTSVBIekhicDlFMU5YYVNYNi9DNm8rd1FqK29uZm1vRmhXS1RZSGRFZlgwZ2ZoL2pOYTgrS2doOUVZb3kyWE9tcE1IWEU2ekw1SG9rMG1uZUxDc1ZVNlVOZWlLODFVWVhYZlp2VzFGb2lJZVdvYjJjUmVUS2R5YkdNbjFGYUhqUjh3VUdKNU15cTI5TVNIaWM1TGxLSEliK3VMNzhHMnQvUVNTNFFmUmg2bUlQOThLM2E1VDJOV0t3R1BVdXVJNFJtN1lCZXZ2eU51dVpPMnR1bjgrb2Z6KzVjcysvVzdDM2dNOVdpNjcxcGpUWFJ5REJ3YS9MT0hraXYxUEM4bERpcWlZOGdGQ3VUMkVLTmsrODl5SmtjR1lmWjBmb041blU5YTc1TjRmY1F4OFNTaVVYT0FzT3kvdlBkN21SMFpiZ3BNNWJyWlNBMjVWUzBDeitVeXVSbVVaUDNHOFVieFpYaC9EYWdvUVI2M3J3UFU5SnJPK0hNWFRobDBPY25vbWlHNm51cUd2TTJUdUU1NkhwQzVpMkdYaml3eFJ6cWN2OC9FVSs0SnV6OTR5WkpnbjNNdFZJODNGVm0zWmMxSjBydzhUQ25vNUZoc3lKTTV1cnNpaXVlU1lZM0hGcXluWGhLNVNSYzd0Kzk1cWlhY0RNcFljaUdYN3BHS2grM0toVzBwZGRYaXlXc1NrRWNPaXFPNmtkRTNPblVpQStjTmcrajBRUGN4anY2dDZNVXJGWHlHNVYwVWptdnJRRVhKZEdWd3JZRDAvRzcyMHZLNDFoSmpZaVB1T0FqajVmWWNIYjArMEtjOVNVd0VTM0lYUGpWZTI1VzZSbXRLMmJ6c3NWUk15ZjQ3Y1Y0b1YvOXJJdTUwZThtUTlZaVo0N0xEbFZsYXlMMExNL2NKenZxNDJuYUFONUg5ajZmSXBzQ1FaYXBibWNicHRsUzJ3V0V0QWh5NmdYU1RpdHl1bncyT1N0UVljeGQ3M01MQkluQUkwVHk1TGxYV0dSNUhxckNDdVhYb0pxRnZ1czdXTHZubzIrTkZuZ21PL3ZwVFpoNy9xZ3ZjeGFIL2dCVVBJakp3MUxjWXRxY2ZqalBMVDlodHBxUU1Vc1QvOWY3cDdMVFpveWhaa3ZuRk91aElZNmFZaURzVW1aM0dsVkJEYUR0dlllYnJIdXp4UGxPVyszNTNGS3Y2a0hKR1dRTDJYL011S3ZhZHlySzNwWStRUVRKTWQvZGhYSkpmOS95ZXdvTGx5OU9ML3ZPTFc1UzBkRFYwSWcrUjIxQnRoa2NCcmJsQzh5YVNienc0bjZLaVhYTFh5T0VwYmV1dUhyMEZHTC9iVmVnUE9uME9MK0laWUpDaHlQYm5HSTlpL2IzVnZiQytLbzlKSEZacm1Ed25WdHYrTWFyN2ltaXpOUUpydExBTFdiWjJxb3EyaHB1UGY3YjVDUDRlQTB4blZTQUhxWWhPR2lhMk92MGJXT3FwQXVjM1JJQjNEcFZodmpSNk03ZzdUMThzQU53K2U5Tk5MaG14UFdBVUVHZXJ4bElrRi92bGx3WjFMRTNGT0haZmlxSThTNUlkQmZMc1poelFQSWVyZndxNURiVjNOOERzUnVxbEg1c2l5TU9taWZsV1RRVWRFSk1SVEZ3UWRjd1FZc1lHK2FrOU5IcUEyNWs2b0Y4TmI4OU8yeVF2MUd6Ry9QdCtOWVNvaEJ6NHhZVTRMOXdWMHlLSmZxTW9obDFXY3NWNDc0dnF4cVJlY0p1SVE0eFNKVURaQ0QybkgwR05WYjRjNUJTSWZuU3d0YzVIa1B3eWRoSTdJam9EeC9oU2FxWURsbjlmWVp2OEZvVTFQQ3dMWTNPNFI3WXRjemdCWUVOU2ExM0hzVUVZbzczV01lQXF5Rmo0M0lCWEFrSUFmckd5Rzd5QkhiS3A2SE5VdzErejg2NW1xYWVKWHMrSlRadGdQVFdhaTUvQnpMS29vK1doc3ptYlpUTGRHWlBVYnY3b3QxWEZrV0dPNGJjUG5PV3lZRkQ2c3BObU12K3RJOXAzR3YyTkQwQksvYzJzZUViY1pla29PVGtQZ0cwaExTbU43MEhZOXNmVTFqSm9BS2tISlRCL3owWERSd2EwSHdqRUQvaHNBODViWlBrZk5xaVUyMzdpWXBiRmFCaGtWTzcvbklUaDdQQUhkWGZLQ3JSdStuRVZLdEdiYXFJcjRML3l0T3pRVGdFLzhXczJmNFJOa0k0SVdQZnFkUU1SRjU3YkdTM3c1WGRGWGtrVjRNK2laR2RaR2xVdjExOWg2SEl6ODExMEdsYnpkZ0tIN0VLTDd0YkkydzVSV081OENvWnVnQVdKeTVxMHZpYzdSR21helRwNFZZMkwyeDdKUExuNTZ1V1JINTdTR2hmYkgya3NyUE01ZEZyaGsrdVRXUGtOTVh4UFVxRGhmVXY5Q29KL0pjQW40SHQvbEUxcUM2UGJ3QlpVc0ZVN0dCQit1Ym9yQ0d4YUl3dHZhUjVUMnlrUUM2ZTd1UjI2cWgrUXMvOXVwQmsreTRzSVorTTlYazRwTUFYek9VczliakpXa0FPbHhtSkFZVnFadS9wZTFkLzhjM0QvNFJBdldGT2lqam1IY0dUOVJwN25Dc256c0RYMzZDWlRyajl5NElITDE3aDRCN3A5dE0zMkloa1htZjQ0dmEwV1ltb2N0dExPbGkzVVRTbFgrU3FWbk9kbEJsc3JWcHlEdStrZHJNM0tDUFh0a3crN040T3FIWWlQYmtLeWVCQ2QzVDdBai8zT2d6ZS9iQUxXUEs0Ykc2ZTJ5dURySUZWdzAzcVJ3YWFvYkJEb2ZZY2xaZW9jWUI5MkQ3Zjg5NDY2Q0pRL1FMQjZFMXRGdWlYQjI4SkpnelpQZmRqUEZwR1J0eWNCeXF4L1FmUWxkYXB2WjJFN1dKNVN4blRKNzBhU1RQQStaODVFbFpiQmt3bUh4RTc4TGFjNDNVWUZZTm41VFU2QWZtQ1hncEVGNkhjZ3B4YWVlZ2hpUUNpQ3dnODhHWlpVVVBSbHA3TmZrVHlwOW9QV1dVVDBFWHVsaGgvS1VEYVdaZXBXSXhtSXk3bXQvRVU1MkVaMXFUMUFPWklOa0R1dEQ5VWJqdEsvcGhsb1JPL3pHSStKU2FqcEhRY0Z1RmlKeDBZTmJJL1Ezb3JSVFBscmtMMlU0SVMwYWMwUlE5cVhmby9TKzhQK3hmTGVTSjRXRlhyTWJObXp2ZGkyRm1uOUd4RXJrcmJjRkhBb0lHWFc5K1h3TVRkTDFTVTVOTDVaQ3k4QXVWS0ZrNVArNEQxcjRsa1paVmtFL2x2Sms3bW15U1YwUGkzeFBBRGtzNWx1OEFTeFhvSGZwdGNwSUcwK0VGTDc2cTJnTGIyVW1HaUYrSTEyNzkvYnJGbVlvZWFIQk5sZUlpN29zQU5aSzNlUjdyaG9tRTBVUXZPTEJMc2xZcDl2Vm9ycXpsclBBcWdaSkFwcnVyNkJBLytvaFp4d0JxeWgyc3FCM0tGSnc5Z3IydEZJQW9xRGd4MDk2WVExeXpSN3VvSk5kd01lUEdYbVEwV2UyWnRQK0tCOUdiMGl5RnkyN3ROeGFBV3NVQjdBSHYxZFlaUG8wZ2tKR1pIU285MnJlVnZ1RjhFa1pHaGgrOFdyVVRURmlKV1Awd01SSmFsU3lSaGlCV2t5TTA4b041bUpEU21uUXBZZVBGbEt6NEc4anRaRzhmcUlmV1B0SXoyV2tIemlBM3hOOVZWUmNhNk0yOWxiQ0FpQlpOa3FYeldYeitSZ0Y1Q3FmQXM0QTN0c2g4KzVndGF4VFd6RW9aRmVhOXJsWlBuWUU0U3Q4UTlGM2lnaExrNVIzOGxFcFFZTDY2bUVVUC9CZ0t3Z24vVnBkbWdXZHlzOHkrTGl1V3czU1BHUWRjM3RMMW5DZkpCWUVCL1BSQ296Ukh5c3hJOTRNTGtXRmk0QXZ3cVNRcFdOL0x3cS9MQ3hjekt2dk9sQU1iSmNoc1FPWEZtVm1POVcwMjEwNlVqb0dQL2NMcmkxT245QW5aSFNYZjQ0c0l0Yzg4MHdaSVlTb1JmeitMNDZiaW1WOGtoN3BoU0V5Rng0WHJIbUkvdld1czNoVzdpdm5xZzZDR0pzZTArUUZxTll3SXAra1pVdnB1dStUVy9HWUJPb1N1Ni82aHR6UGplUE1WTHQza0hvdVlqdWdLWk5NTTFreXpCeGYya3lXMUJ5RS95NjVJTUpRRDhZcHpTL1lQSVB0bGVyNUJXQUlFbWNQdGhPYkFNaUZOQmt3WXFicnZhVVYxcFRzWVlkZjJPeERRdVBXWGxyYkp1K0xyNjJVUGN1MmJWNnJrdDlpQkF3RjZzWjVBbzU4N2lCeDBaR0JUTVNWZG1QUTdwZEROUFB5blJvYzdxUDBKdS9sbklWNDNxaXFzSC9PaHRrMEhGakFsMGR4enB2WFhmUDhwc3lVdlVwQkxHUVpOY0JLRTRuRzZqSlRURDl5NjBUZXJhMG5veDRFYlBxMzY3TXBsWE1jR00wdnd0R2RqMWgzcGQ0WG1RMG5SWXczcEs5RDQxUUo2dmEwSWZYdlFFYUc0QjdMOHVKdi9pZ0JTVW0yMEw4bTlVVVhVd1dmaGFONUIwREhHNXhoYzkyUG55U2JGbmIwRHVoL2JCdTNWbndTVnlTQzJNcXkzeUpVdytkS1pSQ1RIeEZTRmpQSHN0Y1lvTlVlMStKcXpMQ1VPOXJaQUEwTDVqd3dJc0R2UVh0d2NqUWs5R1dMVVcxQTRZUEI5Q1h2aXdQRi8rd05oNm9lYUxTL3M1aUpUR1FLRkNocVlxdTNxL2x5em5vUXl1MldOZVIwTHIyVWZIK1d0VTZKYWRwNTJoL0pIMnM5Rng3Y21pRVB3eTZodFdxOWVhS3BaUGh6VVNWSUczUCs5VlNzVzhyRS9YZ3RBQldSbWVLTDNtRGlHR0RqSG1CTzF0dnRkQ0VqeEZGL2VjYU9ZYUxxT2htakNPbjhxNndPREYvZ0xpazNDTmdUQkFZUWpXYjlORmJuaHRJWTY0M3JVSjZ6YW9QRkdncTZtWW83d21vQitZM1haODR6YzNpSGJocnRubG5PaldVNS9XWDlwaitkRjJFb2R4S3ZsUFBaYlhQd3lHbWI1RHloSU9kUlNzZjk0YjJPZUhVNzdHSWpwM0VoeURhSG13RDRGcGhGMWU1N25CTTdzbDNSWHk3VmZKdC9Tdys4RE01c2xmOXEvN3VLZGliMXEvczE0NkZYUGczeU1Yb0lsdG1JMmRwdDlhc3lPSUNwN1NwUVJVbHMxdkpkOXdLNVlZdW9TRzdpdHEyNTBRT3k0OTZQbEZ2eEJURHoxRXRoa0NEQXNraFU5VVBGM3RYQU5qTWhZL3NCTFZ3c0N3OHRzWlQ1TFFSMEdBdFJ0ZnUwWGxTNGRzelhzSjNCNGlnelcxRFpRLzNOZXlaYWpXNUFMZk9GTHY1ZzcxZW9ESmw3ZnBMNnNLemRrRHpNREVrdnY3cTFhQUVRQ3M5bU8zbW5mbDNldGlsdnl5V0ZoV2g1VmF1N2lEaCtvUEpJNk9lb04yLzk3ZVRtRCtOZERvWnZZZkRlN08wN01xZ0ZkOUQ5Y1hReDRyZlZuZlFIYUV2UTVkZ0gxcHNuZ1hWWHBPcG9TRUE5UWsvQjVjbEJONkxRNjQrMzZpNnlpVG52UUFkcXJzd0dSZEpzTG02MlpzaGJ2L25SZjRLdG1SbjYraVU5aDJjbnowOHBFRHlpTWt2bmxJY1U4UE15VHAzVS8rVk9UTGovWlQ4V3RsaFdXdWRDSmk4eDlYUlBqNlhiUmZzWWhFUUo3VGtockM4L3JCeFBDRlZnQUdoZ0hPZUhyQlVrN3lmNUZwL3RVbDd3SlpoU2ZWK24xdi8yZ2tpOVRBVlo0ZHFxQWZYT2x4M3dwb3p3ZnBXa0Y5VGlyMk1IRDVFNjJ5OWhFNzUzVzcveDJoMWV0R1ZUUWVqTkVvc2Vpb3NzeDltcUt6dUYyZms2dUFsaDdnajhHaGNJVE9xaFhTT3ZQUC8zdE9XeTVhUG56UllRVmFPL3V0UUl1bkZ3WGRzNEM4ME4zeVY4RkxyREJRZHBjeFQ2RW0raER5UXdRdXdXcWJwMzl2cVpUMHVTSUoxc1piRnJnNDB2QzhLczl5OGh5N05pdWE0THVGWll3eGZweit0MWNoVm56eHV3RFp6enR4UjBjaTl0S29YZ2Iza3UwMk9MS3Ria1ZtOVc3KzNibXFlY0ZLaVRsUXE3RzFvWXdDT1FDaE1XQkZWakhBS3lBb2M0UzJSSnpxYXlDd3hkbUcxc3pxUVhvb25xcWNvZkNpNFdMUlZJU2krT1FBSUM4WjlaTVk2VWhpN0F4ZUtnS3JLWGhjaHVYakFFZDZHNVAzeVBSUlduVm5mTFB6cElTd0d5TG5yNFVsQzdqdUVlcjd6dFh2NGNiNFJ2WkttYWs3cURUZ2hGQ3JIQ2NJYTNrakphaGZ0S3FudUp2MVFVSWpHSW43RTlqOFF5dmpEQVFWL0syU0NJc2lDaXFtdW1zMUtvYiswMlVWcHF0RmkwSUlUamE4dUJKRi9BSEVPWllCTitXK3M5S1ZKemgrS2pOcFJWVHdOb01QVGZ4Z3lCM3RUZkFaY0ZZOFQ4WTRhVlVyM2Y0K1dsaE5vbU9JMUExUXpTa2lTOWdqY1BzOG82UnJaaDhLZlRzYzh1THNEQ0p0OWxmTzFPWktBamJ0dzZicXNleFMvOTlSQTd0RTBYYkZoKytEeFdLM2I3ODh5MVlSSlR2MHZFcjBTTzQveXlINkxqdiszTGxBVHZYVHRKaGhpTExRU0tWODQ2SjhWVG1TdmlVNkNmU0dNZ3hOdCtYQTc1NmcrTU9IcEp2NG13V3NDek5KTWxTQTgvTnlCVVcwMXprMTJMWmZvbHdWcVR0clJtekZmS25JLzlyM2xJR2ZSV0lpM0xZbElxMW9nN3Q0bFhsVUo0VlRJR0wzRFlIQVZpbERjUHdVbU85NjkxVExZWisrN2xBQUNhcXBkdXVPVDFwTWxmaEJXdlI0c3k0ZE1ZWE5mbmJrQS9QOEhPa1UyTjduMVN5SVA5bG1aVzhQaVIwMko0MlhycHV5UWNEeUZERFNUK2J3azZSZmFRWDNna1JNaitGMFA3T0t6SGN1eVoxcnI5Q0FibGpSSDdyWW9RUlByK0U4R0RScW9ERGtHSHRzRkczcFM0MlJkMmtTaS9kOXkzb1g2a3dFbis0RWMrN3Vxa0k3UmFvM1dneExxU0xseUJCZXM0RHFSTzlPK0piTCtld04wZDV1QkFBWk9rZGF1OTFBTGs5TmlxWjQrSkkvQkFLTnJ0MS83UGh5NXRyTG9wS0tFTTc0S1hFWGdEdFFHRXlnbkZIOGtqUCtaQzVrT3ZFbmthbEc5OWtNemtjbjBMUDlITmtBdmdjWXBNQ1BTY293ZmhPVU9ocGV5S3NPOUdCcnZzVnR1V28wTUhwMEdENnVsVE1FbzR4WnBVa3RuOXVZUmFSajdoUWoyZGp2RTNKWEdSOW5CWXJwckJvcTVVS0dFR3FMTDllOHhhWVdKdnpwbVRlRklCejB1U2NEeTNKakxZckllV1hhNnR2VmJsL1FaOEFxWEFqQnJkVHVkeVAxU2FqcFVldGIwOVB1MzZ5R3VXWksray9IbDN4VEhpYjRhY1U4YitHSDRYaUtFRnZsb1VxTHE2d1JPNDRJcVpyR0tCWktmRWllNjE4em5RYnRtRmQ4SjFKZHQvZlhUV3hFTit6VkRuL0R1ZHFZMGYvS2YzQllMNjEvY20zdTdoalpDeTlLWStpUnIyMVpmbEZ4WUV5dGVhUHpGZDlsVlV3cGVKWlJjYXl4RGpzNlhnZUhaZzBsSEZ1S0Q3akVxQWhGNzhYQnNZQzc2aWlBOVV3ZVRkSytqL2VMeEFDS0IyV1ZDcTdUUEJ3TzhISGxTZz09IiwicmNfZW5hYmxlIjoieSIsImJnX3NuYXBzaG90X2RlbGF5X21zIjoiNTAwIiwiaXNfZ2VuXzIwNCI6IjAifQ==", "t": "application/json"}], "keys": {"https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true": 0, "https://maps.googleapis.com/maps/api/mapsjs/gen_204": 0, "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20260917&st=env&sjk=7752765865381451": 1, "https://ep1.adtrafficquality.google/getconfig/sodar": 1}};
+var E = D.entries, K = D.keys;
+function entry(u){
+  if (!u) return null;
+  if (K[u] != null) return E[K[u]];
+  try {
+    var x = new URL(u, location.href);
+    if (K[x.href] != null) return E[K[x.href]];
+    var op = x.origin + x.pathname;
+    if (K[op] != null) return E[K[op]];
+  } catch(e){}
+  return null;
+}
+function bytes(e){
+  var s = atob(e.b), a = new Uint8Array(s.length);
+  for (var i=0;i<s.length;i++) a[i] = s.charCodeAt(i);
+  return a;
+}
+window.__offlineDataUri = function(u){
+  var e = entry(u);
+  return e ? ('data:' + e.t + ';base64,' + e.b) : null;
+};
+var _fetch = window.fetch;
+if (_fetch) window.fetch = function(input, init){
+  try {
+    var u = (typeof input === 'string') ? input : (input && input.url);
+    var e = entry(u);
+    if (e) return Promise.resolve(new Response(bytes(e),
+      { status:200, headers:{'Content-Type': e.t} }));
+  } catch(err){}
+  return _fetch.apply(this, arguments);
+};
+var _open = XMLHttpRequest.prototype.open;
+XMLHttpRequest.prototype.open = function(m, u){
+  try { this.__offUrl = u; } catch(e){}
+  return _open.apply(this, arguments);
+};
+var _send = XMLHttpRequest.prototype.send;
+XMLHttpRequest.prototype.send = function(){
+  var e = entry(this.__offUrl);
+  if (!e) return _send.apply(this, arguments);
+  var self = this, txt = atob(e.b);
+  setTimeout(function(){
+    try {
+      Object.defineProperty(self,'readyState',{value:4,configurable:true});
+      Object.defineProperty(self,'status',{value:200,configurable:true});
+      Object.defineProperty(self,'responseText',{value:txt,configurable:true});
+      Object.defineProperty(self,'response',{value:txt,configurable:true});
+    } catch(err){}
+    if (typeof self.onreadystatechange === 'function') self.onreadystatechange();
+    if (typeof self.onload === 'function') self.onload();
+  }, 0);
+};
+})();</script><script data-offline-resolve="1">(function(){
+var ASSET_MAP = {"https://duoonline.com.br/": "assets/3f2131489adf3f40_file.html", "https://duoonline.com.br/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js": "assets/2595496fe48df6fc_email-decode.min.js", "https://code.jquery.com/jquery-3.3.1.min.js": "assets/160a426ff2894252_jquery-3.3.1.min.js", "https://cdn.jsdelivr.net/jquery.fullpage/2.5.9/jquery.fullPage.min.css": "assets/50c68b3556cbeac5_jquery.fullPage.min.css", "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js": "assets/0c7178cc6ca34fb1_slick.min.js", "https://cdn.jsdelivr.net/jquery.fullpage/2.5.9/vendors/jquery.slimscroll.min.js": "assets/d08071a18a25f516_jquery.slimscroll.min.js", "https://cdn.jsdelivr.net/jquery.fullpage/2.5.9/jquery.fullPage.min.js": "assets/2ea3ad38dd049815_jquery.fullPage.min.js", "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495": "assets/08c4fd72f9d96a7a_v31edd6df95cf4e85bb4c19e7a9bdb.js", "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js": "assets/19ea0b8a7ffe7f50_adsbygoogle.js", "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202609150101/show_ads_impl_fy2021.js": "assets/f1199e6ed424cc4c_show_ads_impl_fy2021.js", "https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js": "assets/081ae9baaacc857c_isotope.pkgd.min.js", "https://duoonline.com.br/libraries/fancybox/dist/jquery.fancybox.min.css": "assets/1e5bf502cd095210_jquery.fancybox.min.css", "https://duoonline.com.br/libraries/animOnLoad/lauresAnimOnLoad.css": "assets/bc1e054bb08a0532_lauresAnimOnLoad.css", "https://duoonline.com.br/img/assets/brand-white.png": "assets/b304f04210abbe25_brand-white.png", "https://duoonline.com.br/libraries/slick/slick.css": "assets/9bccfa1d0fb613db_slick.css", "https://duoonline.com.br/libraries/animOnLoad/lauresAnimOnLoad.js": "assets/364ea3c5b85db7e4_lauresAnimOnLoad.js", "https://duoonline.com.br/js/nav.js": "assets/3198c6dc23a2880f_nav.js", "https://duoonline.com.br/img/assets/mascote-amarelo.png": "assets/c898f3c81b32691f_mascote-amarelo.png", "https://duoonline.com.br/js/jsFunctions.js": "assets/6254dbfa920e6368_jsFunctions.js", "https://duoonline.com.br/js/main.js?8": "assets/36f311bab347c445_main.js", "https://duoonline.com.br/img/assets/mascote-rosa.png": "assets/e179d25d8aaec5e2_mascote-rosa.png", "https://duoonline.com.br/img/assets/mascote-cinza.png": "assets/63a145f381f64fe5_mascote-cinza.png", "https://duoonline.com.br/img/assets/mascote-azul.png": "assets/216fdab46f14cb91_mascote-azul.png", "https://www.google.com/pagead/1p-user-list/972346673/?random=1789763558674&cv=11&fst=1789761600000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be69g1v9248562955z89111698463za20gzb9111698463zd9111698463xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153~120847435&u_w=1920&u_h=1080&url=https%3A%2F%2Fduoonline.com.br%2F&rcb=11&frm=0&tiba=Duo%20Comunica%C3%A7%C3%A3o&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=717991775.1789763559&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=macOS&uapv=10_15_7&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS4QEAQM4h3OKZqcL9dYWcJcIlF9k02eSg4Nu_bHqUQH_pnKm5tst_iMb8BspSg2YF4u8Pvzxp4W8hf9jBWkC5VZ3M8LplkjfO7VK8bxNm1yKdYD6QfnIE5gz-Gzrx6RMnqgqphyOERiFKmmxfnolMizO_s4N1eY-XyX_rakwPc6gzXbjTuFqepJgjNppmWSgPevIuJUnF4osCg3rE9gqNrvymTMv5cDO-3wF5Ng0Mwg6N800751AFz6zRtBI6Ez_npiQJBNijq5cWwPXnRdm_ZochEoDSBmrKn_dj_MchlTHQ3gM&random=282071168&rmt_tld=0&ipr=y": "assets/ef1955ae757c8b96_file.gif", "https://www.google.com/pagead/1p-user-list/972346673/?random=1789763558692&cv=11&fst=1789761600000&bg=ffffff&guid=ON&async=1&gtm=45be69g1v9248562955z89111698463za20gzb9111698463zd9111698463xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153~120847435&u_w=1920&u_h=1080&url=https%3A%2F%2Fduoonline.com.br%2F&rcb=11&frm=0&tiba=Duo%20Comunica%C3%A7%C3%A3o&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=717991775.1789763559&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=macOS&uapv=10_15_7&uaw=0&_tu=CA&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS4QEAQM4h3DqvK8OSfWSIgdVqYmhD_L7pslxNBWbhNaZAUxdKbO7-DXPk-poVueZbHqOHrzs-J28R3X-ednYpJvl2WUC8XXffSsarc9khnEdQE2IRIG0n4NSCZRSjsJcbQe2nPVxy3IYfCAZ-Z5yiLKRYpdhut2Vq0JX4O5b_9PaYqF5dsPzQDR_eOjnJEI9FQ6Mcz-t5GOhbzWK39CzLjEdWTZZvVfHFjxUpkPpixUtUZrC767SFeR1H-IlpoQaWASEXfDtQ8J7YH2zwRBLeKrIgL8LRQwLc6a50XjnkmuTlt5g&random=245726111&rmt_tld=0&ipr=y": "assets/ef1955ae757c8b96_file.gif", "https://www.google.com/pagead/1p-user-list/972346673/?random=1789763558695&cv=11&fst=1789761600000&bg=ffffff&guid=ON&async=1&gtm=45be69g1v9248562955z89111698463za20gzb9111698463zd9111698463xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153~120847435&u_w=1920&u_h=1080&url=https%3A%2F%2Fduoonline.com.br%2F&rcb=11&frm=0&tiba=Duo%20Comunica%C3%A7%C3%A3o&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=717991775.1789763559&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=macOS&uapv=10_15_7&uaw=0&_tu=CA&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS4QEAQM4h3HlUVmdyfSFwUPWPvqcKiygOQNf3zfoG2b90KXMa17w61HOU9k3HsdSEsKedvrCL147H6P_GEY8k6GWnZ9nWZrlkTs7WXbz2BNmw6BrRZfF9OfytW2Xtzydz2Otwypnlnnavs60Y2CGpZMzmWUXbQ6X_1eMPUDkQgD8UlO0BngZB7aAQHnwm1grauJ5vmfe4WWWTimK-hRZJ9ryIpOxWVYLkATKkuQW9g2GKpY_tM62zsZ0XteT4YS54SnHujeeaimZNXQ715176XT7ZAoinAn56CfTbvwKvzhcwbeA&random=3468985150&rmt_tld=0&ipr=y": "assets/ef1955ae757c8b96_file.gif", "https://duoonline.com.br/css/default/style.css": "assets/62d30802e2f5fd71_style.css", "https://duoonline.com.br/img/assets/brand.png": "assets/2cd4024e9435ba8c_brand.png", "https://duoonline.com.br/img/banners/Duo-text-20200422120320.png": "assets/ca2cc2ee81d665eb_Duo-text-20200422120320.png", "https://duoonline.com.br/img/banners/Duo-text-20200422120913.png": "assets/4b1acc3c3a716249_Duo-text-20200422120913.png", "https://duoonline.com.br/img/assets/mascote-padrao.png": "assets/903f0e99bb637bec_mascote-padrao.png", "https://duoonline.com.br/img/banners/Duo-text-20200422183842.png": "assets/cf69680e6df94031_Duo-text-20200422183842.png", "https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700": "assets/d13ef18f0a8aaf63_css.css", "https://duoonline.com.br/img/portifolio/thumbs/letras-caixa-face-acrilica-e-led_740_img.jpeg": "assets/0bd8461228174df2_letras-caixa-face-acrilica-e-l.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/pista-de-danca_365_img.jpg": "assets/3137a0a9d0849cae_pista-de-danca_365_img.jpg", "https://duoonline.com.br/img/portifolio/thumbs/eventos-3_68_img.jpg": "assets/db154fb1b585d56b_eventos-3_68_img.jpg", "https://duoonline.com.br/img/portifolio/thumbs/frota-27_583_img.jpeg": "assets/7c030104e563ee32_frota-27_583_img.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/frota_813_img.jpeg": "assets/90cd15fb00fe1efc_frota_813_img.jpeg", "https://fonts.gstatic.com/s/quicksand/v37/6xKtdSZaM9iE8KbpRA_hK1QNYuDyPw.woff2": "assets/1b092c711df1c7ad_6xKtdSZaM9iE8KbpRA_hK1QNYuDyPw.woff2", "https://duoonline.com.br/libraries/forms/forms.js": "assets/8c16d6ff84b716af_forms.js", "https://duoonline.com.br/libraries/fancybox/dist/jquery.fancybox.min.js": "assets/7f7ced5ab1e5700b_jquery.fancybox.min.js", "https://duoonline.com.br/img/portifolio/thumbs/letras-caixa-hangar-_349_img.jpg": "assets/5a61de1c49fa2ae3_letras-caixa-hangar-_349_img.jpg", "https://duoonline.com.br/img/portifolio/thumbs/adesivo-4_696_img.jpeg": "assets/f4f87da0afd403ba_adesivo-4_696_img.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/eventos-42_123_img.jpg": "assets/488d3187bf379cf0_eventos-42_123_img.jpg", "https://duoonline.com.br/img/portifolio/thumbs/letreiro-11_688_img.jpeg": "assets/70bb8b3ffe7336e6_letreiro-11_688_img.jpeg", "https://duoonline.com.br/img/servicos/thumbs/sinalizacao-interna_capa.jpg": "assets/046cd35ae24219fc_sinalizacao-interna_capa.jpg", "https://duoonline.com.br/img/servicos/thumbs/adesivos_22_capa.jpg": "assets/510620deaf387b36_adesivos_22_capa.jpg", "https://duoonline.com.br/img/portifolio/thumbs/pista-de-danca_381_img.jpg": "assets/25c9a79d7492a2a4_pista-de-danca_381_img.jpg", "https://duoonline.com.br/img/portifolio/thumbs/adesivo-25_715_img.jpeg": "assets/4adaeb4908c9cbaa_adesivo-25_715_img.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/adesivo-17_709_img.jpeg": "assets/84cfb525aed3ba1f_adesivo-17_709_img.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/quadro-decorativo_420_img.jpg": "assets/06a4d4a658eea4fe_quadro-decorativo_420_img.jpg", "https://duoonline.com.br/img/portifolio/thumbs/neon-led_842_img.jpg": "assets/0647e7870262a2c9_neon-led_842_img.jpg", "https://duoonline.com.br/img/portifolio/thumbs/adesivo-_344_img.jpg": "assets/bd8f6a52b44d3321_adesivo-_344_img.jpg", "https://duoonline.com.br/img/portifolio/thumbs/letras-em-pvc-com-pintura-_730_img.jpeg": "assets/889d80f58a79ff77_letras-em-pvc-com-pintura-_730.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/frota-8_564_img.jpeg": "assets/8736a15c297306b3_frota-8_564_img.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/-miliane-_759_img.jpeg": "assets/8aa25c8dd88f6408_-miliane-_759_img.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/letreiro-10_687_img.jpeg": "assets/0dda6c17cc6f7450_letreiro-10_687_img.jpeg", "https://duoonline.com.br/img/content/sobre_1.jpg": "assets/43e2c958b4ed6005_sobre_1.jpg", "https://duoonline.com.br/img/portifolio/thumbs/frota-26_582_img.jpeg": "assets/e4b0a8e560f19091_frota-26_582_img.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/amor-maior-que-o-mundo_74_img.jpg": "assets/25bb3afdcfa75f0b_amor-maior-que-o-mundo_74_img.jpg", "https://duoonline.com.br/img/portifolio/thumbs/frota-16_572_img.jpeg": "assets/1e97a5829939fe02_frota-16_572_img.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/sinalizacao-12_229_img.jpg": "assets/ba3d81cd73a15a6a_sinalizacao-12_229_img.jpg", "https://duoonline.com.br/img/portifolio/thumbs/la-brasa_199_img.jpg": "assets/46fd2d09196bd9fa_la-brasa_199_img.jpg", "https://duoonline.com.br/img/portifolio/thumbs/display-de-mesa-em-acrilico-plurall-_259_img.jpg": "assets/52a08ff1ebd6901f_display-de-mesa-em-acrilico-pl.jpg", "https://duoonline.com.br/img/portifolio/thumbs/frota-38_595_img.jpeg": "assets/9ef77bfea37ab028_frota-38_595_img.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/frota-48_605_img.jpeg": "assets/ec194a48b70fdbc8_frota-48_605_img.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/totemtoldo-15_625_img.jpeg": "assets/302b4f6c2194fc2b_totemtoldo-15_625_img.jpeg", "https://duoonline.com.br/img/servicos/thumbs/letreiros_18_capa.jpg": "assets/b463d22637cddd22_letreiros_18_capa.jpg", "https://duoonline.com.br/img/portifolio/thumbs/emporia_498_img.jpg": "assets/509f1c37ebb0b806_emporia_498_img.jpg", "https://duoonline.com.br/img/portifolio/thumbs/festa-infantil-11_528_img.jpeg": "assets/4c2da6ed2ab9d880_festa-infantil-11_528_img.jpeg", "https://duoonline.com.br/img/servicos/thumbs/acm-e-toldos_23_capa.jpg": "assets/0b0db7e49dccf314_acm-e-toldos_23_capa.jpg", "https://duoonline.com.br/img/servicos/thumbs/neon-led_31_capa.jpg": "assets/6b19cf172a0d41c2_neon-led_31_capa.jpg", "https://duoonline.com.br/img/portifolio/thumbs/de-bem_511_img.jpg": "assets/dcbbbe566dc74c69_de-bem_511_img.jpg", "https://duoonline.com.br/img/servicos/thumbs/placas-e-totens_capa.jpg": "assets/3ef6be0437e484f5_placas-e-totens_capa.jpg", "https://duoonline.com.br/img/portifolio/thumbs/letras-caixa-em-chapa-galvanizada-_731_img.jpeg": "assets/d1533f52e81c6d1a_letras-caixa-em-chapa-galvaniz.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/festa-infantil-27_543_img.jpeg": "assets/eb24a766d466c16b_festa-infantil-27_543_img.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/frota-4_560_img.jpeg": "assets/50226e692f410f92_frota-4_560_img.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/festa-infantil-26_542_img.jpg": "assets/1c85f94cd2ed3e0f_festa-infantil-26_542_img.jpg", "https://duoonline.com.br/img/portifolio/thumbs/pista-de-danca_424_img.jpg": "assets/2ef83257436c76f1_pista-de-danca_424_img.jpg", "https://duoonline.com.br/img/portifolio/thumbs/festa-infantil-8_524_img.jpg": "assets/e6edf9f0c5f0e6c8_festa-infantil-8_524_img.jpg", "https://duoonline.com.br/img/portifolio/thumbs/letras-caixa-humberto-feldimann_289_img.jpg": "assets/4bac3e69b00a3849_letras-caixa-humberto-feldiman.jpg", "https://duoonline.com.br/img/servicos/thumbs/festas-eventos_19_capa.jpg": "assets/60b83c4ceeb3511e_festas-eventos_19_capa.jpg", "https://duoonline.com.br/img/servicos/thumbs/frotas_20_capa.jpg": "assets/67e3f0847ebaecc7_frotas_20_capa.jpg", "https://duoonline.com.br/img/portifolio/thumbs/adesivo-_820_img.jpeg": "assets/5833d70b6b6b926e_adesivo-_820_img.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/adesivo-fosco-mond-digital-_389_img.jpg": "assets/e3e21f551e168f3a_adesivo-fosco-mond-digital-_38.jpg", "https://duoonline.com.br/img/portifolio/thumbs/totemtoldo-10_620_img.jpeg": "assets/286d6662abecbbe9_totemtoldo-10_620_img.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/adesivo-_824_img.jpeg": "assets/d2dbe5dc0e5e4fde_adesivo-_824_img.jpeg", "https://duoonline.com.br/img/servicos/thumbs/festa-infantil_21_capa.jpg": "assets/2104a67486ec3e12_festa-infantil_21_capa.jpg", "https://duoonline.com.br/img/portifolio/thumbs/letras-caixa-em-chapa-galvanizada-di-fiore-cafe_245_img.jpg": "assets/3d43224db7109b98_letras-caixa-em-chapa-galvaniz.jpg", "https://duoonline.com.br/img/portifolio/thumbs/catarinense_502_img.jpg": "assets/ceba0f06328835e2_catarinense_502_img.jpg", "https://duoonline.com.br/img/portifolio/thumbs/frota_816_img.jpeg": "assets/45fb3b8e19ae18cc_frota_816_img.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/toten-nsc-2_742_img.jpeg": "assets/1740a8266800a491_toten-nsc-2_742_img.jpeg", "https://duoonline.com.br/img/servicos/thumbs/outdoors_capa.jpg": "assets/985d841b3cd572b7_outdoors_capa.jpg", "https://duoonline.com.br/img/portifolio/thumbs/totemtapume-14_666_img.jpeg": "assets/91e24d958eb3c8d7_totemtapume-14_666_img.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/placas-_788_img.jpeg": "assets/d7fe4dc04c7198bd_placas-_788_img.jpeg", "https://duoonline.com.br/img/portifolio/thumbs/eventos-6_71_img.jpg": "assets/5490059eda7f17f6_eventos-6_71_img.jpg", "https://duoonline.com.br/libraries/slick/ajax-loader.gif": "assets/e7b44c86b050fca7_ajax-loader.gif", "https://duoonline.com.br/img/portifolio/thumbs/toten-de-jardin_744_img.jpeg": "assets/9193d0405cd02c41_toten-de-jardin_744_img.jpeg", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.98828721154!2d-49.39131948433961!3d-28.68999697656286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9521825ee085fd35%3A0xcdfe1aeb10f97c1!2sDUO+COMUNICA%C3%87%C3%83O+VISUAL!5e0!3m2!1spt-BR!2sbr!4v1534302349125": "assets/0f034402ba47207c_embed.html", "https://maps.googleapis.com/maps/api/js?key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&paint_origin=&libraries=geometry,search&v=weekly&loading=async&language=en_US&experimentation=allowed&callback=onApiLoad": "assets/8858a2ff70814767_js.js", "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/geometry.js": "assets/39f790ebd41ecd8a_geometry.js", "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/search.js": "assets/62f2a710f998d0da_search.js", "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/main.js": "assets/f5e18e5b60ae8dd6_main.js", "https://maps.gstatic.com/maps-api-v3/embed/js/66/4d/init_embed.js": "assets/1cab6d099912c093_init_embed.js", "https://duoonline.com.br/img/content/footer4.png": "assets/fff69a372d980ebd_footer4.png", "https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true": "assets/ca3d163bab055381_gen_204.json", "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/common.js": "assets/e6950fe4cd4d52a1_common.js", "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/map.js": "assets/e6d42daa502494d2_map.js", "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/util.js": "assets/0d76ce1e9af8f341_util.js", "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/controls.js": "assets/51d6e0d27cc4ebd6_controls.js", "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/places_impl.js": "assets/44a3f539e40484cb_places_impl.js", "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/places.js": "assets/c6248b03c0e027c7_places.js", "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/onion.js": "assets/3eb7cba7569da537_onion.js", "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/search_impl.js": "assets/1850d28a80f2b753_search_impl.js", "https://fonts.googleapis.com/css?family=Google+Sans+Text:400&text=%E2%86%90%E2%86%92%E2%86%91%E2%86%93&lang=en": "assets/6bca246fa77b5486_css.css", "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700|Google+Sans+Text:400,500,700&lang=en": "assets/42e87f55574a40fb_css.css", "https://duoonline.com.br/img/banners/quem-contrata-nao-se-arrepende--20200422120320.jpg": "assets/2f13d8f311d38530_quem-contrata-nao-se-arrepende.jpg", "https://duoonline.com.br/img/banners/dcv-20200422183842.png": "assets/9fcc5f594966483b_dcv-20200422183842.png", "https://duoonline.com.br/img/banners/quem-contrata-nao-precisa-contar-com-a-sorte--20200422120913.jpg": "assets/0e67887715ae2a4d_quem-contrata-nao-precisa-cont.jpg", "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20260917&st=env&sjk=7752765865381451": "assets/7d128f5d01473cb2_sodar.json", "https://ep2.adtrafficquality.google/sodar/sodar2.js": "assets/1fced7b2a471cda6_sodar2.js", "https://ep2.adtrafficquality.google/sodar/sodar2/255/runner.html": "assets/c41f41da455986cf_runner.html", "https://pagead2.googlesyndication.com/bg/mjdC0ZSqHv0yQhlTg3d32vMSV0Va8m7zDLbtFMnaXCA.js": "assets/9a3742d194aa1efd_mjdC0ZSqHv0yQhlTg3d32vMSV0Va8m.js", "https://www.google.com/recaptcha/api2/aframe": "assets/90053d52ed127ac8_aframe.html", "https://duoonline.com.br/img/portifolio/frota-16_572_img.jpeg": "assets/0448f1cf237c4d7c_frota-16_572_img.jpeg", "https://npmcdn.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js": "assets/081ae9baaacc857c_isotope.pkgd.min.js", "https://duoonline.com.br/img/portifolio/letras-caixa-hangar-_349_img.jpg": "assets/062456fcd92ef030_letras-caixa-hangar-_349_img.jpg", "https://duoonline.com.br/img/portifolio/eventos-42_123_img.jpg": "assets/d270ae1a5e73092a_eventos-42_123_img.jpg", "https://duoonline.com.br/img/portifolio/adesivo-_344_img.jpg": "assets/bc7ec38cc7a78889_adesivo-_344_img.jpg", "https://duoonline.com.br/favicons/favicon-16x16.png": "assets/641b078ec175a71c_favicon-16x16.png", "https://duoonline.com.br/img/portifolio/frota_813_img.jpeg": "assets/96c69fa5e9578d9f_frota_813_img.jpeg", "https://duoonline.com.br/img/portifolio/eventos-6_71_img.jpg": "assets/11a16461798e4253_eventos-6_71_img.jpg", "https://duoonline.com.br/img/portifolio/adesivo-_824_img.jpeg": "assets/076151bb5e6a7f9a_adesivo-_824_img.jpeg", "https://duoonline.com.br/img/banners/Duo-text-mob-20200422120913.png": "assets/4b1acc3c3a716249_Duo-text-20200422120913.png", "https://duoonline.com.br/img/portifolio/frota-27_583_img.jpeg": "assets/1a10415e224ffa57_frota-27_583_img.jpeg", "https://duoonline.com.br/img/portifolio/totemtoldo-10_620_img.jpeg": "assets/2b00c746944e3dce_totemtoldo-10_620_img.jpeg", "https://duoonline.com.br/img/portifolio/catarinense_502_img.jpg": "assets/3c2812052e244b29_catarinense_502_img.jpg", "https://duoonline.com.br/img/portifolio/letras-caixa-em-chapa-galvanizada-di-fiore-cafe_245_img.jpg": "assets/512262d8f59ed7ad_letras-caixa-em-chapa-galvaniz.jpg", "https://duoonline.com.br/img/portifolio/frota-38_595_img.jpeg": "assets/d514c2f52ac5a59c_frota-38_595_img.jpeg", "https://duoonline.com.br/img/portifolio/amor-maior-que-o-mundo_74_img.jpg": "assets/c1ad2c8d65ddb413_amor-maior-que-o-mundo_74_img.jpg", "https://duoonline.com.br/img/portifolio/festa-infantil-27_543_img.jpeg": "assets/c2f503168759a7b4_festa-infantil-27_543_img.jpeg", "https://duoonline.com.br/img/banners/Duo-text-mob-20200422183842.png": "assets/cf69680e6df94031_Duo-text-20200422183842.png", "https://duoonline.com.br/img/portifolio/la-brasa_199_img.jpg": "assets/5c110962ee8c4297_la-brasa_199_img.jpg", "https://duoonline.com.br/img/portifolio/letras-em-pvc-com-pintura-_730_img.jpeg": "assets/e6c4b5604f0888f2_letras-em-pvc-com-pintura-_730.jpeg", "https://duoonline.com.br/img/portifolio/festa-infantil-26_542_img.jpg": "assets/aac7bcbe4e72fde4_festa-infantil-26_542_img.jpg", "https://duoonline.com.br/img/portifolio/frota-4_560_img.jpeg": "assets/fda67b4851933dbc_frota-4_560_img.jpeg", "https://duoonline.com.br/favicons/apple-touch-icon.png": "assets/493eaa5018db4fbf_apple-touch-icon.png", "https://duoonline.com.br/img/portifolio/festa-infantil-11_528_img.jpeg": "assets/094b8099e0ca774d_festa-infantil-11_528_img.jpeg", "https://duoonline.com.br/img/portifolio/festa-infantil-8_524_img.jpg": "assets/079e71d8e160d53b_festa-infantil-8_524_img.jpg", "https://duoonline.com.br/img/portifolio/frota-48_605_img.jpeg": "assets/8d11731476b82f8e_frota-48_605_img.jpeg", "https://duoonline.com.br/img/portifolio/totemtoldo-15_625_img.jpeg": "assets/2a44f0e4aa919517_totemtoldo-15_625_img.jpeg", "https://duoonline.com.br/img/portifolio/pista-de-danca_424_img.jpg": "assets/a16c1176218571eb_pista-de-danca_424_img.jpg", "https://duoonline.com.br/img/portifolio/sinalizacao-12_229_img.jpg": "assets/c2f8b80b9b1c3e84_sinalizacao-12_229_img.jpg", "https://duoonline.com.br/img/portifolio/emporia_498_img.jpg": "assets/d5b391aa66978c35_emporia_498_img.jpg", "https://duoonline.com.br/img/banners/Duo-text-mob-20200422120320.png": "assets/1dfaac48d19b4abf_Duo-text-mob-20200422120320.png", "https://duoonline.com.br/img/portifolio/adesivo-_820_img.jpeg": "assets/1dbf66bd4603fc99_adesivo-_820_img.jpeg", "https://duoonline.com.br/img/portifolio/eventos-3_68_img.jpg": "assets/46998a7dcf602d1e_eventos-3_68_img.jpg", "https://duoonline.com.br/img/portifolio/frota-8_564_img.jpeg": "assets/5368c7cf2f2afa9b_frota-8_564_img.jpeg", "https://duoonline.com.br/img/portifolio/totemtapume-14_666_img.jpeg": "assets/5e37595e152978d1_totemtapume-14_666_img.jpeg", "https://duoonline.com.br/img/portifolio/adesivo-4_696_img.jpeg": "assets/db5141ced216b9ac_adesivo-4_696_img.jpeg", "https://duoonline.com.br/img/portifolio/toten-de-jardin_744_img.jpeg": "assets/49488038eeb33213_toten-de-jardin_744_img.jpeg", "https://duoonline.com.br/favicons/safari-pinned-tab.svg": "assets/66cd338ea242b053_safari-pinned-tab.svg", "https://duoonline.com.br/img/portifolio/adesivo-17_709_img.jpeg": "assets/a6858793318ea6d9_adesivo-17_709_img.jpeg", "https://duoonline.com.br/img/portifolio/pista-de-danca_381_img.jpg": "assets/b8b7707128691923_pista-de-danca_381_img.jpg", "https://duoonline.com.br/img/portifolio/adesivo-fosco-mond-digital-_389_img.jpg": "assets/6aa8d7bc408eb1bf_adesivo-fosco-mond-digital-_38.jpg", "https://duoonline.com.br/img/portifolio/-miliane-_759_img.jpeg": "assets/0c70dc4041f803c6_-miliane-_759_img.jpeg", "https://duoonline.com.br/img/portifolio/frota-26_582_img.jpeg": "assets/b52b7132bd9114b0_frota-26_582_img.jpeg", "https://duoonline.com.br/img/portifolio/adesivo-25_715_img.jpeg": "assets/d813589944a5f0bd_adesivo-25_715_img.jpeg", "https://duoonline.com.br/img/portifolio/letreiro-11_688_img.jpeg": "assets/9cfec34e649f2383_letreiro-11_688_img.jpeg", "https://duoonline.com.br/img/portifolio/placas-_788_img.jpeg": "assets/e9c92fdb23b33e18_placas-_788_img.jpeg", "https://duoonline.com.br/favicons/favicon-32x32.png": "assets/94d2f4e752900528_favicon-32x32.png", "https://duoonline.com.br/img/portifolio/pista-de-danca_365_img.jpg": "assets/06d7a450a3f35269_pista-de-danca_365_img.jpg", "https://wa.link/o1udz9": "assets/dd590e7914383d19_o1udz9.html", "https://www.instagram.com/duo_comunicacao_visual/": "assets/27b02113de66430a_file.html", "https://duoonline.com.br/favicons/favicon.ico": "assets/120bcd2f0524186f_favicon.ico", "https://duoonline.com.br/img/portifolio/letreiro-10_687_img.jpeg": "assets/eaac63c047dd69d1_letreiro-10_687_img.jpeg", "https://duoonline.com.br/img/portifolio/display-de-mesa-em-acrilico-plurall-_259_img.jpg": "assets/40015e1c7609b74c_display-de-mesa-em-acrilico-pl.jpg", "https://duoonline.com.br/img/portifolio/letras-caixa-face-acrilica-e-led_740_img.jpeg": "assets/d9634bbe42badad5_letras-caixa-face-acrilica-e-l.jpeg", "https://duoonline.com.br/img/portifolio/letras-caixa-humberto-feldimann_289_img.jpg": "assets/4769ae2799c24df3_letras-caixa-humberto-feldiman.jpg", "https://duoonline.com.br/img/portifolio/letras-caixa-em-chapa-galvanizada-_731_img.jpeg": "assets/4d912e5f0419db64_letras-caixa-em-chapa-galvaniz.jpeg", "https://duoonline.com.br/img/portifolio/neon-led_842_img.jpg": "assets/71076dcb6a8ca776_neon-led_842_img.jpg", "https://duoonline.com.br/img/portifolio/de-bem_511_img.jpg": "assets/0d22be9d6a98aab7_de-bem_511_img.jpg", "https://duoonline.com.br/img/portifolio/frota_816_img.jpeg": "assets/006ce462a8625a4d_frota_816_img.jpeg", "https://duoonline.com.br/img/portifolio/toten-nsc-2_742_img.jpeg": "assets/22ff5f2785bd25c2_toten-nsc-2_742_img.jpeg", "https://duoonline.com.br/img/portifolio/quadro-decorativo_420_img.jpg": "assets/17be6f2251271499_quadro-decorativo_420_img.jpg"};
+// Pre-populate path+query keys: when opened via file://, JS
+// resolves '/foo.js' against file://… so we lose the original
+// origin. Indexing by pathname+search lets the lookup succeed.
+var _add = {};
+for (var _k in ASSET_MAP) {
+  try { var _u = new URL(_k); _add[_u.pathname + _u.search] = ASSET_MAP[_k]; }
+  catch(e){}
+}
+for (var _k in _add) if (!ASSET_MAP[_k]) ASSET_MAP[_k] = _add[_k];
+function resolveLocal(u){
+  if (!u || typeof u !== 'string') return null;
+  if (u.indexOf('data:') === 0 || u.indexOf('blob:') === 0) return null;
+  if (ASSET_MAP[u]) return ASSET_MAP[u];
+  try {
+    var url = new URL(u, location.href);
+    var pq = url.pathname + url.search;
+    if (ASSET_MAP[pq]) return ASSET_MAP[pq];
+    // The snapshot may be opened from a subdirectory, while
+    // ASSET_MAP paths are origin-rooted. Retry with the
+    // document's own directory prefix stripped off.
+    var dir = location.pathname.replace(/[^/]*$/, '');
+    if (dir.length > 1 && pq.indexOf(dir) === 0) {
+      var rel = pq.slice(dir.length - 1);
+      if (ASSET_MAP[rel]) return ASSET_MAP[rel];
+    }
+    // Next.js image optimization wrapper — peel the inner CDN URL
+    if (/_next\/image$/.test(url.pathname)) {
+      var t = url.searchParams.get('url');
+      if (t) {
+        var dec = decodeURIComponent(t);
+        if (ASSET_MAP[dec]) return ASSET_MAP[dec];
+        var bare = dec.split('?')[0];
+        for (var k in ASSET_MAP) {
+          if (k.split('?')[0] === bare) return ASSET_MAP[k];
+        }
+      }
+    }
+  } catch(e){}
+  return null;
+}
+function rewriteSrcset(s){
+  if (!s || typeof s !== 'string') return s;
+  return s.split(',').map(function(it){
+    var p = it.trim().split(/\s+/);
+    var loc = resolveLocal(p[0]);
+    if (loc) p[0] = loc;
+    return p.join(' ');
+  }).join(', ');
+}
+// Patch property setters: el.src = '...' / el.href = '...'
+// IMPORTANT: skip rewrite when the element has crossOrigin set.
+// WebGL textures (UnicornStudio, Three.js, etc.) are loaded via
+//   img.crossOrigin = 'anonymous'; img.src = 'https://cdn/...'
+// and consumed via gl.texImage2D. file:// resources have no CORS
+// headers, so rewriting to local makes WebGL reject the texture
+// (Access blocked by CORS policy → black/missing 3D scene).
+// Better to keep the original URL: works online, fails offline,
+// matches non-patched behaviour.
+function patchSetter(klass, prop, transform){
+  if (!klass || !klass.prototype) return;
+  var desc = Object.getOwnPropertyDescriptor(klass.prototype, prop);
+  if (!desc || !desc.set) return;
+  Object.defineProperty(klass.prototype, prop, {
+    configurable: true,
+    get: desc.get,
+    set: function(v){
+      try {
+        if (transform === 'srcset') {
+          v = rewriteSrcset(v);
+        } else {
+          // Captured runtime resource (UnicornStudio texture,
+          // etc.) → serve as a data: URI. data: never CORS-
+          // taints a WebGL canvas, unlike a file:// texture,
+          // so gl.texImage2D still accepts it offline.
+          var du = window.__offlineDataUri && window.__offlineDataUri(v);
+          if (du) { v = du; }
+          else if (!this.crossOrigin) {
+            var loc = resolveLocal(v); if (loc) v = loc;
+          }
+        }
+      } catch(e){}
+      desc.set.call(this, v);
+    }
+  });
+}
+patchSetter(window.HTMLScriptElement, 'src');
+patchSetter(window.HTMLLinkElement, 'href');
+patchSetter(window.HTMLImageElement, 'src');
+patchSetter(window.HTMLImageElement, 'srcset', 'srcset');
+patchSetter(window.HTMLSourceElement, 'src');
+patchSetter(window.HTMLSourceElement, 'srcset', 'srcset');
+patchSetter(window.HTMLMediaElement, 'src');
+patchSetter(window.HTMLIFrameElement, 'src');
+// Patch setAttribute too — some libs use it instead of property set
+var _setAttr = Element.prototype.setAttribute;
+Element.prototype.setAttribute = function(name, value){
+  try {
+    if (typeof value === 'string') {
+      if (name === 'src' || name === 'href') {
+        var du = window.__offlineDataUri && window.__offlineDataUri(value);
+        if (du) { value = du; }
+        else if (!this.crossOrigin) {
+          var loc = resolveLocal(value); if (loc) value = loc;
+        }
+      } else if (name === 'srcset' && !this.crossOrigin) {
+        value = rewriteSrcset(value);
+      }
+    }
+  } catch(e){}
+  return _setAttr.call(this, name, value);
+};
+// Expose for the late-init script in body
+window.__resolveLocal = resolveLocal;
+window.__rewriteSrcset = rewriteSrcset;
+})();</script>
+<!-- Google Tag Manager -->
+<script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5TD5GJ1LE7&amp;cx=c&amp;gtm=4e69g1" type="text/javascript"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-128393399-1&amp;cx=c&amp;gtm=4e69g1" type="text/javascript"></script><script async="" src="https://connect.facebook.net/signals/config/464891001401463?v=2.9.403&amp;r=stable&amp;domain=duoonline.com.br&amp;hme=ecef7557496abce7ebfd30d9fec7f02b78383ffbf3f454783aea671f0dea1dfc&amp;ex_m=117%2C234%2C168%2C27%2C81%2C82%2C160%2C77%2C76%2C11%2C178%2C101%2C20%2C152%2C140%2C46%2C84%2C89%2C148%2C173%2C180%2C8%2C4%2C5%2C7%2C6%2C3%2C102%2C114%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C37%2C55%2C161%2C86%2C125%2C22%2C24%2C51%2C47%2C49%2C48%2C94%2C103%2C107%2C123%2C159%2C162%2C53%2C124%2C29%2C26%2C132%2C78%2C43%2C164%2C163%2C165%2C156%2C154%2C30%2C42%2C66%2C122%2C175%2C79%2C21%2C127%2C92%2C75%2C23%2C96%2C97%2C129%2C95%2C150%2C149%2C153%2C108%2C174%2C177%2C41%2C56%2C126%2C54%2C182%2C109%2C181%2C201%2C248%2C83%2C262%2C261%2C260%2C14%2C25%2C28%2C40%2C62%2C116%2C68%2C10%2C72%2C110%2C111%2C112%2C118%2C143%2C38%2C36%2C145%2C146%2C147%2C142%2C141%2C169%2C85%2C172%2C170%2C171%2C57%2C67%2C136%2C19%2C176%2C52%2C311%2C312%2C313%2C310%2C326%2C351%2C241%2C230%2C69%2C231%2C229%2C354%2C345%2C59%2C242%2C120%2C144%2C91%2C134%2C61%2C133%2C139%2C138%2C65%2C73%2C71%2C166%2C87%2C88%2C128%2C44%2C39%2C60%2C63%2C113%2C179%2C1%2C137%2C16%2C135%2C12%2C2%2C64%2C104%2C15%2C74%2C70%2C131%2C100%2C99%2C184%2C185%2C105%2C106%2C9%2C115%2C183%2C58%2C157%2C98%2C90%2C80%2C130%2C119%2C50%2C158%2C0%2C93%2C151%2C155%2C167%2C45%2C121%2C13%2C186%2C258%2C256%2C251%2C253%2C254%2C255%2C252%2C240%2C257%2C259%2C250%2C208%2C209%2C341%2C344%2C343%2C340%2C342%2C222%2C216%2C220%2C221%2C219%2C214%2C380%2C225%2C217%2C218%2C244%2C215%2C213%2C266%2C235%2C206%2C207%2C203%2C204%2C205%2C202%2C200%2C211%2C212%2C210%2C314%2C372%2C334%2C335%2C337%2C338%2C336%2C333%2C332%2C223%2C269%2C276%2C277%2C270%2C272%2C275%2C273%2C274%2C271%2C268%2C287%2C281%2C284%2C280%2C288%2C285%2C279%2C283%2C286%2C282%2C278%2C328%2C348"></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js" type="text/javascript"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-972346673&amp;cx=c&amp;gtm=4e69g1" type="text/javascript"></script><script fetchpriority="high" src="assets/f1199e6ed424cc4c_show_ads_impl_fy2021.js"></script><script async="" src="https://connect.facebook.net/signals/config/263589842220322?v=2.9.403&amp;r=stable&amp;domain=duoonline.com.br&amp;hme=ecef7557496abce7ebfd30d9fec7f02b78383ffbf3f454783aea671f0dea1dfc&amp;ex_m=117%2C234%2C168%2C27%2C81%2C82%2C160%2C77%2C76%2C11%2C178%2C101%2C20%2C152%2C140%2C46%2C84%2C89%2C148%2C173%2C180%2C8%2C4%2C5%2C7%2C6%2C3%2C102%2C114%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C37%2C55%2C161%2C86%2C125%2C22%2C24%2C51%2C47%2C49%2C48%2C94%2C103%2C107%2C123%2C159%2C162%2C53%2C124%2C29%2C26%2C132%2C78%2C43%2C164%2C163%2C165%2C156%2C154%2C30%2C42%2C66%2C122%2C175%2C79%2C21%2C127%2C92%2C75%2C23%2C96%2C97%2C129%2C95%2C150%2C149%2C153%2C108%2C174%2C177%2C41%2C56%2C126%2C54%2C182%2C109%2C181%2C201%2C248%2C83%2C262%2C261%2C260%2C14%2C25%2C28%2C40%2C62%2C116%2C68%2C10%2C72%2C110%2C111%2C112%2C118%2C143%2C38%2C36%2C145%2C146%2C147%2C142%2C141%2C169%2C85%2C172%2C170%2C171%2C57%2C67%2C136%2C19%2C176%2C52%2C311%2C312%2C313%2C310%2C326%2C351%2C241%2C230%2C69%2C231%2C229%2C354%2C345%2C59%2C242%2C120%2C144%2C91%2C134%2C61%2C133%2C139%2C138%2C65%2C73%2C71%2C166%2C87%2C88%2C128%2C44%2C39%2C60%2C63%2C113%2C179%2C1%2C137%2C16%2C135%2C12%2C2%2C64%2C104%2C15%2C74%2C70%2C131%2C100%2C99%2C184%2C185%2C105%2C106%2C9%2C115%2C183%2C58%2C157%2C98%2C90%2C80%2C130%2C119%2C50%2C158%2C0%2C93%2C151%2C155%2C167%2C45%2C121%2C13%2C186"></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5LWG68D"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-5LWG68D');</script>
+<!-- End Google Tag Manager -->
+<!-- Facebook Pixel Code -->
+<script>
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window, document,'script',
+	'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '263589842220322');
+	fbq('track', 'PageView');
+	fbq('track', 'ViewContent');
+
+	</script>
+<script async="" data-ad-client="ca-pub-6989114524421623" data-checked-head="true" src="assets/19ea0b8a7ffe7f50_adsbygoogle.js"></script>
+<noscript><img height="1" src="https://www.facebook.com/tr?id=263589842220322&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/></noscript>
+<!-- End Facebook Pixel Code -->
+<meta content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==" http-equiv="origin-trial"/><meta content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==" http-equiv="origin-trial"/><meta content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9" http-equiv="origin-trial"/><meta content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9" http-equiv="origin-trial"/><meta content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9" http-equiv="origin-trial"/><script async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/972346673/?random=1789763558674&amp;cv=11&amp;fst=1789763558674&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be69g1v9248562955z89111698463za20gzb9111698463zd9111698463xecxf1&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153~120847435&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fduoonline.com.br%2F&amp;rcb=11&amp;frm=0&amp;tiba=Duo%20Comunica%C3%A7%C3%A3o&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=717991775.1789763559&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&amp;uamb=0&amp;uam=&amp;uap=macOS&amp;uapv=10_15_7&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4" type="text/javascript"></script><script async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/972346673/?random=1789763558692&amp;cv=11&amp;fst=1789763558692&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be69g1v9248562955z89111698463za20gzb9111698463zd9111698463xeaxf1&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153~120847435&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fduoonline.com.br%2F&amp;rcb=11&amp;frm=0&amp;tiba=Duo%20Comunica%C3%A7%C3%A3o&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=717991775.1789763559&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&amp;uamb=0&amp;uam=&amp;uap=macOS&amp;uapv=10_15_7&amp;uaw=0&amp;_tu=CA&amp;ept=9&amp;rfmt=3&amp;fmt=4" type="text/javascript"></script><script async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/972346673/?random=1789763558695&amp;cv=11&amp;fst=1789763558695&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be69g1v9248562955z89111698463za20gzb9111698463zd9111698463xeaxf1&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153~120847435&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fduoonline.com.br%2F&amp;rcb=11&amp;frm=0&amp;tiba=Duo%20Comunica%C3%A7%C3%A3o&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=717991775.1789763559&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&amp;uamb=0&amp;uam=&amp;uap=macOS&amp;uapv=10_15_7&amp;uaw=0&amp;_tu=CA&amp;ept=9&amp;rfmt=3&amp;fmt=4" type="text/javascript"></script><style data-offline="1">/* offline: ensure content is visible regardless of JS init state */
+html,body{opacity:1!important;visibility:visible!important}
+.page-loader,.site-loader,[class*='loading-screen'],[id*='loading-screen']{display:none!important}
+</style></head><body style="overflow: hidden; height: 100%;">!-- Declaração do título da página --&gt;
+	<title>Duo Comunicação</title>
+<!-- Metatags -->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="width=320, initial-scale=1, minimum-scale=1.0, maximum-scale=1.3, user-scalable=yes" name="viewport"/>
+<meta content="yes" name="mobile-web-app-capable"/>
+<meta content="Duo, material gráfico, letreiros, festas, eventos, frotas, festa infantil, adesivos, acm, toldos, outdoor, placas, totens, sinalização" name="keywords"/>
+<meta content="A Duo Comunicação Visual foi criada no dia dois de dezembro de 2013,  administrada por Alexandre Guidi e Elvis Pacheco, ambos jovens empreendedores que uniram conhecimentos técnicos e práticos da área, encontrando-se hoje dentre as melhores do seguimento." name="description"/>
+<meta content="Neuro Digital" name="author"/>
+<meta content="Duo Comunicação" name="name"/>
+<meta content="Neuro Digital" name="creator"/>
+<meta content="Neuro Digital" name="publisher"/>
+<meta content="Duo Comunicação" name="title"/>
+<meta content="www.neurodigital.com.br" name="generator"/>
+<meta content="Local" name="distributor"/>
+<meta content="#" name="url"/>
+<meta content="pt-br" name="language"/>
+<link href="mailto:recado@neurodigital.com.br" rev="made"/>
+<meta content="General" name="rating"/>
+<meta content="All" name="robots"/>
+<meta content="7 days" name="revisit-After"/>
+<!-- Metatags OPG Facebook -->
+<meta content="http://duoonline.com.br" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="Duo Comunicação" property="og:title"/>
+<meta content="A Duo Comunicação Visual foi criada em 2013, por Alexandre Guidi e Elvis Pacheco, ambos jovens empreendedores que uniram conhecimentos na área, encontrando-se hoje dentre as melhores do seguimento." property="og:description"/>
+<meta content="img/content/logo-facebook.jpg" property="og:image"/> <!-- TODO: Criar -->
+<!-- Favicon -->
+<!-- Gerado por: realfavicongenerator.net -->
+<link href="assets/120bcd2f0524186f_favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="assets/493eaa5018db4fbf_apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="assets/94d2f4e752900528_favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="assets/641b078ec175a71c_favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="favicons/manifest.json" rel="manifest"/>
+<link color="#222" href="assets/66cd338ea242b053_safari-pinned-tab.svg" rel="mask-icon"/>
+<meta content="#0060db" name="theme-color"/>
+<!-- Estilos das bibliotecas utilizadas -->
+<link href="assets/9bccfa1d0fb613db_slick.css" media="all" rel="stylesheet" type="text/css"/><ins class="adsbygoogle adsbygoogle-noablate" data-ad-hi="true" data-ad-status="unfilled" data-adsbygoogle-status="done" style="display: none !important;"><div id="aswift_0_host" style="border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe allow="attribution-reporting; run-ad-auction" allowtransparency="true" aria-label="Advertisement" data-google-container-id="a!1" data-load-complete="true" frameborder="0" hspace="0" id="aswift_0" marginheight="0" marginwidth="0" name="aswift_0" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-6989114524421623&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;abgtt=1&amp;lmt=1789763558&amp;plat=3%3A16%2C4%3A16%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32%2C44%3A32&amp;format=0x0&amp;url=https%3A%2F%2Fduoonline.com.br%2F&amp;pra=5&amp;asro=0&amp;aimartd=4&amp;uach=WyJtYWNPUyIsIjEwXzE1XzciLCJ4ODYiLCIiLCIxNDguMC43Nzc4Ljk2IixudWxsLDAsbnVsbCwiNjQiLFtbIkNocm9taXVtIiwiMTQ4LjAuNzc3OC45NiJdLFsiSGVhZGxlc3NDaHJvbWUiLCIxNDguMC43Nzc4Ljk2Il0sWyJOb3QvQSlCcmFuZCIsIjk5LjAuMC4wIl1dLDBd&amp;dt=1789763558438&amp;bpp=3&amp;bdt=132&amp;idt=27&amp;shv=r20260917&amp;mjsv=m202609150101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie_enabled=1&amp;eoidce=1&amp;nras=1&amp;correlator=5576701579673&amp;frm=20&amp;pv=2&amp;u_tz=-240&amp;u_his=2&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1080&amp;u_aw=1920&amp;u_cd=24&amp;u_sd=1&amp;dmc=32&amp;adx=-12245933&amp;ady=-12245933&amp;biw=1920&amp;bih=1080&amp;scr_x=0&amp;scr_y=0&amp;eid=95403098%2C95390278&amp;oid=2&amp;pvsid=7752765865381451&amp;tmod=560176950&amp;uas=0&amp;nvt=1&amp;fsapi=1&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1920%2C0%2C1920%2C1080%2C1920%2C1080&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;bz=1&amp;pgls=CAA.&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=47" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;min-height:auto;max-height:none;min-width:auto;max-width:none;" tabindex="0" title="Advertisement" vspace="0"></iframe></div></ins>
+<link href="assets/bc1e054bb08a0532_lauresAnimOnLoad.css" rel="stylesheet" type="text/css"/>
+<link href="assets/1e5bf502cd095210_jquery.fancybox.min.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="assets/50c68b3556cbeac5_jquery.fullPage.min.css" rel="stylesheet"/>
+<!-- Estilos criados para o projeto -->
+<link href="assets/62d30802e2f5fd71_style.css" rel="stylesheet" type="text/css"/>
+<!-- Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-128393399-1"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-128393399-1');
+	</script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5LWG68D" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="maxRow" style="opacity: 1;"><!-- Estrutura HTML da página principal -->
+<nav>
+<div class="contentNav">
+<div class="brand">
+<a href="#">
+<img alt="Duo Comunicação" class="brand" src="assets/2cd4024e9435ba8c_brand.png"/>
+<img alt="Duo Comunicação" class="brandWhite" src="assets/b304f04210abbe25_brand-white.png"/>
+</a>
+</div>
+<div class="menuBox">
+<div class="hamburguer">
+<div class="bars">
+<span class="bar_1"></span>
+<span class="bar_2"></span>
+<span class="bar_3"></span>
+</div>
+<div class="caption">
+						Menu
+					</div>
+</div>
+<ul id="menu">
+<li class="iconLi active" data-menuanchor="page1">
+<a data-link="#home" href="#page1">
+<i><svg height="18px" id="Capa_1" style="enable-background:new 0 0 512 512;" version="1.1" viewbox="0 0 512 512" width="18px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g>
+<path d="M512,296l-96-96V56h-64v80l-96-96L0,296v16h64v160h160v-96h64v96h160V312h64V296z" fill="#555659"></path>
+</g>
+</svg>
+</i>
+</a>
+</li>
+<li data-link="#portfolio" data-menuanchor="page2"><a href="#page2">Portfólio</a></li>
+<li data-link="#servicos" data-menuanchor="page3"><a href="#page3">Serviços</a></li>
+<li data-link="#sobre" data-menuanchor="page4"><a href="#page4">Sobre</a></li>
+<li data-link="#contato" data-menuanchor="page5"><a href="#page5">Contato</a></li>
+<li class="iconLi">
+<a href="https://www.instagram.com/duo_comunicacao_visual/" target="_blank"><i><svg height="18px" id="Layer_1" style="enable-background:new 0 0 169.063 169.063;" version="1.1" viewbox="0 0 169.063 169.063" width="18px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g>
+<path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752
+		c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407
+		c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752
+		c17.455,0,31.656,14.201,31.656,31.655V122.407z" fill="#555659"></path>
+<path d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561
+		C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561
+		c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z" fill="#555659"></path>
+<path d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78
+		c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78
+		C135.661,29.421,132.821,28.251,129.921,28.251z" fill="#555659"></path>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+</i> </a>
+</li>
+<li class="iconLi">
+<a href="https://www.facebook.com/duosolucao/" target="_blank"><i><svg height="18px" id="Capa_1" style="enable-background:new 0 0 96.124 96.123;" version="1.1" viewbox="0 0 96.124 96.123" width="18px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g>
+<path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803
+		c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654
+		c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246
+		c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z" fill="#555659"></path>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+</i> </a>
+</li>
+</ul>
+</div>
+<div class="mascoteRight">
+<img alt="" class="mascoteAmarelo" src="assets/c898f3c81b32691f_mascote-amarelo.png"/>
+<img alt="" class="mascoteBlue" src="assets/216fdab46f14cb91_mascote-azul.png"/>
+<img alt="" class="mascoteCinza" src="assets/63a145f381f64fe5_mascote-cinza.png"/>
+<img alt="" class="mascotePadrao" src="assets/903f0e99bb637bec_mascote-padrao.png"/>
+<img alt="" class="mascoteRosa" src="assets/e179d25d8aaec5e2_mascote-rosa.png"/>
+</div>
+</div>
+</nav>
+<div class="fullpage-wrapper" id="fullpage" style="height: 100%; position: relative; touch-action: none; transform: translate3d(0px, -50px, 0px);">
+<div class="slideHeaders slick-initialized slick-slider slick-dotted">
+<!-- js only -->
+<div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 0px; transform: translate3d(0px, 0px, 0px);"></div></div><ul class="slick-dots" role="tablist"><li class="slick-active" role="presentation"><button aria-controls="slick-slide1undefined" aria-label="1 of 0" aria-selected="true" id="slick-slide-control10" role="tab" tabindex="0" type="button">1</button></li></ul></div>
+<section class="section page headerPage fp-section active fp-table" data-anchor="page1" id="home" style="height: 1080px;"><div class="fp-tableCell" style="height:1080px;">
+<div class="slideHeaders slick-initialized slick-slider slick-dotted">
+<div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 13160px; transform: translate3d(-1880px, 0px, 0px);"><div aria-hidden="true" class="contentBox_middle slick-slide slick-cloned" data-slick-index="-1" style="width: 1880px;" tabindex="-1">
+<div class="contentInner" style='background: url("assets/9fcc5f594966483b_dcv-20200422183842.png")'>
+<picture>
+<source media="(max-width: 780px)" srcset="assets/cf69680e6df94031_Duo-text-20200422183842.png"/>
+<img alt="DCV" src="assets/cf69680e6df94031_Duo-text-20200422183842.png"/>
+</picture>
+<!-- <a href="#contato" class="linkHeader">Contate-nos</a> -->
+</div>
+</div><div aria-describedby="slick-slide-control20" aria-hidden="false" class="contentBox_middle slick-slide slick-current slick-active" data-slick-index="0" id="slick-slide20" role="tabpanel" style="width: 1880px;" tabindex="0">
+<div class="contentInner" style='background: url("assets/2f13d8f311d38530_quem-contrata-nao-se-arrepende.jpg")'>
+<picture>
+<source media="(max-width: 780px)" srcset="assets/1dfaac48d19b4abf_Duo-text-mob-20200422120320.png"/>
+<img alt="Quem contrata não se arrepende " src="assets/ca2cc2ee81d665eb_Duo-text-20200422120320.png"/>
+</picture>
+<!-- <a href="#contato" class="linkHeader">Contate-nos</a> -->
+</div>
+</div><div aria-describedby="slick-slide-control21" aria-hidden="true" class="contentBox_middle slick-slide" data-slick-index="1" id="slick-slide21" role="tabpanel" style="width: 1880px;" tabindex="-1">
+<div class="contentInner" style='background: url("assets/0e67887715ae2a4d_quem-contrata-nao-precisa-cont.jpg")'>
+<picture>
+<source media="(max-width: 780px)" srcset="assets/4b1acc3c3a716249_Duo-text-20200422120913.png"/>
+<img alt="Quem contrata não precisa contar com a sorte " src="assets/4b1acc3c3a716249_Duo-text-20200422120913.png"/>
+</picture>
+<!-- <a href="#contato" class="linkHeader">Contate-nos</a> -->
+</div>
+</div><div aria-describedby="slick-slide-control22" aria-hidden="true" class="contentBox_middle slick-slide" data-slick-index="2" id="slick-slide22" role="tabpanel" style="width: 1880px;" tabindex="-1">
+<div class="contentInner" style='background: url("assets/9fcc5f594966483b_dcv-20200422183842.png")'>
+<picture>
+<source media="(max-width: 780px)" srcset="assets/cf69680e6df94031_Duo-text-20200422183842.png"/>
+<img alt="DCV" src="assets/cf69680e6df94031_Duo-text-20200422183842.png"/>
+</picture>
+<!-- <a href="#contato" class="linkHeader">Contate-nos</a> -->
+</div>
+</div><div aria-hidden="true" class="contentBox_middle slick-slide slick-cloned" data-slick-index="3" style="width: 1880px;" tabindex="-1">
+<div class="contentInner" style='background: url("assets/2f13d8f311d38530_quem-contrata-nao-se-arrepende.jpg")'>
+<picture>
+<source media="(max-width: 780px)" srcset="assets/1dfaac48d19b4abf_Duo-text-mob-20200422120320.png"/>
+<img alt="Quem contrata não se arrepende " src="assets/ca2cc2ee81d665eb_Duo-text-20200422120320.png"/>
+</picture>
+<!-- <a href="#contato" class="linkHeader">Contate-nos</a> -->
+</div>
+</div><div aria-hidden="true" class="contentBox_middle slick-slide slick-cloned" data-slick-index="4" style="width: 1880px;" tabindex="-1">
+<div class="contentInner" style='background: url("assets/0e67887715ae2a4d_quem-contrata-nao-precisa-cont.jpg")'>
+<picture>
+<source media="(max-width: 780px)" srcset="assets/4b1acc3c3a716249_Duo-text-20200422120913.png"/>
+<img alt="Quem contrata não precisa contar com a sorte " src="assets/4b1acc3c3a716249_Duo-text-20200422120913.png"/>
+</picture>
+<!-- <a href="#contato" class="linkHeader">Contate-nos</a> -->
+</div>
+</div><div aria-hidden="true" class="contentBox_middle slick-slide slick-cloned" data-slick-index="5" style="width: 1880px;" tabindex="-1">
+<div class="contentInner" style='background: url("assets/9fcc5f594966483b_dcv-20200422183842.png")'>
+<picture>
+<source media="(max-width: 780px)" srcset="assets/cf69680e6df94031_Duo-text-20200422183842.png"/>
+<img alt="DCV" src="assets/cf69680e6df94031_Duo-text-20200422183842.png"/>
+</picture>
+<!-- <a href="#contato" class="linkHeader">Contate-nos</a> -->
+</div>
+</div></div></div>
+<ul class="slick-dots" role="tablist" style=""><li class="slick-active" role="presentation"><button aria-controls="slick-slide20" aria-label="1 of 3" aria-selected="true" id="slick-slide-control20" role="tab" tabindex="0" type="button">1</button></li><li class="" role="presentation"><button aria-controls="slick-slide21" aria-label="2 of 3" id="slick-slide-control21" role="tab" tabindex="-1" type="button">2</button></li><li class="" role="presentation"><button aria-controls="slick-slide22" aria-label="3 of 3" id="slick-slide-control22" role="tab" tabindex="-1" type="button">3</button></li></ul></div>
+</div></section> <section class="section page pageInner fp-section fp-table" data-anchor="page2" id="portfolio" style="height: 1080px;"><div class="fp-tableCell" style="height:1080px;"><div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 1080px;"><div class="fp-scrollable" style="overflow: hidden; width: auto; height: 1080px;">
+<div class="contentBox_middle">
+<div class="gridContent">
+<h2>Portfolio</h2>
+<div class="content">
+<div class="contentText">
+<div class="portfolioCategories">
+<div class="button-group captionsCategories" id="filters">
+<button class="button is-checked" data-filter="all-itens">Todos os projetos</button>
+<button class="button letreiros" data-filter="letreiros"> Letreiros</button>
+<button class="button festas-eventos" data-filter="festas-eventos"> Festas / Eventos</button>
+<button class="button frotas" data-filter="frotas"> Frotas</button>
+<button class="button festa-infantil" data-filter="festa-infantil"> Festa Infantil</button>
+<button class="button adesivos" data-filter="adesivos"> Adesivos</button>
+<button class="button fachadas-e-placas" data-filter="fachadas-e-placas"> Fachadas e Placas</button>
+<button class="button outdoors-tapumes" data-filter="outdoors-tapumes"> Outdoors/ Tapumes</button>
+<button class="button totens-e-toldos" data-filter="totens-e-toldos"> Totens e Toldos</button>
+<button class="button sinalizacao-interna" data-filter="sinalizacao-interna"> Sinalização Interna</button>
+<button class="button neon-led" data-filter="neon-led"> NEON LED</button>
+</div>
+</div>
+<div class="portfolioContent">
+<div class="captionsCategories">
+<span class="active"><strong>Exibindo</strong> Todos os projetos</span>
+<span data-filter="letreiros"><strong>Letreiros: </strong></span>
+<span data-filter="festas-eventos"><strong>Festas / Eventos: </strong></span>
+<span data-filter="frotas"><strong>Frotas: </strong></span>
+<span data-filter="festa-infantil"><strong>Festa Infantil: </strong></span>
+<span data-filter="adesivos"><strong>Adesivos: </strong></span>
+<span data-filter="fachadas-e-placas"><strong>Fachadas e Placas: </strong></span>
+<span data-filter="outdoors-tapumes"><strong>Outdoors/ Tapumes: </strong></span>
+<span data-filter="totens-e-toldos"><strong>Totens e Toldos: </strong></span>
+<span data-filter="sinalizacao-interna"><strong>Sinalização Interna: </strong></span>
+<span data-filter="neon-led"><strong>NEON LED: </strong></span>
+</div>
+<div class="filtr-container">
+<div class="grid" style="position: relative; height: 5466.91px;">
+<div class="grid-sizer"></div>
+<div class="element-item frotas" style="position: absolute; left: 0%; top: 3678.53px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/frota_813_img.jpeg" title="frota">
+<img alt="frota" src="assets/90cd15fb00fe1efc_frota_813_img.jpeg"/>
+</a>
+</div>
+<div class="element-item fachadas-e-placas" style="position: absolute; left: 25%; top: 0px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/emporia_498_img.jpg" title="emporia">
+<img alt="emporia" src="assets/509f1c37ebb0b806_emporia_498_img.jpg"/>
+</a>
+</div>
+<div class="element-item festas-eventos" style="position: absolute; left: 25%; top: 1018.59px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/pista-de-danca_365_img.jpg" title="Pista de Dança">
+<img alt="Pista de Dança" src="assets/3137a0a9d0849cae_pista-de-danca_365_img.jpg"/>
+</a>
+</div>
+<div class="element-item sinalizacao-interna" style="position: absolute; left: 25%; top: 4348.52px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/display-de-mesa-em-acrilico-plurall-_259_img.jpg" title="Display de mesa em acrílico. Plurall ">
+<img alt="Display de mesa em acrílico. Plurall " src="assets/52a08ff1ebd6901f_display-de-mesa-em-acrilico-pl.jpg"/>
+</a>
+</div>
+<div class="element-item totens-e-toldos" style="position: absolute; left: 25%; top: 4858.86px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/la-brasa_199_img.jpg" title="La Brasa">
+<img alt="La Brasa" src="assets/46fd2d09196bd9fa_la-brasa_199_img.jpg"/>
+</a>
+</div>
+<div class="element-item letreiros" style="position: absolute; left: 25%; top: 1911.19px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/letras-em-pvc-com-pintura-_730_img.jpeg" title="letras em PVC com pintura ">
+<img alt="letras em PVC com pintura " src="assets/889d80f58a79ff77_letras-em-pvc-com-pintura-_730.jpeg"/>
+</a>
+</div>
+<div class="element-item sinalizacao-interna" style="position: absolute; left: 0%; top: 1489.03px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/sinalizacao-12_229_img.jpg" title="Sinalização - 12">
+<img alt="Sinalização - 12" src="assets/ba3d81cd73a15a6a_sinalizacao-12_229_img.jpg"/>
+</a>
+</div>
+<div class="element-item frotas" style="position: absolute; left: 75%; top: 672.047px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/frota-26_582_img.jpeg" title="frota 26">
+<img alt="frota 26" src="assets/e4b0a8e560f19091_frota-26_582_img.jpeg"/>
+</a>
+</div>
+<div class="element-item totens-e-toldos" style="position: absolute; left: 25%; top: 509.297px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/totemtoldo-10_620_img.jpeg" title="totem/toldo 10">
+<img alt="totem/toldo 10" src="assets/286d6662abecbbe9_totemtoldo-10_620_img.jpeg"/>
+</a>
+</div>
+<div class="element-item frotas" style="position: absolute; left: 50%; top: 2233.61px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/frota-8_564_img.jpeg" title="frota 8">
+<img alt="frota 8" src="assets/8736a15c297306b3_frota-8_564_img.jpeg"/>
+</a>
+</div>
+<div class="element-item frotas" style="position: absolute; left: 75%; top: 4816.78px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/frota-38_595_img.jpeg" title="frota 38">
+<img alt="frota 38" src="assets/9ef77bfea37ab028_frota-38_595_img.jpeg"/>
+</a>
+</div>
+<div class="element-item letreiros" style="position: absolute; left: 25%; top: 3451.72px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/letras-caixa-hangar-_349_img.jpg" title="letras caixa  hangar ">
+<img alt="letras caixa  hangar " src="assets/5a61de1c49fa2ae3_letras-caixa-hangar-_349_img.jpg"/>
+</a>
+</div>
+<div class="element-item frotas" style="position: absolute; left: 50%; top: 387.5px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/frota-4_560_img.jpeg" title="frota 4">
+<img alt="frota 4" src="assets/50226e692f410f92_frota-4_560_img.jpeg"/>
+</a>
+</div>
+<div class="element-item festas-eventos" style="position: absolute; left: 25%; top: 2298.69px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/eventos-42_123_img.jpg" title="Eventos -42">
+<img alt="Eventos -42" src="assets/488d3187bf379cf0_eventos-42_123_img.jpg"/>
+</a>
+</div>
+<div class="element-item fachadas-e-placas" style="position: absolute; left: 0%; top: 1101.53px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/de-bem_511_img.jpg" title="de bem">
+<img alt="de bem" src="assets/dcbbbe566dc74c69_de-bem_511_img.jpg"/>
+</a>
+</div>
+<div class="element-item festas-eventos" style="position: absolute; left: 50%; top: 4956.57px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/pista-de-danca_424_img.jpg" title="Pista de dança">
+<img alt="Pista de dança" src="assets/2ef83257436c76f1_pista-de-danca_424_img.jpg"/>
+</a>
+</div>
+<div class="element-item festas-eventos" style="position: absolute; left: 50%; top: 4707.68px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/pista-de-danca_381_img.jpg" title="Pista de dança">
+<img alt="Pista de dança" src="assets/25c9a79d7492a2a4_pista-de-danca_381_img.jpg"/>
+</a>
+</div>
+<div class="element-item frotas" style="position: absolute; left: 50%; top: 2529.75px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/frota_816_img.jpeg" title="frota">
+<img alt="frota" src="assets/45fb3b8e19ae18cc_frota_816_img.jpeg"/>
+</a>
+</div>
+<div class="element-item outdoors-tapumes" style="position: absolute; left: 75%; top: 4142.64px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/totemtapume-14_666_img.jpeg" title="totem/tapume 14">
+<img alt="totem/tapume 14" src="assets/91e24d958eb3c8d7_totemtapume-14_666_img.jpeg"/>
+</a>
+</div>
+<div class="element-item neon-led" style="position: absolute; left: 0%; top: 2045.61px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/neon-led_842_img.jpg" title="NEON LED">
+<img alt="NEON LED" src="assets/0647e7870262a2c9_neon-led_842_img.jpg"/>
+</a>
+</div>
+<div class="element-item festa-infantil" style="position: absolute; left: 50%; top: 1753.72px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/festa-infantil-26_542_img.jpg" title="festa infantil 26">
+<img alt="festa infantil 26" src="assets/1c85f94cd2ed3e0f_festa-infantil-26_542_img.jpg"/>
+</a>
+</div>
+<div class="element-item festas-eventos" style="position: absolute; left: 50%; top: 1489.08px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/quadro-decorativo_420_img.jpg" title="Quadro decorativo">
+<img alt="Quadro decorativo" src="assets/06a4d4a658eea4fe_quadro-decorativo_420_img.jpg"/>
+</a>
+</div>
+<div class="element-item festa-infantil" style="position: absolute; left: 25%; top: 2971.83px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/festa-infantil-8_524_img.jpg" title="festa infantil 8">
+<img alt="festa infantil 8" src="assets/e6edf9f0c5f0e6c8_festa-infantil-8_524_img.jpg"/>
+</a>
+</div>
+<div class="element-item festas-eventos" style="position: absolute; left: 50%; top: 4227.78px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/eventos-6_71_img.jpg" title="Eventos -6">
+<img alt="Eventos -6" src="assets/5490059eda7f17f6_eventos-6_71_img.jpg"/>
+</a>
+</div>
+<div class="element-item totens-e-toldos" style="position: absolute; left: 75%; top: 1987.83px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/toten-nsc-2_742_img.jpeg" title="toten nsc 2">
+<img alt="toten nsc 2" src="assets/1740a8266800a491_toten-nsc-2_742_img.jpeg"/>
+</a>
+</div>
+<div class="element-item adesivos" style="position: absolute; left: 25%; top: 3839.22px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/adesivo-25_715_img.jpeg" title="adesivo 25">
+<img alt="adesivo 25" src="assets/4adaeb4908c9cbaa_adesivo-25_715_img.jpeg"/>
+</a>
+</div>
+<div class="element-item adesivos" style="position: absolute; left: 25%; top: 1401.89px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/adesivo-17_709_img.jpeg" title="adesivo 17">
+<img alt="adesivo 17" src="assets/84cfb525aed3ba1f_adesivo-17_709_img.jpeg"/>
+</a>
+</div>
+<div class="element-item letreiros" style="position: absolute; left: 25%; top: 2563.33px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/letras-caixa-humberto-feldimann_289_img.jpg" title="Letras caixa. Humberto Feldimann">
+<img alt="Letras caixa. Humberto Feldimann" src="assets/4bac3e69b00a3849_letras-caixa-humberto-feldiman.jpg"/>
+</a>
+</div>
+<div class="element-item letreiros" style="position: absolute; left: 50%; top: 0px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/letreiro-11_688_img.jpeg" title="letreiro 11">
+<img alt="letreiro 11" src="assets/70bb8b3ffe7336e6_letreiro-11_688_img.jpeg"/>
+</a>
+</div>
+<div class="element-item letreiros" style="position: absolute; left: 75%; top: 2467.72px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/letreiro-10_687_img.jpeg" title="letreiro 10">
+<img alt="letreiro 10" src="assets/0dda6c17cc6f7450_letreiro-10_687_img.jpeg"/>
+</a>
+</div>
+<div class="element-item fachadas-e-placas" style="position: absolute; left: 75%; top: 0px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/catarinense_502_img.jpg" title="catarinense">
+<img alt="catarinense" src="assets/ceba0f06328835e2_catarinense_502_img.jpg"/>
+</a>
+</div>
+<div class="element-item adesivos" style="position: absolute; left: 75%; top: 2762.81px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/adesivo-_824_img.jpeg" title="adesivo ">
+<img alt="adesivo " src="assets/d2dbe5dc0e5e4fde_adesivo-_824_img.jpeg"/>
+</a>
+</div>
+<div class="element-item letreiros" style="position: absolute; left: 0%; top: 3941.08px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/letras-caixa-em-chapa-galvanizada-di-fiore-cafe_245_img.jpg" title="Letras Caixa em Chapa galvanizada, Di Fiore Café">
+<img alt="Letras Caixa em Chapa galvanizada, Di Fiore Café" src="assets/3d43224db7109b98_letras-caixa-em-chapa-galvaniz.jpg"/>
+</a>
+</div>
+<div class="element-item frotas" style="position: absolute; left: 50%; top: 896.797px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/frota-27_583_img.jpeg" title="frota 27">
+<img alt="frota 27" src="assets/7c030104e563ee32_frota-27_583_img.jpeg"/>
+</a>
+</div>
+<div class="element-item festa-infantil" style="position: absolute; left: 0%; top: 1785.17px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/festa-infantil-27_543_img.jpeg" title="festa infantil 27">
+<img alt="festa infantil 27" src="assets/eb24a766d466c16b_festa-infantil-27_543_img.jpeg"/>
+</a>
+</div>
+<div class="element-item fachadas-e-placas" style="position: absolute; left: 0%; top: 2231.5px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/-miliane-_759_img.jpeg" title=" Miliane ">
+<img alt=" Miliane " src="assets/8aa25c8dd88f6408_-miliane-_759_img.jpeg"/>
+</a>
+</div>
+<div class="element-item totens-e-toldos" style="position: absolute; left: 0%; top: 2523.44px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/toten-de-jardin_744_img.jpeg" title="toten de jardin">
+<img alt="toten de jardin" src="assets/9193d0405cd02c41_toten-de-jardin_744_img.jpeg"/>
+</a>
+</div>
+<div class="element-item totens-e-toldos" style="position: absolute; left: 75%; top: 3110.41px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/totemtoldo-15_625_img.jpeg" title="totem/toldo 15">
+<img alt="totem/toldo 15" src="assets/302b4f6c2194fc2b_totemtoldo-15_625_img.jpeg"/>
+</a>
+</div>
+<div class="element-item adesivos" style="position: absolute; left: 50%; top: 1192.94px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/adesivo-_344_img.jpg" title="adesivo ">
+<img alt="adesivo " src="assets/bd8f6a52b44d3321_adesivo-_344_img.jpg"/>
+</a>
+</div>
+<div class="element-item letreiros" style="position: absolute; left: 0%; top: 5044.71px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/letras-caixa-em-chapa-galvanizada-_731_img.jpeg" title="Letras caixa em chapa galvanizada ">
+<img alt="Letras caixa em chapa galvanizada " src="assets/d1533f52e81c6d1a_letras-caixa-em-chapa-galvaniz.jpeg"/>
+</a>
+</div>
+<div class="element-item festas-eventos" style="position: absolute; left: 0%; top: 836.891px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/eventos-3_68_img.jpg" title="Eventos -3">
+<img alt="Eventos -3" src="assets/db154fb1b585d56b_eventos-3_68_img.jpg"/>
+</a>
+</div>
+<div class="element-item adesivos" style="position: absolute; left: 0%; top: 4327.52px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/adesivo-_820_img.jpeg" title="adesivo ">
+<img alt="adesivo " src="assets/5833d70b6b6b926e_adesivo-_820_img.jpeg"/>
+</a>
+</div>
+<div class="element-item adesivos" style="position: absolute; left: 50%; top: 2917.25px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/adesivo-fosco-mond-digital-_389_img.jpg" title="Adesivo fosco Mond Digital ">
+<img alt="Adesivo fosco Mond Digital " src="assets/e3e21f551e168f3a_adesivo-fosco-mond-digital-_38.jpg"/>
+</a>
+</div>
+<div class="element-item frotas" style="position: absolute; left: 50%; top: 3427.6px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/frota-16_572_img.jpeg" title="frota 16">
+<img alt="frota 16" src="assets/1e97a5829939fe02_frota-16_572_img.jpeg"/>
+</a>
+</div>
+<div class="element-item letreiros" style="position: absolute; left: 0%; top: 3291.03px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/letras-caixa-face-acrilica-e-led_740_img.jpeg" title="Letras caixa face acrílica e Led">
+<img alt="Letras caixa face acrílica e Led" src="assets/0bd8461228174df2_letras-caixa-face-acrilica-e-l.jpeg"/>
+</a>
+</div>
+<div class="element-item adesivos" style="position: absolute; left: 75%; top: 968.188px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/adesivo-4_696_img.jpeg" title="adesivo 4">
+<img alt="adesivo 4" src="assets/f4f87da0afd403ba_adesivo-4_696_img.jpeg"/>
+</a>
+</div>
+<div class="element-item festas-eventos" style="position: absolute; left: 50%; top: 3963.14px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/amor-maior-que-o-mundo_74_img.jpg" title="Amor maior que o mundo">
+<img alt="Amor maior que o mundo" src="assets/25bb3afdcfa75f0b_amor-maior-que-o-mundo_74_img.jpg"/>
+</a>
+</div>
+<div class="element-item festa-infantil" style="position: absolute; left: 75%; top: 3878px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/festa-infantil-11_528_img.jpeg" title="festa infantil 11">
+<img alt="festa infantil 11" src="assets/4c2da6ed2ab9d880_festa-infantil-11_528_img.jpeg"/>
+</a>
+</div>
+<div class="element-item fachadas-e-placas" style="position: absolute; left: 0%; top: 0px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/placas-_788_img.jpeg" title="placas ">
+<img alt="placas " src="assets/d7fe4dc04c7198bd_placas-_788_img.jpeg"/>
+</a>
+</div>
+<div class="element-item frotas" style="position: absolute; left: 75%; top: 1477.48px;">
+<a data-fancybox="portfolioGallery" href="img/portifolio/frota-48_605_img.jpeg" title="frota 48">
+<img alt="frota 48" src="assets/ec194a48b70fdbc8_frota-48_605_img.jpeg"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 10px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 193.625px;"></div><div class="slimScrollRail" style="width: 10px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div></div></section> <section class="section page pageInner fp-section fp-table" data-anchor="page3" id="servicos" style="height: 1080px;"><div class="fp-tableCell" style="height:1080px;"><div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 1080px;"><div class="fp-scrollable" style="overflow: hidden; width: auto; height: 1080px;">
+<div class="contentBox_middle">
+<div class="gridContent">
+<h2>Serviços</h2>
+<div class="content">
+<span class="buttonL"><i><svg id="Capa_1" style="enable-background:new 0 0 307.1 307.1;" version="1.1" viewbox="0 0 307.1 307.1" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<style type="text/css">
+</style>
+<g>
+<g id="_x34_85._Up">
+<g>
+<path class="st0" d="M205.7,4.7L67.9,142.5c-6.1,6.1-6.1,16.1,0,22.2l137.8,137.8c6.1,6.1,16.1,6.1,22.2,0l11.1-11
+				c6.1-6.1,6.1-16.1,0-22.2L123.4,153.6L239,38c6.1-6.1,6.1-16.1,0-22.2L227.9,4.7C221.8-1.4,211.9-1.4,205.7,4.7z"></path>
+</g>
+</g>
+</g>
+</svg>
+</i></span>
+<ul class="servicesList">
+<li>
+<a href="#">
+<figure>
+<img alt="Letreiros" src="assets/b463d22637cddd22_letreiros_18_capa.jpg"/>
+</figure>
+<div class="contentService">
+<div class="titleService">
+<h3>Letreiros</h3>
+<i><svg id="Capa_1" style="enable-background:new 0 0 307.1 307.1;" version="1.1" viewbox="0 0 307.1 307.1" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g>
+<g id="_x34_85._Up">
+<g>
+<path d="M4.6,101.3l137.8,137.8c6.1,6.1,16.1,6.1,22.2,0l137.8-137.8c6.1-6.1,6.1-16.1,0-22.2L291.4,68
+				c-6.1-6.1-16.1-6.1-22.2,0L153.5,183.6L37.9,68c-6.1-6.1-16.1-6.1-22.2,0L4.6,79.1C-1.5,85.2-1.5,95.1,4.6,101.3z"></path>
+</g>
+</g>
+</g>
+</svg>
+</i>
+</div>
+<div class="hideContent">
+<p></p>
+</div>
+</div>
+<div class="fakeLink letreiros" data-filter="letreiros">
+<i><svg height="24" version="1.1" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"></path></svg></i>
+<span>Ver Projetos</span>
+</div>
+</a>
+</li>
+<li>
+<a href="#">
+<figure>
+<img alt="Festas / Eventos" src="assets/60b83c4ceeb3511e_festas-eventos_19_capa.jpg"/>
+</figure>
+<div class="contentService">
+<div class="titleService">
+<h3>Festas / Eventos</h3>
+<i><svg id="Capa_1" style="enable-background:new 0 0 307.1 307.1;" version="1.1" viewbox="0 0 307.1 307.1" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g>
+<g id="_x34_85._Up">
+<g>
+<path d="M4.6,101.3l137.8,137.8c6.1,6.1,16.1,6.1,22.2,0l137.8-137.8c6.1-6.1,6.1-16.1,0-22.2L291.4,68
+				c-6.1-6.1-16.1-6.1-22.2,0L153.5,183.6L37.9,68c-6.1-6.1-16.1-6.1-22.2,0L4.6,79.1C-1.5,85.2-1.5,95.1,4.6,101.3z"></path>
+</g>
+</g>
+</g>
+</svg>
+</i>
+</div>
+<div class="hideContent">
+<p></p>
+</div>
+</div>
+<div class="fakeLink festas-eventos" data-filter="festas-eventos">
+<i><svg height="24" version="1.1" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"></path></svg></i>
+<span>Ver Projetos</span>
+</div>
+</a>
+</li>
+<li>
+<a href="#">
+<figure>
+<img alt="Frotas" src="assets/67e3f0847ebaecc7_frotas_20_capa.jpg"/>
+</figure>
+<div class="contentService">
+<div class="titleService">
+<h3>Frotas</h3>
+<i><svg id="Capa_1" style="enable-background:new 0 0 307.1 307.1;" version="1.1" viewbox="0 0 307.1 307.1" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g>
+<g id="_x34_85._Up">
+<g>
+<path d="M4.6,101.3l137.8,137.8c6.1,6.1,16.1,6.1,22.2,0l137.8-137.8c6.1-6.1,6.1-16.1,0-22.2L291.4,68
+				c-6.1-6.1-16.1-6.1-22.2,0L153.5,183.6L37.9,68c-6.1-6.1-16.1-6.1-22.2,0L4.6,79.1C-1.5,85.2-1.5,95.1,4.6,101.3z"></path>
+</g>
+</g>
+</g>
+</svg>
+</i>
+</div>
+<div class="hideContent">
+<p></p>
+</div>
+</div>
+<div class="fakeLink frotas" data-filter="frotas">
+<i><svg height="24" version="1.1" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"></path></svg></i>
+<span>Ver Projetos</span>
+</div>
+</a>
+</li>
+<li>
+<a href="#">
+<figure>
+<img alt="Festa Infantil" src="assets/2104a67486ec3e12_festa-infantil_21_capa.jpg"/>
+</figure>
+<div class="contentService">
+<div class="titleService">
+<h3>Festa Infantil</h3>
+<i><svg id="Capa_1" style="enable-background:new 0 0 307.1 307.1;" version="1.1" viewbox="0 0 307.1 307.1" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g>
+<g id="_x34_85._Up">
+<g>
+<path d="M4.6,101.3l137.8,137.8c6.1,6.1,16.1,6.1,22.2,0l137.8-137.8c6.1-6.1,6.1-16.1,0-22.2L291.4,68
+				c-6.1-6.1-16.1-6.1-22.2,0L153.5,183.6L37.9,68c-6.1-6.1-16.1-6.1-22.2,0L4.6,79.1C-1.5,85.2-1.5,95.1,4.6,101.3z"></path>
+</g>
+</g>
+</g>
+</svg>
+</i>
+</div>
+<div class="hideContent">
+<p></p>
+</div>
+</div>
+<div class="fakeLink festa-infantil" data-filter="festa-infantil">
+<i><svg height="24" version="1.1" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"></path></svg></i>
+<span>Ver Projetos</span>
+</div>
+</a>
+</li>
+<li>
+<a href="#">
+<figure>
+<img alt="Adesivos" src="assets/510620deaf387b36_adesivos_22_capa.jpg"/>
+</figure>
+<div class="contentService">
+<div class="titleService">
+<h3>Adesivos</h3>
+<i><svg id="Capa_1" style="enable-background:new 0 0 307.1 307.1;" version="1.1" viewbox="0 0 307.1 307.1" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g>
+<g id="_x34_85._Up">
+<g>
+<path d="M4.6,101.3l137.8,137.8c6.1,6.1,16.1,6.1,22.2,0l137.8-137.8c6.1-6.1,6.1-16.1,0-22.2L291.4,68
+				c-6.1-6.1-16.1-6.1-22.2,0L153.5,183.6L37.9,68c-6.1-6.1-16.1-6.1-22.2,0L4.6,79.1C-1.5,85.2-1.5,95.1,4.6,101.3z"></path>
+</g>
+</g>
+</g>
+</svg>
+</i>
+</div>
+<div class="hideContent">
+<p></p>
+</div>
+</div>
+<div class="fakeLink adesivos" data-filter="adesivos">
+<i><svg height="24" version="1.1" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"></path></svg></i>
+<span>Ver Projetos</span>
+</div>
+</a>
+</li>
+<li>
+<a href="#">
+<figure>
+<img alt="Fachadas e Placas" src="assets/0b0db7e49dccf314_acm-e-toldos_23_capa.jpg"/>
+</figure>
+<div class="contentService">
+<div class="titleService">
+<h3>Fachadas e Placas</h3>
+<i><svg id="Capa_1" style="enable-background:new 0 0 307.1 307.1;" version="1.1" viewbox="0 0 307.1 307.1" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g>
+<g id="_x34_85._Up">
+<g>
+<path d="M4.6,101.3l137.8,137.8c6.1,6.1,16.1,6.1,22.2,0l137.8-137.8c6.1-6.1,6.1-16.1,0-22.2L291.4,68
+				c-6.1-6.1-16.1-6.1-22.2,0L153.5,183.6L37.9,68c-6.1-6.1-16.1-6.1-22.2,0L4.6,79.1C-1.5,85.2-1.5,95.1,4.6,101.3z"></path>
+</g>
+</g>
+</g>
+</svg>
+</i>
+</div>
+<div class="hideContent">
+<p></p>
+</div>
+</div>
+<div class="fakeLink fachadas-e-placas" data-filter="fachadas-e-placas">
+<i><svg height="24" version="1.1" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"></path></svg></i>
+<span>Ver Projetos</span>
+</div>
+</a>
+</li>
+<li>
+<a href="#">
+<figure>
+<img alt="Outdoors/ Tapumes" src="assets/985d841b3cd572b7_outdoors_capa.jpg"/>
+</figure>
+<div class="contentService">
+<div class="titleService">
+<h3>Outdoors/ Tapumes</h3>
+<i><svg id="Capa_1" style="enable-background:new 0 0 307.1 307.1;" version="1.1" viewbox="0 0 307.1 307.1" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g>
+<g id="_x34_85._Up">
+<g>
+<path d="M4.6,101.3l137.8,137.8c6.1,6.1,16.1,6.1,22.2,0l137.8-137.8c6.1-6.1,6.1-16.1,0-22.2L291.4,68
+				c-6.1-6.1-16.1-6.1-22.2,0L153.5,183.6L37.9,68c-6.1-6.1-16.1-6.1-22.2,0L4.6,79.1C-1.5,85.2-1.5,95.1,4.6,101.3z"></path>
+</g>
+</g>
+</g>
+</svg>
+</i>
+</div>
+<div class="hideContent">
+<p></p>
+</div>
+</div>
+<div class="fakeLink outdoors-tapumes" data-filter="outdoors-tapumes">
+<i><svg height="24" version="1.1" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"></path></svg></i>
+<span>Ver Projetos</span>
+</div>
+</a>
+</li>
+<li>
+<a href="#">
+<figure>
+<img alt="Totens e Toldos" src="assets/3ef6be0437e484f5_placas-e-totens_capa.jpg"/>
+</figure>
+<div class="contentService">
+<div class="titleService">
+<h3>Totens e Toldos</h3>
+<i><svg id="Capa_1" style="enable-background:new 0 0 307.1 307.1;" version="1.1" viewbox="0 0 307.1 307.1" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g>
+<g id="_x34_85._Up">
+<g>
+<path d="M4.6,101.3l137.8,137.8c6.1,6.1,16.1,6.1,22.2,0l137.8-137.8c6.1-6.1,6.1-16.1,0-22.2L291.4,68
+				c-6.1-6.1-16.1-6.1-22.2,0L153.5,183.6L37.9,68c-6.1-6.1-16.1-6.1-22.2,0L4.6,79.1C-1.5,85.2-1.5,95.1,4.6,101.3z"></path>
+</g>
+</g>
+</g>
+</svg>
+</i>
+</div>
+<div class="hideContent">
+<p></p>
+</div>
+</div>
+<div class="fakeLink totens-e-toldos" data-filter="totens-e-toldos">
+<i><svg height="24" version="1.1" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"></path></svg></i>
+<span>Ver Projetos</span>
+</div>
+</a>
+</li>
+<li>
+<a href="#">
+<figure>
+<img alt="Sinalização Interna" src="assets/046cd35ae24219fc_sinalizacao-interna_capa.jpg"/>
+</figure>
+<div class="contentService">
+<div class="titleService">
+<h3>Sinalização Interna</h3>
+<i><svg id="Capa_1" style="enable-background:new 0 0 307.1 307.1;" version="1.1" viewbox="0 0 307.1 307.1" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g>
+<g id="_x34_85._Up">
+<g>
+<path d="M4.6,101.3l137.8,137.8c6.1,6.1,16.1,6.1,22.2,0l137.8-137.8c6.1-6.1,6.1-16.1,0-22.2L291.4,68
+				c-6.1-6.1-16.1-6.1-22.2,0L153.5,183.6L37.9,68c-6.1-6.1-16.1-6.1-22.2,0L4.6,79.1C-1.5,85.2-1.5,95.1,4.6,101.3z"></path>
+</g>
+</g>
+</g>
+</svg>
+</i>
+</div>
+<div class="hideContent">
+<p></p>
+</div>
+</div>
+<div class="fakeLink sinalizacao-interna" data-filter="sinalizacao-interna">
+<i><svg height="24" version="1.1" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"></path></svg></i>
+<span>Ver Projetos</span>
+</div>
+</a>
+</li>
+<li>
+<a href="#">
+<figure>
+<img alt="NEON LED" src="assets/6b19cf172a0d41c2_neon-led_31_capa.jpg"/>
+</figure>
+<div class="contentService">
+<div class="titleService">
+<h3>NEON LED</h3>
+<i><svg id="Capa_1" style="enable-background:new 0 0 307.1 307.1;" version="1.1" viewbox="0 0 307.1 307.1" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g>
+<g id="_x34_85._Up">
+<g>
+<path d="M4.6,101.3l137.8,137.8c6.1,6.1,16.1,6.1,22.2,0l137.8-137.8c6.1-6.1,6.1-16.1,0-22.2L291.4,68
+				c-6.1-6.1-16.1-6.1-22.2,0L153.5,183.6L37.9,68c-6.1-6.1-16.1-6.1-22.2,0L4.6,79.1C-1.5,85.2-1.5,95.1,4.6,101.3z"></path>
+</g>
+</g>
+</g>
+</svg>
+</i>
+</div>
+<div class="hideContent">
+<p><b></b></p>
+</div>
+</div>
+<div class="fakeLink neon-led" data-filter="neon-led">
+<i><svg height="24" version="1.1" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"></path></svg></i>
+<span>Ver Projetos</span>
+</div>
+</a>
+</li>
+<!--					<li>
+						<a href="#">
+							<figure>
+								<img src="img/content/servico_1.png" alt="Sinalização">
+							</figure>
+							<div class="contentService">
+								<div class="titleService">
+									<h3>Sinalização</h3>
+									<i></i>
+								</div>
+								<div class="hideContent">
+									<p>Essenciais para a comunicação de uma empresa, as fachadas funcionam como um "outdoor", auxiliando na lembrança de marca.</p>
+								</div>
+							</div>
+							<div class="fakeLink" data-filter="sin">
+								<i></i>
+								<span>Ver Projetos</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<img src="img/content/servico_1.png" alt="Sinalização">
+							</figure>
+							<div class="contentService">
+								<div class="titleService">
+									<h3>Sinalização</h3>
+									<i></i>
+								</div>
+								<div class="hideContent">
+									<p>Essenciais para a comunicação de uma empresa, as fachadas funcionam como um "outdoor", auxiliando na lembrança de marca.</p>
+								</div>
+							</div>
+							<div class="fakeLink" data-filter="sin">
+								<i></i>
+								<span>Ver Projetos</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<img src="img/content/servico_1.png" alt="Sinalização">
+							</figure>
+							<div class="contentService">
+								<div class="titleService">
+									<h3>Sinalização</h3>
+									<i></i>
+								</div>
+								<div class="hideContent">
+									<p>Essenciais para a comunicação de uma empresa, as fachadas funcionam como um "outdoor", auxiliando na lembrança de marca.</p>
+								</div>
+							</div>
+							<div class="fakeLink" data-filter="sin">
+								<i></i>
+								<span>Ver Projetos</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<img src="img/content/servico_1.png" alt="Sinalização">
+							</figure>
+							<div class="contentService">
+								<div class="titleService">
+									<h3>Sinalização</h3>
+									<i></i>
+								</div>
+								<div class="hideContent">
+									<p>Essenciais para a comunicação de uma empresa, as fachadas funcionam como um "outdoor", auxiliando na lembrança de marca.</p>
+								</div>
+							</div>
+							<div class="fakeLink" data-filter="sin">
+								<i></i>
+								<span>Ver Projetos</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<img src="img/content/servico_1.png" alt="Sinalização">
+							</figure>
+							<div class="contentService">
+								<div class="titleService">
+									<h3>Sinalização</h3>
+									<i></i>
+								</div>
+								<div class="hideContent">
+									<p>Essenciais para a comunicação de uma empresa, as fachadas funcionam como um "outdoor", auxiliando na lembrança de marca.</p>
+								</div>
+							</div>
+							<div class="fakeLink" data-filter="sin">
+								<i></i>
+								<span>Ver Projetos</span>
+							</div>
+						</a>
+					</li>-->
+</ul>
+<span class="buttonR"><i><svg id="Capa_1" style="enable-background:new 0 0 307.1 307.1;" version="1.1" viewbox="0 0 307.1 307.1" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<style type="text/css">
+</style>
+<g>
+<g id="_x34_85._Up">
+<g>
+<path class="st0" d="M101.3,302.5l137.8-137.8c6.1-6.1,6.1-16.1,0-22.2L101.3,4.6c-6.1-6.1-16.1-6.1-22.2,0L68,15.7
+				c-6.1,6.1-6.1,16.1,0,22.2l115.6,115.7L68,269.2c-6.1,6.1-6.1,16.1,0,22.2l11.1,11.1C85.2,308.6,95.1,308.6,101.3,302.5z"></path>
+</g>
+</g>
+</g>
+</svg>
+</i></span>
+</div>
+</div>
+</div>
+</div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 10px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 633.913px;"></div><div class="slimScrollRail" style="width: 10px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div></div></section> <section class="section page pageInner fp-section fp-table" data-anchor="page4" id="sobre" style="height: 1080px;"><div class="fp-tableCell" style="height:1080px;">
+<div class="contentBox_middle">
+<div class="gridContent">
+<h2>Sobre</h2>
+<div class="content">
+<div class="contentText">
+<p>A Duo Comunicação Visual foi criada no dia dois de dezembro de 2013,  administrada por Alexandre Guidi, jovem empreendedor com conhecimento técnico e prático da área, encontrando-se hoje dentre as melhores do seguimento.</p>
+<p>Com maquinários próprios e uma equipe competente, aliado ao compromisso de executar projetos com fidelidade, responsabilidade, qualidade e criatividade. Entregando diariamente serviços com as melhores soluções aos nossos clientes.</p>
+</div>
+<div class="slideHero">
+<div class="slideSobre slick-initialized slick-slider slick-dotted">
+<div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 620px; transform: translate3d(0px, 0px, 0px);"><div aria-describedby="slick-slide-control00" aria-hidden="false" class="slideItem slick-slide slick-current slick-active" data-slick-index="0" id="slick-slide00" role="tabpanel" style="width: 620px;" tabindex="0">
+<img alt="" src="assets/43e2c958b4ed6005_sobre_1.jpg"/>
+</div></div></div>
+<!--<div class="slideItem">
+							<img src="img/content/sobre_1.jpg" alt="">
+						</div>
+						<div class="slideItem">
+							<img src="img/content/sobre_1.jpg" alt="">
+						</div>-->
+<ul class="slick-dots" role="tablist"><li class="slick-active" role="presentation"><button aria-controls="slick-slide00" aria-label="1 of 1" aria-selected="true" id="slick-slide-control00" role="tab" tabindex="0" type="button">1</button></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></section> <section class="section page pageInner fp-section fp-table" data-anchor="page5" id="contato" style="height: 1080px;"><div class="fp-tableCell" style="height:1080px;">
+<div class="contentBox_middle">
+<div class="gridContent">
+<div class="content">
+<div class="contentText">
+<h2>Converse<br/>com a gente</h2>
+<!-- <p>Nossa sede fica na <span>rua Cônego Aníbal Maria Di Francia 177 em Criciúma - SC</span>, você também pode falar conosco através de um dos nossos telefones ou pelo formulário de contato abaixo.</p> -->
+<form action="./" id="formContato" method="post" novalidate="novalidate">
+<ol>
+<li class="w100">
+<label for="nome">Nome completo</label>
+<input aria-required="true" class="field placeholder" id="nome" name="nome" placeholder="Digite seu nome" required="" type="text"/>
+</li>
+<li class="w50">
+<label for="email">E-mail</label>
+<input aria-required="true" class="field placeholder" id="email" name="email" placeholder="Digite seu e-mail" required="" type="email"/>
+</li>
+<li class="w50">
+<label for="telefone">Telefone</label>
+<input aria-required="true" class="field telMask placeholder" id="telefone" name="telefone" placeholder="Digite seu telefone" required="" type="tel"/>
+</li>
+<li class="w100">
+<label for="mensagem">Mensagem</label>
+<textarea aria-required="true" class="field placeholder" id="mensagem" name="mensagem" placeholder="Digite a mensagem" required=""></textarea>
+<p style="color: #555659;font-size: 12px;margin: 0;padding: 0;width: 100%;max-width: 100% !important;">Você pode enviar os arquivos para orçamento para o email <strong>atendimento@duoonline.com.br</strong>.</p>
+</li>
+<li>
+<button id="bt-contato" type="submit">ENVIAR</button>
+</li>
+</ol>
+<input class="field" name="mail" style="display: block;height: 0;border: 0" type="text"/>
+</form>
+<div id="status-envio">
+<span class="warn">Lorem Ipsum - Warn</span>
+<span class="success">Lorem Ipsum - Sucesso</span>
+<span class="load loading">Lorem Ipsum - Load</span>
+</div>
+<div class="phoneBox">
+<ul>
+<li>
+<a href="tel:4834138633" title="Clique para ligar 48 3413 8633">
+<span class="caption">Telefone 01</span>
+<div class="ico_num">
+<i><svg aria-describedby="desc" aria-labelledby="title" role="img" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Speaker Call</title>
+<desc>A solid styled icon from Orion Icon Library.</desc>
+<path d="M49.4 50.3l-8.8-5.8a4.1 4.1 0 0 0-5.6 1.1c-2 2.5-4.5 6.6-13.8-2.8S15.9 31 18.4 29a4.1 4.1 0 0 0 1.1-5.5l-5.8-8.8c-.8-1.1-1.8-2.9-4.2-2.6S1 15.9 1 23.5s6 17 14.2 25.2S32.8 63 40.5 63s11.2-6.8 11.5-8.5-1.5-3.5-2.6-4.2z" data-name="layer2" fill="#fff"></path>
+<path d="M29 1a2 2 0 0 0 0 4 30 30 0 0 1 30 30 2 2 0 1 0 4 0A34 34 0 0 0 29 1z" data-name="layer1" fill="#fff"></path>
+<path d="M29 11a2 2 0 1 0 0 4 20 20 0 0 1 20 20 2 2 0 1 0 4 0 24 24 0 0 0-24-24z" data-name="layer1" fill="#fff"></path>
+<path d="M38 35a2 2 0 1 0 4 0 13 13 0 0 0-13-13 2 2 0 0 0 0 4 9 9 0 0 1 9 9z" data-name="layer1" fill="#fff"></path>
+</svg></i>
+<span>3413 8633</span>
+</div>
+</a>
+</li>
+<li>
+<a href="tel:4834136382" title="Clique para ligar 48 3413 6382">
+<span class="caption">Telefone 02</span>
+<div class="ico_num">
+<i><svg aria-describedby="desc" aria-labelledby="title" role="img" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>WhatsApp</title>
+<desc>A line styled icon from Orion Icon Library.</desc>
+<path d="M30.287 2.029A29.769 29.769 0 0 0 5.223 45.266L2.064 60.6a1.158 1.158 0 0 0 1.4 1.361L18.492 58.4A29.76 29.76 0 1 0 30.287 2.029zm17.931 46.2" data-name="layer2" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4"></path>
+<path d="M46.184 38.205l-5.765-1.655a2.149 2.149 0 0 0-2.126.561l-1.41 1.436a2.1 2.1 0 0 1-2.283.482c-2.727-1.1-8.463-6.2-9.927-8.754a2.1 2.1 0 0 1 .166-2.328l1.23-1.592a2.148 2.148 0 0 0 .265-2.183l-2.424-5.485a2.149 2.149 0 0 0-3.356-.769c-1.609 1.361-3.517 3.428-3.749 5.719-.409 4.039 1.323 9.13 7.872 15.242 7.566 7.063 13.626 8 17.571 7.04 2.238-.542 4.026-2.714 5.154-4.493a2.15 2.15 0 0 0-1.218-3.221z" data-name="layer1" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0"></path>
+</svg></i>
+<span>3413 6382</span>
+</div>
+</a>
+</li>
+<li>
+<a href="https://wa.link/o1udz9" target="_blank" title="Clique para ligar 48 3413 6382">
+<span class="caption">Whatsapp 01</span>
+<div class="ico_num">
+<i><svg aria-describedby="desc" aria-labelledby="title" role="img" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>WhatsApp</title>
+<desc>A line styled icon from Orion Icon Library.</desc>
+<path d="M30.287 2.029A29.769 29.769 0 0 0 5.223 45.266L2.064 60.6a1.158 1.158 0 0 0 1.4 1.361L18.492 58.4A29.76 29.76 0 1 0 30.287 2.029zm17.931 46.2" data-name="layer2" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4"></path>
+<path d="M46.184 38.205l-5.765-1.655a2.149 2.149 0 0 0-2.126.561l-1.41 1.436a2.1 2.1 0 0 1-2.283.482c-2.727-1.1-8.463-6.2-9.927-8.754a2.1 2.1 0 0 1 .166-2.328l1.23-1.592a2.148 2.148 0 0 0 .265-2.183l-2.424-5.485a2.149 2.149 0 0 0-3.356-.769c-1.609 1.361-3.517 3.428-3.749 5.719-.409 4.039 1.323 9.13 7.872 15.242 7.566 7.063 13.626 8 17.571 7.04 2.238-.542 4.026-2.714 5.154-4.493a2.15 2.15 0 0 0-1.218-3.221z" data-name="layer1" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0"></path>
+</svg></i>
+<span>3413 6382</span>
+</div>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="contentMedia">
+<div class="mapBox">
+<iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.98828721154!2d-49.39131948433961!3d-28.68999697656286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9521825ee085fd35%3A0xcdfe1aeb10f97c1!2sDUO+COMUNICA%C3%87%C3%83O+VISUAL!5e0!3m2!1spt-BR!2sbr!4v1534302349125" style="border:0"></iframe>
+</div>
+<div class="mascoteFull">
+<img alt="" src="assets/fff69a372d980ebd_footer4.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<a href="htpp://www.neurodigital.com.br" title="Neuro Digital">by neurodigital</a>
+</footer>
+</div></section> </div>
+<!-- END -->
+<!-- Libraries / JS  -->
+<script src="assets/160a426ff2894252_jquery-3.3.1.min.js"></script>
+<script src="assets/364ea3c5b85db7e4_lauresAnimOnLoad.js"></script>
+<script src="assets/0c7178cc6ca34fb1_slick.min.js"></script>
+<script src="assets/d08071a18a25f516_jquery.slimscroll.min.js"></script>
+<script src="assets/2ea3ad38dd049815_jquery.fullPage.min.js"></script>
+<script src="assets/081ae9baaacc857c_isotope.pkgd.min.js"></script>
+<script src="assets/7f7ced5ab1e5700b_jquery.fancybox.min.js"></script>
+<!--<script src="libraries/forms/jquery-migrate-1.4.1.min.js"></script>-->
+<script src="assets/8c16d6ff84b716af_forms.js"></script>
+<script src="assets/6254dbfa920e6368_jsFunctions.js"></script>
+<script src="assets/3198c6dc23a2880f_nav.js"></script>
+<script src="assets/36f311bab347c445_main.js"></script>
+<!-- Fecha div.maxRow -->
+</div>
+
+<div class="left" id="fp-nav" style="margin-top: -60px;"><ul><li><a class="active" href="#page1"><span></span></a></li><li><a href="#page2"><span></span></a></li><li><a href="#page3"><span></span></a></li><li><a href="#page4"><span></span></a></li><li><a href="#page5"><span></span></a></li></ul></div><iframe height="0" src="https://www.google.com/recaptcha/api2/aframe" style="display: none;" width="0"></iframe><script data-offline-fix="1">(function(){
+var IS_CSR = false;
+var resolveLocal = window.__resolveLocal || function(){return null;};
+var rewriteSrcset = window.__rewriteSrcset || function(s){return s;};
+function fixImg(el){
+  if (!el || el.tagName !== 'IMG') return;
+  var src = el.getAttribute('src');
+  var loc = resolveLocal(src);
+  if (loc && src !== loc) el.setAttribute('src', loc);
+  var ss = el.getAttribute('srcset');
+  if (ss) {
+    var nss = rewriteSrcset(ss);
+    if (nss !== ss) el.setAttribute('srcset', nss);
+  }
+}
+function fixAll(){ document.querySelectorAll('img').forEach(fixImg); }
+function hasSlideOffset(t){
+  // True if a transform indicates a 'parked off-screen' starting
+  // state: translation in px (>= 30) or % (>= 5), or a matrix
+  // with non-zero translation. Returns false for crossfade-only
+  // companions like scale(0.9) or pure centering translateX(-50%).
+  if (!t || t === 'none') return false;
+  // matrix(a,b,c,d,tx,ty) — parse tx/ty; matrix3d & friends → assume slide.
+  var matMatch = t.match(/matrix\(([^)]+)\)/);
+  if (matMatch) {
+    var parts = matMatch[1].split(',').map(function(x){return parseFloat(x.trim());});
+    if (parts.length === 6) {
+      if (Math.abs(parts[4]) >= 30 || Math.abs(parts[5]) >= 30) return true;
+    } else { return true; }
+  }
+  if (/matrix3d/i.test(t)) return true;
+  var px = t.match(/(-?\d+\.?\d*)px/g) || [];
+  for (var i = 0; i < px.length; i++) {
+    if (Math.abs(parseFloat(px[i])) >= 30) return true;
+  }
+  var pct = t.match(/(-?\d+\.?\d*)%/g) || [];
+  for (var j = 0; j < pct.length; j++) {
+    if (Math.abs(parseFloat(pct[j])) >= 5) return true;
+  }
+  return false;
+}
+function isHiddenStart(s){
+  // True if the element's inline style is parked at a 'before'
+  // animation state. opacity:0 alone is ambiguous (could be a
+  // crossfade companion); pair it with a slide transform OR an
+  // explicit visibility:hidden (GSAP/SplitType signature) to be
+  // confident it's a scroll-reveal waiting to fire.
+  if (s.opacity !== '0' && s.visibility !== 'hidden') return false;
+  if (s.visibility === 'hidden') return true;
+  return hasSlideOffset(s.transform) || hasSlideOffset(s.translate);
+}
+function revealEl(el){
+  var s = el.style;
+  s.opacity = '1';
+  if (s.visibility === 'hidden') s.visibility = 'visible';
+  if (s.transform) s.transform = 'none';
+  if (s.translate) s.translate = 'none';
+  if (s.rotate)    s.rotate = 'none';
+  if (s.scale)     s.scale = 'none';
+  if (s.pointerEvents === 'none') s.pointerEvents = '';
+}
+function snapReveal(){
+  // Safety net: any 'before-state' element still hidden gets
+  // forced visible. Used as a deadline pass for non-CSR mode
+  // (after GSAP/etc had a chance to play) and as a final guard.
+  // Skip pinned-chain elements — same reason as findScrollAnchor.
+  var n = 0;
+  document.querySelectorAll('[style]').forEach(function(el){
+    if (!isHiddenStart(el.style)) return;
+    if (isInsideFixed(el)) return;
+    revealEl(el); n++;
+  });
+  if (window.console && n) console.log('[offline-fix] snap-revealed', n);
+}
+function isInsideFixed(el){
+  var p = el;
+  while (p && p !== document.documentElement) {
+    if (getComputedStyle(p).position === 'fixed') return true;
+    p = p.parentElement;
+  }
+  return false;
+}
+function findScrollAnchor(el){
+  // Pinned-narrative sections (one position:fixed ancestor wrapping
+  // many sequenced headings the live JS reveals one-by-one across
+  // scroll progress) can't be orchestrated offline — revealing all
+  // of them at once produces an overlapping mess. Skip them: leave
+  // the parked state intact, matching the live site at scroll=0.
+  // For sticky chains, observe the sticky container itself (fires
+  // when the user has scrolled past its stuck threshold).
+  if (isInsideFixed(el)) return null;
+  var p = el;
+  while (p && p !== document.documentElement) {
+    if (getComputedStyle(p).position === 'sticky') return p;
+    p = p.parentElement;
+  }
+  return el;
+}
+function progressiveReveal(){
+  // CSR mode: scripts stripped → no GSAP/IO is going to fire.
+  // Mimic a scroll-driven reveal: each parked element gets a
+  // CSS transition + IntersectionObserver. As it enters viewport
+  // we transition to the 'after' state, with a small stagger by
+  // document order so SplitType chars still feel letter-by-letter.
+  var targets = [];
+  document.querySelectorAll('[style]').forEach(function(el){
+    if (isHiddenStart(el.style)) targets.push(el);
+  });
+  if (!targets.length) return;
+  var EASE = 'cubic-bezier(.16,1,.3,1)';
+  targets.forEach(function(el){
+    el.style.transition =
+      'opacity .6s ' + EASE + ', transform .6s ' + EASE + ', ' +
+      'translate .6s ' + EASE + ', scale .6s ' + EASE + ', ' +
+      'visibility 0s linear';
+  });
+  if (typeof IntersectionObserver === 'undefined') {
+    targets.forEach(revealEl);
+    return;
+  }
+  // Group targets by their scroll anchor. Anchors in sticky
+  // sections share one observation point — when that anchor
+  // intersects, we reveal all its parked descendants.
+  // Targets with null anchor (inside position:fixed) are skipped.
+  var groups = new Map();
+  targets.forEach(function(el){
+    var anchor = findScrollAnchor(el);
+    if (!anchor) return;
+    if (!groups.has(anchor)) groups.set(anchor, []);
+    groups.get(anchor).push(el);
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (!entry.isIntersecting) return;
+      var children = groups.get(entry.target) || [entry.target];
+      children.sort(function(a, b){
+        var pos = a.compareDocumentPosition(b);
+        return (pos & Node.DOCUMENT_POSITION_FOLLOWING) ? -1 : 1;
+      });
+      children.forEach(function(child, i){
+        var delay = Math.min(i * 18, 700);
+        setTimeout(function(){ revealEl(child); }, delay);
+      });
+      io.unobserve(entry.target);
+    });
+  }, { threshold: 0.05, rootMargin: '0px 0px -8% 0px' });
+  groups.forEach(function(_, anchor){ io.observe(anchor); });
+  // Deadline guard: anything that never intersects still gets revealed.
+  setTimeout(snapReveal, 8000);
+}
+function initUnicornStudio(){
+  // Captured page already has the loaded UMD script + the inline
+  // loader that says `if(!window.UnicornStudio)…`. The loader bails
+  // because UnicornStudio is already defined, so init() never runs.
+  if (window.UnicornStudio && typeof window.UnicornStudio.init === 'function'
+      && !window.UnicornStudio.isInitialized) {
+    try { window.UnicornStudio.init(); window.UnicornStudio.isInitialized = true; }
+    catch(e){ if(window.console) console.warn('[offline-fix] UnicornStudio init failed:', e); }
+  }
+}
+// Initial img sweep + observer for hydration-time updates
+fixAll();
+var obs = new MutationObserver(function(muts){
+  for (var i = 0; i < muts.length; i++) {
+    var m = muts[i];
+    if (m.type === 'attributes' && m.target.tagName === 'IMG') fixImg(m.target);
+    for (var j = 0; j < m.addedNodes.length; j++) {
+      var n = m.addedNodes[j];
+      if (n && n.nodeType === 1) {
+        if (n.tagName === 'IMG') fixImg(n);
+        if (n.querySelectorAll) n.querySelectorAll('img').forEach(fixImg);
+      }
+    }
+  }
+});
+obs.observe(document, {childList:true, subtree:true,
+  attributes:true, attributeFilter:['src','srcset']});
+setTimeout(fixAll, 1000);
+setTimeout(fixAll, 3000);
+var go = function(){
+  // CSR: scripts stripped, so 'before-state' elements stay parked
+  // forever unless we do something. Use IntersectionObserver to
+  // reveal them progressively as the user scrolls — preserves the
+  // scroll-triggered animation feel for SplitType chars, etc.
+  // Non-CSR: GSAP/Framer may still play; let them, then catch any
+  // leftovers with a snap pass at 5 s.
+  if (IS_CSR) progressiveReveal();
+  else setTimeout(snapReveal, 5000);
+  initUnicornStudio();
+  setTimeout(initUnicornStudio, 500);
+  setTimeout(initUnicornStudio, 2000);
+};
+if (document.readyState === 'complete') go();
+else window.addEventListener('load', go);
+})();</script></body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html" style="display: none;"></iframe></html>
