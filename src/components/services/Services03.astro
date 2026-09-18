@@ -18,7 +18,7 @@ interface Props {
 }
 
 const { content, client } = Astro.props;
-const items = content?.items || [];
+const items = content?.items || (content as any)?.services || [];
 ---
 
 <section id="servicos" class="py-24 relative overflow-hidden">

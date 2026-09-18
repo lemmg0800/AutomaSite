@@ -12,31 +12,41 @@ const {
 
 <script is:inline define:vars={{ revealSelector, enable3DTilt }}>
   (() => {
-    document.addEventListener("DOMContentLoaded", () => {
+    function initParallax() {
       // 1. Intersection Observer Scroll-Reveal
       const targets = document.querySelectorAll(revealSelector);
       
-      targets.forEach((el) => {
-        el.style.opacity = "0";
-        el.style.transform = "translateY(22px)";
-        el.style.transition = "opacity 700ms cubic-bezier(0.16, 1, 0.3, 1), transform 700ms cubic-bezier(0.16, 1, 0.3, 1)";
-        el.style.willChange = "opacity, transform";
-      });
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, idx) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.style.opacity = "1";
-              entry.target.style.transform = "translateY(0)";
-              entry.target.style.willChange = "auto";
-            }, (idx % 4) * 80);
-            observer.unobserve(entry.target);
-          }
+      if ('IntersectionObserver' in window) {
+        targets.forEach((el) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(22px)";
+          el.style.transition = "opacity 700ms cubic-bezier(0.16, 1, 0.3, 1), transform 700ms cubic-bezier(0.16, 1, 0.3, 1)";
+          el.style.willChange = "opacity, transform";
         });
-      }, { threshold: 0.12 });
 
-      targets.forEach((el) => observer.observe(el));
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry, idx) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+                entry.target.style.willChange = "auto";
+              }, (idx % 4) * 80);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.05 });
+
+        targets.forEach((el) => observer.observe(el));
+
+        // Safety fallback: ensure all elements become visible after 1.5s
+        setTimeout(() => {
+          targets.forEach((el) => {
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
+          });
+        }, 1500);
+      }
 
       // 2. 3D Tilt & Parallax effect on mouse move
       if (enable3DTilt && window.matchMedia('(pointer: fine)').matches) {
@@ -60,6 +70,12 @@ const {
           });
         });
       }
-    });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener("DOMContentLoaded", initParallax);
+    } else {
+      initParallax();
+    }
   })();
 </script>

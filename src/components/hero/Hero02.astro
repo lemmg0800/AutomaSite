@@ -1,4 +1,4 @@
-﻿---
+---
 import type { ClientConfig } from '../../clients/schema';
 
 interface Props {
@@ -15,8 +15,10 @@ interface Props {
 }
 
 const { content, client } = Astro.props;
-const cleanWhats = (client.business.whatsapp || client.business.phone).replace(/[^0-9]/g, '');
-const whatsLink = `https://wa.me/55${cleanWhats}?text=Urgente`;
+const rawWhats = client?.business?.whatsapp || client?.business?.phone || '';
+const cleanWhats = rawWhats.replace(/[^0-9]/g, '');
+const whatsLink = cleanWhats ? `https://wa.me/55${cleanWhats}?text=Olá` : '#contato';
+const primaryText = content?.primaryCtaLabel || (content as any)?.primaryCta?.text || "Falar no WhatsApp";
 ---
 
 <section class="relative pt-20 pb-24 text-center">

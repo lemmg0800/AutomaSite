@@ -1,4 +1,4 @@
-﻿---
+---
 import type { ClientConfig } from '../../clients/schema';
 
 interface Props {
@@ -15,8 +15,12 @@ interface Props {
 }
 
 const { content, client } = Astro.props;
-const cleanWhats = (client.business.whatsapp || client.business.phone).replace(/[^0-9]/g, '');
-const whatsLink = `https://wa.me/55${cleanWhats}?text=${encodeURIComponent(`Olá! Gostaria de falar sobre uma consulta com ${client.business.name}.`)}`;
+const rawWhats = client?.business?.whatsapp || client?.business?.phone || '';
+const cleanWhats = rawWhats.replace(/[^0-9]/g, '');
+const whatsLink = cleanWhats 
+  ? `https://wa.me/55${cleanWhats}?text=${encodeURIComponent(`Olá! Gostaria de falar sobre uma consulta com ${client.business.name}.`)}`
+  : '#contato';
+const primaryText = content?.primaryCtaLabel || (content as any)?.primaryCta?.text || "Consultar Especialista";
 ---
 
 <section class="relative pt-16 pb-20 sm:pt-24 sm:pb-28 overflow-hidden">
@@ -44,7 +48,7 @@ const whatsLink = `https://wa.me/55${cleanWhats}?text=${encodeURIComponent(`Olá
           class="px-8 py-4 rounded-xl font-bold text-sm tracking-wider uppercase text-center shadow-xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
           style="background-color: var(--color-accent); color: var(--color-bg);"
         >
-          <span>{content.primaryCtaLabel || "Consultar Especialista"}</span>
+          <span>{primaryText}</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
 
