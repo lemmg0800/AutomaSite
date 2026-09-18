@@ -20,7 +20,9 @@
     "performance": 3.9,
     "seo": 4.9,
     "website_overall": 3.9,
-    "opportunity": 76
+    "opportunity": 76,
+    "visual_quality": 6.2,
+    "redesign_opportunity": 58
   },
   "pagespeed": {
     "mobile_performance": 39,
@@ -62,5 +64,8 @@
     "whatsapp": "leads/duka-paineis-e-imagens/commercial/whatsapp.md"
   },
   "search_niche": "Comunicação Visual",
-  "state": "SC"
+  "state": "SC",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/duka-paineis-e-imagens/visual/visual-handoff.json",
+  "visual_structure": "leads/duka-paineis-e-imagens/visual/site-structure.md"
 }

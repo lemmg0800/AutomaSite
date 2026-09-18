@@ -20,7 +20,9 @@
     "performance": 4.1,
     "seo": 5,
     "website_overall": 3.8,
-    "opportunity": 75
+    "opportunity": 75,
+    "visual_quality": 5.5,
+    "redesign_opportunity": 61
   },
   "pagespeed": {
     "mobile_performance": 41,
@@ -44,7 +46,7 @@
   },
   "created_at": "2026-09-16T20:06:26.484Z",
   "redesign": {
-    "completed_at": "2026-09-18T19:03:15.472Z",
+    "completed_at": "2026-09-18T23:18:05.271Z",
     "platform_preview_url": "/preview/mussi-advocacia",
     "platform_production_url": "/mussi-advocacia",
     "config_path": "src/clients/data/mussi-advocacia.ts",
@@ -55,12 +57,15 @@
   },
   "commercial": {
     "status": "pronto_para_aprovacao_humana",
-    "generated_at": "2026-09-18T19:03:15.612Z",
+    "generated_at": "2026-09-18T23:18:05.540Z",
     "dossier_path": "leads/mussi-advocacia/commercial/",
     "summary": "leads/mussi-advocacia/commercial/commercial-summary.md",
     "email": "leads/mussi-advocacia/commercial/email.md",
     "whatsapp": "leads/mussi-advocacia/commercial/whatsapp.md"
   },
   "search_niche": "Advocacia",
-  "state": "SC"
+  "state": "SC",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/mussi-advocacia/visual/visual-handoff.json",
+  "visual_structure": "leads/mussi-advocacia/visual/site-structure.md"
 }

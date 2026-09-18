@@ -1,0 +1,52 @@
+{
+  "slug": "prolume-comunicacao-visual",
+  "name": "Prolume Comunicação Visual",
+  "validated_at": "2026-09-18T23:18:17.450Z",
+  "status": "APROVADO",
+  "baselineMet": true,
+  "scores": {
+    "original": 6.3,
+    "redesign": 8.9,
+    "delta": 2.6
+  },
+  "dimensionsComparison": {
+    "original": {
+      "visual_identity": 6.5,
+      "first_fold_quality": 5.5,
+      "typography": 4,
+      "visual_hierarchy": 4.5,
+      "images_usage": 8.5,
+      "composition_spacing": 4.8,
+      "cross_page_consistency": 5,
+      "navigation_menu": 5.5,
+      "visual_responsiveness": 4.3,
+      "services_presentation": 5,
+      "cta_clarity": 4,
+      "trust_credibility": 8.6,
+      "internal_pages_quality": 5.2
+    },
+    "redesign": {
+      "visual_identity": 7.7,
+      "first_fold_quality": 8.7,
+      "typography": 9.2,
+      "visual_hierarchy": 9,
+      "images_usage": 9,
+      "composition_spacing": 9.3,
+      "cross_page_consistency": 9.2,
+      "navigation_menu": 9,
+      "visual_responsiveness": 9.5,
+      "services_presentation": 9.1,
+      "cta_clarity": 9.6,
+      "trust_credibility": 9.4,
+      "internal_pages_quality": 8.8
+    }
+  },
+  "improvements": [
+    "1ª Dobra modernizada com CTA direto, elevando nota de 5.5 para 8.7.",
+    "Acervo fotográfico real mantido e apresentado em resolução otimizada com alta fidelidade.",
+    "Tipografia refinada de 4 para 9.2 com excelente legibilidade.",
+    "Conversão aprimorada de 4 para 9.6 com botão WhatsApp flutuante."
+  ],
+  "regressions": [],
+  "recommendation": "O redesign cumpre a Regra de Não Regressão e superou amplamente o baseline visual original. Pronto para validação comercial e humana."
+}

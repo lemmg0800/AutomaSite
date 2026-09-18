@@ -20,7 +20,9 @@
     "performance": 4.1,
     "seo": 5.1,
     "website_overall": 4,
-    "opportunity": 78
+    "opportunity": 78,
+    "visual_quality": 6.3,
+    "redesign_opportunity": 58
   },
   "pagespeed": {
     "mobile_performance": 41,
@@ -62,5 +64,8 @@
     "whatsapp": "leads/prolume-comunicacao-visual/commercial/whatsapp.md"
   },
   "search_niche": "Comunicação Visual",
-  "state": "SC"
+  "state": "SC",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/prolume-comunicacao-visual/visual/visual-handoff.json",
+  "visual_structure": "leads/prolume-comunicacao-visual/visual/site-structure.md"
 }

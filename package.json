@@ -6,6 +6,8 @@
     "scripts": {
         "audit:pagespeed": "node .agents/skills/pagespeed-analyzer/scripts/audit_pagespeed.js",
         "audit:screenshots": "node .agents/skills/website-auditor/scripts/capture_screenshots.js",
+        "audit:visual": "node .agents/skills/visual-auditor/scripts/audit_visual.cjs",
+        "compare:visual": "node .agents/skills/visual-auditor/scripts/compare_redesign.cjs",
         "score": "node .agents/skills/dossier-builder/scripts/score_opportunity.js",
         "dev": "astro dev",
         "build": "astro build",

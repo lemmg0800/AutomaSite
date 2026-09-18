@@ -20,7 +20,9 @@
     "performance": 3.8,
     "seo": 5,
     "website_overall": 3.8,
-    "opportunity": 82
+    "opportunity": 82,
+    "visual_quality": 6.2,
+    "redesign_opportunity": 60
   },
   "pagespeed": {
     "mobile_performance": 38,
@@ -44,7 +46,7 @@
   },
   "created_at": "2026-09-18T19:03:02.555Z",
   "redesign": {
-    "completed_at": "2026-09-18T19:03:14.975Z",
+    "completed_at": "2026-09-18T23:18:01.873Z",
     "platform_preview_url": "/preview/freitas-comunicacao-visual",
     "platform_production_url": "/freitas-comunicacao-visual",
     "config_path": "src/clients/data/freitas-comunicacao-visual.ts",
@@ -55,12 +57,15 @@
   },
   "commercial": {
     "status": "pronto_para_aprovacao_humana",
-    "generated_at": "2026-09-18T19:03:15.160Z",
+    "generated_at": "2026-09-18T23:18:02.149Z",
     "dossier_path": "leads/freitas-comunicacao-visual/commercial/",
     "summary": "leads/freitas-comunicacao-visual/commercial/commercial-summary.md",
     "email": "leads/freitas-comunicacao-visual/commercial/email.md",
     "whatsapp": "leads/freitas-comunicacao-visual/commercial/whatsapp.md"
   },
   "search_niche": "Comunicação Visual",
-  "state": "SC"
+  "state": "SC",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/freitas-comunicacao-visual/visual/visual-handoff.json",
+  "visual_structure": "leads/freitas-comunicacao-visual/visual/site-structure.md"
 }

@@ -20,7 +20,9 @@
     "performance": 3.8,
     "seo": 4.5,
     "website_overall": 3.5,
-    "opportunity": 78
+    "opportunity": 78,
+    "visual_quality": 5.4,
+    "redesign_opportunity": 64
   },
   "pagespeed": {
     "mobile_performance": 38,
@@ -44,7 +46,7 @@
   },
   "created_at": "2026-09-16T20:06:18.555Z",
   "redesign": {
-    "completed_at": "2026-09-18T19:03:12.195Z",
+    "completed_at": "2026-09-18T23:17:58.161Z",
     "platform_preview_url": "/preview/sbardella-advocacia",
     "platform_production_url": "/sbardella-advocacia",
     "config_path": "src/clients/data/sbardella-advocacia.ts",
@@ -55,12 +57,15 @@
   },
   "commercial": {
     "status": "pronto_para_aprovacao_humana",
-    "generated_at": "2026-09-18T19:03:12.345Z",
+    "generated_at": "2026-09-18T23:17:58.420Z",
     "dossier_path": "leads/sbardella-advocacia/commercial/",
     "summary": "leads/sbardella-advocacia/commercial/commercial-summary.md",
     "email": "leads/sbardella-advocacia/commercial/email.md",
     "whatsapp": "leads/sbardella-advocacia/commercial/whatsapp.md"
   },
   "search_niche": "Advocacia",
-  "state": "SC"
+  "state": "SC",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/sbardella-advocacia/visual/visual-handoff.json",
+  "visual_structure": "leads/sbardella-advocacia/visual/site-structure.md"
 }

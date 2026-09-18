@@ -1,4 +1,4 @@
-﻿import fs from 'fs';
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { spawnSync } from 'child_process';
@@ -73,6 +73,13 @@ async function runTop5Pipeline() {
     const pos = i + 1;
     console.log(`>>> PROCESSANDO LEAD #${pos}: ${lead.data.name} (${lead.slug})`);
 
+    // --- ETAPA 1.5: PROSPECTOR / AUDITOR VISUAL ---
+    console.log(`  [AUDITOR VISUAL] Analisando site original, copy, fotos reais e baseline...`);
+    const visualAuditorScript = path.join(rootDir, '.agents/skills/visual-auditor/scripts/audit_visual.cjs');
+    if (fs.existsSync(visualAuditorScript)) {
+      spawnSync('node', [visualAuditorScript, lead.slug], { stdio: 'inherit' });
+    }
+
     // --- ETAPA AGENTE 2 (BUILDER) ---
     console.log(`  [BUILDER] Verificando personalização do site...`);
     const clientConfigFile = path.join(clientDataDir, `${lead.slug}.ts`);
@@ -105,6 +112,13 @@ async function runTop5Pipeline() {
       spawnSync('node', [handoffScript, lead.slug], { stdio: 'inherit' });
     }
     builderCount++;
+
+    // --- ETAPA 2.5: PROSPECTOR / AUDITOR VISUAL (VALIDAÇÃO PÓS-REDESIGN) ---
+    console.log(`  [AUDITOR VISUAL] Validando Original x Redesign (Não-Regressão e Baseline)...`);
+    const compareScript = path.join(rootDir, '.agents/skills/visual-auditor/scripts/compare_redesign.cjs');
+    if (fs.existsSync(compareScript)) {
+      spawnSync('node', [compareScript, lead.slug], { stdio: 'inherit' });
+    }
 
     // --- ETAPA AGENTE 3 (COMERCIAL) ---
     console.log(`  [COMERCIAL] Gerando dossiê comercial (resumo, email, whatsapp, objeções)...`);

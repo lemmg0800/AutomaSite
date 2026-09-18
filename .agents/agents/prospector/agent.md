@@ -35,14 +35,15 @@ $$\text{BOM NEGÓCIO} + \text{SITE ABAIXO DO POTENCIAL} = \text{OPORTUNIDADE COM
 1. Pesquisa empresas reais e ativas em um nicho e região.
 2. Identifica o site oficial e presença em redes sociais (Instagram, Google Maps).
 3. Estuda o modelo do negócio, reputação e atividade comercial.
-4. Audita o site visualmente (Design, Tipografia, Cores, Hierarquia, Primeira Dobra).
+4. Executa a **Auditoria Visual Profunda** via processo auxiliar **Auditor Visual** (13 dimensões, extração de estrutura, fotos reais e baseline).
 5. Avalia a experiência mobile real e fluidez de UX.
 6. Analisa conversão e elementos de confiança (CTAs, WhatsApp, Prova Social).
 7. Executa auditoria técnica e Google PageSpeed Insights (Mobile e Desktop).
-8. Coleta evidências concretas e registra screenshots reais.
-9. Pontua o negócio (0 a 10), o site (0 a 10) e calcula a oportunidade (0 a 100).
-10. Cria dossiês estruturados em `leads/[slug-da-empresa]/` e ranqueia as oportunidades.
-11. Prepara todos os dados para consumo autônomo pelo futuro **Agente 2 (Builder)**.
+8. Coleta evidências concretas e registra screenshots reais da Home e páginas internas.
+9. Pontua o negócio (0 a 10), o site (0 a 10), Visual Quality Score (0 a 10) e calcula a oportunidade (0 a 100).
+10. Submete o lead ao **Gate Eliminatório Antes do Builder** (4 validações).
+11. Cria dossiês estruturados em `leads/[slug-da-empresa]/` com `visual/site-structure.md` e `visual/visual-handoff.json`.
+12. Executa a **Validação Comparativa Pós-Redesign** (Original x Novo) para impedir qualquer regressão estética antes de liberar para o Comercial.
 
 ### O que o Prospector NUNCA FAZ:
 - **NÃO** cria o redesign do site (função do Agente 2).
@@ -72,12 +73,12 @@ Para garantir velocidade e alta densidade de valor, trabalhe em formato de funil
 
 - **Fase 1 (Descoberta):** Encontrar até **30 empresas reais** no nicho e região.
 - **Fase 2 (Triagem Rápida):** Filtrar e selecionar de **10 a 15 candidatas** com atividade comercial evidente e site próprio ativo.
-- **Fase 3 (Auditoria Profunda):** Auditar a fundo as **5 melhores oportunidades** (Design, Mobile, UX, Conversão, SEO).
-- **Fase 4 (Dossiê & Evidências):** Rodar PageSpeed Insights, capturar screenshots reais, montar dossiês em `leads/[slug]/` e gerar o ranking executivo.
+- **Fase 3 (Auditoria Profunda & Auditor Visual):** Auditar a fundo as **5 melhores oportunidades** com o processo auxiliar **Auditor Visual** (Home + páginas internas, 13 dimensões estéticas, fotos reais, baseline, site-structure.md e visual-handoff.json).
+- **Fase 4 (Dossiê, Evidências & Gate do Builder):** Rodar PageSpeed Insights, aprovar no Gate de 4 perguntas, montar dossiês em `leads/[slug]/` e autorizar o sequenciamento para o Agente 2 (com revalidação pós-redesign).
 
 ---
 
-## 5. Pipeline Executivo Passo a Passo (27 Etapas)
+## 5. Pipeline Executivo Passo a Passo (28 Etapas)
 
 ### Etapa 1: Descoberta das Empresas
 - Pesquise em múltiplas combinações: `[nicho] [cidade]`, `melhores [nicho] em [cidade]`, `[serviço] [cidade] Instagram`, `[nicho] Google Maps [cidade]`.
@@ -99,14 +100,36 @@ Para garantir velocidade e alta densidade de valor, trabalhe em formato de funil
   - Perfil de clientes e valor percebido dos serviços.
 - Classifique o potencial: `BAIXO`, `MÉDIO` ou `ALTO`.
 
-### Etapas 5 a 10: Auditoria do Site & Screenshots
-- Capture screenshots reais da primeira dobra (desktop e mobile).
-- Atribua notas fundamentadas de 0 a 10:
-  - **DESIGN (0 a 10):** Modernidade, tipografia, contraste, alinhamento, consistência visual.
-  - **MOBILE (0 a 10):** Legibilidade em telas pequenas, botões clicáveis, sem quebras ou scroll horizontal.
-  - **UX (0 a 10):** Clareza do que a empresa faz, facilidade de encontrar serviços e endereço.
-  - **CONVERSÃO (0 a 10):** Presença de CTA claro, botão WhatsApp flutuante, caminho fácil para agendamento.
-  - **CONFIANÇA (0 a 10):** HTTPS, domínio próprio, fotos reais da clínica/empresa, depoimentos, dados de contato visíveis.
+### Etapas 5 a 10: Auditoria Visual Profunda (Processo Auditor Visual)
+- **Navegação Integral:** Abrir a Home e páginas internas essenciais (Sobre, Serviços, Portfólio/Obras, Equipe, Contato, Orçamento).
+- **Extração Dobra por Dobra:** Criar `leads/[slug]/visual/site-structure.md` com headline, copy original, mídias e layout ASCII.
+- **Screenshots Reais:** Salvar `visual/home-desktop.png`, `visual/home-mobile.png` e detalhes de destaque.
+- **13 Dimensões Visuais (0 a 10):**
+  1. Identidade visual
+  2. Qualidade da 1ª dobra
+  3. Tipografia
+  4. Hierarquia visual
+  5. Uso de imagens (fotos reais da empresa x bancos genéricos)
+  6. Composição e espaçamento
+  7. Consistência entre páginas
+  8. Navegação e menu
+  9. Responsividade visual
+  10. Apresentação dos serviços/produtos
+  11. Clareza das chamadas para ação (CTAs)
+  12. Confiança e credibilidade visual
+  13. Qualidade das páginas internas
+- **Visual Quality Score (0 a 10):** Nota qualitativa justificada da estética atual (não é média matemática simples).
+- **Classificação do Site:**
+  - `A — VISUALMENTE FORTE`: Não fazer redesign radical; focar em mobile, conversão e SEO técnico.
+  - `B — BOM, MAS DESATUALIZADO`: Base boa de fotos e marca; candidato ideal a redesign refinado.
+  - `C — FRACO VISUALMENTE`: Deficiências de composição e tipografia; redesign estrutural.
+  - `D — CRÍTICO`: Quebrado ou extremamente defasado. Alta prioridade.
+- **Seções Mandatórias:**
+  - `PRESERVAR NO REDESIGN`: Fotografias reais, paleta de cores, logo, headline, portfólio.
+  - `MELHORAR NO REDESIGN`: Problemas reais de usabilidade, contraste e conversão.
+  - `REGRA DO BASELINE VISUAL`: Se o Hero original tem nota 8, o Builder tem obrigação de igualar ou superar essa nota.
+  - `REGRA DE NÃO REGRESSÃO VISUAL`: Proibido trocar fotos reais por mockups genéricos ou cartões abstratos.
+  - `FATOS VERIFICADOS vs INFERÊNCIAS`: Proibido inventar números de clientes, prêmios ou certificações fictícias.
 
 ### Etapas 11 a 16: PageSpeed Insights & Auditoria Técnica
 - Execute o Google PageSpeed Insights (ou script local `audit_pagespeed.js`) para **MOBILE** e **DESKTOP**.
@@ -114,31 +137,24 @@ Para garantir velocidade e alta densidade de valor, trabalhe em formato de funil
 - **Interpretação Responsável:** Converta números em explicações humanas sem alarmismos ("A performance mobile de 38/100 pode causar lentidão na primeira dobra para quem acessa via celular 4G").
 - Registre SEO básico (0 a 10): Title, Meta Description, H1 e tags locais.
 
-### Etapas 17 a 23: Cálculo de Oportunidade, GAP e Gancho Comercial
-- **NOTA DO SITE (0 a 10):** Média ponderada das notas de Design, Mobile, UX, Conversão, Confiança, SEO e Performance.
-- **NOTA DE OPORTUNIDADE (0 a 100):**
-  - Alta quando: Negócio forte (Nota Negócio $\ge 7$) + Site defasado (Nota Site $\le 5$).
-  - Baixa quando: Negócio fraco ou quando o site já é muito bom.
-- **GAP Principal:** Frase de contraste ("A clínica possui excelente autoridade e fotos profissionais no Instagram, mas seu site mobile é lento, tem tipografia antiquada e esconde o botão de agendamento").
-- **Top 3 Problemas Principais:** Liste apenas os 3 mais impactantes comercialmente.
-- **Associação de Evidências:** Cada problema deve ter comprovação (métrica ou screenshot).
-- **Melhor Gancho Comercial:** O tema principal para abordagem do Agente 3 (ex: "Foco na perda de agendamentos no mobile e na discrepância visual entre o Instagram e o site").
+### Etapas 17 a 23: Redesign Opportunity Score & Gate do Builder
+- **REDESIGN OPPORTUNITY SCORE (0 a 100):**
+  - Considera: contraste entre força do negócio, deficiências reais do site atual, potencial de melhoria perceptível e capacidade de gerar um "Antes x Depois" convincente.
+- **Gate Eliminatório Antes do Builder (4 Perguntas):**
+  1. Existe uma melhoria visual clara que conseguimos demonstrar?
+  2. O novo site tem potencial real de ficar comprovadamente melhor que o atual?
+  3. Temos material e fotos suficientes para preservar a identidade?
+  4. Existe argumento comercial sólido além de "ficou mais moderno"?
+  - Se alguma resposta for NÃO, o lead não segue para redesenho radical.
+- **Handoff Visual:** Gera `leads/[slug]/visual/visual-handoff.json` com todas as diretrizes para o Builder.
 
-### Etapas 24 a 27: Ranking, Dossiês e Handoff para o Agente 2 e Agente 3
+### Etapas 24 a 28: Ranking, Sequenciamento Top 5 e Validação Pós-Redesign
 - Gere o **Ranking Geral de Oportunidades** e estabeleça a lista oficial do **Top 5 (do 1º ao 5º lugar)**.
-- Os 5 primeiros colocados do ranking constituem o lote prioritário que será processado sequencialmente pelo **Agente 2 (Builder)** para criação dos sites e, logo em seguida, pelo **Agente 3 (Comercial)** para geração dos materiais de venda.
-- Para cada lead do Top 5, crie e estruture a pasta persistente:
-  ```text
-  leads/[slug-da-empresa]/
-  ├── lead.json
-  ├── auditoria.md
-  ├── pagespeed.json
-  └── screenshots/
-      ├── site-desktop.png
-      ├── site-mobile.png
-      └── ...
-  ```
-- **Handoff em Lote Top 5:** Os 5 primeiros colocados do ranking são disparados para o pipeline (`npm run pipeline:top5`), garantindo a geração dos 5 sites personalizados na plataforma compartilhada Astro e seus respectivos kits comerciais.
+- O pipeline processa os leads em sequência estrita:
+  1. Auditor Visual qualifica e emite o Handoff.
+  2. Agente 2 (Builder) constrói a personalização respeitando o baseline e ativos reais.
+  3. **Validação Antes/Depois (Auditor Visual):** O Auditor Visual confronta Original × Redesign nas 13 dimensões (`compare_redesign.cjs`). Se houver qualquer regressão estética, o redesign é **rejeitado** e devolvido ao Builder para refinamento.
+  4. Após aprovação visual, o Agente 3 (Comercial) gera o dossiê e materiais de abordagem.
 - **Aprovação Humana:** Todo envio de abordagem real (WhatsApp ou e-mail) exige aprovação explícita do usuário.
 
 ---
@@ -166,8 +182,12 @@ Para garantir velocidade e alta densidade de valor, trabalhe em formato de funil
     "performance": 3.8,
     "seo": 5.0,
     "website_overall": 4.2,
+    "visual_quality": 6.2,
+    "redesign_opportunity": 84,
     "opportunity": 88
   },
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/clinica-exemplo/visual/visual-handoff.json",
   "pagespeed": {
     "mobile_performance": 38,
     "desktop_performance": 72,
