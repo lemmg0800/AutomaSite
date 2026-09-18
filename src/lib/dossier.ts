@@ -124,15 +124,72 @@ export function formatDossierForDashboard(d: LeadDossier) {
     }
   }
 
-  const rawCity = lj.city || biz.city || biz.cidade || 'Florianópolis';
-  const cleanCity = rawCity.replace(/\s*-\s*SC$/, '').trim();
+  const rawCity = lj.city || biz.city || biz.cidade || 'Criciúma';
+  const cleanCity = rawCity.replace(/\s*-\s*[A-Z]{2}$/i, '').trim();
+  const rawState = (lj.state || biz.state || biz.uf || 'SC').toUpperCase().trim();
+
+  // Mapeamento de Regiões do Brasil
+  const getRegion = (state: string, city: string = ''): string => {
+    const text = `${state} ${city}`.toUpperCase();
+    if (['SC', 'PR', 'RS', 'SANTA CATARINA', 'PARANÁ', 'PARANA', 'RIO GRANDE DO SUL'].some(s => text.includes(s))) {
+      return 'Sul';
+    }
+    if (['SP', 'RJ', 'MG', 'ES', 'SÃO PAULO', 'SAO PAULO', 'RIO DE JANEIRO', 'MINAS GERAIS', 'ESPÍRITO SANTO', 'ESPIRITO SANTO'].some(s => text.includes(s))) {
+      return 'Sudeste';
+    }
+    if (['MT', 'MS', 'GO', 'DF', 'MATO GROSSO', 'MATO GROSSO DO SUL', 'GOIÁS', 'GOIAS', 'DISTRITO FEDERAL', 'BRASÍLIA', 'BRASILIA'].some(s => text.includes(s))) {
+      return 'Centro-Oeste';
+    }
+    if (['BA', 'PE', 'CE', 'MA', 'PB', 'RN', 'AL', 'SE', 'PI', 'BAHIA', 'PERNAMBUCO', 'CEARÁ', 'CEARA', 'MARANHÃO', 'MARANHAO', 'PARAÍBA', 'PARAIBA', 'RIO GRANDE DO NORTE', 'ALAGOAS', 'SERGIPE', 'PIAUÍ', 'PIAUI'].some(s => text.includes(s))) {
+      return 'Nordeste';
+    }
+    if (['AM', 'PA', 'AC', 'RO', 'RR', 'AP', 'TO', 'AMAZONAS', 'PARÁ', 'PARA', 'ACRE', 'RONDÔNIA', 'RONDONIA', 'RORAIMA', 'AMAPÁ', 'AMAPA', 'TOCANTINS'].some(s => text.includes(s))) {
+      return 'Norte';
+    }
+    return 'Sul';
+  };
+
+  // Mapeamento do Nicho / Segmento de Pesquisa Original
+  const getSearchNiche = (): string => {
+    if (lj.search_niche) return lj.search_niche;
+    if (lj.searchNiche) return lj.searchNiche;
+    if (lj.nicho_pesquisado) return lj.nicho_pesquisado;
+
+    const corpus = `${d.slug} ${lj.name || ''} ${lj.segment || ''} ${lj.niche || ''}`.toLowerCase();
+    if (corpus.includes('comunicacao') || corpus.includes('visual') || corpus.includes('acm') || corpus.includes('painel') || corpus.includes('paineis') || corpus.includes('letreiro') || corpus.includes('adesiv') || corpus.includes('neon') || corpus.includes('totem') || corpus.includes('placas')) {
+      return 'Comunicação Visual';
+    }
+    if (corpus.includes('advoc') || corpus.includes('advog') || corpus.includes('direito') || corpus.includes('jurid')) {
+      return 'Advocacia';
+    }
+    if (corpus.includes('dentist') || corpus.includes('odont') || corpus.includes('sorriso')) {
+      return 'Dentista';
+    }
+    if (corpus.includes('imobil') || corpus.includes('corretor') || corpus.includes('imovel') || corpus.includes('imoveis')) {
+      return 'Imobiliária';
+    }
+    if (corpus.includes('contabil') || corpus.includes('contador')) {
+      return 'Contabilidade';
+    }
+    if (corpus.includes('medic') || corpus.includes('clinic')) {
+      return 'Medicina';
+    }
+    return lj.niche || lj.segment || 'Geral';
+  };
+
+  const region = getRegion(rawState, cleanCity);
+  const searchNiche = getSearchNiche();
+  const detailedNiche = lj.segment || lj.niche || biz.niche || biz.nicho || 'Geral';
 
   return {
     slug: d.slug,
     name: lj.name || biz.name || biz.nome || d.slug,
-    niche: lj.segment || lj.niche || biz.niche || biz.nicho || 'Geral',
+    niche: searchNiche, // O filtro macro agora usa o nicho da pesquisa
+    searchNiche,
+    detailedNiche,
     city: cleanCity,
-    state: lj.state || biz.state || biz.uf || 'SC',
+    state: rawState,
+    region,
     ranking: lj.ranking || 999,
     score: lj.scores?.opportunity || lj.score || lj.pontuacao || 0,
     status: lj.status || 'ativo',

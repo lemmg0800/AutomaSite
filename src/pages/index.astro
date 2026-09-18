@@ -91,8 +91,32 @@ const inactiveCount = totalProjects - activeCount;
               <label for="filterSearch" class="filter-label">Buscar Lead</label>
               <div class="input-with-icon">
                 <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                <input type="text" id="filterSearch" placeholder="Nome, slug, nicho ou cidade..." class="filter-input" />
+                <input type="text" id="filterSearch" placeholder="Nome, slug, nicho, cidade ou região..." class="filter-input" />
               </div>
+            </div>
+
+            <!-- Filtro de Região do Brasil -->
+            <div class="filter-group">
+              <label for="filterRegion" class="filter-label">Região do Brasil</label>
+              <select id="filterRegion" class="filter-select">
+                <option value="all">Todas as Regiões</option>
+                <option value="sul">Região Sul (PR, SC, RS)</option>
+                <option value="sudeste">Região Sudeste (SP, RJ, MG, ES)</option>
+                <option value="centro-oeste">Região Centro-Oeste (DF, GO, MT, MS)</option>
+                <option value="nordeste">Região Nordeste (BA, PE, CE, etc.)</option>
+                <option value="norte">Região Norte (AM, PA, RO, etc.)</option>
+              </select>
+            </div>
+
+            <!-- Filtro de Nicho / Segmento da Pesquisa -->
+            <div class="filter-group">
+              <label for="filterNiche" class="filter-label">Segmento / Nicho</label>
+              <select id="filterNiche" class="filter-select">
+                <option value="all">Todos os Nichos</option>
+                {uniqueNiches.map(niche => (
+                  <option value={niche}>{niche}</option>
+                ))}
+              </select>
             </div>
 
             <!-- Filtro de Status -->
@@ -104,17 +128,6 @@ const inactiveCount = totalProjects - activeCount;
                 <option value="aprovado">🔵 Aprovado</option>
                 <option value="nao_aprovado">🔴 Não Aprovado</option>
                 <option value="arquivado">⚪ Arquivado</option>
-              </select>
-            </div>
-
-            <!-- Filtro de Nicho -->
-            <div class="filter-group">
-              <label for="filterNiche" class="filter-label">Segmento / Nicho</label>
-              <select id="filterNiche" class="filter-select">
-                <option value="all">Todos os Nichos</option>
-                {uniqueNiches.map(niche => (
-                  <option value={niche}>{niche}</option>
-                ))}
               </select>
             </div>
 
@@ -176,8 +189,11 @@ const inactiveCount = totalProjects - activeCount;
                   class="project-row"
                   data-slug={p.slug}
                   data-name={p.name.toLowerCase()}
-                  data-niche={p.niche.toLowerCase()}
+                  data-niche={(p.searchNiche || p.niche).toLowerCase()}
+                  data-detailed-niche={(p.detailedNiche || '').toLowerCase()}
+                  data-region={(p.region || 'sul').toLowerCase()}
                   data-city={p.city.toLowerCase()}
+                  data-state={p.state.toLowerCase()}
                   data-status={p.status}
                   data-ranking={p.ranking || 999}
                   data-score={p.score || 0}
@@ -200,8 +216,16 @@ const inactiveCount = totalProjects - activeCount;
                     </div>
                   </td>
                   <td>
-                    <div class="client-niche">{p.niche}</div>
-                    <div class="client-city">{p.city} - {p.state}</div>
+                    <div class="niche-cell-wrap">
+                      <span class="macro-niche-tag">{p.searchNiche || p.niche}</span>
+                      {p.detailedNiche && p.detailedNiche !== (p.searchNiche || p.niche) ? (
+                        <div class="client-detail-niche" title={p.detailedNiche}>{p.detailedNiche}</div>
+                      ) : null}
+                      <div class="client-city">
+                        <span>{p.city} - {p.state}</span>
+                        <span class="region-pill">Região {p.region}</span>
+                      </div>
+                    </div>
                   </td>
                   <td>
                     <div class="pipeline-steps">
@@ -567,8 +591,9 @@ const inactiveCount = totalProjects - activeCount;
 
       // === SISTEMA DE FILTROS E BUSCA DO DASHBOARD ===
       const filterSearch = document.getElementById('filterSearch');
-      const filterStatus = document.getElementById('filterStatus');
+      const filterRegion = document.getElementById('filterRegion');
       const filterNiche = document.getElementById('filterNiche');
+      const filterStatus = document.getElementById('filterStatus');
       const filterPipeline = document.getElementById('filterPipeline');
       const filterSort = document.getElementById('filterSort');
       const btnResetFilters = document.getElementById('btnResetFilters');
@@ -580,8 +605,9 @@ const inactiveCount = totalProjects - activeCount;
 
       function filterAndSortLeads() {
         const query = (filterSearch ? filterSearch.value : '').trim().toLowerCase();
-        const statusVal = filterStatus ? filterStatus.value : 'all';
+        const regionVal = filterRegion ? filterRegion.value : 'all';
         const nicheVal = filterNiche ? filterNiche.value : 'all';
+        const statusVal = filterStatus ? filterStatus.value : 'all';
         const pipeVal = filterPipeline ? filterPipeline.value : 'all';
         const sortVal = filterSort ? filterSort.value : 'ranking';
 
@@ -593,20 +619,32 @@ const inactiveCount = totalProjects - activeCount;
           const name = row.getAttribute('data-name') || '';
           const slug = row.getAttribute('data-slug') || '';
           const niche = row.getAttribute('data-niche') || '';
+          const detailedNiche = row.getAttribute('data-detailed-niche') || '';
+          const region = row.getAttribute('data-region') || '';
           const city = row.getAttribute('data-city') || '';
+          const state = row.getAttribute('data-state') || '';
           const status = row.getAttribute('data-status') || '';
           const pipePros = row.getAttribute('data-pipeline-prospector') === 'true';
           const pipeBld = row.getAttribute('data-pipeline-builder') === 'true';
           const pipeCom = row.getAttribute('data-pipeline-comercial') === 'true';
 
-          // 1. Busca por Texto
+          // 1. Busca por Texto (nome, slug, nicho macro, segmento detalhado, cidade, estado, região)
           const matchesQuery = !query || 
             name.includes(query) || 
             slug.includes(query) || 
             niche.includes(query) || 
-            city.includes(query);
+            detailedNiche.includes(query) || 
+            region.includes(query) || 
+            city.includes(query) || 
+            state.includes(query);
 
-          // 2. Filtro de Status
+          // 2. Filtro de Região do Brasil
+          const matchesRegion = (regionVal === 'all') || (region === regionVal.toLowerCase());
+
+          // 3. Filtro de Segmento / Nicho (pesquisa macro)
+          const matchesNiche = (nicheVal === 'all') || (niche === nicheVal.toLowerCase());
+
+          // 4. Filtro de Status
           let matchesStatus = true;
           if (statusVal === 'ativo') {
             matchesStatus = (status === 'ativo' || status === 'published' || status === 'draft');
@@ -618,10 +656,7 @@ const inactiveCount = totalProjects - activeCount;
             matchesStatus = (status === 'arquivado');
           }
 
-          // 3. Filtro de Nicho
-          const matchesNiche = (nicheVal === 'all') || (niche === nicheVal.toLowerCase());
-
-          // 4. Filtro de Pipeline
+          // 5. Filtro de Pipeline
           let matchesPipeline = true;
           if (pipeVal === 'completo') {
             matchesPipeline = (pipePros && pipeBld && pipeCom);
@@ -631,7 +666,7 @@ const inactiveCount = totalProjects - activeCount;
             matchesPipeline = !pipeBld;
           }
 
-          if (matchesQuery && matchesStatus && matchesNiche && matchesPipeline) {
+          if (matchesQuery && matchesRegion && matchesNiche && matchesStatus && matchesPipeline) {
             row.style.display = '';
             visibleRows.push(row);
             visibleCount++;
@@ -640,7 +675,7 @@ const inactiveCount = totalProjects - activeCount;
           }
         });
 
-        // 5. Ordenação
+        // 6. Ordenação
         visibleRows.sort((a, b) => {
           if (sortVal === 'ranking') {
             const rA = parseInt(a.getAttribute('data-ranking') || '999', 10);
@@ -679,10 +714,10 @@ const inactiveCount = totalProjects - activeCount;
         }
 
         // Renderizar tags de filtros ativos
-        renderActiveFilterTags(query, statusVal, nicheVal, pipeVal, sortVal);
+        renderActiveFilterTags(query, regionVal, nicheVal, statusVal, pipeVal, sortVal);
       }
 
-      function renderActiveFilterTags(query, statusVal, nicheVal, pipeVal, sortVal) {
+      function renderActiveFilterTags(query, regionVal, nicheVal, statusVal, pipeVal, sortVal) {
         if (!activeFiltersTags) return;
         activeFiltersTags.innerHTML = '';
 
@@ -692,16 +727,23 @@ const inactiveCount = totalProjects - activeCount;
             filterAndSortLeads();
           });
         }
-        if (statusVal !== 'all') {
-          const opt = filterStatus?.options[filterStatus.selectedIndex];
-          addTag(`Status: ${opt ? opt.text : statusVal}`, () => {
-            if (filterStatus) filterStatus.value = 'all';
+        if (regionVal !== 'all') {
+          const opt = filterRegion?.options[filterRegion.selectedIndex];
+          addTag(`Região: ${opt ? opt.text.split('(')[0].trim() : regionVal}`, () => {
+            if (filterRegion) filterRegion.value = 'all';
             filterAndSortLeads();
           });
         }
         if (nicheVal !== 'all') {
           addTag(`Nicho: ${nicheVal}`, () => {
             if (filterNiche) filterNiche.value = 'all';
+            filterAndSortLeads();
+          });
+        }
+        if (statusVal !== 'all') {
+          const opt = filterStatus?.options[filterStatus.selectedIndex];
+          addTag(`Status: ${opt ? opt.text : statusVal}`, () => {
+            if (filterStatus) filterStatus.value = 'all';
             filterAndSortLeads();
           });
         }
@@ -732,8 +774,9 @@ const inactiveCount = totalProjects - activeCount;
 
       function resetAllFilters() {
         if (filterSearch) filterSearch.value = '';
-        if (filterStatus) filterStatus.value = 'all';
+        if (filterRegion) filterRegion.value = 'all';
         if (filterNiche) filterNiche.value = 'all';
+        if (filterStatus) filterStatus.value = 'all';
         if (filterPipeline) filterPipeline.value = 'all';
         if (filterSort) filterSort.value = 'ranking';
         filterAndSortLeads();
@@ -741,8 +784,9 @@ const inactiveCount = totalProjects - activeCount;
 
       // Listeners dos filtros
       if (filterSearch) filterSearch.addEventListener('input', filterAndSortLeads);
-      if (filterStatus) filterStatus.addEventListener('change', filterAndSortLeads);
+      if (filterRegion) filterRegion.addEventListener('change', filterAndSortLeads);
       if (filterNiche) filterNiche.addEventListener('change', filterAndSortLeads);
+      if (filterStatus) filterStatus.addEventListener('change', filterAndSortLeads);
       if (filterPipeline) filterPipeline.addEventListener('change', filterAndSortLeads);
       if (filterSort) filterSort.addEventListener('change', filterAndSortLeads);
 
@@ -1027,14 +1071,14 @@ const inactiveCount = totalProjects - activeCount;
 
     .filters-row {
       display: grid;
-      grid-template-columns: 2fr 1fr 1.2fr 1.2fr 1.2fr auto;
-      gap: 1rem;
+      grid-template-columns: 1.5fr 1fr 1.2fr 1fr 1fr 1fr auto;
+      gap: 0.85rem;
       align-items: flex-end;
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1400px) {
       .filters-row {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr) auto;
       }
     }
 
@@ -1311,6 +1355,33 @@ const inactiveCount = totalProjects - activeCount;
       color: #38bdf8;
     }
 
+    .niche-cell-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .macro-niche-tag {
+      display: inline-block;
+      width: fit-content;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 0.15rem 0.5rem;
+      border-radius: 6px;
+    }
+
+    .client-detail-niche {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      max-width: 280px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     .client-niche {
       color: #cbd5e1;
     }
@@ -1318,6 +1389,22 @@ const inactiveCount = totalProjects - activeCount;
     .client-city {
       font-size: 0.75rem;
       color: #64748b;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .region-pill {
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      color: #a78bfa;
+      background: rgba(167, 139, 250, 0.12);
+      border: 1px solid rgba(167, 139, 250, 0.25);
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
     }
 
     .pipeline-steps {
