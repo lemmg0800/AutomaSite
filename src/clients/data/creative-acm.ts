@@ -130,6 +130,32 @@ const client: ClientConfig = {
           }
         },
         {
+          id: "projects-creative-acm",
+          type: "projects",
+          variant: "Projects01",
+          content: {
+            title: "Obras e Fachadas Recentes em Criciúma e Região",
+            subtitle: "Veja alguns dos projetos executados com corte CNC e acabamento de alto padrão.",
+            projects: [
+              {
+                title: "Fachada Comercial em ACM 4mm e Letras Caixa",
+                category: "Fachada Comercial",
+                description: "Revestimento frontal completo com iluminação indireta em LED e pórtico de entrada na Av. Centenário."
+              },
+              {
+                title: "Totem Publicitário de 7 Metros com Iluminação Interna",
+                category: "Totem & Sinalização",
+                description: "Estrutura vertical autoportante com cálculo de vento e módulos LED de alta luminosidade."
+              },
+              {
+                title: "Letreiro Luminoso em Acrílico e Inox Polido",
+                category: "Letreiros & LED",
+                description: "Letras em caixa alta com vedação IP67 para clínica médica na região central de Criciúma."
+              }
+            ]
+          }
+        },
+        {
           id: "about-creative-acm",
           type: "about",
           variant: "About01",

@@ -4,12 +4,12 @@ const client: ClientConfig = {
   slug: "duka-paineis-e-imagens",
   status: "ativo",
   createdAt: "2026-09-18T19:03:02.675Z",
-  updatedAt: "2026-09-18T19:03:02.675Z",
+  updatedAt: "2026-09-18T20:00:00.000Z",
 
   business: {
     name: "Duka Painéis e Imagens",
-    legalName: "Duka Painéis e Imagens",
-    niche: "Painéis Industriais, Letras Caixa & Luminosos em Acrílico",
+    legalName: "Duka Painéis e Imagens Ltda",
+    niche: "Painéis Industriais, Estruturas de Grande Porte & Sinalização Fabril",
     city: "Içara",
     state: "SC",
     address: "Rua Luiza Barp, 230 - Distrito Industrial 1ª Linha, Içara / Criciúma - SC",
@@ -25,8 +25,8 @@ const client: ClientConfig = {
     accentColor: "#10b981",
     backgroundColor: "#020617",
     textColor: "#f8fafc",
-    headingFont: "Montserrat",
-    bodyFont: "Plus Jakarta Sans",
+    headingFont: "Syne",
+    bodyFont: "Inter",
     borderRadius: "md",
     mode: "dark",
     enableCursor: false,
@@ -38,144 +38,180 @@ const client: ClientConfig = {
     {
       path: "",
       seo: {
-        title: "Duka Painéis e Imagens | Fachadas e Comunicação Visual em Criciúma e Região",
-        description: "Especialistas em fachadas em ACM, letreiros luminosos, neon LED, totens e impressão digital de alta definição em Criciúma, Içara e Sul de SC."
+        title: "Duka Painéis e Imagens | Painéis Industriais e Estruturas Metálicas em Içara e Criciúma",
+        description: "Fabricação e montagem de painéis industriais, pórticos de entrada, totens rodoviários e sinalização de grande porte para indústrias e galpões comerciais no Sul de SC."
       },
       sections: [
         {
-          id: "header-duka-paineis-e-imagens",
+          id: "header-duka",
           type: "header",
-          variant: "Header01",
+          variant: "Header02",
           content: {
+            announcement: "Fábrica Própria no Distrito Industrial de Içara / Criciúma",
             navLinks: [
-              { label: "Fachadas ACM", href: "#servicos" },
-              { label: "Luminosos & Letreiros", href: "#servicos" },
-              { label: "Totens & Frotas", href: "#servicos" },
-              { label: "Diferenciais", href: "#diferenciais" },
+              { label: "Painéis Industriais", href: "#servicos" },
+              { label: "Pórticos & Totens", href: "#servicos" },
+              { label: "Obras Industriais", href: "#obras" },
+              { label: "Normas Técnicas", href: "#diferenciais" },
               { label: "Contato", href: "#contato" }
             ],
-            ctaLabel: "Solicitar Orçamento"
+            ctaLabel: "Orçamento Técnico"
           }
         },
         {
-          id: "hero-duka-paineis-e-imagens",
+          id: "hero-duka",
           type: "hero",
           variant: "Hero04",
           content: {
-            badge: "Comunicação Visual de Alto Padrão em Criciúma e Região",
-            headline: "Transforme a Fachada da sua Empresa em um Imã de Novos Clientes",
-            subheadline: "Projetos arquitetônicos em ACM, letreiros luminosos em LED, corte a laser e sinalização comercial de alta durabilidade com instalação técnica especializada.",
-            primaryCtaLabel: "Pedir Orçamento no WhatsApp",
+            badge: "Engenharia e Comunicação Visual para Grandes Indústrias",
+            headline: "Painéis e Estruturas de Grande Porte com Rigor Estrutural e Alta Durabilidade",
+            subheadline: "Desenvolvemos pórticos, painéis fabris, totens rodoviários e letras caixa em acrílico e inox projetados para resistir às intempéries do Sul de Santa Catarina com emissão de ART.",
+            primaryCtaLabel: "Falar com Engenheiro Técnico",
             primaryCtaHref: "https://wa.me/5548984822827",
-            secondaryCtaLabel: "Ver Portfólio de Obras",
-            secondaryCtaHref: "#servicos",
+            secondaryCtaLabel: "Conhecer Nossas Obras",
+            secondaryCtaHref: "#obras",
             stats: [
-              { value: "+1000", label: "Fachadas Instaladas" },
-              { value: "ACM 4mm", label: "Padrão Premium" },
-              { value: "100%", label: "Garantia Estrutural" }
+              { value: "15+ Anos", label: "Experiência Fabril" },
+              { value: "100%", label: "Projetos com ART" },
+              { value: "NR-35", label: "Equipe Certificada" }
             ]
           }
         },
         {
-          id: "benefits-duka-paineis-e-imagens",
+          id: "benefits-duka",
           type: "benefits",
           variant: "Benefits01",
           content: {
-            title: "Por que escolher a nossa empresa para sua fachada",
-            subtitle: "Qualidade de acabamento, maquinário industrial de precisão e pontualidade na entrega.",
+            title: "Por que as maiores indústrias da região confiam na Duka Painéis",
+            subtitle: "Segurança de trabalho em altura, dimensionamento estrutural e materiais anticorrosivos de padrão pesado.",
             benefits: [
               {
-                title: "Maquinário de Corte a Laser CNC",
-                description: "Encaixes milimétricos e acabamento impecável em acrílico, MDF, inox e ACM.",
-                icon: "award"
-              },
-              {
-                title: "Instalação Própria com ART",
-                description: "Equipe técnica qualificada com equipamentos de segurança e responsabilidade estrutural.",
+                title: "Aço Galvanizado a Fogo & Alumínio",
+                description: "Tratamento anticorrosivo de alta resistência contra a maresia e umidade do litoral catarinense.",
                 icon: "shield"
               },
               {
-                title: "Visita Técnica e Orçamento Rápido",
-                description: "Atendimento presencial em Criciúma, Içara e região com medição sem compromisso.",
+                title: "Cálculo de Carga de Vento com ART",
+                description: "Projetos de grande porte dimensionados por engenheiro habilitado para suportar ventos severos.",
+                icon: "award"
+              },
+              {
+                title: "Equipe Técnica com NR-35 e NR-10",
+                description: "Instalação segura em galpões, rodovias e coberturas industriais com equipamento próprio.",
                 icon: "clock"
               }
             ]
           }
         },
         {
-          id: "services-duka-paineis-e-imagens",
+          id: "services-duka",
           type: "services",
-          variant: "Services03",
+          variant: "Services01",
           content: {
-            title: "Soluções Completas em Comunicação Visual",
-            subtitle: "Do projeto 3D à fabricação e montagem no local.",
+            badge: "Soluções Pesadas",
+            title: "Engenharia de Painéis e Identificação Industrial",
+            subtitle: "Atendimento corporativo e industrial para fábricas, centros logísticos e redes comerciais.",
             services: [
               {
-                title: "Fachadas Comerciais em ACM",
-                description: "Revestimentos modernos em placas de alumínio composto com alta resistência a intempéries e visual sofisticado."
+                title: "Painéis e Fachadas Industriais em Galpões",
+                description: "Revestimentos de grande porte para frontais e laterais de armazéns e indústrias com letras caixa gigantes.",
+                cta: "Solicitar Medição Técnica"
               },
               {
-                title: "Letras Caixa & Letreiros Luminosos",
-                description: "Letras em bloco de acrílico, inox, galvanizado e iluminação indireta ou frontal em módulos de LED IP67."
+                title: "Pórticos de Entrada e Totens Rodoviários",
+                description: "Estruturas autoportantes de impacto visual imediato para acessos fabris nas rodovias SC-445 e BR-101.",
+                cta: "Consultar Engenharia"
               },
               {
-                title: "Totens Publicitários e Pórticos",
-                description: "Estruturas verticais de grande visibilidade para postos, indústrias, shopping centers e concessionárias."
+                title: "Letras Caixa em Acrílico Maciço e Aço Inox",
+                description: "Letreiros usinados a laser com iluminação embutida de alta performance e acabamento nobre.",
+                cta: "Ver Opções de Acabamento"
               },
               {
-                title: "Envelopamento de Frotas e Vitrines",
-                description: "Adesivagem automotiva de alta durabilidade e personalização de frotas comerciais com película protetora UV."
+                title: "Sinalização Interna de Segurança e Rota de Fuga",
+                description: "Adequação completa às normas NR-26 e exigências do Corpo de Bombeiros com placas fotoluminescentes.",
+                cta: "Adequar Minha Empresa"
               }
             ]
           }
         },
         {
-          id: "about-duka-paineis-e-imagens",
+          id: "projects-duka",
+          type: "projects",
+          variant: "Projects01",
+          content: {
+            title: "Obras Industriais Entregues no Sul Catarinense",
+            subtitle: "Exemplos de sinalização pesada, pórticos e painéis em operação.",
+            projects: [
+              {
+                title: "Pórtico Metálico de Entrada em Parque Cerâmico",
+                category: "Pórtico Industrial",
+                description: "Vão livre de 14 metros em estrutura treliçada galvanizada a fogo com iluminação em projetores LED."
+              },
+              {
+                title: "Painel Frontal de Galpão Logístico 32x6m",
+                category: "Painel Galpão",
+                description: "Revestimento em chapas compostas com letras caixa em alto relevo de 1.80m de altura."
+              },
+              {
+                title: "Totem Iluminado Rodoviário na Rodovia Paulino Búrigo",
+                category: "Totem OOH",
+                description: "Estrutura vertical de 9 metros com painel em acrílico termoformado e LEDs de alta eficiência."
+              }
+            ]
+          }
+        },
+        {
+          id: "about-duka",
           type: "about",
           variant: "About01",
           content: {
-            badge: "Estrutura & Tradição",
-            title: "Fabricação Própria e Excelência em Cada Detalhe",
-            description: "Com parque fabril moderno e equipe de designers e instaladores experientes, entregamos projetos de comunicação visual que valorizam marcas e aumentam o faturamento dos nossos clientes no Sul de Santa Catarina.",
+            badge: "Parque Fabril Próprio",
+            title: "Solidez Técnica e Compromisso com a Indústria",
+            description: "Localizada estrategicamente no Distrito Industrial 1ª Linha, entre Içara e Criciúma, a Duka Painéis conta com serralheria pesada própria, corte térmico e equipe de içamento para atender demandas industriais complexas.",
             stats: [
-              { number: "Criciúma / SC", label: "Atendimento Regional" },
-              { number: "Ágil", label: "Medição e Prévia 3D" }
+              { number: "Distrito Ind.", label: "Içara / Criciúma" },
+              { number: "100%", label: "Conformidade NR" }
             ]
           }
         },
         {
-          id: "faq-duka-paineis-e-imagens",
+          id: "faq-duka",
           type: "faq",
           variant: "FAQ01",
           content: {
-            title: "Perguntas Frequentes sobre Fachadas",
+            title: "Dúvidas Frequentes sobre Painéis Industriais",
             items: [
               {
-                question: "Qual a durabilidade de uma fachada em ACM?",
-                answer: "As placas de ACM possuem pintura Kynar/PVDF de alta durabilidade, resistindo por mais de 10 anos ao sol e chuva sem desbotar."
+                question: "Vocês emitem Laudo Técnico e ART para as estruturas?",
+                answer: "Sim! Todas as nossas obras de médio e grande porte contam com projeto executivo assinado por engenheiro mecânico/civil com emissão da respectiva ART junto ao CREA-SC."
               },
               {
-                question: "Vocês fazem visita técnica para medição?",
-                answer: "Sim! Enviamos nossos técnicos até o seu endereço em Criciúma, Içara e cidades vizinhas para aferição das medidas e estudo de viabilidade."
+                question: "Qual o prazo médio de fabricação de um pórtico ou painel industrial?",
+                answer: "Dependendo da escala estrutural e dos ensaios de fundação, o prazo varia entre 15 e 30 dias úteis desde a aprovação do projeto executivo."
               }
             ]
           }
         },
         {
-          id: "contact-duka-paineis-e-imagens",
+          id: "contact-duka",
           type: "contact",
           variant: "Contact01",
           content: {
-            title: "Solicite seu Orçamento de Fachada",
-            subtitle: "Envie sua mensagem ou fale diretamente no WhatsApp da nossa equipe comercial para agendar sua medição.",
-            formCta: "Enviar Pedido de Orçamento"
+            badge: "Departamento de Engenharia e Orçamentos",
+            title: "Solicite um Orçamento Técnico para sua Indústria",
+            formTitle: "Agende uma Visita Técnica na sua Planta",
+            formSubtitle: "Nossos consultores técnicos atendem em toda a região carbonífera e Sul de Santa Catarina."
           }
         },
         {
-          id: "footer-duka-paineis-e-imagens",
+          id: "footer-duka",
           type: "footer",
-          variant: "Footer01",
-          content: {}
+          variant: "Footer02",
+          content: {
+            disclaimer: "Projetos em conformidade com normas técnicas da ABNT e NBR de cargas e ações em estruturas.",
+            oabInfo: "CREA-SC Registro Técnico Habilitado"
+          }
         }
       ]
     }
