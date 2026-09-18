@@ -1,0 +1,19 @@
+{
+  "url": "http://dukapaineis.com.br/",
+  "analyzed_at": "2026-09-18T19:03:02.674Z",
+  "mobile": {
+    "performance_score": 39,
+    "metrics": {
+      "largest_contentful_paint": "5.1s",
+      "first_contentful_paint": "3.1s",
+      "total_blocking_time": "430ms",
+      "cumulative_layout_shift": "0.20",
+      "speed_index": "4.8s"
+    },
+    "status": "POOR"
+  },
+  "desktop": {
+    "performance_score": 65,
+    "status": "NEEDS_IMPROVEMENT"
+  }
+}

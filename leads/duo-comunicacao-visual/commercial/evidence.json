@@ -1,0 +1,43 @@
+{
+  "slug": "duo-comunicacao-visual",
+  "company_name": "Duo Comunicação Visual",
+  "city": "Içara - SC",
+  "niche": "Neon LED, Fachadas Comerciais, Totens & Adesivagem de Frotas",
+  "original_site": {
+    "url": "https://duoonline.com.br/",
+    "pagespeed_mobile": "40",
+    "lcp": "4.8s",
+    "fcp": "2.8s"
+  },
+  "redesign": {
+    "preview_url": "https://meudominio.com/preview/duo-comunicacao-visual",
+    "production_url": "https://meudominio.com/duo-comunicacao-visual",
+    "pagespeed_mobile": "98",
+    "lcp": "< 1.0s",
+    "fcp": "< 0.5s"
+  },
+  "issues_identified": [
+    "Identidade luminosa de Neon LED e letreiros modernos não é valorizada pela iluminação e contraste do site",
+    "Tempo de carregamento no 4G perde clientes de varejo que buscam sinalização urgente",
+    "Sem simulador ou catálogo interativo de materiais e acabamentos"
+  ],
+  "improvements_implemented": [
+    "Primeira dobra moderna e objetiva comunicando autoridade e especialidade imediata",
+    "Botão flutuante de WhatsApp fixo permitindo contato com apenas 1 clique em qualquer rolagem",
+    "Carregamento mobile otimizado atingindo pontuação máxima de performance no Google",
+    "Preservação integral da identidade visual e cores originais da marca através de Design Tokens"
+  ],
+  "visual_evidence": {
+    "before_desktop": "leads/duo-comunicacao-visual/screenshots/site-desktop.png",
+    "before_mobile": "leads/duo-comunicacao-visual/screenshots/site-mobile.png",
+    "after_desktop": "leads/duo-comunicacao-visual/redesign/screenshots/home-desktop.png",
+    "after_mobile": "leads/duo-comunicacao-visual/redesign/screenshots/home-mobile.png",
+    "comparison_image": "leads/duo-comunicacao-visual/commercial/visual/before-after.png"
+  },
+  "sources": {
+    "lead_dossier": "leads/duo-comunicacao-visual/lead.json",
+    "audit_report": "leads/duo-comunicacao-visual/auditoria.md",
+    "builder_handoff": "leads/duo-comunicacao-visual/redesign/builder-handoff.json"
+  },
+  "generated_at": "2026-09-18T19:03:16.037Z"
+}

@@ -1,0 +1,64 @@
+{
+  "slug": "duka-paineis-e-imagens",
+  "name": "Duka Painéis e Imagens",
+  "segment": "Painéis Industriais, Letras Caixa & Luminosos em Acrílico",
+  "city": "Içara - SC",
+  "address": "Rua Luiza Barp, 230 - Distrito Industrial 1ª Linha, Içara / Criciúma - SC",
+  "website": "http://dukapaineis.com.br/",
+  "instagram": "@dukapaineis",
+  "phone": "(48) 3432-3740",
+  "whatsapp": "(48) 98482-2827",
+  "status": "aguardando_aprovacao",
+  "ranking": 5,
+  "scores": {
+    "business": 8.4,
+    "design": 3.9,
+    "mobile": 3.7,
+    "ux": 3.9,
+    "conversion": 3.7,
+    "confidence": 8.3,
+    "performance": 3.9,
+    "seo": 4.9,
+    "website_overall": 3.9,
+    "opportunity": 76
+  },
+  "pagespeed": {
+    "mobile_performance": 39,
+    "desktop_performance": 65,
+    "lcp": "5.1s",
+    "fcp": "3.1s",
+    "tbt": "430ms",
+    "cls": "0.20",
+    "speed_index": "4.8s"
+  },
+  "top_problems": [
+    "Site sem certificado SSL ativo em algumas páginas e layout não responsivo",
+    "Escala fabril e maquinário de precisão não são demonstrados aos visitantes",
+    "Fricção no mobile para solicitar medição técnica gratuita no local"
+  ],
+  "main_gap": "Estrutura industrial de grande porte no Distrito Industrial, mas com presença web que aparenta pequeno prestador sem maquinário próprio.",
+  "commercial_hook": "Demonstrar a força do maquinário industrial e a precisão do corte a laser através de um site moderno que conquista grandes indústrias da região.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-18T19:03:02.673Z",
+  "redesign": {
+    "completed_at": "2026-09-18T19:03:22.622Z",
+    "platform_preview_url": "/preview/duka-paineis-e-imagens",
+    "platform_production_url": "/duka-paineis-e-imagens",
+    "config_path": "src/clients/data/duka-paineis-e-imagens.ts",
+    "screenshots": {
+      "home_desktop": "leads/duka-paineis-e-imagens/redesign/screenshots/home-desktop.png",
+      "home_mobile": "leads/duka-paineis-e-imagens/redesign/screenshots/home-mobile.png"
+    }
+  },
+  "commercial": {
+    "status": "pronto_para_aprovacao_humana",
+    "generated_at": "2026-09-18T19:03:22.767Z",
+    "dossier_path": "leads/duka-paineis-e-imagens/commercial/",
+    "summary": "leads/duka-paineis-e-imagens/commercial/commercial-summary.md",
+    "email": "leads/duka-paineis-e-imagens/commercial/email.md",
+    "whatsapp": "leads/duka-paineis-e-imagens/commercial/whatsapp.md"
+  }
+}

@@ -44,7 +44,7 @@
   },
   "created_at": "2026-09-16T20:06:18.555Z",
   "redesign": {
-    "completed_at": "2026-09-17T23:16:03.182Z",
+    "completed_at": "2026-09-18T19:03:12.195Z",
     "platform_preview_url": "/preview/sbardella-advocacia",
     "platform_production_url": "/sbardella-advocacia",
     "config_path": "src/clients/data/sbardella-advocacia.ts",
@@ -55,7 +55,7 @@
   },
   "commercial": {
     "status": "pronto_para_aprovacao_humana",
-    "generated_at": "2026-09-17T23:16:03.406Z",
+    "generated_at": "2026-09-18T19:03:12.345Z",
     "dossier_path": "leads/sbardella-advocacia/commercial/",
     "summary": "leads/sbardella-advocacia/commercial/commercial-summary.md",
     "email": "leads/sbardella-advocacia/commercial/email.md",

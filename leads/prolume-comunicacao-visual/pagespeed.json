@@ -1,0 +1,19 @@
+{
+  "url": "https://www.prolume.com.br/",
+  "analyzed_at": "2026-09-18T19:03:02.671Z",
+  "mobile": {
+    "performance_score": 41,
+    "metrics": {
+      "largest_contentful_paint": "4.7s",
+      "first_contentful_paint": "2.7s",
+      "total_blocking_time": "350ms",
+      "cumulative_layout_shift": "0.15",
+      "speed_index": "4.3s"
+    },
+    "status": "POOR"
+  },
+  "desktop": {
+    "performance_score": 67,
+    "status": "NEEDS_IMPROVEMENT"
+  }
+}

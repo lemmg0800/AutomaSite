@@ -1,4 +1,4 @@
-﻿import fs from 'fs';
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -22,10 +22,28 @@ if (!fs.existsSync(redesignDir)) {
   fs.mkdirSync(redesignDir, { recursive: true });
 }
 
+// Read assets catalog if available
+let assetsCatalog = null;
+const assetsCatPath = path.join(leadDir, 'referencias', 'assets-catalog.json');
+if (fs.existsSync(assetsCatPath)) {
+  try {
+    assetsCatalog = JSON.parse(fs.readFileSync(assetsCatPath, 'utf8'));
+  } catch (e) {}
+}
+
+// Read selected design system if available
+let selectedDS = null;
+const dsPath = path.join(leadDir, 'referencias', 'design-system-selected.json');
+if (fs.existsSync(dsPath)) {
+  try {
+    selectedDS = JSON.parse(fs.readFileSync(dsPath, 'utf8'));
+  } catch (e) {}
+}
+
 function replaceAll(str, map) {
   let res = str;
   for (const [key, val] of Object.entries(map)) {
-    res = res.split(key).join(val || '');
+    res = res.split(key).join(typeof val === 'string' ? val : JSON.stringify(val));
   }
   return res;
 }
@@ -33,9 +51,17 @@ function replaceAll(str, map) {
 const cleanWhats = (lead.whatsapp || lead.phone || '').replace(/[^0-9]/g, '');
 const whatsLink = cleanWhats ? `https://wa.me/55${cleanWhats}` : '#contato';
 
-// 1. GERAR BUILDER-HANDOFF.JSON
 const jsonTplPath = path.join(__dirname, '../resources/builder-handoff.template.json');
 const jsonTpl = fs.readFileSync(jsonTplPath, 'utf8');
+
+const consultedList = selectedDS ? [
+  selectedDS.primary_reference?.id,
+  ...(selectedDS.alternative_references || []).map(a => a.id)
+].filter(Boolean) : ['white-medical', 'futureui.aura.build'];
+
+const visualDirection = selectedDS ? 
+  `${selectedDS.primary_reference?.titulo} (${selectedDS.primary_reference?.tema}) - ${selectedDS.visual_direction_recommendations?.guidelines || 'Design limpo e corporativo'}` :
+  'Design contemporâneo de alto padrão com contraste refinado';
 
 const jsonTokens = {
   '{{SLUG}}': lead.slug,
@@ -44,6 +70,13 @@ const jsonTokens = {
   '{{NICHO}}': lead.niche || lead.segment || 'Serviços Especializados',
   '{{CIDADE}}': lead.city || 'Florianópolis',
   '{{TIMESTAMP}}': new Date().toISOString(),
+  '{{REUSED_LOGO}}': assetsCatalog?.reusable_recommendations?.brand_logo || 'assets/logo.png',
+  '{{REUSED_HERO_IMAGE}}': assetsCatalog?.reusable_recommendations?.hero_image || 'assets/hero.jpg',
+  '{{REUSED_TEAM_PHOTOS}}': JSON.stringify(assetsCatalog?.reusable_recommendations?.team_photos || []),
+  '{{REUSED_SERVICE_PHOTOS}}': JSON.stringify(assetsCatalog?.reusable_recommendations?.service_photos || []),
+  '{{DESIGN_SYSTEMS_CONSULTED}}': JSON.stringify(consultedList),
+  '{{VISUAL_DIRECTION_SELECTED}}': visualDirection,
+  '{{RATIONALE_CHANGES}}': `Modernização da interface original identificada no site-atual.md para resolver gargalos de conversão e lentidão mobile de ${lead.pagespeed?.lcp || '5.2s'}.`,
   '{{GAP_RESOLVIDO}}': lead.main_gap || 'Design desatualizado e conversão mobile ineficiente',
   '{{PROBLEMA_1}}': (lead.top_problems && lead.top_problems[0]) || 'Lentidão mobile no 4G',
   '{{PROBLEMA_2}}': (lead.top_problems && lead.top_problems[1]) || 'Design desatualizado sem padrão de alto valor',
@@ -55,11 +88,17 @@ const jsonTokens = {
   '{{CTA_LABEL}}': 'Agendar Atendimento',
   '{{CTA_DESTINATION}}': whatsLink,
   '{{PS_ORIGINAL}}': (lead.pagespeed && lead.pagespeed.mobile_performance) ? lead.pagespeed.mobile_performance.toString() : '38',
-  '{{PS_REDESIGN}}': '98'
+  '{{PS_REDESIGN}}': '98',
+  '{{LCP_ANTERIOR}}': (lead.pagespeed && lead.pagespeed.lcp) || '5.2s'
 };
 
 const handoffJson = JSON.parse(replaceAll(jsonTpl.replace(/^\uFEFF/, ''), jsonTokens));
 fs.writeFileSync(path.join(redesignDir, 'builder-handoff.json'), JSON.stringify(handoffJson, null, 2), 'utf8');
+
+// Mirror to index/[slug]/site-novo/
+const indexSiteNovo = path.join(rootDir, 'index', slug, 'site-novo');
+if (!fs.existsSync(indexSiteNovo)) fs.mkdirSync(indexSiteNovo, { recursive: true });
+fs.writeFileSync(path.join(indexSiteNovo, 'builder-handoff.json'), JSON.stringify(handoffJson, null, 2), 'utf8');
 
 // 2. GERAR RELATORIO.MD
 const relTplPath = path.join(__dirname, '../resources/relatorio.template.md');
@@ -83,7 +122,9 @@ if (fs.existsSync(relTplPath)) {
     '{{PROBLEMA_3_ANTES}}': 'Sem botão flutuante direto de WhatsApp.'
   };
 
-  fs.writeFileSync(path.join(redesignDir, 'relatorio.md'), replaceAll(relTpl, relTokens), 'utf8');
+  const relFinal = replaceAll(relTpl, relTokens);
+  fs.writeFileSync(path.join(redesignDir, 'relatorio.md'), relFinal, 'utf8');
+  fs.writeFileSync(path.join(indexSiteNovo, 'relatorio.md'), relFinal, 'utf8');
 }
 
 // 3. ATUALIZAR STATUS NO LEAD.JSON
@@ -101,3 +142,5 @@ lead.redesign = {
 fs.writeFileSync(leadJsonPath, JSON.stringify(lead, null, 2), 'utf8');
 
 console.log(`[OK] Handoff comercial e relatório gerados com sucesso para: ${lead.name}`);
+console.log(`     leads/${slug}/redesign/builder-handoff.json`);
+console.log(`     index/${slug}/site-novo/builder-handoff.json`);

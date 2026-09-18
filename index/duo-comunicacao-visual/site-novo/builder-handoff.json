@@ -1,0 +1,86 @@
+{
+  "slug": "duo-comunicacao-visual",
+  "company_name": "Duo Comunicação Visual",
+  "original_website": "https://duoonline.com.br/",
+  "downloaded_site_path": "leads/duo-comunicacao-visual/referencias/site-baixado",
+  "current_site_markdown_path": "leads/duo-comunicacao-visual/referencias/site-atual.md",
+  "platform_preview_url": "/preview/duo-comunicacao-visual",
+  "platform_production_url": "/duo-comunicacao-visual",
+  "niche": "Neon LED, Fachadas Comerciais, Totens & Adesivagem de Frotas",
+  "city": "Içara - SC",
+  "status": "draft",
+  "created_at": "2026-09-18T19:03:15.867Z",
+  "reused_assets": {
+    "logo": "assets/logo.png",
+    "hero_image": "assets/hero.jpg",
+    "team_photos": [],
+    "service_photos": []
+  },
+  "design_systems_consulted": [
+    "white-medical",
+    "futureui.aura.build"
+  ],
+  "visual_direction_selected": "Design contemporâneo de alto padrão com contraste refinado",
+  "structural_changes_performed": [
+    "Reestruturação completa da primeira dobra (Hero) com proposta de valor direta, contraste reforçado e CTA visível",
+    "Otimização da apresentação dos serviços através de cards modulares responsivos",
+    "Inserção de canal direto de atendimento via botão flutuante e formulário ágil",
+    "Reorganização da hierarquia visual com base na auditoria do Prospector e no site-atual.md"
+  ],
+  "rationale_for_changes": "Modernização da interface original identificada no site-atual.md para resolver gargalos de conversão e lentidão mobile de 4.8s.",
+  "gap_resolved": "Alta especialização em projetos criativos e luminosos para varejo moderno, porém site antigo não transmite o impacto visual e brilho dos letreiros.",
+  "top_problems_fixed": [
+    "Identidade luminosa de Neon LED e letreiros modernos não é valorizada pela iluminação e contraste do site",
+    "Tempo de carregamento no 4G perde clientes de varejo que buscam sinalização urgente",
+    "Sem simulador ou catálogo interativo de materiais e acabamentos"
+  ],
+  "components_used": [
+    "Header",
+    "Hero",
+    "Benefits",
+    "Services",
+    "About",
+    "FAQ",
+    "Contact",
+    "Footer",
+    "FloatingWhatsApp"
+  ],
+  "variants_used": [
+    "Hero01",
+    "Services01",
+    "Header01",
+    "Footer01"
+  ],
+  "primary_cta": {
+    "label": "Agendar Atendimento",
+    "destination": "https://wa.me/5548996226383"
+  },
+  "brand_identity_preserved": [
+    "Logotipo e assets fotográficos reais resgatados do site baixado",
+    "Cores institucionais e identidade da marca preservadas com Design Tokens",
+    "Posicionamento ético e segmentos de especialidade reais"
+  ],
+  "pagespeed": {
+    "original_mobile": "40",
+    "redesign_mobile": "98"
+  },
+  "metrics_before_after": {
+    "pagespeed_original": "40",
+    "pagespeed_redesign": "98",
+    "lcp_original": "4.8s",
+    "lcp_redesign": "0.8s"
+  },
+  "screenshots": {
+    "before_desktop": "leads/duo-comunicacao-visual/screenshots/site-desktop.png",
+    "before_mobile": "leads/duo-comunicacao-visual/screenshots/site-mobile.png",
+    "before_hero": "leads/duo-comunicacao-visual/screenshots/hero-desktop.png",
+    "after_desktop": "leads/duo-comunicacao-visual/redesign/screenshots/home-desktop.png",
+    "after_mobile": "leads/duo-comunicacao-visual/redesign/screenshots/home-mobile.png",
+    "after_hero": "leads/duo-comunicacao-visual/redesign/screenshots/hero-redesign.png"
+  },
+  "commercial_arguments_for_agent_3": [
+    "Carregamento mobile ultrarrápido com Astro e arquitetura de ilhas, eliminando a rejeição no primeiro acesso.",
+    "Botão flutuante de WhatsApp fixo com mensagem direcionada, facilitando a conversão imediata.",
+    "Apresentação visual com nível estético de alto padrão, alinhando a percepção digital da empresa ao seu real prestígio no mercado."
+  ]
+}

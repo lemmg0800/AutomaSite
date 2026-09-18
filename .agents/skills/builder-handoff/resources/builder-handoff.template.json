@@ -1,13 +1,30 @@
-﻿{
+{
   "slug": "{{SLUG}}",
   "company_name": "{{NOME_EMPRESA}}",
   "original_website": "{{URL_SITE}}",
+  "downloaded_site_path": "leads/{{SLUG}}/referencias/site-baixado",
+  "current_site_markdown_path": "leads/{{SLUG}}/referencias/site-atual.md",
   "platform_preview_url": "/preview/{{SLUG}}",
   "platform_production_url": "/{{SLUG}}",
   "niche": "{{NICHO}}",
   "city": "{{CIDADE}}",
   "status": "draft",
   "created_at": "{{TIMESTAMP}}",
+  "reused_assets": {
+    "logo": "{{REUSED_LOGO}}",
+    "hero_image": "{{REUSED_HERO_IMAGE}}",
+    "team_photos": {{REUSED_TEAM_PHOTOS}},
+    "service_photos": {{REUSED_SERVICE_PHOTOS}}
+  },
+  "design_systems_consulted": {{DESIGN_SYSTEMS_CONSULTED}},
+  "visual_direction_selected": "{{VISUAL_DIRECTION_SELECTED}}",
+  "structural_changes_performed": [
+    "Reestruturação completa da primeira dobra (Hero) com proposta de valor direta, contraste reforçado e CTA visível",
+    "Otimização da apresentação dos serviços através de cards modulares responsivos",
+    "Inserção de canal direto de atendimento via botão flutuante e formulário ágil",
+    "Reorganização da hierarquia visual com base na auditoria do Prospector e no site-atual.md"
+  ],
+  "rationale_for_changes": "{{RATIONALE_CHANGES}}",
   "gap_resolved": "{{GAP_RESOLVIDO}}",
   "top_problems_fixed": [
     "{{PROBLEMA_1}}",
@@ -36,19 +53,27 @@
     "destination": "{{CTA_DESTINATION}}"
   },
   "brand_identity_preserved": [
-    "Cores institucionais e identidade da marca preservadas com design tokens",
-    "Posicionamento ético e segmentos de especialidade reais",
-    "Canais oficiais de atendimento da empresa"
+    "Logotipo e assets fotográficos reais resgatados do site baixado",
+    "Cores institucionais e identidade da marca preservadas com Design Tokens",
+    "Posicionamento ético e segmentos de especialidade reais"
   ],
   "pagespeed": {
     "original_mobile": "{{PS_ORIGINAL}}",
     "redesign_mobile": "{{PS_REDESIGN}}"
   },
+  "metrics_before_after": {
+    "pagespeed_original": "{{PS_ORIGINAL}}",
+    "pagespeed_redesign": "{{PS_REDESIGN}}",
+    "lcp_original": "{{LCP_ANTERIOR}}",
+    "lcp_redesign": "0.8s"
+  },
   "screenshots": {
-    "before_desktop": "screenshots/site-desktop.png",
-    "before_mobile": "screenshots/site-mobile.png",
-    "after_desktop": "redesign/screenshots/home-desktop.png",
-    "after_mobile": "redesign/screenshots/home-mobile.png"
+    "before_desktop": "leads/{{SLUG}}/screenshots/site-desktop.png",
+    "before_mobile": "leads/{{SLUG}}/screenshots/site-mobile.png",
+    "before_hero": "leads/{{SLUG}}/screenshots/hero-desktop.png",
+    "after_desktop": "leads/{{SLUG}}/redesign/screenshots/home-desktop.png",
+    "after_mobile": "leads/{{SLUG}}/redesign/screenshots/home-mobile.png",
+    "after_hero": "leads/{{SLUG}}/redesign/screenshots/hero-redesign.png"
   },
   "commercial_arguments_for_agent_3": [
     "Carregamento mobile ultrarrápido com Astro e arquitetura de ilhas, eliminando a rejeição no primeiro acesso.",

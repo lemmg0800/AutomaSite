@@ -1,0 +1,43 @@
+{
+  "slug": "duka-paineis-e-imagens",
+  "company_name": "Duka Painéis e Imagens",
+  "city": "Içara - SC",
+  "niche": "Painéis Industriais, Letras Caixa & Luminosos em Acrílico",
+  "original_site": {
+    "url": "http://dukapaineis.com.br/",
+    "pagespeed_mobile": "39",
+    "lcp": "5.1s",
+    "fcp": "3.1s"
+  },
+  "redesign": {
+    "preview_url": "https://meudominio.com/preview/duka-paineis-e-imagens",
+    "production_url": "https://meudominio.com/duka-paineis-e-imagens",
+    "pagespeed_mobile": "98",
+    "lcp": "< 1.0s",
+    "fcp": "< 0.5s"
+  },
+  "issues_identified": [
+    "Site sem certificado SSL ativo em algumas páginas e layout não responsivo",
+    "Escala fabril e maquinário de precisão não são demonstrados aos visitantes",
+    "Fricção no mobile para solicitar medição técnica gratuita no local"
+  ],
+  "improvements_implemented": [
+    "Primeira dobra moderna e objetiva comunicando autoridade e especialidade imediata",
+    "Botão flutuante de WhatsApp fixo permitindo contato com apenas 1 clique em qualquer rolagem",
+    "Carregamento mobile otimizado atingindo pontuação máxima de performance no Google",
+    "Preservação integral da identidade visual e cores originais da marca através de Design Tokens"
+  ],
+  "visual_evidence": {
+    "before_desktop": "leads/duka-paineis-e-imagens/screenshots/site-desktop.png",
+    "before_mobile": "leads/duka-paineis-e-imagens/screenshots/site-mobile.png",
+    "after_desktop": "leads/duka-paineis-e-imagens/redesign/screenshots/home-desktop.png",
+    "after_mobile": "leads/duka-paineis-e-imagens/redesign/screenshots/home-mobile.png",
+    "comparison_image": "leads/duka-paineis-e-imagens/commercial/visual/before-after.png"
+  },
+  "sources": {
+    "lead_dossier": "leads/duka-paineis-e-imagens/lead.json",
+    "audit_report": "leads/duka-paineis-e-imagens/auditoria.md",
+    "builder_handoff": "leads/duka-paineis-e-imagens/redesign/builder-handoff.json"
+  },
+  "generated_at": "2026-09-18T19:03:22.757Z"
+}

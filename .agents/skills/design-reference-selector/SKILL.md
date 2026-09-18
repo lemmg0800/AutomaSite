@@ -1,32 +1,35 @@
 ---
 name: design-reference-selector
-description: Consulta o repositório de 61 Design Systems em Design System/ e seleciona as referências estéticas, paletas, tipografias, UI compounds e efeitos visuais mais adequados ao nicho do lead.
+description: Consulta o repositório de 61 Design Systems em Design System/ utilizando o buscador semântico search.py e seleciona a melhor direção visual (paleta, tipografia, efeitos, componentes) sem criar um designsystem.html novo desnecessário para cada cliente.
 ---
 
 # Skill: Design Reference Selector
 
-Esta skill busca e seleciona diretrizes visuais no acervo em `Design System/` (`D:\projetos antigravity\Site automatico\Design System`), evitando a criação desnecessária de um novo `designsystem.html` para cada cliente.
+Esta skill busca no acervo central de **61 Design Systems** (`D:\projetos antigravity\Site automatico\Design System`) as referências estéticas mais apropriadas ao nicho do lead.
 
-## 1. Pesquisa no Catálogo de Design Systems
+## 1. Princípio Fundamental: Sem Criação Desnecessária de Design Systems
 
-O agente deve executar a pesquisa via CLI ou script Python:
+O Builder **NÃO cria um `designsystem.html` novo do zero** para cada cliente.
+Ele utiliza o acervo existente como fonte de **direção visual**:
+- Cores primárias, secundárias e acentos;
+- Combinações de tipografia (Google Fonts);
+- Classes de efeitos (`.glass-panel`, `.glow`, sombras);
+- Layout de componentes (cards, botões, modais).
+
+## 2. Execução Automática
 
 ```bash
-python "Design System/search.py" --query "[nicho do cliente]" --top 3
+python .agents/skills/design-reference-selector/scripts/select_design_reference.py --nicho "odontologia" --slug "cliente-slug"
 ```
 
-Ou via script Node/Python dedicado:
+Ou diretamente via CLI:
 ```bash
-python .agents/skills/design-reference-selector/scripts/select_design_reference.py --nicho "advocacia" --slug "cliente-slug"
+python "Design System/search.py" --query "odontologia e estética" --json
 ```
 
-## 2. Elementos a Inspecionar nas Referências Selecionadas
-
-- **Tipografia:** Hierarquia (Google Fonts), pesos e legibilidade para o nicho;
-- **Paleta de Cores:** Primária, secundária, superfície e acentos;
-- **UI Compounds & Efeitos:** Cards, bordas arredondadas, sombras e `.glass-panel`;
-- **Animações & Transições:** Microinterações de hover e visibilidade.
-
-## 3. Saída do Mapeamento
-
-Gera o arquivo `referencias/design-system-selected.json` documentando a referência escolhida, os tokens assimilados e a justificativa estética.
+## 3. Arquivo de Saída
+Gera `referencias/design-system-selected.json` contendo:
+- Referência primária escolhida e pontuação de relevância;
+- Alternativas secundárias para combinação de ideias;
+- Tokens sugeridos (fontes, cores, efeitos);
+- Justificativa visual.

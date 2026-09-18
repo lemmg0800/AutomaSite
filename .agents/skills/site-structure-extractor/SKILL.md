@@ -1,15 +1,16 @@
 ---
 name: site-structure-extractor
-description: Analisa o HTML e CSS do site baixado e gera o documento intermediário referencias/site-atual.md com a estrutura dobra por dobra, inventário de copy original e representações visuais em ASCII.
+description: Analisa a página principal do site baixado e gera o documento intermediário referencias/site-atual.md documentando o site dobra por dobra, com inventário completo de copy original (títulos, subtítulos, CTAs, diferenciais, serviços) e representações de layout em ASCII para guiar o redesign.
 ---
 
 # Skill: Site Structure Extractor
 
-Esta skill analisa o acervo bruto em `referencias/site-baixado/` e consolida a arquitetura e textos originais no arquivo estruturado `referencias/site-atual.md`.
+Esta skill analisa o HTML da página principal contida em `referencias/site-baixado/` e gera o documento consolidado `referencias/site-atual.md`.
 
-## 1. Objetivo do Markdown Intermediário (`site-atual.md`)
+## 1. Papel do Markdown Intermediário
 
-O `site-atual.md` é a **única fonte de verdade para COPY + ESTRUTURA ORIGINAL**, eliminando a necessidade do Builder reler iterativamente o código HTML/CSS bruto do site antigo e economizando tokens de processamento.
+O `site-atual.md` é a **fonte primária de COPY + ESTRUTURA ORIGINAL**.
+Ele existe para que o Builder não precise reler arquivos HTML/CSS pesados repetidamente a cada iteração, economizando tokens e garantindo total fidelidade às informações reais da empresa.
 
 ## 2. Execução Automática
 
@@ -17,46 +18,38 @@ O `site-atual.md` é a **única fonte de verdade para COPY + ESTRUTURA ORIGINAL*
 node .agents/skills/site-structure-extractor/scripts/extract_structure.js --slug "nome-do-cliente"
 ```
 
-## 3. Formato Padrão do `site-atual.md`
+## 3. Estrutura Padrão Gerada em `site-atual.md`
 
-O arquivo gerado em `leads/[slug]/referencias/site-atual.md` e espelhado em `index/[slug]/referencias/site-atual.md` deve seguir rigorosamente a estrutura:
+O arquivo é salvo em `leads/[slug]/referencias/site-atual.md` e espelhado em `index/[slug]/referencias/site-atual.md`:
 
 ```markdown
-# 1. HERO (PRIMEIRA DOBRA)
-
-Copy original:
+# HERO (PRIMEIRA DOBRA)
+### Copy Original
 - Headline: "..."
 - Subheadline: "..."
 - CTA: "..."
-
-Elementos Visuais:
-- Logo original no topo esquerdo
-- Imagem de fundo / ilustrativa
-- Botão de WhatsApp em destaque
-
-## Layout Atual (ASCII)
-
-+--------------------------------------------------+
-| LOGO               NAVEGAÇÃO          WHATSAPP   |
-+--------------------------------------------------+
-| HEADLINE PRINCIPAL       |                       |
-| Subheadline descritiva   |     IMAGEM HERO       |
-| [ BOTÃO CTA ]            |                       |
-+--------------------------------------------------+
-
-----------------------------------------------------
-
-# 2. DOBRA 2 — SERVIÇOS / ATUAÇÃO
-
-Copy original:
+### Elementos Visuais e Mídia
 ...
-
-## Layout Atual (ASCII)
-
+### Layout Atual (Representação ASCII)
++--------------------------------------------------+
+| LOGO               NAV                 WHATSAPP  |
++--------------------------------------------------+
+| TEXTO PRINCIPAL          |                       |
+| Subheadline              |      IMAGEM HERO      |
+| [ CTA PRINCIPAL ]        |                       |
++--------------------------------------------------+
+----------------------------------------------------
+# DOBRA 2 — SERVIÇOS E ATUAÇÃO
+...
+# DOBRA 3 — SOBRE A EMPRESA E DIFERENCIAIS
+...
+# DOBRA 4 — PROVA SOCIAL / CREDIBILIDADE
+...
+# DOBRA 5 — CONTATO E RODAPÉ
 ...
 ```
 
-## 4. Regras de Utilização pelo Builder
+## 4. Diretrizes para o Redesign
 
-1. **Copy Protegida:** Preserve dados institucionais reais, diferenciais e serviços autênticos.
-2. **UX Reorganizada:** Não copie péssimas decisões de UX do site antigo. Se o Prospector apontar má usabilidade, reorganize a sequência das dobras mantendo o conteúdo legítimo.
+1. **Preservação de Conteúdo Real:** Use os textos, especialidades e contatos extraídos. Não invente conteúdo factual.
+2. **Reorganização Livre de UX:** O Markdown documenta o site antigo, mas **não obriga** a manter erros de usabilidade ou proporções ruins. Se a auditoria do Prospector apontou falhas, aperfeiçoe a hierarquia, a clareza e a conversão mantendo os dados legítimos.
