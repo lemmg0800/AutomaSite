@@ -310,11 +310,11 @@ const inactiveCount = totalProjects - activeCount;
               <div class="screenshots-row">
                 <div class="shot-box">
                   <span>Desktop Original</span>
-                  <img id="imgOriginalDesktop" src="" alt="Site Antigo Desktop" loading="lazy" />
+                  <img id="imgOriginalDesktop" src="" alt="Site Antigo Desktop" loading="lazy" onerror="this.onerror=null;this.src='/placeholder.svg';" />
                 </div>
                 <div class="shot-box">
                   <span>Mobile Original</span>
-                  <img id="imgOriginalMobile" src="" alt="Site Antigo Mobile" loading="lazy" />
+                  <img id="imgOriginalMobile" src="" alt="Site Antigo Mobile" loading="lazy" onerror="this.onerror=null;this.src='/placeholder.svg';" />
                 </div>
               </div>
             </div>
@@ -353,11 +353,11 @@ const inactiveCount = totalProjects - activeCount;
               <div class="screenshots-row">
                 <div class="shot-box">
                   <span>Novo Desktop</span>
-                  <img id="imgRedesignDesktop" src="" alt="Novo Desktop" loading="lazy" />
+                  <img id="imgRedesignDesktop" src="" alt="Novo Desktop" loading="lazy" onerror="this.onerror=null;this.src='/placeholder.svg';" />
                 </div>
                 <div class="shot-box">
                   <span>Novo Mobile</span>
-                  <img id="imgRedesignMobile" src="" alt="Novo Mobile" loading="lazy" />
+                  <img id="imgRedesignMobile" src="" alt="Novo Mobile" loading="lazy" onerror="this.onerror=null;this.src='/placeholder.svg';" />
                 </div>
               </div>
             </div>
@@ -369,7 +369,7 @@ const inactiveCount = totalProjects - activeCount;
           <div class="panel-card full-width">
             <h3>Card de Comparação Visual (Antes × Depois)</h3>
             <div class="before-after-container">
-              <img id="imgBeforeAfter" src="" alt="Comparativo Antes vs Depois" loading="lazy" />
+              <img id="imgBeforeAfter" src="" alt="Comparativo Antes vs Depois" loading="lazy" onerror="this.onerror=null;this.src='/placeholder.svg';" />
             </div>
           </div>
 
@@ -765,16 +765,16 @@ const inactiveCount = totalProjects - activeCount;
 
         const imgOrigDesk = document.getElementById('imgOriginalDesktop');
         const imgOrigMob = document.getElementById('imgOriginalMobile');
-        imgOrigDesk.src = p.originalDesktopScreenshot || '/placeholder.png';
-        imgOrigMob.src = p.originalMobileScreenshot || '/placeholder.png';
+        imgOrigDesk.src = p.originalDesktopScreenshot || '/placeholder.svg';
+        imgOrigMob.src = p.originalMobileScreenshot || '/placeholder.svg';
 
         // 2. Builder Data
         const b = data.builder || {};
         const previewLink = document.getElementById('builderPreviewLink');
         previewLink.href = `/site/${data.slug}`;
 
-        document.getElementById('imgRedesignDesktop').src = b.redesignDesktopScreenshot || '/placeholder.png';
-        document.getElementById('imgRedesignMobile').src = b.redesignMobileScreenshot || '/placeholder.png';
+        document.getElementById('imgRedesignDesktop').src = b.redesignDesktopScreenshot || '/placeholder.svg';
+        document.getElementById('imgRedesignMobile').src = b.redesignMobileScreenshot || '/placeholder.svg';
 
         const compList = document.getElementById('builderComponentsList');
         if (b.componentsUsed && b.componentsUsed.length > 0) {
@@ -785,7 +785,7 @@ const inactiveCount = totalProjects - activeCount;
 
         // 3. Comercial Data
         const c = data.comercial || {};
-        document.getElementById('imgBeforeAfter').src = c.beforeAfterImage || '/placeholder.png';
+        document.getElementById('imgBeforeAfter').src = c.beforeAfterImage || '/placeholder.svg';
 
         const emailSubj = document.getElementById('emailSubject');
         const emailBody = document.getElementById('emailBody');
