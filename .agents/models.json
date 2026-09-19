@@ -22,10 +22,20 @@
     }
   },
   "agents": {
+    "visual_designer": {
+      "name": "Visual Designer / Diretor de Arte (Agente 2A)",
+      "file": ".agents/agents/art-director/agent.md",
+      "role": "Pesquisa em 61 Design Systems e direção de arte única anti-clone",
+      "model": "gemini-3.8-high",
+      "modelAlias": "3.8 high",
+      "temperature": 0.4,
+      "maxOutputTokens": 16384,
+      "reasoning": "high"
+    },
     "builder": {
-      "name": "Builder (Agente 2 — Web Designer)",
+      "name": "Platform Builder (Agente 2B — Engenharia Frontend)",
       "file": ".agents/agents/builder/agent.md",
-      "role": "Recriar e personalizar os sites institucionais",
+      "role": "Recriar código Astro com 1ª dobra rica e componentes sob medida",
       "model": "gemini-3.8-high",
       "modelAlias": "3.8 high",
       "temperature": 0.3,

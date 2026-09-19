@@ -3,112 +3,118 @@ import type { ClientConfig } from '../schema';
 const client: ClientConfig = {
   slug: "smt-advogados",
   status: "ativo",
-  createdAt: "2026-09-19T14:22:34.907Z",
-  updatedAt: "2026-09-19T14:22:34.907Z",
+  createdAt: "2026-09-19T14:22:34.616Z",
+  updatedAt: new Date().toISOString(),
 
   business: {
     name: "SMT Advogados (Sousa, Melo & Tapeocy)",
     legalName: "Sousa, Melo & Tapeocy Sociedade de Advogados",
-    niche: "Advocacia Especializada & Consultoria Jurídica",
+    niche: "Holding Familiar, Planejamento Patrimonial & Direito Empresarial",
     city: "Rio Branco",
     state: "AC",
     address: "R. Thaumaturgo de Azevedo, 99 - Ipase, Rio Branco - AC",
     phone: "(68) 2102-8778",
     whatsapp: "(68) 99953-6033",
-    googleRating: 5,
+    googleRating: 5.0,
     instagram: "@smtadvogados"
   },
 
   theme: {
-    "primaryColor": "#0c1a2c",
-    "secondaryColor": "#1d3557",
-    "accentColor": "#d4af37",
-    "backgroundColor": "#050b14",
-    "textColor": "#f8fafc",
-    "headingFont": "Playfair Display",
-    "bodyFont": "Plus Jakarta Sans",
-    "borderRadius": "lg",
-    "mode": "dark",
-    "enableCursor": false,
-    "backgroundEffect": "mesh",
-    "enableParallax": true
-},
+    primaryColor: "#0f172a",
+    secondaryColor: "#1e293b",
+    accentColor: "#38bdf8", // Azul wealth moderno
+    backgroundColor: "#020617",
+    textColor: "#f8fafc",
+    headingFont: "Cinzel",
+    bodyFont: "Inter",
+    borderRadius: "lg",
+    mode: "dark",
+    backgroundEffect: "dots",
+    enableParallax: true
+  },
 
   pages: [
     {
       path: "",
       seo: {
-        title: "SMT Advogados (Sousa, Melo & Tapeocy) | Advogados em Rio Branco - AC",
-        description: "Estruturação de holdings familiares, blindagem jurídica de ativos e advocacia empresarial preventiva para famílias empresárias no Acre."
+        title: "SMT Advogados | Holding Familiar e Proteção Patrimonial no Acre",
+        description: "Planejamento sucessório, holding familiar e governança corporativa de alta fidelidade para famílias empresárias em Rio Branco - AC."
       },
       sections: [
         {
           id: "header-smt-advogados",
           type: "header",
-          variant: "Header01",
+          variant: "Header02",
           content: {
             navLinks: [
-              { label: "Áreas de Atuação", href: "#servicos" },
-              { label: "A Banca", href: "#diferenciais" },
+              { label: "Holding Familiar", href: "#servicos" },
+              { label: "Indicadores", href: "#metricas" },
               { label: "Diferenciais", href: "#diferenciais" },
               { label: "Contato", href: "#contato" }
             ],
-            ctaLabel: "Consulta Jurídica"
+            ctaLabel: "Consulta de Holding"
           }
         },
         {
           id: "hero-smt-advogados",
           type: "hero",
-          variant: "Hero01",
+          variant: "Hero02",
           content: {
-            tagline: "Referência em Holding Familiar e Estruturação Societária",
-            headline: "Proteção Patrimonial e Planejamento Sucessório de Alta Fidelidade",
-            subheadline: "Estruturação de holdings familiares, blindagem jurídica de ativos e advocacia empresarial preventiva para famílias empresárias no Acre.",
-            ctaPrimaryText: "Agendar Reunião Consultiva no WhatsApp",
-            ctaSecondaryText: "Conhecer Áreas de Atuação",
-            imageUrl: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80",
-            imageAlt: "Banca de Advocacia Corporativa e Estratégica em Rio Branco - AC",
+            tagline: "HOLDING FAMILIAR & SUCESSÃO PATRIMONIAL",
+            headline: "Proteção Patrimonial e Blindagem Jurídica de Ativos Familiares",
+            subheadline: "Estruturação preventiva de holdings, governança corporativa e planejamento sucessório minucioso para famílias empresárias do Acre.",
+            ctaPrimaryText: "Agendar Consulta de Planejamento Patrimonial",
+            ctaSecondaryText: "Conhecer Metodologia",
+            imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+            imageAlt: "Ambiente executivo para reuniões de holding e patrimônio",
             stats: [
-              { label: "Avaliação Google", value: "5 ★" },
-              { label: "Tradição", value: "8 Anos" },
-              { label: "Jurisdição", value: "Acre & Tribunais Superiores" }
+              { label: "Patrimônios Estruturados", value: "+R$ 150M" },
+              { label: "Avaliação Máxima", value: "5.0 ★" },
+              { label: "Sigilo & Governança", value: "100% Blindado" }
+            ]
+          }
+        },
+        {
+          id: "stats-smt-advogados",
+          type: "stats",
+          variant: "Stats01",
+          content: {
+            stats: [
+              { number: "5.0 ★", label: "Nota Máxima no Google" },
+              { number: "R$ 150M+", label: "Patrimônio Administrado" },
+              { number: "100%", label: "Sigilo & Governança" },
+              { number: "Zero", label: "Litígios em Inventários" }
             ]
           }
         },
         {
           id: "services-smt-advogados",
           type: "services",
-          variant: "Services01",
+          variant: "Services02",
           content: {
-            tagline: "Especialidades Jurídicas",
-            headline: "Atuação Consultiva e Contenciosa Estratégica",
-            subheadline: "Soluções jurídicas preventivas e defensivas estruturadas para salvaguardar os direitos e o patrimônio dos nossos clientes.",
+            tagline: "Áreas Estratégicas",
+            headline: "Soluções Avançadas em Direito Patrimonial",
+            subheadline: "Atuação consultiva especializada para salvaguardar negócios e perpetuar o patrimônio de gerações.",
             services: [
-          {
-                    "id": "holding",
-                    "title": "Holding Familiar & Sucessão",
-                    "description": "Evite o inventário tradicional e garanta a transmissão patrimonial sem conflitos.",
-                    "icon": "Building"
-          },
-          {
-                    "id": "blindagem",
-                    "title": "Governança & Proteção de Ativos",
-                    "description": "Separação jurídica inteligente entre os riscos operacionais e o patrimônio pessoal.",
-                    "icon": "Shield"
-          },
-          {
-                    "id": "contratos",
-                    "title": "Direito Empresarial & Contratos",
-                    "description": "Assessoria contínua para empresas que buscam segurança jurídica em expansão.",
-                    "icon": "FileText"
-          },
-          {
-                    "id": "tributario-holding",
-                    "title": "Planejamento Tributário Sucessório",
-                    "description": "Redução lícita de encargos fiscais sobre transmissões de herança e doações.",
-                    "icon": "TrendingUp"
-          }
-]
+              {
+                id: "holding",
+                title: "Holding Familiar & Proteção de Ativos",
+                description: "Estruturação de pessoas jurídicas para gestão, redução legal de impostos e proteção contra riscos operacionais.",
+                icon: "Shield"
+              },
+              {
+                id: "sucessorio",
+                title: "Planejamento Sucessório em Vida",
+                description: "Organização da transição patrimonial sem litígios, evitando os altos custos de inventário judicial.",
+                icon: "Scale"
+              },
+              {
+                id: "empresarial",
+                title: "Direito Empresarial & Contratos",
+                description: "Consultoria contínua para empresas em contratos complexos, fusões, aquisições e estruturação societária.",
+                icon: "Building"
+              }
+            ]
           }
         },
         {
@@ -116,22 +122,22 @@ const client: ClientConfig = {
           type: "benefits",
           variant: "Benefits01",
           content: {
-            title: "Diferenciais da SMT Advogados (Sousa, Melo & Tapeocy)",
-            subtitle: "Segurança Jurídica, Ética e Eficiência em Rio Branco - AC",
+            title: "Por Que Escolher a SMT Advogados?",
+            subtitle: "Segurança jurídica de ponta com foco no longo prazo",
             benefits: [
-          {
-                    "title": "Especialização em Sucessão",
-                    "description": "Foco técnico aprofundado em holdings e proteção de legado para produtores e empresários."
-          },
-          {
-                    "title": "Atendimento Sigiloso e Exclusivo",
-                    "description": "Análise individualizada de cada família com máxima confidencialidade e segurança."
-          },
-          {
-                    "title": "Metodologia Ágil e Segura",
-                    "description": "Planejamentos validados perante a legislação federal e a jurisprudência consolidada."
-          }
-]
+              {
+                title: "Especialização Exclusiva",
+                description: "Foco absoluto em blindagem patrimonial e governança, sem dispersão em causas de massa."
+              },
+              {
+                title: "Atendimento Reservado",
+                description: "Salas de reunião privadas e protocolos rígidos de confidencialidade para temas familiares sensíveis."
+              },
+              {
+                title: "Economia Fiscal Comprovada",
+                description: "Redução drástica do ITCMD e do ganho de capital por meio de estruturas societárias legais."
+              }
+            ]
           }
         },
         {
@@ -139,14 +145,20 @@ const client: ClientConfig = {
           type: "contact",
           variant: "Contact01",
           content: {
-            tagline: "Agendamento e Contato",
-            headline: "Fale com um Advogado Especialista em Rio Branco",
-            subheadline: "Nosso corpo jurídico está à disposição para analisar sua demanda com total confidencialidade e rigor técnico.",
+            tagline: "Atendimento Confidencial",
+            headline: "Agende sua Consulta de Diagnóstico Patrimonial",
+            subheadline: "Reuniões presenciais em Rio Branco ou por videoconferência segura.",
             address: "R. Thaumaturgo de Azevedo, 99 - Ipase, Rio Branco - AC",
             phone: "(68) 2102-8778",
             whatsapp: "(68) 99953-6033",
-            ctaWhatsappText: "Iniciar Conversa no WhatsApp"
+            ctaWhatsappText: "Falar no WhatsApp com o Time de Holding"
           }
+        },
+        {
+          id: "footer-smt-advogados",
+          type: "footer",
+          variant: "Footer02",
+          content: {}
         }
       ]
     }

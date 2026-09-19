@@ -1,0 +1,83 @@
+{
+  "slug": "poersch-advogados",
+  "name": "Poersch & Poersch Advogados Associados",
+  "niche": "Consultoria Empresarial, Direito Administrativo & Contencioso Cível",
+  "aesthetic_concept": "Editorial Monumental & Tradição Sênior",
+  "consulted_design_systems": [
+    "monolith-architecture.aura.build",
+    "echelon.aura.build"
+  ],
+  "theme_tokens": {
+    "primaryColor": "#0b1329",
+    "secondaryColor": "#172554",
+    "accentColor": "#d4af37",
+    "backgroundColor": "#030712",
+    "textColor": "#f9fafb",
+    "headingFont": "Playfair Display",
+    "bodyFont": "Plus Jakarta Sans",
+    "borderRadius": "md",
+    "mode": "dark",
+    "backgroundEffect": "mesh"
+  },
+  "hero_specification": {
+    "variant": "Hero01",
+    "badge": "★ 37 ANOS DE TRADIÇÃO NO ACRE",
+    "headline": "Tradição Jurídica Sênior e Estratégia de Alto Impacto em Rio Branco",
+    "subheadline": "Quase quatro décadas de liderança contenciosa e consultiva para empresas, famílias e instituições que exigem o mais alto rigor técnico e ético.",
+    "primaryCta": "Falar com Advogado Sócio no WhatsApp",
+    "secondaryCta": "Conhecer Áreas de Atuação",
+    "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Edifício sede e advocacia corporativa de alta autoridade",
+    "stats": [
+      {
+        "label": "Tradição",
+        "value": "Desde 1987"
+      },
+      {
+        "label": "Avaliação Google",
+        "value": "4.9 ★"
+      },
+      {
+        "label": "Jurisdição",
+        "value": "Acre & Tribunais Superiores"
+      }
+    ]
+  },
+  "section_flow": [
+    {
+      "type": "header",
+      "variant": "Header01"
+    },
+    {
+      "type": "hero",
+      "variant": "Hero01"
+    },
+    {
+      "type": "credentials",
+      "variant": "Credentials01"
+    },
+    {
+      "type": "services",
+      "variant": "Services01"
+    },
+    {
+      "type": "benefits",
+      "variant": "Benefits01"
+    },
+    {
+      "type": "contact",
+      "variant": "Contact01"
+    },
+    {
+      "type": "footer",
+      "variant": "Footer01"
+    }
+  ],
+  "first_fold_rules": {
+    "glowEffect": true,
+    "badgePill": true,
+    "whatsappPulse": true,
+    "distinctiveTypography": "Playfair Display / Plus Jakarta Sans"
+  },
+  "created_at": "2026-09-19T15:47:20.035Z"
+}

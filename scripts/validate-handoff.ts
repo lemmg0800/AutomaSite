@@ -19,6 +19,7 @@ interface LeadValidation {
   name: string;
   checks: {
     zodSchema: CheckResult;
+    artDirection: CheckResult;
     siteDesktop: CheckResult;
     siteMobile: CheckResult;
     redesignDesktop: CheckResult;
@@ -114,8 +115,25 @@ async function validateLead(slug: string): Promise<LeadValidation> {
   }
   const whatsappCopy = checkWhatsAppFormat(whatsPath);
 
+  // 6. Art Direction & Design System
+  const artDirectionPath = path.join(leadsDir, slug, 'referencias', 'art-direction.json');
+  let artDirectionCheck: CheckResult = { passed: false, message: 'Ausente (art-direction.json)' };
+  if (fs.existsSync(artDirectionPath)) {
+    try {
+      const art = JSON.parse(fs.readFileSync(artDirectionPath, 'utf8'));
+      if (art.consulted_design_systems && art.consulted_design_systems.length > 0) {
+        artDirectionCheck = { passed: true, message: `OK (${art.aesthetic_concept || 'Design System auditado'})` };
+      } else {
+        artDirectionCheck = { passed: false, message: 'Sem Design Systems consultados' };
+      }
+    } catch {
+      artDirectionCheck = { passed: false, message: 'art-direction.json inválido' };
+    }
+  }
+
   const checks = {
     zodSchema: zodResult,
+    artDirection: artDirectionCheck,
     siteDesktop,
     siteMobile,
     redesignDesktop,
@@ -165,6 +183,7 @@ async function main() {
     const symbol = res.allPassed ? '✅' : '❌';
     console.log(`${symbol} [${res.slug}] - ${res.name}`);
     console.log(`   ├─ Schema Zod:         ${res.checks.zodSchema.passed ? '✓' : '✗'} ${res.checks.zodSchema.message}`);
+    console.log(`   ├─ Direção de Arte:     ${res.checks.artDirection.passed ? '✓' : '✗'} ${res.checks.artDirection.message}`);
     console.log(`   ├─ Print Original Desk: ${res.checks.siteDesktop.passed ? '✓' : '✗'} ${res.checks.siteDesktop.message}`);
     console.log(`   ├─ Print Original Mob:  ${res.checks.siteMobile.passed ? '✓' : '✗'} ${res.checks.siteMobile.message}`);
     console.log(`   ├─ Redesign Desk:       ${res.checks.redesignDesktop.passed ? '✓' : '✗'} ${res.checks.redesignDesktop.message}`);
@@ -177,12 +196,70 @@ async function main() {
     if (!res.allPassed) totalFailed++;
   }
 
+  // 7. AUDITORIA ANTI-CLONE (Diversidade Visual no Batch)
+  console.log('='.repeat(70));
+  console.log('  🎨 AUDITORIA ANTI-CLONE & DIVERSIDADE VISUAL DO LOTE');
+  console.log('='.repeat(70));
+  
+  const heroImagesMap = new Map<string, string[]>();
+  const variantFingerprints = new Map<string, string[]>();
+
+  for (const slug of targetSlugs) {
+    const tsFile = path.join(dataDir, `${slug}.ts`);
+    if (fs.existsSync(tsFile)) {
+      try {
+        const fileUrl = 'file:///' + tsFile.replace(/\\/g, '/');
+        const mod = await import(fileUrl);
+        const pages = mod.default?.pages || [];
+        const sections = pages[0]?.sections || [];
+        
+        // Coleta imagem de Hero
+        const heroSec = sections.find((s: any) => s.type === 'hero');
+        const heroImg = heroSec?.content?.imageUrl;
+        if (heroImg) {
+          if (!heroImagesMap.has(heroImg)) heroImagesMap.set(heroImg, []);
+          heroImagesMap.get(heroImg)!.push(slug);
+        }
+
+        // Coleta variantes de seções
+        const fp = sections.map((s: any) => `${s.type}:${s.variant}`).join(' -> ');
+        if (!variantFingerprints.has(fp)) variantFingerprints.set(fp, []);
+        variantFingerprints.get(fp)!.push(slug);
+      } catch {}
+    }
+  }
+
+  let cloneViolations = 0;
+  for (const [img, slugs] of heroImagesMap.entries()) {
+    if (slugs.length > 1) {
+      cloneViolations++;
+      console.error(`❌ [CLONE DETECTADO] Mesma imagem de Hero repetida em múltiplos leads:`);
+      console.error(`   Imagem: ${img}`);
+      console.error(`   Leads: ${slugs.join(', ')}`);
+    }
+  }
+
+  for (const [fp, slugs] of variantFingerprints.entries()) {
+    if (slugs.length > 2) {
+      cloneViolations++;
+      console.error(`❌ [MONOCULTURA DETECTADA] Estrutura de seções 100% idêntica em ${slugs.length} leads:`);
+      console.error(`   Estrutura: ${fp}`);
+      console.error(`   Leads: ${slugs.join(', ')}`);
+    }
+  }
+
+  if (cloneViolations === 0) {
+    console.log('✅ Diversidade visual confirmada: nenhuma imagem repetida e variantes diversificadas.');
+  } else {
+    totalFailed += cloneViolations;
+  }
+
   console.log('='.repeat(70));
   if (totalFailed > 0) {
-    console.error(`❌ FALHA: ${totalFailed} lead(s) não atendem aos critérios mínimos de entrega.`);
+    console.error(`❌ FALHA: ${totalFailed} problema(s) detectados nos critérios de handoff.`);
     process.exit(1);
   } else {
-    console.log('🎉 SUCESSO: Todos os leads avaliados cumprem 100% dos requisitos de handoff!');
+    console.log('🎉 SUCESSO: Todos os leads cumprem 100% dos requisitos de handoff e diversidade!');
     process.exit(0);
   }
 }

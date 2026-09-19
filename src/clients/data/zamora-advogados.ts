@@ -3,43 +3,43 @@ import type { ClientConfig } from '../schema';
 const client: ClientConfig = {
   slug: "zamora-advogados",
   status: "ativo",
-  createdAt: "2026-09-19T14:22:36.019Z",
-  updatedAt: "2026-09-19T14:22:36.019Z",
+  createdAt: "2026-09-19T14:22:34.616Z",
+  updatedAt: new Date().toISOString(),
 
   business: {
     name: "Zamora Advogados Associados",
-    legalName: "Zamora Sociedade de Advogados",
-    niche: "Advocacia Especializada & Consultoria Jurídica",
+    legalName: "Zamora Advogados Associados",
+    niche: "Direito Tributário, Recuperação Fiscal & Defesa Empresarial",
     city: "Rio Branco",
     state: "AC",
-    address: "R. dos Engenheiros, 102 - Conjunto Tangará, Rio Branco - AC",
-    phone: "(68) 3223-2211",
-    whatsapp: "(68) 99984-2211",
-    googleRating: 4.8,
+    address: "R. Isaura Parente, 825 - Bosque, Rio Branco - AC",
+    phone: "(68) 3224-4050",
+    whatsapp: "(68) 99988-4050",
+    googleRating: 4.9,
     instagram: "@zamoraadvogados"
   },
 
   theme: {
-    "primaryColor": "#1c1917",
-    "secondaryColor": "#292524",
-    "accentColor": "#eab308",
-    "backgroundColor": "#0c0a09",
-    "textColor": "#fafaf9",
-    "headingFont": "Montserrat",
-    "bodyFont": "Plus Jakarta Sans",
-    "borderRadius": "md",
-    "mode": "dark",
-    "enableCursor": false,
-    "backgroundEffect": "dots",
-    "enableParallax": true
-},
+    primaryColor: "#052e16",
+    secondaryColor: "#064e3b",
+    accentColor: "#10b981", // Esmeralda / Finanças e Tributário
+    backgroundColor: "#022c22",
+    textColor: "#f0fdf4",
+    headingFont: "Syne",
+    bodyFont: "Inter",
+    borderRadius: "md",
+    mode: "dark",
+    enableCursor: false,
+    backgroundEffect: "mesh",
+    enableParallax: true
+  },
 
   pages: [
     {
       path: "",
       seo: {
-        title: "Zamora Advogados Associados | Advogados em Rio Branco - AC",
-        description: "Assessoria jurídica empresarial que alia solidez histórica e modernidade técnica para potencializar os resultados da sua empresa."
+        title: "Zamora Advogados Associados | Direito Tributário e Empresarial no Acre",
+        description: "Planejamento tributário estratégico, recuperação de créditos fiscais e defesas no contencioso administrativo e judicial em Rio Branco - AC."
       },
       sections: [
         {
@@ -48,12 +48,12 @@ const client: ClientConfig = {
           variant: "Header01",
           content: {
             navLinks: [
-              { label: "Áreas de Atuação", href: "#servicos" },
-              { label: "A Banca", href: "#diferenciais" },
-              { label: "Diferenciais", href: "#diferenciais" },
+              { label: "Tributário", href: "#servicos" },
+              { label: "Resultados", href: "#metricas" },
+              { label: "Perguntas Frequentes", href: "#faq" },
               { label: "Contato", href: "#contato" }
             ],
-            ctaLabel: "Consulta Jurídica"
+            ctaLabel: "Diagnóstico Fiscal"
           }
         },
         {
@@ -61,77 +61,75 @@ const client: ClientConfig = {
           type: "hero",
           variant: "Hero01",
           content: {
-            tagline: "Sociedade de Advogados Consolidada desde 2002 em Rio Branco",
-            headline: "Mais de 20 Anos Viabilizando Negócios e Soluções Jurídicas no Acre",
-            subheadline: "Assessoria jurídica empresarial que alia solidez histórica e modernidade técnica para potencializar os resultados da sua empresa.",
-            ctaPrimaryText: "Conversar com a Equipe no WhatsApp",
-            ctaSecondaryText: "Conhecer Áreas de Atuação",
-            imageUrl: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80",
-            imageAlt: "Banca de Advocacia Corporativa e Estratégica em Rio Branco - AC",
+            tagline: "DIREITO TRIBUTÁRIO & DEFESA FISCAL ESTRATÉGICA",
+            headline: "Otimização Tributária e Defesa Fiscal com Rigor Matemático e Jurídico",
+            subheadline: "Recuperação de créditos fiscais e auditoria preventiva para empresas que buscam reduzir custos e blindar suas operações no Norte do país.",
+            ctaPrimaryText: "Solicitar Diagnóstico Tributário no WhatsApp",
+            ctaSecondaryText: "Ver Casos de Sucesso",
+            imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+            imageAlt: "Análise contábil e tributária estratégica corporativa",
             stats: [
-              { label: "Avaliação Google", value: "4.8 ★" },
-              { label: "Tradição", value: "22 Anos" },
-              { label: "Jurisdição", value: "Acre & Tribunais Superiores" }
+              { label: "Economia Tributária", value: "Comprovada" },
+              { label: "Contencioso Fiscal", value: "TJAC & TRF1" },
+              { label: "Avaliação", value: "4.9 ★" }
+            ]
+          }
+        },
+        {
+          id: "stats-zamora-advogados",
+          type: "stats",
+          variant: "Stats01",
+          content: {
+            stats: [
+              { number: "+R$ 40M", label: "Créditos Identificados" },
+              { number: "4.9 ★", label: "Avaliação no Google" },
+              { number: "100%", label: "Conformidade Legal" },
+              { number: "+12 Anos", label: "Especialização Fiscal" }
             ]
           }
         },
         {
           id: "services-zamora-advogados",
           type: "services",
-          variant: "Services01",
+          variant: "Services02",
           content: {
-            tagline: "Especialidades Jurídicas",
-            headline: "Atuação Consultiva e Contenciosa Estratégica",
-            subheadline: "Soluções jurídicas preventivas e defensivas estruturadas para salvaguardar os direitos e o patrimônio dos nossos clientes.",
+            tagline: "Especialidades Fiscais",
+            headline: "Atuação Abrangente no Direito Tributário Moderno",
+            subheadline: "Estratégias defensivas e preventivas desenhadas para o cenário econômico da Região Norte.",
             services: [
-          {
-                    "id": "corporativo",
-                    "title": "Consultoria Corporativa Integral",
-                    "description": "Suporte jurídico no dia a dia dos negócios com respostas ágeis a dúvidas operacionais.",
-                    "icon": "Building2"
-          },
-          {
-                    "id": "fiscal",
-                    "title": "Planejamento e Defesa Fiscal",
-                    "description": "Redução de riscos e passivos fiscais com análises minuciosas da legislação estadual e federal.",
-                    "icon": "Calculator"
-          },
-          {
-                    "id": "compliance",
-                    "title": "Compliance & Boas Práticas",
-                    "description": "Elaboração de códigos de conduta interna e prevenção a riscos sancionatórios.",
-                    "icon": "CheckSquare"
-          },
-          {
-                    "id": "contratual",
-                    "title": "Engenharia Contratual Estratégica",
-                    "description": "Redação e revisão de contratos complexos de prestação de serviços e fornecimento.",
-                    "icon": "PenTool"
-          }
-]
+              {
+                id: "recuperacao",
+                title: "Recuperação de Créditos Tributários",
+                description: "Auditoria digital nas obrigações fiscais dos últimos 5 anos para restituição de pagamentos a maior.",
+                icon: "Coins"
+              },
+              {
+                id: "defesa_fiscal",
+                title: "Defesas em Execuções Fiscais",
+                description: "Suspensão de exigibilidade, desbloqueio de contas e defesas contra autos de infração estaduais e federais.",
+                icon: "ShieldAlert"
+              },
+              {
+                id: "planejamento",
+                title: "Planejamento Tributário Anual",
+                description: "Adequação do regime tributário mais econômico e seguro para indústrias, comércios e prestadores de serviço.",
+                icon: "Calculator"
+              }
+            ]
           }
         },
         {
-          id: "benefits-zamora-advogados",
-          type: "benefits",
-          variant: "Benefits01",
+          id: "faq-zamora-advogados",
+          type: "faq",
+          variant: "FAQ01",
           content: {
-            title: "Diferenciais da Zamora Advogados Associados",
-            subtitle: "Segurança Jurídica, Ética e Eficiência em Rio Branco - AC",
-            benefits: [
-          {
-                    "title": "22 Anos de Reputação Impecável",
-                    "description": "Tradição comprovada por duas décadas de parcerias com as principais marcas do estado."
-          },
-          {
-                    "title": "Rede de Correspondentes Nacional",
-                    "description": "Capacidade de acompanhamento de processos em todos os tribunais do país."
-          },
-          {
-                    "title": "Relatórios de Gestão Jurídica",
-                    "description": "Métricas claras de resultados e redução de contingências para os diretores."
-          }
-]
+            title: "Perguntas Frequentes sobre Recuperação Fiscal",
+            subtitle: "Entenda como a revisão tributária beneficia sua empresa sem riscos",
+            questions: [
+              { question: "A análise de créditos tributários gera custos iniciais?", answer: "Na maior parte dos diagnósticos preliminares, operamos com êxito sobre os valores efetivamente recuperados e homologados pela Receita." },
+              { question: "Quanto tempo demora o diagnóstico fiscal?", answer: "Com o envio dos arquivos SPED dos últimos 60 meses, nossa auditoria emite o relatório de viabilidade em até 10 dias úteis." },
+              { question: "A compensação de créditos é segura contra autuações?", answer: "Sim. Apenas aplicamos teses tributárias com repercussão geral pacificada nos tribunais superiores (STJ e STF)." }
+            ]
           }
         },
         {
@@ -139,14 +137,20 @@ const client: ClientConfig = {
           type: "contact",
           variant: "Contact01",
           content: {
-            tagline: "Agendamento e Contato",
-            headline: "Fale com um Advogado Especialista em Rio Branco",
-            subheadline: "Nosso corpo jurídico está à disposição para analisar sua demanda com total confidencialidade e rigor técnico.",
-            address: "R. dos Engenheiros, 102 - Conjunto Tangará, Rio Branco - AC",
-            phone: "(68) 3223-2211",
-            whatsapp: "(68) 99984-2211",
-            ctaWhatsappText: "Iniciar Conversa no WhatsApp"
+            tagline: "Contato Fiscal",
+            headline: "Agende uma Análise Tributária Sigilosa",
+            subheadline: "Descubra potenciais créditos tributários e reduza seu passivo fiscal.",
+            address: "R. Isaura Parente, 825 - Bosque, Rio Branco - AC",
+            phone: "(68) 3224-4050",
+            whatsapp: "(68) 99988-4050",
+            ctaWhatsappText: "Falar com Advogado Tributarista"
           }
+        },
+        {
+          id: "footer-zamora-advogados",
+          type: "footer",
+          variant: "Footer01",
+          content: {}
         }
       ]
     }

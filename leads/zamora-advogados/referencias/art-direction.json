@@ -1,0 +1,83 @@
+{
+  "slug": "zamora-advogados",
+  "name": "Zamora Advogados Associados",
+  "niche": "Direito Corporativo, Tributário & Trabalhista Patronal (desde 2002)",
+  "aesthetic_concept": "Legaltech & Consultoria Tributária de Alta Performance",
+  "consulted_design_systems": [
+    "axion-ai.aura.build",
+    "pulsedesk-saas.aura.build"
+  ],
+  "theme_tokens": {
+    "primaryColor": "#052e16",
+    "secondaryColor": "#064e3b",
+    "accentColor": "#10b981",
+    "backgroundColor": "#022c22",
+    "textColor": "#f0fdf4",
+    "headingFont": "Syne",
+    "bodyFont": "Inter",
+    "borderRadius": "md",
+    "mode": "dark",
+    "backgroundEffect": "mesh"
+  },
+  "hero_specification": {
+    "variant": "Hero01",
+    "badge": "DIREITO TRIBUTÁRIO & DEFESA FISCAL ESTRATÉGICA",
+    "headline": "Otimização Tributária e Defesa Fiscal com Rigor Matemático e Jurídico",
+    "subheadline": "Recuperação de créditos fiscais e auditoria preventiva para empresas que buscam reduzir custos e blindar suas operações no Norte do país.",
+    "primaryCta": "Solicitar Diagnóstico Tributário",
+    "secondaryCta": "Ver Casos de Sucesso",
+    "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Análise contábil e tributária estratégica corporativa",
+    "stats": [
+      {
+        "label": "Economia Tributária",
+        "value": "Comprovada"
+      },
+      {
+        "label": "Contencioso Fiscal",
+        "value": "TJAC & TRF1"
+      },
+      {
+        "label": "Avaliação",
+        "value": "4.9 ★"
+      }
+    ]
+  },
+  "section_flow": [
+    {
+      "type": "header",
+      "variant": "Header01"
+    },
+    {
+      "type": "hero",
+      "variant": "Hero01"
+    },
+    {
+      "type": "stats",
+      "variant": "Stats01"
+    },
+    {
+      "type": "services",
+      "variant": "Services02"
+    },
+    {
+      "type": "faq",
+      "variant": "FAQ01"
+    },
+    {
+      "type": "contact",
+      "variant": "Contact01"
+    },
+    {
+      "type": "footer",
+      "variant": "Footer01"
+    }
+  ],
+  "first_fold_rules": {
+    "glowEffect": true,
+    "badgePill": true,
+    "whatsappPulse": true,
+    "distinctiveTypography": "Syne / Inter"
+  },
+  "created_at": "2026-09-19T15:47:21.782Z"
+}
