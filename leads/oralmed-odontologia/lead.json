@@ -1,0 +1,68 @@
+{
+  "slug": "oralmed-odontologia",
+  "name": "Oralmed Centro Odontológico",
+  "segment": "Clínica Multidisciplinar & Implantes (30 anos de tradição)",
+  "city": "Londrina - PR",
+  "address": "R. Pará, 1122 - Centro, Londrina - PR",
+  "website": "https://oralmed.com.br/",
+  "instagram": "@oralmedlondrina",
+  "phone": "(43) 3324-4000",
+  "whatsapp": "(43) 99144-5000",
+  "macro_region": "Sul",
+  "search_niche": "Dentista / Clínicas Odontológicas",
+  "status": "pronto_para_aprovacao_humana",
+  "ranking": 10,
+  "scores": {
+    "business": 9.1,
+    "design": 3.5,
+    "mobile": 3.1,
+    "ux": 3.7,
+    "conversion": 3.2,
+    "confidence": 9.1,
+    "performance": 3.3,
+    "seo": 5,
+    "website_overall": 3.3,
+    "opportunity": 97,
+    "visual_quality": 6,
+    "redesign_opportunity": 65,
+    "conversion_chance": 83
+  },
+  "pagespeed": {
+    "mobile_performance": 33,
+    "desktop_performance": 62,
+    "lcp": "5.2s",
+    "fcp": "3.1s",
+    "tbt": "420ms",
+    "cls": "0.22",
+    "speed_index": "4.8s"
+  },
+  "top_problems": [
+    "Tempo de carregamento no celular elevado (33/100) prejudicando pacientes que buscam agendamento urgente",
+    "Ausência de botão WhatsApp flutuante com confirmação direta de consulta na primeira dobra",
+    "Apresentação das especialidades sem galeria de casos clínicos em alta resolução"
+  ],
+  "main_gap": "Clínica conceituada e de alto padrão em Londrina - PR, porém com site mobile defasado que desvaloriza a percepção dos tratamentos de alto ticket.",
+  "commercial_hook": "Pacientes de implantes e facetas decidem pelo acolhimento visual do site no celular; a lentidão e falta de CTA imediato fazem o paciente buscar a clínica concorrente no Google.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-19T00:51:18.551Z",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/oralmed-odontologia/visual/visual-handoff.json",
+  "visual_structure": "leads/oralmed-odontologia/visual/site-structure.md",
+  "redesign": {
+    "completed_at": "2026-09-19T00:53:12.669Z",
+    "platform_preview_url": "/preview/oralmed-odontologia",
+    "platform_production_url": "/oralmed-odontologia",
+    "config_path": "src/clients/data/oralmed-odontologia.ts"
+  },
+  "commercial": {
+    "status": "pronto_para_aprovacao_humana",
+    "generated_at": "2026-09-19T00:53:24.628Z",
+    "dossier_path": "leads/oralmed-odontologia/commercial/",
+    "summary": "leads/oralmed-odontologia/commercial/commercial-summary.md",
+    "email": "leads/oralmed-odontologia/commercial/email.md",
+    "whatsapp": "leads/oralmed-odontologia/commercial/whatsapp.md"
+  }
+}

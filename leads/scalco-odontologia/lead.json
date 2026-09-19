@@ -1,0 +1,54 @@
+{
+  "slug": "scalco-odontologia",
+  "name": "Scalco Odontologia Estética",
+  "segment": "Facetas de Porcelana, Lentes & Clareamento Dental",
+  "city": "Londrina - PR",
+  "address": "Av. Ayrton Senna da Silva, 550 - Gleba Palhano, Londrina - PR",
+  "website": "https://scalcoodontologia.com.br/",
+  "instagram": "@scalcoodontologia",
+  "phone": "(43) 3338-7070",
+  "whatsapp": "(43) 99988-7766",
+  "macro_region": "Sul",
+  "search_niche": "Dentista / Clínicas Odontológicas",
+  "status": "aguardando_aprovacao",
+  "ranking": 11,
+  "scores": {
+    "business": 8.9,
+    "design": 4.2,
+    "mobile": 3.5,
+    "ux": 4.4,
+    "conversion": 3.2,
+    "confidence": 8.9,
+    "performance": 3.5,
+    "seo": 5,
+    "website_overall": 3.6,
+    "opportunity": 92,
+    "visual_quality": 6.4,
+    "redesign_opportunity": 61,
+    "conversion_chance": 79
+  },
+  "pagespeed": {
+    "mobile_performance": 35,
+    "desktop_performance": 69,
+    "lcp": "5.2s",
+    "fcp": "3.1s",
+    "tbt": "420ms",
+    "cls": "0.22",
+    "speed_index": "4.8s"
+  },
+  "top_problems": [
+    "Tempo de carregamento no celular elevado (35/100) prejudicando pacientes que buscam agendamento urgente",
+    "Ausência de botão WhatsApp flutuante com confirmação direta de consulta na primeira dobra",
+    "Apresentação das especialidades sem galeria de casos clínicos em alta resolução"
+  ],
+  "main_gap": "Clínica conceituada e de alto padrão em Londrina - PR, porém com site mobile defasado que desvaloriza a percepção dos tratamentos de alto ticket.",
+  "commercial_hook": "Pacientes de implantes e facetas decidem pelo acolhimento visual do site no celular; a lentidão e falta de CTA imediato fazem o paciente buscar a clínica concorrente no Google.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-19T00:51:18.554Z",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/scalco-odontologia/visual/visual-handoff.json",
+  "visual_structure": "leads/scalco-odontologia/visual/site-structure.md"
+}

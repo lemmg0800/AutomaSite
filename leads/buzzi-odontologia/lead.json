@@ -1,0 +1,54 @@
+{
+  "slug": "buzzi-odontologia",
+  "name": "Buzzi Odontologia",
+  "segment": "Estética Dental, Ortodontia & Implantes",
+  "city": "Curitiba - PR",
+  "address": "Av. Cândido de Abreu, 526 - Centro Cívico, Curitiba - PR",
+  "website": "https://buzziodontologia.com.br/",
+  "instagram": "@buzziodontologia",
+  "phone": "(41) 3023-4554",
+  "whatsapp": "(41) 99123-4567",
+  "macro_region": "Sul",
+  "search_niche": "Dentista / Clínicas Odontológicas",
+  "status": "aguardando_aprovacao",
+  "ranking": 2,
+  "scores": {
+    "business": 8.6,
+    "design": 4.2,
+    "mobile": 3.6,
+    "ux": 4.4,
+    "conversion": 3.2,
+    "confidence": 8.6,
+    "performance": 4.2,
+    "seo": 5,
+    "website_overall": 3.7,
+    "opportunity": 87,
+    "visual_quality": 6.3,
+    "redesign_opportunity": 58,
+    "conversion_chance": 75
+  },
+  "pagespeed": {
+    "mobile_performance": 42,
+    "desktop_performance": 74,
+    "lcp": "5.2s",
+    "fcp": "3.1s",
+    "tbt": "420ms",
+    "cls": "0.22",
+    "speed_index": "4.8s"
+  },
+  "top_problems": [
+    "Tempo de carregamento no celular elevado (42/100) prejudicando pacientes que buscam agendamento urgente",
+    "Ausência de botão WhatsApp flutuante com confirmação direta de consulta na primeira dobra",
+    "Apresentação das especialidades sem galeria de casos clínicos em alta resolução"
+  ],
+  "main_gap": "Clínica conceituada e de alto padrão em Curitiba - PR, porém com site mobile defasado que desvaloriza a percepção dos tratamentos de alto ticket.",
+  "commercial_hook": "Pacientes de implantes e facetas decidem pelo acolhimento visual do site no celular; a lentidão e falta de CTA imediato fazem o paciente buscar a clínica concorrente no Google.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-19T00:51:18.532Z",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/buzzi-odontologia/visual/visual-handoff.json",
+  "visual_structure": "leads/buzzi-odontologia/visual/site-structure.md"
+}

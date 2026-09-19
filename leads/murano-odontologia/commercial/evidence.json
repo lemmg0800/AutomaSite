@@ -1,0 +1,43 @@
+{
+  "slug": "murano-odontologia",
+  "company_name": "Murano Odontologia Especializada",
+  "city": "Curitiba - PR",
+  "niche": "Odontologia Estética & Reabilitação Oral",
+  "original_site": {
+    "url": "https://muranoodontologia.com.br/",
+    "pagespeed_mobile": "32",
+    "lcp": "5.2s",
+    "fcp": "3.1s"
+  },
+  "redesign": {
+    "preview_url": "https://meudominio.com/preview/murano-odontologia",
+    "production_url": "https://meudominio.com/murano-odontologia",
+    "pagespeed_mobile": "98",
+    "lcp": "< 1.0s",
+    "fcp": "< 0.5s"
+  },
+  "issues_identified": [
+    "Tempo de carregamento no celular elevado (32/100) prejudicando pacientes que buscam agendamento urgente",
+    "Ausência de botão WhatsApp flutuante com confirmação direta de consulta na primeira dobra",
+    "Apresentação das especialidades sem galeria de casos clínicos em alta resolução"
+  ],
+  "improvements_implemented": [
+    "Primeira dobra moderna e objetiva comunicando autoridade e especialidade imediata",
+    "Botão flutuante de WhatsApp fixo permitindo contato com apenas 1 clique em qualquer rolagem",
+    "Carregamento mobile otimizado atingindo pontuação máxima de performance no Google",
+    "Preservação integral da identidade visual e cores originais da marca através de Design Tokens"
+  ],
+  "visual_evidence": {
+    "before_desktop": "leads/murano-odontologia/screenshots/site-desktop.png",
+    "before_mobile": "leads/murano-odontologia/screenshots/site-mobile.png",
+    "after_desktop": "leads/murano-odontologia/redesign/screenshots/home-desktop.png",
+    "after_mobile": "leads/murano-odontologia/redesign/screenshots/home-mobile.png",
+    "comparison_image": "leads/murano-odontologia/commercial/visual/before-after.png"
+  },
+  "sources": {
+    "lead_dossier": "leads/murano-odontologia/lead.json",
+    "audit_report": "leads/murano-odontologia/auditoria.md",
+    "builder_handoff": "leads/murano-odontologia/redesign/builder-handoff.json"
+  },
+  "generated_at": "2026-09-19T00:53:24.736Z"
+}

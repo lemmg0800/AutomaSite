@@ -1,0 +1,68 @@
+{
+  "slug": "murano-odontologia",
+  "name": "Murano Odontologia Especializada",
+  "segment": "Odontologia Estética & Reabilitação Oral",
+  "city": "Curitiba - PR",
+  "address": "R. Desembargador Motta, 1499 - Batel, Curitiba - PR",
+  "website": "https://muranoodontologia.com.br/",
+  "instagram": "@muranoodontologia",
+  "phone": "(41) 3342-9090",
+  "whatsapp": "(41) 98765-4321",
+  "macro_region": "Sul",
+  "search_niche": "Dentista / Clínicas Odontológicas",
+  "status": "pronto_para_aprovacao_humana",
+  "ranking": 3,
+  "scores": {
+    "business": 9,
+    "design": 3.6,
+    "mobile": 3.2,
+    "ux": 3.8000000000000003,
+    "conversion": 3.2,
+    "confidence": 9,
+    "performance": 3.2,
+    "seo": 5,
+    "website_overall": 3.3,
+    "opportunity": 96,
+    "visual_quality": 6.1,
+    "redesign_opportunity": 64,
+    "conversion_chance": 82
+  },
+  "pagespeed": {
+    "mobile_performance": 32,
+    "desktop_performance": 64,
+    "lcp": "5.2s",
+    "fcp": "3.1s",
+    "tbt": "420ms",
+    "cls": "0.22",
+    "speed_index": "4.8s"
+  },
+  "top_problems": [
+    "Tempo de carregamento no celular elevado (32/100) prejudicando pacientes que buscam agendamento urgente",
+    "Ausência de botão WhatsApp flutuante com confirmação direta de consulta na primeira dobra",
+    "Apresentação das especialidades sem galeria de casos clínicos em alta resolução"
+  ],
+  "main_gap": "Clínica conceituada e de alto padrão em Curitiba - PR, porém com site mobile defasado que desvaloriza a percepção dos tratamentos de alto ticket.",
+  "commercial_hook": "Pacientes de implantes e facetas decidem pelo acolhimento visual do site no celular; a lentidão e falta de CTA imediato fazem o paciente buscar a clínica concorrente no Google.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-19T00:51:18.534Z",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/murano-odontologia/visual/visual-handoff.json",
+  "visual_structure": "leads/murano-odontologia/visual/site-structure.md",
+  "redesign": {
+    "completed_at": "2026-09-19T00:53:12.815Z",
+    "platform_preview_url": "/preview/murano-odontologia",
+    "platform_production_url": "/murano-odontologia",
+    "config_path": "src/clients/data/murano-odontologia.ts"
+  },
+  "commercial": {
+    "status": "pronto_para_aprovacao_humana",
+    "generated_at": "2026-09-19T00:53:24.743Z",
+    "dossier_path": "leads/murano-odontologia/commercial/",
+    "summary": "leads/murano-odontologia/commercial/commercial-summary.md",
+    "email": "leads/murano-odontologia/commercial/email.md",
+    "whatsapp": "leads/murano-odontologia/commercial/whatsapp.md"
+  }
+}

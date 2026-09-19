@@ -1,0 +1,54 @@
+{
+  "slug": "clinica-premium-curitiba",
+  "name": "Clínica Premium Odontologia",
+  "segment": "Prótese Protocolo & Lentes em Resina e Porcelana",
+  "city": "Curitiba - PR",
+  "address": "R. Comendador Araújo, 510 - Batel, Curitiba - PR",
+  "website": "https://clinicapremiumcuritiba.com.br/",
+  "instagram": "@premiumodontocwb",
+  "phone": "(41) 3044-5500",
+  "whatsapp": "(41) 99655-4433",
+  "macro_region": "Sul",
+  "search_niche": "Dentista / Clínicas Odontológicas",
+  "status": "aguardando_aprovacao",
+  "ranking": 8,
+  "scores": {
+    "business": 8.9,
+    "design": 4.3,
+    "mobile": 3.7,
+    "ux": 4.5,
+    "conversion": 3.2,
+    "confidence": 8.9,
+    "performance": 3.8,
+    "seo": 5,
+    "website_overall": 3.7,
+    "opportunity": 91,
+    "visual_quality": 6.4,
+    "redesign_opportunity": 60,
+    "conversion_chance": 78
+  },
+  "pagespeed": {
+    "mobile_performance": 38,
+    "desktop_performance": 70,
+    "lcp": "5.2s",
+    "fcp": "3.1s",
+    "tbt": "420ms",
+    "cls": "0.22",
+    "speed_index": "4.8s"
+  },
+  "top_problems": [
+    "Tempo de carregamento no celular elevado (38/100) prejudicando pacientes que buscam agendamento urgente",
+    "Ausência de botão WhatsApp flutuante com confirmação direta de consulta na primeira dobra",
+    "Apresentação das especialidades sem galeria de casos clínicos em alta resolução"
+  ],
+  "main_gap": "Clínica conceituada e de alto padrão em Curitiba - PR, porém com site mobile defasado que desvaloriza a percepção dos tratamentos de alto ticket.",
+  "commercial_hook": "Pacientes de implantes e facetas decidem pelo acolhimento visual do site no celular; a lentidão e falta de CTA imediato fazem o paciente buscar a clínica concorrente no Google.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-19T00:51:18.547Z",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/clinica-premium-curitiba/visual/visual-handoff.json",
+  "visual_structure": "leads/clinica-premium-curitiba/visual/site-structure.md"
+}

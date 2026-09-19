@@ -15,6 +15,10 @@ export interface LeadDossier {
   whatsappPointsMd: string | null;
   objectionsMd: string | null;
   evidenceJson: any | null;
+  visualHandoff?: any | null;
+  visualValidation?: any | null;
+  siteStructureMd?: string | null;
+  visualComparisonMd?: string | null;
   assets: {
     beforeDesktop: string | null;
     beforeMobile: string | null;
@@ -78,9 +82,13 @@ export function getLeadDossier(slug: string): LeadDossier | null {
       whatsappPointsMd: readFileSafely(path.join(leadDir, 'commercial/whatsapp-points.md')),
       objectionsMd: readFileSafely(path.join(leadDir, 'commercial/objections.md')),
       evidenceJson: readJsonSafely(path.join(leadDir, 'commercial/evidence.json')),
+      visualHandoff: readJsonSafely(path.join(leadDir, 'visual/visual-handoff.json')),
+      visualValidation: readJsonSafely(path.join(leadDir, 'visual/visual-validation.json')),
+      siteStructureMd: readFileSafely(path.join(leadDir, 'visual/site-structure.md')),
+      visualComparisonMd: readFileSafely(path.join(leadDir, 'visual/visual-comparison.md')),
       assets: {
-        beforeDesktop: checkAsset('screenshots/site-desktop.png'),
-        beforeMobile: checkAsset('screenshots/site-mobile.png'),
+        beforeDesktop: checkAsset('visual/home-desktop.png') || checkAsset('screenshots/site-desktop.png'),
+        beforeMobile: checkAsset('visual/home-mobile.png') || checkAsset('screenshots/site-mobile.png'),
         afterDesktop: checkAsset('redesign/screenshots/home-desktop.png'),
         afterMobile: checkAsset('redesign/screenshots/home-mobile.png'),
         comparisonShot: checkAsset('commercial/visual/before-after.png')

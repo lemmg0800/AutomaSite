@@ -1,0 +1,54 @@
+{
+  "slug": "realiza-odontologia",
+  "name": "Realiza Odontologia & Implantes",
+  "segment": "Reabilitação Oral & Cirurgias Guiadas por Computador",
+  "city": "Londrina - PR",
+  "address": "R. Espírito Santo, 1425 - Centro, Londrina - PR",
+  "website": "https://realizaodontologia.com.br/",
+  "instagram": "@realizaodontolondrina",
+  "phone": "(43) 3322-1212",
+  "whatsapp": "(43) 99633-1212",
+  "macro_region": "Sul",
+  "search_niche": "Dentista / Clínicas Odontológicas",
+  "status": "aguardando_aprovacao",
+  "ranking": 14,
+  "scores": {
+    "business": 8.6,
+    "design": 3.6,
+    "mobile": 3.2,
+    "ux": 3.8000000000000003,
+    "conversion": 3.2,
+    "confidence": 8.6,
+    "performance": 3.6,
+    "seo": 5,
+    "website_overall": 3.3,
+    "opportunity": 91,
+    "visual_quality": 6,
+    "redesign_opportunity": 61,
+    "conversion_chance": 78
+  },
+  "pagespeed": {
+    "mobile_performance": 36,
+    "desktop_performance": 67,
+    "lcp": "5.2s",
+    "fcp": "3.1s",
+    "tbt": "420ms",
+    "cls": "0.22",
+    "speed_index": "4.8s"
+  },
+  "top_problems": [
+    "Tempo de carregamento no celular elevado (36/100) prejudicando pacientes que buscam agendamento urgente",
+    "Ausência de botão WhatsApp flutuante com confirmação direta de consulta na primeira dobra",
+    "Apresentação das especialidades sem galeria de casos clínicos em alta resolução"
+  ],
+  "main_gap": "Clínica conceituada e de alto padrão em Londrina - PR, porém com site mobile defasado que desvaloriza a percepção dos tratamentos de alto ticket.",
+  "commercial_hook": "Pacientes de implantes e facetas decidem pelo acolhimento visual do site no celular; a lentidão e falta de CTA imediato fazem o paciente buscar a clínica concorrente no Google.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-19T00:51:18.563Z",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/realiza-odontologia/visual/visual-handoff.json",
+  "visual_structure": "leads/realiza-odontologia/visual/site-structure.md"
+}
