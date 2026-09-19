@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "description": "Configuração central de modelos de IA para os agentes do pipeline",
+  "policy": "Apenas o agente responsável por recriar o site (Builder) utiliza o modelo Gemini 3.8 High. Os demais agentes utilizam o modelo Gemini 3.6 High.",
+  "models": {
+    "gemini_3_8_high": {
+      "id": "gemini-3.8-high",
+      "alias": "3.8-high",
+      "displayName": "Gemini 3.8 High",
+      "provider": "google",
+      "tier": "high_reasoning",
+      "bestFor": "Geração de código frontend complexo, arquitetura de componentes, assimilação de design systems e personalização visual sob medida."
+    },
+    "gemini_3_6_high": {
+      "id": "gemini-3.6-high",
+      "alias": "3.6-high",
+      "displayName": "Gemini 3.6 High",
+      "provider": "google",
+      "tier": "high_speed",
+      "bestFor": "Prospecção investigativa, auditoria técnica/visual, diagnóstico e copywriting comercial humanizado."
+    }
+  },
+  "agents": {
+    "builder": {
+      "name": "Builder (Agente 2 — Web Designer)",
+      "file": ".agents/agents/builder/agent.md",
+      "role": "Recriar e personalizar os sites institucionais",
+      "model": "gemini-3.8-high",
+      "modelAlias": "3.8 high",
+      "temperature": 0.3,
+      "maxOutputTokens": 16384,
+      "reasoning": "high"
+    },
+    "prospector": {
+      "name": "Prospector (Agente 1 — Prospecção)",
+      "file": ".agents/agents/prospector/agent.md",
+      "role": "Mapeamento, estudo de empresas e auditoria técnica",
+      "model": "gemini-3.6-high",
+      "modelAlias": "3.6 high",
+      "temperature": 0.2,
+      "maxOutputTokens": 8192,
+      "reasoning": "high"
+    },
+    "auditor_visual": {
+      "name": "Auditor Visual (Subordinado ao Prospector)",
+      "file": ".agents/agents/prospector/auditor-visual.md",
+      "role": "Auditoria estética, baseline visual e gate check",
+      "model": "gemini-3.6-high",
+      "modelAlias": "3.6 high",
+      "temperature": 0.2,
+      "maxOutputTokens": 8192,
+      "reasoning": "high"
+    },
+    "comercial": {
+      "name": "Comercial (Agente 3 — Estrategista)",
+      "file": ".agents/agents/comercial/agent.md",
+      "role": "Dossiê comercial, emails e scripts de WhatsApp nativos",
+      "model": "gemini-3.6-high",
+      "modelAlias": "3.6 high",
+      "temperature": 0.3,
+      "maxOutputTokens": 8192,
+      "reasoning": "high"
+    }
+  }
+}
