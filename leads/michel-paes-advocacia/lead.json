@@ -1,0 +1,57 @@
+{
+  "slug": "michel-paes-advocacia",
+  "name": "Dr. Michel Paes Advocacia",
+  "legalName": "Dr. Michel Paes Advocacia",
+  "segment": "Direito Civil, Família & Sucessões e Contratos no Acre",
+  "category": "Advocacia & Consultoria Jurídica",
+  "niche": "Direito Civil, Família & Sucessões e Contratos no Acre",
+  "city": "Rio Branco - AC",
+  "state": "AC",
+  "macro_region": "Norte",
+  "website": "https://michelpaes.adv.br/",
+  "address": "Av. Getúlio Vargas, 820 - Centro, Rio Branco - AC",
+  "phone": "(68) 3224-1800",
+  "whatsapp": "(68) 99975-1800",
+  "instagram": "",
+  "status": "aguardando_aprovacao",
+  "ranking": 12,
+  "scores": {
+    "business": 8.2,
+    "design": 3.8,
+    "mobile": 3.4,
+    "ux": 4.1,
+    "conversion": 3,
+    "confidence": 8.2,
+    "performance": 4.2,
+    "seo": 5.5,
+    "website_overall": 3.4,
+    "opportunity": 84,
+    "visual_quality": 6.1,
+    "redesign_opportunity": 56,
+    "conversion_chance": 72
+  },
+  "pagespeed": {
+    "mobile_performance": 42,
+    "desktop_performance": 73,
+    "lcp": "5.6s",
+    "fcp": "3.2s",
+    "tbt": "450ms",
+    "cls": "0.24",
+    "speed_index": "5.1s"
+  },
+  "top_problems": [
+    "Carregamento mobile excessivamente lento (42/100) no 4G de Rio Branco, gerando fuga de clientes empresariais",
+    "Botão de contato com advogados especialistas inacessível na primeira dobra nos smartphones",
+    "Ausência de credenciais institucionais claras e layout sem autoridade compatível com o prestígio da banca"
+  ],
+  "main_gap": "Banca de advocacia de grande notoriedade no Acre, porém com website mobile defasado que enfraquece a conversão de novos clientes corporativos.",
+  "commercial_hook": "Empresários e famílias que buscam assessoria jurídica no Acre exigem sobriedade e agilidade no primeiro toque; o site atual demora mais de 5 segundos no celular e não transmite a sofisticação da equipe presencial.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-19T14:22:32.485Z",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/michel-paes-advocacia/visual/visual-handoff.json",
+  "visual_structure": "leads/michel-paes-advocacia/visual/site-structure.md"
+}

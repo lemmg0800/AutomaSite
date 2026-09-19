@@ -1,0 +1,16 @@
+{
+  "slug": "poersch-advogados",
+  "name": "Poersch & Poersch Advogados Associados",
+  "generated_at": "2026-09-19T14:22:34.617Z",
+  "status": "pronto_para_comercial",
+  "pagespeed": {
+    "original_mobile": 36,
+    "redesign_mobile": 98,
+    "lcp_improvement": "de 5.6s para 0.8s"
+  },
+  "design_system_applied": {
+    "palette": "Sóbria Corporativa Jurídica (Navy Blue / Ouro)",
+    "typography": "Playfair Display / Plus Jakarta Sans",
+    "first_fold_highlights": "Animações de entrada stagger, background mesh escuro nobre, badges flutuantes de avaliação 4.9★ e botão de WhatsApp em evidência com pulse"
+  }
+}

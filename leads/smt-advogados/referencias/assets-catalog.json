@@ -1,0 +1,30 @@
+{
+  "slug": "smt-advogados",
+  "name": "SMT Advogados (Sousa, Melo & Tapeocy)",
+  "cataloged_at": "2026-09-19T14:22:34.907Z",
+  "primary_assets": [
+    {
+      "type": "image",
+      "id": "fachada",
+      "path": "assets/fachada_sede_rio_branco.jpg",
+      "usage": "hero/gallery"
+    },
+    {
+      "type": "image",
+      "id": "equipe",
+      "path": "assets/equipe_juridica.jpg",
+      "usage": "about/team"
+    },
+    {
+      "type": "image",
+      "id": "socio",
+      "path": "assets/socio_titular.jpg",
+      "usage": "credentials"
+    }
+  ],
+  "design_system_references": [
+    "luxury-real-estate-22.aura.build",
+    "digital-architect.aura.build",
+    "white-medical"
+  ]
+}

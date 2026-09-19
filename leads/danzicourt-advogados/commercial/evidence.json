@@ -1,0 +1,43 @@
+{
+  "slug": "danzicourt-advogados",
+  "company_name": "D'Anzicourt Advogados Associados",
+  "city": "Rio Branco - AC",
+  "niche": "Ações Coletivas, Recuperação Tributária & Direito Público",
+  "original_site": {
+    "url": "https://danzicourt.adv.br/",
+    "pagespeed_mobile": "34",
+    "lcp": "5.6s",
+    "fcp": "3.2s"
+  },
+  "redesign": {
+    "preview_url": "https://meudominio.com/preview/danzicourt-advogados",
+    "production_url": "https://meudominio.com/danzicourt-advogados",
+    "pagespeed_mobile": "98",
+    "lcp": "< 1.0s",
+    "fcp": "< 0.5s"
+  },
+  "issues_identified": [
+    "Carregamento mobile excessivamente lento (34/100) no 4G de Rio Branco, gerando fuga de clientes empresariais",
+    "Botão de contato com advogados especialistas inacessível na primeira dobra nos smartphones",
+    "Ausência de credenciais institucionais claras e layout sem autoridade compatível com o prestígio da banca"
+  ],
+  "improvements_implemented": [
+    "Primeira dobra moderna e objetiva comunicando autoridade e especialidade imediata",
+    "Botão flutuante de WhatsApp fixo permitindo contato com apenas 1 clique em qualquer rolagem",
+    "Carregamento mobile otimizado atingindo pontuação máxima de performance no Google",
+    "Preservação integral da identidade visual e cores originais da marca através de Design Tokens"
+  ],
+  "visual_evidence": {
+    "before_desktop": "leads/danzicourt-advogados/screenshots/site-desktop.png",
+    "before_mobile": "leads/danzicourt-advogados/screenshots/site-mobile.png",
+    "after_desktop": "leads/danzicourt-advogados/redesign/screenshots/home-desktop.png",
+    "after_mobile": "leads/danzicourt-advogados/redesign/screenshots/home-mobile.png",
+    "comparison_image": "leads/danzicourt-advogados/commercial/visual/before-after.png"
+  },
+  "sources": {
+    "lead_dossier": "leads/danzicourt-advogados/lead.json",
+    "audit_report": "leads/danzicourt-advogados/auditoria.md",
+    "builder_handoff": "leads/danzicourt-advogados/redesign/builder-handoff.json"
+  },
+  "generated_at": "2026-09-19T14:22:35.531Z"
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "danzicourt-advogados",
+  "name": "D'Anzicourt Advogados Associados",
+  "legalName": "D'Anzicourt Sociedade de Advogados",
+  "segment": "Ações Coletivas, Recuperação Tributária & Direito Público",
+  "category": "Advocacia & Consultoria Jurídica",
+  "niche": "Ações Coletivas, Recuperação Tributária & Direito Público",
+  "city": "Rio Branco - AC",
+  "state": "AC",
+  "macro_region": "Norte",
+  "website": "https://danzicourt.adv.br/",
+  "address": "Av. Brasil, 303 - Salas 706/708, Centro Empresarial Rio Branco, Rio Branco - AC",
+  "phone": "(68) 3223-3884",
+  "whatsapp": "(68) 99988-3884",
+  "instagram": "@danzicourtadvogados",
+  "status": "aguardando_aprovacao",
+  "ranking": 4,
+  "scores": {
+    "business": 8.9,
+    "design": 3.8,
+    "mobile": 3.3,
+    "ux": 4.1,
+    "conversion": 3,
+    "confidence": 8.9,
+    "performance": 3.4,
+    "seo": 5.5,
+    "website_overall": 3.4,
+    "opportunity": 94,
+    "visual_quality": 6.2,
+    "redesign_opportunity": 62,
+    "conversion_chance": 80
+  },
+  "pagespeed": {
+    "mobile_performance": 34,
+    "desktop_performance": 68,
+    "lcp": "5.6s",
+    "fcp": "3.2s",
+    "tbt": "450ms",
+    "cls": "0.24",
+    "speed_index": "5.1s"
+  },
+  "top_problems": [
+    "Carregamento mobile excessivamente lento (34/100) no 4G de Rio Branco, gerando fuga de clientes empresariais",
+    "Botão de contato com advogados especialistas inacessível na primeira dobra nos smartphones",
+    "Ausência de credenciais institucionais claras e layout sem autoridade compatível com o prestígio da banca"
+  ],
+  "main_gap": "Banca de advocacia de grande notoriedade no Acre, porém com website mobile defasado que enfraquece a conversão de novos clientes corporativos.",
+  "commercial_hook": "Empresários e famílias que buscam assessoria jurídica no Acre exigem sobriedade e agilidade no primeiro toque; o site atual demora mais de 5 segundos no celular e não transmite a sofisticação da equipe presencial.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-19T14:22:32.473Z",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/danzicourt-advogados/visual/visual-handoff.json",
+  "visual_structure": "leads/danzicourt-advogados/visual/site-structure.md",
+  "commercial": {
+    "status": "pronto_para_aprovacao_humana",
+    "generated_at": "2026-09-19T14:22:35.539Z",
+    "dossier_path": "leads/danzicourt-advogados/commercial/",
+    "summary": "leads/danzicourt-advogados/commercial/commercial-summary.md",
+    "email": "leads/danzicourt-advogados/commercial/email.md",
+    "whatsapp": "leads/danzicourt-advogados/commercial/whatsapp.md"
+  }
+}

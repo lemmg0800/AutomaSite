@@ -1,0 +1,65 @@
+{
+  "slug": "zamora-advogados",
+  "name": "Zamora Advogados Associados",
+  "legalName": "Zamora Sociedade de Advogados",
+  "segment": "Direito Corporativo, Tributário & Trabalhista Patronal (desde 2002)",
+  "category": "Advocacia & Consultoria Jurídica",
+  "niche": "Direito Corporativo, Tributário & Trabalhista Patronal (desde 2002)",
+  "city": "Rio Branco - AC",
+  "state": "AC",
+  "macro_region": "Norte",
+  "website": "https://zamora.adv.br/",
+  "address": "R. dos Engenheiros, 102 - Conjunto Tangará, Rio Branco - AC",
+  "phone": "(68) 3223-2211",
+  "whatsapp": "(68) 99984-2211",
+  "instagram": "@zamoraadvogados",
+  "status": "aguardando_aprovacao",
+  "ranking": 5,
+  "scores": {
+    "business": 8.8,
+    "design": 4.3,
+    "mobile": 3.7,
+    "ux": 4.6,
+    "conversion": 3,
+    "confidence": 8.8,
+    "performance": 4.1,
+    "seo": 5.5,
+    "website_overall": 3.7,
+    "opportunity": 89,
+    "visual_quality": 6.4,
+    "redesign_opportunity": 59,
+    "conversion_chance": 77
+  },
+  "pagespeed": {
+    "mobile_performance": 41,
+    "desktop_performance": 74,
+    "lcp": "5.6s",
+    "fcp": "3.2s",
+    "tbt": "450ms",
+    "cls": "0.24",
+    "speed_index": "5.1s"
+  },
+  "top_problems": [
+    "Carregamento mobile excessivamente lento (41/100) no 4G de Rio Branco, gerando fuga de clientes empresariais",
+    "Botão de contato com advogados especialistas inacessível na primeira dobra nos smartphones",
+    "Ausência de credenciais institucionais claras e layout sem autoridade compatível com o prestígio da banca"
+  ],
+  "main_gap": "Banca de advocacia de grande notoriedade no Acre, porém com website mobile defasado que enfraquece a conversão de novos clientes corporativos.",
+  "commercial_hook": "Empresários e famílias que buscam assessoria jurídica no Acre exigem sobriedade e agilidade no primeiro toque; o site atual demora mais de 5 segundos no celular e não transmite a sofisticação da equipe presencial.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-19T14:22:32.475Z",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/zamora-advogados/visual/visual-handoff.json",
+  "visual_structure": "leads/zamora-advogados/visual/site-structure.md",
+  "commercial": {
+    "status": "pronto_para_aprovacao_humana",
+    "generated_at": "2026-09-19T14:22:36.151Z",
+    "dossier_path": "leads/zamora-advogados/commercial/",
+    "summary": "leads/zamora-advogados/commercial/commercial-summary.md",
+    "email": "leads/zamora-advogados/commercial/email.md",
+    "whatsapp": "leads/zamora-advogados/commercial/whatsapp.md"
+  }
+}

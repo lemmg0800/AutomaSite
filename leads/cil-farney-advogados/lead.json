@@ -1,0 +1,57 @@
+{
+  "slug": "cil-farney-advogados",
+  "name": "Cil Farney, Fecury e Medeiros Advogados",
+  "legalName": "Cil Farney, Fecury e Medeiros Advogados",
+  "segment": "Direito Público, Licitações & Concursos Públicos",
+  "category": "Advocacia & Consultoria Jurídica",
+  "niche": "Direito Público, Licitações & Concursos Públicos",
+  "city": "Rio Branco - AC",
+  "state": "AC",
+  "macro_region": "Norte",
+  "website": "https://cfmsociedadedeadvogados.com.br/",
+  "address": "R. Hugo Carneiro, 325 - Dom Giocondo, Rio Branco - AC",
+  "phone": "(68) 3224-4411",
+  "whatsapp": "(68) 99977-4411",
+  "instagram": "",
+  "status": "aguardando_aprovacao",
+  "ranking": 13,
+  "scores": {
+    "business": 8.1,
+    "design": 3.6,
+    "mobile": 3.2,
+    "ux": 3.9,
+    "conversion": 3,
+    "confidence": 8.1,
+    "performance": 3.6,
+    "seo": 5.5,
+    "website_overall": 3.3,
+    "opportunity": 86,
+    "visual_quality": 5.9,
+    "redesign_opportunity": 58,
+    "conversion_chance": 74
+  },
+  "pagespeed": {
+    "mobile_performance": 36,
+    "desktop_performance": 68,
+    "lcp": "5.6s",
+    "fcp": "3.2s",
+    "tbt": "450ms",
+    "cls": "0.24",
+    "speed_index": "5.1s"
+  },
+  "top_problems": [
+    "Carregamento mobile excessivamente lento (36/100) no 4G de Rio Branco, gerando fuga de clientes empresariais",
+    "Botão de contato com advogados especialistas inacessível na primeira dobra nos smartphones",
+    "Ausência de credenciais institucionais claras e layout sem autoridade compatível com o prestígio da banca"
+  ],
+  "main_gap": "Banca de advocacia de grande notoriedade no Acre, porém com website mobile defasado que enfraquece a conversão de novos clientes corporativos.",
+  "commercial_hook": "Empresários e famílias que buscam assessoria jurídica no Acre exigem sobriedade e agilidade no primeiro toque; o site atual demora mais de 5 segundos no celular e não transmite a sofisticação da equipe presencial.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-19T14:22:32.487Z",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/cil-farney-advogados/visual/visual-handoff.json",
+  "visual_structure": "leads/cil-farney-advogados/visual/site-structure.md"
+}
