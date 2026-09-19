@@ -26,7 +26,7 @@ Esta skill orquestra todo o processo de transformação de um lead qualificado p
    ↓
 8. Criar Redesign (src/clients/data/[slug].ts + Biblioteca de Componentes Astro)
    ↓
-9. Prioridade na 1ª Dobra (Hero com máxima sofisticação, clareza e CTA)
+9. Prioridade Absoluta na 1ª Dobra (Hero com imagens reais do cliente, animações, botões táteis, glow, backgrounds ambientais)
    ↓
 10. Validação Técnica (Zod schema, Astro build, testes responsivos)
    ↓
@@ -82,6 +82,21 @@ Consulte o **shadcn MCP** (`search_items_in_registries`, `view_items_in_registri
   - `CustomCursor.astro`: cursor magnético fluido (`theme.enableCursor: true`).
   - `ParallaxScroll.astro`: scroll-reveal e 3D tilt (`theme.enableParallax: true`).
   - Backgrounds: `MeshGradientBackground.astro`, `DotMatrixBackground.astro`, `PrismBackground.astro`.
+
+---
+
+## 4.1. Regra de Ouro: Capricho Máximo na Primeira Dobra (Hero)
+
+> 💎 **DIRETRIZ DE OURO DA PRIMEIRA DOBRA:**  
+> *"Capriche, especialmente na primeira dobra, que deve/pode conter imagens que encontrar nos assets do cliente, animações, efeitos em botoes, backgrounds, detalhes e animações de surgimento, glow... A primeira dobra será a demonstração das capacidades criativas. Capriche muito aqui."*
+
+A primeira dobra é a vitrine criativa principal. Elementos mandatórios:
+- **Fotos do Cliente:** Resgatar fotos autênticas de consultório, equipe, fachada ou procedimentos da pasta `referencias/site-baixado/`.
+- **Animações de Surgimento:** Efeito stagger reveal para títulos, subheadlines e CTAs.
+- **Efeitos em Botões:** Hover dinâmico com transições, glow sutil e CTA de WhatsApp evidente.
+- **Backgrounds Sofisticados:** Mesh gradient, orbs de luz ambiente, `.glass-panel` com backdrop blur.
+- **Badges de Autoridade:** Avaliações do Google (estrelas douradas) e tempo de mercado em cards flutuantes.
+- **Eject sem restrições:** `npm run client:eject -- --client [slug] --component hero/Hero01` para customizar o Hero com total liberdade estética.
 
 ---
 

@@ -1,4 +1,4 @@
-﻿---
+---
 name: site-builder
 description: Motor de geração e scaffolding de sites institucionais demonstrativos altamente personalizados, ultrarrápidos, responsivos e focados em conversão a partir dos dados do dossiê.
 ---
@@ -13,6 +13,7 @@ Esta skill é responsável por transformar o briefing e as decisões de design e
 - **Foco em Conversão:** Botão flutuante de WhatsApp, links diretos com mensagens personalizadas ("Olá, gostaria de agendar uma consulta sobre..."), formulário de contato simplificado.
 - **Responsividade Total:** Testado e otimizado para celulares (390px), tablets e monitores ultrawide.
 - **SEO e Acessibilidade:** Meta tags completas, Open Graph, contraste WCAG AA, tags semânticas (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`).
+- **Capricho Máximo na Primeira Dobra (Hero):** *"Capriche, especialmente na primeira dobra, que deve/pode conter imagens que encontrar nos assets do cliente, animações, efeitos em botoes, backgrounds, detalhes e animações de surgimento, glow... A primeira dobra será a demonstração das capacidades criativas. Capriche muito aqui."*
 
 ## 2. Execução Automatizada:
 ```bash

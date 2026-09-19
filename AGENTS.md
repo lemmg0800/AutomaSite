@@ -19,3 +19,19 @@ Esta regra define obrigatoriamente a distribuição e alocação de modelos de I
 - Ao invocar subagentes ou executar tarefas automáticas de recriação de site, direcione os recursos de computação do Gemini 3.8 High estritamente para o **Builder**.
 - Os demais agentes (Prospector, Auditor Visual e Comercial) devem operar sempre com o **Gemini 3.6 High**.
 - A configuração central está declarada em [`.agents/models.json`](file:///D:/projetos%20antigravity/Site%20automatico/.agents/models.json).
+
+---
+
+## 3. Diretriz Mandatória do Builder: Capricho Máximo na Primeira Dobra
+
+> 💎 **DIRETRIZ DA PRIMEIRA DOBRA:**  
+> *"Capriche, especialmente na primeira dobra, que deve/pode conter imagens que encontrar nos assets do cliente, animações, efeitos em botoes, backgrounds, detalhes e animações de surgimento, glow... A primeira dobra será a demonstração das capacidades criativas. Capriche muito aqui."*
+
+### Requisitos Práticos para a 1ª Dobra (Hero):
+1. **Assets do Cliente:** Resgatar e incorporar fotos autênticas da empresa, equipe e estrutura do site baixado (`referencias/site-baixado/`).
+2. **Animações de Surgimento:** Efeitos de revelação suave (fade/slide staggered) para títulos, textos e elementos gráficos.
+3. **Micro-interações em Botões:** Hover com gradiente dinâmico, brilho sutil (shimmer), sombras coloridas e CTA de WhatsApp com destaque visual imediato.
+4. **Backgrounds Ambientais:** Gradientes mesh, luzes difusas (*ambient glow*), texturas sutis e painéis com desfoque de vidro (`.glass-panel`).
+5. **Detalhes e Credibilidade:** Badges flutuantes com avaliações do Google (estrelas douradas), estatísticas reais e selos de excelência.
+6. **Eject Livre:** Caso necessário para atingir o nível visual exigido, o Builder deve clonar o Hero (`npm run client:eject -- --client [slug] --component hero/Hero01`) e customizá-lo sem restrições.
+
