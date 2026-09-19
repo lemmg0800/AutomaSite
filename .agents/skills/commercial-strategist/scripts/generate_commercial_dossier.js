@@ -1,4 +1,4 @@
-﻿import fs from 'fs';
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -39,7 +39,22 @@ function replaceAll(str, map) {
   return res;
 }
 
-const cleanWhats = (lead.whatsapp || lead.phone || '').trim();
+// Intelligence externa (Company Intelligence - Agente 1.5)
+let intel = null;
+const intelPath = path.join(leadDir, 'research/company-intelligence.json');
+if (fs.existsSync(intelPath)) {
+  try {
+    intel = JSON.parse(fs.readFileSync(intelPath, 'utf8'));
+  } catch (e) {}
+}
+
+const cleanWhats = (lead.whatsapp || lead.phone || intel?.contacts?.phone || '').trim();
+const emailComercial = (intel?.contacts?.email || lead.email || '').trim();
+const emailFonte = intel?.contacts?.emailSource || (lead.email ? 'Website original' : 'Não identificado');
+const canalRecomendado = intel?.contacts?.recommendedChannel || (cleanWhats ? 'WhatsApp' : (emailComercial ? 'E-mail' : 'WhatsApp'));
+const canalRationale = intel?.contacts?.channelRationale || (cleanWhats ? 'Canal direto com alta taxa de abertura e resposta rápida no nicho.' : 'Canal corporativo padrão.');
+const businessStrength = (intel?.scores?.businessStrengthScore !== undefined) ? intel.scores.businessStrengthScore.toString() : '80';
+
 const psOrig = (lead.pagespeed && lead.pagespeed.mobile_performance) ? lead.pagespeed.mobile_performance.toString() : '44';
 const psRedesign = (handoff && handoff.pagespeed && handoff.pagespeed.redesign_mobile) ? handoff.pagespeed.redesign_mobile : '98';
 const lcpOrig = (lead.pagespeed && lead.pagespeed.lcp) ? lead.pagespeed.lcp : '4.5s';
@@ -62,6 +77,11 @@ const tokens = {
   '{{URL_PRODUCAO}}': prodUrl,
   '{{URL_DEMO}}': previewUrl,
   '{{CONTATO_WHATSAPP}}': cleanWhats || 'Não informado',
+  '{{EMAIL_COMERCIAL}}': emailComercial || 'contato@empresa.com.br',
+  '{{FONTE_EMAIL}}': emailFonte,
+  '{{CANAL_RECOMENDADO}}': canalRecomendado,
+  '{{JUSTIFICATIVA_CANAL}}': canalRationale,
+  '{{BUSINESS_STRENGTH}}': businessStrength,
   '{{DIAGNOSTICO_RESUMO}}': lead.main_gap || 'O site atual apresenta lentidão no smartphone e não reflete adequadamente o prestígio e autoridade da empresa.',
   '{{PROBLEMA_1_TITULO}}': 'Percepção de Autoridade no Primeiro Acesso',
   '{{PROBLEMA_1_DESC}}': prob1,

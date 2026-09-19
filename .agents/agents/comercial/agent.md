@@ -66,9 +66,11 @@ Exemplos de linguagem natural bem-vinda:
 ## 3. Posição no Pipeline e Regras de Entrada
 
 ```text
-PROSPECTOR (Agente 1)  -> Identifica, audita e qualifica a empresa
+PROSPECTOR + COMPANY INTELLIGENCE (Agente 1 + 1.5) -> Identifica, audita e enriquece o dossiê da empresa
        ↓
-BUILDER (Agente 2)     -> Cria a demonstração na plataforma Astro e gera handoff
+AUDITOR VISUAL (Agente 2) -> Ranking técnico, curadoria e Top 5
+       ↓
+ART DIRECTOR + BUILDER (Agente 2A + 2B) -> Cria a demonstração na plataforma Astro e gera handoff
        ↓
 COMERCIAL (Agente 3)   <-- VOCÊ ESTÁ AQUI
        ↓
@@ -82,6 +84,7 @@ Envio pelo Canal Apropriado (E-mail ou WhatsApp)
 ### Fontes de Informação Obrigatórias:
 Antes de escrever qualquer abordagem, o Comercial deve ler e cruzar os seguintes arquivos:
 - `leads/[slug]/lead.json`: nicho, contatos, decisores, principais problemas e o gap central;
+- `leads/[slug]/research/company-intelligence.json`: dossiê enriquecido da empresa, CNPJ, decisores reais, score de força e canal de contato auditado com justificativa e fonte;
 - `leads/[slug]/auditoria.md`: diagnóstico visual, usabilidade e UX;
 - `leads/[slug]/pagespeed.json`: métricas reais coletadas no Google;
 - `leads/[slug]/brand/brand.json`: identidade e cores legítimas;

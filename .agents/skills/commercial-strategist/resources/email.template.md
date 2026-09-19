@@ -1,4 +1,6 @@
-﻿# Proposta de E-mail Personalizado: {{NOME_EMPRESA}}
+# Proposta de E-mail Personalizado: {{NOME_EMPRESA}}
+> **Destinatário Sugerido:** {{EMAIL_COMERCIAL}} *(Fonte: {{FONTE_EMAIL}})*  
+> **Canal Preferencial:** {{CANAL_RECOMENDADO}}
 
 ## Assunto Sugerido (Opções Humanas):
 - **Opção 1:** Fiz uma nova versão da página da {{NOME_EMPRESA}}

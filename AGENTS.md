@@ -6,19 +6,19 @@ Esta regra define obrigatoriamente a distribuição e alocação de modelos de I
 
 | Agente | Responsabilidade | Modelo Designado | Justificativa |
 | :--- | :--- | :--- | :--- |
-| **Builder (Agente 2)** | **Recriação e Personalização do Site** | `Gemini 3.8 High` (`gemini-3.8-high`) | Exclusividade para criação visual: geração de código Astro/Tailwind, assimilação de design systems e acabamento estético de alta fidelidade. |
-| **Prospector (Agente 1)** | Prospecção e Auditoria Técnica | `Gemini 3.6 High` (`gemini-3.6-high`) | Análise rápida e eficiente de mercado, coleta de dados, PageSpeed e qualificação. |
-| **Company Intelligence** | Pesquisa Externa & Enriquecimento | `Gemini 3.6 High` (`gemini-3.6-high`) | Resolução de identidade, CNPJ, contatos auditados, e-mail comercial, redes e Business Strength. |
+| **Diretor de Arte (Agente 2A)** | **Direção Estética & Design Systems** | `Gemini 3.8 High` (`gemini-3.8-high`) | Consulta semântica aos 61 Design Systems, conceito visual anti-clone e tokens. |
+| **Platform Builder (Agente 2B)** | **Engenharia Frontend & 1ª Dobra** | `Gemini 3.8 High` (`gemini-3.8-high`) | Geração de código Astro/Tailwind sob medida e capricho na 1ª dobra (Hero). |
+| **Prospector (Agente 1)** | Prospecção e Auditoria Técnica | `Gemini 3.6 High` (`gemini-3.6-high`) | Mapeamento de mercado, auditoria técnica e PageSpeed. |
+| **Company Intelligence** | Pesquisa Externa & Enriquecimento | `Gemini 3.6 High` (`gemini-3.6-high`) | Resolução de identidade, CNPJ, contatos auditados, e-mail comercial e Business Strength. |
 | **Auditor Visual** | Auditoria Estética e Baseline | `Gemini 3.6 High` (`gemini-3.6-high`) | Diagnóstico visual e gate checks pré e pós redesign. |
-| **Comercial (Agente 3)** | Dossiê e Abordagens Comerciais | `Gemini 3.6 High` (`gemini-3.6-high`) | Copywriting consultivo, redação de emails e scripts de WhatsApp no formato nativo. |
+| **Comercial (Agente 3)** | Dossiê e Abordagens Comerciais | `Gemini 3.6 High` (`gemini-3.6-high`) | Copywriting consultivo, redação de emails e scripts de WhatsApp nativos. |
 
 ---
 
 ## 2. Regra Inegociável
 
-- **Nenhum outro agente além do Builder deve utilizar o Gemini 3.8 High.**
-- Ao invocar subagentes ou executar tarefas automáticas de recriação de site, direcione os recursos de computação do Gemini 3.8 High estritamente para o **Builder**.
-- Os demais agentes (Prospector, Auditor Visual e Comercial) devem operar sempre com o **Gemini 3.6 High**.
+- **Apenas os agentes de criação estética e engenharia frontend (Diretor de Arte e Platform Builder) utilizam o Gemini 3.8 High.**
+- Os demais agentes (Prospector, Company Intelligence, Auditor Visual e Comercial) operam exclusivamente com o **Gemini 3.6 High**.
 - A configuração central está declarada em [`.agents/models.json`](file:///D:/projetos%20antigravity/Site%20automatico/.agents/models.json).
 
 ---

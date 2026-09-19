@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "version": "1.0.0",
   "description": "Configuração central de modelos de IA para os agentes do pipeline",
-  "policy": "Apenas o agente responsável por recriar o site (Builder) utiliza o modelo Gemini 3.8 High. Os demais agentes utilizam o modelo Gemini 3.6 High.",
+  "policy": "Os agentes responsáveis pela criação visual e engenharia frontend (Diretor de Arte e Platform Builder) utilizam o modelo Gemini 3.8 High. Os demais agentes (Prospector, Company Intelligence, Auditor Visual e Comercial) utilizam o modelo Gemini 3.6 High.",
   "models": {
     "gemini_3_8_high": {
       "id": "gemini-3.8-high",

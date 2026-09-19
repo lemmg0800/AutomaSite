@@ -107,11 +107,6 @@ const jsonTokens = {
 const handoffJson = JSON.parse(replaceAll(jsonTpl.replace(/^\uFEFF/, ''), jsonTokens));
 fs.writeFileSync(path.join(redesignDir, 'builder-handoff.json'), JSON.stringify(handoffJson, null, 2), 'utf8');
 
-// Mirror to index/[slug]/site-novo/
-const indexSiteNovo = path.join(rootDir, 'index', slug, 'site-novo');
-if (!fs.existsSync(indexSiteNovo)) fs.mkdirSync(indexSiteNovo, { recursive: true });
-fs.writeFileSync(path.join(indexSiteNovo, 'builder-handoff.json'), JSON.stringify(handoffJson, null, 2), 'utf8');
-
 // 2. GERAR RELATORIO.MD
 const relTplPath = path.join(__dirname, '../resources/relatorio.template.md');
 if (fs.existsSync(relTplPath)) {
@@ -136,7 +131,6 @@ if (fs.existsSync(relTplPath)) {
 
   const relFinal = replaceAll(relTpl, relTokens);
   fs.writeFileSync(path.join(redesignDir, 'relatorio.md'), relFinal, 'utf8');
-  fs.writeFileSync(path.join(indexSiteNovo, 'relatorio.md'), relFinal, 'utf8');
 }
 
 // 3. ATUALIZAR STATUS NO LEAD.JSON
@@ -155,4 +149,4 @@ fs.writeFileSync(leadJsonPath, JSON.stringify(lead, null, 2), 'utf8');
 
 console.log(`[OK] Handoff comercial e relatório gerados com sucesso para: ${lead.name}`);
 console.log(`     leads/${slug}/redesign/builder-handoff.json`);
-console.log(`     index/${slug}/site-novo/builder-handoff.json`);
+console.log(`     leads/${slug}/redesign/relatorio.md`);

@@ -1,4 +1,4 @@
-﻿# Dossiê Comercial Estratégico: {{NOME_EMPRESA}}
+# Dossiê Comercial Estratégico: {{NOME_EMPRESA}}
 
 ## 1. Dados da Empresa
 - **Nome:** {{NOME_EMPRESA}}
@@ -8,6 +8,9 @@
 - **URL do Redesign (Preview):** {{URL_PREVIEW}}
 - **URL do Redesign (Produção):** {{URL_PRODUCAO}}
 - **Contato Comercial/WhatsApp:** {{CONTATO_WHATSAPP}}
+- **E-mail Comercial:** {{EMAIL_COMERCIAL}} (Fonte: {{FONTE_EMAIL}})
+- **Canal de Abordagem Recomendado:** {{CANAL_RECOMENDADO}} — {{JUSTIFICATIVA_CANAL}}
+- **Score de Força do Negócio:** {{BUSINESS_STRENGTH}}/100
 
 ---
 
