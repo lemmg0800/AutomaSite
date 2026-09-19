@@ -16,7 +16,9 @@
         "client:audit": "tsx scripts/audit-component-usage.ts",
         "client:new": "tsx scripts/new-client.ts",
         "client:eject": "tsx scripts/clone-component-to-client.ts",
-        "pipeline:top5": "tsx scripts/run-top5-pipeline.ts"
+        "handoff:validate": "tsx scripts/validate-handoff.ts",
+        "pipeline:top5": "tsx scripts/run-top5-pipeline.ts",
+        "pipeline:run": "node scripts/run-autonomous-pipeline.cjs"
     },
     "keywords": [
         "prospector",

@@ -31,6 +31,18 @@ if (fs.existsSync(assetsCatPath)) {
   } catch (e) {}
 }
 
+// Validação de pré-requisitos visuais (screenshots mínimos)
+const origDesk = path.join(leadDir, 'screenshots', 'site-desktop.png');
+const origMob = path.join(leadDir, 'screenshots', 'site-mobile.png');
+const minSize = 10 * 1024;
+
+if (!fs.existsSync(origDesk) || fs.statSync(origDesk).size < minSize) {
+  console.warn(`[AVISO] Screenshot desktop original ausente ou menor que 10KB em: ${origDesk}`);
+}
+if (!fs.existsSync(origMob) || fs.statSync(origMob).size < minSize) {
+  console.warn(`[AVISO] Screenshot mobile original ausente ou menor que 10KB em: ${origMob}`);
+}
+
 // Read selected design system if available
 let selectedDS = null;
 const dsPath = path.join(leadDir, 'referencias', 'design-system-selected.json');
