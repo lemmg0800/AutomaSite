@@ -72,7 +72,7 @@ export function getLeadDossier(slug: string): LeadDossier | null {
     return {
       slug,
       leadJson: readJsonSafely(leadJsonPath),
-      auditoriaMd: readFileSafely(path.join(leadDir, 'auditoria.md')),
+      auditoriaMd: readFileSafely(path.join(leadDir, 'auditoria.md')) || readFileSafely(path.join(leadDir, 'visual/site-structure.md')) || readFileSafely(path.join(leadDir, 'referencias/site-atual.md')),
       pagespeedJson: readJsonSafely(path.join(leadDir, 'pagespeed.json')),
       builderHandoff: readJsonSafely(path.join(leadDir, 'redesign/builder-handoff.json')),
       relatorioMd: readFileSafely(path.join(leadDir, 'redesign/relatorio.md')),
@@ -132,9 +132,13 @@ export function formatDossierForDashboard(d: LeadDossier) {
     }
   }
 
-  const rawCity = lj.city || biz.city || biz.cidade || 'Criciúma';
+  const rawCity = lj.city || biz.city || biz.cidade || 'Curitiba';
   const cleanCity = rawCity.replace(/\s*-\s*[A-Z]{2}$/i, '').trim();
-  const rawState = (lj.state || biz.state || biz.uf || 'SC').toUpperCase().trim();
+  let rawState = (lj.state || biz.state || biz.uf || '').toUpperCase().trim();
+  if (!rawState) {
+    const stateMatch = rawCity.match(/-\s*([A-Z]{2})$/i);
+    rawState = stateMatch ? stateMatch[1].toUpperCase() : 'PR';
+  }
 
   // Mapeamento de Regiões do Brasil
   const getRegion = (state: string, city: string = ''): string => {
@@ -189,6 +193,20 @@ export function formatDossierForDashboard(d: LeadDossier) {
   const searchNiche = getSearchNiche();
   const detailedNiche = lj.segment || lj.niche || biz.niche || biz.nicho || 'Geral';
 
+  const clientDataFile = path.join(process.cwd(), 'src/clients/data', `${d.slug}.ts`);
+  const hasClientData = fs.existsSync(clientDataFile);
+
+  let componentsList = bh.components_used || bh.variants_used || bh.componentsUsed;
+  if ((!componentsList || componentsList.length === 0) && hasClientData) {
+    try {
+      const content = fs.readFileSync(clientDataFile, 'utf8');
+      const matches = Array.from(content.matchAll(/variant:\s*["']([^"']+)["']/g)).map(m => m[1]);
+      if (matches.length > 0) {
+        componentsList = Array.from(new Set(matches));
+      }
+    } catch (e) {}
+  }
+
   return {
     slug: d.slug,
     name: lj.name || biz.name || biz.nome || d.slug,
@@ -204,7 +222,7 @@ export function formatDossierForDashboard(d: LeadDossier) {
     isPublished: lj.status === 'published' || lj.status === 'ativo',
     pipeline: {
       prospector: true,
-      builder: !!d.builderHandoff || !!d.assets.afterDesktop || !!d.relatorioMd,
+      builder: !!d.builderHandoff || !!d.assets.afterDesktop || !!d.relatorioMd || hasClientData,
       comercial: !!d.emailMd || !!d.whatsappMd || !!d.commercialSummaryMd
     },
     prospector: {
@@ -218,7 +236,7 @@ export function formatDossierForDashboard(d: LeadDossier) {
     builder: {
       redesignDesktopScreenshot: d.assets.afterDesktop,
       redesignMobileScreenshot: d.assets.afterMobile,
-      componentsUsed: bh.componentsUsed || ['Hero01', 'Benefits01', 'Services01', 'Footer01']
+      componentsUsed: componentsList || ['Hero01', 'Benefits01', 'Services01', 'Footer01']
     },
     comercial: {
       beforeAfterImage: d.assets.comparisonShot,
