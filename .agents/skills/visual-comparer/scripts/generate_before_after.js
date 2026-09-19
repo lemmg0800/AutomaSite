@@ -1,4 +1,4 @@
-﻿import fs from 'fs';
+import fs from 'fs';
 import path from 'path';
 import { spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
@@ -30,9 +30,14 @@ if (!fs.existsSync(beforeShot) || !fs.existsSync(afterShot)) {
   process.exit(0);
 }
 
-const chromePath = 'C:\\Users\\Eduardo\\AppData\\Local\\ms-playwright\\chromium-1200\\chrome-win64\\chrome.exe';
+import os from 'os';
+
+let chromePath = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 if (!fs.existsSync(chromePath)) {
-  console.error(`[ERRO] Chromium não encontrado em: ${chromePath}`);
+  chromePath = 'C:\\Users\\Eduardo\\AppData\\Local\\ms-playwright\\chromium-1200\\chrome-win64\\chrome.exe';
+}
+if (!fs.existsSync(chromePath)) {
+  console.error(`[ERRO] Chromium/Chrome não encontrado.`);
   process.exit(1);
 }
 
@@ -108,15 +113,20 @@ fs.writeFileSync(tmpHtml, htmlContent, 'utf8');
 const targetPng = path.join(visDir, 'before-after.png');
 console.log(`[VISUAL] Renderizando comparação visual em: ${targetPng}`);
 
+const tmpProfile = path.join(os.tmpdir(), `card-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`);
+
 spawnSync(chromePath, [
   '--headless=new',
   '--disable-gpu',
   '--no-sandbox',
+  `--user-data-dir=${tmpProfile}`,
   '--virtual-time-budget=2000',
   '--window-size=1400,900',
   `--screenshot=${targetPng}`,
   'file:///' + tmpHtml.replace(/\\/g, '/')
 ], { timeout: 25000 });
+
+try { fs.rmSync(tmpProfile, { recursive: true, force: true }); } catch (e) {}
 
 if (fs.existsSync(tmpHtml)) {
   fs.unlinkSync(tmpHtml);
