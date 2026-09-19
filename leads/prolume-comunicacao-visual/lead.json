@@ -22,7 +22,8 @@
     "website_overall": 4,
     "opportunity": 78,
     "visual_quality": 6.3,
-    "redesign_opportunity": 58
+    "redesign_opportunity": 58,
+    "conversion_chance": 72
   },
   "pagespeed": {
     "mobile_performance": 41,
@@ -46,7 +47,7 @@
   },
   "created_at": "2026-09-18T19:03:02.670Z",
   "redesign": {
-    "completed_at": "2026-09-18T19:03:22.311Z",
+    "completed_at": "2026-09-19T00:12:34.172Z",
     "platform_preview_url": "/preview/prolume-comunicacao-visual",
     "platform_production_url": "/prolume-comunicacao-visual",
     "config_path": "src/clients/data/prolume-comunicacao-visual.ts",
@@ -57,7 +58,7 @@
   },
   "commercial": {
     "status": "pronto_para_aprovacao_humana",
-    "generated_at": "2026-09-18T19:03:22.448Z",
+    "generated_at": "2026-09-19T00:12:34.407Z",
     "dossier_path": "leads/prolume-comunicacao-visual/commercial/",
     "summary": "leads/prolume-comunicacao-visual/commercial/commercial-summary.md",
     "email": "leads/prolume-comunicacao-visual/commercial/email.md",

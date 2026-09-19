@@ -1,30 +1,30 @@
 {
-  "slug": "prolume-comunicacao-visual",
-  "name": "Prolume Comunicação Visual",
-  "website": "https://www.prolume.com.br/",
-  "generated_at": "2026-09-19T00:12:34.017Z",
-  "visualQualityScore": 6.3,
-  "redesignOpportunityScore": 58,
+  "slug": "pedro-de-queiroz-advocacia",
+  "name": "Pedro de Queiroz Advocacia",
+  "website": "https://pedrodequeiroz.adv.br/",
+  "generated_at": "2026-09-19T00:12:21.856Z",
+  "visualQualityScore": 5.7,
+  "redesignOpportunityScore": 59,
   "classification": "B — BOM, MAS DESATUALIZADO",
   "dimensions": {
-    "visual_identity": 6.5,
-    "first_fold_quality": 5.5,
-    "typography": 4,
-    "visual_hierarchy": 4.5,
-    "images_usage": 8.5,
-    "composition_spacing": 4.8,
-    "cross_page_consistency": 5,
+    "visual_identity": 6.7,
+    "first_fold_quality": 5.7,
+    "typography": 4.2,
+    "visual_hierarchy": 4.7,
+    "images_usage": 5,
+    "composition_spacing": 5,
+    "cross_page_consistency": 5.2,
     "navigation_menu": 5.5,
-    "visual_responsiveness": 4.3,
+    "visual_responsiveness": 4.4,
     "services_presentation": 5,
     "cta_clarity": 4,
     "trust_credibility": 8.6,
     "internal_pages_quality": 5.2
   },
   "baseline": {
-    "heroScore": 5.5,
-    "visualQualityScore": 6.3,
-    "imagesScore": 8.5,
+    "heroScore": 5.7,
+    "visualQualityScore": 5.7,
+    "imagesScore": 5,
     "trustScore": 8.6,
     "mandatoryRule": "O Builder é estritamente obrigado a igualar ou superar as notas de baseline do site original."
   },
@@ -39,7 +39,7 @@
     "Falta de chamada de conversão imediata (WhatsApp) na primeira dobra"
   ],
   "preserve": [
-    "Fotografias reais do acervo da empresa (24 fotos reais catalogadas)",
+    "Fotografias reais do acervo da empresa (0 fotos reais catalogadas)",
     "Paleta de cores institucional autêntica e logotipo original",
     "Histórico, segmento de atuação e autoridade comprovada no mercado regional",
     "Lista legítima de especialidades e projetos executados"
@@ -56,18 +56,18 @@
     "question1_detail": "Melhoria de hierarquia, tipografia, carregamento e conversão de WhatsApp imediata.",
     "question2_potential_to_beat": true,
     "question2_detail": "A plataforma moderna Astro com Tailwind superará o layout legado preservando os ativos reais.",
-    "question3_sufficient_assets": true,
-    "question3_detail": "Dispomos de 24 fotos legítimas baixadas do site original para ilustrar os serviços.",
+    "question3_sufficient_assets": false,
+    "question3_detail": "Dispomos de 0 fotos legítimas baixadas do site original para ilustrar os serviços.",
     "question4_commercial_argument_beyond_modern": true,
     "question4_detail": "Eliminação da perda de contatos mobile e valorização da autoridade da marca perante arquitetos e decisores.",
     "status": "APROVADO_PARA_BUILDER"
   },
   "factsVsInferences": {
     "verified_facts": [
-      "Nome comercial: Prolume Comunicação Visual",
-      "Localização verificada: Criciúma - SC",
-      "Canais oficiais de contato: (48) 98403-7906",
-      "Segmento autêntico: Placas em Acrílico, Totens, Banners & Sinalização Corporativa",
+      "Nome comercial: Pedro de Queiroz Advocacia",
+      "Localização verificada: Florianópolis - SC",
+      "Canais oficiais de contato: (48) 99655-2233",
+      "Segmento autêntico: Direito Cível Estratégico, Contratos & Família",
       "Fotos reais baixadas do acervo próprio"
     ],
     "unverified_inferences_forbidden": [
@@ -77,9 +77,9 @@
     ]
   },
   "homeStructure": {
-    "heroScore": 5.5,
-    "mobileScore": 4.3,
-    "brandConsistencyScore": 5
+    "heroScore": 5.7,
+    "mobileScore": 4.4,
+    "brandConsistencyScore": 5.2
   },
   "importantPages": [
     "Home",
@@ -89,8 +89,8 @@
     "Contato e Orçamento"
   ],
   "screenshots": {
-    "desktop": "leads/prolume-comunicacao-visual/visual/home-desktop.png",
-    "mobile": "leads/prolume-comunicacao-visual/visual/home-mobile.png"
+    "desktop": "leads/pedro-de-queiroz-advocacia/visual/home-desktop.png",
+    "mobile": "leads/pedro-de-queiroz-advocacia/visual/home-mobile.png"
   },
   "mandatoryBuilderRule": "O redesign NÃO será considerado aprovado apenas por ser diferente do site atual. Ele precisa demonstrar melhoria real. Compare visualmente o original e o redesign antes de finalizar. Se o original estiver melhor em identidade, fotografia, Hero, hierarquia ou credibilidade, refine novamente."
 }

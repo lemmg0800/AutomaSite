@@ -20,7 +20,10 @@
     "performance": 4.2,
     "seo": 5.2,
     "website_overall": 4.2,
-    "opportunity": 73
+    "opportunity": 73,
+    "visual_quality": 5.8,
+    "redesign_opportunity": 61,
+    "conversion_chance": 71
   },
   "pagespeed": {
     "mobile_performance": 42,
@@ -62,5 +65,8 @@
     "whatsapp": "leads/medeiros-de-araujo-advocacia/commercial/whatsapp.md"
   },
   "search_niche": "Advocacia",
-  "state": "SC"
+  "state": "SC",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/medeiros-de-araujo-advocacia/visual/visual-handoff.json",
+  "visual_structure": "leads/medeiros-de-araujo-advocacia/visual/site-structure.md"
 }

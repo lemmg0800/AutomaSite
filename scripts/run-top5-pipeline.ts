@@ -28,39 +28,79 @@ async function runTop5Pipeline() {
     process.exit(1);
   }
 
-  // 1. CARREGAR E RANQUEAR LEADS
+  // 1. CARREGAR ATÉ 15 EMPRESAS CANDIDATAS DO PROSPECTOR
   const leadFolders = fs.readdirSync(leadsDir).filter(f => {
     return fs.statSync(path.join(leadsDir, f)).isDirectory();
   });
 
-  const leads: LeadEntry[] = [];
+  console.log(`[FASE 2] Prospector selecionou ${leadFolders.length} empresas candidatas para auditoria completa.`);
+  console.log(`[FASE 3] Executando Auditor Visual nas 15 empresas candidatas...`);
+
+  const visualAuditorScript = path.join(rootDir, '.agents/skills/visual-auditor/scripts/audit_visual.cjs');
+
+  // Executar auditoria visual em todas as empresas candidatas (até 15)
+  for (const folder of leadFolders) {
+    if (fs.existsSync(visualAuditorScript)) {
+      spawnSync('node', [visualAuditorScript, folder], { stdio: 'ignore' });
+    }
+  }
+
+  // 2. CONSOLIDAÇÃO DE SCORES & CÁLCULO DA CHANCE DE CONVERSÃO
+  const candidates: LeadEntry[] = [];
 
   for (const folder of leadFolders) {
     const jsonPath = path.join(leadsDir, folder, 'lead.json');
+    const handoffPath = path.join(leadsDir, folder, 'visual', 'visual-handoff.json');
     if (fs.existsSync(jsonPath)) {
       try {
         const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
-        const score = data.scores?.opportunity || 0;
-        const ranking = data.ranking || 999;
-        leads.push({ slug: folder, leadPath: jsonPath, data, score, ranking });
+        let handoff: any = null;
+        if (fs.existsSync(handoffPath)) {
+          handoff = JSON.parse(fs.readFileSync(handoffPath, 'utf8'));
+        }
+
+        const prospectorScore = data.scores?.opportunity || 0;
+        const visualOppScore = data.scores?.redesign_opportunity || prospectorScore;
+        const businessScore = data.scores?.business || 8.0;
+        const gateApproved = handoff?.gateCheck?.status === 'APROVADO_PARA_BUILDER';
+
+        // Fórmula de Chance de Conversão: 40% Prospector + 40% Oportunidade Visual + 20% Negócio
+        let conversionChance = Math.round((prospectorScore * 0.4) + (visualOppScore * 0.4) + (businessScore * 2.0));
+        if (!gateApproved) conversionChance -= 25; // Penaliza se não passou no gate
+
+        data.scores.conversion_chance = conversionChance;
+        fs.writeFileSync(jsonPath, JSON.stringify(data, null, 2), 'utf8');
+
+        candidates.push({
+          slug: folder,
+          leadPath: jsonPath,
+          data,
+          score: conversionChance,
+          ranking: data.ranking || 999
+        });
       } catch (err: any) {
         console.warn(`[AVISO] Erro ao ler ${jsonPath}:`, err.message);
       }
     }
   }
 
-  // Ordenar por ranking (ou score decrescente)
-  leads.sort((a, b) => {
-    if (a.ranking !== b.ranking) return a.ranking - b.ranking;
-    return b.score - a.score;
+  // Ordenar por Chance de Conversão decrescente
+  candidates.sort((a, b) => b.score - a.score);
+
+  // Selecionar os 5 LEADS com maior chance de conversão
+  const top5 = candidates.slice(0, 5);
+
+  console.log(`\n[FASE 4] Ranking Consolidado das 15 Empresas (Prospector + Auditor Visual):`);
+  candidates.forEach((c, idx) => {
+    const isTop5 = idx < 5 ? '★ [TOP 5]' : '  [LISTA GERAL]';
+    console.log(`  ${isTop5} #${idx + 1}: ${c.data.name} -> Chance de Conversão: ${c.score}/100 | Visual: ${c.data.scores?.visual_quality || 'N/A'}/10`);
   });
 
-  const top5 = leads.slice(0, 5);
-
-  console.log(`[PROSPECTOR] Total de leads qualificados: ${leads.length}`);
-  console.log('Top 5 Selecionados para Personalização Imediata:\n');
+  console.log('\n================================================================================');
+  console.log(' OS 5 LEADS COM MAIOR CHANCE DE CONVERSÃO ENVIADOS AO BUILDER (1 DE CADA VEZ)   ');
+  console.log('================================================================================\n');
   top5.forEach((l, i) => {
-    console.log(`  ${i + 1}º Lugar -> [Score: ${l.score}/100] ${l.data.name} (${l.slug})`);
+    console.log(`  ${i + 1}º Lugar -> [Chance: ${l.score}/100] ${l.data.name} (${l.slug})`);
   });
   console.log('\n--------------------------------------------------------------------------------\n');
 

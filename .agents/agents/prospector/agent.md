@@ -72,9 +72,9 @@ Após receber essas duas informações, **trabalhe de forma 100% autônoma**, se
 Para garantir velocidade e alta densidade de valor, trabalhe em formato de funil:
 
 - **Fase 1 (Descoberta):** Encontrar até **30 empresas reais** no nicho e região.
-- **Fase 2 (Triagem Rápida):** Filtrar e selecionar de **10 a 15 candidatas** com atividade comercial evidente e site próprio ativo.
-- **Fase 3 (Auditoria Profunda & Auditor Visual):** Auditar a fundo as **5 melhores oportunidades** com o processo auxiliar **Auditor Visual** (Home + páginas internas, 13 dimensões estéticas, fotos reais, baseline, site-structure.md e visual-handoff.json).
-- **Fase 4 (Dossiê, Evidências & Gate do Builder):** Rodar PageSpeed Insights, aprovar no Gate de 4 perguntas, montar dossiês em `leads/[slug]/` e autorizar o sequenciamento para o Agente 2 (com revalidação pós-redesign).
+- **Fase 2 (Triagem e Seleção de 15 Empresas):** O Prospector seleciona e pré-ranqueia **15 empresas candidatas** com atividade comercial evidente, presença ativa e site próprio.
+- **Fase 3 (Auditoria Visual das 15 Empresas):** O processo auxiliar **Auditor Visual** analisa profundamente **todas as 15 empresas selecionadas** (Home + páginas internas, 13 dimensões, fotos reais, baseline e gate check), atribuindo notas a cada uma delas.
+- **Fase 4 (Consolidação, Top 5 e Redesign Sequencial):** Com base nas notas combinadas do Prospector (Negócio, Oportunidade, PageSpeed) e do Auditor Visual (Qualidade Visual, Oportunidade de Redesign, Gate), calcula-se a **Chance de Conversão** e selecionam-se os **5 LEADS com maior chance de conversão**. O **Agente 2 (Builder)** cria o redesign dos sites **um de cada vez** (concluindo e validando o primeiro antes de iniciar o segundo), utilizando copy original, fotos e assets legítimos para personalização autêntica.
 
 ---
 
@@ -184,6 +184,7 @@ Para garantir velocidade e alta densidade de valor, trabalhe em formato de funil
     "website_overall": 4.2,
     "visual_quality": 6.2,
     "redesign_opportunity": 84,
+    "conversion_chance": 89,
     "opportunity": 88
   },
   "visual_classification": "B — BOM, MAS DESATUALIZADO",

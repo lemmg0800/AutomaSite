@@ -22,7 +22,8 @@
     "website_overall": 3.9,
     "opportunity": 76,
     "visual_quality": 6.2,
-    "redesign_opportunity": 58
+    "redesign_opportunity": 58,
+    "conversion_chance": 70
   },
   "pagespeed": {
     "mobile_performance": 39,

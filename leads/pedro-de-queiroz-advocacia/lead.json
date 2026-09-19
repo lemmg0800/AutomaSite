@@ -20,7 +20,10 @@
     "performance": 4.4,
     "seo": 4.8,
     "website_overall": 4,
-    "opportunity": 74
+    "opportunity": 74,
+    "visual_quality": 5.7,
+    "redesign_opportunity": 59,
+    "conversion_chance": 70
   },
   "pagespeed": {
     "mobile_performance": 44,
@@ -62,5 +65,8 @@
     "whatsapp": "leads/pedro-de-queiroz-advocacia/commercial/whatsapp.md"
   },
   "search_niche": "Advocacia",
-  "state": "SC"
+  "state": "SC",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/pedro-de-queiroz-advocacia/visual/visual-handoff.json",
+  "visual_structure": "leads/pedro-de-queiroz-advocacia/visual/site-structure.md"
 }
