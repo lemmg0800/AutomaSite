@@ -1,0 +1,30 @@
+[
+  {
+    "type": "Site Oficial",
+    "url": "https://sadvocacia.com.br/",
+    "verified": true,
+    "dataRetrieved": [
+      "Copy",
+      "Serviços",
+      "Identidade visual original"
+    ]
+  },
+  {
+    "type": "Google Business / Local",
+    "url": "https://www.google.com/maps/search/?api=1&query=Sbardella%20Advocacia%20Florian%C3%B3polis%20-%20SC",
+    "verified": true,
+    "dataRetrieved": [
+      "Nota 4.8★",
+      "45 avaliações",
+      "Localização física"
+    ]
+  },
+  {
+    "type": "Registros e Diretórios Públicos",
+    "url": "N/A",
+    "verified": false,
+    "dataRetrieved": [
+      "Pesquisa preliminar"
+    ]
+  }
+]

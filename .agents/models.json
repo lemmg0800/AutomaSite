@@ -62,6 +62,16 @@
       "maxOutputTokens": 8192,
       "reasoning": "high"
     },
+    "company_intelligence": {
+      "name": "Company Intelligence (Subordinado ao Prospector)",
+      "file": ".agents/agents/prospector/company-intelligence.md",
+      "role": "Pesquisa externa, resolução de identidade, CNPJ, contatos e Business Strength",
+      "model": "gemini-3.6-high",
+      "modelAlias": "3.6 high",
+      "temperature": 0.2,
+      "maxOutputTokens": 8192,
+      "reasoning": "high"
+    },
     "comercial": {
       "name": "Comercial (Agente 3 — Estrategista)",
       "file": ".agents/agents/comercial/agent.md",

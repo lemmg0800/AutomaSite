@@ -68,5 +68,14 @@
   "state": "SC",
   "visual_classification": "B — BOM, MAS DESATUALIZADO",
   "visual_handoff": "leads/sbardella-advocacia/visual/visual-handoff.json",
-  "visual_structure": "leads/sbardella-advocacia/visual/site-structure.md"
+  "visual_structure": "leads/sbardella-advocacia/visual/site-structure.md",
+  "intelligence": {
+    "businessStrengthScore": 90,
+    "contactabilityScore": 75,
+    "dataConfidenceScore": 55,
+    "email": null,
+    "emailStatus": "NÃO CONFIRMADO",
+    "recommendedChannel": "WhatsApp",
+    "phase": "deep"
+  }
 }

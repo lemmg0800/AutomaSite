@@ -100,8 +100,19 @@ if (candidates.length === 0) {
 
 console.log(`Total de empresas catalogadas: ${candidates.length}`);
 
+// 1.5. COMPANY INTELLIGENCE - FASE 1 (ENRIQUECIMENTO LEVE NAS 15 EMPRESAS)
+console.log(`\n[ETAPA 1.5 - COMPANY INTELLIGENCE] Pesquisa externa leve (identidade, CNPJ, contatos, avaliações)...`);
+const compIntelScript = path.join(rootDir, '.agents/skills/company-intelligence/scripts/enrich_company_intelligence.cjs');
+
+for (const cand of candidates) {
+  if (fs.existsSync(compIntelScript)) {
+    spawnSync('node', [compIntelScript, '--slug', cand.slug, '--phase', 'light'], { stdio: 'ignore' });
+  }
+}
+console.log(`[OK] Enriquecimento leve concluído para as ${candidates.length} empresas.\n`);
+
 // 2. Auditoria Visual e Cálculo de Notas
-console.log(`\n[ETAPA 1 & 2] Auditando e ranqueando empresas para consolidar o Top 5...`);
+console.log(`[ETAPA 2 - AUDITOR VISUAL] Auditando e ranqueando empresas para consolidar o Top 5...`);
 const auditScript = path.join(rootDir, '.agents/skills/visual-auditor/scripts/audit_visual.cjs');
 const scoredCandidates = [];
 
@@ -125,12 +136,28 @@ for (const cand of candidates) {
     } catch {}
   }
 
+  // Sinais do Company Intelligence
+  const bStrength = leadData.intelligence?.businessStrengthScore || Math.round((leadData.scores?.business || cand.business_score || 8.0) * 10);
+  const contactability = leadData.intelligence?.contactabilityScore || 70;
+  const dataConf = leadData.intelligence?.dataConfidenceScore || 80;
   const prospectorOpp = leadData.scores?.opportunity || 70;
-  const businessScore = leadData.scores?.business || cand.business_score || 8.5;
-  const conversionChance = Math.round((prospectorOpp * 0.4) + (visualOpp * 0.4) + (businessScore * 2.0));
+
+  // Fórmula Multidimensional:
+  // Negócio forte + Site abaixo do potencial + Fácil de contactar = Alta prioridade comercial
+  const conversionChance = Math.round(
+    (bStrength * 0.35) + 
+    (visualOpp * 0.25) + 
+    (contactability * 0.20) + 
+    (prospectorOpp * 0.10) + 
+    (dataConf * 0.10)
+  );
 
   if (!leadData.scores) leadData.scores = {};
   leadData.scores.conversion_chance = conversionChance;
+  leadData.scores.business_strength = bStrength;
+  leadData.scores.contactability = contactability;
+  leadData.scores.data_confidence = dataConf;
+
   if (fs.existsSync(jsonPath)) {
     fs.writeFileSync(jsonPath, JSON.stringify(leadData, null, 2), 'utf8');
   }
@@ -138,6 +165,9 @@ for (const cand of candidates) {
   scoredCandidates.push({
     ...cand,
     conversionChance,
+    businessStrength: bStrength,
+    contactability,
+    dataConfidence: dataConf,
     leadData
   });
 }
@@ -151,12 +181,21 @@ scoredCandidates.sort((a, b) => {
 const top5 = scoredCandidates.slice(0, 5);
 
 console.log(`\n================================================================================`);
-console.log(`                      TOP 5 QUALIFICADOS PARA REDESIGN                          `);
+console.log(`              TOP 5 QUALIFICADOS POR INTELIGÊNCIA EMPRESARIAL                   `);
 console.log('================================================================================');
 top5.forEach((l, i) => {
-  console.log(`  ★ #${i + 1} Lugar: [Chance: ${l.conversionChance}/100] ${l.name} (${l.slug})`);
+  console.log(`  ★ #${i + 1} Lugar: [Chance: ${l.conversionChance}/100 | Força: ${l.businessStrength}/100 | Contato: ${l.contactability}/100] ${l.name} (${l.slug})`);
 });
 console.log('================================================================================\n');
+
+// 2.5. COMPANY INTELLIGENCE - FASE 2 (ENRIQUECIMENTO PROFUNDO NOS TOP 5)
+console.log(`[ETAPA 2.5 - COMPANY INTELLIGENCE PROFUNDO] Aprofundando dossiê dos 5 mais promissores...`);
+for (const lead of top5) {
+  if (fs.existsSync(compIntelScript)) {
+    spawnSync('node', [compIntelScript, '--slug', lead.slug, '--phase', 'deep'], { stdio: 'inherit' });
+  }
+}
+console.log(`[OK] Dossiês aprofundados salvos em leads/[slug]/research/\n`);
 
 // 3. Execução dos 5 leads (Geração de Dossiês e Validação)
 console.log(`[ETAPA 3] Processando Dossiês e Validando Requisitos de Handoff...\n`);

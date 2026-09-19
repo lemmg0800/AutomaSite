@@ -6,8 +6,9 @@ Esta regra define obrigatoriamente a distribuição e alocação de modelos de I
 
 | Agente | Responsabilidade | Modelo Designado | Justificativa |
 | :--- | :--- | :--- | :--- |
-| **Builder (Agente 2)** | **Recriação e Personalização do Site** | `Gemini 3.8 High` (`gemini-3.8-high`) | Exclusividade para o modelo de raciocínio mais avançado: geração de código Astro/Tailwind, assimilação de design systems e acabamento estético de alta fidelidade. |
+| **Builder (Agente 2)** | **Recriação e Personalização do Site** | `Gemini 3.8 High` (`gemini-3.8-high`) | Exclusividade para criação visual: geração de código Astro/Tailwind, assimilação de design systems e acabamento estético de alta fidelidade. |
 | **Prospector (Agente 1)** | Prospecção e Auditoria Técnica | `Gemini 3.6 High` (`gemini-3.6-high`) | Análise rápida e eficiente de mercado, coleta de dados, PageSpeed e qualificação. |
+| **Company Intelligence** | Pesquisa Externa & Enriquecimento | `Gemini 3.6 High` (`gemini-3.6-high`) | Resolução de identidade, CNPJ, contatos auditados, e-mail comercial, redes e Business Strength. |
 | **Auditor Visual** | Auditoria Estética e Baseline | `Gemini 3.6 High` (`gemini-3.6-high`) | Diagnóstico visual e gate checks pré e pós redesign. |
 | **Comercial (Agente 3)** | Dossiê e Abordagens Comerciais | `Gemini 3.6 High` (`gemini-3.6-high`) | Copywriting consultivo, redação de emails e scripts de WhatsApp no formato nativo. |
 
