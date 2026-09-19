@@ -1,28 +1,24 @@
-# Scripts de Contato via WhatsApp: Buzzi Odontologia
+Olá, tudo bem?
 
-## Opção A: Abordagem com Pedido de Permissão (Recomendada para tom mais consultivo)
+Estive conhecendo o trabalho da *Buzzi Odontologia* aqui em Curitiba — parabéns pelo padrão da clínica e pelas avaliações tão positivas dos pacientes.
 
-Oi, tudo bem?
+Notei apenas um ponto técnico importante: para quem acessa pelo celular ou 4G, a navegação fica um pouco pesada e o botão para falar direto no WhatsApp demora para carregar, o que pode fazer alguns pacientes desistirem antes de agendar.
 
-Dei uma olhada no site da **Buzzi Odontologia** enquanto pesquisava referências em Estética Dental, Ortodontia & Implantes aqui em Curitiba - PR.
+Para ajudar, desenhei uma versão demonstrativa mostrando como o site de vocês poderia carregar de forma instantânea e moderna, valorizando ainda mais o trabalho da equipe.
 
-O trabalho de vocês tem muita autoridade, mas percebi que quem entra no site pelo celular hoje tem dificuldade para encontrar os serviços e falar direto no WhatsApp.
-
-Acabei montando um modelo novo para a página de vocês para mostrar na prática como isso poderia ficar mais ágil e moderno, preservando a identidade visual de vocês.
-
-Posso te mandar o link aqui para você dar uma olhada rápida?
+Se fizer sentido para vocês, posso te mandar o link aqui para dar uma olhada rápida?
 
 ---
 
-## Opção B: Abordagem com Envio Direto do Link (Mais dinâmica)
+Olá, tudo bem?
 
-Oi, tudo bem?
+Acompanho a referência de atendimento da *Buzzi Odontologia* aqui em Curitiba e vi que vocês têm uma reputação excelente com os pacientes.
 
-Estava olhando o site da **Buzzi Odontologia** e percebi uma diferença grande entre a qualidade do trabalho de vocês e a forma como ele é apresentado hoje no site (principalmente no celular, onde o contato demora para carregar).
+Percebi, no entanto, que o site atual não reflete toda essa modernidade no celular — no teste do Google, a pontuação mobile ficou em *42/100*, demorando para exibir os serviços e o botão de WhatsApp.
 
-Para não ficar só na teoria, montei uma versão demonstrativa para vocês:
-👉 https://meudominio.com/preview/buzzi-odontologia
+Para demonstrar na prática como valorizar ainda mais a clínica e facilitar o contato dos pacientes, desenhei uma versão de alta performance (*98/100* no Google):
+https://meudominio.com/preview/buzzi-odontologia
 
-Não é template pronto de internet — montei especificamente com as especialidades e a identidade da empresa de vocês. O carregamento no teste do Google foi de 42 para 98/100.
+> Não é um modelo pronto de internet: preservei a essência da clínica, destacando os diferenciais em estética, ortodontia e implantes.
 
-Se gostar da proposta visual, te explico em 2 minutinhos os principais pontos que corrigi.
+Fique à vontade para navegar no celular. Se gostar da proposta, fico à disposição se quiserem implementar essas melhorias!

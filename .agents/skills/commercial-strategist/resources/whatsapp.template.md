@@ -1,28 +1,24 @@
-﻿# Scripts de Contato via WhatsApp: {{NOME_EMPRESA}}
+Olá, tudo bem?
 
-## Opção A: Abordagem com Pedido de Permissão (Recomendada para tom mais consultivo)
+Estive conhecendo o trabalho da *{{NOME_EMPRESA}}* aqui em {{CIDADE}} — parabéns pela atuação de destaque em {{NICHO}}.
 
-Oi, tudo bem?
+Notei apenas um ponto técnico importante: para quem acessa pelo celular ou 4G, a navegação fica um pouco pesada e o botão para falar direto no WhatsApp demora para carregar, o que pode fazer alguns clientes desistirem antes do primeiro contato.
 
-Dei uma olhada no site da **{{NOME_EMPRESA}}** enquanto pesquisava referências em {{NICHO}} aqui em {{CIDADE}}.
+Para ajudar, desenhei uma versão demonstrativa mostrando como o site de vocês poderia carregar de forma instantânea e moderna, valorizando ainda mais a autoridade da empresa.
 
-O trabalho de vocês tem muita autoridade, mas percebi que quem entra no site pelo celular hoje tem dificuldade para encontrar os serviços e falar direto no WhatsApp.
-
-Acabei montando um modelo novo para a página de vocês para mostrar na prática como isso poderia ficar mais ágil e moderno, preservando a identidade visual de vocês.
-
-Posso te mandar o link aqui para você dar uma olhada rápida?
+Se fizer sentido para vocês, posso te mandar o link aqui para dar uma olhada rápida?
 
 ---
 
-## Opção B: Abordagem com Envio Direto do Link (Mais dinâmica)
+Olá, tudo bem?
 
-Oi, tudo bem?
+Acompanho a trajetória da *{{NOME_EMPRESA}}* em {{CIDADE}} e vi que vocês têm um trabalho muito conceituado em {{NICHO}}.
 
-Estava olhando o site da **{{NOME_EMPRESA}}** e percebi uma diferença grande entre a qualidade do trabalho de vocês e a forma como ele é apresentado hoje no site (principalmente no celular, onde o contato demora para carregar).
+Percebi, no entanto, que o site atual não reflete toda essa modernidade no celular — no teste oficial do Google, a velocidade mobile ficou em *{{PS_ORIGINAL}}/100*, demorando para exibir as informações e o botão de WhatsApp.
 
-Para não ficar só na teoria, montei uma versão demonstrativa para vocês:
-👉 {{URL_DEMO}}
+Para demonstrar na prática como valorizar ainda mais a empresa e facilitar o contato dos clientes, desenhei uma versão de alta performance (*{{PS_REDESIGN}}/100* no Google):
+{{URL_DEMO}}
 
-Não é template pronto de internet — montei especificamente com as especialidades e a identidade da empresa de vocês. O carregamento no teste do Google foi de {{PS_ORIGINAL}} para {{PS_REDESIGN}}/100.
+> Não é um modelo pronto de internet: preservei a identidade da empresa, destacando os principais serviços e diferenciais de vocês.
 
-Se gostar da proposta visual, te explico em 2 minutinhos os principais pontos que corrigi.
+Fique à vontade para navegar no celular. Se gostar da proposta, fico à disposição se quiserem implementar essas melhorias!

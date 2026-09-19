@@ -881,8 +881,12 @@ const inactiveCount = totalProjects - activeCount;
           .replace(/^## (.*$)/gim, '<h3>$1</h3>')
           .replace(/^# (.*$)/gim, '<h2>$1</h2>')
           .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
-          .replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>')
-          .replace(/\*(.*)\*/gim, '<em>$1</em>')
+          .replace(/```([\s\S]*?)```/gim, '<pre><code>$1</code></pre>')
+          .replace(/`([^`]+)`/gim, '<code>$1</code>')
+          .replace(/~([^~]+)~/gim, '<del>$1</del>')
+          .replace(/\*\*([^*]+)\*\*/gim, '<strong>$1</strong>')
+          .replace(/\*([^*]+)\*/gim, '<strong>$1</strong>')
+          .replace(/_([^_]+)_/gim, '<em>$1</em>')
           .replace(/\n/g, '<br>');
       }
     });

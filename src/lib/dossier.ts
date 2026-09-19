@@ -120,15 +120,24 @@ export function formatDossierForDashboard(d: LeadDossier) {
   }
 
   // Parse whatsapp options
+  const sanitizeWsp = (text: string) => {
+    return text
+      .split('\n')
+      .filter(line => !line.trim().startsWith('#'))
+      .join('\n')
+      .replace(/\*\*(.*?)\*\*/g, '*$1*')
+      .trim();
+  };
+
   let wspOptA = '';
   let wspOptB = '';
   if (d.whatsappMd) {
     if (d.whatsappMd.includes('---')) {
       const parts = d.whatsappMd.split('---');
-      wspOptA = parts[0] ? parts[0].trim() : '';
-      wspOptB = parts[1] ? parts[1].trim() : '';
+      wspOptA = sanitizeWsp(parts[0] || '');
+      wspOptB = sanitizeWsp(parts[1] || '');
     } else {
-      wspOptA = d.whatsappMd.trim();
+      wspOptA = sanitizeWsp(d.whatsappMd);
     }
   }
 
