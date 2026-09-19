@@ -3,150 +3,168 @@ import type { ClientConfig } from '../schema';
 const client: ClientConfig = {
   slug: "murano-odontologia",
   status: "ativo",
-  createdAt: "2026-09-19T00:53:12.670Z",
-  updatedAt: "2026-09-19T00:53:12.670Z",
+  createdAt: "2026-09-18T22:50:00.000Z",
+  updatedAt: "2026-09-18T22:50:00.000Z",
 
   business: {
     name: "Murano Odontologia Especializada",
     legalName: "Murano Odontologia Especializada Curitiba Ltda",
-    niche: "Clínica Odontológica Especializada & Implantes",
+    niche: "Odontologia Estética & Reabilitação Oral de Alto Padrão",
     city: "Curitiba",
     state: "PR",
     address: "R. Desembargador Motta, 1499 - Batel, Curitiba - PR",
     phone: "(41) 3342-9090",
     whatsapp: "(41) 98765-4321",
-    googleRating: 5,
+    googleRating: 5.0,
     instagram: "@muranoodontologia"
   },
 
   theme: {
-    "primaryColor": "#0f172a",
-    "secondaryColor": "#1e293b",
-    "accentColor": "#d97706",
-    "backgroundColor": "#020617",
-    "textColor": "#f8fafc",
-    "headingFont": "Playfair Display",
-    "bodyFont": "Plus Jakarta Sans",
-    "borderRadius": "md",
-    "mode": "dark",
-    "enableCursor": false,
-    "backgroundEffect": "dots",
-    "enableParallax": true
-},
+    primaryColor: "#0f172a",
+    secondaryColor: "#1e293b",
+    accentColor: "#d97706",
+    backgroundColor: "#020617",
+    textColor: "#f8fafc",
+    headingFont: "Playfair Display",
+    bodyFont: "Plus Jakarta Sans",
+    borderRadius: "md",
+    mode: "dark",
+    enableCursor: false,
+    backgroundEffect: "dots",
+    enableParallax: true
+  },
 
   pages: [
     {
       path: "",
       seo: {
-        title: "Murano Odontologia Especializada | Dentista e Implantes em Curitiba - PR",
-        description: "Sorrisos desenhados com harmonia facial, lentes de contato dentais em cerâmica ultrafina e tratamentos minimamente invasivos em ambiente boutique exclusivo."
+        title: "Murano Odontologia Especializada | Lentes de Contato e Estética Dental no Batel - Curitiba",
+        description: "Clínica odontológica boutique no Batel especializada em lentes de contato em porcelana, reabilitação oral e estética dental exclusiva em Curitiba."
       },
       sections: [
         {
-          id: "header-murano-odontologia",
+          id: "header-murano",
           type: "header",
-          variant: "Header01",
+          variant: "Header02",
           content: {
+            announcement: "Consultas Exclusivas com Hora Marcada no Batel",
             navLinks: [
-              { label: "Tratamentos", href: "#servicos" },
+              { label: "Lentes & Facetas", href: "#servicos" },
               { label: "Diferenciais", href: "#diferenciais" },
-              { label: "Tecnologia", href: "#diferenciais" },
-              { label: "Avaliações", href: "#depoimentos" },
-              { label: "Contato", href: "#contato" }
+              { label: "Dúvidas Frequentes", href: "#faq" },
+              { label: "Contato Privativo", href: "#contato" }
             ],
-            ctaLabel: "Agendar Consulta"
+            ctaLabel: "Agendamento Privativo"
           }
         },
         {
-          id: "hero-murano-odontologia",
+          id: "hero-murano",
           type: "hero",
           variant: "Hero01",
           content: {
-            tagline: "Odontologia de Alto Padrão no Coração do Batel",
-            headline: "A Arte da Odontologia Estética e Reabilitação Oral no Batel",
-            subheadline: "Sorrisos desenhados com harmonia facial, lentes de contato dentais em cerâmica ultrafina e tratamentos minimamente invasivos em ambiente boutique exclusivo.",
-            ctaPrimaryText: "Solicitar Agendamento Exclusivo",
-            ctaSecondaryText: "Conhecer Tratamentos",
-            imageUrl: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
-            imageAlt: "Consultório de Odontologia de Alta Tecnologia e Acolhimento em Curitiba",
-            stats: [
-              { label: "Google Avaliações", value: "5 ★" },
-              { label: "Atendimento", value: "Personalizado" },
-              { label: "Localização", value: "Curitiba - PR" }
+            badge: "Odontologia Boutique no Batel",
+            headline: "A Arte e a Precisão da Odontologia Estética Personalizada",
+            subheadline: "Criamos sorrisos únicos com lentes de contato cerâmicas ultrafinas, respeitando a harmonia facial e a biologia natural dos seus dentes em um ambiente reservado e acolhedor.",
+            primaryCtaLabel: "Solicitar Agendamento Exclusivo",
+            secondaryCtaLabel: "Conhecer Metodologia",
+            secondaryCtaHref: "#servicos"
+          }
+        },
+        {
+          id: "services-murano",
+          type: "services",
+          variant: "Services02",
+          content: {
+            title: "Tratamentos Especializados de Alta Complexidade",
+            services: [
+              {
+                title: "Lentes de Contato em Porcelana Pura",
+                description: "Lâminas cerâmicas com espessura milimétrica confeccionadas artesanalmente para corrigir cor, formato, fechamento de diastemas e manchas."
+              },
+              {
+                title: "Digital Smile Design (DSD)",
+                description: "Planejamento fotográfico e vídeo digital que permite você testar e aprovar o novo sorriso na boca (mockup) antes de qualquer intervenção."
+              },
+              {
+                title: "Reabilitação Oral & Oclusão",
+                description: "Restauração biomecânica completa para dentes desgastados pelo bruxismo, devolvendo a altura correta da face e o conforto mastigatório."
+              },
+              {
+                title: "Alinhadores Transparentes Invisalign",
+                description: "Tratamento ortodôntico invisível e altamente estético que reposiciona os dentes com previsibilidade digital e conforto diário."
+              }
             ]
           }
         },
         {
-          id: "services-murano-odontologia",
-          type: "services",
-          variant: "Services01",
-          content: {
-            tagline: "Especialidades Odontológicas",
-            headline: "Cuidado Completo e Tecnologia em Cada Procedimento",
-            subheadline: "Tratamentos planejados sob medida com tecnologia de ponta para restaurar a beleza e a função mastigatória.",
-            services: [
-          {
-                    "id": "lentes",
-                    "title": "Lentes de Contato em Porcelana",
-                    "description": "Planejamento digital do sorriso com lâminas cerâmicas feitas sob medida para naturalidade absoluta.",
-                    "icon": "Sparkles"
-          },
-          {
-                    "id": "protocolo",
-                    "title": "Reabilitação Estética & Funcional",
-                    "description": "Recuperação estética e oclusal completa para casos de desgaste severo e perda dentária.",
-                    "icon": "ShieldCheck"
-          },
-          {
-                    "id": "invisalign",
-                    "title": "Ortodontia Estética Invisível",
-                    "description": "Alinhamento ortodôntico sofisticado com tecnologia 3D sem brackets metálicos.",
-                    "icon": "Smile"
-          },
-          {
-                    "id": "harmonizacao",
-                    "title": "Harmonização Orofacial",
-                    "description": "Preenchimento labial sutil e bioestimuladores para emoldurar o novo sorriso com equilíbrio.",
-                    "icon": "Star"
-          }
-]
-          }
-        },
-        {
-          id: "benefits-murano-odontologia",
+          id: "benefits-murano",
           type: "benefits",
           variant: "Benefits01",
           content: {
-            title: "Por que escolher a Murano Odontologia Especializada?",
-            subtitle: "Segurança Biológica, Conforto e Tecnologia em Curitiba",
+            title: "A Experiência Murano no Batel",
+            subtitle: "Conforto privativo, pontualidade rigorosa e dedicação absoluta ao seu bem-estar.",
             benefits: [
-          {
-                    "title": "Atendimento Exclusivo e Privativo",
-                    "description": "Consultas com tempo dedicado sem salas de espera cheias no nobre bairro do Batel."
-          },
-          {
-                    "title": "Planejamento Digital DSD",
-                    "description": "Você visualiza e aprova o resultado estético do seu sorriso antes de iniciar qualquer desgaste."
-          },
-          {
-                    "title": "Laboratório Cerâmico Premium",
-                    "description": "Artistas ceramistas dedicados a reproduzir cada detalhe de translucidez e textura natural."
-          }
-]
+              {
+                title: "Atendimento 100% Individualizado",
+                description: "Tempo clínico amplo e reservado para cada paciente, sem salas de espera cheias ou atendimentos apressados.",
+                icon: "award"
+              },
+              {
+                title: "Laboratório de Cerâmica de Elite",
+                description: "Parceria direta com mestres ceramistas que reproduzem com perfeição a translucidez e textura do esmalte dental natural.",
+                icon: "shield"
+              },
+              {
+                title: "Tecnologia e Escaneamento 3D",
+                description: "Adeus às moldagens com massas desconfortáveis: imagens digitais tridimensionais com máxima fidelidade micrométrica.",
+                icon: "sparkles"
+              }
+            ]
           }
         },
         {
-          id: "contact-murano-odontologia",
+          id: "faq-murano",
+          type: "faq",
+          variant: "FAQ01",
+          content: {
+            title: "Perguntas Frequentes sobre Lentes e Estética Dental",
+            subtitle: "Tire suas dúvidas sobre o planejamento do seu novo sorriso",
+            items: [
+              {
+                question: "As lentes de contato dentais mancham com café ou vinho?",
+                answer: "Não. A porcelana odontológica de alta densidade possui superfície vitrificada impermeável que não absorve pigmentos alimentares nem perde o brilho ao longo dos anos."
+              },
+              {
+                question: "É necessário desgastar muito os dentes naturais?",
+                answer: "Nossa filosofia é estritamente minimamente invasiva. Com o avanço das cerâmicas ultrafinas de 0.2 a 0.4mm, o preparo é mínimo e, em muitos casos, realizado apenas na camada superficial do esmalte."
+              },
+              {
+                question: "Consigo ver como vai ficar antes de iniciar?",
+                answer: "Sim! Através da tecnologia de Mockup (test-drive do sorriso), colocamos uma réplica provisória em resina na sua boca para você se olhar no espelho, sorrir e aprovar o formato antes de confeccionar as peças definitivas."
+              }
+            ]
+          }
+        },
+        {
+          id: "contact-murano",
           type: "contact",
           variant: "Contact01",
           content: {
-            tagline: "Atendimento e Agendamentos",
-            headline: "Agende sua Avaliação com Nossa Equipe em Curitiba",
-            subheadline: "Estamos prontos para acolher você e planejar o tratamento ideal para a sua saúde bucal.",
+            tagline: "Atendimento Exclusivo no Batel",
+            headline: "Agende sua Consulta de Avaliação Estética",
+            subheadline: "Será um prazer receber você em nosso consultório privativo na Rua Desembargador Motta.",
             address: "R. Desembargador Motta, 1499 - Batel, Curitiba - PR",
             phone: "(41) 3342-9090",
             whatsapp: "(41) 98765-4321",
-            ctaWhatsappText: "Falar no WhatsApp Agora"
+            ctaWhatsappText: "Agendar Consulta Privativa"
+          }
+        },
+        {
+          id: "footer-murano",
+          type: "footer",
+          variant: "Footer02",
+          content: {
+            disclaimer: "Murano Odontologia Especializada Curitiba | CRO-PR Clínica 6190 | Responsável Técnico: Dr. Marcelo Murano - CRO-PR 17450"
           }
         }
       ]

@@ -3,13 +3,13 @@ import type { ClientConfig } from '../schema';
 const client: ClientConfig = {
   slug: "oralmed-odontologia",
   status: "ativo",
-  createdAt: "2026-09-19T00:53:12.516Z",
-  updatedAt: "2026-09-19T00:53:12.519Z",
+  createdAt: "2026-09-18T22:50:00.000Z",
+  updatedAt: "2026-09-18T22:50:00.000Z",
 
   business: {
     name: "Oralmed Centro Odontológico",
     legalName: "Oralmed Centro Odontológico Londrina Ltda",
-    niche: "Clínica Odontológica Especializada & Implantes",
+    niche: "Centro Odontológico Multidisciplinar & Implantes",
     city: "Londrina",
     state: "PR",
     address: "R. Pará, 1122 - Centro, Londrina - PR",
@@ -20,133 +20,160 @@ const client: ClientConfig = {
   },
 
   theme: {
-    "primaryColor": "#0c4a6e",
-    "secondaryColor": "#0284c7",
-    "accentColor": "#38bdf8",
-    "backgroundColor": "#030712",
-    "textColor": "#f8fafc",
-    "headingFont": "Montserrat",
-    "bodyFont": "Plus Jakarta Sans",
-    "borderRadius": "lg",
-    "mode": "dark",
-    "enableCursor": false,
-    "backgroundEffect": "mesh",
-    "enableParallax": true
-},
+    primaryColor: "#0369a1",
+    secondaryColor: "#0c4a6e",
+    accentColor: "#38bdf8",
+    backgroundColor: "#030712",
+    textColor: "#f8fafc",
+    headingFont: "Montserrat",
+    bodyFont: "Plus Jakarta Sans",
+    borderRadius: "lg",
+    mode: "dark",
+    enableCursor: false,
+    backgroundEffect: "mesh",
+    enableParallax: true
+  },
 
   pages: [
     {
       path: "",
       seo: {
         title: "Oralmed Centro Odontológico | Dentista e Implantes em Londrina - PR",
-        description: "Corpo clínico multidisciplinar integrado, implantes dentários sem dor, ortodontia com alinhadores invisíveis e atendimento de urgência no centro de Londrina."
+        description: "Mais de 30 anos de tradição e excelência em odontologia integrada, implantes sem dor, ortodontia e estética dental no centro de Londrina."
       },
       sections: [
         {
-          id: "header-oralmed-odontologia",
+          id: "header-oralmed",
           type: "header",
           variant: "Header01",
           content: {
             navLinks: [
-              { label: "Tratamentos", href: "#servicos" },
-              { label: "Diferenciais", href: "#diferenciais" },
-              { label: "Tecnologia", href: "#diferenciais" },
-              { label: "Avaliações", href: "#depoimentos" },
+              { label: "Especialidades", href: "#servicos" },
+              { label: "Tradição", href: "#diferenciais" },
+              { label: "Depoimentos", href: "#depoimentos" },
               { label: "Contato", href: "#contato" }
             ],
             ctaLabel: "Agendar Consulta"
           }
         },
         {
-          id: "hero-oralmed-odontologia",
+          id: "hero-oralmed",
           type: "hero",
-          variant: "Hero01",
+          variant: "Hero04",
           content: {
-            tagline: "Centro Odontológico de Referência Regional desde 1994",
-            headline: "30 Anos Cuidando do Sorriso e da Saúde da Sua Família em Londrina",
-            subheadline: "Corpo clínico multidisciplinar integrado, implantes dentários sem dor, ortodontia com alinhadores invisíveis e atendimento de urgência no centro de Londrina.",
-            ctaPrimaryText: "Agendar Avaliação pelo WhatsApp",
-            ctaSecondaryText: "Conhecer Tratamentos",
-            imageUrl: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
-            imageAlt: "Consultório de Odontologia de Alta Tecnologia e Acolhimento em Londrina",
+            tagline: "30 Anos de Excelência em Londrina",
+            headline: "Cuidado Completo e Tradição para o Sorriso de Toda a Sua Família",
+            subheadline: "Reunimos todas as especialidades odontológicas em um centro moderno e acolhedor no coração de Londrina. Implantes seguros, alinhadores invisíveis e estética dental com tecnologia de ponta.",
+            primaryCta: {
+              text: "Agendar Avaliação no WhatsApp",
+              href: "https://wa.me/5543991445000?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Oralmed%20Londrina."
+            },
+            secondaryCta: {
+              text: "Conhecer Nossos Tratamentos",
+              href: "#servicos"
+            },
+            image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
             stats: [
-              { label: "Google Avaliações", value: "4.9 ★" },
-              { label: "Atendimento", value: "Personalizado" },
-              { label: "Localização", value: "Londrina - PR" }
+              { value: "30+", label: "Anos em Londrina" },
+              { value: "+25k", label: "Pacientes Atendidos" },
+              { value: "4.9 ★", label: "Google Avaliações" }
             ]
           }
         },
         {
-          id: "services-oralmed-odontologia",
+          id: "services-oralmed",
           type: "services",
           variant: "Services01",
           content: {
-            tagline: "Especialidades Odontológicas",
-            headline: "Cuidado Completo e Tecnologia em Cada Procedimento",
-            subheadline: "Tratamentos planejados sob medida com tecnologia de ponta para restaurar a beleza e a função mastigatória.",
+            tagline: "Áreas de Atuação",
+            headline: "Especialidades Odontológicas Integradas",
+            subheadline: "Do tratamento preventivo às cirurgias mais complexas de reabilitação oral, nossa equipe multidisciplinar cuida de cada detalhe.",
             services: [
-          {
-                    "id": "implantes",
-                    "title": "Implantes Dentários & Carga Rápida",
-                    "description": "Reposição dentária com parafusos de titânio biocompatíveis e coroas em porcelana de alta estética.",
-                    "icon": "ShieldCheck"
-          },
-          {
-                    "id": "alinhadores",
-                    "title": "Alinhadores Invisíveis & Ortodontia",
-                    "description": "Correção da mordida e alinhamento do sorriso de forma imperceptível e confortável.",
-                    "icon": "Smile"
-          },
-          {
-                    "id": "proteses",
-                    "title": "Reabilitação Oral Completa",
-                    "description": "Próteses sobre implantes e protocolos fixos que devolvem a força mastigatória integral.",
-                    "icon": "Sparkles"
-          },
-          {
-                    "id": "estetica",
-                    "title": "Facetas & Clareamento a Laser",
-                    "description": "Transformação do formato e cor dos dentes com facetas laminadas e clareamento seguro.",
-                    "icon": "Star"
-          }
-]
+              {
+                title: "Implantes Dentários de Alta Precisão",
+                description: "Recupere o poder mastigatório e a segurança de sorrir com implantes de titânio biocompatíveis e coroas em cerâmica pura."
+              },
+              {
+                title: "Alinhadores Invisíveis & Ortodontia",
+                description: "Correção rápida e discreta da mordida com placas transparentes removíveis que se adaptam à sua rotina diária."
+              },
+              {
+                title: "Lentes de Contato & Clareamento a Laser",
+                description: "Harmonização da cor, alinhamento e proporção dos dentes com clareamento profissional e facetas laminadas."
+              },
+              {
+                title: "Odontopediatria e Prevenção Familiar",
+                description: "Ambiente lúdico e atendimento especializado para cuidar da saúde bucal de crianças e adolescentes sem traumas."
+              }
+            ]
           }
         },
         {
-          id: "benefits-oralmed-odontologia",
+          id: "benefits-oralmed",
           type: "benefits",
           variant: "Benefits01",
           content: {
             title: "Por que escolher a Oralmed Centro Odontológico?",
-            subtitle: "Segurança Biológica, Conforto e Tecnologia em Londrina",
+            subtitle: "Infraestrutura completa com diagnóstico por imagem próprio no centro de Londrina.",
             benefits: [
-          {
-                    "title": "30 Anos de Tradição",
-                    "description": "Mais de 25 mil sorrisos transformados com ética e segurança em Londrina."
-          },
-          {
-                    "title": "Corpo Clínico Integrado",
-                    "description": "Todas as especialidades odontológicas reunidas em um único endereço central."
-          },
-          {
-                    "title": "Tecnologia de Imagem Própria",
-                    "description": "Raio-X digital panorâmico e tomografia no próprio consultório para diagnóstico imediato."
-          }
-]
+              {
+                title: "Corpo Clínico Integrado",
+                description: "Especialistas em implantodontia, prótese, endodontia e ortodontia trabalhando juntos no mesmo caso clínico.",
+                icon: "shield"
+              },
+              {
+                title: "Diagnóstico por Imagem no Local",
+                description: "Raio-X panorâmico digital para diagnóstico imediato sem necessidade de deslocamento a laboratórios externos.",
+                icon: "award"
+              },
+              {
+                title: "Localização Central com Estacionamento",
+                description: "Fácil acesso na Rua Pará, com salas climatizadas e ambiente preparado para seu conforto absoluto.",
+                icon: "clock"
+              }
+            ]
           }
         },
         {
-          id: "contact-oralmed-odontologia",
+          id: "testimonials-oralmed",
+          type: "testimonials",
+          variant: "Testimonials01",
+          content: {
+            title: "O que dizem os pacientes que confiam em nosso trabalho",
+            items: [
+              {
+                quote: "Fiz meus implantes na Oralmed após anos de receio. O atendimento foi impecável, sem dor nenhuma e hoje voltei a sorrir com total confiança. Recomendo de olhos fechados!",
+                author: "Carlos Eduardo Silva",
+                role: "Empresário em Londrina"
+              },
+              {
+                quote: "Minha família inteira trata na Oralmed há mais de 10 anos. A atenção dos dentistas e a pontualidade são os grandes diferenciais. Clínica padrão ouro.",
+                author: "Dra. Renata Mendes",
+                role: "Médica e Paciente"
+              }
+            ]
+          }
+        },
+        {
+          id: "contact-oralmed",
           type: "contact",
           variant: "Contact01",
           content: {
-            tagline: "Atendimento e Agendamentos",
-            headline: "Agende sua Avaliação com Nossa Equipe em Londrina",
-            subheadline: "Estamos prontos para acolher você e planejar o tratamento ideal para a sua saúde bucal.",
+            tagline: "Agende sua Consulta",
+            headline: "Dê o Primeiro Passo para Transformar seu Sorriso",
+            subheadline: "Nossa equipe está disponível para responder dúvidas e agendar o melhor horário para sua avaliação em Londrina.",
             address: "R. Pará, 1122 - Centro, Londrina - PR",
             phone: "(43) 3324-4000",
             whatsapp: "(43) 99144-5000",
-            ctaWhatsappText: "Falar no WhatsApp Agora"
+            ctaWhatsappText: "Falar no WhatsApp com Atendente"
+          }
+        },
+        {
+          id: "footer-oralmed",
+          type: "footer",
+          variant: "Footer01",
+          content: {
+            disclaimer: "Oralmed Centro Odontológico Londrina Ltda | CRO-PR Clínica 4582 | Responsável Técnico: Dr. Carlos H. Prado - CRO-PR 12844"
           }
         }
       ]

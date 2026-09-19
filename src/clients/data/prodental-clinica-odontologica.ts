@@ -3,13 +3,13 @@ import type { ClientConfig } from '../schema';
 const client: ClientConfig = {
   slug: "prodental-clinica-odontologica",
   status: "ativo",
-  createdAt: "2026-09-19T00:53:12.951Z",
-  updatedAt: "2026-09-19T00:53:12.951Z",
+  createdAt: "2026-09-18T22:50:00.000Z",
+  updatedAt: "2026-09-18T22:50:00.000Z",
 
   business: {
     name: "Pró-Dental Clínica Odontológica",
     legalName: "Pró-Dental Clínica Odontológica Especializada Ltda",
-    niche: "Clínica Odontológica Especializada & Implantes",
+    niche: "Microscopia Operatória & Cirurgias Odontológicas",
     city: "Curitiba",
     state: "PR",
     address: "R. Mariano Torres, 729 - Centro, Curitiba - PR",
@@ -20,133 +20,175 @@ const client: ClientConfig = {
   },
 
   theme: {
-    "primaryColor": "#0f172a",
-    "secondaryColor": "#334155",
-    "accentColor": "#06b6d4",
-    "backgroundColor": "#020617",
-    "textColor": "#f8fafc",
-    "headingFont": "Montserrat",
-    "bodyFont": "Plus Jakarta Sans",
-    "borderRadius": "md",
-    "mode": "dark",
-    "enableCursor": false,
-    "backgroundEffect": "dots",
-    "enableParallax": true
-},
+    primaryColor: "#0891b2",
+    secondaryColor: "#164e63",
+    accentColor: "#06b6d4",
+    backgroundColor: "#020617",
+    textColor: "#f8fafc",
+    headingFont: "Montserrat",
+    bodyFont: "Inter",
+    borderRadius: "md",
+    mode: "dark",
+    enableCursor: false,
+    backgroundEffect: "mesh",
+    enableParallax: true
+  },
 
   pages: [
     {
       path: "",
       seo: {
-        title: "Pró-Dental Clínica Odontológica | Dentista e Implantes em Curitiba - PR",
-        description: "Endodontia em sessão única sob microscópio Zeiss, cirurgias regenerativas a laser e prevenção de precisão no centro de Curitiba."
+        title: "Pró-Dental Clínica Odontológica | Microscopia e Implantes no Centro de Curitiba",
+        description: "Clínica odontológica de alta precisão no centro de Curitiba: tratamento de canal em sessão única sob microscópio Zeiss, cirurgias a laser e prevenção avançada."
       },
       sections: [
         {
-          id: "header-prodental-clinica-odontologica",
+          id: "header-prodental",
           type: "header",
-          variant: "Header01",
+          variant: "Header02",
           content: {
+            announcement: "Endodontia Microscópica em Sessão Única e Sem Dor",
             navLinks: [
+              { label: "Sobre Nós", href: "#escritorio" },
               { label: "Tratamentos", href: "#servicos" },
               { label: "Diferenciais", href: "#diferenciais" },
-              { label: "Tecnologia", href: "#diferenciais" },
-              { label: "Avaliações", href: "#depoimentos" },
+              { label: "Dúvidas", href: "#faq" },
               { label: "Contato", href: "#contato" }
             ],
-            ctaLabel: "Agendar Consulta"
+            ctaLabel: "Agendar por WhatsApp"
           }
         },
         {
-          id: "hero-prodental-clinica-odontologica",
+          id: "hero-prodental",
           type: "hero",
           variant: "Hero01",
           content: {
-            tagline: "Diagnóstico por Imagem e Alta Precisão Clínica em Curitiba",
-            headline: "Precisão Microscópica em Tratamentos Odontológicos Avançados",
-            subheadline: "Endodontia em sessão única sob microscópio Zeiss, cirurgias regenerativas a laser e prevenção de precisão no centro de Curitiba.",
-            ctaPrimaryText: "Agendar Consulta por WhatsApp",
-            ctaSecondaryText: "Conhecer Tratamentos",
-            imageUrl: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
-            imageAlt: "Consultório de Odontologia de Alta Tecnologia e Acolhimento em Curitiba",
-            stats: [
-              { label: "Google Avaliações", value: "4.8 ★" },
-              { label: "Atendimento", value: "Personalizado" },
-              { label: "Localização", value: "Curitiba - PR" }
+            badge: "Diagnóstico e Precisão Microscópica Zeiss",
+            headline: "Tratamentos Odontológicos de Alta Precisão sem Dor e em Menos Sessões",
+            subheadline: "Utilizamos microscópios operatórios com magnificação de 20x e tecnologia a laser no centro de Curitiba para salvar dentes condenados e garantir resultados definitivos.",
+            primaryCtaLabel: "Falar com Dentista no WhatsApp",
+            secondaryCtaLabel: "Conhecer a Clínica",
+            secondaryCtaHref: "#escritorio"
+          }
+        },
+        {
+          id: "about-prodental",
+          type: "about",
+          variant: "About01",
+          content: {
+            badge: "Tecnologia a Favor da Saúde Bucal",
+            title: "Preservação Máxima da Estrutura Dental Sadia",
+            text1: "A Pró-Dental nasceu com a proposta de unir precisão tecnológica e acolhimento humano no centro de Curitiba. Nosso foco é resolver casos complexos com rapidez e sem sofrimento para o paciente.",
+            text2: "Com o auxílio da microscopia cirúrgica, enxergamos detalhes anatômicos invisíveis a olho nu, permitindo tratamentos de canal em sessão única e cirurgias periodontais minimamente invasivas.",
+            highlights: [
+              { value: "20x", label: "Magnificação Óptica Zeiss" },
+              { value: "1 Sessão", label: "Protocolo de Canal Ágil" },
+              { value: "100%", label: "Anestesia Computadorizada" }
+            ],
+            whyChoose: [
+              "Resolução de canais complexos e retratamentos em sessão única",
+              "Laserterapia pós-cirúrgica para acelerar cicatrização e eliminar dores",
+              "Localização privilegiada na Rua Mariano Torres com estacionamento fácil"
             ]
           }
         },
         {
-          id: "services-prodental-clinica-odontologica",
+          id: "services-prodental",
           type: "services",
           variant: "Services01",
           content: {
-            tagline: "Especialidades Odontológicas",
-            headline: "Cuidado Completo e Tecnologia em Cada Procedimento",
-            subheadline: "Tratamentos planejados sob medida com tecnologia de ponta para restaurar a beleza e a função mastigatória.",
+            tagline: "Especialidades Clínicas",
+            headline: "Procedimentos Realizados sob Microscopia e Laser",
+            subheadline: "Tecnologia avançada aplicada diretamente no diagnóstico e na execução cirúrgica de cada tratamento.",
             services: [
-          {
-                    "id": "microscopia",
-                    "title": "Canal em Sessão Única com Microscopia",
-                    "description": "Tratamento endodôntico rápido, preciso e sem dor, visualizando anatomias dentárias complexas.",
-                    "icon": "Eye"
-          },
-          {
-                    "id": "laserterapia",
-                    "title": "Odontologia a Laser & Cicatrização",
-                    "description": "Bioestimulação rápida de aftas, herpes e cicatrização acelerada no pós-cirúrgico.",
-                    "icon": "Zap"
-          },
-          {
-                    "id": "implantes-proteses",
-                    "title": "Implantes & Coroas Zircônia",
-                    "description": "Reabilitações resistentes e livres de metal com ajuste micrométrico para conforto absoluto.",
-                    "icon": "ShieldCheck"
-          },
-          {
-                    "id": "prevencao-checkup",
-                    "title": "Check-up Preventivo Digital",
-                    "description": "Câmera intraoral que detecta lesões incipientes antes de se transformarem em dor de dente.",
-                    "icon": "Sparkles"
-          }
-]
+              {
+                title: "Canal em Sessão Única com Microscópio",
+                description: "Eliminação da dor e desinfecção profunda dos canais radiculares em apenas um atendimento, sem necessidade de curativos demorados."
+              },
+              {
+                title: "Cirurgias Periodontais e Regenerativas a Laser",
+                description: "Remoção de bactérias periodontais com bioestimulação tecidual rápida, reduzindo sangramentos e inchaço pós-operatório."
+              },
+              {
+                title: "Implantes Unitários e Coroas em Zircônia",
+                description: "Substituição precisa de dentes perdidos com materiais livres de metal e adaptação gengival perfeitamente natural."
+              },
+              {
+                title: "Check-up Digital com Câmera Intraoral",
+                description: "Inspeção minuciosa com imagens ampliadas na tela para você visualizar a saúde dos seus dentes antes de qualquer tratamento."
+              }
+            ]
           }
         },
         {
-          id: "benefits-prodental-clinica-odontologica",
+          id: "benefits-prodental",
           type: "benefits",
           variant: "Benefits01",
           content: {
-            title: "Por que escolher a Pró-Dental Clínica Odontológica?",
-            subtitle: "Segurança Biológica, Conforto e Tecnologia em Curitiba",
+            title: "Por que os pacientes escolhem a Pró-Dental?",
+            subtitle: "Diferenciais tecnológicos que tornam sua consulta calma e resolutiva.",
             benefits: [
-          {
-                    "title": "Microscopia Cirúrgica Operatória",
-                    "description": "Aumento de até 20x do campo de visão para preservar o máximo da estrutura do dente sadio."
-          },
-          {
-                    "title": "Sessões Otimizadas",
-                    "description": "Procedimentos complexos resolvidos com agilidade para quem possui rotina profissional intensa."
-          },
-          {
-                    "title": "Localização Central Acessível",
-                    "description": "Fácil estacionamento e acesso rápido para pacientes de todas as regiões de Curitiba."
-          }
-]
+              {
+                title: "Zero Ansiedade e Zero Dor",
+                description: "Sistema de anestesia computadorizada que injeta o anestésico gota a gota na velocidade da absorção do tecido.",
+                icon: "shield"
+              },
+              {
+                title: "Microscopia Óptica Cirúrgica",
+                description: "Aumento de até 20 vezes do campo de visão para limpeza milimétrica de canais e microfissuras.",
+                icon: "award"
+              },
+              {
+                title: "Horários Estendidos e Centrais",
+                description: "Atendimento planejado para executivos e profissionais que precisam de flexibilidade na rotina central de Curitiba.",
+                icon: "clock"
+              }
+            ]
           }
         },
         {
-          id: "contact-prodental-clinica-odontologica",
+          id: "faq-prodental",
+          type: "faq",
+          variant: "FAQ01",
+          content: {
+            title: "Dúvidas Frequentes sobre Canal e Microscopia",
+            subtitle: "Entenda como a tecnologia elimina mitos antigos da odontologia",
+            items: [
+              {
+                question: "Tratamento de canal ainda dói?",
+                answer: "Não! Com a anestesia computadorizada guiada e o uso de instrumentos rotatórios flexíveis de níquel-titânio, o procedimento é completamente indolor durante e após a sessão."
+              },
+              {
+                question: "Por que fazer canal em sessão única?",
+                answer: "A microscopia operatória permite localizar todos os canais extras e desinfectá-los totalmente na mesma consulta, evitando o risco de recontaminação entre sessões com curativos temporários."
+              },
+              {
+                question: "A clínica atende urgências no centro de Curitiba?",
+                answer: "Sim! Dispomos de encaixes prioritários para casos de dor de dente aguda, fraturas dentárias ou traumas para alívio imediato no mesmo dia."
+              }
+            ]
+          }
+        },
+        {
+          id: "contact-prodental",
           type: "contact",
           variant: "Contact01",
           content: {
-            tagline: "Atendimento e Agendamentos",
-            headline: "Agende sua Avaliação com Nossa Equipe em Curitiba",
-            subheadline: "Estamos prontos para acolher você e planejar o tratamento ideal para a sua saúde bucal.",
+            tagline: "Localização Central em Curitiba",
+            headline: "Agende sua Avaliação com Nossa Equipe Especializada",
+            subheadline: "Estamos prontos para esclarecer seu diagnóstico e planejar o tratamento mais conservador e eficaz.",
             address: "R. Mariano Torres, 729 - Centro, Curitiba - PR",
             phone: "(41) 3233-1020",
             whatsapp: "(41) 99877-6655",
-            ctaWhatsappText: "Falar no WhatsApp Agora"
+            ctaWhatsappText: "Falar com Atendimento no WhatsApp"
+          }
+        },
+        {
+          id: "footer-prodental",
+          type: "footer",
+          variant: "Footer02",
+          content: {
+            disclaimer: "Pró-Dental Clínica Odontológica Especializada Ltda | CRO-PR Clínica 5890 | RT: Dra. Camila S. Ferreira - CRO-PR 19420"
           }
         }
       ]
