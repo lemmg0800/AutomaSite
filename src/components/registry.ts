@@ -112,13 +112,22 @@ export function getComponent(type: string, variant: string, clientSlug?: string)
   }
 
   // 2. Utiliza a biblioteca compartilhada global
-  const category = COMPONENT_REGISTRY[type as keyof typeof COMPONENT_REGISTRY];
+  const resolvedType = type === 'differentials' ? 'benefits' : type;
+  const category = COMPONENT_REGISTRY[resolvedType as keyof typeof COMPONENT_REGISTRY];
   if (!category) {
-    throw new Error(`[ComponentRegistry] Categoria desconhecida: "${type}"`);
+    console.warn(`[ComponentRegistry] Categoria desconhecida: "${type}"`);
+    return null;
   }
-  const component = (category as any)[variant];
+  let component = (category as any)[variant];
   if (!component) {
-    throw new Error(`[ComponentRegistry] Variante "${variant}" não encontrada na categoria "${type}"`);
+    const available = Object.keys(category);
+    if (available.length > 0) {
+      console.warn(`[ComponentRegistry] Variante "${variant}" não encontrada na categoria "${type}". Usando fallback "${available[0]}".`);
+      component = (category as any)[available[0]];
+    } else {
+      console.warn(`[ComponentRegistry] Nenhuma variante disponível na categoria "${type}".`);
+      return null;
+    }
   }
   return component;
 }

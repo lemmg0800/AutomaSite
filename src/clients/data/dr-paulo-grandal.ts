@@ -161,7 +161,7 @@ const client: ClientConfig = {
   {
     "id": "benefits-dr-paulo-grandal",
     "type": "benefits",
-    "variant": "Differentials01",
+    "variant": "Benefits01",
     "content": {
       "tagline": "Por Que Nos Escolher",
       "headline": "Tratamento Rápido, Humanizado e Sem Complicações",

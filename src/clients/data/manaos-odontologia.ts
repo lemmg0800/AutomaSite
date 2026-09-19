@@ -139,7 +139,7 @@ const client: ClientConfig = {
   {
     "id": "benefits-manaos-odontologia",
     "type": "benefits",
-    "variant": "Differentials02",
+    "variant": "Benefits01",
     "content": {
       "tagline": "Diferenciais Manaós",
       "headline": "20 Anos Cuidando dos Sorrisos dos Amazonenses",
@@ -162,7 +162,7 @@ const client: ClientConfig = {
   {
     "id": "stats-manaos-odontologia",
     "type": "stats",
-    "variant": "Stats02",
+    "variant": "Stats01",
     "content": {
       "stats": [
         {
@@ -187,7 +187,7 @@ const client: ClientConfig = {
   {
     "id": "testimonials-manaos-odontologia",
     "type": "testimonials",
-    "variant": "Testimonials02",
+    "variant": "Testimonials01",
     "content": {
       "tagline": "Quem Conhece Recomenda",
       "headline": "A Opinião das Famílias que Confiam na Manaós",
@@ -204,7 +204,7 @@ const client: ClientConfig = {
   {
     "id": "cta-manaos-odontologia",
     "type": "cta",
-    "variant": "CTA02",
+    "variant": "CTA01",
     "content": {
       "headline": "Encontre a Unidade Mais Próxima e Marque Seu Horário",
       "subheadline": "Equipe pronta para atender você com o máximo de carinho e tecnologia.",

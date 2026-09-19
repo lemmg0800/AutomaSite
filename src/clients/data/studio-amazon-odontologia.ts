@@ -45,7 +45,7 @@ const client: ClientConfig = {
   {
     "id": "header-studio-amazon-odontologia",
     "type": "header",
-    "variant": "Header03",
+    "variant": "Header02",
     "content": {
       "navLinks": [
         {
@@ -129,7 +129,7 @@ const client: ClientConfig = {
   {
     "id": "services-studio-amazon-odontologia",
     "type": "services",
-    "variant": "Services04",
+    "variant": "Services03",
     "content": {
       "tagline": "Odontologia de Alta Precisão",
       "headline": "Tecnologia Digital a Favor da Estética do Seu Sorriso",
@@ -164,7 +164,7 @@ const client: ClientConfig = {
   {
     "id": "benefits-studio-amazon-odontologia",
     "type": "benefits",
-    "variant": "Differentials03",
+    "variant": "Benefits01",
     "content": {
       "tagline": "A Vanguarda Odontológica",
       "headline": "O Que Torna o Studio Amazon Único no Norte",
@@ -204,7 +204,7 @@ const client: ClientConfig = {
   {
     "id": "cta-studio-amazon-odontologia",
     "type": "cta",
-    "variant": "CTA03",
+    "variant": "CTA01",
     "content": {
       "headline": "Viva a Experiência da Odontologia 100% Digital",
       "subheadline": "Agende sua sessão de escaneamento intraoral 3D sem custo inicial no Adrianópolis.",

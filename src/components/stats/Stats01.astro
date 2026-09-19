@@ -1,4 +1,4 @@
-﻿---
+---
 import type { ClientConfig } from '../../clients/schema';
 
 interface Props {
@@ -14,9 +14,9 @@ const { content, client } = Astro.props;
 <section class="py-14 border-y border-white/10" style="background-color: var(--color-secondary);">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-      {content.stats.map(st => (
+      {(content?.stats || (content as any)?.items || []).map((st: any) => (
         <div>
-          <span class="text-3xl sm:text-4xl font-extrabold block mb-1" style="color: var(--color-accent); font-family: var(--font-heading);">{st.number}</span>
+          <span class="text-3xl sm:text-4xl font-extrabold block mb-1" style="color: var(--color-accent); font-family: var(--font-heading);">{st.number || st.value}</span>
           <span class="text-xs opacity-80 uppercase tracking-wider font-medium">{st.label}</span>
         </div>
       ))}

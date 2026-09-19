@@ -11,4 +11,4 @@ const { section, client } = Astro.props;
 const Component = getComponent(section.type, section.variant, client?.slug);
 ---
 
-<Component content={section.content} client={client} />
+{Component && <Component content={section.content} client={client} />}

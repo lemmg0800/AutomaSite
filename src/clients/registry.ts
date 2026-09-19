@@ -1,9 +1,10 @@
-﻿import { getClientRepository } from './repository';
+import { getClientRepository } from './repository';
 import type { ClientConfig } from './schema';
 
 export async function getPublishedClients(): Promise<ClientConfig[]> {
   const repo = getClientRepository();
-  return repo.getAll({ status: 'published' });
+  const all = await repo.getAll();
+  return all.filter(c => c.status === 'published' || c.status === 'ativo');
 }
 
 export async function getAllClients(): Promise<ClientConfig[]> {

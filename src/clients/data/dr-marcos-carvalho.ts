@@ -67,7 +67,7 @@ const client: ClientConfig = {
   {
     "id": "hero-dr-marcos-carvalho",
     "type": "hero",
-    "variant": "Hero05",
+    "variant": "Hero02",
     "content": {
       "tagline": "Especialista em Implantodontia e Cirurgia Guiada",
       "headline": "A Cirurgia de Implantes Mais Confortável, Segura e Sem Cortes em Manaus",
@@ -135,7 +135,7 @@ const client: ClientConfig = {
   {
     "id": "process-dr-marcos-carvalho",
     "type": "process",
-    "variant": "Process02",
+    "variant": "Process01",
     "content": {
       "tagline": "A Metodologia Sem Cortes",
       "headline": "Como a Cirurgia Guiada Transforma Sua Experiência",
@@ -161,7 +161,7 @@ const client: ClientConfig = {
   {
     "id": "benefits-dr-marcos-carvalho",
     "type": "benefits",
-    "variant": "Differentials02",
+    "variant": "Benefits01",
     "content": {
       "tagline": "Segurança e Tranquilidade",
       "headline": "Por Que Optar Pela Cirurgia Guiada com Dr. Marcos",
@@ -184,7 +184,7 @@ const client: ClientConfig = {
   {
     "id": "stats-dr-marcos-carvalho",
     "type": "stats",
-    "variant": "Stats02",
+    "variant": "Stats01",
     "content": {
       "stats": [
         {
@@ -209,7 +209,7 @@ const client: ClientConfig = {
   {
     "id": "cta-dr-marcos-carvalho",
     "type": "cta",
-    "variant": "CTA02",
+    "variant": "CTA01",
     "content": {
       "headline": "Recupere Seus Dentes Fixos Sem Sofrimento",
       "subheadline": "Solicite um bate-papo sem compromisso com o Dr. Marcos Carvalho em Adrianópolis.",

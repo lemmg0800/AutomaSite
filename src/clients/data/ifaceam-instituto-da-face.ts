@@ -164,7 +164,7 @@ const client: ClientConfig = {
   {
     "id": "differentials-ifaceam-instituto-da-face",
     "type": "benefits",
-    "variant": "Differentials01",
+    "variant": "Benefits01",
     "content": {
       "tagline": "Excelência e Rigor Científico",
       "headline": "Por Que o IFACEAM é Referência Médica na Amazônia",

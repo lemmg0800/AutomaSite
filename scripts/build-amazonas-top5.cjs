@@ -405,7 +405,7 @@ top5Amazonas.forEach((c, idx) => {
       {
         id: `differentials-${c.slug}`,
         type: "benefits",
-        variant: "Differentials01",
+        variant: "Benefits01",
         content: {
           tagline: "Excelência e Rigor Científico",
           headline: "Por Que o IFACEAM é Referência Médica na Amazônia",
@@ -509,7 +509,7 @@ top5Amazonas.forEach((c, idx) => {
       {
         id: `benefits-${c.slug}`,
         type: "benefits",
-        variant: "Differentials02",
+        variant: "Benefits01",
         content: {
           tagline: "Diferenciais Manaós",
           headline: "20 Anos Cuidando dos Sorrisos dos Amazonenses",
@@ -519,7 +519,7 @@ top5Amazonas.forEach((c, idx) => {
       {
         id: `stats-${c.slug}`,
         type: "stats",
-        variant: "Stats02",
+        variant: "Stats01",
         content: {
           stats: [
             { number: "20+", label: "Anos de Tradição" },
@@ -532,7 +532,7 @@ top5Amazonas.forEach((c, idx) => {
       {
         id: `testimonials-${c.slug}`,
         type: "testimonials",
-        variant: "Testimonials02",
+        variant: "Testimonials01",
         content: {
           tagline: "Quem Conhece Recomenda",
           headline: "A Opinião das Famílias que Confiam na Manaós",
@@ -549,7 +549,7 @@ top5Amazonas.forEach((c, idx) => {
       {
         id: `cta-${c.slug}`,
         type: "cta",
-        variant: "CTA02",
+        variant: "CTA01",
         content: {
           headline: "Encontre a Unidade Mais Próxima e Marque Seu Horário",
           subheadline: "Equipe pronta para atender você com o máximo de carinho e tecnologia.",
@@ -624,7 +624,7 @@ top5Amazonas.forEach((c, idx) => {
       {
         id: `benefits-${c.slug}`,
         type: "benefits",
-        variant: "Differentials01",
+        variant: "Benefits01",
         content: {
           tagline: "Por Que Nos Escolher",
           headline: "Tratamento Rápido, Humanizado e Sem Complicações",
@@ -638,9 +638,9 @@ top5Amazonas.forEach((c, idx) => {
         content: {
           stats: [
             { number: "14+", label: "Anos de Experiência" },
-            { number: "2", label: "Consultórios (Praça 14 & Coroado)" },
-            { number: "100%", label: "Foco no Conforto" },
-            { number: "4.9 ★", label: "Avaliação Google" }
+            { number: "+8.500", label: "Implantes Realizados" },
+            { number: "4.9 ★", label: "Reputação no Google" },
+            { number: "100%", label: "Pontualidade e Ética" }
           ]
         }
       },
@@ -649,9 +649,9 @@ top5Amazonas.forEach((c, idx) => {
         type: "cta",
         variant: "CTA01",
         content: {
-          headline: "Precisa de Atendimento Rápido em Manaus?",
-          subheadline: "Clique agora para falar diretamente no WhatsApp do consultório.",
-          ctaText: "Falar com Dr. Paulo Grandal",
+          headline: "Conquiste um Sorriso Seguro e Firme com Quem é Especialista",
+          subheadline: "Atendimento direto e sem burocracia na Praça 14 de Janeiro.",
+          ctaText: "Chamar Dr. Paulo no WhatsApp",
           ctaLink: whatsUrl
         }
       },
@@ -660,18 +660,18 @@ top5Amazonas.forEach((c, idx) => {
         type: "footer",
         variant: "Footer01",
         content: {
-          copyright: `© ${new Date().getFullYear()} ${c.name}. Praça 14 de Janeiro, Manaus.`,
+          copyright: `© ${new Date().getFullYear()} ${c.name}. Praça 14, Manaus.`,
           socialLinks: [{ platform: "WhatsApp", url: whatsUrl }]
         }
       }
     ];
   } else if (idx === 3) {
-    // Studio Amazon: 100% Digital CAD/CAM
+    // Studio Amazon Odontologia Digital: CAD/CAM & Adrianópolis
     customSections = [
       {
         id: `header-${c.slug}`,
         type: "header",
-        variant: "Header03",
+        variant: "Header02",
         content: {
           navLinks: [
             { label: "Fluxo Digital", href: "#digital" },
@@ -712,7 +712,7 @@ top5Amazonas.forEach((c, idx) => {
       {
         id: `services-${c.slug}`,
         type: "services",
-        variant: "Services04",
+        variant: "Services03",
         content: {
           tagline: "Odontologia de Alta Precisão",
           headline: "Tecnologia Digital a Favor da Estética do Seu Sorriso",
@@ -722,7 +722,7 @@ top5Amazonas.forEach((c, idx) => {
       {
         id: `benefits-${c.slug}`,
         type: "benefits",
-        variant: "Differentials03",
+        variant: "Benefits01",
         content: {
           tagline: "A Vanguarda Odontológica",
           headline: "O Que Torna o Studio Amazon Único no Norte",
@@ -749,7 +749,7 @@ top5Amazonas.forEach((c, idx) => {
       {
         id: `cta-${c.slug}`,
         type: "cta",
-        variant: "CTA03",
+        variant: "CTA01",
         content: {
           headline: "Viva a Experiência da Odontologia 100% Digital",
           subheadline: "Agende sua sessão de escaneamento intraoral 3D sem custo inicial no Adrianópolis.",
@@ -786,7 +786,7 @@ top5Amazonas.forEach((c, idx) => {
       {
         id: `hero-${c.slug}`,
         type: "hero",
-        variant: "Hero05",
+        variant: "Hero02",
         content: {
           tagline: c.hero.tagline,
           headline: c.hero.headline,
@@ -810,7 +810,7 @@ top5Amazonas.forEach((c, idx) => {
       {
         id: `process-${c.slug}`,
         type: "process",
-        variant: "Process02",
+        variant: "Process01",
         content: {
           tagline: "A Metodologia Sem Cortes",
           headline: "Como a Cirurgia Guiada Transforma Sua Experiência",
@@ -824,7 +824,7 @@ top5Amazonas.forEach((c, idx) => {
       {
         id: `benefits-${c.slug}`,
         type: "benefits",
-        variant: "Differentials02",
+        variant: "Benefits01",
         content: {
           tagline: "Segurança e Tranquilidade",
           headline: "Por Que Optar Pela Cirurgia Guiada com Dr. Marcos",
@@ -834,7 +834,7 @@ top5Amazonas.forEach((c, idx) => {
       {
         id: `stats-${c.slug}`,
         type: "stats",
-        variant: "Stats02",
+        variant: "Stats01",
         content: {
           stats: [
             { number: "0 Cortes", label: "Técnica Guiada por Guia 3D" },
@@ -847,7 +847,7 @@ top5Amazonas.forEach((c, idx) => {
       {
         id: `cta-${c.slug}`,
         type: "cta",
-        variant: "CTA02",
+        variant: "CTA01",
         content: {
           headline: "Recupere Seus Dentes Fixos Sem Sofrimento",
           subheadline: "Solicite um bate-papo sem compromisso com o Dr. Marcos Carvalho em Adrianópolis.",
