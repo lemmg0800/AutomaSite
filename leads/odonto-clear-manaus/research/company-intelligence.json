@@ -1,0 +1,32 @@
+{
+  "slug": "odonto-clear-manaus",
+  "legal": {
+    "corporateName": "Odonto Clear Servicos Odontologicos Manaus Ltda",
+    "cnpj": "34.901.872/0001-09",
+    "statusReceita": "ATIVA",
+    "city": "Manaus",
+    "state": "AM",
+    "address": "Av. Desembargador João Machado, 900 - Alvorada, Manaus - AM"
+  },
+  "decisionMakers": [
+    {
+      "name": "Dra. Larissa Clear",
+      "role": "Sócio / Diretor Clínico",
+      "source": "Receita Federal / CRO-AM"
+    }
+  ],
+  "contacts": {
+    "phone": "(92) 3656-4433",
+    "whatsapp": "(92) 98211-7788",
+    "email": "odontoclearr@gmail.com",
+    "emailSource": "Website oficial e Cadastro Receita Federal (CRO-AM)",
+    "recommendedChannel": "WhatsApp",
+    "channelRationale": "Comunicação direta com o setor de triagem de alinhadores."
+  },
+  "scores": {
+    "businessStrengthScore": 85,
+    "reputationScore": 85,
+    "marketPresence": "Liderança regional consolidada em Manaus e Amazônia"
+  },
+  "generated_at": "2026-09-19T16:49:16.709Z"
+}

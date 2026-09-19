@@ -1,0 +1,14 @@
+{
+  "slug": "ifaceam-instituto-da-face",
+  "reusable_recommendations": {
+    "brand_logo": "assets/logo-ifaceam-instituto-da-face.png",
+    "hero_image": "assets/hero-ifaceam-instituto-da-face.jpg",
+    "team_photos": [
+      "assets/equipe-ifaceam-instituto-da-face.jpg"
+    ],
+    "service_photos": [
+      "assets/scanner-3d-ifaceam-instituto-da-face.jpg",
+      "assets/cirurgia-ifaceam-instituto-da-face.jpg"
+    ]
+  }
+}

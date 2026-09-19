@@ -1,0 +1,14 @@
+{
+  "slug": "odontologia-jurunas",
+  "reusable_recommendations": {
+    "brand_logo": "assets/logo-odontologia-jurunas.png",
+    "hero_image": "assets/hero-odontologia-jurunas.jpg",
+    "team_photos": [
+      "assets/equipe-odontologia-jurunas.jpg"
+    ],
+    "service_photos": [
+      "assets/scanner-3d-odontologia-jurunas.jpg",
+      "assets/cirurgia-odontologia-jurunas.jpg"
+    ]
+  }
+}

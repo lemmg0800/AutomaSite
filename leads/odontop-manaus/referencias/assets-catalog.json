@@ -1,0 +1,14 @@
+{
+  "slug": "odontop-manaus",
+  "reusable_recommendations": {
+    "brand_logo": "assets/logo-odontop-manaus.png",
+    "hero_image": "assets/hero-odontop-manaus.jpg",
+    "team_photos": [
+      "assets/equipe-odontop-manaus.jpg"
+    ],
+    "service_photos": [
+      "assets/scanner-3d-odontop-manaus.jpg",
+      "assets/cirurgia-odontop-manaus.jpg"
+    ]
+  }
+}

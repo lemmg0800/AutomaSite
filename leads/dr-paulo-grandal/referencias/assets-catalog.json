@@ -1,0 +1,14 @@
+{
+  "slug": "dr-paulo-grandal",
+  "reusable_recommendations": {
+    "brand_logo": "assets/logo-dr-paulo-grandal.png",
+    "hero_image": "assets/hero-dr-paulo-grandal.jpg",
+    "team_photos": [
+      "assets/equipe-dr-paulo-grandal.jpg"
+    ],
+    "service_photos": [
+      "assets/scanner-3d-dr-paulo-grandal.jpg",
+      "assets/cirurgia-dr-paulo-grandal.jpg"
+    ]
+  }
+}

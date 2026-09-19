@@ -1,0 +1,43 @@
+{
+  "slug": "studio-amazon-odontologia",
+  "company_name": "Studio Amazon Odontologia Digital",
+  "city": "Manaus - AM",
+  "niche": "Fluxo 100% Digital CAD/CAM & Laboratório Próprio",
+  "original_site": {
+    "url": "https://studioamazonodontologia.com.br/",
+    "pagespeed_mobile": "36",
+    "lcp": "5.4s",
+    "fcp": "3.2s"
+  },
+  "redesign": {
+    "preview_url": "https://meudominio.com/preview/studio-amazon-odontologia",
+    "production_url": "https://meudominio.com/studio-amazon-odontologia",
+    "pagespeed_mobile": "98",
+    "lcp": "< 1.0s",
+    "fcp": "< 0.5s"
+  },
+  "issues_identified": [
+    "Carregamento mobile lento de 36/100 com LCP de 5.4s no 4G de Manaus",
+    "Botão de agendamento de consulta no WhatsApp ausente na primeira dobra visível",
+    "Ausência de apresentação interativa dos casos clínicos e tecnologias (escaneamento 3D/raio-X)"
+  ],
+  "improvements_implemented": [
+    "Primeira dobra moderna e objetiva comunicando autoridade e especialidade imediata",
+    "Botão flutuante de WhatsApp fixo permitindo contato com apenas 1 clique em qualquer rolagem",
+    "Carregamento mobile otimizado atingindo pontuação máxima de performance no Google",
+    "Preservação integral da identidade visual e cores originais da marca através de Design Tokens"
+  ],
+  "visual_evidence": {
+    "before_desktop": "leads/studio-amazon-odontologia/screenshots/site-desktop.png",
+    "before_mobile": "leads/studio-amazon-odontologia/screenshots/site-mobile.png",
+    "after_desktop": "leads/studio-amazon-odontologia/redesign/screenshots/home-desktop.png",
+    "after_mobile": "leads/studio-amazon-odontologia/redesign/screenshots/home-mobile.png",
+    "comparison_image": "leads/studio-amazon-odontologia/commercial/visual/before-after.png"
+  },
+  "sources": {
+    "lead_dossier": "leads/studio-amazon-odontologia/lead.json",
+    "audit_report": "leads/studio-amazon-odontologia/auditoria.md",
+    "builder_handoff": "leads/studio-amazon-odontologia/redesign/builder-handoff.json"
+  },
+  "generated_at": "2026-09-19T16:52:37.162Z"
+}

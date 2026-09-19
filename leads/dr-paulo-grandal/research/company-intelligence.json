@@ -1,0 +1,32 @@
+{
+  "slug": "dr-paulo-grandal",
+  "legal": {
+    "corporateName": "Paulo Grandal Odontologia Especializada Eireli",
+    "cnpj": "33.112.445/0001-19",
+    "statusReceita": "ATIVA",
+    "city": "Manaus",
+    "state": "AM",
+    "address": "R. Ramos Ferreira, 1450 - Praça 14 de Janeiro, Manaus - AM"
+  },
+  "decisionMakers": [
+    {
+      "name": "Dr. Paulo Grandal (CRO-AM 4120)",
+      "role": "Sócio / Diretor Clínico",
+      "source": "Receita Federal / CRO-AM"
+    }
+  ],
+  "contacts": {
+    "phone": "(92) 3234-9000",
+    "whatsapp": "(92) 99188-4321",
+    "email": "contato@drpaulograndal.com.br",
+    "emailSource": "Website oficial e Cadastro Receita Federal (CRO-AM)",
+    "recommendedChannel": "WhatsApp",
+    "channelRationale": "Forte demanda por agendamento de urgência e implantes onde o contato direto via WhatsApp é o canal prioritário."
+  },
+  "scores": {
+    "businessStrengthScore": 91,
+    "reputationScore": 91,
+    "marketPresence": "Liderança regional consolidada em Manaus e Amazônia"
+  },
+  "generated_at": "2026-09-19T16:49:16.661Z"
+}

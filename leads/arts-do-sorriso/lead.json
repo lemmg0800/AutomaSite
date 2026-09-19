@@ -1,0 +1,57 @@
+{
+  "slug": "arts-do-sorriso",
+  "name": "Clínica Arts do Sorriso Manaus",
+  "legal_name": "Arts do Sorriso Servicos Odontologicos Ltda",
+  "segment": "Inovações Tecnológicas, Ortodontia Digital & Estética",
+  "city": "Manaus - AM",
+  "address": "R. Fortaleza, 510 - Adrianópolis, Manaus - AM",
+  "website": "https://artsdosorriso.com.br/",
+  "instagram": "@artsdosorrisomanaus",
+  "phone": "(92) 3213-7223",
+  "whatsapp": "(92) 98400-3344",
+  "email": "contato@artsdosorriso.com.br",
+  "cnpj": "29.334.556/0001-41",
+  "macro_region": "Norte",
+  "search_niche": "Dentista / Clínicas Odontológicas",
+  "status": "aguardando_aprovacao",
+  "ranking": 15,
+  "scores": {
+    "business": 8.8,
+    "design": 3.9,
+    "mobile": 3.4,
+    "ux": 4.1,
+    "conversion": 3.2,
+    "confidence": 8.8,
+    "performance": 3.4,
+    "seo": 5.2,
+    "website_overall": 3.5,
+    "opportunity": 93,
+    "visual_quality": 6.2,
+    "redesign_opportunity": 62,
+    "conversion_chance": 80
+  },
+  "pagespeed": {
+    "mobile_performance": 34,
+    "desktop_performance": 64,
+    "lcp": "5.4s",
+    "fcp": "3.2s",
+    "tbt": "450ms",
+    "cls": "0.24",
+    "speed_index": "5.0s"
+  },
+  "top_problems": [
+    "Carregamento mobile lento de 34/100 com LCP de 5.4s no 4G de Manaus",
+    "Botão de agendamento de consulta no WhatsApp ausente na primeira dobra visível",
+    "Ausência de apresentação interativa dos casos clínicos e tecnologias (escaneamento 3D/raio-X)"
+  ],
+  "main_gap": "Clínica de prestígio em Manaus - AM, mas com presença mobile ultrapassada que perde pacientes para concorrentes com sites ultravelozes.",
+  "commercial_hook": "Mais de 75% dos pacientes de implantes e estética em Manaus pesquisam pelo smartphone; um site que demora 5s para abrir afasta pacientes qualificados.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-19T16:49:16.735Z",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/arts-do-sorriso/visual/visual-handoff.json",
+  "visual_structure": "leads/arts-do-sorriso/visual/site-structure.md"
+}

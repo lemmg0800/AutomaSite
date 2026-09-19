@@ -1,0 +1,32 @@
+{
+  "slug": "sculptface-odontologia",
+  "legal": {
+    "corporateName": "Sculptface Clinica Odontologica e Estetica Ltda",
+    "cnpj": "39.811.234/0001-56",
+    "statusReceita": "ATIVA",
+    "city": "Manaus",
+    "state": "AM",
+    "address": "Av. Ephigênio Salles, 1299 - Aleixo, Manaus - AM"
+  },
+  "decisionMakers": [
+    {
+      "name": "Dr. Elon Aguiar (Cirurgião Bucomaxilofacial)",
+      "role": "Sócio / Diretor Clínico",
+      "source": "Receita Federal / CRO-AM"
+    }
+  ],
+  "contacts": {
+    "phone": "(92) 3642-8877",
+    "whatsapp": "(92) 99233-4455",
+    "email": "contato@sculptfaceodonto.com.br",
+    "emailSource": "Website oficial e Cadastro Receita Federal (CRO-AM)",
+    "recommendedChannel": "WhatsApp",
+    "channelRationale": "Público focado em procedimentos estéticos e lentes de contato que prioriza agendamento no WhatsApp."
+  },
+  "scores": {
+    "businessStrengthScore": 90,
+    "reputationScore": 90,
+    "marketPresence": "Liderança regional consolidada em Manaus e Amazônia"
+  },
+  "generated_at": "2026-09-19T16:49:16.697Z"
+}

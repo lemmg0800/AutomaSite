@@ -1,0 +1,14 @@
+{
+  "slug": "sanmede-odontologia",
+  "reusable_recommendations": {
+    "brand_logo": "assets/logo-sanmede-odontologia.png",
+    "hero_image": "assets/hero-sanmede-odontologia.jpg",
+    "team_photos": [
+      "assets/equipe-sanmede-odontologia.jpg"
+    ],
+    "service_photos": [
+      "assets/scanner-3d-sanmede-odontologia.jpg",
+      "assets/cirurgia-sanmede-odontologia.jpg"
+    ]
+  }
+}

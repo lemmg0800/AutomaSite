@@ -1,0 +1,57 @@
+{
+  "slug": "sanmede-odontologia",
+  "name": "Clínica Sanmede Odontologia",
+  "legal_name": "Sanmede Servicos Medicos e Odontologicos Ltda",
+  "segment": "Reabilitação Oral, Tomografia Digital & Implantes",
+  "city": "Manaus - AM",
+  "address": "R. Rio Madeira, 480 - Nossa Senhora das Graças, Manaus - AM",
+  "website": "https://www.sanmede.com.br/",
+  "instagram": "@clinicasanmede",
+  "phone": "(92) 3584-5500",
+  "whatsapp": "(92) 99344-7788",
+  "email": "recepcao@sanmede.com.br",
+  "cnpj": "24.778.990/0001-32",
+  "macro_region": "Norte",
+  "search_niche": "Dentista / Clínicas Odontológicas",
+  "status": "aguardando_aprovacao",
+  "ranking": 4,
+  "scores": {
+    "business": 9,
+    "design": 4.2,
+    "mobile": 3.6,
+    "ux": 4.4,
+    "conversion": 3.2,
+    "confidence": 9,
+    "performance": 3.8,
+    "seo": 5.2,
+    "website_overall": 3.7,
+    "opportunity": 92,
+    "visual_quality": 6.4,
+    "redesign_opportunity": 61,
+    "conversion_chance": 79
+  },
+  "pagespeed": {
+    "mobile_performance": 38,
+    "desktop_performance": 70,
+    "lcp": "5.4s",
+    "fcp": "3.2s",
+    "tbt": "450ms",
+    "cls": "0.24",
+    "speed_index": "5.0s"
+  },
+  "top_problems": [
+    "Carregamento mobile lento de 38/100 com LCP de 5.4s no 4G de Manaus",
+    "Botão de agendamento de consulta no WhatsApp ausente na primeira dobra visível",
+    "Ausência de apresentação interativa dos casos clínicos e tecnologias (escaneamento 3D/raio-X)"
+  ],
+  "main_gap": "Clínica de prestígio em Manaus - AM, mas com presença mobile ultrapassada que perde pacientes para concorrentes com sites ultravelozes.",
+  "commercial_hook": "Mais de 75% dos pacientes de implantes e estética em Manaus pesquisam pelo smartphone; um site que demora 5s para abrir afasta pacientes qualificados.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-19T16:49:16.669Z",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/sanmede-odontologia/visual/visual-handoff.json",
+  "visual_structure": "leads/sanmede-odontologia/visual/site-structure.md"
+}

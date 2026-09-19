@@ -1,0 +1,32 @@
+{
+  "slug": "dr-marcos-carvalho",
+  "legal": {
+    "corporateName": "Marcos Carvalho Odontologia Especializada Eireli",
+    "cnpj": "37.102.394/0001-14",
+    "statusReceita": "ATIVA",
+    "city": "Manaus",
+    "state": "AM",
+    "address": "R. Salvador, 440 - Adrianópolis, Manaus - AM"
+  },
+  "decisionMakers": [
+    {
+      "name": "Dr. Marcos Carvalho (Especialista em Implantodontia)",
+      "role": "Sócio / Diretor Clínico",
+      "source": "Receita Federal / CRO-AM"
+    }
+  ],
+  "contacts": {
+    "phone": "(92) 3584-1212",
+    "whatsapp": "(92) 98411-9988",
+    "email": "atendimento@drmarcoscarvalho.com.br",
+    "emailSource": "Website oficial e Cadastro Receita Federal (CRO-AM)",
+    "recommendedChannel": "WhatsApp",
+    "channelRationale": "Canal direto do consultório com resposta ágil para avaliação de novos pacientes."
+  },
+  "scores": {
+    "businessStrengthScore": 88,
+    "reputationScore": 88,
+    "marketPresence": "Liderança regional consolidada em Manaus e Amazônia"
+  },
+  "generated_at": "2026-09-19T16:49:16.692Z"
+}

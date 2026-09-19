@@ -1,0 +1,57 @@
+{
+  "slug": "odonto-clear-manaus",
+  "name": "Odonto Clear Clínica Odontológica",
+  "legal_name": "Odonto Clear Servicos Odontologicos Manaus Ltda",
+  "segment": "Alinhadores Invisíveis, Ortodontia & Clareamento",
+  "city": "Manaus - AM",
+  "address": "Av. Desembargador João Machado, 900 - Alvorada, Manaus - AM",
+  "website": "https://odontoclearr.com.br/",
+  "instagram": "@odontoclearmanaus",
+  "phone": "(92) 3656-4433",
+  "whatsapp": "(92) 98211-7788",
+  "email": "odontoclearr@gmail.com",
+  "cnpj": "34.901.872/0001-09",
+  "macro_region": "Norte",
+  "search_niche": "Dentista / Clínicas Odontológicas",
+  "status": "aguardando_aprovacao",
+  "ranking": 10,
+  "scores": {
+    "business": 8.5,
+    "design": 4,
+    "mobile": 3.4,
+    "ux": 4.2,
+    "conversion": 3.2,
+    "confidence": 8.5,
+    "performance": 3.9,
+    "seo": 5.2,
+    "website_overall": 3.5,
+    "opportunity": 87,
+    "visual_quality": 6.2,
+    "redesign_opportunity": 58,
+    "conversion_chance": 75
+  },
+  "pagespeed": {
+    "mobile_performance": 39,
+    "desktop_performance": 71,
+    "lcp": "5.4s",
+    "fcp": "3.2s",
+    "tbt": "450ms",
+    "cls": "0.24",
+    "speed_index": "5.0s"
+  },
+  "top_problems": [
+    "Carregamento mobile lento de 39/100 com LCP de 5.4s no 4G de Manaus",
+    "Botão de agendamento de consulta no WhatsApp ausente na primeira dobra visível",
+    "Ausência de apresentação interativa dos casos clínicos e tecnologias (escaneamento 3D/raio-X)"
+  ],
+  "main_gap": "Clínica de prestígio em Manaus - AM, mas com presença mobile ultrapassada que perde pacientes para concorrentes com sites ultravelozes.",
+  "commercial_hook": "Mais de 75% dos pacientes de implantes e estética em Manaus pesquisam pelo smartphone; um site que demora 5s para abrir afasta pacientes qualificados.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-19T16:49:16.707Z",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/odonto-clear-manaus/visual/visual-handoff.json",
+  "visual_structure": "leads/odonto-clear-manaus/visual/site-structure.md"
+}

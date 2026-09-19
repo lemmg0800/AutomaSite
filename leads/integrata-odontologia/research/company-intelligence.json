@@ -1,0 +1,32 @@
+{
+  "slug": "integrata-odontologia",
+  "legal": {
+    "corporateName": "Integrata Odontologia Avancada Manaus Ltda",
+    "cnpj": "31.220.551/0001-70",
+    "statusReceita": "ATIVA",
+    "city": "Manaus",
+    "state": "AM",
+    "address": "Av. Mário Ypiranga, 315 - Adrianópolis, Manaus - AM"
+  },
+  "decisionMakers": [
+    {
+      "name": "Dra. Renata Integrata (CRO-AM 5230)",
+      "role": "Sócio / Diretor Clínico",
+      "source": "Receita Federal / CRO-AM"
+    }
+  ],
+  "contacts": {
+    "phone": "(92) 3236-4020",
+    "whatsapp": "(92) 98822-5566",
+    "email": "contato@integrataodontomanaus.com.br",
+    "emailSource": "Website oficial e Cadastro Receita Federal (CRO-AM)",
+    "recommendedChannel": "WhatsApp",
+    "channelRationale": "Atendimento humanizado com conversão imediata de dúvidas estéticas via chat."
+  },
+  "scores": {
+    "businessStrengthScore": 89,
+    "reputationScore": 89,
+    "marketPresence": "Liderança regional consolidada em Manaus e Amazônia"
+  },
+  "generated_at": "2026-09-19T16:49:16.680Z"
+}

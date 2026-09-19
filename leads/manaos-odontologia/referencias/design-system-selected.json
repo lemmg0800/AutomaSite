@@ -1,0 +1,21 @@
+{
+  "slug": "manaos-odontologia",
+  "primary_reference": {
+    "id": "white-medical",
+    "titulo": "Design de Saúde e Autoridade Médica",
+    "tema": "Clínica Odontológica de Alto Padrão"
+  },
+  "alternative_references": [
+    {
+      "id": "futureui.aura.build",
+      "titulo": "Interações e Efeitos Tecnológicos"
+    },
+    {
+      "id": "elicyon.com",
+      "titulo": "Interações e Efeitos Tecnológicos"
+    }
+  ],
+  "visual_direction_recommendations": {
+    "guidelines": "Design limpo, contraste refinado e 1ª dobra de alta conversão sem lentidão mobile."
+  }
+}

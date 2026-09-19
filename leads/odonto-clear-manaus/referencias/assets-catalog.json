@@ -1,0 +1,14 @@
+{
+  "slug": "odonto-clear-manaus",
+  "reusable_recommendations": {
+    "brand_logo": "assets/logo-odonto-clear-manaus.png",
+    "hero_image": "assets/hero-odonto-clear-manaus.jpg",
+    "team_photos": [
+      "assets/equipe-odonto-clear-manaus.jpg"
+    ],
+    "service_photos": [
+      "assets/scanner-3d-odonto-clear-manaus.jpg",
+      "assets/cirurgia-odonto-clear-manaus.jpg"
+    ]
+  }
+}

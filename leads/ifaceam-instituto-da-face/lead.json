@@ -1,0 +1,75 @@
+{
+  "slug": "ifaceam-instituto-da-face",
+  "name": "Instituto da Face do Amazonas (IFACEAM)",
+  "legal_name": "Instituto da Face do Amazonas Servicos Cirurgicos Ltda",
+  "segment": "Cirurgia Buco-Maxilo-Facial, DTM & Implantes Complexos",
+  "city": "Manaus - AM",
+  "address": "Av. Darcy Vargas, 654 - Parque 10 de Novembro, Manaus - AM",
+  "website": "https://ifaceam.com.br/",
+  "instagram": "@ifaceam",
+  "phone": "(92) 3648-9900",
+  "whatsapp": "(92) 99155-8899",
+  "email": "diretoria@ifaceam.com.br",
+  "cnpj": "21.334.887/0001-92",
+  "macro_region": "Norte",
+  "search_niche": "Dentista / Clínicas Odontológicas",
+  "status": "aguardando_aprovacao",
+  "ranking": 6,
+  "scores": {
+    "business": 9.4,
+    "design": 3.9,
+    "mobile": 3.3,
+    "ux": 4.1,
+    "conversion": 3.2,
+    "confidence": 9.4,
+    "performance": 3,
+    "seo": 5.2,
+    "website_overall": 3.5,
+    "opportunity": 100,
+    "visual_quality": 6.3,
+    "redesign_opportunity": 66,
+    "conversion_chance": 85
+  },
+  "pagespeed": {
+    "mobile_performance": 30,
+    "desktop_performance": 58,
+    "lcp": "5.4s",
+    "fcp": "3.2s",
+    "tbt": "450ms",
+    "cls": "0.24",
+    "speed_index": "5.0s"
+  },
+  "top_problems": [
+    "Carregamento mobile lento de 30/100 com LCP de 5.4s no 4G de Manaus",
+    "Botão de agendamento de consulta no WhatsApp ausente na primeira dobra visível",
+    "Ausência de apresentação interativa dos casos clínicos e tecnologias (escaneamento 3D/raio-X)"
+  ],
+  "main_gap": "Clínica de prestígio em Manaus - AM, mas com presença mobile ultrapassada que perde pacientes para concorrentes com sites ultravelozes.",
+  "commercial_hook": "Mais de 75% dos pacientes de implantes e estética em Manaus pesquisam pelo smartphone; um site que demora 5s para abrir afasta pacientes qualificados.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-19T16:49:16.683Z",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/ifaceam-instituto-da-face/visual/visual-handoff.json",
+  "visual_structure": "leads/ifaceam-instituto-da-face/visual/site-structure.md",
+  "redesign": {
+    "completed_at": "2026-09-19T16:52:30.235Z",
+    "platform_preview_url": "/preview/ifaceam-instituto-da-face",
+    "platform_production_url": "/ifaceam-instituto-da-face",
+    "config_path": "src/clients/data/ifaceam-instituto-da-face.ts",
+    "screenshots": {
+      "home_desktop": "leads/ifaceam-instituto-da-face/redesign/screenshots/home-desktop.png",
+      "home_mobile": "leads/ifaceam-instituto-da-face/redesign/screenshots/home-mobile.png"
+    }
+  },
+  "commercial": {
+    "status": "pronto_para_aprovacao_humana",
+    "generated_at": "2026-09-19T16:52:31.055Z",
+    "dossier_path": "leads/ifaceam-instituto-da-face/commercial/",
+    "summary": "leads/ifaceam-instituto-da-face/commercial/commercial-summary.md",
+    "email": "leads/ifaceam-instituto-da-face/commercial/email.md",
+    "whatsapp": "leads/ifaceam-instituto-da-face/commercial/whatsapp.md"
+  }
+}

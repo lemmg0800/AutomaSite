@@ -1,0 +1,24 @@
+{
+  "url": "https://sculptfaceodonto.com.br/",
+  "slug": "sculptface-odontologia",
+  "started_at": "2026-09-19T16:49:16.696Z",
+  "success": true,
+  "verified_assets": {
+    "html": true,
+    "css_count": 4,
+    "js_count": 3,
+    "images_count": 22,
+    "has_logo": true,
+    "has_favicon": true
+  },
+  "files_downloaded": [
+    "assets/clinica_fachada_manaus.jpg",
+    "assets/consultorio_principal_equipado.jpg",
+    "assets/equipe_odontologica_manaus.jpg",
+    "assets/scanner_intraoral_3d.jpg",
+    "assets/sala_cirurgica_implantes.jpg",
+    "assets/antes_depois_clareamento_laser.jpg",
+    "assets/antes_depois_facetas_ceramica.jpg",
+    "assets/tomografia_computadorizada.jpg"
+  ]
+}

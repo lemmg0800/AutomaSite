@@ -1,0 +1,50 @@
+{
+  "slug": "manaos-odontologia",
+  "clientName": "Manaós Odontologia",
+  "aesthetic_concept": "Identidade contemporânea de odontologia de alta autoridade para Manaós Odontologia em Manaus, combinando sofisticação clínica e acolhimento humano.",
+  "consulted_design_systems": [
+    "white-medical",
+    "futureui.aura.build",
+    "elicyon.com"
+  ],
+  "designSystemsSelected": [
+    {
+      "id": "white-medical",
+      "role": "Base Estrutural & Grid",
+      "path": "Design System/temas_claros/white-medical"
+    },
+    {
+      "id": "futureui.aura.build",
+      "role": "Microinterações, Glow e Tipografia",
+      "path": "Design System/temas_claros/futureui.aura.build"
+    },
+    {
+      "id": "elicyon.com",
+      "role": "Microinterações, Glow e Tipografia",
+      "path": "Design System/temas_claros/elicyon.com"
+    }
+  ],
+  "colorTokens": {
+    "primary": "#059669",
+    "secondary": "#064e3b",
+    "accent": "#34d399",
+    "background": "#022c22",
+    "surface": "#0f172a",
+    "text": "#f8fafc",
+    "glowEffect": "0 0 35px #34d39933"
+  },
+  "typography": {
+    "heading": "Syne",
+    "body": "Plus Jakarta Sans"
+  },
+  "heroStrategy": {
+    "emphasis": "1ª Dobra Rica com Autoridade Imediata",
+    "visualHooks": [
+      "Efeito Glow suave no botão de CTA principal",
+      "Background mesh com profundidade e gradiente fluido",
+      "Badges com estatísticas concretas e nota do Google",
+      "Integração direta com o WhatsApp sem fricção"
+    ]
+  },
+  "generated_at": "2026-09-19T16:52:30.056Z"
+}

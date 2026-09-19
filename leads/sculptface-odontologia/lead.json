@@ -1,0 +1,57 @@
+{
+  "slug": "sculptface-odontologia",
+  "name": "SculptFace Odontologia & Harmonização",
+  "legal_name": "Sculptface Clinica Odontologica e Estetica Ltda",
+  "segment": "Cirurgia Facial, Lentes Cerâmicas & Harmonização",
+  "city": "Manaus - AM",
+  "address": "Av. Ephigênio Salles, 1299 - Aleixo, Manaus - AM",
+  "website": "https://sculptfaceodonto.com.br/",
+  "instagram": "@sculptfaceodonto",
+  "phone": "(92) 3642-8877",
+  "whatsapp": "(92) 99233-4455",
+  "email": "contato@sculptfaceodonto.com.br",
+  "cnpj": "39.811.234/0001-56",
+  "macro_region": "Norte",
+  "search_niche": "Dentista / Clínicas Odontológicas",
+  "status": "aguardando_aprovacao",
+  "ranking": 8,
+  "scores": {
+    "business": 9,
+    "design": 4.5,
+    "mobile": 3.9,
+    "ux": 4.7,
+    "conversion": 3.2,
+    "confidence": 9,
+    "performance": 3.7,
+    "seo": 5.2,
+    "website_overall": 3.9,
+    "opportunity": 92,
+    "visual_quality": 6.6,
+    "redesign_opportunity": 60,
+    "conversion_chance": 79
+  },
+  "pagespeed": {
+    "mobile_performance": 37,
+    "desktop_performance": 69,
+    "lcp": "5.4s",
+    "fcp": "3.2s",
+    "tbt": "450ms",
+    "cls": "0.24",
+    "speed_index": "5.0s"
+  },
+  "top_problems": [
+    "Carregamento mobile lento de 37/100 com LCP de 5.4s no 4G de Manaus",
+    "Botão de agendamento de consulta no WhatsApp ausente na primeira dobra visível",
+    "Ausência de apresentação interativa dos casos clínicos e tecnologias (escaneamento 3D/raio-X)"
+  ],
+  "main_gap": "Clínica de prestígio em Manaus - AM, mas com presença mobile ultrapassada que perde pacientes para concorrentes com sites ultravelozes.",
+  "commercial_hook": "Mais de 75% dos pacientes de implantes e estética em Manaus pesquisam pelo smartphone; um site que demora 5s para abrir afasta pacientes qualificados.",
+  "screenshots": {
+    "site_desktop": "screenshots/site-desktop.png",
+    "site_mobile": "screenshots/site-mobile.png"
+  },
+  "created_at": "2026-09-19T16:49:16.695Z",
+  "visual_classification": "B — BOM, MAS DESATUALIZADO",
+  "visual_handoff": "leads/sculptface-odontologia/visual/visual-handoff.json",
+  "visual_structure": "leads/sculptface-odontologia/visual/site-structure.md"
+}

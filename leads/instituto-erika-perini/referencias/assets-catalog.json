@@ -1,0 +1,14 @@
+{
+  "slug": "instituto-erika-perini",
+  "reusable_recommendations": {
+    "brand_logo": "assets/logo-instituto-erika-perini.png",
+    "hero_image": "assets/hero-instituto-erika-perini.jpg",
+    "team_photos": [
+      "assets/equipe-instituto-erika-perini.jpg"
+    ],
+    "service_photos": [
+      "assets/scanner-3d-instituto-erika-perini.jpg",
+      "assets/cirurgia-instituto-erika-perini.jpg"
+    ]
+  }
+}
