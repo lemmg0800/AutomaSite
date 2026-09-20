@@ -1,72 +1,27 @@
 {
+  "empresa": "Cadas Arquitetura",
   "slug": "cadas-arquitetura",
-  "name": "Cadas Arquitetura",
-  "status": "published",
-  "validated_sections_count": 10,
-  "sections": [
-    {
-      "id": "header-cadas",
-      "type": "header",
-      "variant": "Header02"
-    },
-    {
-      "id": "hero-cadas",
-      "type": "hero",
-      "variant": "Hero01"
-    },
-    {
-      "id": "about-cadas",
-      "type": "about",
-      "variant": "About01"
-    },
-    {
-      "id": "projects-cadas",
-      "type": "projects",
-      "variant": "Projects01"
-    },
-    {
-      "id": "services-cadas",
-      "type": "services",
-      "variant": "Services01"
-    },
-    {
-      "id": "benefits-cadas",
-      "type": "benefits",
-      "variant": "Benefits01"
-    },
-    {
-      "id": "testimonials-cadas",
-      "type": "testimonials",
-      "variant": "Testimonials01"
-    },
-    {
-      "id": "faq-cadas",
-      "type": "faq",
-      "variant": "FAQ01"
-    },
-    {
-      "id": "cta-cadas",
-      "type": "cta",
-      "variant": "CTA01"
-    },
-    {
-      "id": "footer-cadas",
-      "type": "footer",
-      "variant": "Footer01"
-    }
+  "logoUtilizado": "/assets/clients/cadas-arquitetura/cadas_logo.png",
+  "copyPreservada": [
+    "Endereço: Av. Ataulfo de Paiva, 1079 / 802 - Leblon",
+    "Telefone: (21) 2523-2449",
+    "Equipe: Cadas Abranches, Cristiana David, Joanna Mesquitela",
+    "Projetos Reais: Projeto LW, Projeto EB Leblon, Projeto PD Leblon, Projeto BC, Apartamento Urbano, Projeto Fisher Island"
   ],
-  "tech_stack": {
-    "framework": "Astro 5",
-    "styling": "Tailwind CSS",
-    "type_validation": "Zod"
-  },
-  "responsive_breakpoints": {
-    "desktop": "1280x800",
-    "mobile": "390x844"
-  },
-  "compliance": {
-    "anti_clone_rule": "APROVADO - Fingerprint exclusivo de variantes e hero image única",
-    "zod_schema_rule": "APROVADO - Conformidade estrita com ClientConfigSchema",
-    "no_mock_data_rule": "APROVADO - Dados reais da Receita Federal e CAU-RJ"
-  }
+  "assetsUtilizados": [
+    "/assets/clients/cadas-arquitetura/cadas_logo.png",
+    "/assets/clients/cadas-arquitetura/obra_lw.jpg",
+    "/assets/clients/cadas-arquitetura/obra_eb.jpg",
+    "/assets/clients/cadas-arquitetura/obra_pd.jpg",
+    "/assets/clients/cadas-arquitetura/obra_bc.jpg",
+    "/assets/clients/cadas-arquitetura/obra_urbano.png",
+    "/assets/clients/cadas-arquitetura/obra_fisher.jpg"
+  ],
+  "designSystemsUtilizados": [
+    "nexus-architecture.aura.build (Tipografia e escala)",
+    "elicyon.com (Composição e grid de projetos)",
+    "architecture-studio.aura.build (Estrutura de ateliê de arquitetura autoral)"
+  ],
+  "primeiraDobraAutentica": "SIM: Logo real cadas_logo.png + foto real de obra (Projeto LW) + copy legítima do ateliê do Leblon.",
+  "status": "APROVADO_BUILDER"
 }

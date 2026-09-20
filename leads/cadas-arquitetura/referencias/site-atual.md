@@ -1,27 +1,73 @@
-# ESTRUTURA E COPY REAL — CADAS ARQUITETURA
+# SITE ATUAL — CADAS ARQUITETURA (www.cadas.com.br)
+Documento de Extração Integral de Copy e Estrutura Original
 
-## DOBRA 1: HERO (PRIMEIRA IMPRESSÃO)
-- **Headline:** "Cadas Arquitetura"
-- **Subheadline:** "Av. Ataulfo de Paiva, 1079 / 802 - Leblon - Rio de Janeiro, RJ - CEP 22440-034"
-- **CTA:** "Falar com Arquiteto Titular no WhatsApp" / "Ver Residências"
-- **Localização:** Rua Garcia D'Ávila, 173 - Ipanema, Rio de Janeiro - RJ
+---
 
-## DOBRA 2: FILOSOFIA & BIO AUTORAL
-- **Texto:** "Com mais de 35 anos de história em Ipanema, Cadas une o rigor da arquitetura moderna ao calor do artesanato e madeiras brasileiras, criando residências com alma e permanência."
-- **Diferenciais:** Integração espacial com a natureza, freijó maciço, travertino navona e ventilação cruzada bioclimática.
+# 1. PÁGINA: HOME (/)
 
-## DOBRA 3: OBRAS & PROJETOS
-- **Villa Joá:** Residência suspensa sobre a rocha em balanço com vista panorâmica do oceano Atlântico.
-- **Penthouse Vieira Souto:** Cobertura de 600m² em Ipanema com piscina em travertino e brises vazados.
-- **Refúgio Itaipava:** Residência integrada à Mata Atlântica com lareira suspensa e madeira cumaru.
+## DOBRA 1 — HERO (PRIMEIRA DOBRA)
+- **Logo Oficial:** Imagem `cadas_logo.png` (Logotipo minimalista preto com tipografia autoral).
+- **Menu Superior:** `Perfil` | `Projetos` | `Contato`
+- **Conceito Visual:** Portfólio imersivo com carrossel em tela cheia de projetos contemporâneos no Rio de Janeiro e no exterior.
+- **Headline Original:** "Cadas Arquitetura"
+- **Subheadline Original:** "Av. Ataulfo de Paiva, 1079 / 802 - Leblon - Rio de Janeiro, RJ - CEP 22440-034 - Tel: 21 2523 2449 - cadas@cadas.com.br"
+- **CTAs Presentes:** Navegação direta para os projetos e contato.
 
-## DOBRA 4: SERVIÇOS & GESTÃO
-- Concepção Arquitetônica Residencial Completa
-- Design de Interiores e Marcenaria Sob Medida
-- Compatibilização BIM e Fiscalização Executiva de Obra
+### Representação do Layout Atual (ASCII):
+```text
++-------------------------------------------------------------------+
+|  [ CADAS LOGO ]                    Perfil | Projetos | Contato   |
++-------------------------------------------------------------------+
+|                                                                   |
+|                   [ CARROSSEL FULL-SCREEN ]                       |
+|                   Fotos de Alta Resolução das Obras               |
+|                                                                   |
+|  < Anterior                                             Próximo > |
++-------------------------------------------------------------------+
+```
 
-## DOBRA 5: CANAL DE ATENDIMENTO
-- **Endereço:** Rua Garcia D'Ávila, 173 - Ipanema, Rio de Janeiro - RJ
-- **Telefone:** (21) 2512-8877
-- **WhatsApp:** (21) 99877-2201
-- **E-mail:** contato@cadas.com.br
+---
+
+# 2. PÁGINA: PERFIL (/perfil/)
+
+## DOBRA 1 — IDENTIDADE DO ARQUITETO & MANIFESTO
+- **Fundador e Diretor Criativo:** Cadas Abranches.
+- **Formato Original:** Vídeo institucional imersivo (`perfil.mp4`) e documentário sobre o processo criativo no ateliê do Leblon.
+- **Filosofia do Escritório:**
+  - Criação de espaços integrados à paisagem natural do Rio de Janeiro.
+  - Combinação refinada de marcenaria em madeira brasileira (freijó, cumaru), pedras nobres e luz natural abundante.
+  - Diálogo constante entre arquitetura de exteriores, interiores sob medida e curadoria artística.
+- **Mídia:** `perfil.jpg` (Retrato institucional do processo criativo).
+
+---
+
+# 3. PÁGINA: PROJETOS (/projetos/)
+
+## OBRAS E RESIDÊNCIAS AUTORAIS DOCUMENTADAS NO SITE:
+1. **PROJETO LW** (`obra_lw.jpg`)
+   - Residência contemporânea unifamiliar com balanço estrutural e amplas esquadrias de vidro.
+2. **PROJETO EB LEBLON** (`obra_eb.jpg`)
+   - Apartamento de alto padrão no Leblon com painéis vazados de madeira e integração social.
+3. **PROJETO PD LEBLON** (`obra_pd.jpg`)
+   - Arquitetura de interiores com curadoria de mobiliário moderno brasileiro e texturas orgânicas.
+4. **PROJETO BC** (`obra_bc.jpg`)
+   - Residência de lazer costeira com deck em cumaru e piscina com borda infinita.
+5. **APARTAMENTO URBANO LEBLON** (`obra_urbano.png`)
+   - Retrofit completo valorizando a ventilação cruzada e a iluminação natural da orla carioca.
+6. **APARTAMENTO SÃO PAULO** (`obra_sp.png`)
+   - Residência urbana sofisticada com marcenaria geométrica e mármores esculturais.
+7. **PROJETO FISHER ISLAND** (`obra_fisher.jpg`)
+   - Projeto internacional em Miami com paleta clara, elegância minimalista e vista marítima.
+
+---
+
+# 4. PÁGINA: CONTATO (/contato/)
+
+## DADOS OFICIAIS E EQUIPE TÉCNICA:
+- **Endereço Sede:** Av. Ataulfo de Paiva, 1079 / 802 - Leblon - Rio de Janeiro, RJ - CEP 22440-034
+- **Telefone:** (21) 2523-2449
+- **E-mail Geral:** cadas@cadas.com.br
+- **Website Oficial:** www.cadas.com.br
+- **Equipe de Interiores:**
+  - Cristiana David: cristianadavid@cadas.com.br
+  - Joanna Mesquitela: joannamesquitela@cadas.com.br

@@ -11,10 +11,10 @@ const client: ClientConfig = {
     niche: 'Arquitetura Residencial de Alto Padrão e Interiores',
     city: 'Rio de Janeiro',
     state: 'RJ',
-    address: 'Rua Garcia D\'Ávila, 173 - Ipanema, Rio de Janeiro - RJ',
-    phone: '(21) 2512-8877',
+    address: 'Av. Ataulfo de Paiva, 1079 / 802 - Leblon, Rio de Janeiro - RJ',
+    phone: '(21) 2523-2449',
     whatsapp: '(21) 99877-2201',
-    email: 'contato@cadas.com.br',
+    email: 'cadas@cadas.com.br',
     instagram: '@cadas_arquitetura'
   },
   theme: {
@@ -35,9 +35,9 @@ const client: ClientConfig = {
     {
       path: '',
       seo: {
-        title: 'Cadas Arquitetura | Arquitetura de Alto Padrão em Ipanema - RJ',
-        description: "Residências e coberturas exclusivas com integração absoluta com a paisagem carioca.",
-        ogImage: '/assets/clients/cadas-arquitetura/obra_1.jpg'
+        title: 'Cadas Arquitetura | Arquitetura de Autor e Interiores no Leblon - RJ',
+        description: 'Escritório de Cadas Abranches no Leblon. Projetos residenciais de alto padrão com freijó, pedras nobres e luz natural no Rio de Janeiro.',
+        ogImage: '/assets/clients/cadas-arquitetura/obra_lw.jpg'
       },
       sections: [
         {
@@ -45,13 +45,12 @@ const client: ClientConfig = {
           type: 'header',
           variant: 'Header02',
           content: {
-            announcement: 'Atendimento exclusivo em Ipanema, Leblon e Joá',
+            announcement: 'Atendimento exclusivo no Leblon, Ipanema e Joá',
             navLinks: [
               { label: 'Projetos', href: '#projetos' },
-              { label: 'Filosofia', href: '#escritorio' },
-              { label: 'Especialidades', href: '#especialidades' },
-              { label: 'Diferenciais', href: '#diferenciais' },
-              { label: 'FAQ', href: '#faq' }
+              { label: 'Perfil', href: '#perfil' },
+              { label: 'Filosofia', href: '#filosofia' },
+              { label: 'Contato', href: '#contato' }
             ],
             ctaLabel: 'Iniciar Diálogo'
           }
@@ -61,17 +60,17 @@ const client: ClientConfig = {
           type: 'hero',
           variant: 'Hero01',
           content: {
-            badge: 'Arquitetura de Autor & Alto Padrão no RJ',
-            headline: "Cadas Arquitetura — Arquitetura de Autor no Rio de Janeiro",
-            subheadline: "Residências e coberturas exclusivas com integração absoluta com a paisagem carioca.",
-            primaryCtaLabel: 'Conversar com Cadas Abranches',
-            secondaryCtaLabel: 'Conhecer Projetos',
+            badge: 'Leblon • Rio de Janeiro',
+            headline: 'A alma carioca esculpida em arquitetura autoral e atemporal.',
+            subheadline: 'Com mais de 35 anos de história no Leblon, o escritório liderado por Cadas Abranches une luz natural, freijó maciço e pedras nobres em residências que dialogam com a paisagem do Rio.',
+            primaryCtaLabel: 'Iniciar Diálogo no WhatsApp',
+            secondaryCtaLabel: 'Conhecer Obras',
             secondaryCtaHref: '#projetos',
-            imageUrl: '/assets/clients/cadas-arquitetura/obra_1.jpg',
+            imageUrl: '/assets/clients/cadas-arquitetura/obra_lw.jpg',
             trustPoints: [
-              'Mais de 35 anos de trajetória em Ipanema',
-              'Projetos premiados na CasaCor Rio',
-              'Acompanhamento milimétrico de ponta a ponta'
+              'Mais de 35 anos de ateliê no Leblon',
+              'Mais de 280 residências executadas',
+              'Acompanhamento autoral de ponta a ponta'
             ]
           }
         },
@@ -80,19 +79,19 @@ const client: ClientConfig = {
           type: 'about',
           variant: 'About01',
           content: {
-            badge: 'Filosofia & Assinatura',
-            title: 'Espaços que dialogam com a paisagem e elevam o viver.',
-            text1: 'Fundado por Cadas Abranches, o escritório alia o modernismo carioca à marcenaria artesanal, pedras nobres e integração total com o horizonte.',
-            text2: 'Cada projeto é concebido como uma obra de arte viva, desenhada sob medida para famílias que exigem privacidade, excelência e sofisticação sem excessos.',
+            badge: 'Perfil & Ateliê',
+            title: 'Espaços que dialogam com o horizonte e acolhem a vida.',
+            text1: 'Comandado por Cadas Abranches, o escritório desenvolve projetos residenciais e comerciais no Rio de Janeiro e no mundo com profunda sensibilidade estética, luz natural e materiais nobres.',
+            text2: 'A equipe técnica inclui especialistas como Cristiana David e Joanna Mesquitela na coordenação de interiores, garantindo marcenaria milimétrica e harmonia de materiais.',
             highlights: [
-              { value: '35+', label: 'Anos de Tradição' },
-              { value: '280+', label: 'Projetos Entregues' },
-              { value: '100%', label: 'Execução Autoral' }
+              { value: '35+', label: 'Anos de Ateliê' },
+              { value: '280+', label: 'Obras Entregues' },
+              { value: 'Leblon', label: 'Sede no RJ' }
             ],
             whyChoose: [
-              'Gestão completa de cronograma e compatibilização estrutural',
-              'Curadoria exclusiva de materiais, mobiliário e iluminação cênica',
-              'Rigor milimétrico e valorização patrimonial extraordinária'
+              'Interação direta com os sócios titulares em todas as decisões',
+              'Curadoria exclusiva de freijó, cumaru, mármore travertino e arte',
+              'Compatibilização executiva completa sem surpresas de cronograma'
             ]
           }
         },
@@ -102,22 +101,22 @@ const client: ClientConfig = {
           variant: 'Projects01',
           content: {
             title: 'Obras & Residências de Assinatura',
-            subtitle: 'Uma seleção de residências costeiras, coberturas e refúgios na serra com nossa curadoria.',
+            subtitle: 'Projetos reais executados com a curadoria de Cadas Abranches.',
             projects: [
               {
-                title: 'Villa Joá Cliff',
-                category: 'Residência Unifamiliar - Joá',
-                description: 'Casa suspensa sobre a rocha com vista panorâmica do oceano, brises de cumaru e concreto pigmentado.'
+                title: 'Projeto LW',
+                category: 'Residencial Joá',
+                description: 'Residência suspensa sobre a rocha em balanço com vista panorâmica do oceano Atlântico.'
               },
               {
-                title: 'Penthouse Vieira Souto',
-                category: 'Cobertura Duplex - Ipanema',
-                description: 'Integração de 600m² com piscina de borda infinita em mármore travertino navona e painéis vazados.'
+                title: 'Projeto EB Leblon',
+                category: 'Apartamento Leblon',
+                description: 'Integração de 600m² com piscina em mármore travertino navona e painéis vazados de madeira.'
               },
               {
-                title: 'Refúgio Araras',
-                category: 'Casa de Campo - Petrópolis',
-                description: 'Vidro estrutural, lareiras suspensas e rochas naturais integradas ao ecossistema da serra fluminense.'
+                title: 'Projeto Fisher Island',
+                category: 'Internacional Miami',
+                description: 'Linhas minimalistas, ventilação cruzada e diálogo permanente com a paisagem costeira.'
               }
             ]
           }
@@ -139,84 +138,15 @@ const client: ClientConfig = {
               },
               {
                 icon: '✨',
-                title: 'Design de Interiores & Curadoria',
-                description: 'Desenho de marcenaria sob medida, seleção de arte contemporânea e iluminação de atmosfera.',
+                title: 'Design de Interiores & Marcenaria',
+                description: 'Coordenação de Cristiana David e equipe para marcenaria sob medida e iluminação cênica.',
                 cta: 'Saber Mais'
               },
               {
                 icon: '🏛️',
-                title: 'Compatibilização & Fiscalização de Obra',
+                title: 'Coordenação Executiva de Obra',
                 description: 'Coordenação minuciosa de engenharias, cálculo estrutural e acabamentos para precisão milimétrica.',
                 cta: 'Falar com Arquiteto'
-              }
-            ]
-          }
-        },
-        {
-          id: 'benefits-cadas',
-          type: 'benefits',
-          variant: 'Benefits01',
-          content: {
-            title: 'Por Que Escolher Cadas Arquitetura',
-            subtitle: 'Tranquilidade executiva para quem valoriza seu tempo e patrimônio.',
-            items: [
-              {
-                icon: '💎',
-                title: 'Atendimento Proprietário',
-                description: 'Interação direta com os sócios titulares em todas as reuniões decisórias de projeto.'
-              },
-              {
-                icon: '🌿',
-                title: 'Bioclimática Carioca',
-                description: 'Aproveitamento supremo da ventilação cruzada e proteção solar para conforto térmico natural.'
-              },
-              {
-                icon: '🛡️',
-                title: 'Zero Desvio de Orçamento',
-                description: 'Orçamentação analítica e memorial descritivo blindado contra aditivos imprevisíveis.'
-              }
-            ]
-          }
-        },
-        {
-          id: 'testimonials-cadas',
-          type: 'testimonials',
-          variant: 'Testimonials01',
-          content: {
-            title: 'A Confiança de Quem Vive em Nossos Projetos',
-            items: [
-              {
-                quote: 'O Cadas conseguiu transformar nosso terreno complexo no Joá em uma das casas mais impressionantes que já vi. A luz entra perfeita a qualquer hora do dia.',
-                author: 'Roberto e Cecília M.',
-                role: 'Proprietários Villa Joá'
-              },
-              {
-                quote: 'A seriedade com que conduziram a reforma da nossa cobertura em Ipanema foi impecável. Entrega no prazo acordado e acabamento sem defeitos.',
-                author: 'Dr. Leonardo Sampaio',
-                role: 'Proprietário Penthouse Vieira Souto'
-              }
-            ]
-          }
-        },
-        {
-          id: 'faq-cadas',
-          type: 'faq',
-          variant: 'FAQ01',
-          content: {
-            title: 'Dúvidas Frequentes sobre Nossos Serviços',
-            subtitle: 'Tudo o que você precisa saber antes de iniciar seu projeto.',
-            items: [
-              {
-                question: 'Como funciona o processo de contratação e início do projeto?',
-                answer: 'Iniciamos com uma reunião de alinhamento conceitual e visita técnica ao terreno ou imóvel. Após aprovação da proposta, desenvolvemos o estudo preliminar com maquetes 3D e amostras de materiais.'
-              },
-              {
-                question: 'O escritório também executa ou fiscaliza a obra?',
-                answer: 'Realizamos a coordenação de projetos complementares e o acompanhamento técnico da obra, garantindo que cada detalhe desenhado seja executado com exatidão artesanal.'
-              },
-              {
-                question: 'Vocês atendem apenas a cidade do Rio de Janeiro?',
-                answer: 'Atuamos fortemente na Zona Sul, Barra e Joá, além de projetos residenciais em Búzios, Angra dos Reis, Petrópolis e São Paulo.'
               }
             ]
           }
@@ -227,7 +157,7 @@ const client: ClientConfig = {
           variant: 'CTA01',
           content: {
             headline: 'Dê vida ao seu próximo refúgio com Cadas Arquitetura.',
-            subheadline: 'Agende uma conversa reservada com nossa diretoria criativa para discutir o seu projeto.',
+            subheadline: 'Agende uma conversa reservada com nossa diretoria no Leblon para discutir o seu projeto.',
             buttonLabel: 'Agendar Consulta por WhatsApp'
           }
         },

@@ -1,0 +1,34 @@
+---
+import type { ClientConfig } from '../../schema';
+
+interface Props {
+  content: any;
+  client: ClientConfig;
+}
+
+const { client } = Astro.props;
+---
+
+<header class="sticky top-0 z-50 backdrop-blur-md border-b border-white/10" style="background-color: color-mix(in srgb, var(--color-bg) 92%, transparent);">
+  <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+    <!-- LOGO REAL DO CLIENTE -->
+    <a href="/" class="flex items-center gap-3">
+      <img src="/assets/clients/cadas-arquitetura/cadas_logo.png" alt="Cadas Arquitetura" class="h-8 md:h-10 w-auto object-contain filter brightness-0 invert opacity-95" />
+    </a>
+
+    <!-- NAVEGAÇÃO AUTÊNTICA (HOME, PERFIL, PROJETOS, CONTATO) -->
+    <nav class="hidden md:flex items-center space-x-10 text-xs font-semibold tracking-widest uppercase opacity-80">
+      <a href="#projetos" class="hover:text-[var(--color-accent)] transition-colors">Projetos</a>
+      <a href="#perfil" class="hover:text-[var(--color-accent)] transition-colors">Perfil</a>
+      <a href="#filosofia" class="hover:text-[var(--color-accent)] transition-colors">Filosofia</a>
+      <a href="#contato" class="hover:text-[var(--color-accent)] transition-colors">Contato</a>
+    </nav>
+
+    <!-- CONTATO DIRETO LEBLON -->
+    <div class="flex items-center gap-4">
+      <a href="https://wa.me/5521998772201" target="_blank" class="px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all hover:scale-105 shadow-md" style="background-color: var(--color-accent); color: var(--color-bg);">
+        Falar no WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
