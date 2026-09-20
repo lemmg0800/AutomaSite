@@ -12,17 +12,51 @@ export function getSupabaseServerClient(cookies: AstroCookies, request?: Request
   return createServerClient(supabaseUrl, supabaseAnonKey, {
     cookies: {
       getAll() {
+        const cookieList: { name: string; value: string }[] = [];
+        const seen = new Set<string>();
+
+        // 1. Prioriza leitura do header raw da requisição se disponível
         const raw = request?.headers?.get('cookie') || '';
-        if (!raw) return [];
-        return raw.split(';').map(c => {
-          const [name, ...rest] = c.trim().split('=');
-          return { name, value: rest.join('=') };
-        });
+        if (raw) {
+          raw.split(';').forEach(c => {
+            const [name, ...rest] = c.trim().split('=');
+            if (name) {
+              const cleanName = name.trim();
+              seen.add(cleanName);
+              cookieList.push({ name: cleanName, value: rest.join('=') });
+            }
+          });
+        }
+
+        // 2. Complementa com cookies do AstroCookies caso ainda não listados
+        try {
+          // AstroCookies permite verificar cookies conhecidos do Supabase caso não estejam no header
+          const commonSupabaseKeys = ['sb-access-token', 'sb-refresh-token'];
+          for (const key of commonSupabaseKeys) {
+            if (!seen.has(key) && cookies?.has?.(key)) {
+              const val = cookies.get(key)?.value;
+              if (val) {
+                cookieList.push({ name: key, value: val });
+                seen.add(key);
+              }
+            }
+          }
+        } catch {
+          // Fallback seguro
+        }
+
+        return cookieList;
       },
       setAll(cookiesToSet) {
         cookiesToSet.forEach(({ name, value, options }) => {
           try {
-            cookies.set(name, value, options);
+            cookies.set(name, value, {
+              path: '/',
+              sameSite: 'lax',
+              httpOnly: true,
+              secure: process.env.NODE_ENV === 'production',
+              ...options
+            });
           } catch (e) {
             // Ignora se for contexto estático ou cabeçalhos já enviados
           }
