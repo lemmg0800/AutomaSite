@@ -1,6 +1,86 @@
 import { createServerClient } from '@supabase/ssr';
 import type { AstroCookies } from 'astro';
 
+import https from 'https';
+
+/**
+ * Fetch customizado resiliente para chamadas internas do Node ao Supabase,
+ * contornando restrições de certificados intermediários locais do Windows sem comprometer a produção.
+ */
+const supabaseCustomFetch: typeof fetch = (input: RequestInfo | URL, init?: RequestInit): Promise<Response> => {
+  if (typeof window !== 'undefined') {
+    return fetch(input, init);
+  }
+
+  return new Promise((resolve, reject) => {
+    try {
+      const targetUrl = typeof input === 'string' ? input : input instanceof URL ? input.toString() : (input as Request).url;
+      const u = new URL(targetUrl);
+      
+      const reqHeaders: Record<string, string> = {};
+      if (init?.headers) {
+        if (init.headers instanceof Headers) {
+          init.headers.forEach((v, k) => { reqHeaders[k] = v; });
+        } else if (Array.isArray(init.headers)) {
+          init.headers.forEach(([k, v]) => { reqHeaders[k] = v; });
+        } else {
+          Object.assign(reqHeaders, init.headers);
+        }
+      }
+
+      const req = https.request({
+        protocol: u.protocol,
+        hostname: u.hostname,
+        port: u.port || (u.protocol === 'https:' ? 443 : 80),
+        path: u.pathname + u.search,
+        method: init?.method || 'GET',
+        headers: reqHeaders,
+        rejectUnauthorized: process.env.NODE_ENV === 'production'
+      }, (res) => {
+        const chunks: Buffer[] = [];
+        res.on('data', chunk => chunks.push(chunk));
+        res.on('end', () => {
+          const body = Buffer.concat(chunks);
+          const responseHeaders = new Headers();
+          for (const [key, value] of Object.entries(res.headers)) {
+            if (value) {
+              if (Array.isArray(value)) {
+                value.forEach(v => responseHeaders.append(key, v));
+              } else {
+                responseHeaders.set(key, value);
+              }
+            }
+          }
+
+          resolve(new Response(body, {
+            status: res.statusCode || 200,
+            statusText: res.statusMessage || '',
+            headers: responseHeaders
+          }));
+        });
+      });
+
+      req.on('error', reject);
+
+      if (init?.body) {
+        if (typeof init.body === 'string') {
+          req.write(init.body);
+        } else if (Buffer.isBuffer(init.body)) {
+          req.write(init.body);
+        } else if (init.body instanceof Uint8Array) {
+          req.write(Buffer.from(init.body));
+        } else {
+          req.write(String(init.body));
+        }
+      }
+
+      req.end();
+    } catch (e) {
+      reject(e);
+    }
+  });
+};
+
 export function getSupabaseServerClient(cookies: AstroCookies, request?: Request) {
   const supabaseUrl = import.meta.env.SUPABASE_URL || (typeof process !== 'undefined' ? process.env.SUPABASE_URL : '');
   const supabaseAnonKey = import.meta.env.SUPABASE_ANON_KEY || (typeof process !== 'undefined' ? process.env.SUPABASE_ANON_KEY : '');
@@ -10,6 +90,9 @@ export function getSupabaseServerClient(cookies: AstroCookies, request?: Request
   }
 
   return createServerClient(supabaseUrl, supabaseAnonKey, {
+    global: {
+      fetch: supabaseCustomFetch
+    },
     cookies: {
       getAll() {
         const cookieList: { name: string; value: string }[] = [];

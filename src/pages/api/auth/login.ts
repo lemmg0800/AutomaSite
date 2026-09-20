@@ -85,12 +85,14 @@ export const POST: APIRoute = async ({ request, cookies, redirect }) => {
 
   } catch (err: any) {
     console.error('[AUTH LOGIN ERROR]', err);
+    const detail = err?.message ? `: ${err.message}` : '';
+    const userMsg = `Erro na autenticação${detail}`;
     if (isJsonRequest) {
-      return new Response(JSON.stringify({ error: 'Serviço de autenticação temporariamente indisponível.' }), {
+      return new Response(JSON.stringify({ error: userMsg }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }
       });
     }
-    return redirect('/login?error=Serviço de autenticação temporariamente indisponível.');
+    return redirect(`/login?error=${encodeURIComponent(userMsg)}`);
   }
 };
