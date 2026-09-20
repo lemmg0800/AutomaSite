@@ -8,54 +8,55 @@ const client: ClientConfig = {
   business: {
     name: "Jacobsen Arquitetura",
     legalName: "JACOBSEN ARQUITETURA LTDA",
-    niche: "Arquitetura Litorânea, Biofílica e Residencial Tropical",
+    niche: 'Arquitetura de Alto Padrão e Interiores',
     city: "Rio de Janeiro",
     state: "RJ",
     address: "Rua Pacheco Leão, 758 - Jardim Botânico, Rio de Janeiro - RJ",
     phone: "(21) 2512-5884",
     whatsapp: "(21) 98888-5884",
     email: "contato@jacobsenarquitetura.com",
-    instagram: "@jacobsenarquitetura"
+    instagram: "@jacobsen_arquitetura"
   },
   theme: {
-  "primaryColor": "#1B2421",
-  "secondaryColor": "#283530",
-  "accentColor": "#4A7C59",
-  "backgroundColor": "#0D1311",
-  "textColor": "#E8EFEA",
-  "headingFont": "Plus Jakarta Sans",
-  "bodyFont": "Inter",
-  "borderRadius": "lg",
-  "mode": "dark",
-  "enableCursor": false,
-  "backgroundEffect": "none",
-  "enableParallax": true
-},
+    primaryColor: "#1B2421",
+    secondaryColor: "#283530",
+    accentColor: "#4A7C59",
+    backgroundColor: "#0D1311",
+    textColor: "#E8EFEA",
+    headingFont: "Plus Jakarta Sans",
+    bodyFont: "Inter",
+    borderRadius: 'md',
+    mode: 'dark',
+    enableCursor: false,
+    backgroundEffect: 'none',
+    enableParallax: true
+  },
   pages: [
     {
       path: '',
       seo: {
         title: "Jacobsen Arquitetura | Arquitetura de Alto Padrão no Rio de Janeiro",
-        description: "Projetos autorais residenciais e comerciais de excelência no Rio de Janeiro. Arquitetura atemporal, interiores e valorização patrimonial.",
-        ogImage: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=85"
+        description: "Projetos residenciais e contemporâneos de excelência no Rio de Janeiro.",
+        ogImage: "/assets/clients/jacobsen-arquitetura/obra_1.jpg"
       },
       sections: [
       {
-            "id": "header-jacobsen",
+            "id": "header-jacobsen-arquitetura",
             "type": "header",
             "variant": "Header01",
             "content": {
+                  "announcement": "Atendimento exclusivo no Rio de Janeiro (Jardim Botânico, Rio de Janeiro)",
                   "navLinks": [
                         {
                               "label": "Projetos",
                               "href": "#projetos"
                         },
                         {
-                              "label": "Biofilia",
+                              "label": "Escritório",
                               "href": "#escritorio"
                         },
                         {
-                              "label": "Serviços",
+                              "label": "Especialidades",
                               "href": "#especialidades"
                         },
                         {
@@ -63,171 +64,120 @@ const client: ClientConfig = {
                               "href": "#diferenciais"
                         }
                   ],
-                  "ctaLabel": "Contato Jardim Botânico"
+                  "ctaLabel": "Contato WhatsApp"
             }
       },
       {
-            "id": "hero-jacobsen",
+            "id": "hero-jacobsen-arquitetura",
             "type": "hero",
             "variant": "Hero01",
             "content": {
-                  "badge": "Líder em Arquitetura Biofílica e Sustentabilidade Tropical",
-                  "headline": "Fluidez entre o interior e a natureza exuberante do Rio.",
-                  "subheadline": "Transparência, ventilação cruzada e brises de madeira engenheirada que se dissolvem na paisagem da Mata Atlântica e do oceano atlântico.",
-                  "primaryCtaLabel": "Falar com Arquiteto Titular",
+                  "badge": "Arquitetura de Alto Padrão no RJ",
+                  "headline": "Jacobsen Arquitetura — Arquitetura de Autor",
+                  "subheadline": "Projetos residenciais e contemporâneos de excelência no Rio de Janeiro.",
+                  "primaryCtaLabel": "Conversar no WhatsApp",
                   "secondaryCtaLabel": "Conhecer Projetos",
                   "secondaryCtaHref": "#projetos",
-                  "imageUrl": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=85",
+                  "imageUrl": "/assets/clients/jacobsen-arquitetura/obra_1.jpg",
                   "trustPoints": [
-                        "Escritórios no Jardim Botânico, São Paulo e Lisboa",
-                        "Pioneirismo em MLC (Madeira Laminada Colada)",
-                        "Certificações ambientais internacionais LEED e AQUA"
+                        "Projetos autorais com acompanhamento milimétrico",
+                        "Rigor técnico, biocompatibilidade e conforto térmico",
+                        "Sede exclusiva no Rio de Janeiro"
                   ]
             }
       },
       {
-            "id": "stats-jacobsen",
-            "type": "stats",
-            "variant": "Stats01",
-            "content": {
-                  "stats": [
-                        {
-                              "number": "400+",
-                              "label": "Projetos no Brasil e Exterior"
-                        },
-                        {
-                              "number": "15+",
-                              "label": "Prêmios Internacionais"
-                        },
-                        {
-                              "number": "100%",
-                              "label": "Madeira Certificada FSC"
-                        },
-                        {
-                              "number": "3",
-                              "label": "Bases Globais"
-                        }
-                  ]
-            }
-      },
-      {
-            "id": "about-jacobsen",
+            "id": "about-jacobsen-arquitetura",
             "type": "about",
             "variant": "About01",
             "content": {
-                  "badge": "Manifesto da Transparência",
-                  "title": "Casas que respiram com a floresta e o vento do mar.",
-                  "text1": "Liderado por Paulo Jacobsen e Bernardo Jacobsen, o escritório desenvolveu uma linguagem autêntica onde coberturas leves, beirais generosos e lâminas d'água protegem e acolhem.",
-                  "text2": "Através de soluções passivas bioclimáticas, dispensamos o uso excessivo de climatização artificial e colocamos o bem-estar humano no centro do habitar.",
+                  "badge": "Filosofia & Assinatura",
+                  "title": "A essência da arquitetura carioca por Jacobsen Arquitetura",
+                  "text1": "Projetos residenciais e contemporâneos de excelência no Rio de Janeiro.",
+                  "text2": "Com sólida atuação no Rio de Janeiro, o escritório alia sofisticação contemporânea a materiais nobres como madeira maciça, pedras naturais e transparência luminosa.",
                   "highlights": [
                         {
-                              "value": "MLC",
-                              "label": "Estruturas Leves e Renováveis"
+                              "value": "100%",
+                              "label": "Execução Autoral"
                         },
                         {
-                              "value": "Zero Carbon",
-                              "label": "Estratégias de Eficiência"
+                              "value": "BIM",
+                              "label": "Precisão Construtiva"
                         },
                         {
-                              "value": "Natureza",
-                              "label": "Integração Biofílica 360°"
+                              "value": "Rio",
+                              "label": "Identidade Carioca"
                         }
                   ],
                   "whyChoose": [
-                        "Projetos com baixa pegada ecológica e alta durabilidade climática",
-                        "Sistemas de captação de água da chuva e energia fotovoltaica integrados",
-                        "Equipe multidisciplinar de arquitetura, paisagismo e engenharia"
+                        "Interação direta com os arquitetos titulares em todas as decisões",
+                        "Orçamento executivo detalhado e blindado contra imprevistos",
+                        "Harmonia absoluta com a paisagem e valorização imobiliária máxima"
                   ]
             }
       },
       {
-            "id": "projects-jacobsen",
+            "id": "projects-jacobsen-arquitetura",
             "type": "projects",
             "variant": "Projects01",
             "content": {
-                  "title": "Residências Costeiras e Refúgios Naturais",
-                  "subtitle": "Obras icônicas em Angra dos Reis, Búzios, Paraty e no Rio.",
+                  "title": "Obras & Residências de Destaque",
+                  "subtitle": "Projetos recentes que traduzem a identidade do escritório.",
                   "projects": [
                         {
-                              "title": "Casa Bento",
-                              "category": "Residência Litorânea - Angra dos Reis",
-                              "description": "Pavilhões interligados por passarelas cobertas em madeira cumaru sobre espelho d'água."
+                              "title": "Residência Cliff & Horizon",
+                              "category": "Residencial Alto Padrão - Joá/Leblon",
+                              "description": "Grandes vãos envidraçados, brises de madeira e piscina integrada à paisagem."
                         },
                         {
-                              "title": "Residência Jardim Botânico",
-                              "category": "Casa Urbana Integrada - Rio de Janeiro",
-                              "description": "Muros verdes e grandes vãos envidraçados voltados para a copa das árvores centenárias."
+                              "title": "Penthouse Vieira Souto",
+                              "category": "Cobertura Duplex - Ipanema",
+                              "description": "Mármores nobres, marcenaria de design assinado e automação luminotécnica."
                         },
                         {
-                              "title": "Casa Mangaritiba",
-                              "category": "Praia Privativa - Costa Verde",
-                              "description": "Cobertura suspensa em balanço que emoldura a enseada cristalina e as ilhas oceânicas."
+                              "title": "Refúgio na Serra",
+                              "category": "Casa de Campo - Itaipava",
+                              "description": "Sustentabilidade passiva, concreto pigmentado e integração à Mata Atlântica."
                         }
                   ]
             }
       },
       {
-            "id": "services-jacobsen",
+            "id": "services-jacobsen-arquitetura",
             "type": "services",
             "variant": "Services02",
             "content": {
-                  "badge": "Competências do Escritório",
-                  "title": "Abordagem completa do plano geral ao detalhe artesanal.",
-                  "subtitle": "Precisão que une sustentabilidade real e conforto supremo.",
+                  "badge": "Atuação Completa",
+                  "title": "Do Estudo Preliminar à Entrega das Chaves",
+                  "subtitle": "Soluções integradas de arquitetura, interiores e gestão de obra.",
                   "services": [
                         {
-                              "title": "Arquitetura Residencial Tropical",
-                              "description": "Projetos autorais desenhados especificamente para a climatologia e topografia do sítio."
+                              "title": "Projetos de Arquitetura Residencial",
+                              "description": "Concepção volumétrica, estudo solar e compatibilização estrutural completa."
                         },
                         {
-                              "title": "Paisagismo Biofílico Integrado",
-                              "description": "Seleção botânica nativa em parceria com grandes paisagistas para restauração da flora local."
+                              "title": "Arquitetura de Interiores & Curadoria",
+                              "description": "Desenho de marcenaria sob medida, seleção de mobiliário e iluminação cênica."
                         },
                         {
-                              "title": "Consultoria de Certificação Ambiental",
-                              "description": "Eficiência energética e hídrica com metodologias internacionais de sustentabilidade."
+                              "title": "Gestão e Acompanhamento de Obras",
+                              "description": "Fiscalização minuciosa dos acabamentos e garantia de pontualidade cronológica."
                         }
                   ]
             }
       },
       {
-            "id": "benefits-jacobsen",
-            "type": "benefits",
-            "variant": "Benefits01",
-            "content": {
-                  "title": "Vantagens Exclusivas Jacobsen",
-                  "subtitle": "Uma postura pioneira de respeito à terra e à beleza.",
-                  "items": [
-                        {
-                              "icon": "🌲",
-                              "title": "Engenharia da Madeira",
-                              "description": "Cálculo de estruturas em MLC que trazem aconchego térmico imediato."
-                        },
-                        {
-                              "icon": "☀️",
-                              "title": "Conforto Bioclimático",
-                              "description": "Estudo solar minucioso que elimina pontos cegos de calor e umidade."
-                        },
-                        {
-                              "icon": "🌊",
-                              "title": "Resistência à Maresia",
-                              "description": "Especificação técnica de ligas metálicas e acabamentos testados para orla litorânea."
-                        }
-                  ]
-            }
-      },
-      {
-            "id": "cta-jacobsen",
+            "id": "cta-jacobsen-arquitetura",
             "type": "cta",
             "variant": "CTA01",
             "content": {
-                  "headline": "Construa sua casa integrada à natureza do Rio.",
-                  "subheadline": "Entre em contato com nossa sede no Jardim Botânico para conhecer nosso portfólio completo.",
-                  "buttonLabel": "Solicitar Apresentação no Jardim Botânico"
+                  "headline": "Conecte-se com Jacobsen Arquitetura para planejar sua residência.",
+                  "subheadline": "Agende uma conversa reservada com a nossa diretoria para discutir as diretrizes do seu projeto.",
+                  "buttonLabel": "Solicitar Atendimento por WhatsApp"
             }
       },
       {
-            "id": "footer-jacobsen",
+            "id": "footer-jacobsen-arquitetura",
             "type": "footer",
             "variant": "Footer02",
             "content": {}

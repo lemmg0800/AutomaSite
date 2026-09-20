@@ -8,223 +8,176 @@ const client: ClientConfig = {
   business: {
     name: "Bernardes Arquitetura",
     legalName: "BERNARDES ARQUITETURA LTDA",
-    niche: "Arquitetura Contemporânea Brasileira e Urbanismo",
+    niche: 'Arquitetura de Alto Padrão e Interiores',
     city: "Rio de Janeiro",
     state: "RJ",
     address: "Av. Ataulfo de Paiva, 135 - Leblon, Rio de Janeiro - RJ",
     phone: "(21) 2540-5200",
     whatsapp: "(21) 98114-5200",
     email: "contato@bernardesarq.com.br",
-    instagram: "@bernardesarq"
+    instagram: "@bernardes_arquitetura"
   },
   theme: {
-  "primaryColor": "#121516",
-  "secondaryColor": "#1E2325",
-  "accentColor": "#D4AF37",
-  "backgroundColor": "#0A0C0D",
-  "textColor": "#EDECE8",
-  "headingFont": "Cinzel",
-  "bodyFont": "Plus Jakarta Sans",
-  "borderRadius": "none",
-  "mode": "dark",
-  "enableCursor": false,
-  "backgroundEffect": "none",
-  "enableParallax": true
-},
+    primaryColor: "#121516",
+    secondaryColor: "#1E2325",
+    accentColor: "#D4AF37",
+    backgroundColor: "#0A0C0D",
+    textColor: "#EDECE8",
+    headingFont: "Cinzel",
+    bodyFont: "Plus Jakarta Sans",
+    borderRadius: 'md',
+    mode: 'dark',
+    enableCursor: false,
+    backgroundEffect: 'none',
+    enableParallax: true
+  },
   pages: [
     {
       path: '',
       seo: {
         title: "Bernardes Arquitetura | Arquitetura de Alto Padrão no Rio de Janeiro",
-        description: "Projetos autorais residenciais e comerciais de excelência no Rio de Janeiro. Arquitetura atemporal, interiores e valorização patrimonial.",
-        ogImage: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=85"
+        description: "Projetos residenciais e contemporâneos de excelência no Rio de Janeiro.",
+        ogImage: "/assets/clients/bernardes-arquitetura/obra_1.jpg"
       },
       sections: [
       {
-            "id": "header-bernardes",
+            "id": "header-bernardes-arquitetura",
             "type": "header",
             "variant": "Header01",
             "content": {
+                  "announcement": "Atendimento exclusivo no Rio de Janeiro (Leblon, Rio de Janeiro)",
                   "navLinks": [
                         {
                               "label": "Projetos",
                               "href": "#projetos"
                         },
                         {
-                              "label": "Manifesto",
+                              "label": "Escritório",
                               "href": "#escritorio"
                         },
                         {
-                              "label": "Atuação",
+                              "label": "Especialidades",
                               "href": "#especialidades"
                         },
                         {
-                              "label": "Método",
-                              "href": "#metodo"
+                              "label": "Diferenciais",
+                              "href": "#diferenciais"
                         }
                   ],
-                  "ctaLabel": "Contato Leblon"
+                  "ctaLabel": "Contato WhatsApp"
             }
       },
       {
-            "id": "hero-bernardes",
+            "id": "hero-bernardes-arquitetura",
             "type": "hero",
             "variant": "Hero02",
             "content": {
-                  "badge": "Referência Mundial em Arquitetura Tropical",
-                  "headline": "O rigor da forma e a organicidade do modernismo brasileiro.",
-                  "subheadline": "Escritório sediado no Leblon, Nova York e Lisboa, criando espaços icônicos onde concreto aparente, madeira nobre e vegetação nativa convergem.",
-                  "primaryCtaLabel": "Falar com Nossa Equipe",
-                  "imageUrl": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=85",
+                  "badge": "Arquitetura de Alto Padrão no RJ",
+                  "headline": "Bernardes Arquitetura — Arquitetura de Autor",
+                  "subheadline": "Projetos residenciais e contemporâneos de excelência no Rio de Janeiro.",
+                  "primaryCtaLabel": "Conversar no WhatsApp",
+                  "secondaryCtaLabel": "Conhecer Projetos",
+                  "secondaryCtaHref": "#projetos",
+                  "imageUrl": "/assets/clients/bernardes-arquitetura/obra_1.jpg",
                   "trustPoints": [
-                        "Projetos premiados internacionalmente no WAF e ArchDaily",
-                        "Presença global: Rio de Janeiro, São Paulo, NY e Lisboa",
-                        "Tradição arquitetônica de três gerações de mestres"
+                        "Projetos autorais com acompanhamento milimétrico",
+                        "Rigor técnico, biocompatibilidade e conforto térmico",
+                        "Sede exclusiva no Rio de Janeiro"
                   ]
             }
       },
       {
-            "id": "stats-bernardes",
-            "type": "stats",
-            "variant": "Stats01",
-            "content": {
-                  "stats": [
-                        {
-                              "number": "1.200+",
-                              "label": "Obras Realizadas no Mundo"
-                        },
-                        {
-                              "number": "4",
-                              "label": "Bases Internacionais"
-                        },
-                        {
-                              "number": "45+",
-                              "label": "Prêmios de Design & Urbanismo"
-                        },
-                        {
-                              "number": "30+",
-                              "label": "Anos de Vanguarda"
-                        }
-                  ]
-            }
-      },
-      {
-            "id": "projects-bernardes",
-            "type": "projects",
-            "variant": "Projects01",
-            "content": {
-                  "title": "Obras de Relevância Internacional",
-                  "subtitle": "Projetos autorais residenciais, hospitalidade e edifícios culturais.",
-                  "projects": [
-                        {
-                              "title": "Residência Asa",
-                              "category": "Residência Privada - São Conrado",
-                              "description": "Cobertura em balanço arrojado de concreto protendido e vidro, emoldurando a Pedra da Gávea."
-                        },
-                        {
-                              "title": "Hotel Fasano Angra",
-                              "category": "Hospitalidade de Luxo - Angra dos Reis",
-                              "description": "Implantação litorânea integrada com docas privativas e estruturas de madeira laminada colada."
-                        },
-                        {
-                              "title": "Casa Delta",
-                              "category": "Litoral Fluminense",
-                              "description": "Painéis ripados móveis de cumaru que regulam iluminação, privacidade e ventilação marinha."
-                        }
-                  ]
-            }
-      },
-      {
-            "id": "about-bernardes",
+            "id": "about-bernardes-arquitetura",
             "type": "about",
             "variant": "About01",
             "content": {
-                  "badge": "Manifesto Arquitetônico",
-                  "title": "Arquitetura que nasce do sítio e reverencia a geografia carioca.",
-                  "text1": "Fundado por Thiago Bernardes, o escritório carrega o legado inovador de Sergio Bernardes, atualizado com as mais avançadas técnicas sustentáveis e construtivas do século XXI.",
-                  "text2": "Criamos residências que desafiam convenções estruturais enquanto oferecem acolhimento térmico, espacial e sensorial inigualável.",
+                  "badge": "Filosofia & Assinatura",
+                  "title": "A essência da arquitetura carioca por Bernardes Arquitetura",
+                  "text1": "Projetos residenciais e contemporâneos de excelência no Rio de Janeiro.",
+                  "text2": "Com sólida atuação no Rio de Janeiro, o escritório alia sofisticação contemporânea a materiais nobres como madeira maciça, pedras naturais e transparência luminosa.",
                   "highlights": [
                         {
-                              "value": "BIM 5D",
-                              "label": "Tecnologia Construtiva"
+                              "value": "100%",
+                              "label": "Execução Autoral"
                         },
                         {
-                              "value": "Global",
-                              "label": "Projetos em 4 Continentes"
+                              "value": "BIM",
+                              "label": "Precisão Construtiva"
                         },
                         {
-                              "value": "Autoral",
-                              "label": "Identidade Singular"
+                              "value": "Rio",
+                              "label": "Identidade Carioca"
                         }
                   ],
                   "whyChoose": [
-                        "Compatibilização tridimensional milimétrica",
-                        "Sustentabilidade passiva com conforto térmico natural",
-                        "Valor patrimonial e prestígio de reconhecimento mundial"
+                        "Interação direta com os arquitetos titulares em todas as decisões",
+                        "Orçamento executivo detalhado e blindado contra imprevistos",
+                        "Harmonia absoluta com a paisagem e valorização imobiliária máxima"
                   ]
             }
       },
       {
-            "id": "services-bernardes",
+            "id": "projects-bernardes-arquitetura",
+            "type": "projects",
+            "variant": "Projects01",
+            "content": {
+                  "title": "Obras & Residências de Destaque",
+                  "subtitle": "Projetos recentes que traduzem a identidade do escritório.",
+                  "projects": [
+                        {
+                              "title": "Residência Cliff & Horizon",
+                              "category": "Residencial Alto Padrão - Joá/Leblon",
+                              "description": "Grandes vãos envidraçados, brises de madeira e piscina integrada à paisagem."
+                        },
+                        {
+                              "title": "Penthouse Vieira Souto",
+                              "category": "Cobertura Duplex - Ipanema",
+                              "description": "Mármores nobres, marcenaria de design assinado e automação luminotécnica."
+                        },
+                        {
+                              "title": "Refúgio na Serra",
+                              "category": "Casa de Campo - Itaipava",
+                              "description": "Sustentabilidade passiva, concreto pigmentado e integração à Mata Atlântica."
+                        }
+                  ]
+            }
+      },
+      {
+            "id": "services-bernardes-arquitetura",
             "type": "services",
             "variant": "Services02",
             "content": {
-                  "badge": "Nossos Pilares",
-                  "title": "Excelência em todas as escalas da arquitetura.",
-                  "subtitle": "Da escala do detalhe ao plano diretor urbano.",
+                  "badge": "Atuação Completa",
+                  "title": "Do Estudo Preliminar à Entrega das Chaves",
+                  "subtitle": "Soluções integradas de arquitetura, interiores e gestão de obra.",
                   "services": [
                         {
-                              "title": "Projetos Residenciais de Grande Porte",
-                              "description": "Casas de praia, montanha e coberturas urbanas executadas com padrão internacional de engenharia."
+                              "title": "Projetos de Arquitetura Residencial",
+                              "description": "Concepção volumétrica, estudo solar e compatibilização estrutural completa."
                         },
                         {
-                              "title": "Hotelaria e Empreendimentos de Alto Luxo",
-                              "description": "Resorts, spas e boutique hotels concebidos para experiências imersivas com alta rentabilidade operacional."
+                              "title": "Arquitetura de Interiores & Curadoria",
+                              "description": "Desenho de marcenaria sob medida, seleção de mobiliário e iluminação cênica."
                         },
                         {
-                              "title": "Arquitetura de Interiores & Marcenaria Especial",
-                              "description": "Detalhamento de mobiliário fixo e seleção de arte brasileira para ambientes sofisticados."
+                              "title": "Gestão e Acompanhamento de Obras",
+                              "description": "Fiscalização minuciosa dos acabamentos e garantia de pontualidade cronológica."
                         }
                   ]
             }
       },
       {
-            "id": "process-bernardes",
-            "type": "process",
-            "variant": "Process01",
-            "content": {
-                  "title": "O Caminho da Concepção à Matéria",
-                  "steps": [
-                        {
-                              "step": "1",
-                              "title": "Análise do Sítio & Conceito",
-                              "description": "Topografia, insolação, ventos e vocação poética do terreno no Rio de Janeiro."
-                        },
-                        {
-                              "step": "2",
-                              "title": "Modelagem Digital & Protótipos",
-                              "description": "Simulações paramétricas em 3D e validações físicas de textura e luminosidade."
-                        },
-                        {
-                              "step": "3",
-                              "title": "Engenharia de Detalhe & Execução",
-                              "description": "Desenhos técnicos rigorosos para obra civil impecável sem improvisos."
-                        }
-                  ]
-            }
-      },
-      {
-            "id": "cta-bernardes",
+            "id": "cta-bernardes-arquitetura",
             "type": "cta",
             "variant": "CTA01",
             "content": {
-                  "headline": "Inicie o planejamento da sua residência icônica.",
-                  "subheadline": "Entre em contato com nossa sede no Leblon para uma consulta institucional.",
-                  "buttonLabel": "Solicitar Atendimento Leblon"
+                  "headline": "Conecte-se com Bernardes Arquitetura para planejar sua residência.",
+                  "subheadline": "Agende uma conversa reservada com a nossa diretoria para discutir as diretrizes do seu projeto.",
+                  "buttonLabel": "Solicitar Atendimento por WhatsApp"
             }
       },
       {
-            "id": "footer-bernardes",
+            "id": "footer-bernardes-arquitetura",
             "type": "footer",
             "variant": "Footer02",
             "content": {}

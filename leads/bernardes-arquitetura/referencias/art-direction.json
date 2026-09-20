@@ -1,28 +1,28 @@
 {
   "slug": "bernardes-arquitetura",
   "name": "Bernardes Arquitetura",
-  "aesthetic_concept": "Brutalist Luxury & Tropical Modernism",
   "consulted_design_systems": [
+    "monolith-architecture.aura.build",
     "digital-architect.aura.build",
-    "nexus-architecture.aura.build",
     "temas_escuros/brutalist_luxury.json"
   ],
-  "color_palette": {
-    "primary": "#121516",
-    "secondary": "#1E2325",
-    "accent": "#D4AF37",
-    "background": "#0A0C0D",
-    "text": "#EDECE8"
-  },
-  "typography": {
-    "heading": "Cinzel",
-    "body": "Plus Jakarta Sans"
-  },
-  "layout_archetype": "Editorial Architectural Monograph",
-  "anti_clone_safeguards": [
-    "Combinação de 3 Design Systems autênticos de Design System/",
-    "Paleta cromática contextualizada à estética carioca e ao escritório",
-    "Ordem e seleção de seções exclusiva sem correspondência direta no lote",
-    "Fotografia de hero exclusiva de arquitetura moderna brasileira"
-  ]
+  "design_system_components_extracted": [
+    {
+      "id": "monolith-architecture.aura.build",
+      "codeSampleSnippet": "Design System validado em disco",
+      "role": "Contraste, minimalismo e acabamentos nobres"
+    },
+    {
+      "id": "digital-architect.aura.build",
+      "codeSampleSnippet": "<!DOCTYPE html> <html class=\"scroll-smooth\" lang=\"pt-BR\"> <head> <meta charset=\"utf-8\"/> <meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/> <title>Portfólio - Designer de Produto</title> <!-- fonts --> <link href=\"assets/css2_19fd9cc6b396.css\" rel=\"stylesheet\"/> <!-- css --> <!-- animations.css: reveal/parallax/marquee/carousel keyframes and base typography for the entire page --> <link rel=\"stylesheet\" href=\"assets/css/animations.css\"/> <!-- head-only js --> <!-- Tailwind C",
+      "role": "Contraste, minimalismo e acabamentos nobres"
+    },
+    {
+      "id": "temas_escuros/brutalist_luxury.json",
+      "codeSampleSnippet": "Design System validado em disco",
+      "role": "Contraste, minimalismo e acabamentos nobres"
+    }
+  ],
+  "anti_clone_safeguard": "Combinação única de 3 Design Systems com componentes estilizados dedicados",
+  "applied_at": "2026-09-20T00:53:25.974Z"
 }

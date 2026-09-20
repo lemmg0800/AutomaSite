@@ -1,18 +1,20 @@
 {
-  "client": "jacobsen-arquitetura",
-  "design_systems_used": [
+  "lead": "jacobsen-arquitetura",
+  "systems": [
     {
-      "name": "nexus-architecture.aura.build",
-      "purpose": "Interações luxuosas e tipografia limpa"
+      "id": "zenith.aura.build",
+      "codeSampleSnippet": "Design System validado em disco",
+      "role": "Contraste, minimalismo e acabamentos nobres"
     },
     {
-      "name": "zenith.aura.build",
-      "purpose": "Interações luxuosas e tipografia limpa"
+      "id": "nexus-architecture.aura.build",
+      "codeSampleSnippet": "<!DOCTYPE html> <html class=\"scroll-smooth\" lang=\"pt-BR\"> <head> <meta charset=\"utf-8\"/> <meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/> <title>Nexus Architecture</title> <!-- fonts (Google fonts: Inter & Google Sans Flex stylesheets) --> <link href=\"assets/css2_66f3f89ececa.css\" rel=\"stylesheet\"/> <link href=\"assets/css2_bd407d5ceb4b.css\" rel=\"stylesheet\"/> <!-- css --> <!-- typography.css: defines body Inter font + .font-google-sans-flex utility used across all headings",
+      "role": "Tipografia monumental e proporção áurea"
     },
     {
-      "name": "temas_claros/editorial_minimalist.json",
-      "purpose": "Paleta cromática e contrastes equilibrados"
+      "id": "temas_claros/editorial_minimalist.json",
+      "codeSampleSnippet": "Design System validado em disco",
+      "role": "Contraste, minimalismo e acabamentos nobres"
     }
-  ],
-  "harmonization_strategy": "Síntese de sofisticação editorial com performance web de ponta (Astro SSR)."
+  ]
 }

@@ -8,229 +8,176 @@ const client: ClientConfig = {
   business: {
     name: "Duda Porto Arquitetura",
     legalName: "DUDA PORTO ARQUITETURA E DESIGN LTDA",
-    niche: "Arquitetura Modular Sustentável e Casas de Luxo Contemporâneas",
+    niche: 'Arquitetura de Alto Padrão e Interiores',
     city: "Rio de Janeiro",
     state: "RJ",
     address: "Av. das Américas, 3500 - Barra da Tijuca, Rio de Janeiro - RJ",
     phone: "(21) 3433-7221",
     whatsapp: "(21) 97103-7221",
     email: "contato@dudaporto.com.br",
-    instagram: "@dudaportoarquitetura"
+    instagram: "@duda_porto_arquitetura"
   },
   theme: {
-  "primaryColor": "#2B2622",
-  "secondaryColor": "#3D3631",
-  "accentColor": "#D97706",
-  "backgroundColor": "#161412",
-  "textColor": "#F4F1EA",
-  "headingFont": "Montserrat",
-  "bodyFont": "Plus Jakarta Sans",
-  "borderRadius": "md",
-  "mode": "dark",
-  "enableCursor": false,
-  "backgroundEffect": "none",
-  "enableParallax": true
-},
+    primaryColor: "#2B2622",
+    secondaryColor: "#3D3631",
+    accentColor: "#D97706",
+    backgroundColor: "#161412",
+    textColor: "#F4F1EA",
+    headingFont: "Montserrat",
+    bodyFont: "Plus Jakarta Sans",
+    borderRadius: 'md',
+    mode: 'dark',
+    enableCursor: false,
+    backgroundEffect: 'none',
+    enableParallax: true
+  },
   pages: [
     {
       path: '',
       seo: {
         title: "Duda Porto Arquitetura | Arquitetura de Alto Padrão no Rio de Janeiro",
-        description: "Projetos autorais residenciais e comerciais de excelência no Rio de Janeiro. Arquitetura atemporal, interiores e valorização patrimonial.",
-        ogImage: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1920&q=85"
+        description: "Projetos residenciais e contemporâneos de excelência no Rio de Janeiro.",
+        ogImage: "/assets/clients/duda-porto-arquitetura/obra_1.jpg"
       },
       sections: [
       {
-            "id": "header-duda",
+            "id": "header-duda-porto-arquitetura",
             "type": "header",
             "variant": "Header02",
             "content": {
-                  "announcement": "Estúdio Barra da Tijuca - Projetos em todo o estado do RJ",
+                  "announcement": "Atendimento exclusivo no Rio de Janeiro (Barra da Tijuca, Rio de Janeiro)",
                   "navLinks": [
                         {
-                              "label": "Filosofia",
-                              "href": "#escritorio"
-                        },
-                        {
-                              "label": "Serviços",
-                              "href": "#especialidades"
-                        },
-                        {
-                              "label": "Método",
-                              "href": "#metodo"
-                        },
-                        {
-                              "label": "Obras",
+                              "label": "Projetos",
                               "href": "#projetos"
                         },
                         {
-                              "label": "Depoimentos",
-                              "href": "#depoimentos"
+                              "label": "Escritório",
+                              "href": "#escritorio"
+                        },
+                        {
+                              "label": "Especialidades",
+                              "href": "#especialidades"
+                        },
+                        {
+                              "label": "Diferenciais",
+                              "href": "#diferenciais"
                         }
                   ],
-                  "ctaLabel": "Atendimento WhatsApp"
+                  "ctaLabel": "Contato WhatsApp"
             }
       },
       {
-            "id": "hero-duda",
+            "id": "hero-duda-porto-arquitetura",
             "type": "hero",
             "variant": "Hero02",
             "content": {
-                  "badge": "Sustentabilidade, Agilidade e Luxo Consciente",
-                  "headline": "A evolução da arquitetura: residências elegantes entregues na metade do tempo.",
-                  "subheadline": "Pioneiro em soluções construtivas modulares sustentáveis que unem pedras naturais, esquadrias minimalistas e máxima eficiência energética.",
-                  "primaryCtaLabel": "Conversar com Duda Porto",
-                  "imageUrl": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1920&q=85",
+                  "badge": "Arquitetura de Alto Padrão no RJ",
+                  "headline": "Duda Porto Arquitetura — Arquitetura de Autor",
+                  "subheadline": "Projetos residenciais e contemporâneos de excelência no Rio de Janeiro.",
+                  "primaryCtaLabel": "Conversar no WhatsApp",
+                  "secondaryCtaLabel": "Conhecer Projetos",
+                  "secondaryCtaHref": "#projetos",
+                  "imageUrl": "/assets/clients/duda-porto-arquitetura/obra_1.jpg",
                   "trustPoints": [
-                        "Projetos de destaque em sucessivas edições da CasaCor",
-                        "Sistemas construtivos secos que reduzem desperdício em até 70%",
-                        "Garantia de pontualidade e custos estritamente controlados"
+                        "Projetos autorais com acompanhamento milimétrico",
+                        "Rigor técnico, biocompatibilidade e conforto térmico",
+                        "Sede exclusiva no Rio de Janeiro"
                   ]
             }
       },
       {
-            "id": "about-duda",
+            "id": "about-duda-porto-arquitetura",
             "type": "about",
             "variant": "About01",
             "content": {
-                  "badge": "Nosso Propósito",
-                  "title": "Menos obra, menos resíduo, mais tempo para viver.",
-                  "text1": "Comandado pelo arquiteto Duda Porto, nosso estúdio na Barra da Tijuca revolucionou o mercado imobiliário fluminense ao introduzir conceitos modulares com acabamento ultra luxuoso.",
-                  "text2": "Acreditamos que o luxo contemporâneo está no silêncio, na luz natural, no respeito à terra e na pontualidade britânica da entrega da casa pronta.",
+                  "badge": "Filosofia & Assinatura",
+                  "title": "A essência da arquitetura carioca por Duda Porto Arquitetura",
+                  "text1": "Projetos residenciais e contemporâneos de excelência no Rio de Janeiro.",
+                  "text2": "Com sólida atuação no Rio de Janeiro, o escritório alia sofisticação contemporânea a materiais nobres como madeira maciça, pedras naturais e transparência luminosa.",
                   "highlights": [
                         {
-                              "value": "50%",
-                              "label": "Mais Rápido que Alvenaria"
-                        },
-                        {
-                              "value": "70%",
-                              "label": "Menos Resíduos na Obra"
-                        },
-                        {
                               "value": "100%",
-                              "label": "Fidelidade ao Orçamento"
+                              "label": "Execução Autoral"
+                        },
+                        {
+                              "value": "BIM",
+                              "label": "Precisão Construtiva"
+                        },
+                        {
+                              "value": "Rio",
+                              "label": "Identidade Carioca"
                         }
                   ],
                   "whyChoose": [
-                        "Tecnologia off-site com montagem rápida e silenciosa",
-                        "Materiais recicláveis, térmicos e altamente resistentes à maresia",
-                        "Projetos pensados para flexibilidade e expansão futura da família"
+                        "Interação direta com os arquitetos titulares em todas as decisões",
+                        "Orçamento executivo detalhado e blindado contra imprevistos",
+                        "Harmonia absoluta com a paisagem e valorização imobiliária máxima"
                   ]
             }
       },
       {
-            "id": "services-duda",
-            "type": "services",
-            "variant": "Services01",
-            "content": {
-                  "badge": "Soluções Arquitetônicas",
-                  "title": "Do terreno vazio à casa completamente habitável.",
-                  "subtitle": "Metodologias modernas que garantem tranquilidade e previsibilidade.",
-                  "services": [
-                        {
-                              "icon": "🏡",
-                              "title": "Casas Modulares Sustentáveis (GOMU / Casa Lite)",
-                              "description": "Módulos de alto padrão produzidos industrialmente e montados no local com zero estresse.",
-                              "cta": "Conhecer Linha"
-                        },
-                        {
-                              "icon": "🌊",
-                              "title": "Residências Costeiras e Condomínios Fechados",
-                              "description": "Casas autorais na Barra, Joá, Recreio, Búzios e Angra com ampla integração externa.",
-                              "cta": "Solicitar Projeto"
-                        },
-                        {
-                              "icon": "🌿",
-                              "title": "Projetos de Interiores e Paisagismo Orgânico",
-                              "description": "Curadoria de tecidos crus, linho, madeira recuperada e jardins integrados.",
-                              "cta": "Falar com Designer"
-                        }
-                  ]
-            }
-      },
-      {
-            "id": "process-duda",
-            "type": "process",
-            "variant": "Process01",
-            "content": {
-                  "title": "Como Realizamos Seu Projeto",
-                  "steps": [
-                        {
-                              "step": "1",
-                              "title": "Diagnóstico & Implantação",
-                              "description": "Visita ao lote, topografia e definição do programa de necessidades familiar."
-                        },
-                        {
-                              "step": "2",
-                              "title": "Projeto Executivo em BIM",
-                              "description": "Planejamento 3D detalhado de todas as instalações elétricas, hidráulicas e térmicas."
-                        },
-                        {
-                              "step": "3",
-                              "title": "Montagem Rápida & Entrega das Chaves",
-                              "description": "Execução ágil sem desvios orçamentários nem atrasos imprevisíveis."
-                        }
-                  ]
-            }
-      },
-      {
-            "id": "projects-duda",
+            "id": "projects-duda-porto-arquitetura",
             "type": "projects",
             "variant": "Projects01",
             "content": {
-                  "title": "Residências Construídas",
-                  "subtitle": "Exemplos recentes de arquitetura consciente no Rio.",
+                  "title": "Obras & Residências de Destaque",
+                  "subtitle": "Projetos recentes que traduzem a identidade do escritório.",
                   "projects": [
                         {
-                              "title": "Casa Lite Itaipava",
-                              "category": "Serra Fluminense",
-                              "description": "Módulos suspensos com vidros duplos térmicos e estrutura metálica reciclada em meio à mata nativa."
+                              "title": "Residência Cliff & Horizon",
+                              "category": "Residencial Alto Padrão - Joá/Leblon",
+                              "description": "Grandes vãos envidraçados, brises de madeira e piscina integrada à paisagem."
                         },
                         {
-                              "title": "Villa Malibú Barra",
-                              "category": "Condomínio Fechado - Barra da Tijuca",
-                              "description": "Residência contemporânea de 750m² com brises de freijó e piscina aquecida por energia solar."
+                              "title": "Penthouse Vieira Souto",
+                              "category": "Cobertura Duplex - Ipanema",
+                              "description": "Mármores nobres, marcenaria de design assinado e automação luminotécnica."
                         },
                         {
-                              "title": "Refúgio Búzios",
-                              "category": "Casa de Praia - Geribá",
-                              "description": "Integração de pedras moledo, deck ecológico e pérgula bioclimática com iluminação indireta."
+                              "title": "Refúgio na Serra",
+                              "category": "Casa de Campo - Itaipava",
+                              "description": "Sustentabilidade passiva, concreto pigmentado e integração à Mata Atlântica."
                         }
                   ]
             }
       },
       {
-            "id": "testimonials-duda",
-            "type": "testimonials",
-            "variant": "Testimonials01",
+            "id": "services-duda-porto-arquitetura",
+            "type": "services",
+            "variant": "Services01",
             "content": {
-                  "title": "O Que Dizem os Proprietários",
-                  "items": [
+                  "badge": "Atuação Completa",
+                  "title": "Do Estudo Preliminar à Entrega das Chaves",
+                  "subtitle": "Soluções integradas de arquitetura, interiores e gestão de obra.",
+                  "services": [
                         {
-                              "quote": "Ficamos impressionados com a velocidade da obra e a limpeza do canteiro. Em 8 meses estávamos com a casa de Itaipava totalmente pronta.",
-                              "author": "Marcio e Daniela R.",
-                              "role": "Proprietários Casa Lite"
+                              "title": "Projetos de Arquitetura Residencial",
+                              "description": "Concepção volumétrica, estudo solar e compatibilização estrutural completa."
                         },
                         {
-                              "quote": "O Duda conseguiu unir modernidade, conforto e sustentabilidade como nenhum outro arquiteto que consultamos. A casa é fresca o ano inteiro.",
-                              "author": "Thiago F. Vasconcelos",
-                              "role": "Villa Malibú Barra"
+                              "title": "Arquitetura de Interiores & Curadoria",
+                              "description": "Desenho de marcenaria sob medida, seleção de mobiliário e iluminação cênica."
+                        },
+                        {
+                              "title": "Gestão e Acompanhamento de Obras",
+                              "description": "Fiscalização minuciosa dos acabamentos e garantia de pontualidade cronológica."
                         }
                   ]
             }
       },
       {
-            "id": "cta-duda",
+            "id": "cta-duda-porto-arquitetura",
             "type": "cta",
             "variant": "CTA01",
             "content": {
-                  "headline": "Construa sua casa dos sonhos sem estresse de obra.",
-                  "subheadline": "Entre em contato com nossa equipe na Barra da Tijuca e descubra nosso método construtivo.",
-                  "buttonLabel": "Falar com Duda Porto Arquitetura"
+                  "headline": "Conecte-se com Duda Porto Arquitetura para planejar sua residência.",
+                  "subheadline": "Agende uma conversa reservada com a nossa diretoria para discutir as diretrizes do seu projeto.",
+                  "buttonLabel": "Solicitar Atendimento por WhatsApp"
             }
       },
       {
-            "id": "footer-duda",
+            "id": "footer-duda-porto-arquitetura",
             "type": "footer",
             "variant": "Footer01",
             "content": {}

@@ -1,18 +1,20 @@
 {
-  "client": "bernardes-arquitetura",
-  "design_systems_used": [
+  "lead": "bernardes-arquitetura",
+  "systems": [
     {
-      "name": "digital-architect.aura.build",
-      "purpose": "Interações luxuosas e tipografia limpa"
+      "id": "monolith-architecture.aura.build",
+      "codeSampleSnippet": "Design System validado em disco",
+      "role": "Contraste, minimalismo e acabamentos nobres"
     },
     {
-      "name": "nexus-architecture.aura.build",
-      "purpose": "Interações luxuosas e tipografia limpa"
+      "id": "digital-architect.aura.build",
+      "codeSampleSnippet": "<!DOCTYPE html> <html class=\"scroll-smooth\" lang=\"pt-BR\"> <head> <meta charset=\"utf-8\"/> <meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/> <title>Portfólio - Designer de Produto</title> <!-- fonts --> <link href=\"assets/css2_19fd9cc6b396.css\" rel=\"stylesheet\"/> <!-- css --> <!-- animations.css: reveal/parallax/marquee/carousel keyframes and base typography for the entire page --> <link rel=\"stylesheet\" href=\"assets/css/animations.css\"/> <!-- head-only js --> <!-- Tailwind C",
+      "role": "Contraste, minimalismo e acabamentos nobres"
     },
     {
-      "name": "temas_escuros/brutalist_luxury.json",
-      "purpose": "Paleta cromática e contrastes equilibrados"
+      "id": "temas_escuros/brutalist_luxury.json",
+      "codeSampleSnippet": "Design System validado em disco",
+      "role": "Contraste, minimalismo e acabamentos nobres"
     }
-  ],
-  "harmonization_strategy": "Síntese de sofisticação editorial com performance web de ponta (Astro SSR)."
+  ]
 }

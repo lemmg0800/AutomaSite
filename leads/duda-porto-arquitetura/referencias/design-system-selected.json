@@ -1,18 +1,20 @@
 {
-  "client": "duda-porto-arquitetura",
-  "design_systems_used": [
+  "lead": "duda-porto-arquitetura",
+  "systems": [
     {
-      "name": "zenith.aura.build",
-      "purpose": "Interações luxuosas e tipografia limpa"
+      "id": "architecture-studio.aura.build",
+      "codeSampleSnippet": "<!DOCTYPE html> <html lang=\"pt-BR\"> <head> <meta charset=\"utf-8\"/> <meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/> <title>Inovações Arquitetônicas</title> <!-- fonts: Google Fonts (Playfair Display + Inter) --> <link href=\"https://fonts.googleapis.com\" rel=\"preconnect\"/> <link crossorigin=\"\" href=\"https://fonts.gstatic.com\" rel=\"preconnect\"/> <link href=\"assets/css2_745f880bc70b.css\" rel=\"stylesheet\"/> <!-- css: typography helpers + marquee animation used in the logos s",
+      "role": "Contraste, minimalismo e acabamentos nobres"
     },
     {
-      "name": "nexus-architecture.aura.build",
-      "purpose": "Interações luxuosas e tipografia limpa"
+      "id": "zenith.aura.build",
+      "codeSampleSnippet": "Design System validado em disco",
+      "role": "Contraste, minimalismo e acabamentos nobres"
     },
     {
-      "name": "temas_escuros/brutalist_luxury.json",
-      "purpose": "Paleta cromática e contrastes equilibrados"
+      "id": "temas_escuros/brutalist_luxury.json",
+      "codeSampleSnippet": "Design System validado em disco",
+      "role": "Contraste, minimalismo e acabamentos nobres"
     }
-  ],
-  "harmonization_strategy": "Síntese de sofisticação editorial com performance web de ponta (Astro SSR)."
+  ]
 }

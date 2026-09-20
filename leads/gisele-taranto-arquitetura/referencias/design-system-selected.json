@@ -1,18 +1,20 @@
 {
-  "client": "gisele-taranto-arquitetura",
-  "design_systems_used": [
+  "lead": "gisele-taranto-arquitetura",
+  "systems": [
     {
-      "name": "aex.aura.build",
-      "purpose": "Interações luxuosas e tipografia limpa"
+      "id": "aex.aura.build",
+      "codeSampleSnippet": "<!DOCTYPE html> <html lang=\"pt-BR\"> <head> <meta charset=\"utf-8\"/> <meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/> <title>AEX | Sistemas Alpinos de Engenharia</title> <!-- fonts: Google Fonts (Inter, Oswald, Playfair Display) loaded via local CSS shim --> <link href=\"https://fonts.googleapis.com\" rel=\"preconnect\"/> <link crossorigin=\"\" href=\"https://fonts.gstatic.com\" rel=\"preconnect\"/> <link href=\"assets/css2_2833f877a31c.css\" rel=\"stylesheet\"/> <!-- css: typography stac",
+      "role": "Contraste, minimalismo e acabamentos nobres"
     },
     {
-      "name": "elicyon.com",
-      "purpose": "Curadoria editorial e harmonia de materiais nobres"
+      "id": "elicyon.com",
+      "codeSampleSnippet": "<!DOCTYPE html> <html class=\"lenis\" lang=\"en\"><head><meta charset=\"utf-8\"/><meta content=\"width=device-width\" name=\"viewport\"/><meta content=\"ie=edge\" http-equiv=\"x-ua-compatible\"/><meta content=\"index,follow\" name=\"googlebot\"/><meta content=\"Elicyon\" name=\"author\"/><meta content=\"no-referrer\" name=\"referrer\"/><meta content=\"telephone=no\" name=\"format-detection\"/><meta content=\"US\" name=\"geo.region\"/><meta content=\"1fsz3t60fhcsdr59f4u1klr75zv7xp\" name=\"facebook-domain-verification\"/><meta conten",
+      "role": "Grid editorial e sofisticação de interiores"
     },
     {
-      "name": "temas_claros/editorial_minimalist.json",
-      "purpose": "Paleta cromática e contrastes equilibrados"
+      "id": "temas_claros/editorial_minimalist.json",
+      "codeSampleSnippet": "Design System validado em disco",
+      "role": "Contraste, minimalismo e acabamentos nobres"
     }
-  ],
-  "harmonization_strategy": "Síntese de sofisticação editorial com performance web de ponta (Astro SSR)."
+  ]
 }

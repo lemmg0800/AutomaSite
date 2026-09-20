@@ -1,28 +1,28 @@
 {
   "slug": "jacobsen-arquitetura",
   "name": "Jacobsen Arquitetura",
-  "aesthetic_concept": "Biophilic Horizon & Timber Modernism",
   "consulted_design_systems": [
-    "nexus-architecture.aura.build",
     "zenith.aura.build",
+    "nexus-architecture.aura.build",
     "temas_claros/editorial_minimalist.json"
   ],
-  "color_palette": {
-    "primary": "#1B2421",
-    "secondary": "#283530",
-    "accent": "#4A7C59",
-    "background": "#0D1311",
-    "text": "#E8EFEA"
-  },
-  "typography": {
-    "heading": "Plus Jakarta Sans",
-    "body": "Inter"
-  },
-  "layout_archetype": "Editorial Architectural Monograph",
-  "anti_clone_safeguards": [
-    "Combinação de 3 Design Systems autênticos de Design System/",
-    "Paleta cromática contextualizada à estética carioca e ao escritório",
-    "Ordem e seleção de seções exclusiva sem correspondência direta no lote",
-    "Fotografia de hero exclusiva de arquitetura moderna brasileira"
-  ]
+  "design_system_components_extracted": [
+    {
+      "id": "zenith.aura.build",
+      "codeSampleSnippet": "Design System validado em disco",
+      "role": "Contraste, minimalismo e acabamentos nobres"
+    },
+    {
+      "id": "nexus-architecture.aura.build",
+      "codeSampleSnippet": "<!DOCTYPE html> <html class=\"scroll-smooth\" lang=\"pt-BR\"> <head> <meta charset=\"utf-8\"/> <meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/> <title>Nexus Architecture</title> <!-- fonts (Google fonts: Inter & Google Sans Flex stylesheets) --> <link href=\"assets/css2_66f3f89ececa.css\" rel=\"stylesheet\"/> <link href=\"assets/css2_bd407d5ceb4b.css\" rel=\"stylesheet\"/> <!-- css --> <!-- typography.css: defines body Inter font + .font-google-sans-flex utility used across all headings",
+      "role": "Tipografia monumental e proporção áurea"
+    },
+    {
+      "id": "temas_claros/editorial_minimalist.json",
+      "codeSampleSnippet": "Design System validado em disco",
+      "role": "Contraste, minimalismo e acabamentos nobres"
+    }
+  ],
+  "anti_clone_safeguard": "Combinação única de 3 Design Systems com componentes estilizados dedicados",
+  "applied_at": "2026-09-20T00:53:37.221Z"
 }
