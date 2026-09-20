@@ -3,6 +3,18 @@ export const prerender = false;
 
 import BaseLayout from '../components/BaseLayout.astro';
 import { getAllLeadDossiers } from '../lib/dossier';
+import { getSupabaseServerClient } from '../lib/supabase';
+
+// Validação em Camada Dupla (Defense-in-Depth): Verifica sessão na própria página
+try {
+  const supabase = getSupabaseServerClient(Astro.cookies, Astro.request);
+  const { data: { user }, error: authErr } = await supabase.auth.getUser();
+  if (authErr || !user) {
+    return Astro.redirect('/login');
+  }
+} catch {
+  return Astro.redirect('/login');
+}
 
 const rawProjects = await getAllLeadDossiers();
 const projects = rawProjects.sort((a, b) => (a.ranking || 999) - (b.ranking || 999));

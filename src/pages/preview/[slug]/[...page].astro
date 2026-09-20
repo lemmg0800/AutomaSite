@@ -1,4 +1,4 @@
-﻿---
+---
 export const prerender = false;
 
 import { resolveClient } from '../../../clients/registry';
@@ -21,6 +21,20 @@ const page = client.pages.find(p => p.path === pagePath);
 
 if (!page) {
   return new Response(`Página "${pagePath}" não localizada para o cliente "${slug}".`, { status: 404 });
+}
+
+// Se o cliente for draft/review/arquivado, exige login
+if (client.status !== 'published' && client.status !== 'ativo') {
+  const { getSupabaseServerClient } = await import('../../../lib/supabase');
+  try {
+    const supabase = getSupabaseServerClient(Astro.cookies, Astro.request);
+    const { data: { user }, error } = await supabase.auth.getUser();
+    if (error || !user) {
+      return Astro.redirect(`/login?redirect=${encodeURIComponent(Astro.url.pathname)}`);
+    }
+  } catch {
+    return Astro.redirect(`/login?redirect=${encodeURIComponent(Astro.url.pathname)}`);
+  }
 }
 
 Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow');
