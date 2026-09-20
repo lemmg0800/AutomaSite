@@ -1,0 +1,102 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    title: string;
+    subtitle?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const cleanWhats = (client.business.whatsapp || client.business.phone || '').replace(/[^0-9]/g, '');
+---
+
+<section id="contato" class="py-24 border-t border-white/10" style="background-color: var(--color-bg);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <!-- Coluna de Informações -->
+      <div class="lg:col-span-5">
+        {content.badge && (
+          <span class="text-xs font-mono uppercase tracking-widest block mb-3" style="color: var(--color-accent);">
+            {content.badge}
+          </span>
+        )}
+        <h2 class="text-3xl sm:text-5xl font-bold mb-6" style="font-family: var(--font-heading);">
+          {content.title || "Inicie seu Projeto"}
+        </h2>
+        <p class="text-sm text-slate-300 font-light leading-relaxed mb-8">
+          {content.subtitle || `Entre em contato diretamente com a equipe técnica de ${client.business.name} para alinhar cronogramas e escopos.`}
+        </p>
+
+        <div class="space-y-4 text-xs sm:text-sm text-slate-300">
+          <div class="p-4 rounded-2xl border border-white/10 bg-white/[0.02] flex items-center gap-3">
+            <span class="text-lg">📍</span>
+            <div>
+              <div class="font-bold text-white">Localização</div>
+              <div>{client.business.address || `${client.business.city} - ${client.business.state || 'PR'}`}</div>
+            </div>
+          </div>
+          {client.business.phone && (
+            <div class="p-4 rounded-2xl border border-white/10 bg-white/[0.02] flex items-center gap-3">
+              <span class="text-lg">📞</span>
+              <div>
+                <div class="font-bold text-white">Central Telefônica</div>
+                <div>{client.business.phone}</div>
+              </div>
+            </div>
+          )}
+          {cleanWhats && (
+            <div class="p-4 rounded-2xl border border-white/10 bg-white/[0.02] flex items-center gap-3">
+              <span class="text-lg">💬</span>
+              <div>
+                <div class="font-bold text-white">Canal WhatsApp</div>
+                <a href={`https://wa.me/55${cleanWhats}`} target="_blank" class="hover:underline" style="color: var(--color-accent);">Atendimento Ágil</a>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <!-- Formulário Completo -->
+      <div class="lg:col-span-7 p-8 sm:p-12 rounded-3xl border border-white/10 bg-white/[0.02]">
+        <form onsubmit="event.preventDefault(); alert('Solicitação registrada com sucesso!');" class="space-y-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-mono uppercase tracking-wider mb-2 text-slate-300">Nome Completo</label>
+              <input type="text" required placeholder="Seu nome" class="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-sm text-white focus:outline-none focus:ring-1" />
+            </div>
+            <div>
+              <label class="block text-xs font-mono uppercase tracking-wider mb-2 text-slate-300">E-mail Corporativo</label>
+              <input type="email" required placeholder="seu@email.com" class="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-sm text-white focus:outline-none focus:ring-1" />
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-mono uppercase tracking-wider mb-2 text-slate-300">WhatsApp</label>
+              <input type="tel" required placeholder="(00) 00000-0000" class="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-sm text-white focus:outline-none focus:ring-1" />
+            </div>
+            <div>
+              <label class="block text-xs font-mono uppercase tracking-wider mb-2 text-slate-300">Tipo de Demanda</label>
+              <select class="w-full px-4 py-3 rounded-xl border border-white/10 bg-slate-900 text-sm text-white focus:outline-none focus:ring-1">
+                <option>Projeto Residencial</option>
+                <option>Projeto Comercial</option>
+                <option>Design de Interiores</option>
+                <option>Consultoria Técnica</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-mono uppercase tracking-wider mb-2 text-slate-300">Resumo da Demanda</label>
+            <textarea rows="4" placeholder="Conte brevemente sobre as metas, prazo estimado e localização..." class="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-sm text-white focus:outline-none focus:ring-1"></textarea>
+          </div>
+          <button type="submit" class="w-full py-4 rounded-xl font-bold text-xs uppercase tracking-widest transition-opacity hover:opacity-90" style="background-color: var(--color-accent); color: var(--color-bg);">
+            Enviar Solicitação Prioritária
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

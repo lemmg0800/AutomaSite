@@ -1,0 +1,48 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    headline: string;
+    subheadline?: string;
+    buttonLabel?: string;
+    buttonHref?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const rawPhone = client?.business?.whatsapp || client?.business?.phone || '';
+const cleanPhone = rawPhone.replace(/\D/g, '');
+const defaultCta = cleanPhone ? `https://wa.me/55${cleanPhone}` : '#contato';
+const btnText = content?.buttonLabel || "Falar com Diretor Técnico";
+const btnLink = content?.buttonHref || defaultCta;
+---
+
+<section class="py-24 relative overflow-hidden" style="background-color: var(--color-secondary);">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+    {content?.badge && (
+      <span class="text-xs font-mono uppercase tracking-widest block mb-4" style="color: var(--color-accent);">
+        {content.badge}
+      </span>
+    )}
+    <h2 class="text-3xl sm:text-5xl font-bold mb-6 leading-tight" style="font-family: var(--font-heading);">
+      {content?.headline || `Pronto para materializar seu projeto com ${client.business.name}?`}
+    </h2>
+    {content?.subheadline && (
+      <p class="text-base sm:text-lg text-slate-300 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+        {content.subheadline}
+      </p>
+    )}
+    <a 
+      href={btnLink}
+      target="_blank"
+      class="inline-flex items-center gap-3 px-9 py-4 rounded-xl font-bold text-sm uppercase tracking-wider shadow-2xl transition-transform hover:scale-105"
+      style="background-color: var(--color-accent); color: var(--color-bg);"
+    >
+      <span>{btnText}</span>
+      <span>&rarr;</span>
+    </a>
+  </div>
+</section>

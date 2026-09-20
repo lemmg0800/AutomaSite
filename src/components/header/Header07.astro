@@ -1,0 +1,41 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    navLinks?: Array<{ label: string; href: string }>;
+    ctaLabel?: string;
+    announcement?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const cleanWhats = (client.business.whatsapp || client.business.phone || '').replace(/\D/g, '');
+const whatsLink = cleanWhats ? `https://wa.me/55${cleanWhats}` : '#contato';
+---
+
+<header class="sticky top-0 z-40">
+  <!-- Top Utility Ribbon -->
+  <div class="py-2 px-4 text-center text-xs font-mono border-b border-white/5" style="background-color: var(--color-secondary); color: var(--color-accent);">
+    {content?.announcement || `ATENDIMENTO EXCLUSIVO EM ${client.business.city.toUpperCase()} E REGIÃO METROPOLITANA`}
+  </div>
+
+  <div class="border-b border-white/10 bg-slate-950/90 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href={`/${client.status === 'published' ? client.slug : `preview/${client.slug}`}`} class="font-bold text-lg text-white" style="font-family: var(--font-heading);">
+        {client.business.name}
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs font-medium text-slate-300">
+        <a href="#servicos" class="hover:text-white">Serviços</a>
+        <a href="#sobre" class="hover:text-white">Sobre</a>
+        <a href="#contato" class="hover:text-white">Contato</a>
+      </nav>
+
+      <a href={whatsLink} target="_blank" class="px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider" style="background-color: var(--color-accent); color: var(--color-bg);">
+        {content?.ctaLabel || "Agendar"}
+      </a>
+    </div>
+  </div>
+</header>

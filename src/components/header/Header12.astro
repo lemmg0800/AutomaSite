@@ -1,0 +1,35 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    navLinks?: Array<{ label: string; href: string }>;
+    ctaLabel?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const cleanWhats = (client.business.whatsapp || client.business.phone || '').replace(/\D/g, '');
+const whatsLink = cleanWhats ? `https://wa.me/55${cleanWhats}` : '#contato';
+---
+
+<header class="w-full pt-8 pb-4 bg-transparent">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <div class="w-3 h-3 rounded-full animate-ping" style="background-color: var(--color-accent);"></div>
+      <a href={`/${client.status === 'published' ? client.slug : `preview/${client.slug}`}`} class="text-xl font-bold tracking-tight text-white" style="font-family: var(--font-heading);">
+        {client.business.name}
+      </a>
+    </div>
+
+    <div class="flex items-center gap-6">
+      <span class="text-xs font-mono px-3 py-1 rounded-full border border-white/10 text-slate-300 hidden md:inline">
+        AGENDA ABERTA 2026
+      </span>
+      <a href={whatsLink} target="_blank" class="px-5 py-2 rounded-lg font-bold text-xs uppercase tracking-wider" style="background-color: var(--color-accent); color: var(--color-bg);">
+        {content?.ctaLabel || "Consultar"}
+      </a>
+    </div>
+  </div>
+</header>

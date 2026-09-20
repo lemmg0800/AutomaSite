@@ -1,0 +1,51 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    headline: string;
+    subheadline?: string;
+    buttonLabel?: string;
+    trustPoints?: string[];
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const rawPhone = client?.business?.whatsapp || client?.business?.phone || '';
+const cleanPhone = rawPhone.replace(/\D/g, '');
+const defaultCta = cleanPhone ? `https://wa.me/55${cleanPhone}` : '#contato';
+const trustPoints = content?.trustPoints || ["Sem compromisso inicial", "Atendimento direto com sócios", "Sigilo total"];
+---
+
+<section class="py-24" style="background-color: var(--color-bg);">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+    <div class="p-10 sm:p-14 rounded-3xl border border-white/10 bg-white/[0.02]">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4" style="font-family: var(--font-heading);">
+        {content?.headline || "Segurança para seu próximo passo"}
+      </h2>
+      <p class="text-sm sm:text-base text-slate-300 font-light mb-8 max-w-lg mx-auto">
+        {content?.subheadline || `Garantia de atendimento especializado e alinhamento com a legislação local em ${client.business.city}.`}
+      </p>
+
+      <a 
+        href={defaultCta}
+        target="_blank"
+        class="inline-block px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider transition-all hover:scale-105 mb-8"
+        style="background-color: var(--color-accent); color: var(--color-bg);"
+      >
+        {content?.buttonLabel || "Falar com a Equipe"}
+      </a>
+
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 pt-6 border-t border-white/5">
+        {trustPoints.map(p => (
+          <div class="flex items-center gap-2">
+            <span style="color: var(--color-accent);">✓</span>
+            <span>{p}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

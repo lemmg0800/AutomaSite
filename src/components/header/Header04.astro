@@ -1,0 +1,45 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    navLinks?: Array<{ label: string; href: string }>;
+    ctaLabel?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const navLinks = content.navLinks || [
+  { label: "Soluções", href: "#servicos" },
+  { label: "Metodologia", href: "#diferenciais" },
+  { label: "Depoimentos", href: "#depoimentos" },
+  { label: "Contato", href: "#contato" }
+];
+const cleanWhats = (client.business.whatsapp || client.business.phone || '').replace(/\D/g, '');
+const whatsLink = cleanWhats ? `https://wa.me/55${cleanWhats}` : '#contato';
+---
+
+<header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <a href={`/${client.status === 'published' ? client.slug : `preview/${client.slug}`}`} class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center font-mono font-bold text-sm" style="color: var(--color-accent); background-color: var(--color-secondary);">
+        {client.business.name.slice(0, 2).toUpperCase()}
+      </div>
+      <div>
+        <div class="font-bold text-sm text-white leading-none" style="font-family: var(--font-heading);">{client.business.name}</div>
+        <div class="text-[10px] text-slate-400 font-mono mt-0.5">{client.business.city}</div>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 text-xs uppercase font-mono tracking-wider text-slate-300">
+      {navLinks.map(l => (
+        <a href={l.href} class="hover:text-white transition-colors">{l.label}</a>
+      ))}
+    </nav>
+
+    <a href={whatsLink} target="_blank" class="px-5 py-2.5 rounded-lg border border-white/20 text-xs font-bold uppercase tracking-wider text-white hover:bg-white/10 transition-all">
+      {content?.ctaLabel || "WhatsApp"}
+    </a>
+  </div>
+</header>

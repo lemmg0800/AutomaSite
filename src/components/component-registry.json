@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2026-09-20T22:32:43.743Z",
-  "totalComponents": 58,
+  "generatedAt": "2026-09-20T23:05:21.136Z",
+  "totalComponents": 100,
   "components": [
     {
       "id": "header/Header01",
@@ -2167,6 +2167,915 @@
           "description": "Listas categorizadas"
         }
       }
+    },
+    {
+      "id": "testimonials/SocialProof01",
+      "name": "Key Metrics Bar (ReactBits Pro)",
+      "category": "testimonials",
+      "filePath": "src/components/testimonials/SocialProof01.astro",
+      "style_tags": [
+        "trust-ticker",
+        "clean-corporate"
+      ],
+      "motion_level": "none",
+      "best_suited_niches": [
+        "todos-os-nichos"
+      ],
+      "visual_personality": "Faixa horizontal compacta com 4 métricas divididas e números expressivos em estilo mono.",
+      "props_schema": {
+        "content.metrics": {
+          "type": "Array<{ value: string; label: string }>",
+          "required": true,
+          "description": "Métricas institucionais"
+        }
+      }
+    },
+    {
+      "id": "testimonials/SocialProof02",
+      "name": "Testimonial Card Grid (ReactBits Pro)",
+      "category": "testimonials",
+      "filePath": "src/components/testimonials/SocialProof02.astro",
+      "style_tags": [
+        "editorial-clean",
+        "clean-corporate"
+      ],
+      "motion_level": "interactive-hover",
+      "best_suited_niches": [
+        "medicina",
+        "odontologia",
+        "advocacia",
+        "arquitetura"
+      ],
+      "visual_personality": "Mosaico de 3 colunas com citações em itálico, classificação em 5 estrelas e autor.",
+      "props_schema": {
+        "content.title": {
+          "type": "string",
+          "required": true,
+          "description": "Título da seção"
+        },
+        "content.testimonials": {
+          "type": "Array<{ quote: string; author: string; role?: string; rating?: number }>",
+          "required": true,
+          "description": "Lista de depoimentos"
+        }
+      }
+    },
+    {
+      "id": "testimonials/SocialProof03",
+      "name": "Partner & Badge Strip (ReactBits Pro)",
+      "category": "testimonials",
+      "filePath": "src/components/testimonials/SocialProof03.astro",
+      "style_tags": [
+        "trust-ticker",
+        "clean-corporate"
+      ],
+      "motion_level": "none",
+      "best_suited_niches": [
+        "engenharia",
+        "arquitetura",
+        "advocacia",
+        "saude"
+      ],
+      "visual_personality": "Faixa elegante de selos técnicos, certificações e associações de classe.",
+      "props_schema": {
+        "content.badge": {
+          "type": "string",
+          "required": false,
+          "description": "Título da faixa"
+        },
+        "content.logos": {
+          "type": "Array<{ name: string; tag?: string }>",
+          "required": false,
+          "description": "Parceiros"
+        }
+      }
+    },
+    {
+      "id": "testimonials/SocialProof04",
+      "name": "Spotlight VIP Testimonial (ReactBits Pro)",
+      "category": "testimonials",
+      "filePath": "src/components/testimonials/SocialProof04.astro",
+      "style_tags": [
+        "luxury-minimal",
+        "editorial-clean"
+      ],
+      "motion_level": "subtle",
+      "best_suited_niches": [
+        "luxo",
+        "arquitetura-premium",
+        "consultoria-estrategica"
+      ],
+      "visual_personality": "Depoimento mestre em cartão amplo com estrelas douradas, citação e resultado mensurável do cliente.",
+      "props_schema": {
+        "content.quote": {
+          "type": "string",
+          "required": true,
+          "description": "Texto da citação"
+        },
+        "content.author": {
+          "type": "string",
+          "required": true,
+          "description": "Nome do cliente"
+        },
+        "content.role": {
+          "type": "string",
+          "required": true,
+          "description": "Cargo ou empresa"
+        }
+      }
+    },
+    {
+      "id": "testimonials/SocialProof05",
+      "name": "Verified Ratings Multi-Platform (ReactBits Pro)",
+      "category": "testimonials",
+      "filePath": "src/components/testimonials/SocialProof05.astro",
+      "style_tags": [
+        "trust-ticker",
+        "clean-corporate"
+      ],
+      "motion_level": "interactive-hover",
+      "best_suited_niches": [
+        "clinicas",
+        "servicos-locais",
+        "imobiliarias"
+      ],
+      "visual_personality": "Três grandes cartões com notas 5.0, selos verificados e volume de avaliações do Google.",
+      "props_schema": {
+        "content.title": {
+          "type": "string",
+          "required": true,
+          "description": "Título da seção"
+        },
+        "content.ratings": {
+          "type": "Array<{ platform: string; score: string; reviewsCount: string }>",
+          "required": true,
+          "description": "Plataformas de reputação"
+        }
+      }
+    },
+    {
+      "id": "contact/Contact02",
+      "name": "Split Grid Detailed Form (ReactBits Pro)",
+      "category": "contact",
+      "filePath": "src/components/contact/Contact02.astro",
+      "style_tags": [
+        "clean-corporate",
+        "editorial-clean"
+      ],
+      "motion_level": "interactive-hover",
+      "best_suited_niches": [
+        "engenharia",
+        "arquitetura",
+        "b2b",
+        "consultoria"
+      ],
+      "visual_personality": "Divisão funcional com dados de contato direto à esquerda e formulário detalhado à direita.",
+      "props_schema": {
+        "content.title": {
+          "type": "string",
+          "required": true,
+          "description": "Título da seção"
+        },
+        "content.subtitle": {
+          "type": "string",
+          "required": false,
+          "description": "Orientações"
+        }
+      }
+    },
+    {
+      "id": "contact/Contact03",
+      "name": "Centered Minimal Form (ReactBits Pro)",
+      "category": "contact",
+      "filePath": "src/components/contact/Contact03.astro",
+      "style_tags": [
+        "luxury-minimal",
+        "clean-corporate"
+      ],
+      "motion_level": "subtle",
+      "best_suited_niches": [
+        "boutique-juridica",
+        "clinicas-vip",
+        "consultorias"
+      ],
+      "visual_personality": "Formulário centralizado com cartões translúcidos e foco absoluto em discrição e conversão.",
+      "props_schema": {
+        "content.title": {
+          "type": "string",
+          "required": true,
+          "description": "Título da seção"
+        }
+      }
+    },
+    {
+      "id": "contact/Contact04",
+      "name": "Multi-Channel Dept Cards (ReactBits Pro)",
+      "category": "contact",
+      "filePath": "src/components/contact/Contact04.astro",
+      "style_tags": [
+        "clean-corporate",
+        "local-utilitarian"
+      ],
+      "motion_level": "interactive-hover",
+      "best_suited_niches": [
+        "empresas-com-departamentos",
+        "construtoras",
+        "hospitais"
+      ],
+      "visual_personality": "Três canais dedicados (Residencial, Comercial, Imprensa) com e-mails e telefones diretos.",
+      "props_schema": {
+        "content.title": {
+          "type": "string",
+          "required": true,
+          "description": "Título dos canais"
+        }
+      }
+    },
+    {
+      "id": "cta/CTA02",
+      "name": "Full-Width High Contrast Banner (ReactBits Pro)",
+      "category": "cta",
+      "filePath": "src/components/cta/CTA02.astro",
+      "style_tags": [
+        "direct-response",
+        "bold-brutalist"
+      ],
+      "motion_level": "interactive-hover",
+      "best_suited_niches": [
+        "todos-os-nichos"
+      ],
+      "visual_personality": "Faixa de alta densidade visual com tipografia destacada e botão primário com seta direcional.",
+      "props_schema": {
+        "content.headline": {
+          "type": "string",
+          "required": true,
+          "description": "Chamada de fechamento"
+        }
+      }
+    },
+    {
+      "id": "cta/CTA03",
+      "name": "Split Inline Card CTA (ReactBits Pro)",
+      "category": "cta",
+      "filePath": "src/components/cta/CTA03.astro",
+      "style_tags": [
+        "clean-corporate",
+        "bento-modern"
+      ],
+      "motion_level": "interactive-hover",
+      "best_suited_niches": [
+        "consultoria",
+        "arquitetura",
+        "engenharia"
+      ],
+      "visual_personality": "Card horizontal moderno com texto à esquerda e dupla de botões (WhatsApp e Contato) à direita.",
+      "props_schema": {
+        "content.headline": {
+          "type": "string",
+          "required": true,
+          "description": "Chamada de ação"
+        }
+      }
+    },
+    {
+      "id": "cta/CTA04",
+      "name": "Ambient Glow Radial CTA (ReactBits Pro)",
+      "category": "cta",
+      "filePath": "src/components/cta/CTA04.astro",
+      "style_tags": [
+        "ambient-glow",
+        "luxury-minimal"
+      ],
+      "motion_level": "subtle",
+      "best_suited_niches": [
+        "startups",
+        "luxo",
+        "arquitetura"
+      ],
+      "visual_personality": "Fechamento elegante com orbe radial no centro da tela e chip de métricas comprovadas.",
+      "props_schema": {
+        "content.headline": {
+          "type": "string",
+          "required": true,
+          "description": "Chamada inspiradora"
+        }
+      }
+    },
+    {
+      "id": "cta/CTA05",
+      "name": "Trust List Card CTA (ReactBits Pro)",
+      "category": "cta",
+      "filePath": "src/components/cta/CTA05.astro",
+      "style_tags": [
+        "trust-ticker",
+        "clean-corporate"
+      ],
+      "motion_level": "interactive-hover",
+      "best_suited_niches": [
+        "advocacia",
+        "medicina",
+        "financas"
+      ],
+      "visual_personality": "Card de conversão com checklist de segurança institucional (sem compromisso, sigilo total).",
+      "props_schema": {
+        "content.headline": {
+          "type": "string",
+          "required": true,
+          "description": "Título de confiança"
+        }
+      }
+    },
+    {
+      "id": "cta/CTA06",
+      "name": "Dual Channel Fast Action (ReactBits Pro)",
+      "category": "cta",
+      "filePath": "src/components/cta/CTA06.astro",
+      "style_tags": [
+        "local-utilitarian",
+        "direct-response"
+      ],
+      "motion_level": "interactive-hover",
+      "best_suited_niches": [
+        "negocios-locais",
+        "clinicas-emergenciais"
+      ],
+      "visual_personality": "Seção de ação rápida com botão de WhatsApp e botão de discagem direta para telefone fixo.",
+      "props_schema": {
+        "content.headline": {
+          "type": "string",
+          "required": true,
+          "description": "Chamada de atendimento"
+        }
+      }
+    },
+    {
+      "id": "cta/CTA07",
+      "name": "Bold Bordered Action (ReactBits Pro)",
+      "category": "cta",
+      "filePath": "src/components/cta/CTA07.astro",
+      "style_tags": [
+        "bold-brutalist",
+        "typography-driven"
+      ],
+      "motion_level": "interactive-hover",
+      "best_suited_niches": [
+        "agencias",
+        "arquitetura-contemporanea",
+        "startups"
+      ],
+      "visual_personality": "Tipografia em grande porte entre duas linhas horizontais finas com botão em bloco.",
+      "props_schema": {
+        "content.headline": {
+          "type": "string",
+          "required": true,
+          "description": "Chamada definitiva"
+        }
+      }
+    },
+    {
+      "id": "footer/Footer03",
+      "name": "Multi-Column Corporate Footer (ReactBits Pro)",
+      "category": "footer",
+      "filePath": "src/components/footer/Footer03.astro",
+      "style_tags": [
+        "clean-corporate"
+      ],
+      "motion_level": "none",
+      "best_suited_niches": [
+        "todos-os-nichos"
+      ],
+      "visual_personality": "Rodapé estruturado em 4 colunas com dados da empresa, links de navegação e endereço.",
+      "props_schema": {}
+    },
+    {
+      "id": "footer/Footer04",
+      "name": "Minimal Clean Row Footer (ReactBits Pro)",
+      "category": "footer",
+      "filePath": "src/components/footer/Footer04.astro",
+      "style_tags": [
+        "luxury-minimal"
+      ],
+      "motion_level": "none",
+      "best_suited_niches": [
+        "portfolios",
+        "startups"
+      ],
+      "visual_personality": "Linha única minimalista com dot indicador de marca, links de texto e copyright.",
+      "props_schema": {}
+    },
+    {
+      "id": "footer/Footer05",
+      "name": "Centered Minimal Brand Footer (ReactBits Pro)",
+      "category": "footer",
+      "filePath": "src/components/footer/Footer05.astro",
+      "style_tags": [
+        "editorial-clean"
+      ],
+      "motion_level": "none",
+      "best_suited_niches": [
+        "consultorias",
+        "clinicas"
+      ],
+      "visual_personality": "Nome da marca centralizado em destaque com frase institucional e links discretos.",
+      "props_schema": {}
+    },
+    {
+      "id": "footer/Footer06",
+      "name": "Card Banner Compact Footer (ReactBits Pro)",
+      "category": "footer",
+      "filePath": "src/components/footer/Footer06.astro",
+      "style_tags": [
+        "clean-corporate",
+        "bento-modern"
+      ],
+      "motion_level": "interactive-hover",
+      "best_suited_niches": [
+        "negocios-locais",
+        "escritorios"
+      ],
+      "visual_personality": "Card flutuante com chamada de contato rápido integrado ao rodapé.",
+      "props_schema": {}
+    },
+    {
+      "id": "footer/Footer07",
+      "name": "Detailed Mega Footer (ReactBits Pro)",
+      "category": "footer",
+      "filePath": "src/components/footer/Footer07.astro",
+      "style_tags": [
+        "clean-corporate"
+      ],
+      "motion_level": "none",
+      "best_suited_niches": [
+        "construtoras",
+        "hospitais",
+        "redes"
+      ],
+      "visual_personality": "Rodapé institucional completo em 5 colunas com status operacional em fonte mono.",
+      "props_schema": {}
+    },
+    {
+      "id": "footer/Footer08",
+      "name": "Large Typography Brand Footer (ReactBits Pro)",
+      "category": "footer",
+      "filePath": "src/components/footer/Footer08.astro",
+      "style_tags": [
+        "editorial-clean",
+        "typography-driven"
+      ],
+      "motion_level": "none",
+      "best_suited_niches": [
+        "arquitetura",
+        "design",
+        "moda"
+      ],
+      "visual_personality": "Tipografia de grande escala com o nome da empresa e assinatura da cidade em estilo internacional.",
+      "props_schema": {}
+    },
+    {
+      "id": "header/Header03",
+      "name": "Floating Pill Navbar (ReactBits Pro)",
+      "category": "header",
+      "filePath": "src/components/header/Header03.astro",
+      "style_tags": [
+        "luxury-minimal",
+        "glassmorphism"
+      ],
+      "motion_level": "subtle",
+      "best_suited_niches": [
+        "arquitetura",
+        "startups",
+        "design"
+      ],
+      "visual_personality": "Barra de navegação suspensa em formato de pílula translúcida com cantos arredondados totais.",
+      "props_schema": {}
+    },
+    {
+      "id": "header/Header04",
+      "name": "Monochrome Technical Header (ReactBits Pro)",
+      "category": "header",
+      "filePath": "src/components/header/Header04.astro",
+      "style_tags": [
+        "high-tech",
+        "clean-corporate"
+      ],
+      "motion_level": "none",
+      "best_suited_niches": [
+        "engenharia",
+        "tecnologia",
+        "financas"
+      ],
+      "visual_personality": "Header com tipografia monospace, logotipo quadrado em alto contraste e botão delineado.",
+      "props_schema": {}
+    },
+    {
+      "id": "header/Header05",
+      "name": "Luxury Editorial Navbar (ReactBits Pro)",
+      "category": "header",
+      "filePath": "src/components/header/Header05.astro",
+      "style_tags": [
+        "luxury-minimal",
+        "editorial-clean"
+      ],
+      "motion_level": "subtle",
+      "best_suited_niches": [
+        "arquitetura-autoral",
+        "alta-costura",
+        "joalherias"
+      ],
+      "visual_personality": "Espaçamento generoso entre letras (tracking widest), sem caixa de fundo, puramente tipográfico.",
+      "props_schema": {}
+    },
+    {
+      "id": "header/Header06",
+      "name": "Segmented Control Navbar (ReactBits Pro)",
+      "category": "header",
+      "filePath": "src/components/header/Header06.astro",
+      "style_tags": [
+        "clean-corporate",
+        "bento-modern"
+      ],
+      "motion_level": "interactive-hover",
+      "best_suited_niches": [
+        "saas",
+        "consultorias"
+      ],
+      "visual_personality": "Controle segmentado em cápsula no centro com destaque do item ativo.",
+      "props_schema": {}
+    },
+    {
+      "id": "header/Header07",
+      "name": "Double Tier Utility Navbar (ReactBits Pro)",
+      "category": "header",
+      "filePath": "src/components/header/Header07.astro",
+      "style_tags": [
+        "clean-corporate",
+        "local-utilitarian"
+      ],
+      "motion_level": "none",
+      "best_suited_niches": [
+        "clinicas",
+        "imobiliarias"
+      ],
+      "visual_personality": "Faixa superior de aviso de atendimento somada a menu executivo com botão de agendamento.",
+      "props_schema": {}
+    },
+    {
+      "id": "header/Header08",
+      "name": "Centered Brand Symmetrical Navbar (ReactBits Pro)",
+      "category": "header",
+      "filePath": "src/components/header/Header08.astro",
+      "style_tags": [
+        "editorial-clean"
+      ],
+      "motion_level": "subtle",
+      "best_suited_niches": [
+        "boutiques",
+        "advocacia"
+      ],
+      "visual_personality": "Grid simétrico em 3 colunas com a marca centralizada e links divididos.",
+      "props_schema": {}
+    },
+    {
+      "id": "header/Header09",
+      "name": "High Blur Glassmorphic Navbar (ReactBits Pro)",
+      "category": "header",
+      "filePath": "src/components/header/Header09.astro",
+      "style_tags": [
+        "glassmorphism",
+        "ambient-glow"
+      ],
+      "motion_level": "subtle",
+      "best_suited_niches": [
+        "tecnologia",
+        "startups"
+      ],
+      "visual_personality": "Efeito de desfoque profundo (blur 2xl) e badge de status corporativo PRO.",
+      "props_schema": {}
+    },
+    {
+      "id": "header/Header10",
+      "name": "Brutalist Monospace Header (ReactBits Pro)",
+      "category": "header",
+      "filePath": "src/components/header/Header10.astro",
+      "style_tags": [
+        "bold-brutalist",
+        "typography-driven"
+      ],
+      "motion_level": "none",
+      "best_suited_niches": [
+        "arquitetura-brutalista",
+        "design-grafico",
+        "tecnologia"
+      ],
+      "visual_personality": "Fonte mono pura, barras duplas de código e alinhamento cru.",
+      "props_schema": {}
+    },
+    {
+      "id": "header/Header11",
+      "name": "Compact Contact Oriented Navbar (ReactBits Pro)",
+      "category": "header",
+      "filePath": "src/components/header/Header11.astro",
+      "style_tags": [
+        "local-utilitarian"
+      ],
+      "motion_level": "none",
+      "best_suited_niches": [
+        "servicos-locais",
+        "clinicas"
+      ],
+      "visual_personality": "Ênfase em telefones e localização na barra superior para conversão imediata.",
+      "props_schema": {}
+    },
+    {
+      "id": "header/Header12",
+      "name": "Status Beacon Navbar (ReactBits Pro)",
+      "category": "header",
+      "filePath": "src/components/header/Header12.astro",
+      "style_tags": [
+        "ambient-glow",
+        "clean-corporate"
+      ],
+      "motion_level": "subtle",
+      "best_suited_niches": [
+        "escritorios-atuais",
+        "consultorias"
+      ],
+      "visual_personality": "Dot animado indicador de disponibilidade para novos projetos.",
+      "props_schema": {}
+    },
+    {
+      "id": "header/Header13",
+      "name": "Architectural Clean Bar (ReactBits Pro)",
+      "category": "header",
+      "filePath": "src/components/header/Header13.astro",
+      "style_tags": [
+        "luxury-minimal",
+        "clean-corporate"
+      ],
+      "motion_level": "none",
+      "best_suited_niches": [
+        "arquitetura",
+        "engenharia"
+      ],
+      "visual_personality": "Barra institucional com divisão limpa de nicho e botão arredondado.",
+      "props_schema": {}
+    },
+    {
+      "id": "header/Header14",
+      "name": "Minimal Borderless Bar (ReactBits Pro)",
+      "category": "header",
+      "filePath": "src/components/header/Header14.astro",
+      "style_tags": [
+        "luxury-minimal"
+      ],
+      "motion_level": "none",
+      "best_suited_niches": [
+        "design-de-interiores",
+        "consultorias"
+      ],
+      "visual_personality": "Layout sem bordas pesadas com dot colorido de marca e chamada rápida em texto.",
+      "props_schema": {}
+    },
+    {
+      "id": "projects/Showcase01",
+      "name": "Curated 3-Columns Gallery (ReactBits Pro)",
+      "category": "projects",
+      "filePath": "src/components/projects/Showcase01.astro",
+      "style_tags": [
+        "portfolio-curated",
+        "clean-corporate"
+      ],
+      "motion_level": "interactive-hover",
+      "best_suited_niches": [
+        "arquitetura",
+        "interiores",
+        "engenharia"
+      ],
+      "visual_personality": "Três grandes cartões com proporção fotográfica 4:3, badges de categoria e efeito hover suave.",
+      "props_schema": {
+        "content.title": {
+          "type": "string",
+          "required": true,
+          "description": "Título da galeria"
+        },
+        "content.items": {
+          "type": "Array<{ title: string; category: string; image?: string; description?: string }>",
+          "required": true,
+          "description": "Projetos selecionados"
+        }
+      }
+    },
+    {
+      "id": "projects/Showcase02",
+      "name": "Before & After Comparison (ReactBits Pro)",
+      "category": "projects",
+      "filePath": "src/components/projects/Showcase02.astro",
+      "style_tags": [
+        "direct-response",
+        "portfolio-curated"
+      ],
+      "motion_level": "subtle",
+      "best_suited_niches": [
+        "reformas",
+        "odontologia-estetica",
+        "arquitetura",
+        "cirurgia"
+      ],
+      "visual_personality": "Comparativo lado a lado de alto impacto: estado anterior versus resultado final executado.",
+      "props_schema": {
+        "content.title": {
+          "type": "string",
+          "required": true,
+          "description": "Título da transformação"
+        }
+      }
+    },
+    {
+      "id": "projects/Showcase03",
+      "name": "Minimal Editorial List Showcase (ReactBits Pro)",
+      "category": "projects",
+      "filePath": "src/components/projects/Showcase03.astro",
+      "style_tags": [
+        "editorial-clean",
+        "typography-driven"
+      ],
+      "motion_level": "interactive-hover",
+      "best_suited_niches": [
+        "arquitetura-autoral",
+        "advocacia",
+        "consultoria-executiva"
+      ],
+      "visual_personality": "Lista editorial tipográfica com ano, localização e revelação de setas direcionais ao passar o cursor.",
+      "props_schema": {
+        "content.title": {
+          "type": "string",
+          "required": true,
+          "description": "Título do acervo"
+        },
+        "content.works": {
+          "type": "Array<{ title: string; year: string; location: string; category: string }>",
+          "required": true,
+          "description": "Obras em lista"
+        }
+      }
+    },
+    {
+      "id": "projects/Showcase04",
+      "name": "Spotlight Single Project (ReactBits Pro)",
+      "category": "projects",
+      "filePath": "src/components/projects/Showcase04.astro",
+      "style_tags": [
+        "luxury-minimal",
+        "portfolio-curated"
+      ],
+      "motion_level": "subtle",
+      "best_suited_niches": [
+        "obras-emblema",
+        "arquitetura",
+        "casos-de-sucesso"
+      ],
+      "visual_personality": "Destaque solitário em grande escala para a obra/caso mais impressionante do cliente.",
+      "props_schema": {
+        "content.mainProject": {
+          "type": "{ title: string; category: string; description: string; metrics?: string }",
+          "required": true,
+          "description": "Projeto mestre"
+        }
+      }
+    },
+    {
+      "id": "projects/Showcase05",
+      "name": "Horizontal Strip Gallery (ReactBits Pro)",
+      "category": "projects",
+      "filePath": "src/components/projects/Showcase05.astro",
+      "style_tags": [
+        "portfolio-curated",
+        "interactive-hover"
+      ],
+      "motion_level": "interactive-hover",
+      "best_suited_niches": [
+        "decoracao",
+        "gastronomia",
+        "clinicas-esteticas",
+        "interiores"
+      ],
+      "visual_personality": "Faixa de rolagem lateral horizontal suave (smooth scroll) para imersão em múltiplos ambientes.",
+      "props_schema": {
+        "content.title": {
+          "type": "string",
+          "required": true,
+          "description": "Título da sequência"
+        },
+        "content.images": {
+          "type": "Array<{ url: string; caption?: string }>",
+          "required": false,
+          "description": "Fotos da sequência"
+        }
+      }
+    },
+    {
+      "id": "projects/Showcase06",
+      "name": "Asymmetric Mosaic Portfolio (ReactBits Pro)",
+      "category": "projects",
+      "filePath": "src/components/projects/Showcase06.astro",
+      "style_tags": [
+        "bento-modern",
+        "portfolio-curated"
+      ],
+      "motion_level": "interactive-hover",
+      "best_suited_niches": [
+        "arquitetura",
+        "design",
+        "engenharia"
+      ],
+      "visual_personality": "Mosaico de 4 projetos com spans assimétricos 8/4 e 4/8 com acabamento sofisticado.",
+      "props_schema": {
+        "content.title": {
+          "type": "string",
+          "required": true,
+          "description": "Título do portfólio"
+        },
+        "content.projects": {
+          "type": "Array<{ title: string; category: string; year: string; span?: string }>",
+          "required": true,
+          "description": "Projetos em mosaico"
+        }
+      }
+    },
+    {
+      "id": "effects/BendingMarquee",
+      "name": "Bending Marquee Strip (ReactBits Starter)",
+      "category": "effects",
+      "filePath": "src/components/effects/BendingMarquee.astro",
+      "style_tags": [
+        "typography-driven",
+        "trust-ticker"
+      ],
+      "motion_level": "subtle",
+      "best_suited_niches": [
+        "todos-os-nichos"
+      ],
+      "visual_personality": "Faixa de letreiro contínuo em texto monospace para reforço rítmico de palavras-chave da empresa.",
+      "props_schema": {
+        "text": {
+          "type": "string",
+          "required": false,
+          "description": "Frase que se repetirá no marquee"
+        }
+      }
+    },
+    {
+      "id": "effects/FrameBorder",
+      "name": "Frame Border Glow (ReactBits Starter)",
+      "category": "effects",
+      "filePath": "src/components/effects/FrameBorder.astro",
+      "style_tags": [
+        "ambient-glow",
+        "luxury-minimal"
+      ],
+      "motion_level": "subtle",
+      "best_suited_niches": [
+        "todos-os-nichos"
+      ],
+      "visual_personality": "Borda com gradiente suave luminoso de 1px ao redor de qualquer container de conteúdo.",
+      "props_schema": {}
+    },
+    {
+      "id": "effects/ParallaxPills",
+      "name": "Parallax Tag Pills (ReactBits Starter)",
+      "category": "effects",
+      "filePath": "src/components/effects/ParallaxPills.astro",
+      "style_tags": [
+        "clean-corporate"
+      ],
+      "motion_level": "subtle",
+      "best_suited_niches": [
+        "todos-os-nichos"
+      ],
+      "visual_personality": "Conjunto de cápsulas textuais com deslocamento vertical alternado para selos de competências.",
+      "props_schema": {
+        "pills": {
+          "type": "string[]",
+          "required": false,
+          "description": "Palavras-chave"
+        }
+      }
+    },
+    {
+      "id": "effects/DepthCard",
+      "name": "Depth Card 3D Wrapper (ReactBits Starter)",
+      "category": "effects",
+      "filePath": "src/components/effects/DepthCard.astro",
+      "style_tags": [
+        "depth-tilt",
+        "high-tech"
+      ],
+      "motion_level": "interactive-hover",
+      "best_suited_niches": [
+        "todos-os-nichos"
+      ],
+      "visual_personality": "Envoltório de profundidade 3D que eleva os elementos internos suavemente ao passar o mouse.",
+      "props_schema": {}
     }
   ]
 }

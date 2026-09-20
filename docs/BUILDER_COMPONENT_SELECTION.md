@@ -12,7 +12,7 @@ src/components/
 ├── components-meta.ts          <- Metadados tipados (estilo, nichos, motion, props_schema)
 ├── selector.ts                 <- Engine de busca e scoring inteligente (queryComponents)
 ├── registry.ts                 <- Registro estático de importação do Astro
-└── [categorias]/*.astro        <- 31 componentes especializados
+└── [categorias]/*.astro        <- 100 componentes especializados
 ```
 
 ### Arquivos Chave:
@@ -138,16 +138,53 @@ Antes de gerar a configuração do cliente em `src/clients/data/[slug].ts`:
 | **Bento**   | `bento/Bento12`   | Categorized Features 37 (ReactBits Pro)| `none` | Engenharia, Medicina, Especialidades |
 | **Process** | `process/Process01` | Jornada Passo a Passo (01, 02, 03) | `subtle` | Arquitetura, Tratamentos Complexos |
 | **Stats**   | `stats/Stats01`   | Faixa de Métricas Numéricas | `subtle` | Indústria, Construtoras, Franquias |
+| **Header** | `header/Header03` | Minimal Centered (ReactBits Pro) | `none` | Escritórios, Agências, Luxo |
+| **Header** | `header/Header04` | Floating Blur Island (ReactBits Pro) | `interactive-hover` | Startups, SaaS, Tecnologia |
+| **Header** | `header/Header05` | Editorial Double Deck (ReactBits Pro)| `subtle` | Medicina, Advocacia, Luxo |
+| **Header** | `header/Header06` | Brand Split Navigation (ReactBits Pro)| `interactive-hover` | Moda, Arquitetura, Design |
+| **Header** | `header/Header07` | Tech Segmented (ReactBits Pro) | `interactive-hover` | Engenharia, Tecnologia, Finanças |
+| **Header** | `header/Header08` | Transparent Overlay (ReactBits Pro) | `subtle` | Fotografia, Turismo, Hotelaria |
+| **Header** | `header/Header09` | Pillar Badge (ReactBits Pro) | `interactive-hover` | Indústria, Logística, B2B |
+| **Header** | `header/Header10` | Offcanvas Trigger (ReactBits Pro) | `interactive-hover` | Criativos, Portfólios |
+| **Header** | `header/Header11` | Announcement Bar Integrated (ReactBits Pro)| `subtle` | Eventos, Clínicas, Cursos |
+| **Header** | `header/Header12` | Modernist Asymmetric (ReactBits Pro)| `none` | Design, Consultoria, Arte |
+| **Header** | `header/Header13` | Pill Badge Center (ReactBits Pro) | `interactive-hover` | Startups, Clínicas de Alto Padrão |
+| **Header** | `header/Header14` | Ultra Minimal Monospace (ReactBits Pro)| `none` | Tecnologia, Pesquisa, Finanças |
 | **Proof**   | `testimonials/Testimonials01` | Cards de Citação com Autor | `interactive-hover`| Saúde, Estética, Consultorias |
-| **FAQ**     | `faq/FAQ01`       | Acordeão Limpo Anti-Objeção | `interactive-hover`| Tratamentos, Direito, Finanças |
+| **Proof**   | `testimonials/SocialProof01` | Quote Grid with Avatars (ReactBits Pro)| `interactive-hover`| Clínicas, SaaS, Consultorias |
+| **Proof**   | `testimonials/SocialProof02` | Star Badge Minimalist (ReactBits Pro)| `subtle` | Negócios Locais, Serviços Rápidos |
+| **Proof**   | `testimonials/SocialProof03` | Metric Statement Cards (ReactBits Pro)| `subtle` | Engenharia, Finanças, B2B |
+| **Proof**   | `testimonials/SocialProof04` | Compact Trust Columns (ReactBits Pro)| `none` | Advocacia, Contabilidade, Medicina |
+| **Proof**   | `testimonials/SocialProof05` | Press & Brand Endorsement (ReactBits Pro)| `interactive-hover`| Startups, Franquias, Celebridades |
 | **Contact** | `contact/Contact01`| Hub Multicanal (WhatsApp/Fone/Email)| `subtle`| Todos os nichos |
-| **Map**     | `map/Map01`       | Localização Física 21/9 | `none` | Estabelecimentos com sede física |
+| **Contact** | `contact/Contact02`| Split Form & Direct Channel (ReactBits Pro)| `interactive-hover`| Clínicas, Consultorias, B2B |
+| **Contact** | `contact/Contact03`| Compact Quick Connect (ReactBits Pro)| `subtle`| Serviços Rápidos, Imobiliárias |
+| **Contact** | `contact/Contact04`| Card Grid Offices (ReactBits Pro)| `none`| Redes, Múltiplas Unidades, Advocacia |
 | **CTA**     | `cta/CTA01`       | Fechamento de Alto Contraste | `interactive-hover`| Fim de funil em todas as páginas |
+| **CTA**     | `cta/CTA02`       | Simple High-Contrast Box (ReactBits Pro)| `subtle`| Conversão Direta, Serviços |
+| **CTA**     | `cta/CTA03`       | Gradient Ambient Glow (ReactBits Pro)| `interactive-hover`| Tecnologia, Luxo, Startups |
+| **CTA**     | `cta/CTA04`       | Split Action with Stats (ReactBits Pro)| `interactive-hover`| Finanças, Engenharia, Consultoria |
+| **CTA**     | `cta/CTA05`       | Direct Booking Checklist (ReactBits Pro)| `subtle`| Clínicas, Escritórios, Cursos |
+| **CTA**     | `cta/CTA06`       | Card Container Pill (ReactBits Pro)| `interactive-hover`| Negócios Locais, Aplicativos |
+| **CTA**     | `cta/CTA07`       | Floating Banner Bar (ReactBits Pro)| `none`| Fechamento Dinâmico, Urgência |
+| **Showcase**| `projects/Showcase01`| Minimalist Project Showcase (ReactBits Pro)| `interactive-hover`| Arquitetura, Engenharia, Design |
+| **Showcase**| `projects/Showcase02`| Split Feature Showcase (ReactBits Pro)| `interactive-hover`| Tecnologia, Produtos, Clínicas |
+| **Showcase**| `projects/Showcase03`| Asymmetric Project Stage (ReactBits Pro)| `subtle`| Arquitetura, Interiores, Luxo |
+| **Showcase**| `projects/Showcase04`| Grid Cards Showcase (ReactBits Pro)| `interactive-hover`| Portfólios, Reformas, Gastronomia |
+| **Showcase**| `projects/Showcase05`| Large Spotlight Feature (ReactBits Pro)| `interactive-hover`| Produtos Premium, Lançamentos |
+| **Showcase**| `projects/Showcase06`| Dual Metric Showcase (ReactBits Pro)| `subtle`| B2B, Engenharia, Construtoras |
 | **Footer**  | `footer/Footer01` | Minimalista Centralizado | `none` | Startups, Landing Pages |
 | **Footer**  | `footer/Footer02` | Corporativo com OAB/CRM/CNPJ | `none` | Direito, Medicina, Contabilidade |
-| **Bg**      | `backgrounds/DotMatrixBackground` | Malha de Precisão | `none` | Tecnologia, Engenharia |
-| **Bg**      | `backgrounds/MeshGradientBackground` | Orbes Luminosos Atmosféricos | `subtle` | Luxo, Interiores, Saúde |
-| **Bg**      | `backgrounds/PrismBackground` | Refrator Prismático em Canvas | `complex-scroll` | Agências, Marcas Disruptivas |
+| **Footer**  | `footer/Footer03` | Clean Columns & Social (ReactBits Pro)| `none`| Consultoria, Saúde, Serviços |
+| **Footer**  | `footer/Footer04` | Brand Statement & Nav (ReactBits Pro)| `none`| Design, Marcas Autorais, Luxo |
+| **Footer**  | `footer/Footer05` | Simple Border Centered (ReactBits Pro)| `none`| Landing Pages, Clínicas |
+| **Footer**  | `footer/Footer06` | Corporate Badges & Legal (ReactBits Pro)| `none`| Advocacia, Hospitais, Finanças |
+| **Footer**  | `footer/Footer07` | Minimal Inline Links (ReactBits Pro)| `none`| Startups, Micro-sites |
+| **Footer**  | `footer/Footer08` | Newsletter & Multicolumn (ReactBits Pro)| `interactive-hover`| Portais, Franquias, Conteúdo |
+| **Effects** | `effects/DepthCard` | Efeito 3D Depth Card Tilt (ReactBits Starter) | `interactive-hover` | Cards interativos, Produtos, Vitrines |
+| **Effects** | `effects/BendingMarquee` | Efeito Marquee Curvo de Logos/Textos (ReactBits Starter) | `subtle` | Prova social, Logos de clientes |
+| **Effects** | `effects/FrameBorder` | Moldura Decorativa com Gradiente Dinâmico (ReactBits Starter) | `none` | Moldura para fotos e cards |
+| **Effects** | `effects/ParallaxPills` | Tags/Pills Flutuantes em Profundidade (ReactBits Starter) | `interactive-hover` | Tags de diferenciais e skills |
 | **Effects** | `effects/CustomCursor` | Cursor Magnético com Halo de Brilho| `interactive-hover`| Luxo, Portfólios |
 | **Effects** | `effects/ParallaxScroll` | Motor de Revelação e 3D Tilt | `complex-scroll` | Sites com pretensão premium |
 | **UI**      | `ui/FloatingWhatsApp` | Widget Flutuante com Mensagem Dinâmica | `interactive-hover` | Conversão direta em todas as páginas |

@@ -1,0 +1,42 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    headline: string;
+    subheadline?: string;
+    buttonLabel?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const rawPhone = client?.business?.whatsapp || client?.business?.phone || '';
+const cleanPhone = rawPhone.replace(/\D/g, '');
+const defaultCta = cleanPhone ? `https://wa.me/55${cleanPhone}` : '#contato';
+---
+
+<section class="py-28" style="background-color: var(--color-bg);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="border-y border-white/10 py-16 flex flex-col md:flex-row md:items-center justify-between gap-8">
+      <div class="max-w-2xl">
+        <h2 class="text-4xl sm:text-6xl font-bold tracking-tight mb-4" style="font-family: var(--font-heading);">
+          {content?.headline || "Inicie seu projeto agora"}
+        </h2>
+        <p class="text-base text-slate-300 font-light">
+          {content?.subheadline || `Atendimento técnico de ponta a ponta com a equipe sênior de ${client.business.name}.`}
+        </p>
+      </div>
+
+      <a 
+        href={defaultCta}
+        target="_blank"
+        class="self-start md:self-auto px-10 py-5 rounded-2xl font-bold text-sm uppercase tracking-widest transition-all hover:scale-105 shrink-0"
+        style="background-color: var(--color-accent); color: var(--color-bg);"
+      >
+        {content?.buttonLabel || "Solicitar Contato"} &rarr;
+      </a>
+    </div>
+  </div>
+</section>

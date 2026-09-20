@@ -1,0 +1,29 @@
+---
+interface Props {
+  text?: string;
+  speed?: string;
+}
+
+const { text = "ARQUITETURA AUTORAL • DESIGN DE INTERIORES • RIGOR TÉCNICO • ", speed = "25s" } = Astro.props;
+---
+
+<div class="relative w-full overflow-hidden py-6 border-y border-white/10 bg-slate-950/40 select-none">
+  <div class="flex whitespace-nowrap animate-marquee gap-8 text-xs font-mono tracking-widest uppercase text-slate-300">
+    <span>{text}</span>
+    <span>{text}</span>
+    <span>{text}</span>
+    <span>{text}</span>
+  </div>
+</div>
+
+<style define:vars={{ speed }}>
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee var(--speed) linear infinite;
+  }
+</style>

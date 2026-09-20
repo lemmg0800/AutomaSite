@@ -21,14 +21,14 @@ Antes de gerar ou refatorar o arquivo `src/clients/data/[slug].ts`, o agente dev
 
 ## 2. Matriz de Decisão Rápida por Nicho e Vibe
 
-| Nicho Auditado | Vibe Estética | Hero Recomendado | Seção de Destaque / Bento | Background / Efeito |
-| :--- | :--- | :--- | :--- | :--- |
-| **Arquitetura & Interiores** | `luxury-minimal`, `ambient-glow` | `hero/Hero04`, `hero/Hero05` ou `hero/Hero11` | `bento/Bento01`, `bento/Bento06` ou `bento/Bento11` | `MeshGradientBackground` + `ParallaxScroll` |
-| **Medicina & Cirurgia** | `editorial-clean`, `authority` | `hero/Hero01` ou `hero/Hero07` | `benefits/Features01`, `benefits/Features07` | `MeshGradientBackground` |
-| **Advocacia & Tributário** | `editorial-clean`, `corporate` | `hero/Hero01` ou `hero/Hero09` | `benefits/Features02`, `bento/Bento08`, `bento/Bento12` | `DotMatrixBackground` + `Footer02` (OAB) |
-| **Startups & High-Tech** | `high-tech`, `bold` | `hero/Hero06` ou `hero/Hero10` | `bento/Bento07`, `bento/Bento10`, `benefits/Features06` | `DotMatrixBackground` ou `PrismBackground` |
-| **Serviço Local & Urgência** | `local-utilitarian`, `direct` | `hero/Hero03` ou `hero/Hero08` | `benefits/Features03`, `benefits/Features05`, `bento/Bento04` | `none` |
-| **Engenharia & Obras** | `clean-corporate`, `precision` | `hero/Hero06` ou `hero/Hero07` | `bento/Bento03`, `bento/Bento09`, `benefits/Features08` | `DotMatrixBackground` |
+| Nicho Auditado | Vibe Estética | Hero Recomendado | Seção de Destaque / Bento / Showcase | Header & Prova Social | CTA & Footer | Background / Efeito |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Arquitetura & Interiores** | `luxury-minimal`, `ambient-glow` | `hero/Hero04`, `hero/Hero05` ou `hero/Hero11` | `projects/Showcase01`, `bento/Bento01`, `bento/Bento06` | `header/Header05`, `testimonials/SocialProof04` | `cta/CTA03`, `footer/Footer04` | `MeshGradientBackground` + `ParallaxScroll` |
+| **Medicina & Cirurgia** | `editorial-clean`, `authority` | `hero/Hero01` ou `hero/Hero07` | `benefits/Features01`, `projects/Showcase02` | `header/Header05`, `testimonials/SocialProof01` | `cta/CTA05`, `footer/Footer06` | `MeshGradientBackground` |
+| **Advocacia & Tributário** | `editorial-clean`, `corporate` | `hero/Hero01` ou `hero/Hero09` | `benefits/Features02`, `bento/Bento08`, `bento/Bento12` | `header/Header03`, `testimonials/SocialProof04` | `cta/CTA04`, `footer/Footer02` (OAB) | `DotMatrixBackground` |
+| **Startups & High-Tech** | `high-tech`, `bold` | `hero/Hero06` ou `hero/Hero10` | `bento/Bento07`, `projects/Showcase05`, `benefits/Features06` | `header/Header04`, `testimonials/SocialProof05` | `cta/CTA03`, `footer/Footer08` | `DotMatrixBackground` ou `PrismBackground` |
+| **Serviço Local & Urgência** | `local-utilitarian`, `direct` | `hero/Hero03` ou `hero/Hero08` | `benefits/Features03`, `benefits/Features05`, `bento/Bento04` | `header/Header02`, `testimonials/SocialProof02` | `cta/CTA02`, `footer/Footer05` | `none` |
+| **Engenharia & Obras** | `clean-corporate`, `precision` | `hero/Hero06` ou `hero/Hero07` | `bento/Bento03`, `projects/Showcase06`, `benefits/Features08` | `header/Header07`, `testimonials/SocialProof03` | `cta/CTA04`, `footer/Footer06` | `DotMatrixBackground` |
 
 ---
 

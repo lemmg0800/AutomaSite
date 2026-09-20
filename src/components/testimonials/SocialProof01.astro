@@ -1,0 +1,41 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    title: string;
+    subtitle?: string;
+    metrics: Array<{
+      value: string;
+      label: string;
+    }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const metrics = content?.metrics || [
+  { value: "100%", label: "Projetos Entregues no Prazo" },
+  { value: "+15", label: "Anos de Tradição e Excelência" },
+  { value: "5.0", label: "Classificação Média dos Clientes" },
+  { value: "0", label: "Imprevistos Orçamentários" }
+];
+---
+
+<section class="py-16 border-y border-white/10" style="background-color: var(--color-bg);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
+      {metrics.map(m => (
+        <div class="pt-6 md:pt-0 px-4">
+          <div class="text-3xl sm:text-5xl font-extrabold font-mono mb-2" style="color: var(--color-accent);">
+            {m.value}
+          </div>
+          <div class="text-xs sm:text-sm text-slate-300 font-medium">
+            {m.label}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

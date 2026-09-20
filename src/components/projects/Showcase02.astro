@@ -1,0 +1,55 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    title: string;
+    subtitle?: string;
+    beforeLabel?: string;
+    afterLabel?: string;
+    beforeImage?: string;
+    afterImage?: string;
+    details?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+---
+
+<section class="py-24 border-y border-white/5" style="background-color: var(--color-bg);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      {content.badge && (
+        <span class="text-xs font-mono uppercase tracking-widest block mb-2" style="color: var(--color-accent);">
+          {content.badge}
+        </span>
+      )}
+      <h2 class="text-3xl sm:text-5xl font-bold" style="font-family: var(--font-heading);">
+        {content.title || "Transformação Concretizada"}
+      </h2>
+      {content.subtitle && (
+        <p class="text-sm sm:text-base text-slate-300 font-light mt-3">
+          {content.subtitle}
+        </p>
+      )}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="rounded-3xl border border-white/10 overflow-hidden bg-slate-950 aspect-[4/3] relative flex items-center justify-center">
+        <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-slate-950/80 border border-white/10 text-xs font-mono text-slate-300">
+          {content?.beforeLabel || "ESTADO ANTERIOR"}
+        </div>
+        <div class="text-slate-500 font-mono text-xs">FOTO DO IMÓVEL ORIGINAL</div>
+      </div>
+
+      <div class="rounded-3xl border border-white/20 overflow-hidden bg-slate-900 aspect-[4/3] relative flex items-center justify-center shadow-2xl">
+        <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-slate-950/80 border border-white/20 text-xs font-mono font-bold" style="color: var(--color-accent);">
+          {content?.afterLabel || `PROJETO EXECUTADO POR ${client.business.name.toUpperCase()}`}
+        </div>
+        <div class="text-white font-mono text-xs font-bold">OBRA FINALIZADA COM EXCELÊNCIA</div>
+      </div>
+    </div>
+  </div>
+</section>

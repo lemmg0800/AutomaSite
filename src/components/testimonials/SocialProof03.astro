@@ -1,0 +1,41 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    title?: string;
+    subtitle?: string;
+    logos?: Array<{ name: string; tag?: string }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const partners = content?.logos || [
+  { name: "ABNT Certificada", tag: "QUALIDADE" },
+  { name: "CAU / CREA", tag: "REGISTRO PROFISSIONAL" },
+  { name: "Green Building Council", tag: "SUSTENTABILIDADE" },
+  { name: "BIM Certified", tag: "TECNOLOGIA" },
+  { name: "Prêmio Design 2025", tag: "RECONHECIMENTO" }
+];
+---
+
+<section class="py-16 border-y border-white/5 overflow-hidden" style="background-color: color-mix(in srgb, var(--color-secondary) 15%, transparent);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-8">
+      <span class="text-xs font-mono uppercase tracking-widest text-slate-400">
+        {content?.badge || `HOMOLOGAÇÕES & CERTIFICAÇÕES // ${client.business.name.toUpperCase()}`}
+      </span>
+    </div>
+
+    <div class="flex flex-wrap items-center justify-center gap-6 md:gap-12 opacity-85">
+      {partners.map(p => (
+        <div class="px-6 py-3 rounded-2xl border border-white/10 bg-white/[0.02] flex items-center gap-3">
+          <span class="text-sm font-bold text-white tracking-wide">{p.name}</span>
+          {p.tag && <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-white/5 text-slate-400">{p.tag}</span>}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

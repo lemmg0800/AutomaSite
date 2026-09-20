@@ -1,0 +1,33 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    navLinks?: Array<{ label: string; href: string }>;
+    ctaLabel?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const cleanWhats = (client.business.whatsapp || client.business.phone || '').replace(/\D/g, '');
+const whatsLink = cleanWhats ? `https://wa.me/55${cleanWhats}` : '#contato';
+---
+
+<header class="sticky top-0 z-40 border-b border-white/10" style="background-color: var(--color-bg);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <a href={`/${client.status === 'published' ? client.slug : `preview/${client.slug}`}`} class="font-bold text-base text-white tracking-wider uppercase">
+      {client.business.name}
+    </a>
+
+    <div class="flex items-center gap-6">
+      <div class="hidden sm:flex items-center gap-4 text-xs text-slate-400">
+        <span>📍 {client.business.city}</span>
+        {client.business.phone && <span>📞 {client.business.phone}</span>}
+      </div>
+      <a href={whatsLink} target="_blank" class="px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider shadow-lg" style="background-color: var(--color-accent); color: var(--color-bg);">
+        {content?.ctaLabel || "WhatsApp"}
+      </a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,35 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    disclaimer?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+---
+
+<footer class="mt-auto pt-20 pb-12 border-t border-white/10" style="background-color: var(--color-bg);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <div class="text-3xl font-extrabold text-white mb-4" style="font-family: var(--font-heading);">{client.business.name}</div>
+      <p class="text-xs sm:text-sm text-slate-400 font-light mb-8">
+        Atendimento personalizado com foco absoluto na concretização dos objetivos e sonhos de nossos clientes.
+      </p>
+      <div class="flex items-center justify-center gap-6 text-xs text-slate-300">
+        <a href="#servicos" class="hover:text-white">Serviços</a>
+        <span>•</span>
+        <a href="#sobre" class="hover:text-white">Sobre Nós</a>
+        <span>•</span>
+        <a href="#contato" class="hover:text-white">Fale Conosco</a>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 gap-4">
+      <div>© {new Date().getFullYear()} {client.business.name}.</div>
+      <div>{client.business.city} - {client.business.state || 'PR'}</div>
+    </div>
+  </div>
+</footer>

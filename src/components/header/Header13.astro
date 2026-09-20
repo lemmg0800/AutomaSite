@@ -1,0 +1,35 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    navLinks?: Array<{ label: string; href: string }>;
+    ctaLabel?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const cleanWhats = (client.business.whatsapp || client.business.phone || '').replace(/\D/g, '');
+const whatsLink = cleanWhats ? `https://wa.me/55${cleanWhats}` : '#contato';
+---
+
+<header class="sticky top-0 z-40 border-b border-white/10" style="background-color: var(--color-bg);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <div class="flex items-center gap-10">
+      <a href={`/${client.status === 'published' ? client.slug : `preview/${client.slug}`}`} class="font-extrabold text-base text-white tracking-widest uppercase" style="font-family: var(--font-heading);">
+        {client.business.name}
+      </a>
+      <div class="hidden lg:flex items-center gap-2 text-xs font-mono text-slate-400">
+        <span>/</span>
+        <span>EXCELÊNCIA EM {client.business.niche.toUpperCase()}</span>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <a href={whatsLink} target="_blank" class="px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest" style="background-color: var(--color-accent); color: var(--color-bg);">
+        {content?.ctaLabel || "Atendimento"}
+      </a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,65 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    title: string;
+    subtitle?: string;
+    projects: Array<{
+      title: string;
+      category: string;
+      year: string;
+      span?: string;
+    }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const projects = content?.projects || [
+  { title: "Residencial Alphaville", category: "Arquitetura", year: "2025", span: "md:col-span-8" },
+  { title: "Consultório Odonto VIP", category: "Interiores", year: "2024", span: "md:col-span-4" },
+  { title: "Boutique Jurídica Batel", category: "Corporativo", year: "2024", span: "md:col-span-4" },
+  { title: "Refúgio da Serra", category: "Lazer & Paisagismo", year: "2023", span: "md:col-span-8" }
+];
+---
+
+<section id="portfolio" class="py-24 border-y border-white/5" style="background-color: var(--color-bg);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      {content.badge && (
+        <span class="text-xs font-mono uppercase tracking-widest block mb-2" style="color: var(--color-accent);">
+          {content.badge}
+        </span>
+      )}
+      <h2 class="text-3xl sm:text-5xl font-bold" style="font-family: var(--font-heading);">
+        {content.title || "Grandes Obras"}
+      </h2>
+      {content.subtitle && (
+        <p class="text-sm sm:text-base text-slate-300 font-light mt-3">
+          {content.subtitle}
+        </p>
+      )}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+      {projects.map((p, idx) => (
+        <div class={`${p.span || "md:col-span-6"} p-8 sm:p-12 rounded-3xl border border-white/10 bg-white/[0.02] hover:border-white/25 transition-all flex flex-col justify-between group`} style={idx === 0 ? "background-color: color-mix(in srgb, var(--color-secondary) 30%, transparent);" : ""}>
+          <div class="flex items-center justify-between mb-10">
+            <span class="text-[10px] font-mono uppercase px-2.5 py-1 rounded-full border border-white/10 bg-white/5" style="color: var(--color-accent);">
+              {p.category}
+            </span>
+            <span class="text-xs font-mono text-slate-400">{p.year}</span>
+          </div>
+          <div>
+            <h3 class="text-2xl sm:text-3xl font-bold text-white mb-2" style="font-family: var(--font-heading);">
+              {p.title}
+            </h3>
+            <div class="text-xs text-slate-500 font-mono">OBRA REGISTRADA // {client.business.city.toUpperCase()}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,83 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    title: string;
+    subtitle?: string;
+    items: Array<{
+      title: string;
+      category: string;
+      image?: string;
+      description?: string;
+    }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const items = content?.items || [
+  { title: "Mansão Alphaville Graciosa", category: "Arquitetura Residencial", description: "850m² de área construída integrando concreto aparente e vidro duplo." },
+  { title: "Penthouse Batel", category: "Design de Interiores", description: "Mobiliário italiano sob medida e iluminação circadiana." },
+  { title: "Sede Corporativa Tech", category: "Comercial", description: "Lajes corporativas de alta eficiência com certificação LEED." }
+];
+---
+
+<section id="projetos" class="py-24" style="background-color: var(--color-bg);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div class="max-w-xl">
+        {content.badge && (
+          <span class="text-xs font-mono uppercase tracking-widest block mb-2" style="color: var(--color-accent);">
+            {content.badge}
+          </span>
+        )}
+        <h2 class="text-3xl sm:text-5xl font-bold" style="font-family: var(--font-heading);">
+          {content.title || "Obras Selecionadas"}
+        </h2>
+        {content.subtitle && (
+          <p class="text-sm sm:text-base text-slate-300 font-light mt-3">
+            {content.subtitle}
+          </p>
+        )}
+      </div>
+      <div class="text-xs font-mono text-slate-400">
+        CATÁLOGO AUTORAL // {client.business.city.toUpperCase()}
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {items.map((item, idx) => (
+        <div class="group rounded-3xl border border-white/10 bg-white/[0.02] overflow-hidden hover:border-white/25 transition-all flex flex-col justify-between">
+          <div class="aspect-[4/3] bg-slate-900 relative overflow-hidden flex items-center justify-center">
+            {item.image ? (
+              <img src={item.image} alt={item.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            ) : (
+              <div class="p-8 text-center">
+                <div class="text-4xl mb-2" style="color: var(--color-accent);">✦</div>
+                <div class="text-xs uppercase font-mono text-slate-400">{item.category}</div>
+              </div>
+            )}
+            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-[10px] font-mono text-slate-300">
+              0{idx + 1}
+            </div>
+          </div>
+          <div class="p-8">
+            <span class="text-[10px] font-mono uppercase tracking-wider block mb-2" style="color: var(--color-accent);">
+              {item.category}
+            </span>
+            <h3 class="text-xl font-bold text-white mb-2" style="font-family: var(--font-heading);">
+              {item.title}
+            </h3>
+            {item.description && (
+              <p class="text-xs text-slate-400 font-light leading-relaxed">
+                {item.description}
+              </p>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

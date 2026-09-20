@@ -1,0 +1,15 @@
+---
+interface Props {
+  pills?: string[];
+}
+
+const { pills = ["Arquitetura", "Engenharia", "Interiores", "Paisagismo", "BIM 3D", "Luminotécnica"] } = Astro.props;
+---
+
+<div class="py-8 flex flex-wrap items-center justify-center gap-3 select-none">
+  {pills.map((pill, idx) => (
+    <span class="px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] hover:border-white/20 transition-all text-xs font-mono uppercase tracking-wider text-slate-300" style={`transform: translateY(${idx % 2 === 0 ? '-4px' : '4px'});`}>
+      {pill}
+    </span>
+  ))}
+</div>

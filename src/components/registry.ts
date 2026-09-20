@@ -1,6 +1,18 @@
 // Headers
 import Header01 from './header/Header01.astro';
 import Header02 from './header/Header02.astro';
+import Header03 from './header/Header03.astro';
+import Header04 from './header/Header04.astro';
+import Header05 from './header/Header05.astro';
+import Header06 from './header/Header06.astro';
+import Header07 from './header/Header07.astro';
+import Header08 from './header/Header08.astro';
+import Header09 from './header/Header09.astro';
+import Header10 from './header/Header10.astro';
+import Header11 from './header/Header11.astro';
+import Header12 from './header/Header12.astro';
+import Header13 from './header/Header13.astro';
+import Header14 from './header/Header14.astro';
 
 // Heroes
 import Hero01 from './hero/Hero01.astro';
@@ -54,17 +66,49 @@ import Team01 from './team/Team01.astro';
 import Process01 from './process/Process01.astro';
 import Stats01 from './stats/Stats01.astro';
 
-// Social Proof & Conversion
+// Social Proof & Testimonials
 import Credentials01 from './credentials/Credentials01.astro';
 import Testimonials01 from './testimonials/Testimonials01.astro';
+import SocialProof01 from './testimonials/SocialProof01.astro';
+import SocialProof02 from './testimonials/SocialProof02.astro';
+import SocialProof03 from './testimonials/SocialProof03.astro';
+import SocialProof04 from './testimonials/SocialProof04.astro';
+import SocialProof05 from './testimonials/SocialProof05.astro';
 import FAQ01 from './faq/FAQ01.astro';
+
+// Contact
 import Contact01 from './contact/Contact01.astro';
+import Contact02 from './contact/Contact02.astro';
+import Contact03 from './contact/Contact03.astro';
+import Contact04 from './contact/Contact04.astro';
 import Map01 from './map/Map01.astro';
+
+// CTA
 import CTA01 from './cta/CTA01.astro';
+import CTA02 from './cta/CTA02.astro';
+import CTA03 from './cta/CTA03.astro';
+import CTA04 from './cta/CTA04.astro';
+import CTA05 from './cta/CTA05.astro';
+import CTA06 from './cta/CTA06.astro';
+import CTA07 from './cta/CTA07.astro';
 
 // Footers
 import Footer01 from './footer/Footer01.astro';
 import Footer02 from './footer/Footer02.astro';
+import Footer03 from './footer/Footer03.astro';
+import Footer04 from './footer/Footer04.astro';
+import Footer05 from './footer/Footer05.astro';
+import Footer06 from './footer/Footer06.astro';
+import Footer07 from './footer/Footer07.astro';
+import Footer08 from './footer/Footer08.astro';
+
+// Showcase & Projects
+import Showcase01 from './projects/Showcase01.astro';
+import Showcase02 from './projects/Showcase02.astro';
+import Showcase03 from './projects/Showcase03.astro';
+import Showcase04 from './projects/Showcase04.astro';
+import Showcase05 from './projects/Showcase05.astro';
+import Showcase06 from './projects/Showcase06.astro';
 
 // Dynamic glob for client-specific components (Prevents breaking existing sites)
 const clientOverrides = import.meta.glob<{ default: any }>('../clients/components/*/*.astro', { eager: true });
@@ -72,7 +116,19 @@ const clientOverrides = import.meta.glob<{ default: any }>('../clients/component
 export const COMPONENT_REGISTRY = {
   header: {
     Header01,
-    Header02
+    Header02,
+    Header03,
+    Header04,
+    Header05,
+    Header06,
+    Header07,
+    Header08,
+    Header09,
+    Header10,
+    Header11,
+    Header12,
+    Header13,
+    Header14
   },
   hero: {
     Hero01,
@@ -96,7 +152,21 @@ export const COMPONENT_REGISTRY = {
     Products01
   },
   projects: {
-    Projects01
+    Projects01,
+    Showcase01,
+    Showcase02,
+    Showcase03,
+    Showcase04,
+    Showcase05,
+    Showcase06
+  },
+  showcase: {
+    Showcase01,
+    Showcase02,
+    Showcase03,
+    Showcase04,
+    Showcase05,
+    Showcase06
   },
   gallery: {
     Gallery01
@@ -142,23 +212,43 @@ export const COMPONENT_REGISTRY = {
     Credentials01
   },
   testimonials: {
-    Testimonials01
+    Testimonials01,
+    SocialProof01,
+    SocialProof02,
+    SocialProof03,
+    SocialProof04,
+    SocialProof05
   },
   faq: {
     FAQ01
   },
   contact: {
-    Contact01
+    Contact01,
+    Contact02,
+    Contact03,
+    Contact04
   },
   map: {
     Map01
   },
   cta: {
-    CTA01
+    CTA01,
+    CTA02,
+    CTA03,
+    CTA04,
+    CTA05,
+    CTA06,
+    CTA07
   },
   footer: {
     Footer01,
-    Footer02
+    Footer02,
+    Footer03,
+    Footer04,
+    Footer05,
+    Footer06,
+    Footer07,
+    Footer08
   }
 } as const;
 

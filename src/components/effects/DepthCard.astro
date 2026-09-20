@@ -1,0 +1,13 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className = "" } = Astro.props;
+---
+
+<div class={`depth-card group relative rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:border-white/20 hover:shadow-2xl ${className}`} style="transform-style: preserve-3d; perspective: 1000px;">
+  <div class="depth-card-content transition-transform duration-500 group-hover:translate-z-4">
+    <slot />
+  </div>
+</div>

@@ -1,0 +1,58 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    headline: string;
+    subheadline?: string;
+    phoneLabel?: string;
+    whatsLabel?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const rawPhone = client?.business?.whatsapp || client?.business?.phone || '';
+const cleanPhone = rawPhone.replace(/\D/g, '');
+const defaultCta = cleanPhone ? `https://wa.me/55${cleanPhone}` : '#contato';
+---
+
+<section class="py-24 border-y border-white/5" style="background-color: var(--color-bg);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+        <span class="text-xs font-mono uppercase tracking-widest block mb-2" style="color: var(--color-accent);">
+          ATENDIMENTO DIRETO
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-bold mb-4" style="font-family: var(--font-heading);">
+          {content?.headline || "Plantão de Consultas"}
+        </h2>
+        <p class="text-sm text-slate-300 font-light leading-relaxed">
+          {content?.subheadline || `Nossos diretores estão disponíveis para esclarecer aspectos técnicos e agendar visitas presenciais.`}
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-end">
+        {cleanPhone && (
+          <a 
+            href={defaultCta}
+            target="_blank"
+            class="px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider text-center transition-all hover:scale-105"
+            style="background-color: var(--color-accent); color: var(--color-bg);"
+          >
+            {content?.whatsLabel || "Conversar no WhatsApp"}
+          </a>
+        )}
+        {client.business.phone && (
+          <a 
+            href={`tel:${client.business.phone.replace(/\D/g, '')}`}
+            class="px-8 py-4 rounded-xl border border-white/15 hover:border-white/30 text-xs font-medium text-center text-white transition-all bg-white/[0.03]"
+          >
+            {content?.phoneLabel || `Ligar: ${client.business.phone}`}
+          </a>
+        )}
+      </div>
+    </div>
+  </div>
+</section>

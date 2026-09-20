@@ -1,0 +1,57 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    title: string;
+    subtitle?: string;
+    images?: Array<{ url: string; caption?: string }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const images = content?.images || [
+  { url: "", caption: "Living Integrado" },
+  { url: "", caption: "Fachada Contemporânea" },
+  { url: "", caption: "Suíte Master" },
+  { url: "", caption: "Área Gourmet" }
+];
+---
+
+<section class="py-20 overflow-hidden" style="background-color: var(--color-bg);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 flex items-end justify-between">
+    <div>
+      {content.badge && (
+        <span class="text-xs font-mono uppercase tracking-widest block mb-2" style="color: var(--color-accent);">
+          {content.badge}
+        </span>
+      )}
+      <h2 class="text-3xl sm:text-5xl font-bold" style="font-family: var(--font-heading);">
+        {content.title || "Sequência Visual"}
+      </h2>
+    </div>
+    <div class="text-xs font-mono text-slate-400">
+      DESLIZE LATERAL
+    </div>
+  </div>
+
+  <div class="flex gap-6 overflow-x-auto pb-6 px-4 sm:px-6 lg:px-8 no-scrollbar scroll-smooth">
+    {images.map((img, idx) => (
+      <div class="w-[320px] sm:w-[420px] shrink-0 rounded-3xl border border-white/10 bg-slate-950 aspect-[16/10] overflow-hidden relative flex items-center justify-center group">
+        {img.url ? (
+          <img src={img.url} alt={img.caption || `Imagem ${idx + 1}`} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+        ) : (
+          <div class="text-center p-6">
+            <div class="text-3xl mb-2" style="color: var(--color-accent);">✦</div>
+            <div class="text-xs font-mono text-slate-400">{img.caption || `Ambiente 0${idx + 1}`}</div>
+          </div>
+        )}
+        <div class="absolute bottom-4 left-4 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-[10px] font-mono text-slate-300">
+          0{idx + 1}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

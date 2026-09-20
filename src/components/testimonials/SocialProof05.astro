@@ -1,0 +1,67 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    title: string;
+    subtitle?: string;
+    ratings: Array<{
+      platform: string;
+      score: string;
+      reviewsCount: string;
+      badge?: string;
+    }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const ratings = content?.ratings || [
+  { platform: "Google Avaliações", score: "5.0", reviewsCount: "+85 avaliações 5 estrelas", badge: "VERIFICADO" },
+  { platform: "Recomendação Direta", score: "99.4%", reviewsCount: "Taxa de satisfação pós-obra", badge: "AUDITADO" },
+  { platform: "Conselho de Classe", score: "100%", reviewsCount: "Regularidade técnica e ética", badge: "OFICIAL" }
+];
+---
+
+<section class="py-24" style="background-color: var(--color-bg);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      {content.badge && (
+        <span class="text-xs font-mono uppercase tracking-widest block mb-2" style="color: var(--color-accent);">
+          {content.badge}
+        </span>
+      )}
+      <h2 class="text-3xl sm:text-5xl font-bold" style="font-family: var(--font-heading);">
+        {content.title || "Reputação Impecável"}
+      </h2>
+      {content.subtitle && (
+        <p class="text-sm sm:text-base text-slate-300 font-light mt-3">
+          {content.subtitle}
+        </p>
+      )}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {ratings.map(r => (
+        <div class="p-8 sm:p-10 rounded-3xl border border-white/10 bg-white/[0.02] hover:border-white/20 transition-all text-center flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] font-mono uppercase px-2.5 py-1 rounded-full border border-white/10 bg-white/5 inline-block mb-6" style="color: var(--color-accent);">
+              {r.badge || "VERIFICADO"}
+            </span>
+            <div class="text-5xl font-extrabold font-mono mb-2" style="color: var(--color-accent);">
+              {r.score}
+            </div>
+            <div class="flex justify-center text-amber-400 text-sm mb-4">★★★★★</div>
+            <h3 class="text-lg font-bold text-white mb-2" style="font-family: var(--font-heading);">
+              {r.platform}
+            </h3>
+            <p class="text-xs text-slate-400 font-light">
+              {r.reviewsCount}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

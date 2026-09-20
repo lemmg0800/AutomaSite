@@ -1,0 +1,39 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    navLinks?: Array<{ label: string; href: string }>;
+    ctaLabel?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const navLinks = content.navLinks || [
+  { label: "Obras", href: "#projetos" },
+  { label: "Sobre o Escritório", href: "#sobre" },
+  { label: "Premiações", href: "#diferenciais" },
+  { label: "Contato", href: "#contato" }
+];
+const cleanWhats = (client.business.whatsapp || client.business.phone || '').replace(/\D/g, '');
+const whatsLink = cleanWhats ? `https://wa.me/55${cleanWhats}` : '#contato';
+---
+
+<header class="w-full pt-6 pb-4 border-b border-white/10 bg-transparent">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <a href={`/${client.status === 'published' ? client.slug : `preview/${client.slug}`}`} class="text-xl sm:text-2xl font-bold tracking-widest uppercase text-white" style="font-family: var(--font-heading);">
+      {client.business.name}
+    </a>
+
+    <nav class="flex items-center gap-6 text-xs tracking-widest uppercase text-slate-300">
+      {navLinks.map(l => (
+        <a href={l.href} class="hover:text-white transition-colors">{l.label}</a>
+      ))}
+    </nav>
+
+    <a href={whatsLink} target="_blank" class="text-xs font-mono uppercase tracking-widest hover:underline" style="color: var(--color-accent);">
+      {content?.ctaLabel || "Consultar Disponibilidade"} &rarr;
+    </a>
+  </div>
+</header>

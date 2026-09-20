@@ -1,0 +1,14 @@
+---
+interface Props {
+  className?: string;
+  glowColor?: string;
+}
+
+const { className = "", glowColor = "var(--color-accent)" } = Astro.props;
+---
+
+<div class={`relative rounded-3xl p-[1px] transition-all duration-500 group ${className}`} style={`background: linear-gradient(135deg, color-mix(in srgb, ${glowColor} 40%, transparent) 0%, rgba(255,255,255,0.05) 50%, color-mix(in srgb, ${glowColor} 20%, transparent) 100%);`}>
+  <div class="h-full w-full rounded-[calc(1.5rem-1px)] p-6 bg-slate-950/90 backdrop-blur-xl">
+    <slot />
+  </div>
+</div>

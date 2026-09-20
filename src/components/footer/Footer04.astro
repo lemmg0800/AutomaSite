@@ -1,0 +1,31 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    disclaimer?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+---
+
+<footer class="mt-auto py-12 border-t border-white/10" style="background-color: var(--color-bg);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-400">
+    <div class="flex items-center gap-3">
+      <span class="w-2.5 h-2.5 rounded-full" style="background-color: var(--color-accent);"></span>
+      <span class="font-bold text-white tracking-wider" style="font-family: var(--font-heading);">{client.business.name}</span>
+      <span>•</span>
+      <span>{client.business.city}</span>
+    </div>
+
+    <div class="flex items-center gap-6 text-[11px]">
+      <a href="#servicos" class="hover:text-white">Serviços</a>
+      <a href="#sobre" class="hover:text-white">Sobre</a>
+      <a href="#contato" class="hover:text-white">Contato</a>
+    </div>
+
+    <div>© {new Date().getFullYear()} {client.business.name}. Todos os direitos reservados.</div>
+  </div>
+</footer>

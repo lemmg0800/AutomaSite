@@ -1,0 +1,47 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    disclaimer?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+---
+
+<footer class="mt-auto py-16 border-t border-white/10" style="background-color: var(--color-bg);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 text-xs">
+      <div class="md:col-span-2">
+        <div class="text-base font-bold text-white mb-3" style="font-family: var(--font-heading);">{client.business.name}</div>
+        <p class="text-slate-400 font-light leading-relaxed max-w-sm">
+          {client.business.niche} de excelência com sede em {client.business.city}. Compromisso inegociável com rigor técnico e sofisticação.
+        </p>
+      </div>
+
+      <div>
+        <div class="font-mono text-slate-500 uppercase tracking-widest mb-3">Navegação</div>
+        <ul class="space-y-2 text-slate-300">
+          <li><a href="#servicos" class="hover:text-white">Especialidades</a></li>
+          <li><a href="#sobre" class="hover:text-white">Sobre</a></li>
+          <li><a href="#contato" class="hover:text-white">Contato</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="font-mono text-slate-500 uppercase tracking-widest mb-3">Localização</div>
+        <div class="text-slate-400 leading-relaxed">
+          {client.business.address || `${client.business.city} - ${client.business.state || 'PR'}`}<br />
+          {client.business.phone}
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 gap-4">
+      <div>© {new Date().getFullYear()} {client.business.name}. Todos os direitos reservados.</div>
+      <div>{content?.disclaimer || "Desenvolvido com excelência técnica."}</div>
+    </div>
+  </div>
+</footer>

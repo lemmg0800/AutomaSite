@@ -1,0 +1,70 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    title: string;
+    subtitle?: string;
+    testimonials: Array<{
+      quote: string;
+      author: string;
+      role?: string;
+      avatar?: string;
+      rating?: number;
+    }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const testimonials = content?.testimonials || [
+  { quote: "A atenção aos detalhes e o respeito ao nosso investimento superaram qualquer expectativa. Recomendamos com total segurança.", author: "Eduardo Silveira", role: "Proprietário Residencial", rating: 5 },
+  { quote: "Nossa nova sede corporativa transformou a produtividade do time e encantou nossos parceiros de negócios.", author: "Mariana Albuquerque", role: "Diretora de Operações", rating: 5 },
+  { quote: "Supervisão diária e relatórios claros do início ao fim da obra. Competência ímpar em Curitiba.", author: "Carlos Mendes", role: "Investidor Imobiliário", rating: 5 }
+];
+---
+
+<section class="py-24" style="background-color: var(--color-bg);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      {content.badge && (
+        <span class="text-xs font-mono uppercase tracking-widest block mb-2" style="color: var(--color-accent);">
+          {content.badge}
+        </span>
+      )}
+      <h2 class="text-3xl sm:text-5xl font-bold" style="font-family: var(--font-heading);">
+        {content.title || "Depoimentos Autênticos"}
+      </h2>
+      {content.subtitle && (
+        <p class="text-sm sm:text-base text-slate-300 font-light mt-3">
+          {content.subtitle}
+        </p>
+      )}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {testimonials.map(t => (
+        <div class="p-8 rounded-3xl border border-white/10 bg-white/[0.02] hover:border-white/20 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 mb-6 text-amber-400 text-sm">
+              {"★".repeat(t.rating || 5)}
+            </div>
+            <p class="text-sm text-slate-300 font-light italic leading-relaxed mb-8">
+              "{t.quote}"
+            </p>
+          </div>
+          <div class="pt-6 border-t border-white/5 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style="background-color: var(--color-secondary); color: var(--color-accent);">
+              {t.author.charAt(0)}
+            </div>
+            <div>
+              <div class="text-sm font-bold text-white">{t.author}</div>
+              {t.role && <div class="text-xs text-slate-400">{t.role}</div>}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
