@@ -1,0 +1,28 @@
+---
+import type { ClientConfig } from '../../schema';
+
+interface Props {
+  content?: any;
+  client?: ClientConfig;
+}
+---
+
+<footer class="py-12 bg-[#0E0D0C] text-[#F5F2EB]/60 border-t border-white/10 text-xs">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-3">
+      <img src="/assets/clients/cadas-arquitetura-v2/cadas_logo.png" alt="Cadas Arquitetura" class="h-6 w-auto object-contain filter brightness-0 invert opacity-70" />
+      <span class="text-[11px] text-white/40">&bull; Leblon &bull; Rio de Janeiro</span>
+    </div>
+
+    <div class="flex items-center space-x-6 text-[10px] uppercase tracking-widest text-white/50">
+      <a href="#obras" class="hover:text-white transition-colors">Obras</a>
+      <a href="#atelie" class="hover:text-white transition-colors">Ateliê</a>
+      <a href="#contato" class="hover:text-white transition-colors">Contato</a>
+      <a href="https://cadas.com.br" target="_blank" class="hover:text-white transition-colors">Site Oficial</a>
+    </div>
+
+    <div class="text-[10px] text-white/30 text-center sm:text-right">
+      &copy; {new Date().getFullYear()} Cadas Arquitetura e Interiores Ltda. Todos os direitos reservados.
+    </div>
+  </div>
+</footer>

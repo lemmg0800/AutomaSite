@@ -1,0 +1,68 @@
+---
+import type { ClientConfig } from '../../schema';
+
+interface Props {
+  content?: any;
+  client?: ClientConfig;
+}
+---
+
+<section id="atelie" class="py-24 lg:py-32 bg-[#161513] text-[#F5F2EB] border-b border-white/10 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div class="lg:col-span-5 relative">
+        <div class="rounded-xl overflow-hidden border border-white/15 shadow-2xl relative aspect-[3/4] bg-black/50 group">
+          <img 
+            src="/assets/clients/cadas-arquitetura-v2/perfil.jpg" 
+            alt="Cadas Abranches - Fundador e Diretor Criativo" 
+            class="w-full h-full object-cover object-top filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700" 
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <span class="text-[10px] uppercase tracking-widest text-[#C4A482] block mb-1 font-semibold">Direção Criativa</span>
+            <h4 class="text-xl font-bold text-white" style="font-family: var(--font-heading);">Cadas Abranches</h4>
+            <p class="text-xs text-white/70 font-light mt-1">Mais de três décadas esculpindo a arquitetura de autor brasileira.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 flex flex-col justify-between">
+        <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-[#C4A482] mb-4">
+          <span class="w-1.5 h-1.5 bg-[#C4A482] rounded-full"></span>
+          <span>O Ateliê do Leblon &bull; Rio de Janeiro</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight mb-8" style="font-family: var(--font-heading);">
+          Projetar a partir do vazio, da luz e do diálogo com a paisagem.
+        </h2>
+
+        <div class="space-y-6 text-base text-white/75 font-light leading-relaxed mb-10">
+          <p>
+            No ateliê situado na Avenida Ataulfo de Paiva, no Leblon, cada traço nasce da observação profunda da orientação solar, dos ventos marítimos e da personalidade de quem irá habitar o espaço.
+          </p>
+          <p>
+            A coordenação executiva e de interiores &mdash; liderada por <strong class="text-white font-normal">Cristiana David</strong> e <strong class="text-white font-normal">Joanna Mesquitela</strong> &mdash; assegura que a marcenaria fina, a iluminação cenográfica e o detalhamento construtivo mantenham o rigor milimétrico que consagrou a marca Cadas.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-white/10">
+          <div class="p-4 rounded-lg bg-white/5 border border-white/5">
+            <span class="text-xs text-[#C4A482] font-mono block mb-1">01 &bull; Luz Zenital</span>
+            <span class="text-sm font-semibold text-white">Iluminação Natural</span>
+            <p class="text-xs text-white/60 font-light mt-2">Aberturas estratégicas que esculpem sombras suaves ao longo do dia.</p>
+          </div>
+          <div class="p-4 rounded-lg bg-white/5 border border-white/5">
+            <span class="text-xs text-[#C4A482] font-mono block mb-1">02 &bull; Nobreza</span>
+            <span class="text-sm font-semibold text-white">Madeiras Nativas</span>
+            <p class="text-xs text-white/60 font-light mt-2">Curadoria de freijó, peroba e cumaru com certificação de origem.</p>
+          </div>
+          <div class="p-4 rounded-lg bg-white/5 border border-white/5">
+            <span class="text-xs text-[#C4A482] font-mono block mb-1">03 &bull; Integração</span>
+            <span class="text-sm font-semibold text-white">Biofilia Carioca</span>
+            <p class="text-xs text-white/60 font-light mt-2">Transição perfeita entre a vegetação externa e os ambientes de estar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

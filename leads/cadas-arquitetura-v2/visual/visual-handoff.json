@@ -1,0 +1,10 @@
+{
+  "lead": "cadas-arquitetura-v2",
+  "name": "Cadas Arquitetura",
+  "visualQualityScore": 5,
+  "redesignOpportunityScore": 92,
+  "baseline": {
+    "heroScore": 4.5,
+    "visualQualityScore": 5
+  }
+}

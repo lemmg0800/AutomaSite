@@ -1,0 +1,67 @@
+---
+import type { ClientConfig } from '../../schema';
+
+interface Props {
+  content?: any;
+  client?: ClientConfig;
+}
+---
+
+<section id="contato" class="py-24 lg:py-32 bg-[#121110] text-[#F5F2EB] relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="bg-[#1A1816] rounded-2xl border border-white/10 p-8 sm:p-14 lg:p-20 relative overflow-hidden shadow-2xl">
+      <div class="absolute -right-16 -top-16 w-96 h-96 rounded-full bg-[#C4A482]/5 blur-3xl pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-[#C4A482] mb-4">
+            <span class="w-1.5 h-1.5 bg-[#C4A482] rounded-full"></span>
+            <span>Diálogo Reservado &bull; Ateliê Leblon</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight mb-6" style="font-family: var(--font-heading);">
+            Dê vida ao seu próximo projeto com a assinatura de Cadas Arquitetura.
+          </h2>
+
+          <p class="text-base text-white/70 font-light leading-relaxed mb-8 max-w-xl">
+            Recebemos clientes para reuniões reservadas de alinhamento conceitual e análise de viabilidade de terrenos e imóveis no Rio de Janeiro e no exterior.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <a 
+              href="https://wa.me/5521998772201" 
+              target="_blank" 
+              class="px-8 py-4 rounded-full font-semibold text-xs tracking-widest uppercase text-[#161513] bg-[#C4A482] hover:bg-[#d8bda0] transition-all duration-300 shadow-xl text-center"
+            >
+              Falar Diretamente no WhatsApp
+            </a>
+            <a 
+              href="mailto:cadas@cadas.com.br" 
+              class="px-8 py-4 rounded-full font-semibold text-xs tracking-widest uppercase text-white/80 hover:text-white border border-white/20 hover:border-white/40 transition-all text-center"
+            >
+              cadas@cadas.com.br
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 bg-black/40 rounded-xl p-8 border border-white/10 flex flex-col justify-between space-y-6">
+          <div>
+            <span class="text-[10px] uppercase tracking-widest text-[#C4A482] block mb-1 font-semibold">Endereço Oficial</span>
+            <p class="text-sm font-medium text-white">Av. Ataulfo de Paiva, 1079 &bull; Sala 802</p>
+            <p class="text-xs text-white/60">Leblon &bull; Rio de Janeiro, RJ &bull; CEP 22440-034</p>
+          </div>
+
+          <div class="border-t border-white/10 pt-4">
+            <span class="text-[10px] uppercase tracking-widest text-[#C4A482] block mb-1 font-semibold">Telefone do Escritório</span>
+            <p class="text-sm font-medium text-white">(21) 2523-2449</p>
+          </div>
+
+          <div class="border-t border-white/10 pt-4">
+            <span class="text-[10px] uppercase tracking-widest text-[#C4A482] block mb-1 font-semibold">Coordenação de Projetos &amp; Interiores</span>
+            <p class="text-xs text-white/80">Cristiana David &bull; Joanna Mesquitela</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -22,6 +22,7 @@ const TOP_SLUGS = targetArg ? [targetArg] : DEFAULT_SLUGS;
 // URLs dos sites originais ou espelhos
 const ORIGINAL_URLS = {
   'cadas-arquitetura': 'http://www.cadas.com.br',
+  'cadas-arquitetura-v2': 'http://www.cadas.com.br',
   'bernardes-arquitetura': 'https://bernardesarq.com.br',
   'gisele-taranto-arquitetura': 'https://giseletaranto.com',
   'jacobsen-arquitetura': 'https://jacobsenarquitetura.com',

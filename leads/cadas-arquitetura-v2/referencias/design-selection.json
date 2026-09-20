@@ -1,0 +1,36 @@
+{
+  "client": "Cadas Arquitetura",
+  "slug": "cadas-arquitetura-v2",
+  "selectedDesignSystems": [
+    {
+      "name": "nexus-architecture.aura.build",
+      "path": "D:\\projetos antigravity\\Site automatico\\Design System\\temas_claros\\nexus-architecture.aura.build\\nexus-architecture.aura.build\\design-system.html",
+      "reason": "Tipografia monumental, proporção áurea, grids arquitetônicos de grande escala e espaçamentos nobres.",
+      "useFor": [
+        "hero",
+        "typography",
+        "section-headers"
+      ]
+    },
+    {
+      "name": "elicyon.com",
+      "path": "D:\\projetos antigravity\\Site automatico\\Design System\\temas_claros\\elicyon.com\\elicyon.com\\design-system.html",
+      "reason": "Grid sofisticado de portfólio de interiores de luxo, curadoria de texturas e harmonia de materiais.",
+      "useFor": [
+        "projects-gallery",
+        "composition",
+        "texture-balance"
+      ]
+    },
+    {
+      "name": "architecture-studio.aura.build",
+      "path": "D:\\projetos antigravity\\Site automatico\\Design System\\temas_claros\\architecture-studio.aura.build\\architecture-studio.aura.build\\design-system.html",
+      "reason": "Estrutura contemporânea de ateliê de arquitetura autoral, minimalismo sensorial e acabamentos refinados.",
+      "useFor": [
+        "studio-profile",
+        "services-matrix",
+        "contrast-ratios"
+      ]
+    }
+  ]
+}
