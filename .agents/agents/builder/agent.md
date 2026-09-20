@@ -48,18 +48,83 @@ $$\text{ART-DIRECTION.JSON} + \text{SITE-ATUAL.MD} + \text{ASSETS REAIS} + \text
    ↓
 4. Resgatar Assets Reais (logos, fotos de equipe/fachada em referencias/site-baixado/)
    ↓
-5. Estruturar Configuração Astro (src/clients/data/<slug>.ts 100% aderente ao Zod)
+5. Seleção Semântica de Componentes (consultar component-registry.json / selector.ts)
    ↓
-6. Prioridade Máxima na 1ª Dobra (Hero com animações, glow, badges de autoridade)
+6. Estruturar Configuração Astro (src/clients/data/<slug>.ts 100% aderente ao Zod)
    ↓
-7. Diversificar Variantes de Seções (Hero01-04, Stats01, Credentials01, Process01, FAQ01)
+7. Prioridade Máxima na 1ª Dobra (Hero com animações, glow, badges de autoridade)
    ↓
-8. Customização Avançada se Necessário (npm run client:eject -- --client <slug>)
+8. Diversificar Variantes de Seções (Hero01-11, Bento01-12, Features01-08, Showcase01-06, etc.)
    ↓
-9. Validação Técnica Local (Zod Schema e integridade)
+9. Customização Avançada se Necessário (npm run client:eject -- --client <slug>)
    ↓
-10. Passagem de Bastão para o Handoff Comercial
+10. Validação Técnica Local (Zod Schema e integridade)
+   ↓
+11. Passagem de Bastão para o Handoff Comercial
 ```
+
+---
+
+## 3. Diretriz Mandatória: Seleção Semântica de Componentes (Design System Registry)
+
+> ⚠️ **REGRA ANTI-CLONE:**  
+> O Platform Builder **NUNCA DEVE REPETIR O MESMO COMPONENTE OU LAYOUT PADRÃO** (ex: `Hero01` para todos os clientes).  
+> Antes de escrever ou alterar `src/clients/data/<slug>.ts`, o Builder **DEVE OBRIGATORIAMENTE** consultar o catálogo de 100 componentes em `src/components/component-registry.json` ou executar o seletor inteligente para escolher as variantes que melhor expressam o nicho, a maturidade e a vibe visual do cliente.
+
+### 🔍 Consulta Programática pelo Agente
+
+O Builder pode consultar o seletor diretamente via TypeScript ou CLI:
+
+**Opção A — Via CLI (Terminal):**
+```bash
+# Obter recomendação completa de arquitetura de página:
+npx tsx scripts/select-layout.ts --niche "arquitetura" --vibe "luxury-minimal" --portfolio true
+
+# Consultar variantes específicas para uma seção:
+npx tsx scripts/select-layout.ts --section hero --niche "odontologia" --vibe "clean-corporate" --limit 3
+```
+
+**Opção B — Programático via TypeScript:**
+```typescript
+import { queryComponents, recommendFullPageLayout } from './src/components/selector';
+
+// Selecionar o melhor Hero para arquitetura de luxo:
+const matches = queryComponents({
+  section: 'hero',
+  niche: 'arquitetura',
+  vibe: 'luxury-minimal',
+  limit: 1
+});
+// -> Seleciona 'hero/Hero04' (150 pts: ambient glow, 3D tilt, fotos reais, métricas mono)
+
+// Ou gerar a espinha dorsal completa da página:
+const fullLayout = recommendFullPageLayout({
+  niche: 'arquitetura',
+  vibe: 'luxury-minimal',
+  hasPortfolioProjects: true
+});
+```
+
+### 🎯 Matriz de Decisão Rápida do Builder
+
+1. **Primeira Dobra (Hero):**
+   - **Imagens de alto padrão / sede / obras:** use `hero/Hero04` (Showcase 3D com fotos reais e ambient glow) ou `hero/Hero05` / `hero/Hero11`.
+   - **Autoridade médica ou jurídica:** use `hero/Hero01` (Trust points + tipografia display) ou `hero/Hero07` (Split Visual).
+   - **Negócio local de conversão direta:** use `hero/Hero03` (Painel com endereço físico e fones) ou `hero/Hero08` (Radial Beam Social Proof).
+   - **Startups e Tecnologia:** use `hero/Hero06` (Minimal Tech Grid) ou `hero/Hero10` (App Showcase Perspective).
+2. **Serviços, Destaques e Bento:**
+   - **Tecnologia, construtoras e luxo:** `services/Services03` ou `bento/Bento01` / `bento/Bento07` / `bento/Bento11`.
+   - **Múltiplos procedimentos com conversão direta:** `services/Services01` (Cards interativos + WhatsApp individual).
+   - **Advocacia e consultoria executiva:** `services/Services02` (Monocromático editorial) ou `bento/Bento08` / `bento/Bento12`.
+   - **Portfólio / Vitrine de Cases:** `projects/Showcase01` a `Showcase06`.
+3. **Prova Social & Depoimentos:**
+   - **Clínicas e B2B:** `testimonials/SocialProof01` (Quote Grid com Avatars) ou `SocialProof04` (Compact Trust Columns).
+   - **Serviços rápidos e locais:** `testimonials/SocialProof02` (Star Badge Minimalist).
+   - **Grandes marcas e franquias:** `testimonials/SocialProof05` (Press & Brand Endorsement).
+4. **Backgrounds e Efeitos:**
+   - Configure `theme.backgroundEffect`: `'mesh'` para luxo/orgânico, `'dots'` para precisão/tech, `'prism'` para agências criativas.
+   - Ative `theme.enableParallax: true` para revelações fluidas e profundidade nos cards.
+   - Adicione efeitos de destaque como `effects/DepthCard`, `effects/BendingMarquee` ou `effects/ParallaxPills` quando agregarem alto valor estético.
 
 ---
 

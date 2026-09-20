@@ -1,4 +1,4 @@
-﻿import fs from 'fs';
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -61,6 +61,64 @@ if (lead.email) businessObj.email = lead.email;
 if (lead.google_rating) businessObj.googleRating = lead.google_rating;
 if (lead.instagram) businessObj.instagram = lead.instagram;
 
+// 4. Seleção Semântica e Anti-Clone de Variantes com base no Nicho
+const n = (businessObj.niche || '').toLowerCase();
+const isArchitectureOrLuxury = n.includes('arquit') || n.includes('decor') || n.includes('interiores') || n.includes('engenharia') || n.includes('luxo');
+const isHealthOrDental = n.includes('med') || n.includes('saude') || n.includes('odonto') || n.includes('dent') || n.includes('clinic') || n.includes('estetica');
+const isLawOrFinance = n.includes('advoc') || n.includes('jurid') || n.includes('direito') || n.includes('contab') || n.includes('finan') || n.includes('consult');
+
+let headerVariant = 'Header01';
+let heroVariant = 'Hero01';
+let servicesVariant = 'Services01';
+let benefitsVariant = 'Benefits01';
+let testimonialsVariant = 'Testimonials01';
+let contactVariant = 'Contact01';
+let ctaVariant = 'CTA01';
+let footerVariant = 'Footer01';
+let backgroundEffect = 'mesh';
+
+if (isArchitectureOrLuxury) {
+  headerVariant = 'Header05';
+  heroVariant = 'Hero04'; // Showcase 3D com foto real, stats mono e ambient glow
+  servicesVariant = 'Services03';
+  benefitsVariant = 'Features04';
+  testimonialsVariant = 'SocialProof04';
+  contactVariant = 'Contact02';
+  ctaVariant = 'CTA03';
+  footerVariant = 'Footer04';
+  backgroundEffect = 'mesh';
+} else if (isHealthOrDental) {
+  headerVariant = 'Header01';
+  heroVariant = 'Hero07';
+  servicesVariant = 'Services01';
+  benefitsVariant = 'Features01';
+  testimonialsVariant = 'SocialProof01';
+  contactVariant = 'Contact01';
+  ctaVariant = 'CTA05';
+  footerVariant = 'Footer06';
+  backgroundEffect = 'mesh';
+} else if (isLawOrFinance) {
+  headerVariant = 'Header03';
+  heroVariant = 'Hero01';
+  servicesVariant = 'Services02';
+  benefitsVariant = 'Features02';
+  testimonialsVariant = 'SocialProof04';
+  contactVariant = 'Contact04';
+  ctaVariant = 'CTA04';
+  footerVariant = 'Footer02';
+  backgroundEffect = 'dots';
+} else {
+  headerVariant = 'Header02';
+  heroVariant = 'Hero03';
+  servicesVariant = 'Services01';
+  benefitsVariant = 'Features03';
+  testimonialsVariant = 'SocialProof02';
+  contactVariant = 'Contact03';
+  ctaVariant = 'CTA02';
+  footerVariant = 'Footer01';
+  backgroundEffect = 'none';
+}
+
 const template = `import type { ClientConfig } from '../schema';
 
 const client: ClientConfig = {
@@ -80,7 +138,9 @@ const client: ClientConfig = {
     headingFont: "${headingFont}",
     bodyFont: "${bodyFont}",
     borderRadius: "md",
-    mode: "dark"
+    mode: "dark",
+    backgroundEffect: "${backgroundEffect}",
+    enableParallax: true
   },
 
   pages: [
@@ -88,13 +148,13 @@ const client: ClientConfig = {
       path: "",
       seo: {
         title: "${lead.name} | ${businessObj.niche} em ${businessObj.city}",
-        description: "Assessoria e serviços especializados com alto padrão ético e excelência técnica em ${businessObj.city}."
+        description: "Excelência e inovação em ${businessObj.niche} em ${businessObj.city}."
       },
       sections: [
         {
           id: "header-main",
           type: "header",
-          variant: "Header01",
+          variant: "${headerVariant}",
           content: {
             navLinks: [
               { label: "Início", href: "#" },
@@ -109,42 +169,42 @@ const client: ClientConfig = {
         {
           id: "hero-main",
           type: "hero",
-          variant: "Hero01",
+          variant: "${heroVariant}",
           content: {
             badge: "${businessObj.niche} de Alta Performance",
-            headline: "Defesa Estratégica e Segurança Jurídica para seus Interesses",
-            subheadline: "Atuação personalizada e combativa em ${businessObj.city}, com foco em resultados concretos e atendimento ágil.",
+            headline: "Excelência Técnica e Resultados Concretos para Você",
+            subheadline: "Atuação personalizada e de alto padrão em ${businessObj.city}, com foco em agilidade, segurança e satisfação total.",
             primaryCtaLabel: "Falar no WhatsApp",
             primaryCtaHref: "${lead.whatsapp ? 'https://wa.me/55' + lead.whatsapp.replace(/[^0-9]/g, '') : '#contato'}",
-            secondaryCtaLabel: "Conhecer Especialidades",
+            secondaryCtaLabel: "Conhecer Soluções",
             secondaryCtaHref: "#servicos"
           }
         },
         {
           id: "benefits-main",
           type: "benefits",
-          variant: "Benefits01",
+          variant: "${benefitsVariant}",
           content: {
             title: "Por que nos escolher",
             subtitle: "Diferenciais que garantem solidez e tranquilidade aos nossos clientes.",
             benefits: [
-              { title: "Atendimento Consultivo Direto", description: "Comunicação transparente e ágil sem intermediários.", icon: "shield" },
-              { title: "Especialização Técnica Comprovada", description: "Atuação rigorosa nas áreas mais complexas do direito.", icon: "award" },
-              { title: "Disponibilidade e Agilidade", description: "Respostas rápidas para situações urgentes e estratégicas.", icon: "clock" }
+              { title: "Atendimento Personalizado", description: "Comunicação transparente e ágil sem intermediários.", icon: "shield" },
+              { title: "Especialização Comprovada", description: "Metodologia refinada e foco absoluto em excelência.", icon: "award" },
+              { title: "Agilidade & Pontualidade", description: "Compromisso com prazos e entregas impecáveis.", icon: "clock" }
             ]
           }
         },
         {
           id: "services-main",
           type: "services",
-          variant: "Services01",
+          variant: "${servicesVariant}",
           content: {
-            title: "Áreas de Atuação",
-            subtitle: "Soluções jurídicas sob medida para pessoas físicas e empresas.",
+            title: "Soluções & Especialidades",
+            subtitle: "Serviços sob medida para atender às suas necessidades com máxima precisão.",
             services: [
-              { title: "Direito Imobiliário & Contratos", description: "Auditoria, regularização de imóveis, holding familiar e contratos imobiliários de alto padrão." },
-              { title: "Planejamento Sucessório & Família", description: "Estruturação patrimonial preventiva, inventários e proteção sucessória com segurança." },
-              { title: "Direito Empresarial & Estratégico", description: "Consultoria preventiva para blindagem de negócios e assessoria jurídica corporativa." }
+              { title: "Consultoria Especializada", description: "Diagnóstico aprofundado e planejamento sob medida para o seu caso." },
+              { title: "Execução & Acompanhamento", description: "Processo estruturado com controle rigoroso de qualidade em cada etapa." },
+              { title: "Suporte Estratégico", description: "Disponibilidade para tirar dúvidas e orientar decisões com segurança." }
             ]
           }
         },
@@ -154,11 +214,23 @@ const client: ClientConfig = {
           variant: "About01",
           content: {
             badge: "Nossa Trajetória",
-            title: "Compromisso Ético e Tradição em ${businessObj.city}",
-            description: "Com atuação sólida e reconhecida, o escritório alia experiência técnica a uma visão moderna do direito para oferecer soluções assertivas.",
+            title: "Compromisso com a Excelência em ${businessObj.city}",
+            description: "Com atuação sólida e reconhecida, aliamos conhecimento prático e atendimento humanizado para entregar resultados memoráveis.",
             stats: [
               { number: "100%", label: "Foco no Cliente" },
               { number: "Ágil", label: "Comunicação Direta" }
+            ]
+          }
+        },
+        {
+          id: "testimonials-main",
+          type: "testimonials",
+          variant: "${testimonialsVariant}",
+          content: {
+            title: "O Que Nossos Clientes Dizem",
+            subtitle: "Depoimentos reais de quem confia em nosso trabalho.",
+            testimonials: [
+              { author: "Cliente Verificado", role: "Atendimento Exclusivo", quote: "Profissionalismo impecável e atendimento ágil do início ao fim. Recomendo com total certeza." }
             ]
           }
         },
@@ -169,25 +241,36 @@ const client: ClientConfig = {
           content: {
             title: "Dúvidas Frequentes",
             items: [
-              { question: "Como funciona a primeira consulta?", answer: "Realizamos uma análise preliminar detalhada da sua situação para apresentar o melhor diagnóstico e plano de ação." },
-              { question: "O escritório atende fora de ${businessObj.city}?", answer: "Sim, atuamos de forma híbrida e digital em todo o estado de Santa Catarina e demais regiões." }
+              { question: "Como funciona o primeiro contato?", answer: "Realizamos uma conversa preliminar para entender em detalhes suas necessidades e propor a solução ideal." },
+              { question: "Qual é o prazo médio de atendimento?", answer: "Nosso retorno é ágil e priorizamos responder prontamente todas as solicitações." }
             ]
           }
         },
         {
           id: "contact-main",
           type: "contact",
-          variant: "Contact01",
+          variant: "${contactVariant}",
           content: {
             title: "Inicie seu Atendimento",
-            subtitle: "Entre em contato diretamente com nossa equipe especializada para agendar uma reunião.",
+            subtitle: "Entre em contato diretamente com nossa equipe para agendar um horário.",
             formCta: "Enviar Mensagem"
+          }
+        },
+        {
+          id: "cta-main",
+          type: "cta",
+          variant: "${ctaVariant}",
+          content: {
+            title: "Pronto para dar o próximo passo?",
+            subtitle: "Fale conosco agora mesmo e receba um diagnóstico exclusivo.",
+            buttonText: "Falar com Especialista",
+            buttonHref: "${lead.whatsapp ? 'https://wa.me/55' + lead.whatsapp.replace(/[^0-9]/g, '') : '#contato'}"
           }
         },
         {
           id: "footer-main",
           type: "footer",
-          variant: "Footer01",
+          variant: "${footerVariant}",
           content: {}
         }
       ]

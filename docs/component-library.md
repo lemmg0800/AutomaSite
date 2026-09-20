@@ -1,61 +1,30 @@
-# Catálogo da Biblioteca de Componentes
+# Catálogo da Biblioteca de Componentes (100 Componentes Ativos)
 
 Localização dos Componentes: `src/components/`  
 Manifesto Semântico Automatizado: [`src/components/component-registry.json`](file:///D:/projetos%20antigravity/Site%20automatico/src/components/component-registry.json)  
 Guia do Seletor Inteligente para IA: [`docs/BUILDER_COMPONENT_SELECTION.md`](file:///D:/projetos%20antigravity/Site%20automatico/docs/BUILDER_COMPONENT_SELECTION.md)
 
-Para atualizar a indexação automática dos componentes, execute:
+Para atualizar a indexação automática dos componentes a qualquer momento, execute:
 ```bash
 npm run components:index
 ```
 
 ---
 
-## Índice Rápido de Componentes (31 Componentes Ativos)
+## Distribuição de Componentes por Categoria (Total: 100)
 
-### 1. Cabeçalhos (Header)
-- `Header01`: Minimalista Glassmorphic (Logo à esquerda, links centrais, CTA).
-- `Header02`: Corporativo Duplo (Top utility bar com localização/anúncios + navegação principal).
-
-### 2. Primeira Dobra (Hero)
-- `Hero01`: Editorial de Autoridade (Checklist de trust points, tipografia display e duplo CTA).
-- `Hero02`: Direto Centralizado (Badge pulsante, foco imediato em conversão).
-- `Hero03`: Foco em Estabelecimento Físico (Painel de contato com endereço e telefones integrados).
-- `Hero04`: **Flagship Showcase 3D** (Orbe de luz ambiente, tilt card 3D com foto autêntica, grade de métricas e badge flutuante).
-
-### 3. Serviços e Produtos
-- `Services01`: Bento Grid de Serviços com CTA individual para WhatsApp por procedimento.
-- `Services02`: Lista Editorial Monocromática com foco em profundidade técnica e leitura serena.
-- `Services03`: Bento Grid Contemporâneo com suporte a cartões destacados (`featured`).
-- `Products01`: Vitrine de Produtos/Planos com precificação e conversão sob consulta.
-
-### 4. Portfólio e Espaço Físico
-- `Projects01`: Galeria Curada de Projetos e Obras com tags em fonte monospace.
-- `Gallery01`: Mosaico Fotográfico de Ambientes e Procedimentos.
-
-### 5. Autoridade e Estrutura
-- `About01`: Narrativa Editorial de Tradição e Marcos Históricos.
-- `Team01`: Grade de Especialistas com titulações e bio técnica.
-- `Benefits01`: Proposta de Valor e Vantagens Competitivas com ícones demarcados.
-- `Process01`: Jornada Metodológica Passo a Passo (Etapa 01 -> 02 -> 03).
-- `Stats01`: Faixa de Métricas Numéricas de Alto Impacto.
-- `Credentials01`: Fita Contínua de Selos Regulatórios (OAB, CRM, CREA, ISO).
-
-### 6. Prova Social e Conversão
-- `Testimonials01`: Cartões de Depoimentos com Aspas e Identificação do Autor.
-- `FAQ01`: Acordeão Limpo Anti-Objeção.
-- `Contact01`: Hub de Contato Multicanal (WhatsApp, Telefone, E-mail, Formulário).
-- `Map01`: Âncora de Localização Física em Formato Panorâmico 21/9.
-- `CTA01`: Fechamento Decisivo de Fim de Página com Alto Contraste.
-
-### 7. Rodapés (Footer)
-- `Footer01`: Minimalista com Direitos Reservados e Disclaimer.
-- `Footer02`: Corporativo Institucional com Dados Regulatórios (OAB/CRM/CNPJ).
-
-### 8. Atmosfera e Efeitos Especiais
-- `backgrounds/DotMatrixBackground`: Malha de Pontos de Precisão (High-Tech).
-- `backgrounds/MeshGradientBackground`: Orbes Luminosos Difusos (Luxo e Conforto Visual).
-- `backgrounds/PrismBackground`: Dispersão Cromática Reativa em Canvas.
-- `effects/CustomCursor`: Cursor Magnético com Halo de Brilho.
-- `effects/ParallaxScroll`: Revelação em Cascata e Motor 3D Tilt nos Cartões.
-- `ui/FloatingWhatsApp`: Botão Flutuante Permanente com Mensagem Contextualizada.
+| Categoria | Quantidade | Destaques e Variantes |
+| :--- | :--- | :--- |
+| **Header** | 14 | `Header01` a `Header14` (Glass, Utility, Minimal, Floating, Split, Editorial) |
+| **Hero** | 11 | `Hero01` a `Hero11` (Authority, Direct, Showcase 3D, Glow Centered, Split Bento) |
+| **Bento Modules** | 12 | `Bento01` a `Bento12` (Módulos modernos de grade com cards interativos) |
+| **Features & Benefits** | 9 | `Benefits01`, `Features01` a `Features08` |
+| **Services** | 3 | `Services01` a `Services03` (Bento com flagship, editorial e cards de ação) |
+| **Projects & Showcase**| 7 | `Projects01`, `Showcase01` a `Showcase06` (Portfólios curados e grades imersivas) |
+| **Social Proof & Reviews** | 7 | `Testimonials01`, `SocialProof01` a `SocialProof05`, `Credentials01` |
+| **CTA (Conversão)** | 7 | `CTA01` a `CTA07` (Glow, Split, Brutalist, High-Contrast) |
+| **Contact** | 4 | `Contact01` a `Contact04` (Hub multicanal, formulários, split de agendamento) |
+| **Footer** | 8 | `Footer01` a `Footer08` (Minimalista, corporativo OAB/CRM, multi-colunas) |
+| **Backgrounds** | 3 | `DotMatrixBackground`, `MeshGradientBackground`, `PrismBackground` |
+| **Effects** | 6 | `CustomCursor`, `ParallaxScroll`, `DepthCard`, `BendingMarquee`, `FrameBorder`, `ParallaxPills` |
+| **Outros Módulos** | 5 | `About01`, `Team01`, `Process01`, `Stats01`, `FAQ01`, `Map01`, `Products01`, `Gallery01`, `FloatingWhatsApp` |

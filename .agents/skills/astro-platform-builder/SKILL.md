@@ -24,15 +24,17 @@ Esta skill orquestra todo o processo de transformação de um lead qualificado p
    ↓
 7. Consultar Design Systems Existentes (design-reference-selector) -> Design System/ + catalog.json
    ↓
-8. Criar Redesign (src/clients/data/[slug].ts + Biblioteca de Componentes Astro)
+8. Seleção Semântica de Componentes (selector.ts / component-registry.json)
    ↓
-9. Prioridade Absoluta na 1ª Dobra (Hero com imagens reais do cliente, animações, botões táteis, glow, backgrounds ambientais)
+9. Criar Redesign (src/clients/data/[slug].ts + 100 Componentes Astro Catalogados)
    ↓
-10. Validação Técnica (Zod schema, Astro build, testes responsivos)
+10. Prioridade Absoluta na 1ª Dobra (Hero com imagens reais do cliente, animações, botões táteis, glow, backgrounds ambientais)
    ↓
-11. Screenshots & Comparativo Antes x Depois (para o Agente 3 — Comercial)
+11. Validação Técnica (Zod schema, Astro build, testes responsivos)
    ↓
-12. Handoff Comercial (builder-handoff.json)
+12. Screenshots & Comparativo Antes x Depois (para o Agente 3 — Comercial)
+   ↓
+13. Handoff Comercial (builder-handoff.json)
 ```
 
 ---
@@ -55,7 +57,11 @@ Esta skill orquestra todo o processo de transformação de um lead qualificado p
   ```bash
   python .agents/skills/design-reference-selector/scripts/select_design_reference.py --nicho "nicho" --slug "cliente-slug"
   ```
-- **5. Scaffold da Configuração Astro:**
+- **5. Seleção Semântica e Recomendação de Layout (Anti-Clone):**
+  ```bash
+  npx tsx scripts/select-layout.ts --niche "[NICHO]" --vibe "[VIBE]" --portfolio [true|false]
+  ```
+- **6. Scaffold da Configuração Astro:**
   ```bash
   node .agents/skills/astro-platform-builder/scripts/scaffold_client_config.js [cliente-slug]
   ```
