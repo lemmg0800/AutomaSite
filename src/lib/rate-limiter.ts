@@ -3,6 +3,8 @@
  * Protege endpoints sensíveis (Login, Reset de Senha, Modificação de Leads) contra ataques de força bruta e abuso.
  */
 
+import { hashSensitiveData } from './crypto';
+
 interface RateLimitRecord {
   count: number;
   resetAt: number;
@@ -24,6 +26,8 @@ export interface RateLimitResult {
 
 /**
  * Verifica e contabiliza a taxa de requisições por identificador (IP ou usuário).
+ * O identificador bruto (ex.: IP) é imediatamente pseudonimizado com SHA-256 e salt,
+ * garantindo que nenhum IP pessoal em texto claro seja armazenado em memória (LGPD/GDPR).
  */
 export function checkRateLimit(
   namespace: string,
@@ -31,6 +35,8 @@ export function checkRateLimit(
   options: RateLimitOptions
 ): RateLimitResult {
   const now = Date.now();
+  const secureKey = hashSensitiveData(identifier);
+
   let store = stores.get(namespace);
   if (!store) {
     store = new Map<string, RateLimitRecord>();
@@ -46,12 +52,12 @@ export function checkRateLimit(
     }
   }
 
-  const record = store.get(identifier);
+  const record = store.get(secureKey);
 
   // Se não existir ou a janela expirou, inicia novo ciclo
   if (!record || record.resetAt <= now) {
     const resetAt = now + options.windowMs;
-    store.set(identifier, { count: 1, resetAt });
+    store.set(secureKey, { count: 1, resetAt });
     return {
       allowed: true,
       remaining: options.maxRequests - 1,
@@ -86,7 +92,7 @@ export function checkRateLimit(
 export function resetRateLimit(namespace: string, identifier: string): void {
   const store = stores.get(namespace);
   if (store) {
-    store.delete(identifier);
+    store.delete(hashSensitiveData(identifier));
   }
 }
 

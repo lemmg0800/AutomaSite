@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { getAllClients } from '../clients/registry';
+import { decryptObject, decryptData } from './crypto';
 
 export interface LeadDossier {
   slug: string;
@@ -105,7 +106,8 @@ export function formatDossierForDashboard(d: LeadDossier) {
   const biz = lj.business || lj.empresa || {};
   const ps = d.pagespeedJson || {};
   const bh = d.builderHandoff || {};
-  const contacts = lj.contatos || {};
+  const decryptedContacts = lj.contacts_encrypted ? decryptObject(lj.contacts_encrypted, {}) : {};
+  const contacts = { ...(lj.contatos || {}), ...decryptedContacts };
 
   // Parse email subject and body if available
   let emailSubject = 'Apresentação de Redesign Institucional';

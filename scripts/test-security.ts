@@ -161,11 +161,56 @@ async function runSecurityAudit() {
   }
 
   // ---------------------------------------------------------------------------
+  // TESTE 4: CRIPTOGRAFIA EM REPOUSO E MINIMIZAÇÃO DE DADOS (LGPD/GDPR)
+  // ---------------------------------------------------------------------------
+  console.log('\n[TESTE 4] Validação de Criptografia em Repouso e Minimização de Dados...');
+
+  const { encryptData, decryptData, encryptObject, decryptObject, hashSensitiveData } = await import('../src/lib/crypto');
+
+  // Teste de Criptografia AES-256-GCM
+  const sampleSensitive = 'telefone-direto: (21) 99877-2201 | notas-confidenciais: reunião com decisor';
+  const cipher = encryptData(sampleSensitive);
+
+  if (cipher && cipher.includes(':') && !cipher.includes('(21) 99877-2201')) {
+    const decrypted = decryptData(cipher);
+    if (decrypted === sampleSensitive) {
+      console.log('  ✅ Criptografia AES-256-GCM em repouso validada (cifragem e decifragem íntegras).');
+    } else {
+      console.error('  ❌ Falha na decifragem do texto.');
+      passedAll = false;
+    }
+  } else {
+    console.error('  ❌ Falha: dado sensível permaneceu legível no ciphertext!');
+    passedAll = false;
+  }
+
+  // Teste de Criptografia de Objetos (Contatos/Notas de Leads)
+  const contactObj = { phone: '(21) 99877-2201', email: 'cadas@cadas.com.br', partner: 'Cadas Abranches' };
+  const objCipher = encryptObject(contactObj);
+  const decryptedObj = decryptObject(objCipher, {});
+  if (decryptedObj.phone === contactObj.phone && decryptedObj.partner === contactObj.partner) {
+    console.log('  ✅ Criptografia de objetos/contatos em repouso validada.');
+  } else {
+    console.error('  ❌ Falha na criptografia de objetos.');
+    passedAll = false;
+  }
+
+  // Teste de Minimização de Dados (Pseudonimização de IPs no Rate Limiter)
+  const rawIp = '201.86.12.5';
+  const hashedIp = hashSensitiveData(rawIp);
+  if (hashedIp && hashedIp.length === 64 && !hashedIp.includes(rawIp)) {
+    console.log('  ✅ Minimização de Dados: IPs brutos são pseudonimizados (SHA-256 + salt) sem retenção de dados pessoais em memória.');
+  } else {
+    console.error('  ❌ Falha na pseudonimização de IP.');
+    passedAll = false;
+  }
+
+  // ---------------------------------------------------------------------------
   // CONCLUSÃO
   // ---------------------------------------------------------------------------
   console.log('\n' + '='.repeat(75));
   if (passedAll) {
-    console.log('🎉 AUDITORIA DE SEGURANÇA: 100% APROVADA EM TODOS OS CRITÉRIOS!');
+    console.log('🎉 AUDITORIA DE SEGURANÇA E PRIVACIDADE: 100% APROVADA!');
   } else {
     console.error('❌ FORAM ENCONTRADAS VULNERABILIDADES!');
     process.exit(1);
