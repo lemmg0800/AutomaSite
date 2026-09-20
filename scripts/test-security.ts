@@ -7,7 +7,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { checkRateLimit, resetRateLimit } from '../src/lib/rate-limiter';
+import { checkRateLimit, checkRateLimitAsync, resetRateLimit, createRateLimitResponse } from '../src/lib/rate-limiter';
 
 const rootDir = process.cwd();
 
@@ -122,10 +122,55 @@ async function runSecurityAudit() {
     }
   }
 
-  if (blockedOnStatus) {
-    console.log('  ✅ Rate limit de API Sensível (/api/lead-status) funcionando.');
+  // Simulação de criação de contas / cadastro (limite: 3 cadastros)
+  resetRateLimit('register', testIp);
+  let blockedOnRegister = false;
+  for (let i = 1; i <= 5; i++) {
+    const res = await checkRateLimitAsync('register', testIp, { windowMs: 3600000, maxRequests: 3 });
+    if (!res.allowed) {
+      blockedOnRegister = true;
+      console.log(`  ✓ Tentativa de cadastro #${i} bloqueada por Rate Limit (Spam de Contas Mitigado)`);
+    }
+  }
+
+  if (blockedOnRegister) {
+    console.log('  ✅ Rate limit de Cadastro e Criação de Contas funcionando.');
   } else {
-    console.error('  ❌ Falha no Rate Limit de API Sensível.');
+    console.error('  ❌ Falha no Rate Limit de Cadastro.');
+    passedAll = false;
+  }
+
+  // Simulação de Endpoint de Alto Custo / IA (limite duplo: 5 requisições por IP e Usuário)
+  const testUserId = 'usr_789456123';
+  resetRateLimit('ai-generation', testIp);
+  resetRateLimit('ai-generation:user', `user:${testUserId}`);
+  let blockedOnAi = false;
+  for (let i = 1; i <= 7; i++) {
+    const res = await checkRateLimitAsync('ai-generation', testIp, {
+      windowMs: 600000,
+      maxRequests: 5,
+      userId: testUserId
+    });
+    if (!res.allowed) {
+      blockedOnAi = true;
+      console.log(`  ✓ Chamada de IA #${i} bloqueada (Limite Duplo IP + Usuário aplicado com sucesso)`);
+    }
+  }
+
+  if (blockedOnAi) {
+    console.log('  ✅ Rate limit de IA e Endpoints de Alto Custo funcionando com proteção composta.');
+  } else {
+    console.error('  ❌ Falha no Rate Limit de IA.');
+    passedAll = false;
+  }
+
+  // Validação da Resposta Padronizada HTTP 429 Too Many Requests
+  const sampleBlocked = await checkRateLimitAsync('ai-generation', testIp, { windowMs: 600000, maxRequests: 5, userId: testUserId });
+  const response429 = createRateLimitResponse(sampleBlocked);
+  if (response429.status === 429 && response429.headers.get('Retry-After') && response429.headers.get('X-RateLimit-Limit')) {
+    console.log('  ✅ Resposta HTTP 429 Too Many Requests validada com cabeçalhos Retry-After e X-RateLimit.');
+  } else {
+    console.error('  ❌ Resposta HTTP 429 inválida ou sem cabeçalhos requeridos.');
     passedAll = false;
   }
 

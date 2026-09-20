@@ -2,30 +2,21 @@ export const prerender = false;
 
 import type { APIRoute } from 'astro';
 import { getSupabaseServerClient } from '../../../lib/supabase';
-import { checkRateLimit, getClientIp } from '../../../lib/rate-limiter';
+import { checkRateLimitAsync, createRateLimitResponse, getClientIp } from '../../../lib/rate-limiter';
 
 export const POST: APIRoute = async ({ request, cookies }) => {
   const ip = getClientIp(request);
 
   // Rate limiting estrito para recuperação de senha (Máximo de 3 solicitações a cada 15 minutos por IP)
-  const rateLimit = checkRateLimit('password-recovery', ip, {
+  const rateLimit = await checkRateLimitAsync('password-recovery', ip, {
     windowMs: 15 * 60 * 1000,
     maxRequests: 3
   });
 
   if (!rateLimit.allowed) {
-    return new Response(
-      JSON.stringify({ 
-        error: 'Muitas solicitações de recuperação de senha. Tente novamente mais tarde.',
-        retryAfter: rateLimit.retryAfterSeconds 
-      }), 
-      {
-        status: 429,
-        headers: { 
-          'Content-Type': 'application/json',
-          'Retry-After': rateLimit.retryAfterSeconds.toString()
-        }
-      }
+    return createRateLimitResponse(
+      rateLimit,
+      'Muitas solicitações de recuperação de senha a partir deste IP. Aguarde antes de tentar novamente.'
     );
   }
 

@@ -2,36 +2,15 @@ import type { APIRoute } from 'astro';
 import fs from 'fs';
 import path from 'path';
 import { getSupabaseServerClient } from '../../lib/supabase';
-import { checkRateLimit, getClientIp } from '../../lib/rate-limiter';
+import { checkRateLimitAsync, createRateLimitResponse, getClientIp } from '../../lib/rate-limiter';
 
 export const prerender = false;
 
 export const POST: APIRoute = async ({ request, cookies }) => {
   const ip = getClientIp(request);
 
-  // 1. Rate Limiting na API sensível de status (Máximo de 30 atualizações por minuto por IP)
-  const rateLimit = checkRateLimit('lead-status', ip, {
-    windowMs: 60 * 1000,
-    maxRequests: 30
-  });
-
-  if (!rateLimit.allowed) {
-    return new Response(
-      JSON.stringify({ 
-        error: 'Limite de requisições excedido. Tente novamente em alguns segundos.',
-        retryAfter: rateLimit.retryAfterSeconds 
-      }), 
-      {
-        status: 429,
-        headers: { 
-          'Content-Type': 'application/json',
-          'Retry-After': rateLimit.retryAfterSeconds.toString()
-        }
-      }
-    );
-  }
-
-  // 2. Validação Server-Side Obrigatória de Sessão
+  // 1. Validação Server-Side Obrigatória de Sessão
+  let userId = '';
   try {
     const supabase = getSupabaseServerClient(cookies, request);
     const { data: { user }, error: authError } = await supabase.auth.getUser();
@@ -45,6 +24,7 @@ export const POST: APIRoute = async ({ request, cookies }) => {
         }
       );
     }
+    userId = user.id;
   } catch (err) {
     return new Response(
       JSON.stringify({ error: 'Erro de validação de autenticação.' }), 
@@ -52,6 +32,20 @@ export const POST: APIRoute = async ({ request, cookies }) => {
         status: 401,
         headers: { 'Content-Type': 'application/json' }
       }
+    );
+  }
+
+  // 2. Rate Limiting Duplo na API de Modificação de Dados (Máximo de 30 atualizações por minuto por IP e Usuário)
+  const rateLimit = await checkRateLimitAsync('lead-status', ip, {
+    windowMs: 60 * 1000,
+    maxRequests: 30,
+    userId
+  });
+
+  if (!rateLimit.allowed) {
+    return createRateLimitResponse(
+      rateLimit,
+      'Limite de atualizações de status excedido. Aguarde alguns instantes.'
     );
   }
 

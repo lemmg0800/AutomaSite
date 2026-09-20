@@ -1,6 +1,10 @@
 /**
- * SISTEMA DE RATE LIMITING EM MEMÓRIA
- * Protege endpoints sensíveis (Login, Reset de Senha, Modificação de Leads) contra ataques de força bruta e abuso.
+ * SISTEMA AVANÇADO DE RATE LIMITING E PROTEÇÃO CONTRA ABUSO
+ * Suporta:
+ * 1. Upstash Redis REST API (quando configurado via UPSTASH_REDIS_REST_URL / UPSTASH_REDIS_REST_TOKEN).
+ * 2. Fallback de Alta Performance em Memória com Janela Deslizante.
+ * 3. Limitação Dupla: Por IP (pseudonimizado via SHA-256) e por Usuário Autenticado.
+ * 4. Respostas padronizadas HTTP 429 Too Many Requests com cabeçalhos Retry-After e X-RateLimit.
  */
 
 import { hashSensitiveData } from './crypto';
@@ -10,76 +14,138 @@ interface RateLimitRecord {
   resetAt: number;
 }
 
-const stores = new Map<string, Map<string, RateLimitRecord>>();
+const localStores = new Map<string, Map<string, RateLimitRecord>>();
 
 export interface RateLimitOptions {
-  windowMs: number;       // Janela de tempo em milissegundos
-  maxRequests: number;    // Máximo de requisições permitidas na janela
+  windowMs: number;          // Janela de tempo em milissegundos
+  maxRequests: number;       // Máximo de requisições permitidas na janela
+  userId?: string | null;    // ID do usuário autenticado para limitação composta
 }
 
 export interface RateLimitResult {
   allowed: boolean;
+  limit: number;
   remaining: number;
   resetAt: number;
   retryAfterSeconds: number;
 }
 
 /**
- * Verifica e contabiliza a taxa de requisições por identificador (IP ou usuário).
- * O identificador bruto (ex.: IP) é imediatamente pseudonimizado com SHA-256 e salt,
- * garantindo que nenhum IP pessoal em texto claro seja armazenado em memória (LGPD/GDPR).
+ * Consulta ou executa o rate limit via Upstash Redis REST API se configurado.
  */
-export function checkRateLimit(
+async function checkUpstashRateLimit(
+  key: string,
+  options: RateLimitOptions
+): Promise<RateLimitResult | null> {
+  const url = process.env.UPSTASH_REDIS_REST_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+
+  if (!url || !token) {
+    return null; // Upstash não configurado, segue para o fallback local
+  }
+
+  try {
+    const windowSeconds = Math.max(1, Math.ceil(options.windowMs / 1000));
+
+    // Pipeline atômica: INCR + EXPIRE (se for primeira chave)
+    const pipelineRes = await fetch(`${url}/pipeline`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify([
+        ['INCR', key],
+        ['TTL', key]
+      ]),
+      signal: AbortSignal.timeout(1500) // Timeout agressivo de 1.5s para não onerar o fluxo
+    });
+
+    if (!pipelineRes.ok) return null;
+
+    const data = await pipelineRes.json();
+    const count = typeof data[0]?.result === 'number' ? data[0].result : 1;
+    let ttl = typeof data[1]?.result === 'number' ? data[1].result : -1;
+
+    // Se a chave não tinha TTL definido, define agora
+    if (ttl <= 0) {
+      ttl = windowSeconds;
+      await fetch(`${url}/expire/${encodeURIComponent(key)}/${windowSeconds}`, {
+        headers: { Authorization: `Bearer ${token}` }
+      }).catch(() => {});
+    }
+
+    const allowed = count <= options.maxRequests;
+    const remaining = Math.max(0, options.maxRequests - count);
+    const resetAt = Date.now() + (ttl * 1000);
+
+    return {
+      allowed,
+      limit: options.maxRequests,
+      remaining,
+      resetAt,
+      retryAfterSeconds: Math.max(1, ttl)
+    };
+
+  } catch (err) {
+    console.warn('[RATE LIMIT] Falha na conexão com Upstash Redis, utilizando engine local:', err);
+    return null;
+  }
+}
+
+/**
+ * Rate Limiter Local em Memória (Janela Deslizante com Chaves Hasheadas).
+ */
+function checkLocalRateLimit(
   namespace: string,
-  identifier: string,
+  key: string,
   options: RateLimitOptions
 ): RateLimitResult {
   const now = Date.now();
-  const secureKey = hashSensitiveData(identifier);
 
-  let store = stores.get(namespace);
+  let store = localStores.get(namespace);
   if (!store) {
     store = new Map<string, RateLimitRecord>();
-    stores.set(namespace, store);
+    localStores.set(namespace, store);
   }
 
-  // Limpeza de registros expirados aleatória (5% das requisições)
+  // Limpeza de registros expirados (5% de probabilidade)
   if (Math.random() < 0.05) {
-    for (const [key, record] of store.entries()) {
+    for (const [k, record] of store.entries()) {
       if (record.resetAt <= now) {
-        store.delete(key);
+        store.delete(k);
       }
     }
   }
 
-  const record = store.get(secureKey);
+  const record = store.get(key);
 
-  // Se não existir ou a janela expirou, inicia novo ciclo
   if (!record || record.resetAt <= now) {
     const resetAt = now + options.windowMs;
-    store.set(secureKey, { count: 1, resetAt });
+    store.set(key, { count: 1, resetAt });
     return {
       allowed: true,
+      limit: options.maxRequests,
       remaining: options.maxRequests - 1,
       resetAt,
       retryAfterSeconds: Math.ceil(options.windowMs / 1000)
     };
   }
 
-  // Se excedeu o limite
   if (record.count >= options.maxRequests) {
     return {
       allowed: false,
+      limit: options.maxRequests,
       remaining: 0,
       resetAt: record.resetAt,
       retryAfterSeconds: Math.max(1, Math.ceil((record.resetAt - now) / 1000))
     };
   }
 
-  // Incrementa contador
   record.count += 1;
   return {
     allowed: true,
+    limit: options.maxRequests,
     remaining: options.maxRequests - record.count,
     resetAt: record.resetAt,
     retryAfterSeconds: Math.max(1, Math.ceil((record.resetAt - now) / 1000))
@@ -87,17 +153,96 @@ export function checkRateLimit(
 }
 
 /**
- * Reseta o contador para um identificador específico (ex.: após login bem-sucedido).
+ * Verifica e aplica o Rate Limiting.
+ * Suporta verificação composta (por IP pseudonimizado e por ID de Usuário).
+ */
+export async function checkRateLimitAsync(
+  namespace: string,
+  identifier: string,
+  options: RateLimitOptions
+): Promise<RateLimitResult> {
+  const secureKey = `rl:${namespace}:${hashSensitiveData(identifier)}`;
+
+  // 1. Tenta Upstash Redis primeiro (se configurado)
+  const upstashResult = await checkUpstashRateLimit(secureKey, options);
+  if (upstashResult) {
+    // Se foi fornecido userId e o IP passou, valida também o limite por usuário
+    if (options.userId) {
+      const userKey = `rl:${namespace}:user:${hashSensitiveData(options.userId)}`;
+      const userResult = await checkUpstashRateLimit(userKey, options);
+      if (userResult && !userResult.allowed) {
+        return userResult;
+      }
+    }
+    return upstashResult;
+  }
+
+  // 2. Engine Local em Memória
+  const localResult = checkLocalRateLimit(namespace, secureKey, options);
+
+  // Se o IP passou e temos usuário autenticado, verifica quota do usuário
+  if (options.userId && localResult.allowed) {
+    const userKey = `user:${hashSensitiveData(options.userId)}`;
+    const userLocal = checkLocalRateLimit(`${namespace}:user`, userKey, options);
+    if (!userLocal.allowed) {
+      return userLocal;
+    }
+  }
+
+  return localResult;
+}
+
+/**
+ * Versão síncrona para compatibilidade retroativa com middleware local.
+ */
+export function checkRateLimit(
+  namespace: string,
+  identifier: string,
+  options: RateLimitOptions
+): RateLimitResult {
+  const secureKey = `rl:${namespace}:${hashSensitiveData(identifier)}`;
+  return checkLocalRateLimit(namespace, secureKey, options);
+}
+
+/**
+ * Reseta o contador para um identificador específico.
  */
 export function resetRateLimit(namespace: string, identifier: string): void {
-  const store = stores.get(namespace);
+  const secureKey = `rl:${namespace}:${hashSensitiveData(identifier)}`;
+  const store = localStores.get(namespace);
   if (store) {
-    store.delete(hashSensitiveData(identifier));
+    store.delete(secureKey);
   }
 }
 
 /**
- * Extrai o IP real do cliente com proteção contra spoofing em proxies/Vercel.
+ * Constrói uma resposta padronizada HTTP 429 Too Many Requests com cabeçalhos completos.
+ */
+export function createRateLimitResponse(
+  result: RateLimitResult,
+  customMessage?: string
+): Response {
+  const body = {
+    error: 'Too Many Requests',
+    message: customMessage || `Limite de requisições excedido. Tente novamente em ${result.retryAfterSeconds} segundos.`,
+    retryAfter: result.retryAfterSeconds,
+    limit: result.limit
+  };
+
+  return new Response(JSON.stringify(body), {
+    status: 429,
+    headers: {
+      'Content-Type': 'application/json',
+      'Retry-After': result.retryAfterSeconds.toString(),
+      'X-RateLimit-Limit': result.limit.toString(),
+      'X-RateLimit-Remaining': result.remaining.toString(),
+      'X-RateLimit-Reset': Math.ceil(result.resetAt / 1000).toString()
+    }
+  });
+}
+
+/**
+ * Extrai com segurança o IP real do cliente.
  */
 export function getClientIp(request: Request): string {
   const forwarded = request.headers.get('x-forwarded-for');

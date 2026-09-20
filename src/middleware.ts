@@ -25,7 +25,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
   // 3. Mapear rotas protegidas que exigem validação de sessão server-side
   const isProtectedPage = pathname === '/' || pathname.startsWith('/preview');
-  const isProtectedApi = pathname === '/api/lead-status' || pathname.startsWith('/api/lead-asset/');
+  const isProtectedApi = pathname === '/api/lead-status' || pathname.startsWith('/api/lead-asset/') || pathname.startsWith('/api/ai/');
 
   // Se não for nem rota protegida nem página de login (ex.: páginas públicas /[slug] ou /site/[slug]), segue o fluxo
   if (!isProtectedPage && !isProtectedApi && !isLoginPage) {
