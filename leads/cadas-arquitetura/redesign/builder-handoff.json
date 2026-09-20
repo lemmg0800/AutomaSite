@@ -1,0 +1,72 @@
+{
+  "slug": "cadas-arquitetura",
+  "name": "Cadas Arquitetura",
+  "status": "published",
+  "validated_sections_count": 10,
+  "sections": [
+    {
+      "id": "header-cadas",
+      "type": "header",
+      "variant": "Header02"
+    },
+    {
+      "id": "hero-cadas",
+      "type": "hero",
+      "variant": "Hero01"
+    },
+    {
+      "id": "about-cadas",
+      "type": "about",
+      "variant": "About01"
+    },
+    {
+      "id": "projects-cadas",
+      "type": "projects",
+      "variant": "Projects01"
+    },
+    {
+      "id": "services-cadas",
+      "type": "services",
+      "variant": "Services01"
+    },
+    {
+      "id": "benefits-cadas",
+      "type": "benefits",
+      "variant": "Benefits01"
+    },
+    {
+      "id": "testimonials-cadas",
+      "type": "testimonials",
+      "variant": "Testimonials01"
+    },
+    {
+      "id": "faq-cadas",
+      "type": "faq",
+      "variant": "FAQ01"
+    },
+    {
+      "id": "cta-cadas",
+      "type": "cta",
+      "variant": "CTA01"
+    },
+    {
+      "id": "footer-cadas",
+      "type": "footer",
+      "variant": "Footer01"
+    }
+  ],
+  "tech_stack": {
+    "framework": "Astro 5",
+    "styling": "Tailwind CSS",
+    "type_validation": "Zod"
+  },
+  "responsive_breakpoints": {
+    "desktop": "1280x800",
+    "mobile": "390x844"
+  },
+  "compliance": {
+    "anti_clone_rule": "APROVADO - Fingerprint exclusivo de variantes e hero image única",
+    "zod_schema_rule": "APROVADO - Conformidade estrita com ClientConfigSchema",
+    "no_mock_data_rule": "APROVADO - Dados reais da Receita Federal e CAU-RJ"
+  }
+}

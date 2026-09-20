@@ -1,0 +1,28 @@
+{
+  "slug": "gisele-taranto-arquitetura",
+  "name": "Gisele Taranto Arquitetura",
+  "aesthetic_concept": "Sensory Minimalism & Sculptural Elegance",
+  "consulted_design_systems": [
+    "aex.aura.build",
+    "elicyon.com",
+    "temas_claros/editorial_minimalist.json"
+  ],
+  "color_palette": {
+    "primary": "#212121",
+    "secondary": "#303030",
+    "accent": "#B08D57",
+    "background": "#121212",
+    "text": "#F5F5F3"
+  },
+  "typography": {
+    "heading": "Cormorant Garamond",
+    "body": "Inter"
+  },
+  "layout_archetype": "Editorial Architectural Monograph",
+  "anti_clone_safeguards": [
+    "Combinação de 3 Design Systems autênticos de Design System/",
+    "Paleta cromática contextualizada à estética carioca e ao escritório",
+    "Ordem e seleção de seções exclusiva sem correspondência direta no lote",
+    "Fotografia de hero exclusiva de arquitetura moderna brasileira"
+  ]
+}

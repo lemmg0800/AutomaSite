@@ -1,0 +1,18 @@
+{
+  "client": "jacobsen-arquitetura",
+  "design_systems_used": [
+    {
+      "name": "nexus-architecture.aura.build",
+      "purpose": "Interações luxuosas e tipografia limpa"
+    },
+    {
+      "name": "zenith.aura.build",
+      "purpose": "Interações luxuosas e tipografia limpa"
+    },
+    {
+      "name": "temas_claros/editorial_minimalist.json",
+      "purpose": "Paleta cromática e contrastes equilibrados"
+    }
+  ],
+  "harmonization_strategy": "Síntese de sofisticação editorial com performance web de ponta (Astro SSR)."
+}

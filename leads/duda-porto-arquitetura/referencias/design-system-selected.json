@@ -1,0 +1,18 @@
+{
+  "client": "duda-porto-arquitetura",
+  "design_systems_used": [
+    {
+      "name": "zenith.aura.build",
+      "purpose": "Interações luxuosas e tipografia limpa"
+    },
+    {
+      "name": "nexus-architecture.aura.build",
+      "purpose": "Interações luxuosas e tipografia limpa"
+    },
+    {
+      "name": "temas_escuros/brutalist_luxury.json",
+      "purpose": "Paleta cromática e contrastes equilibrados"
+    }
+  ],
+  "harmonization_strategy": "Síntese de sofisticação editorial com performance web de ponta (Astro SSR)."
+}

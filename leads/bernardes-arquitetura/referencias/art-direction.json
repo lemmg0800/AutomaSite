@@ -1,0 +1,28 @@
+{
+  "slug": "bernardes-arquitetura",
+  "name": "Bernardes Arquitetura",
+  "aesthetic_concept": "Brutalist Luxury & Tropical Modernism",
+  "consulted_design_systems": [
+    "digital-architect.aura.build",
+    "nexus-architecture.aura.build",
+    "temas_escuros/brutalist_luxury.json"
+  ],
+  "color_palette": {
+    "primary": "#121516",
+    "secondary": "#1E2325",
+    "accent": "#D4AF37",
+    "background": "#0A0C0D",
+    "text": "#EDECE8"
+  },
+  "typography": {
+    "heading": "Cinzel",
+    "body": "Plus Jakarta Sans"
+  },
+  "layout_archetype": "Editorial Architectural Monograph",
+  "anti_clone_safeguards": [
+    "Combinação de 3 Design Systems autênticos de Design System/",
+    "Paleta cromática contextualizada à estética carioca e ao escritório",
+    "Ordem e seleção de seções exclusiva sem correspondência direta no lote",
+    "Fotografia de hero exclusiva de arquitetura moderna brasileira"
+  ]
+}

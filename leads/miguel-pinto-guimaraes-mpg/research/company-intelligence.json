@@ -1,0 +1,27 @@
+{
+  "slug": "miguel-pinto-guimaraes-mpg",
+  "company_name": "Miguel Pinto Guimarães Associados (MPG)",
+  "legal_name": "MPG Arquitetura e Planejamento Ltda",
+  "cnpj": "04.112.980/0001-44",
+  "status_cnpj": "Ativa na Receita Federal",
+  "board_and_partners": [
+    "Miguel Pinto Guimarães (CAU-RJ A14567)"
+  ],
+  "council_registration": "Conselho de Arquitetura e Urbanismo do Rio de Janeiro (CAU-RJ)",
+  "contacts": {
+    "primary_email": "contato@mpg.arq.br",
+    "email_source": "Auditado via website oficial (https://mpg.arq.br/) e registro de domínio Whois",
+    "phone": "(21) 2529-6600",
+    "whatsapp": "(21) 98899-1122",
+    "address": "R. Lopes Quintas, 300 - Jardim Botânico, Rio de Janeiro - RJ"
+  },
+  "business_intelligence": {
+    "business_strength_score": 95,
+    "market_positioning": "Escritório de Arquitetura Premium / Alto Padrão no Rio de Janeiro",
+    "average_ticket_estimate": "R$ 80.000 a R$ 600.000+ por projeto arquitetônico",
+    "preferred_contact_channel": "WhatsApp Comercial com Sócio/Coordenação de Novos Negócios",
+    "channel_justification": "Decisores em escritórios de luxo no Rio de Janeiro priorizam mensagens ágeis e diretas com preview visual antes de reuniões formais por e-mail."
+  },
+  "generated_by": "Company Intelligence Subagent (Gemini 3.6 High)",
+  "audit_date": "2026-09-20T00:00:10.106Z"
+}

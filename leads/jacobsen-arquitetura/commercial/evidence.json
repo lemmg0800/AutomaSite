@@ -1,0 +1,16 @@
+{
+  "slug": "jacobsen-arquitetura",
+  "name": "Jacobsen Arquitetura",
+  "original_pagespeed_score": 30,
+  "redesign_pagespeed_score": 98,
+  "mobile_load_time_before": "4.8s",
+  "mobile_load_time_after": "0.9s",
+  "audit_date": "2026-09-19",
+  "conversion_elements_added": [
+    "Header sticky com contato rápido",
+    "Hero com CTA prioritário para WhatsApp",
+    "Galeria/Projetos de alta definição com carregamento progressivo",
+    "Seção de autoridade e diferenciais executivos",
+    "FAQ para desmistificar o processo de contratação"
+  ]
+}

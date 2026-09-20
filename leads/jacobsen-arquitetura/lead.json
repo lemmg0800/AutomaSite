@@ -1,0 +1,39 @@
+{
+  "slug": "jacobsen-arquitetura",
+  "name": "Jacobsen Arquitetura",
+  "legal_name": "Jacobsen Arquitetura Eireli",
+  "cnpj": "19.455.120/0001-34",
+  "segment": "Residências Tropicais de Alto Luxo & Sustentabilidade",
+  "city": "Rio de Janeiro",
+  "state": "RJ",
+  "address": "R. Jardim Botânico, 635 - Jardim Botânico, Rio de Janeiro - RJ",
+  "website": "https://jacobsenarquitetura.com/",
+  "instagram": "@jacobsenarquitetura",
+  "phone": "(21) 2540-0080",
+  "whatsapp": "(21) 99244-1234",
+  "email": "comunicacao@jacobsenarquitetura.com",
+  "macro_region": "Sudeste",
+  "search_niche": "Arquitetura e Urbanismo",
+  "status": "aguardando_aprovacao",
+  "ranking": 4,
+  "scores": {
+    "prospector": 93,
+    "visual": 75,
+    "business_strength": 96,
+    "opportunity": 86
+  },
+  "pagespeed": {
+    "mobile_performance": 31,
+    "lcp": "4.8s",
+    "fid": "240ms",
+    "cls": "0.19"
+  },
+  "top_problems": [
+    "Performance mobile 31/100 comprometendo a visualização de clientes internacionais e investidores",
+    "Portfólio em grid rígido sem filtros por programa arquitetônico",
+    "Inexistência de formulário de agendamento de briefing prévio online"
+  ],
+  "main_gap": "Imagens em altíssima resolução não otimizadas bloqueiam o primeiro render no celular; navegação complexa que dificulta encontrar projetos por metragem/região.",
+  "commercial_hook": "Escritório renomado no Jardim Botânico com projetos de altíssimo valor, mas com site mobile lento (31/100) que não reflete a excelência visual dos projetos construídos.",
+  "created_at": "2026-09-20T00:00:10.088Z"
+}

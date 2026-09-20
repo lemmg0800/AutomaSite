@@ -1,0 +1,28 @@
+{
+  "slug": "jacobsen-arquitetura",
+  "name": "Jacobsen Arquitetura",
+  "aesthetic_concept": "Biophilic Horizon & Timber Modernism",
+  "consulted_design_systems": [
+    "nexus-architecture.aura.build",
+    "zenith.aura.build",
+    "temas_claros/editorial_minimalist.json"
+  ],
+  "color_palette": {
+    "primary": "#1B2421",
+    "secondary": "#283530",
+    "accent": "#4A7C59",
+    "background": "#0D1311",
+    "text": "#E8EFEA"
+  },
+  "typography": {
+    "heading": "Plus Jakarta Sans",
+    "body": "Inter"
+  },
+  "layout_archetype": "Editorial Architectural Monograph",
+  "anti_clone_safeguards": [
+    "Combinação de 3 Design Systems autênticos de Design System/",
+    "Paleta cromática contextualizada à estética carioca e ao escritório",
+    "Ordem e seleção de seções exclusiva sem correspondência direta no lote",
+    "Fotografia de hero exclusiva de arquitetura moderna brasileira"
+  ]
+}

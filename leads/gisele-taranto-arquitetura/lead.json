@@ -1,0 +1,39 @@
+{
+  "slug": "gisele-taranto-arquitetura",
+  "name": "Gisele Taranto Arquitetura",
+  "legal_name": "Gisele Taranto Arquitetura Interiores Ltda",
+  "cnpj": "05.991.302/0001-19",
+  "segment": "Design de Interiores & Arquitetura de Colecionador",
+  "city": "Rio de Janeiro",
+  "state": "RJ",
+  "address": "Av. Ataulfo de Paiva, 135 - Leblon, Rio de Janeiro - RJ",
+  "website": "https://giseletaranto.com/",
+  "instagram": "@giseletarantoarquitetura",
+  "phone": "(21) 2294-0990",
+  "whatsapp": "(21) 99188-5544",
+  "email": "escritorio@giseletaranto.com",
+  "macro_region": "Sudeste",
+  "search_niche": "Arquitetura e Urbanismo",
+  "status": "aguardando_aprovacao",
+  "ranking": 3,
+  "scores": {
+    "prospector": 95,
+    "visual": 77,
+    "business_strength": 93,
+    "opportunity": 87
+  },
+  "pagespeed": {
+    "mobile_performance": 29,
+    "lcp": "5.1s",
+    "fid": "260ms",
+    "cls": "0.18"
+  },
+  "top_problems": [
+    "Carregamento demorado em celulares 4G que desestimula navegação profunda",
+    "Inexistência de apresentação da metodologia e etapas do acompanhamento de obra",
+    "Design visual que não reflete a sofisticação e os prêmios recebidos"
+  ],
+  "main_gap": "Página estática com sliders lentos, sem integração com WhatsApp comercial e sem detalhamento do processo de curadoria de mobiliário de design assinado.",
+  "commercial_hook": "Escritório renomado no Leblon com projetos de altíssimo valor, mas com site mobile lento (29/100) que não reflete a excelência visual dos projetos construídos.",
+  "created_at": "2026-09-20T00:00:10.086Z"
+}

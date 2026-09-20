@@ -1,0 +1,38 @@
+{
+  "slug": "paola-ribeiro-arquitetura",
+  "name": "Paola Ribeiro Arquitetura",
+  "legal_name": "Paola Ribeiro Arquitetura e Ambientacao Ltda",
+  "cnpj": "06.554.890/0001-33",
+  "segment": "Interiores Clássico-Contemporâneos & Mostras CasaCor",
+  "city": "Rio de Janeiro",
+  "state": "RJ",
+  "address": "R. Marquês de São Vicente, 220 - Gávea, Rio de Janeiro - RJ",
+  "website": "https://paolaribeiro.com.br/",
+  "instagram": "@paolaribeiroarq",
+  "phone": "(21) 2259-3300",
+  "whatsapp": "(21) 99122-7700",
+  "email": "paola@paolaribeiro.com.br",
+  "macro_region": "Sudeste",
+  "search_niche": "Arquitetura e Urbanismo",
+  "status": "prospectado",
+  "ranking": 13,
+  "scores": {
+    "prospector": 90,
+    "visual": 76,
+    "business_strength": 87,
+    "opportunity": 84
+  },
+  "pagespeed": {
+    "mobile_performance": 36,
+    "lcp": "4.3s",
+    "fid": "180ms",
+    "cls": "0.13"
+  },
+  "top_problems": [
+    "Portfólio com navegação travada",
+    "Sem canal ágil para novos clientes"
+  ],
+  "main_gap": "Navegação desatualizada em carrossel manual lento.",
+  "commercial_hook": "Escritório renomado no Gávea com projetos de altíssimo valor, mas com site mobile lento (36/100) que não reflete a excelência visual dos projetos construídos.",
+  "created_at": "2026-09-20T00:00:10.118Z"
+}

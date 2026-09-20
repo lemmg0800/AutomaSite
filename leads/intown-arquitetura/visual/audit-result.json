@@ -1,0 +1,14 @@
+{
+  "slug": "intown-arquitetura",
+  "evaluator": "Auditor Visual (Agente 2 - Gemini 3.6 High)",
+  "opportunity_score": 76,
+  "aspects": {
+    "first_fold_impact": 68,
+    "typography_hierarchy": 62,
+    "mobile_responsiveness": 37,
+    "visual_proof_awards": 60,
+    "conversion_friction": 85
+  },
+  "verdict": "Oportunidade Secundária",
+  "analyzed_at": "2026-09-20T00:00:10.122Z"
+}

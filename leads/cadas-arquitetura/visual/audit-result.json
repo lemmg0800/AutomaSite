@@ -1,0 +1,14 @@
+{
+  "slug": "cadas-arquitetura",
+  "evaluator": "Auditor Visual (Agente 2 - Gemini 3.6 High)",
+  "opportunity_score": 76,
+  "aspects": {
+    "first_fold_impact": 58,
+    "typography_hierarchy": 62,
+    "mobile_responsiveness": 26,
+    "visual_proof_awards": 60,
+    "conversion_friction": 85
+  },
+  "verdict": "Prioridade Máxima de Redesign (Top 5)",
+  "analyzed_at": "2026-09-20T00:00:10.081Z"
+}

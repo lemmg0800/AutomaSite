@@ -1,0 +1,28 @@
+{
+  "slug": "cadas-arquitetura",
+  "name": "Cadas Arquitetura",
+  "aesthetic_concept": "Editorial Minimalist & Coastal Sophistication",
+  "consulted_design_systems": [
+    "nexus-architecture.aura.build",
+    "elicyon.com",
+    "temas_claros/editorial_minimalist.json"
+  ],
+  "color_palette": {
+    "primary": "#1A1816",
+    "secondary": "#2C2825",
+    "accent": "#C4A482",
+    "background": "#0F0E0D",
+    "text": "#F5F2EB"
+  },
+  "typography": {
+    "heading": "Playfair Display",
+    "body": "Plus Jakarta Sans"
+  },
+  "layout_archetype": "Editorial Architectural Monograph",
+  "anti_clone_safeguards": [
+    "Combinação de 3 Design Systems autênticos de Design System/",
+    "Paleta cromática contextualizada à estética carioca e ao escritório",
+    "Ordem e seleção de seções exclusiva sem correspondência direta no lote",
+    "Fotografia de hero exclusiva de arquitetura moderna brasileira"
+  ]
+}

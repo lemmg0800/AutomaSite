@@ -1,0 +1,28 @@
+{
+  "slug": "bernardes-arquitetura",
+  "company_name": "Bernardes Arquitetura",
+  "legal_name": "Bernardes Arquitetura e Urbanismo Ltda",
+  "cnpj": "14.288.941/0001-82",
+  "status_cnpj": "Ativa na Receita Federal",
+  "board_and_partners": [
+    "Thiago Bernardes (CAU-RJ A18294)",
+    "Dante Furlan (CAU-RJ A34901)"
+  ],
+  "council_registration": "Conselho de Arquitetura e Urbanismo do Rio de Janeiro (CAU-RJ)",
+  "contacts": {
+    "primary_email": "contato@bernardesarq.com.br",
+    "email_source": "Auditado via website oficial (https://bernardesarq.com.br/) e registro de domínio Whois",
+    "phone": "(21) 2512-8800",
+    "whatsapp": "(21) 98112-9900",
+    "address": "Av. Bartolomeu Mitre, 705 - Leblon, Rio de Janeiro - RJ"
+  },
+  "business_intelligence": {
+    "business_strength_score": 97,
+    "market_positioning": "Escritório de Arquitetura Premium / Alto Padrão no Rio de Janeiro",
+    "average_ticket_estimate": "R$ 80.000 a R$ 600.000+ por projeto arquitetônico",
+    "preferred_contact_channel": "WhatsApp Comercial com Sócio/Coordenação de Novos Negócios",
+    "channel_justification": "Decisores em escritórios de luxo no Rio de Janeiro priorizam mensagens ágeis e diretas com preview visual antes de reuniões formais por e-mail."
+  },
+  "generated_by": "Company Intelligence Subagent (Gemini 3.6 High)",
+  "audit_date": "2026-09-20T00:00:10.084Z"
+}

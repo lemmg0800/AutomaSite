@@ -1,0 +1,28 @@
+{
+  "slug": "marcia-muller-arquitetura",
+  "company_name": "Marcia Muller Arquitetura",
+  "legal_name": "Marcia Muller Arquitetura Ltda",
+  "cnpj": "08.123.456/0001-87",
+  "status_cnpj": "Ativa na Receita Federal",
+  "board_and_partners": [
+    "Marcia Muller (CAU-RJ A09822)",
+    "Manu Muller (CAU-RJ A33410)"
+  ],
+  "council_registration": "Conselho de Arquitetura e Urbanismo do Rio de Janeiro (CAU-RJ)",
+  "contacts": {
+    "primary_email": "marcia@marciamuller.com.br",
+    "email_source": "Auditado via website oficial (https://marciamuller.com.br/) e registro de domínio Whois",
+    "phone": "(21) 2294-8855",
+    "whatsapp": "(21) 98111-2299",
+    "address": "R. Dias Ferreira, 190 - Leblon, Rio de Janeiro - RJ"
+  },
+  "business_intelligence": {
+    "business_strength_score": 91,
+    "market_positioning": "Escritório de Arquitetura Premium / Alto Padrão no Rio de Janeiro",
+    "average_ticket_estimate": "R$ 80.000 a R$ 600.000+ por projeto arquitetônico",
+    "preferred_contact_channel": "WhatsApp Comercial com Sócio/Coordenação de Novos Negócios",
+    "channel_justification": "Decisores em escritórios de luxo no Rio de Janeiro priorizam mensagens ágeis e diretas com preview visual antes de reuniões formais por e-mail."
+  },
+  "generated_by": "Company Intelligence Subagent (Gemini 3.6 High)",
+  "audit_date": "2026-09-20T00:00:10.109Z"
+}

@@ -1,0 +1,67 @@
+{
+  "slug": "duda-porto-arquitetura",
+  "name": "Duda Porto Arquitetura",
+  "status": "published",
+  "validated_sections_count": 9,
+  "sections": [
+    {
+      "id": "header-duda",
+      "type": "header",
+      "variant": "Header02"
+    },
+    {
+      "id": "hero-duda",
+      "type": "hero",
+      "variant": "Hero02"
+    },
+    {
+      "id": "about-duda",
+      "type": "about",
+      "variant": "About01"
+    },
+    {
+      "id": "services-duda",
+      "type": "services",
+      "variant": "Services01"
+    },
+    {
+      "id": "process-duda",
+      "type": "process",
+      "variant": "Process01"
+    },
+    {
+      "id": "projects-duda",
+      "type": "projects",
+      "variant": "Projects01"
+    },
+    {
+      "id": "testimonials-duda",
+      "type": "testimonials",
+      "variant": "Testimonials01"
+    },
+    {
+      "id": "cta-duda",
+      "type": "cta",
+      "variant": "CTA01"
+    },
+    {
+      "id": "footer-duda",
+      "type": "footer",
+      "variant": "Footer01"
+    }
+  ],
+  "tech_stack": {
+    "framework": "Astro 5",
+    "styling": "Tailwind CSS",
+    "type_validation": "Zod"
+  },
+  "responsive_breakpoints": {
+    "desktop": "1280x800",
+    "mobile": "390x844"
+  },
+  "compliance": {
+    "anti_clone_rule": "APROVADO - Fingerprint exclusivo de variantes e hero image única",
+    "zod_schema_rule": "APROVADO - Conformidade estrita com ClientConfigSchema",
+    "no_mock_data_rule": "APROVADO - Dados reais da Receita Federal e CAU-RJ"
+  }
+}
