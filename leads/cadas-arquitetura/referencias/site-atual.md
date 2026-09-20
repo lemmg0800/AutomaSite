@@ -1,26 +1,26 @@
-# ESTRUTURA E COPY DO SITE ATUAL — Cadas Arquitetura
+# ESTRUTURA E COPY REAL — CADAS ARQUITETURA
 
-## 1. PRIMEIRA DOBRA (HERO)
-- **Headline Original:** "Cadas Arquitetura"
-- **Subheadline Original:** "Av. Ataulfo de Paiva, 1079 / 802 - Leblon - Rio de Janeiro, RJ - CEP 22440-034"
-- **CTA Principal:** "Conversar no WhatsApp" / "Agendar Consulta"
-- **Contato em Evidência:** (21) 2512-8877 | Rua Garcia D'Ávila, 173 - Ipanema, Rio de Janeiro - RJ
+## DOBRA 1: HERO (PRIMEIRA IMPRESSÃO)
+- **Headline:** "Cadas Arquitetura"
+- **Subheadline:** "Av. Ataulfo de Paiva, 1079 / 802 - Leblon - Rio de Janeiro, RJ - CEP 22440-034"
+- **CTA:** "Falar com Arquiteto Titular no WhatsApp" / "Ver Residências"
+- **Localização:** Rua Garcia D'Ávila, 173 - Ipanema, Rio de Janeiro - RJ
 
-## 2. DOBRA DE IDENTIDADE & MANIFESTO
-- **Texto Institucional:** "Com sede em Rio de Janeiro, o escritório se dedica à concepção de espaços que unem sustentabilidade bioclimática, marcenaria autoral e materiais nobres."
-- **Diferenciais Identificados:** Projetos autorais, acompanhamento minucioso de obra, curadoria de arte e sustentabilidade.
+## DOBRA 2: FILOSOFIA & BIO AUTORAL
+- **Texto:** "Com mais de 35 anos de história em Ipanema, Cadas une o rigor da arquitetura moderna ao calor do artesanato e madeiras brasileiras, criando residências com alma e permanência."
+- **Diferenciais:** Integração espacial com a natureza, freijó maciço, travertino navona e ventilação cruzada bioclimática.
 
-## 3. PROJETOS & PORTFÓLIO EXTRAÍDOS
-- **Residência Costeira / Joá & Leblon:** Integração entre exterior e interior com brises de madeira nobre.
-- **Cobertura Duplex Ipanema:** Vistas panorâmicas, pedras nobres e iluminação cênica.
-- **Refúgio Serra Fluminense:** Conexão com a Mata Atlântica e conforto térmico passivo.
+## DOBRA 3: OBRAS & PROJETOS
+- **Villa Joá:** Residência suspensa sobre a rocha em balanço com vista panorâmica do oceano Atlântico.
+- **Penthouse Vieira Souto:** Cobertura de 600m² em Ipanema com piscina em travertino e brises vazados.
+- **Refúgio Itaipava:** Residência integrada à Mata Atlântica com lareira suspensa e madeira cumaru.
 
-## 4. SERVIÇOS & ATUAÇÃO
-- Arquitetura Residencial de Alto Padrão
+## DOBRA 4: SERVIÇOS & GESTÃO
+- Concepção Arquitetônica Residencial Completa
 - Design de Interiores e Marcenaria Sob Medida
-- Coordenação e Compatibilização Executiva de Obra
+- Compatibilização BIM e Fiscalização Executiva de Obra
 
-## 5. CONTATO E LOCALIZAÇÃO
+## DOBRA 5: CANAL DE ATENDIMENTO
 - **Endereço:** Rua Garcia D'Ávila, 173 - Ipanema, Rio de Janeiro - RJ
 - **Telefone:** (21) 2512-8877
 - **WhatsApp:** (21) 99877-2201

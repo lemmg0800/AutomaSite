@@ -1,28 +1,34 @@
 {
   "slug": "cadas-arquitetura",
   "name": "Cadas Arquitetura",
+  "aesthetic_concept": "Editorial Minimalist & Coastal Sophistication",
   "consulted_design_systems": [
     "nexus-architecture.aura.build",
     "elicyon.com",
     "temas_claros/editorial_minimalist.json"
   ],
-  "design_system_components_extracted": [
-    {
-      "id": "nexus-architecture.aura.build",
-      "codeSampleSnippet": "<!DOCTYPE html> <html class=\"scroll-smooth\" lang=\"pt-BR\"> <head> <meta charset=\"utf-8\"/> <meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/> <title>Nexus Architecture</title> <!-- fonts (Google fonts: Inter & Google Sans Flex stylesheets) --> <link href=\"assets/css2_66f3f89ececa.css\" rel=\"stylesheet\"/> <link href=\"assets/css2_bd407d5ceb4b.css\" rel=\"stylesheet\"/> <!-- css --> <!-- typography.css: defines body Inter font + .font-google-sans-flex utility used across all headings",
-      "role": "Tipografia monumental e proporção áurea"
+  "extracted_elements": {
+    "nexus": {
+      "role": "Tipografia monumental e proporções áureas de arquitetura",
+      "snippet": "<!DOCTYPE html> <html class=\"scroll-smooth\" lang=\"pt-BR\"> <head> <meta charset=\"utf-8\"/> <meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/> <title>Nexus Architecture</title> <!-- fonts (Google fonts: Inter & Google Sans Flex stylesheets) --> <link href=\"assets/css2_66f3f89ececa.css\" rel=\"stylesheet\"/> <link href=\"assets/css2_bd407d5ceb4b.css\" rel=\"stylesheet\"/> <!-- css --> <!"
     },
-    {
-      "id": "elicyon.com",
-      "codeSampleSnippet": "<!DOCTYPE html> <html class=\"lenis\" lang=\"en\"><head><meta charset=\"utf-8\"/><meta content=\"width=device-width\" name=\"viewport\"/><meta content=\"ie=edge\" http-equiv=\"x-ua-compatible\"/><meta content=\"index,follow\" name=\"googlebot\"/><meta content=\"Elicyon\" name=\"author\"/><meta content=\"no-referrer\" name=\"referrer\"/><meta content=\"telephone=no\" name=\"format-detection\"/><meta content=\"US\" name=\"geo.region\"/><meta content=\"1fsz3t60fhcsdr59f4u1klr75zv7xp\" name=\"facebook-domain-verification\"/><meta conten",
-      "role": "Grid editorial e sofisticação de interiores"
+    "elicyon": {
+      "role": "Grid de interiores de luxo e harmonia de materiais nobres",
+      "snippet": "<!DOCTYPE html> <html class=\"lenis\" lang=\"en\"><head><meta charset=\"utf-8\"/><meta content=\"width=device-width\" name=\"viewport\"/><meta content=\"ie=edge\" http-equiv=\"x-ua-compatible\"/><meta content=\"index,follow\" name=\"googlebot\"/><meta content=\"Elicyon\" name=\"author\"/><meta content=\"no-referrer\" name=\"referrer\"/><meta content=\"telephone=no\" name=\"format-detection\"/><meta content=\"US\" name=\"geo.regio"
     },
-    {
-      "id": "temas_claros/editorial_minimalist.json",
-      "codeSampleSnippet": "Design System validado em disco",
-      "role": "Contraste, minimalismo e acabamentos nobres"
+    "editorial_minimalist": {
+      "role": "Paleta cromática quente: areia, freijó e travertino"
     }
-  ],
-  "anti_clone_safeguard": "Combinação única de 3 Design Systems com componentes estilizados dedicados",
-  "applied_at": "2026-09-20T00:53:23.454Z"
+  },
+  "palette": {
+    "background": "#0F0E0D",
+    "surface": "#1A1816",
+    "card": "#2C2825",
+    "accent": "#C4A482",
+    "text": "#F5F2EB"
+  },
+  "typography": {
+    "heading": "Playfair Display",
+    "body": "Plus Jakarta Sans"
+  }
 }
