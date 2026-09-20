@@ -1,11 +1,11 @@
 {
   "client": "Cadas Arquitetura",
-  "aesthetic_concept": "Nexus Architecture Minimalist Luxury",
+  "aesthetic_concept": "Nexus Architecture Minimalist Luxury & Elicyon Tactile Grid",
   "consulted_design_systems": [
     "nexus-architecture.aura.build",
     "elicyon.com",
     "architecture-studio.aura.build"
   ],
-  "primaryColor": "#1A1816",
+  "primaryColor": "#161513",
   "accentColor": "#C4A482"
 }
