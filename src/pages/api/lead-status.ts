@@ -1,18 +1,77 @@
 import type { APIRoute } from 'astro';
 import fs from 'fs';
 import path from 'path';
+import { getSupabaseServerClient } from '../../lib/supabase';
+import { checkRateLimit, getClientIp } from '../../lib/rate-limiter';
 
 export const prerender = false;
 
-export const POST: APIRoute = async ({ request }) => {
+export const POST: APIRoute = async ({ request, cookies }) => {
+  const ip = getClientIp(request);
+
+  // 1. Rate Limiting na API sensível de status (Máximo de 30 atualizações por minuto por IP)
+  const rateLimit = checkRateLimit('lead-status', ip, {
+    windowMs: 60 * 1000,
+    maxRequests: 30
+  });
+
+  if (!rateLimit.allowed) {
+    return new Response(
+      JSON.stringify({ 
+        error: 'Limite de requisições excedido. Tente novamente em alguns segundos.',
+        retryAfter: rateLimit.retryAfterSeconds 
+      }), 
+      {
+        status: 429,
+        headers: { 
+          'Content-Type': 'application/json',
+          'Retry-After': rateLimit.retryAfterSeconds.toString()
+        }
+      }
+    );
+  }
+
+  // 2. Validação Server-Side Obrigatória de Sessão
+  try {
+    const supabase = getSupabaseServerClient(cookies, request);
+    const { data: { user }, error: authError } = await supabase.auth.getUser();
+
+    if (authError || !user) {
+      return new Response(
+        JSON.stringify({ error: 'Não autorizado. Autenticação obrigatória.' }), 
+        {
+          status: 401,
+          headers: { 'Content-Type': 'application/json' }
+        }
+      );
+    }
+  } catch (err) {
+    return new Response(
+      JSON.stringify({ error: 'Erro de validação de autenticação.' }), 
+      {
+        status: 401,
+        headers: { 'Content-Type': 'application/json' }
+      }
+    );
+  }
+
+  // 3. Processamento e Sanitização dos Dados
   try {
     const body = await request.json();
     const { slug, status } = body;
 
     const validStatuses = ['ativo', 'aprovado', 'nao_aprovado', 'arquivado', 'draft', 'review', 'published'];
 
-    if (!slug || !status || !validStatuses.includes(status)) {
-      return new Response(JSON.stringify({ error: 'Slug e status válidos são obrigatórios.' }), {
+    // Sanitização rigorosa contra Path Traversal no slug
+    if (!slug || typeof slug !== 'string' || !/^[a-z0-9-_]+$/i.test(slug)) {
+      return new Response(JSON.stringify({ error: 'Slug inválido ou em formato incorreto.' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
+    if (!status || !validStatuses.includes(status)) {
+      return new Response(JSON.stringify({ error: 'Status informado é inválido.' }), {
         status: 400,
         headers: { 'Content-Type': 'application/json' }
       });
@@ -20,20 +79,21 @@ export const POST: APIRoute = async ({ request }) => {
 
     const rootDir = process.cwd();
     
-    // 1. Atualizar lead.json se existir
+    // Atualização de lead.json
     const leadJsonPath = path.join(rootDir, 'leads', slug, 'lead.json');
     if (fs.existsSync(leadJsonPath)) {
       try {
         const content = fs.readFileSync(leadJsonPath, 'utf8').replace(/^\uFEFF/, '');
         const data = JSON.parse(content);
         data.status = status;
+        data.updatedAt = new Date().toISOString();
         fs.writeFileSync(leadJsonPath, JSON.stringify(data, null, 2), 'utf8');
       } catch (e) {
         console.error('Erro ao atualizar lead.json:', e);
       }
     }
 
-    // 2. Atualizar src/clients/data/[slug].ts se existir
+    // Atualização de client config.ts
     const clientDataPath = path.join(rootDir, 'src', 'clients', 'data', `${slug}.ts`);
     if (fs.existsSync(clientDataPath)) {
       try {
@@ -49,8 +109,9 @@ export const POST: APIRoute = async ({ request }) => {
       status: 200,
       headers: { 'Content-Type': 'application/json' }
     });
+
   } catch (err: any) {
-    return new Response(JSON.stringify({ error: err.message }), {
+    return new Response(JSON.stringify({ error: err.message || 'Erro interno no servidor.' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
     });

@@ -2,8 +2,12 @@ import { createServerClient } from '@supabase/ssr';
 import type { AstroCookies } from 'astro';
 
 export function getSupabaseServerClient(cookies: AstroCookies, request?: Request) {
-  const supabaseUrl = import.meta.env.SUPABASE_URL || (typeof process !== 'undefined' ? process.env.SUPABASE_URL : '') || 'https://rerpdrklkqfsfvinujyt.supabase.co';
-  const supabaseAnonKey = import.meta.env.SUPABASE_ANON_KEY || (typeof process !== 'undefined' ? process.env.SUPABASE_ANON_KEY : '') || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJlcnBkcmtsa3Fmc2Z2aW51anl0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk2MDY3NjQsImV4cCI6MjEwNTE4Mjc2NH0.aCP8T3B8qbOIY-mxkBR41yzoRpb3D1fVd6BW5BeLK98';
+  const supabaseUrl = import.meta.env.SUPABASE_URL || (typeof process !== 'undefined' ? process.env.SUPABASE_URL : '');
+  const supabaseAnonKey = import.meta.env.SUPABASE_ANON_KEY || (typeof process !== 'undefined' ? process.env.SUPABASE_ANON_KEY : '');
+
+  if (!supabaseUrl || !supabaseAnonKey) {
+    throw new Error('Configuração do Supabase incompleta no ambiente do servidor. Verifique as variáveis de ambiente.');
+  }
 
   return createServerClient(supabaseUrl, supabaseAnonKey, {
     cookies: {

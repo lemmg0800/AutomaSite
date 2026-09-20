@@ -3,8 +3,37 @@ export const prerender = false;
 import type { APIRoute } from 'astro';
 import fs from 'fs';
 import path from 'path';
+import { getSupabaseServerClient } from '../../../../lib/supabase';
+import { checkRateLimit, getClientIp } from '../../../../lib/rate-limiter';
 
-export const GET: APIRoute = async ({ params }) => {
+export const GET: APIRoute = async ({ params, request, cookies }) => {
+  const ip = getClientIp(request);
+
+  // 1. Rate limiting para prevenção de scraping massivo (100 req/min por IP)
+  const rateLimit = checkRateLimit('lead-assets', ip, {
+    windowMs: 60 * 1000,
+    maxRequests: 100
+  });
+
+  if (!rateLimit.allowed) {
+    return new Response('Muitas requisições. Aguarde um momento.', {
+      status: 429,
+      headers: { 'Retry-After': rateLimit.retryAfterSeconds.toString() }
+    });
+  }
+
+  // 2. Validação Server-Side Obrigatória de Sessão
+  try {
+    const supabase = getSupabaseServerClient(cookies, request);
+    const { data: { user }, error: authError } = await supabase.auth.getUser();
+
+    if (authError || !user) {
+      return new Response('Acesso restrito. Autenticação obrigatória.', { status: 401 });
+    }
+  } catch (err) {
+    return new Response('Erro na verificação de autenticação.', { status: 401 });
+  }
+
   const slug = params.slug;
   const assetPath = params.path;
 
@@ -12,9 +41,15 @@ export const GET: APIRoute = async ({ params }) => {
     return new Response('Asset não encontrado', { status: 404 });
   }
 
+  // Sanitização de caracteres no slug
+  if (!/^[a-z0-9-_]+$/i.test(slug)) {
+    return new Response('Slug inválido', { status: 400 });
+  }
+
   const rootDir = process.cwd();
   const fullPath = path.join(rootDir, 'leads', slug, assetPath);
 
+  // Proteção contra Path Traversal
   const normalized = path.normalize(fullPath);
   const expectedDir = path.normalize(path.join(rootDir, 'leads', slug));
   if (!normalized.startsWith(expectedDir)) {
@@ -22,7 +57,7 @@ export const GET: APIRoute = async ({ params }) => {
   }
 
   if (!fs.existsSync(normalized)) {
-    return new Response('Imagem não encontrada', { status: 404 });
+    return new Response('Arquivo não encontrado', { status: 404 });
   }
 
   const ext = path.extname(normalized).toLowerCase();
@@ -37,7 +72,7 @@ export const GET: APIRoute = async ({ params }) => {
     status: 200,
     headers: {
       'Content-Type': contentType,
-      'Cache-Control': 'public, max-age=3600'
+      'Cache-Control': 'private, no-cache, no-store, must-revalidate'
     }
   });
 };
