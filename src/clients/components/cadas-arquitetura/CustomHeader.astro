@@ -2,32 +2,48 @@
 import type { ClientConfig } from '../../schema';
 
 interface Props {
-  content: any;
+  content?: any;
   client: ClientConfig;
 }
 
 const { client } = Astro.props;
 ---
 
-<header class="sticky top-0 z-50 backdrop-blur-md border-b border-white/10" style="background-color: color-mix(in srgb, var(--color-bg) 92%, transparent);">
-  <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-    <!-- LOGO REAL DO CLIENTE -->
-    <a href="/" class="flex items-center gap-3">
-      <img src="/assets/clients/cadas-arquitetura/cadas_logo.png" alt="Cadas Arquitetura" class="h-8 md:h-10 w-auto object-contain filter brightness-0 invert opacity-95" />
+<header class="sticky top-0 z-50 backdrop-blur-xl border-b border-[#3b3631]/20 transition-all duration-300" style="background-color: rgba(22, 21, 19, 0.88);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
+    <!-- LOGO REAL DO CLIENTE COM ALTA DEFINIÇÃO -->
+    <a href="/" class="flex items-center gap-3 group">
+      <img 
+        src="/assets/clients/cadas-arquitetura/cadas_logo.png" 
+        alt="Cadas Arquitetura" 
+        class="h-8 sm:h-9 w-auto object-contain filter brightness-0 invert opacity-95 transition-opacity group-hover:opacity-100" 
+      />
     </a>
 
-    <!-- NAVEGAÇÃO AUTÊNTICA (HOME, PERFIL, PROJETOS, CONTATO) -->
-    <nav class="hidden md:flex items-center space-x-10 text-xs font-semibold tracking-widest uppercase opacity-80">
-      <a href="#projetos" class="hover:text-[var(--color-accent)] transition-colors">Projetos</a>
-      <a href="#perfil" class="hover:text-[var(--color-accent)] transition-colors">Perfil</a>
-      <a href="#filosofia" class="hover:text-[var(--color-accent)] transition-colors">Filosofia</a>
-      <a href="#contato" class="hover:text-[var(--color-accent)] transition-colors">Contato</a>
+    <!-- NAVEGAÇÃO EDITORIAL (INSPIRAÇÃO NEXUS & ELICYON) -->
+    <nav class="hidden md:flex items-center space-x-8 text-[11px] font-medium tracking-[0.2em] uppercase text-[#F5F2EB]/70">
+      <a href="#obras" class="hover:text-[#C4A482] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#C4A482] hover:after:w-full after:transition-all">Acervo de Obras</a>
+      <span class="text-white/20">/</span>
+      <a href="#atelie" class="hover:text-[#C4A482] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#C4A482] hover:after:w-full after:transition-all">O Ateliê</a>
+      <span class="text-white/20">/</span>
+      <a href="#materiais" class="hover:text-[#C4A482] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#C4A482] hover:after:w-full after:transition-all">Filosofia &amp; Matéria</a>
+      <span class="text-white/20">/</span>
+      <a href="#contato" class="hover:text-[#C4A482] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#C4A482] hover:after:w-full after:transition-all">Contato</a>
     </nav>
 
-    <!-- CONTATO DIRETO LEBLON -->
-    <div class="flex items-center gap-4">
-      <a href="https://wa.me/5521998772201" target="_blank" class="px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all hover:scale-105 shadow-md" style="background-color: var(--color-accent); color: var(--color-bg);">
-        Falar no WhatsApp
+    <!-- LOCALIZAÇÃO LEBLON & CONTATO -->
+    <div class="flex items-center gap-6">
+      <div class="hidden xl:flex flex-col text-right">
+        <span class="text-[10px] tracking-widest uppercase font-semibold text-[#C4A482]">Leblon &bull; Rio de Janeiro</span>
+        <span class="text-[10px] text-white/50 tracking-wider">Av. Ataulfo de Paiva, 1079</span>
+      </div>
+      <a 
+        href="https://wa.me/5521998772201" 
+        target="_blank" 
+        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] font-semibold tracking-widest uppercase transition-all duration-300 border border-[#C4A482]/40 hover:border-[#C4A482] hover:bg-[#C4A482] hover:text-[#161513] text-[#F5F2EB] shadow-sm"
+      >
+        <span>Agendar Consulta</span>
+        <span class="text-xs">&rarr;</span>
       </a>
     </div>
   </div>

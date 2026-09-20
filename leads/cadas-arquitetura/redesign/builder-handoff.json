@@ -1,15 +1,19 @@
 {
-  "empresa": "Cadas Arquitetura",
+  "cliente": "Cadas Arquitetura",
   "slug": "cadas-arquitetura",
-  "logoUtilizado": "/assets/clients/cadas-arquitetura/cadas_logo.png",
-  "copyPreservada": [
-    "Endereço: Av. Ataulfo de Paiva, 1079 / 802 - Leblon",
-    "Telefone: (21) 2523-2449",
-    "Equipe: Cadas Abranches, Cristiana David, Joanna Mesquitela",
-    "Projetos Reais: Projeto LW, Projeto EB Leblon, Projeto PD Leblon, Projeto BC, Apartamento Urbano, Projeto Fisher Island"
+  "siteOriginal": "https://cadas.com.br/",
+  "siteAtualMdUtilizado": "leads/cadas-arquitetura/referencias/site-atual.md",
+  "designDirectionMd": "leads/cadas-arquitetura/referencias/design-direction.md",
+  "paginasConsultadas": [
+    "https://cadas.com.br/",
+    "https://cadas.com.br/perfil/",
+    "https://cadas.com.br/projetos/",
+    "https://cadas.com.br/contato/"
   ],
+  "logoUtilizado": "/assets/clients/cadas-arquitetura/cadas_logo.png",
   "assetsUtilizados": [
     "/assets/clients/cadas-arquitetura/cadas_logo.png",
+    "/assets/clients/cadas-arquitetura/perfil.jpg",
     "/assets/clients/cadas-arquitetura/obra_lw.jpg",
     "/assets/clients/cadas-arquitetura/obra_eb.jpg",
     "/assets/clients/cadas-arquitetura/obra_pd.jpg",
@@ -17,11 +21,58 @@
     "/assets/clients/cadas-arquitetura/obra_urbano.png",
     "/assets/clients/cadas-arquitetura/obra_fisher.jpg"
   ],
-  "designSystemsUtilizados": [
-    "nexus-architecture.aura.build (Tipografia e escala)",
-    "elicyon.com (Composição e grid de projetos)",
-    "architecture-studio.aura.build (Estrutura de ateliê de arquitetura autoral)"
+  "designSystemsConsultados": [
+    {
+      "name": "nexus-architecture.aura.build",
+      "elementosAproveitados": "Marca d'água monumental de fundo (CADAS), proporção áurea editorial, linhas verticais estruturantes, escala de títulos imersivos e espaçamentos nobres."
+    },
+    {
+      "name": "elicyon.com",
+      "elementosAproveitados": "Grid cinematográfico de residências de luxo com proporções 16:11, tags de materiais nobres (Freijó, Travertino, Cumaru), fichas técnicas flutuantes e microinterações de hover."
+    },
+    {
+      "name": "architecture-studio.aura.build",
+      "elementosAproveitados": "Linhas divisórias verticais estruturantes de enquadramento (terços da página), seção de ateliê com foco no processo criativo, filosofia construtiva e biofilia."
+    }
   ],
-  "primeiraDobraAutentica": "SIM: Logo real cadas_logo.png + foto real de obra (Projeto LW) + copy legítima do ateliê do Leblon.",
+  "copyPreservada": [
+    "Fundador: Cadas Abranches",
+    "Coordenação de Projetos & Interiores: Cristiana David e Joanna Mesquitela",
+    "Endereço: Av. Ataulfo de Paiva, 1079 / 802 - Leblon, Rio de Janeiro - RJ",
+    "Telefone: (21) 2523-2449",
+    "E-mail: cadas@cadas.com.br",
+    "Projetos Autorais Reais: Projeto LW (Joá), Projeto EB Leblon, Projeto PD Leblon, Projeto BC (Litoral), Apartamento Urbano Leblon, Projeto Fisher Island (Miami)"
+  ],
+  "copyReorganizada": "Estruturada em narrativa de ateliê de alta costura arquitetônica, destacando a fusão de luz natural carioca, freijó maciço e integração de paisagem.",
+  "secoesCriadas": [
+    "CustomHeader: Logotipo oficial em alta definição, navegação com coordenadas do Leblon e CTA de consulta direta.",
+    "CustomHero: Marca d'água monumental 'CADAS', grid áureo, foto de alta resolução do Projeto LW no Joá e indicadores de acervo de 35 anos.",
+    "CustomProjects: Acervo das 6 obras reais do site original com tags de materiais táteis e índices arquitetônicos.",
+    "CustomAbout: Sessão institucional com fotografia do Cadas Abranches, manifesto do ateliê do Leblon e equipe de interiores.",
+    "CustomContact: Diálogo reservado com endereço completo do Leblon e links diretos para WhatsApp e e-mail.",
+    "CustomFooter: Rodapé minimalista autoral com créditos oficiais e navegação."
+  ],
+  "elementosPreservados": [
+    "Logo oficial autêntico cadas_logo.png",
+    "Fotografia original do arquiteto Cadas Abranches",
+    "Acervo de fotos reais em resolução 1920px das residências",
+    "Todos os dados de contato do Leblon"
+  ],
+  "melhoriasFeitas": [
+    "Eliminação completa de templates genéricos: criação de componentes exclusivos com inspiração direta nos Design Systems.",
+    "Tipografia monumental de grande escala com ritmo editorial de revista de arquitetura internacional.",
+    "Curadoria tátil com destaque para as matérias-primas nobres (freijó, travertino, cumaru).",
+    "Performance estática ultrarrápida mantendo 100% de responsividade no mobile."
+  ],
+  "decisoesVisuais": "Fundo em tom ébano profundo (#161513 e #121110) contrastando com tipografia clara (#F5F2EB) e acentos em bronze e ouro antigo (#C4A482), refletindo os materiais nobres dos projetos do escritório.",
+  "screenshots": {
+    "redesignDesktop": "leads/cadas-arquitetura/redesign/screenshots/home-desktop.png",
+    "redesignMobile": "leads/cadas-arquitetura/redesign/screenshots/home-mobile.png",
+    "originalDesktop": "leads/cadas-arquitetura/screenshots/site-desktop.png",
+    "originalMobile": "leads/cadas-arquitetura/screenshots/site-mobile.png",
+    "beforeAfterCard": "leads/cadas-arquitetura/commercial/visual/before-after.png"
+  },
+  "urlPreview": "http://127.0.0.1:4321/cadas-arquitetura/",
+  "criterioAutenticidade": "APROVADO: Esse site só poderia ter sido criado para a Cadas Arquitetura.",
   "status": "APROVADO_BUILDER"
 }
