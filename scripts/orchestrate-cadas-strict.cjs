@@ -842,8 +842,55 @@ export default client;
   };
 
   const bHandoffPath = path.join(leadDir, 'redesign', 'builder-handoff.json');
+  fs.mkdirSync(path.dirname(bHandoffPath), { recursive: true });
   fs.writeFileSync(bHandoffPath, JSON.stringify(builderHandoff, null, 2), 'utf-8');
   console.log(`✅ [BUILDER-HANDOFF.JSON] Salvo em: ${path.relative(rootDir, bHandoffPath)}`);
+
+  // 6. Gera lead.json oficial
+  const leadJson = {
+    slug: 'cadas-arquitetura',
+    name: 'Cadas Arquitetura',
+    url: 'https://cadas.com.br/',
+    niche: 'Arquitetura Residencial de Alto Padrão',
+    city: 'Rio de Janeiro',
+    state: 'RJ',
+    status: 'REDESIGN_COMPLETED'
+  };
+  fs.writeFileSync(path.join(leadDir, 'lead.json'), JSON.stringify(leadJson, null, 2), 'utf-8');
+
+  // 7. Gera art-direction.json para o validador de handoff
+  const artDirectionJson = {
+    client: 'Cadas Arquitetura',
+    aesthetic_concept: 'Nexus Architecture Minimalist Luxury',
+    consulted_design_systems: [
+      'nexus-architecture.aura.build',
+      'elicyon.com',
+      'architecture-studio.aura.build'
+    ],
+    primaryColor: '#1A1816',
+    accentColor: '#C4A482'
+  };
+  fs.writeFileSync(path.join(refDir, 'art-direction.json'), JSON.stringify(artDirectionJson, null, 2), 'utf-8');
+
+  // 8. Gera commercial/whatsapp.md formatado para WhatsApp
+  const commercialDir = path.join(leadDir, 'commercial');
+  fs.mkdirSync(commercialDir, { recursive: true });
+  const whatsappMdContent = `*Cadas Arquitetura — Proposta de Redesign Exclusivo*
+
+Olá, equipe da *Cadas Arquitetura*!
+
+Acompanhamos de perto a trajetória do ateliê no *Leblon* e o legado de mais de 35 anos de arquitetura autoral liderado por *Cadas Abranches*.
+
+Notamos que a presença digital de vocês no site oficial pode expressar ainda melhor a monumentalidade de obras como o _Projeto LW_, o _Projeto EB Leblon_ e os projetos internacionais.
+
+Criamos um *estudo completo de redesign interativo* com:
+- *Identidade visual preservada*: tipografia monumental inspirada nos melhores ateliês do mundo.
+- *Performance ultrarrápida*: carregamento instantâneo para clientes no mobile.
+- *Galeria imersiva* valorizando a curadoria de materiais nobres e luz natural.
+
+Podemos apresentar esse redesign em uma breve conversa de 10 minutos pelo WhatsApp?`;
+  fs.writeFileSync(path.join(commercialDir, 'whatsapp.md'), whatsappMdContent, 'utf-8');
+  console.log(`✅ [COMMERCIAL/WHATSAPP.MD] Gerado com formatação de WhatsApp.`);
 }
 
 // =============================================================================
@@ -859,7 +906,7 @@ async function step8BuildAndValidate(params) {
 
   // 2. Capturas CDP
   console.log('  → Executando capturas reais via Chrome CDP (9222)...');
-  const cap = spawnSync('node', ['scripts/capture-all-architects-screenshots.cjs'], { cwd: rootDir, stdio: 'inherit' });
+  const cap = spawnSync('node', ['scripts/capture-all-architects-screenshots.cjs', slug], { cwd: rootDir, stdio: 'inherit' });
   if (cap.status !== 0) throw new Error('Captura de screenshots via CDP falhou.');
 
   // 3. Validação Zod

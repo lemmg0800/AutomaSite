@@ -1,14 +1,14 @@
-Olá, tudo bem? Aqui é o Eduardo.
+*Cadas Arquitetura — Proposta de Redesign Exclusivo*
 
-Estava admirando as publicações e o portfólio da *Cadas Arquitetura* no Rio de Janeiro, especialmente as soluções no Joá e em Ipanema com freijó maciço e integração com o mar.
+Olá, equipe da *Cadas Arquitetura*!
 
-Percebi, no entanto, que o site atual do escritório no celular demora mais de 4 segundos para carregar imagens e não oferece um botão imediato para clientes de alto padrão entrarem em contato pelo WhatsApp.
+Acompanhamos de perto a trajetória do ateliê no *Leblon* e o legado de mais de 35 anos de arquitetura autoral liderado por *Cadas Abranches*.
 
-Para demonstrar como a presença digital de vocês pode refletir o mesmo requinte das suas obras, desenhamos uma *prévia interativa exclusiva* para a *Cadas Arquitetura*.
+Notamos que a presença digital de vocês no site oficial pode expressar ainda melhor a monumentalidade de obras como o _Projeto LW_, o _Projeto EB Leblon_ e os projetos internacionais.
 
-Ficou com carregamento em *menos de 1 segundo*, tipografia editorial nobre e botão direto para atendimento da diretoria.
+Criamos um *estudo completo de redesign interativo* com:
+- *Identidade visual preservada*: tipografia monumental inspirada nos melhores ateliês do mundo.
+- *Performance ultrarrápida*: carregamento instantâneo para clientes no mobile.
+- *Galeria imersiva* valorizando a curadoria de materiais nobres e luz natural.
 
-Posso te enviar o link de demonstração para você avaliar com o *Cadas Abranches*?
-
-Um grande abraço,
-*Eduardo | Estrategista Digital de Arquitetura*
+Podemos apresentar esse redesign em uma breve conversa de 10 minutos pelo WhatsApp?

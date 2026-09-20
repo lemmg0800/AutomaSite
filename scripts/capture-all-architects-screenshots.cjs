@@ -1,20 +1,23 @@
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
-const { spawn, execSync } = require('child_process');
+const { spawn, spawnSync, execSync } = require('child_process');
 const sharp = require('sharp');
 
 const rootDir = path.resolve(__dirname, '..');
 const distClientDir = path.join(rootDir, 'dist', 'client');
 const leadsDir = path.join(rootDir, 'leads');
 
-const TOP_SLUGS = [
+const DEFAULT_SLUGS = [
   'cadas-arquitetura',
   'bernardes-arquitetura',
   'gisele-taranto-arquitetura',
   'jacobsen-arquitetura',
   'duda-porto-arquitetura'
 ];
+
+const targetArg = process.argv[2];
+const TOP_SLUGS = targetArg ? [targetArg] : DEFAULT_SLUGS;
 
 // URLs dos sites originais ou espelhos
 const ORIGINAL_URLS = {
@@ -101,23 +104,15 @@ async function ensureChromeCDP() {
     }
   } catch {}
 
-  console.log('[CHROME CDP] CDP não disponível. Iniciando Google Chrome...');
-  const chromePath = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
-  const profileDir = path.join(process.env.LOCALAPPDATA || 'C:\\Users\\Eduardo\\AppData\\Local', 'Antigravity-CDP-Profile');
+  console.log('[CHROME CDP] CDP não disponível. Iniciando Google Chrome conforme regra do usuário...');
+  const psCmd = `
+    $chrome = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+    $profile = "$env:LOCALAPPDATA\\Antigravity-CDP-Profile"
+    Start-Process $chrome -ArgumentList "--remote-debugging-address=127.0.0.1", "--remote-debugging-port=9222", "--user-data-dir=$profile", "--no-first-run", "--no-default-browser-check", "about:blank"
+  `;
+  spawnSync('powershell', ['-ExecutionPolicy', 'Bypass', '-Command', psCmd], { stdio: 'inherit' });
 
-  const args = [
-    '--remote-debugging-address=127.0.0.1',
-    '--remote-debugging-port=9222',
-    `--user-data-dir=${profileDir}`,
-    '--no-first-run',
-    '--no-default-browser-check',
-    'about:blank'
-  ];
-
-  const chromeProc = spawn(chromePath, args, { detached: true, stdio: 'ignore' });
-  chromeProc.unref();
-
-  await sleep(3000);
+  await sleep(4000);
 
   const testRes = await fetch('http://127.0.0.1:9222/json/version');
   const testData = await testRes.json();
@@ -252,6 +247,7 @@ async function createBeforeAfterCard(slug, name) {
     </svg>
   `);
 
+  fs.mkdirSync(path.dirname(cardOut), { recursive: true });
   await sharp(svgHeader)
     .composite([
       { input: origBuf, top: 80, left: 20 },

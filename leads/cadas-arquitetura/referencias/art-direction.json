@@ -1,34 +1,11 @@
 {
-  "slug": "cadas-arquitetura",
-  "name": "Cadas Arquitetura",
-  "aesthetic_concept": "Editorial Minimalist & Coastal Sophistication",
+  "client": "Cadas Arquitetura",
+  "aesthetic_concept": "Nexus Architecture Minimalist Luxury",
   "consulted_design_systems": [
     "nexus-architecture.aura.build",
     "elicyon.com",
-    "temas_claros/editorial_minimalist.json"
+    "architecture-studio.aura.build"
   ],
-  "extracted_elements": {
-    "nexus": {
-      "role": "Tipografia monumental e proporções áureas de arquitetura",
-      "snippet": "<!DOCTYPE html> <html class=\"scroll-smooth\" lang=\"pt-BR\"> <head> <meta charset=\"utf-8\"/> <meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/> <title>Nexus Architecture</title> <!-- fonts (Google fonts: Inter & Google Sans Flex stylesheets) --> <link href=\"assets/css2_66f3f89ececa.css\" rel=\"stylesheet\"/> <link href=\"assets/css2_bd407d5ceb4b.css\" rel=\"stylesheet\"/> <!-- css --> <!"
-    },
-    "elicyon": {
-      "role": "Grid de interiores de luxo e harmonia de materiais nobres",
-      "snippet": "<!DOCTYPE html> <html class=\"lenis\" lang=\"en\"><head><meta charset=\"utf-8\"/><meta content=\"width=device-width\" name=\"viewport\"/><meta content=\"ie=edge\" http-equiv=\"x-ua-compatible\"/><meta content=\"index,follow\" name=\"googlebot\"/><meta content=\"Elicyon\" name=\"author\"/><meta content=\"no-referrer\" name=\"referrer\"/><meta content=\"telephone=no\" name=\"format-detection\"/><meta content=\"US\" name=\"geo.regio"
-    },
-    "editorial_minimalist": {
-      "role": "Paleta cromática quente: areia, freijó e travertino"
-    }
-  },
-  "palette": {
-    "background": "#0F0E0D",
-    "surface": "#1A1816",
-    "card": "#2C2825",
-    "accent": "#C4A482",
-    "text": "#F5F2EB"
-  },
-  "typography": {
-    "heading": "Playfair Display",
-    "body": "Plus Jakarta Sans"
-  }
+  "primaryColor": "#1A1816",
+  "accentColor": "#C4A482"
 }
