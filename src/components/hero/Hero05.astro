@@ -1,0 +1,85 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    headline: string;
+    subheadline?: string;
+    primaryCtaLabel?: string;
+    primaryCtaHref?: string;
+    secondaryCtaLabel?: string;
+    secondaryCtaHref?: string;
+    trustPoints?: string[];
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const rawPhone = client?.business?.whatsapp || client?.business?.phone || '';
+const cleanPhone = rawPhone.replace(/\D/g, '');
+const defaultCta = cleanPhone ? `https://wa.me/55${cleanPhone}` : '#contato';
+
+const primaryText = content?.primaryCtaLabel || (content as any)?.primaryCta?.text || "Falar com Consultor";
+const primaryLink = content?.primaryCtaHref || (content as any)?.primaryCta?.href || defaultCta;
+const secondaryText = content?.secondaryCtaLabel || (content as any)?.secondaryCta?.text;
+const secondaryLink = content?.secondaryCtaHref || (content as any)?.secondaryCta?.href || '#servicos';
+---
+
+<section class="relative pt-24 pb-28 sm:pt-32 sm:pb-36 overflow-hidden flex items-center justify-center text-center">
+  <!-- Dynamic Glow Background -->
+  <div class="absolute inset-0 pointer-events-none flex items-center justify-center overflow-hidden">
+    <div class="w-[680px] h-[400px] rounded-full blur-[140px] opacity-25" style="background: radial-gradient(circle, var(--color-accent) 0%, transparent 70%);"></div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+    {content.badge && (
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase mb-8 border border-white/10 bg-white/5 backdrop-blur-md shadow-sm" style="color: var(--color-accent);">
+        <span class="w-2 h-2 rounded-full animate-ping" style="background-color: var(--color-accent);"></span>
+        <span>{content.badge}</span>
+      </div>
+    )}
+
+    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] mb-8" style="font-family: var(--font-heading);">
+      {content.headline}
+    </h1>
+
+    {content.subheadline && (
+      <p class="text-lg sm:text-xl leading-relaxed opacity-85 font-light max-w-2xl mx-auto mb-10 text-slate-300">
+        {content.subheadline}
+      </p>
+    )}
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+      <a 
+        href={primaryLink}
+        target="_blank"
+        class="w-full sm:w-auto px-9 py-4 rounded-xl font-bold text-sm tracking-wider uppercase transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-2xl flex items-center justify-center gap-2 shadow-lg"
+        style="background: linear-gradient(135deg, var(--color-accent) 0%, color-mix(in srgb, var(--color-accent) 80%, black) 100%); color: var(--color-bg);"
+      >
+        <span>{primaryText}</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </a>
+
+      {secondaryText && (
+        <a 
+          href={secondaryLink}
+          class="w-full sm:w-auto px-7 py-4 rounded-xl border border-white/15 hover:border-white/30 text-sm font-medium transition-all bg-white/[0.04] hover:bg-white/[0.08] text-white"
+        >
+          {secondaryText}
+        </a>
+      )}
+    </div>
+
+    {content.trustPoints && content.trustPoints.length > 0 && (
+      <div class="flex flex-wrap items-center justify-center gap-6 pt-8 border-t border-white/10 text-xs opacity-80 text-slate-300">
+        {content.trustPoints.map(point => (
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-sm" style="color: var(--color-accent);">✓</span>
+            <span>{point}</span>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+</section>

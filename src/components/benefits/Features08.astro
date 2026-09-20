@@ -1,0 +1,68 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    title: string;
+    subtitle?: string;
+    timeline: Array<{
+      time: string;
+      title: string;
+      description: string;
+      badge?: string;
+    }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const timeline = content?.timeline || (content as any)?.items || [];
+---
+
+<section class="py-24" style="background-color: var(--color-bg);">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-16">
+      {content.badge && (
+        <span class="text-xs font-mono uppercase tracking-widest block mb-2" style="color: var(--color-accent);">
+          {content.badge}
+        </span>
+      )}
+      <h2 class="text-3xl sm:text-5xl font-bold" style="font-family: var(--font-heading);">
+        {content.title || "Evolução & Metodologia"}
+      </h2>
+      {content.subtitle && (
+        <p class="text-sm sm:text-base text-slate-300 font-light mt-3">
+          {content.subtitle}
+        </p>
+      )}
+    </div>
+
+    <div class="relative border-l border-white/15 ml-4 sm:ml-32 space-y-12">
+      {timeline.map(item => (
+        <div class="relative pl-8 sm:pl-12 group">
+          <!-- Dot -->
+          <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full border border-white" style="background-color: var(--color-accent);"></div>
+          
+          <div class="sm:absolute sm:-left-32 sm:top-1 text-xs font-mono font-bold text-slate-400 mb-2 sm:mb-0">
+            {item.time}
+          </div>
+
+          <div class="p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-white/20 transition-all">
+            {item.badge && (
+              <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded border border-white/10 text-slate-400 mb-2 inline-block">
+                {item.badge}
+              </span>
+            )}
+            <h3 class="text-lg font-bold text-white mb-2" style="font-family: var(--font-heading);">
+              {item.title}
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

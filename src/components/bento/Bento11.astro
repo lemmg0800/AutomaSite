@@ -1,0 +1,72 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    title: string;
+    subtitle?: string;
+    showcases: Array<{
+      title: string;
+      description: string;
+      category?: string;
+      span?: string; // col-span
+      image?: string;
+    }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const showcases = content?.showcases || [
+  { title: "Arquitetura Residencial de Alto Padrão", description: "Mansões e coberturas projetadas com sofisticação atemporal.", category: "RESIDENCIAL", span: "md:col-span-8" },
+  { title: "Interiores Corporativos", description: "Ambientes projetados para impulsionar foco e prestígio empresarial.", category: "CORPORATIVO", span: "md:col-span-4" },
+  { title: "Design de Mobiliário Autoral", description: "Peças customizadas sob medida para cada cliente.", category: "DESIGN", span: "md:col-span-4" },
+  { title: "Espaços Gastronômicos & Hospitality", description: "Atmosferas sensoriais concebidas para permanência e acolhimento.", category: "COMERCIAL", span: "md:col-span-8" }
+];
+---
+
+<section class="py-24" style="background-color: var(--color-bg);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="max-w-2xl mb-16">
+      {content.badge && (
+        <span class="text-xs font-mono uppercase tracking-widest block mb-2" style="color: var(--color-accent);">
+          {content.badge}
+        </span>
+      )}
+      <h2 class="text-3xl sm:text-5xl font-bold" style="font-family: var(--font-heading);">
+        {content.title || "Portfólio em Mosaico"}
+      </h2>
+      {content.subtitle && (
+        <p class="text-sm sm:text-base text-slate-300 font-light mt-3">
+          {content.subtitle}
+        </p>
+      )}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+      {showcases.map((s, idx) => (
+        <div class={`${s.span || "md:col-span-6"} p-8 sm:p-10 rounded-3xl border border-white/10 bg-white/[0.02] hover:border-white/20 transition-all flex flex-col justify-between group overflow-hidden`} style={idx === 0 ? "background-color: color-mix(in srgb, var(--color-secondary) 35%, transparent);" : ""}>
+          <div>
+            <div class="flex items-center justify-between mb-8">
+              <span class="text-[10px] font-mono uppercase px-2.5 py-1 rounded-full border border-white/10 bg-white/5" style="color: var(--color-accent);">
+                {s.category || "PROJETO"}
+              </span>
+              <span class="text-xs font-mono text-slate-500">0{idx + 1}</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-white mb-3" style="font-family: var(--font-heading);">
+              {s.title}
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed max-w-lg">
+              {s.description}
+            </p>
+          </div>
+          <div class="mt-10 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-slate-400">
+            <span>{client.business.city}</span>
+            <span class="opacity-0 group-hover:opacity-100 transition-opacity" style="color: var(--color-accent);">&rarr;</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

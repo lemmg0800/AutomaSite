@@ -7,6 +7,38 @@ import Hero01 from './hero/Hero01.astro';
 import Hero02 from './hero/Hero02.astro';
 import Hero03 from './hero/Hero03.astro';
 import Hero04 from './hero/Hero04.astro';
+import Hero05 from './hero/Hero05.astro';
+import Hero06 from './hero/Hero06.astro';
+import Hero07 from './hero/Hero07.astro';
+import Hero08 from './hero/Hero08.astro';
+import Hero09 from './hero/Hero09.astro';
+import Hero10 from './hero/Hero10.astro';
+import Hero11 from './hero/Hero11.astro';
+
+// Features & Benefits
+import Benefits01 from './benefits/Benefits01.astro';
+import Features01 from './benefits/Features01.astro';
+import Features02 from './benefits/Features02.astro';
+import Features03 from './benefits/Features03.astro';
+import Features04 from './benefits/Features04.astro';
+import Features05 from './benefits/Features05.astro';
+import Features06 from './benefits/Features06.astro';
+import Features07 from './benefits/Features07.astro';
+import Features08 from './benefits/Features08.astro';
+
+// Bento Modules
+import Bento01 from './bento/Bento01.astro';
+import Bento02 from './bento/Bento02.astro';
+import Bento03 from './bento/Bento03.astro';
+import Bento04 from './bento/Bento04.astro';
+import Bento05 from './bento/Bento05.astro';
+import Bento06 from './bento/Bento06.astro';
+import Bento07 from './bento/Bento07.astro';
+import Bento08 from './bento/Bento08.astro';
+import Bento09 from './bento/Bento09.astro';
+import Bento10 from './bento/Bento10.astro';
+import Bento11 from './bento/Bento11.astro';
+import Bento12 from './bento/Bento12.astro';
 
 // Services, Products, Projects, Gallery
 import Services01 from './services/Services01.astro';
@@ -19,7 +51,6 @@ import Gallery01 from './gallery/Gallery01.astro';
 // About, Team, Benefits, Process, Stats
 import About01 from './about/About01.astro';
 import Team01 from './team/Team01.astro';
-import Benefits01 from './benefits/Benefits01.astro';
 import Process01 from './process/Process01.astro';
 import Stats01 from './stats/Stats01.astro';
 
@@ -47,7 +78,14 @@ export const COMPONENT_REGISTRY = {
     Hero01,
     Hero02,
     Hero03,
-    Hero04
+    Hero04,
+    Hero05,
+    Hero06,
+    Hero07,
+    Hero08,
+    Hero09,
+    Hero10,
+    Hero11
   },
   services: {
     Services01,
@@ -70,7 +108,29 @@ export const COMPONENT_REGISTRY = {
     Team01
   },
   benefits: {
-    Benefits01
+    Benefits01,
+    Features01,
+    Features02,
+    Features03,
+    Features04,
+    Features05,
+    Features06,
+    Features07,
+    Features08
+  },
+  bento: {
+    Bento01,
+    Bento02,
+    Bento03,
+    Bento04,
+    Bento05,
+    Bento06,
+    Bento07,
+    Bento08,
+    Bento09,
+    Bento10,
+    Bento11,
+    Bento12
   },
   process: {
     Process01

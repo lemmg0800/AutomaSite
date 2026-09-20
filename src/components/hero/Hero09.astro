@@ -1,0 +1,82 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    headline: string;
+    subheadline?: string;
+    primaryCtaLabel?: string;
+    primaryCtaHref?: string;
+    secondaryCtaLabel?: string;
+    secondaryCtaHref?: string;
+    keypoints?: string[];
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const rawPhone = client?.business?.whatsapp || client?.business?.phone || '';
+const cleanPhone = rawPhone.replace(/\D/g, '');
+const defaultCta = cleanPhone ? `https://wa.me/55${cleanPhone}` : '#contato';
+
+const primaryText = content?.primaryCtaLabel || "Agende uma Conversa";
+const primaryLink = content?.primaryCtaHref || defaultCta;
+const secondaryText = content?.secondaryCtaLabel;
+const secondaryLink = content?.secondaryCtaHref || '#servicos';
+---
+
+<section class="relative pt-24 pb-20 border-b border-white/10 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16">
+      <div class="lg:col-span-8">
+        {content.badge && (
+          <div class="text-xs font-mono uppercase tracking-widest mb-4" style="color: var(--color-accent);">
+            // {content.badge}
+          </div>
+        )}
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight uppercase leading-[0.95]" style="font-family: var(--font-heading);">
+          {content.headline}
+        </h1>
+      </div>
+
+      <div class="lg:col-span-4 flex flex-col justify-end">
+        {content.subheadline && (
+          <p class="text-base text-slate-300 font-light leading-relaxed mb-6">
+            {content.subheadline}
+          </p>
+        )}
+        <div class="flex items-center gap-4">
+          <a 
+            href={primaryLink}
+            target="_blank"
+            class="px-6 py-3.5 rounded-lg font-bold text-xs uppercase tracking-widest transition-all hover:opacity-90"
+            style="background-color: var(--color-accent); color: var(--color-bg);"
+          >
+            {primaryText}
+          </a>
+          {secondaryText && (
+            <a 
+              href={secondaryLink}
+              class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-white transition-colors flex items-center gap-1"
+            >
+              <span>{secondaryText}</span>
+              <span>&rarr;</span>
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+
+    {content.keypoints && content.keypoints.length > 0 && (
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10 border-t border-white/10">
+        {content.keypoints.map((k, idx) => (
+          <div class="p-5 rounded-xl bg-white/[0.02] border border-white/5">
+            <div class="font-mono text-xs text-slate-500 mb-2">0{idx + 1}</div>
+            <div class="text-sm font-semibold text-white">{k}</div>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+</section>

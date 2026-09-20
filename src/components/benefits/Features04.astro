@@ -1,0 +1,88 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    title: string;
+    subtitle?: string;
+    flagship: {
+      title: string;
+      description: string;
+      tag?: string;
+    };
+    items: Array<{
+      title: string;
+      description: string;
+    }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const items = content?.items || [];
+const flagship = content?.flagship || items[0] || {
+  title: "Metodologia Sob Medida",
+  description: "Abordagem exclusiva e orientada a resultados mensuráveis.",
+  tag: "DESTAQUE"
+};
+const sideItems = items.length > 0 ? items.slice(0, 3) : [
+  { title: "Precisão Operacional", description: "Processos auditados e equipe sênior dedicada." },
+  { title: "Atendimento Consultivo", description: "Comunicação contínua e alinhamento com os objetivos da sua empresa." },
+  { title: "Segurança Jurídica & Técnica", description: "Conformidade total com as melhores práticas e regulamentações." }
+];
+---
+
+<section class="py-24" style="background-color: var(--color-bg);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="mb-16 max-w-2xl">
+      {content.badge && (
+        <span class="text-xs font-mono uppercase tracking-widest block mb-2" style="color: var(--color-accent);">
+          {content.badge}
+        </span>
+      )}
+      <h2 class="text-3xl sm:text-5xl font-bold" style="font-family: var(--font-heading);">
+        {content.title || "Capacidades Distintivas"}
+      </h2>
+      {content.subtitle && (
+        <p class="text-sm sm:text-base text-slate-300 font-light mt-3">
+          {content.subtitle}
+        </p>
+      )}
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <!-- Big Card / Flagship -->
+      <div class="lg:col-span-7 p-10 rounded-3xl border border-white/10 relative overflow-hidden flex flex-col justify-between" style="background-color: var(--color-secondary);">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest px-3 py-1 rounded-full border border-white/10 bg-white/5 inline-block mb-6" style="color: var(--color-accent);">
+            {flagship.tag || "DESTAQUE"}
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4" style="font-family: var(--font-heading);">
+            {flagship.title}
+          </h3>
+          <p class="text-base text-slate-300 font-light leading-relaxed">
+            {flagship.description}
+          </p>
+        </div>
+        <div class="mt-8 pt-8 border-t border-white/10 text-xs font-mono text-slate-400">
+          PADRÃO DE REFERÊNCIA // {client.business.name.toUpperCase()}
+        </div>
+      </div>
+
+      <!-- Side Cards -->
+      <div class="lg:col-span-5 flex flex-col gap-6">
+        {sideItems.map(item => (
+          <div class="p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-white/20 transition-all">
+            <h4 class="text-base font-bold text-white mb-2" style="font-family: var(--font-heading);">
+              {item.title}
+            </h4>
+            <p class="text-xs text-slate-300 font-light leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

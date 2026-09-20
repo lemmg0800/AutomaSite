@@ -66,7 +66,8 @@ export const SECTION_TYPES = [
   'contact',
   'map',
   'cta',
-  'footer'
+  'footer',
+  'bento'
 ] as const;
 
 export const SectionConfigSchema = z.object({

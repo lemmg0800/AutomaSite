@@ -1,0 +1,78 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    headline: string;
+    subheadline?: string;
+    primaryCtaLabel?: string;
+    primaryCtaHref?: string;
+    secondaryCtaLabel?: string;
+    secondaryCtaHref?: string;
+    socialProofAvatars?: string[];
+    socialProofText?: string;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const rawPhone = client?.business?.whatsapp || client?.business?.phone || '';
+const cleanPhone = rawPhone.replace(/\D/g, '');
+const defaultCta = cleanPhone ? `https://wa.me/55${cleanPhone}` : '#contato';
+
+const primaryText = content?.primaryCtaLabel || "Solicitar Atendimento";
+const primaryLink = content?.primaryCtaHref || defaultCta;
+const secondaryText = content?.secondaryCtaLabel;
+const secondaryLink = content?.secondaryCtaHref || '#sobre';
+---
+
+<section class="relative pt-24 pb-24 text-center overflow-hidden">
+  <!-- Radial Beam / Ambient Light -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-96 bg-[radial-gradient(ellipse_at_top,_var(--color-accent)_0%,_transparent_70%)] opacity-20 pointer-events-none"></div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+    <!-- Social Proof Header Chip -->
+    <div class="inline-flex items-center gap-3 p-1.5 pr-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8">
+      <div class="flex -space-x-2">
+        <span class="inline-block w-6 h-6 rounded-full bg-slate-700 border-2 border-slate-900 text-[10px] flex items-center justify-center font-bold">★</span>
+        <span class="inline-block w-6 h-6 rounded-full bg-slate-600 border-2 border-slate-900 text-[10px] flex items-center justify-center font-bold">★</span>
+        <span class="inline-block w-6 h-6 rounded-full bg-slate-500 border-2 border-slate-900 text-[10px] flex items-center justify-center font-bold">★</span>
+      </div>
+      <span class="text-xs text-slate-300 font-medium">
+        {content.socialProofText || `Avaliação 5.0 estrelas pelos clientes em ${client.business.city}`}
+      </span>
+    </div>
+
+    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] mb-8" style="font-family: var(--font-heading);">
+      {content.headline}
+    </h1>
+
+    {content.subheadline && (
+      <p class="text-lg sm:text-xl text-slate-300 font-light leading-relaxed max-w-2xl mx-auto mb-10">
+        {content.subheadline}
+      </p>
+    )}
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a 
+        href={primaryLink}
+        target="_blank"
+        class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-sm tracking-wider uppercase transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-2xl flex items-center justify-center gap-2"
+        style="background-color: var(--color-accent); color: var(--color-bg);"
+      >
+        <span>{primaryText}</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </a>
+
+      {secondaryText && (
+        <a 
+          href={secondaryLink}
+          class="w-full sm:w-auto px-7 py-4 rounded-xl border border-white/15 hover:border-white/30 text-sm font-medium transition-all bg-white/[0.02] hover:bg-white/[0.06] text-white"
+        >
+          {secondaryText}
+        </a>
+      )}
+    </div>
+  </div>
+</section>

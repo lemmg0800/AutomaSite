@@ -1,0 +1,85 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    headline: string;
+    subheadline?: string;
+    primaryCtaLabel?: string;
+    primaryCtaHref?: string;
+    secondaryCtaLabel?: string;
+    secondaryCtaHref?: string;
+    stats?: Array<{ value: string; label: string }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const rawPhone = client?.business?.whatsapp || client?.business?.phone || '';
+const cleanPhone = rawPhone.replace(/\D/g, '');
+const defaultCta = cleanPhone ? `https://wa.me/55${cleanPhone}` : '#contato';
+
+const primaryText = content?.primaryCtaLabel || "Iniciar Projeto";
+const primaryLink = content?.primaryCtaHref || defaultCta;
+const secondaryText = content?.secondaryCtaLabel;
+const secondaryLink = content?.secondaryCtaHref || '#servicos';
+---
+
+<section class="relative min-h-[85vh] flex items-center pt-28 pb-20 overflow-hidden">
+  <!-- Subtle Grid Background -->
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 w-full">
+    <div class="max-w-3xl">
+      {content.badge && (
+        <div class="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-full text-xs font-mono tracking-widest uppercase mb-8 border border-white/10 bg-white/5 backdrop-blur-md" style="color: var(--color-accent);">
+          <span class="w-1.5 h-1.5 rounded-full" style="background-color: var(--color-accent);"></span>
+          <span>{content.badge}</span>
+        </div>
+      )}
+
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.06] mb-8" style="font-family: var(--font-heading);">
+        {content.headline}
+      </h1>
+
+      {content.subheadline && (
+        <p class="text-lg sm:text-xl text-slate-300 font-light leading-relaxed mb-10 max-w-2xl">
+          {content.subheadline}
+        </p>
+      )}
+
+      <div class="flex flex-wrap items-center gap-4 mb-14">
+        <a 
+          href={primaryLink}
+          target="_blank"
+          class="px-8 py-4 rounded-xl font-bold text-sm tracking-wider uppercase transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-xl flex items-center gap-2"
+          style="background-color: var(--color-accent); color: var(--color-bg);"
+        >
+          <span>{primaryText}</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+
+        {secondaryText && (
+          <a 
+            href={secondaryLink}
+            class="px-7 py-4 rounded-xl border border-white/15 hover:border-white/30 text-sm font-medium transition-all bg-white/[0.03] hover:bg-white/[0.07] text-white"
+          >
+            {secondaryText}
+          </a>
+        )}
+      </div>
+
+      {content.stats && content.stats.length > 0 && (
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 pt-8 border-t border-white/10">
+          {content.stats.map(s => (
+            <div>
+              <div class="text-3xl sm:text-4xl font-extrabold font-mono" style="color: var(--color-accent);">{s.value}</div>
+              <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">{s.label}</div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+</section>

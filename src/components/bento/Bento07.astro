@@ -1,0 +1,70 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    title: string;
+    subtitle?: string;
+    services: Array<{
+      title: string;
+      description: string;
+      icon?: string;
+    }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const services = content?.services || [
+  { title: "Projetos Arquitetônicos", description: "Criação integral desde o plano diretor até o detalhamento de acabamentos.", icon: "🏛️" },
+  { title: "Design de Interiores", description: "Especificação de marcenaria sob medida, iluminação técnica e mobiliário.", icon: "🛋️" },
+  { title: "Gestão e Fiscalização", description: "Supervisão diária com controle rigoroso de qualidade e custos.", icon: "📋" },
+  { title: "Consultoria Pré-Compra", description: "Análise técnica de terrenos ou imóveis para viabilizar investimentos seguros.", icon: "🔍" },
+  { title: "Projetos Corporativos", description: "Ambientes estratégicos desenhados para retenção de talentos e produtividade.", icon: "🏢" }
+];
+---
+
+<section class="py-24" style="background-color: var(--color-bg);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="max-w-2xl mb-16">
+      {content.badge && (
+        <span class="text-xs font-mono uppercase tracking-widest block mb-2" style="color: var(--color-accent);">
+          {content.badge}
+        </span>
+      )}
+      <h2 class="text-3xl sm:text-5xl font-bold" style="font-family: var(--font-heading);">
+        {content.title || "Especialidades"}
+      </h2>
+      {content.subtitle && (
+        <p class="text-sm sm:text-base text-slate-300 font-light mt-3">
+          {content.subtitle}
+        </p>
+      )}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+      {services.map((s, idx) => {
+        // Layout assimétrico: os 2 primeiros ocupam 3 colunas, os próximos ocupam 2 colunas
+        const colClass = idx < 2 ? "md:col-span-3" : "md:col-span-2";
+        return (
+          <div class={`${colClass} p-8 rounded-3xl border border-white/10 bg-white/[0.02] hover:border-white/20 transition-all flex flex-col justify-between group`}>
+            <div>
+              <div class="text-3xl mb-4">{s.icon || "✦"}</div>
+              <h3 class="text-lg font-bold text-white mb-2" style="font-family: var(--font-heading);">
+                {s.title}
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed">
+                {s.description}
+              </p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-white/5 text-[10px] font-mono text-slate-500 flex justify-between items-center">
+              <span>0{idx + 1}</span>
+              <span class="opacity-0 group-hover:opacity-100 transition-opacity" style="color: var(--color-accent);">&rarr;</span>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>

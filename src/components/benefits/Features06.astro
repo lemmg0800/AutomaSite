@@ -1,0 +1,52 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    title: string;
+    subtitle?: string;
+    metrics: Array<{
+      value: string;
+      label: string;
+      detail?: string;
+    }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const metrics = content?.metrics || (content as any)?.items || [];
+---
+
+<section class="py-24" style="background-color: var(--color-bg);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      {content.badge && (
+        <span class="text-xs font-mono uppercase tracking-widest block mb-2" style="color: var(--color-accent);">
+          {content.badge}
+        </span>
+      )}
+      <h2 class="text-3xl sm:text-5xl font-bold" style="font-family: var(--font-heading);">
+        {content.title || "Impacto Comprovado"}
+      </h2>
+      {content.subtitle && (
+        <p class="text-sm sm:text-base text-slate-300 font-light mt-3">
+          {content.subtitle}
+        </p>
+      )}
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {metrics.map(m => (
+        <div class="p-8 rounded-3xl border border-white/10 bg-white/[0.02] text-center hover:border-white/20 transition-all">
+          <div class="text-4xl sm:text-5xl font-extrabold font-mono mb-2" style="color: var(--color-accent);">
+            {m.value}
+          </div>
+          <div class="text-sm font-bold text-white mb-2">{m.label}</div>
+          {m.detail && <p class="text-xs text-slate-400 font-light">{m.detail}</p>}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

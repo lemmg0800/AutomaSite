@@ -1,0 +1,80 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    title: string;
+    subtitle?: string;
+    showcases: Array<{
+      title: string;
+      category: string;
+      description: string;
+      image?: string;
+    }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const showcases = content?.showcases || [
+  { title: "Residencial Atlântica", category: "Arquitetura & Interiores", description: "Integração total entre interiores e paisagismo litorâneo." },
+  { title: "Edifício Horizon Corporate", category: "Comercial & Corporativo", description: "Lajes corporativas de alta eficiência acústica e térmica." }
+];
+---
+
+<section class="py-24 border-y border-white/5" style="background-color: color-mix(in srgb, var(--color-secondary) 20%, transparent);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div class="max-w-xl">
+        {content.badge && (
+          <span class="text-xs font-mono uppercase tracking-widest block mb-2" style="color: var(--color-accent);">
+            {content.badge}
+          </span>
+        )}
+        <h2 class="text-3xl sm:text-5xl font-bold" style="font-family: var(--font-heading);">
+          {content.title || "Projetos em Evidência"}
+        </h2>
+        {content.subtitle && (
+          <p class="text-sm sm:text-base text-slate-300 font-light mt-3">
+            {content.subtitle}
+          </p>
+        )}
+      </div>
+      <div class="text-xs font-mono text-slate-400">
+        OBRAS AUTORAIS // {client.business.city.toUpperCase()}
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {showcases.map((s, idx) => (
+        <div class="rounded-3xl border border-white/10 overflow-hidden bg-white/[0.02] hover:border-white/25 transition-all group">
+          <div class="aspect-[16/10] bg-slate-900 relative overflow-hidden flex items-center justify-center">
+            {s.image ? (
+              <img src={s.image} alt={s.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            ) : (
+              <div class="p-8 text-center">
+                <div class="text-4xl mb-2" style="color: var(--color-accent);">✦</div>
+                <div class="text-xs uppercase font-mono text-slate-400">{s.category}</div>
+              </div>
+            )}
+            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-[10px] font-mono text-slate-300">
+              0{idx + 1}
+            </div>
+          </div>
+          <div class="p-8">
+            <span class="text-xs font-mono uppercase tracking-wider block mb-2" style="color: var(--color-accent);">
+              {s.category}
+            </span>
+            <h3 class="text-xl font-bold text-white mb-2" style="font-family: var(--font-heading);">
+              {s.title}
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed">
+              {s.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,90 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    title: string;
+    subtitle?: string;
+    heroCard: {
+      title: string;
+      description: string;
+      image?: string;
+    };
+    sideCards: Array<{
+      title: string;
+      description: string;
+      icon?: string;
+    }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const hero = content?.heroCard || {
+  title: "Ambientes com Identidade & Função",
+  description: "Criamos projetos que unem estética contemporânea e ergonomia precisa para vivências memoráveis."
+};
+const sideCards = content?.sideCards || [
+  { title: "Sustentabilidade Aplicada", description: "Aproveitamento inteligente de iluminação e ventilação natural.", icon: "🌿" },
+  { title: "Detalhamento Minucioso", description: "Projetos executivos sem margem para imprevistos.", icon: "📐" }
+];
+---
+
+<section class="py-24" style="background-color: var(--color-bg);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="max-w-2xl mb-16">
+      {content.badge && (
+        <span class="text-xs font-mono uppercase tracking-widest block mb-2" style="color: var(--color-accent);">
+          {content.badge}
+        </span>
+      )}
+      <h2 class="text-3xl sm:text-5xl font-bold" style="font-family: var(--font-heading);">
+        {content.title || "Composição Espacial"}
+      </h2>
+      {content.subtitle && (
+        <p class="text-sm sm:text-base text-slate-300 font-light mt-3">
+          {content.subtitle}
+        </p>
+      )}
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      <!-- Big Hero Visual Card -->
+      <div class="lg:col-span-8 p-10 sm:p-14 rounded-3xl border border-white/10 relative overflow-hidden flex flex-col justify-between" style="background-color: var(--color-secondary);">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono mb-8 border border-white/10" style="color: var(--color-accent);">
+            <span>●</span>
+            <span>EXCLUSIVIDADE</span>
+          </div>
+          <h3 class="text-2xl sm:text-4xl font-bold text-white mb-4" style="font-family: var(--font-heading);">
+            {hero.title}
+          </h3>
+          <p class="text-base text-slate-300 font-light leading-relaxed max-w-xl">
+            {hero.description}
+          </p>
+        </div>
+        <div class="mt-12 text-xs font-mono text-slate-400">
+          PROJETADO PARA CLIENTES EXIGENTES // {client.business.city.toUpperCase()}
+        </div>
+      </div>
+
+      <!-- Side Stacked Cards -->
+      <div class="lg:col-span-4 flex flex-col gap-6">
+        {sideCards.map(s => (
+          <div class="p-8 rounded-3xl border border-white/10 bg-white/[0.02] flex-1 flex flex-col justify-between hover:border-white/20 transition-all">
+            <div>
+              <div class="text-2xl mb-4">{s.icon || "✦"}</div>
+              <h4 class="text-lg font-bold text-white mb-2" style="font-family: var(--font-heading);">
+                {s.title}
+              </h4>
+              <p class="text-xs text-slate-300 font-light leading-relaxed">
+                {s.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

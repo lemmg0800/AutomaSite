@@ -1,0 +1,62 @@
+---
+import type { ClientConfig } from '../../clients/schema';
+
+interface Props {
+  content: {
+    badge?: string;
+    title: string;
+    subtitle?: string;
+    comparisons: Array<{
+      category: string;
+      traditional: string;
+      standardWithClient: string;
+    }>;
+  };
+  client: ClientConfig;
+}
+
+const { content, client } = Astro.props;
+const comparisons = content?.comparisons || (content as any)?.items || [];
+---
+
+<section class="py-24 border-y border-white/5" style="background-color: var(--color-bg);">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      {content.badge && (
+        <span class="text-xs font-mono uppercase tracking-widest block mb-2" style="color: var(--color-accent);">
+          {content.badge}
+        </span>
+      )}
+      <h2 class="text-3xl sm:text-4xl font-bold" style="font-family: var(--font-heading);">
+        {content.title || `O Padrão ${client.business.name}`}
+      </h2>
+      {content.subtitle && (
+        <p class="text-sm text-slate-300 font-light mt-3">
+          {content.subtitle}
+        </p>
+      )}
+    </div>
+
+    <div class="rounded-3xl border border-white/10 overflow-hidden bg-white/[0.02]">
+      <div class="grid grid-cols-1 md:grid-cols-2 p-6 border-b border-white/10 bg-white/[0.03] text-xs font-mono tracking-widest uppercase">
+        <div class="text-slate-400">Modelo Convencional</div>
+        <div class="mt-2 md:mt-0 font-bold" style="color: var(--color-accent);">Com {client.business.name}</div>
+      </div>
+
+      <div class="divide-y divide-white/5">
+        {comparisons.map(c => (
+          <div class="grid grid-cols-1 md:grid-cols-2 p-6 gap-4">
+            <div class="flex items-start gap-3">
+              <span class="text-rose-500 font-bold text-sm">✕</span>
+              <p class="text-xs sm:text-sm text-slate-400">{c.traditional}</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="font-bold text-sm" style="color: var(--color-accent);">✓</span>
+              <p class="text-xs sm:text-sm text-white font-medium">{c.standardWithClient}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
