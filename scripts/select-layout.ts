@@ -8,6 +8,7 @@
  */
 
 import { queryComponents, recommendFullPageLayout } from '../src/components/selector';
+import { recommendDesignSystemAndComponents } from '../src/lib/design-systems';
 
 function parseArgs() {
   const args = process.argv.slice(2);
@@ -83,5 +84,19 @@ if (opts.query || opts.section) {
       console.log(`     Alternativa: ${s.alternativeVariant}`);
     }
   });
-  console.log('');
+
+  // Consulta do Design System Ideal e Tokens Zod
+  const themePref = opts.theme || 'escuro';
+  const dsRecommendation = recommendDesignSystemAndComponents({
+    niche,
+    vibe,
+    themePreference: themePref
+  });
+
+  console.log(`\n🎨 Design System Casado (61 Catálogo): [${dsRecommendation.selectedDesignSystem.id}]`);
+  console.log(`   Título: ${dsRecommendation.selectedDesignSystem.titulo}`);
+  console.log(`   Score: ${dsRecommendation.selectedDesignSystem.score} pts (${dsRecommendation.selectedDesignSystem.reasons.join(' | ')})`);
+  console.log(`   Fontes: Heading="${dsRecommendation.tokens.headingFont}" | Body="${dsRecommendation.tokens.bodyFont}"`);
+  console.log(`   Cores Tokens: Primary=${dsRecommendation.tokens.primaryColor} | Accent=${dsRecommendation.tokens.accentColor} | BG=${dsRecommendation.tokens.backgroundColor}`);
+  console.log(`   Injeção Direta em client.theme: Pronto e validado pelo Zod ThemeTokens!\n`);
 }
