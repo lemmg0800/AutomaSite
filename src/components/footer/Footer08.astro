@@ -9,6 +9,7 @@ interface Props {
 }
 
 const { content, client } = Astro.props;
+const logoSrc = (content as any)?.logo || client?.business?.logo;
 ---
 
 <footer class="mt-auto py-20 border-t border-white/10" style="background-color: var(--color-bg);">
@@ -16,7 +17,10 @@ const { content, client } = Astro.props;
     <div class="flex flex-col md:flex-row md:items-end justify-between pb-16 border-b border-white/10 gap-8">
       <div>
         <span class="text-xs font-mono uppercase tracking-widest text-slate-400 block mb-3">CONECTE-SE DIRETAMENTE</span>
-        <div class="text-3xl sm:text-6xl font-bold tracking-tight text-white" style="font-family: var(--font-heading);">
+        {logoSrc ? (
+          <img src={logoSrc} alt={client.business.name} class="h-10 sm:h-12 w-auto object-contain mb-3" />
+        ) : null}
+        <div class="text-3xl sm:text-5xl font-bold tracking-tight text-white" style="font-family: var(--font-heading);">
           {client.business.name}
         </div>
       </div>

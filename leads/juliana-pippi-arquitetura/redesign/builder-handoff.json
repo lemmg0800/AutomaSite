@@ -11,9 +11,9 @@
     "https://julianapippi.com.br/2023/arquitetos-florianopolis-geral-detalhe.php?cod=240",
     "https://julianapippi.com.br/2023/arquitetos-florianopolis-contato2.php?cod=250"
   ],
-  "logoUtilizado": "/assets/clients/juliana-pippi-arquitetura/logo.png",
+  "logoUtilizado": "/assets/clients/juliana-pippi-arquitetura/logo-white.png",
   "assetsUtilizados": [
-    "/assets/clients/juliana-pippi-arquitetura/logo.png",
+    "/assets/clients/juliana-pippi-arquitetura/logo-white.png",
     "/assets/clients/juliana-pippi-arquitetura/juliana_pippi.jpg",
     "/assets/clients/juliana-pippi-arquitetura/obra_jurere.jpg",
     "/assets/clients/juliana-pippi-arquitetura/obra_miami.jpg",
@@ -24,27 +24,27 @@
   ],
   "designSystemsConsultados": [
     {
+      "name": "elicyon.com"
+    },
+    {
       "name": "monolith-architecture.aura.build"
     },
     {
-      "name": "nexus-architecture.aura.build"
-    },
-    {
-      "name": "elicyon.com"
+      "name": "architecture-studio.aura.build"
     }
   ],
   "secoesUtilizadas": [
-    "Header05 (Editorial Double Deck)",
-    "Hero04 (Hero Bento Showcase 3D Tilt com Foto e Stats)",
-    "Showcase01 (Minimalist Project Showcase com Fotos 1920px)",
-    "About01 (História e Perfil da Fundadora)",
-    "Features04 (Asymmetric Spotlight)",
-    "SocialProof04 (Compact Trust Columns)",
-    "Contact02 (Split Form & Direct Channel em Florianópolis)",
-    "CTA03 (Gradient Ambient Glow)",
-    "Footer04 (Brand Statement & Nav)"
+    "Header01 (Sticky Clean com Logo Oficial em Destaque)",
+    "Hero07 (Split Hero Escultural com Foto em Destaque e Métricas de Floripa)",
+    "Showcase05 (Sequência Visual Horizontal Fluida)",
+    "Showcase03 (Obras de Assinatura & Índice Cronológico)",
+    "About01 (A Arquiteta & Criadora com Foto Real)",
+    "Features02 (Pilares da Linha Autoral com Bento Cards)",
+    "Contact01 (Diálogo Reservado com Corporate Park em Florianópolis)",
+    "CTA04 (Spotlight Cinematográfico de Atendimento)",
+    "Footer08 (Rodapé com Logo Oficial e Conexões Institucionais)"
   ],
   "urlPreview": "http://127.0.0.1:4321/juliana-pippi-arquitetura/",
-  "criterioAutenticidade": "APROVADO: Construído com os 100 componentes compartilhados do Design System e acervo 100% autêntico de Florianópolis.",
+  "criterioAutenticidade": "APROVADO: Construído com componentes 100% distintos do Cadas, logo oficial visível e paleta costeira autoral de Florianópolis.",
   "status": "APROVADO_BUILDER"
 }

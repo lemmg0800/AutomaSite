@@ -107,6 +107,7 @@ export const ClientConfigSchema = z.object({
     niche: z.string(),
     city: z.string(),
     state: z.string().length(2).optional(),
+    logo: z.string().optional(),
     // Dados opcionais para que o Builder nunca precise inventar informações
     address: z.string().optional(),
     phone: z.string().optional(),

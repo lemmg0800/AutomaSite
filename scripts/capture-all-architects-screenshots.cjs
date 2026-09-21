@@ -228,6 +228,13 @@ async function createBeforeAfterCard(slug, name) {
   const totalWidth = targetWidth * 2 + 60;
   const totalHeight = targetHeight + 140;
 
+  let locationLabel = 'Brasil';
+  try {
+    const lData = JSON.parse(fs.readFileSync(path.join(leadsDir, slug, 'lead.json'), 'utf-8'));
+    if (lData.city && lData.state) locationLabel = `${lData.city} - ${lData.state}`;
+    else if (lData.city) locationLabel = lData.city;
+  } catch {}
+
   // Cria fundo escuro luxuoso com cabeçalho comparativo
   const svgHeader = Buffer.from(`
     <svg width="${totalWidth}" height="${totalHeight}">
@@ -243,7 +250,7 @@ async function createBeforeAfterCard(slug, name) {
       </text>
 
       <text x="${totalWidth / 2}" y="${totalHeight - 25}" font-family="Arial, sans-serif" font-size="15" fill="#9CA3AF" text-anchor="middle">
-        Comparativo Visual Exclusivo — ${name} | Rio de Janeiro
+        Comparativo Visual Exclusivo — ${name} | ${locationLabel}
       </text>
     </svg>
   `);

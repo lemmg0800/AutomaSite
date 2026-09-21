@@ -1,4 +1,4 @@
-﻿---
+---
 import type { ClientConfig } from '../../clients/schema';
 
 interface Props {
@@ -15,17 +15,28 @@ const ctaLabel = content.ctaLabel || "Fale Conosco";
 
 const cleanWhats = (client.business.whatsapp || client.business.phone).replace(/[^0-9]/g, '');
 const whatsLink = `https://wa.me/55${cleanWhats}?text=Ol%C3%A1!`;
+const logoSrc = (content as any)?.logo || client?.business?.logo;
 ---
 
 <header class="sticky top-0 z-40 backdrop-blur-md border-b border-white/10" style="background-color: color-mix(in srgb, var(--color-bg) 85%, transparent);">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
     <a href={`/${client.status === 'published' ? client.slug : `preview/${client.slug}`}`} class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-lg" style="background-color: var(--color-accent); color: var(--color-bg); font-family: var(--font-heading);">
-        {client.business.name.charAt(0)}
-      </div>
-      <span class="font-bold text-base tracking-wide" style="font-family: var(--font-heading);">
-        {client.business.name}
-      </span>
+      {logoSrc ? (
+        <img 
+          src={logoSrc} 
+          alt={client.business.name} 
+          class="h-8 sm:h-10 w-auto object-contain max-w-[200px]" 
+        />
+      ) : (
+        <>
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-lg" style="background-color: var(--color-accent); color: var(--color-bg); font-family: var(--font-heading);">
+            {client.business.name.charAt(0)}
+          </div>
+          <span class="font-bold text-base tracking-wide" style="font-family: var(--font-heading);">
+            {client.business.name}
+          </span>
+        </>
+      )}
     </a>
 
     <nav class="hidden md:flex items-center space-x-6 text-sm font-medium opacity-80">

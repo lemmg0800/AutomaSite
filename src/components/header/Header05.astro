@@ -5,6 +5,7 @@ interface Props {
   content: {
     navLinks?: Array<{ label: string; href: string }>;
     ctaLabel?: string;
+    logo?: string;
   };
   client: ClientConfig;
 }
@@ -18,12 +19,23 @@ const navLinks = content.navLinks || [
 ];
 const cleanWhats = (client.business.whatsapp || client.business.phone || '').replace(/\D/g, '');
 const whatsLink = cleanWhats ? `https://wa.me/55${cleanWhats}` : '#contato';
+const logoSrc = content?.logo || client?.business?.logo;
 ---
 
 <header class="w-full pt-6 pb-4 border-b border-white/10 bg-transparent">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-    <a href={`/${client.status === 'published' ? client.slug : `preview/${client.slug}`}`} class="text-xl sm:text-2xl font-bold tracking-widest uppercase text-white" style="font-family: var(--font-heading);">
-      {client.business.name}
+    <a href={`/${client.status === 'published' ? client.slug : `preview/${client.slug}`}`} class="flex items-center gap-3">
+      {logoSrc ? (
+        <img 
+          src={logoSrc} 
+          alt={client.business.name} 
+          class="h-8 sm:h-10 w-auto object-contain max-w-[220px]" 
+        />
+      ) : (
+        <span class="text-xl sm:text-2xl font-bold tracking-widest uppercase text-white" style="font-family: var(--font-heading);">
+          {client.business.name}
+        </span>
+      )}
     </a>
 
     <nav class="flex items-center gap-6 text-xs tracking-widest uppercase text-slate-300">
