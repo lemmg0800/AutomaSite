@@ -1,0 +1,41 @@
+{
+  "domain": "julianapippi.com.br",
+  "downloadedAt": "2026-09-21T00:44:16.908Z",
+  "pages": [
+    {
+      "name": "Home",
+      "url": "https://julianapippi.com.br/",
+      "localPath": "D:\\projetos antigravity\\Site automatico\\leads\\juliana-pippi-arquitetura\\referencias\\site-baixado\\home\\index.html",
+      "downloaded": true,
+      "sizeBytes": 61568
+    },
+    {
+      "name": "Sobre-Escritorio",
+      "url": "https://julianapippi.com.br/2023/arquitetos-florianopolis.php",
+      "localPath": "D:\\projetos antigravity\\Site automatico\\leads\\juliana-pippi-arquitetura\\referencias\\site-baixado\\sobre\\index.html",
+      "downloaded": true,
+      "sizeBytes": 87554
+    },
+    {
+      "name": "Colecoes-Design",
+      "url": "https://julianapippi.com.br/2023/arquitetos-florianopolis-colecoes.php",
+      "localPath": "D:\\projetos antigravity\\Site automatico\\leads\\juliana-pippi-arquitetura\\referencias\\site-baixado\\colecoes\\index.html",
+      "downloaded": true,
+      "sizeBytes": 51289
+    },
+    {
+      "name": "Projetos-Residenciais",
+      "url": "https://julianapippi.com.br/2023/arquitetos-florianopolis-geral-detalhe.php?cod=240",
+      "localPath": "D:\\projetos antigravity\\Site automatico\\leads\\juliana-pippi-arquitetura\\referencias\\site-baixado\\projetos\\index.html",
+      "downloaded": true,
+      "sizeBytes": 47920
+    },
+    {
+      "name": "Contato",
+      "url": "https://julianapippi.com.br/2023/arquitetos-florianopolis-contato2.php?cod=250",
+      "localPath": "D:\\projetos antigravity\\Site automatico\\leads\\juliana-pippi-arquitetura\\referencias\\site-baixado\\contato\\index.html",
+      "downloaded": true,
+      "sizeBytes": 51341
+    }
+  ]
+}

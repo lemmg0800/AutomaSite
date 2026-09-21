@@ -1,0 +1,17 @@
+{
+  "client": "Juliana Pippi Arquitetura",
+  "slug": "juliana-pippi-arquitetura",
+  "aesthetic_concept": "Nexus Architecture Minimalist Luxury & Monolith Sculpture",
+  "consulted_design_systems": [
+    "monolith-architecture.aura.build",
+    "nexus-architecture.aura.build",
+    "elicyon.com"
+  ],
+  "primaryColor": "#161513",
+  "secondaryColor": "#2A2622",
+  "accentColor": "#C4A482",
+  "backgroundColor": "#121110",
+  "textColor": "#F5F2EB",
+  "headingFont": "Playfair Display",
+  "bodyFont": "Plus Jakarta Sans"
+}

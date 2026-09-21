@@ -1,0 +1,50 @@
+{
+  "cliente": "Juliana Pippi Arquitetura",
+  "slug": "juliana-pippi-arquitetura",
+  "siteOriginal": "https://julianapippi.com.br/",
+  "siteAtualMdUtilizado": "leads/juliana-pippi-arquitetura/referencias/site-atual.md",
+  "designDirectionMd": "leads/juliana-pippi-arquitetura/referencias/art-direction.json",
+  "paginasConsultadas": [
+    "https://julianapippi.com.br/",
+    "https://julianapippi.com.br/2023/arquitetos-florianopolis.php",
+    "https://julianapippi.com.br/2023/arquitetos-florianopolis-colecoes.php",
+    "https://julianapippi.com.br/2023/arquitetos-florianopolis-geral-detalhe.php?cod=240",
+    "https://julianapippi.com.br/2023/arquitetos-florianopolis-contato2.php?cod=250"
+  ],
+  "logoUtilizado": "/assets/clients/juliana-pippi-arquitetura/logo.png",
+  "assetsUtilizados": [
+    "/assets/clients/juliana-pippi-arquitetura/logo.png",
+    "/assets/clients/juliana-pippi-arquitetura/juliana_pippi.jpg",
+    "/assets/clients/juliana-pippi-arquitetura/obra_jurere.jpg",
+    "/assets/clients/juliana-pippi-arquitetura/obra_miami.jpg",
+    "/assets/clients/juliana-pippi-arquitetura/obra_campo.jpg",
+    "/assets/clients/juliana-pippi-arquitetura/obra_lagoa.jpg",
+    "/assets/clients/juliana-pippi-arquitetura/obra_vitra.jpg",
+    "/assets/clients/juliana-pippi-arquitetura/obra_casacor.jpg"
+  ],
+  "designSystemsConsultados": [
+    {
+      "name": "monolith-architecture.aura.build"
+    },
+    {
+      "name": "nexus-architecture.aura.build"
+    },
+    {
+      "name": "elicyon.com"
+    }
+  ],
+  "secoesUtilizadas": [
+    "Header05 (Editorial Double Deck)",
+    "Hero04 (Hero Bento Showcase 3D Tilt com Foto e Stats)",
+    "Showcase01 (Minimalist Project Showcase com Fotos 1920px)",
+    "About01 (História e Perfil da Fundadora)",
+    "Features04 (Asymmetric Spotlight)",
+    "SocialProof04 (Compact Trust Columns)",
+    "Contact02 (Split Form & Direct Channel em Florianópolis)",
+    "CTA03 (Gradient Ambient Glow)",
+    "Footer04 (Brand Statement & Nav)"
+  ],
+  "urlPreview": "http://127.0.0.1:4321/juliana-pippi-arquitetura/",
+  "criterioAutenticidade": "APROVADO: Construído com os 100 componentes compartilhados do Design System e acervo 100% autêntico de Florianópolis.",
+  "status": "APROVADO_BUILDER"
+}

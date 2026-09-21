@@ -1,0 +1,53 @@
+{
+  "client": "Juliana Pippi Arquitetura",
+  "slug": "juliana-pippi-arquitetura",
+  "logo": {
+    "primary": "/assets/clients/juliana-pippi-arquitetura/logo.png",
+    "publicPath": "/assets/clients/juliana-pippi-arquitetura/logo.png"
+  },
+  "founderPhoto": {
+    "name": "Juliana Pippi",
+    "publicPath": "/assets/clients/juliana-pippi-arquitetura/juliana_pippi.jpg"
+  },
+  "heroImages": [
+    "/assets/clients/juliana-pippi-arquitetura/obra_jurere.jpg"
+  ],
+  "projects": [
+    {
+      "id": "obra_jurere",
+      "name": "Residência Jurerê | DI",
+      "location": "Jurerê Internacional • Florianópolis",
+      "publicPath": "/assets/clients/juliana-pippi-arquitetura/obra_jurere.jpg"
+    },
+    {
+      "id": "obra_miami",
+      "name": "Apartamento Miami",
+      "location": "Miami • Flórida (EUA)",
+      "publicPath": "/assets/clients/juliana-pippi-arquitetura/obra_miami.jpg"
+    },
+    {
+      "id": "obra_campo",
+      "name": "Casa de Campo | IS",
+      "location": "Serra Catarinense • SC",
+      "publicPath": "/assets/clients/juliana-pippi-arquitetura/obra_campo.jpg"
+    },
+    {
+      "id": "obra_lagoa",
+      "name": "Refúgio Lagoa | JF",
+      "location": "Lagoa da Conceição • Florianópolis",
+      "publicPath": "/assets/clients/juliana-pippi-arquitetura/obra_lagoa.jpg"
+    },
+    {
+      "id": "obra_vitra",
+      "name": "Edifício Vitra",
+      "location": "Beira-Mar Norte • Florianópolis",
+      "publicPath": "/assets/clients/juliana-pippi-arquitetura/obra_vitra.jpg"
+    },
+    {
+      "id": "obra_casacor",
+      "name": "Mostra Autoral & Interiores",
+      "location": "Florianópolis • SC",
+      "publicPath": "/assets/clients/juliana-pippi-arquitetura/obra_casacor.jpg"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "empresa": "Juliana Pippi Arquitetura",
+  "slug": "juliana-pippi-arquitetura",
+  "urlOficial": "https://julianapippi.com.br/",
+  "paginasBaixadas": [
+    "Home",
+    "Sobre-Escritorio",
+    "Colecoes-Design",
+    "Projetos-Residenciais",
+    "Contato"
+  ],
+  "caminhoSiteAtualMd": "D:\\projetos antigravity\\Site automatico\\leads\\juliana-pippi-arquitetura\\referencias\\site-atual.md",
+  "caminhoAssetsManifest": "D:\\projetos antigravity\\Site automatico\\leads\\juliana-pippi-arquitetura\\referencias\\assets-manifest.json",
+  "caminhoPagesManifest": "D:\\projetos antigravity\\Site automatico\\leads\\juliana-pippi-arquitetura\\referencias\\pages-manifest.json",
+  "caminhoLogoPrincipal": "/assets/clients/juliana-pippi-arquitetura/logo.png",
+  "raizSiteBaixado": "D:\\projetos antigravity\\Site automatico\\leads\\juliana-pippi-arquitetura\\referencias\\site-baixado"
+}

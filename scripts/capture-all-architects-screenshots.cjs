@@ -271,7 +271,12 @@ async function main() {
 
   for (const slug of TOP_SLUGS) {
     const leadRoot = path.join(leadsDir, slug);
-    const origUrl = ORIGINAL_URLS[slug];
+    let origUrl = ORIGINAL_URLS[slug];
+    if (!origUrl && fs.existsSync(path.join(leadRoot, 'lead.json'))) {
+      try {
+        origUrl = JSON.parse(fs.readFileSync(path.join(leadRoot, 'lead.json'), 'utf-8')).url;
+      } catch {}
+    }
     const redesignUrl = `http://127.0.0.1:4321/${slug}/`;
 
     console.log(`\n▶ Processando [${slug}]...`);

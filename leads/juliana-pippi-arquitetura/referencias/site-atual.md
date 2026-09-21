@@ -1,0 +1,14 @@
+# SITE ATUAL — JULIANA PIPPI ARQUITETURA
+- **Fundadora & Diretora Criativa:** Juliana Pippi (Arquiteta e Designer)
+- **Marca Autoral:** Estúdio PIPPI (mobiliário, iluminação e direção criativa)
+- **Endereço Sede:** Rua Orlando Phillippi, 100 - sala 303 - Bairro Saco Grande, Florianópolis - SC, CEP 88032-700
+- **E-mail Oficial:** adm@julianapippi.com.br
+- **Instagram Oficial:** @julianapippi
+- **Atuação:** Arquitetura Residencial de Alto Luxo, Design de Interiores, Projetos Internacionais (Miami), Direção Criativa
+- **Principais Obras Autorais:**
+  - Residência Jurerê | DI (Jurerê Internacional, Florianópolis)
+  - Apartamento Miami (Flórida, EUA)
+  - Casa de Campo | IS (Serra Catarinense)
+  - Refúgio Lagoa | JF (Lagoa da Conceição, Florianópolis)
+  - Edifício Vitra (Beira-Mar Norte, Florianópolis)
+  - Instalações Autorais em Mostras Nacionais (CasaCor SC / SP)
