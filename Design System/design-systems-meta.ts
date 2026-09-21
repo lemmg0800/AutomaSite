@@ -101,7 +101,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -178,7 +177,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -252,7 +250,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Space Grotesk",
       "borderRadius": "lg",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -323,7 +320,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "lg",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -398,7 +394,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Inter",
       "borderRadius": "lg",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -471,7 +466,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -546,7 +540,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Manrope",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -619,7 +612,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -693,7 +685,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -765,7 +756,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Geist",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -837,7 +827,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -909,7 +898,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Montserrat",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": true,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -983,7 +971,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": true,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -1056,7 +1043,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "JetBrains Mono",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "mesh",
       "enableParallax": true
     },
@@ -1129,7 +1115,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -1204,7 +1189,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -1278,7 +1262,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "mesh",
       "enableParallax": true
     },
@@ -1349,7 +1332,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -1422,7 +1404,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -1493,7 +1474,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -1567,7 +1547,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": true,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -1638,7 +1617,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -1710,7 +1688,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Inter",
       "borderRadius": "none",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -1782,7 +1759,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Geist",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -1852,7 +1828,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "lg",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -1922,7 +1897,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Manrope",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -1993,7 +1967,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": true,
       "backgroundEffect": "mesh",
       "enableParallax": true
     },
@@ -2066,7 +2039,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Inter",
       "borderRadius": "lg",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2136,7 +2108,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "lg",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2212,7 +2183,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2290,7 +2260,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Inter",
       "borderRadius": "lg",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -2364,7 +2333,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "mesh",
       "enableParallax": true
     },
@@ -2438,7 +2406,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "mesh",
       "enableParallax": true
     },
@@ -2511,7 +2478,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2585,7 +2551,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2657,7 +2622,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2732,7 +2696,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2804,7 +2767,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2875,7 +2837,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2948,7 +2909,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -3019,7 +2979,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Inter",
       "borderRadius": "none",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -3091,7 +3050,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Space Grotesk",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -3163,7 +3121,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "mesh",
       "enableParallax": true
     },
@@ -3235,7 +3192,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "prism",
       "enableParallax": true
     },
@@ -3305,7 +3261,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -3375,7 +3330,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -3446,7 +3400,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "mesh",
       "enableParallax": true
     },
@@ -3516,7 +3469,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -3587,7 +3539,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Space Grotesk",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -3660,7 +3611,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Open Sans",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -3731,7 +3681,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "mesh",
       "enableParallax": true
     },
@@ -3802,7 +3751,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "JetBrains Mono",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -3873,7 +3821,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -3944,7 +3891,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -4016,7 +3962,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Inter",
       "borderRadius": "none",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "prism",
       "enableParallax": true
     },
@@ -4087,7 +4032,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "prism",
       "enableParallax": true
     },
@@ -4157,7 +4101,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "JetBrains Mono",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -4229,7 +4172,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "lg",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -4300,7 +4242,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "JetBrains Mono",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -4372,7 +4313,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -4443,7 +4383,6 @@ export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
       "bodyFont": "Inter",
       "borderRadius": "sm",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "dots",
       "enableParallax": true
     },

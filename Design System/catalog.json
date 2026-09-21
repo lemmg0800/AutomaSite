@@ -66,7 +66,6 @@
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -143,7 +142,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -217,7 +215,6 @@
       "bodyFont": "Space Grotesk",
       "borderRadius": "lg",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -288,7 +285,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "lg",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -363,7 +359,6 @@
       "bodyFont": "Inter",
       "borderRadius": "lg",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -436,7 +431,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -511,7 +505,6 @@
       "bodyFont": "Manrope",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -584,7 +577,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -658,7 +650,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -730,7 +721,6 @@
       "bodyFont": "Geist",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -802,7 +792,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -874,7 +863,6 @@
       "bodyFont": "Montserrat",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": true,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -948,7 +936,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": true,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -1021,7 +1008,6 @@
       "bodyFont": "JetBrains Mono",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "mesh",
       "enableParallax": true
     },
@@ -1094,7 +1080,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -1169,7 +1154,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -1243,7 +1227,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "mesh",
       "enableParallax": true
     },
@@ -1314,7 +1297,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -1387,7 +1369,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -1458,7 +1439,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -1532,7 +1512,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": true,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -1603,7 +1582,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -1675,7 +1653,6 @@
       "bodyFont": "Inter",
       "borderRadius": "none",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -1747,7 +1724,6 @@
       "bodyFont": "Geist",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -1817,7 +1793,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "lg",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -1887,7 +1862,6 @@
       "bodyFont": "Manrope",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -1958,7 +1932,6 @@
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "light",
-      "enableCursor": true,
       "backgroundEffect": "mesh",
       "enableParallax": true
     },
@@ -2031,7 +2004,6 @@
       "bodyFont": "Inter",
       "borderRadius": "lg",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2101,7 +2073,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "lg",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2177,7 +2148,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2255,7 +2225,6 @@
       "bodyFont": "Inter",
       "borderRadius": "lg",
       "mode": "light",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -2329,7 +2298,6 @@
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "mesh",
       "enableParallax": true
     },
@@ -2403,7 +2371,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "mesh",
       "enableParallax": true
     },
@@ -2476,7 +2443,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2550,7 +2516,6 @@
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2622,7 +2587,6 @@
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2697,7 +2661,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2769,7 +2732,6 @@
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2840,7 +2802,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2913,7 +2874,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -2984,7 +2944,6 @@
       "bodyFont": "Inter",
       "borderRadius": "none",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -3056,7 +3015,6 @@
       "bodyFont": "Space Grotesk",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -3128,7 +3086,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "mesh",
       "enableParallax": true
     },
@@ -3200,7 +3157,6 @@
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "prism",
       "enableParallax": true
     },
@@ -3270,7 +3226,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -3340,7 +3295,6 @@
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -3411,7 +3365,6 @@
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "mesh",
       "enableParallax": true
     },
@@ -3481,7 +3434,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "sm",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -3552,7 +3504,6 @@
       "bodyFont": "Space Grotesk",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -3625,7 +3576,6 @@
       "bodyFont": "Open Sans",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -3696,7 +3646,6 @@
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "mesh",
       "enableParallax": true
     },
@@ -3767,7 +3716,6 @@
       "bodyFont": "JetBrains Mono",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -3838,7 +3786,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -3909,7 +3856,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -3981,7 +3927,6 @@
       "bodyFont": "Inter",
       "borderRadius": "none",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "prism",
       "enableParallax": true
     },
@@ -4052,7 +3997,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "prism",
       "enableParallax": true
     },
@@ -4122,7 +4066,6 @@
       "bodyFont": "JetBrains Mono",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -4194,7 +4137,6 @@
       "bodyFont": "Plus Jakarta Sans",
       "borderRadius": "lg",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -4265,7 +4207,6 @@
       "bodyFont": "JetBrains Mono",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "dots",
       "enableParallax": true
     },
@@ -4337,7 +4278,6 @@
       "bodyFont": "Inter",
       "borderRadius": "md",
       "mode": "dark",
-      "enableCursor": false,
       "backgroundEffect": "none",
       "enableParallax": true
     },
@@ -4408,7 +4348,6 @@
       "bodyFont": "Inter",
       "borderRadius": "sm",
       "mode": "dark",
-      "enableCursor": true,
       "backgroundEffect": "dots",
       "enableParallax": true
     },

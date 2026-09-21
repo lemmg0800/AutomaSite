@@ -1152,42 +1152,6 @@ export const COMPONENTS_CATALOG: ComponentMetadata[] = [
   // EFFECTS & INTERACTIONS
   // ==========================================
   {
-    id: 'effects/CustomCursor',
-    name: 'Custom Magnetic Glow Cursor',
-    category: 'effects',
-    filePath: 'src/components/effects/CustomCursor.astro',
-    style_tags: ['luxury-minimal', 'high-tech'],
-    motion_level: 'interactive-hover',
-    best_suited_niches: [
-      'arquitetura',
-      'portfolios-de-luxo',
-      'estudios-criativos',
-      'moda-e-design'
-    ],
-    visual_personality:
-      'Cursor com anel e ponto magnético de alta suavidade física em desktop. Transforma a navegação comum em uma experiência sensorial diferenciada.',
-    props_schema: {
-      color: {
-        type: 'string',
-        required: false,
-        description: 'Cor principal do cursor',
-        default: 'var(--color-accent, #6366f1)'
-      },
-      glowColor: {
-        type: 'string',
-        required: false,
-        description: 'Cor do halo de brilho',
-        default: 'rgba(99, 102, 241, 0.35)'
-      },
-      size: {
-        type: 'number',
-        required: false,
-        description: 'Diâmetro do anel externo',
-        default: 32
-      }
-    }
-  },
-  {
     id: 'effects/ParallaxScroll',
     name: 'Parallax & 3D Tilt Scroll Engine',
     category: 'effects',

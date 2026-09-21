@@ -1,7 +1,6 @@
 ---
 import type { ClientConfig } from '../clients/schema';
 import FloatingWhatsApp from './ui/FloatingWhatsApp.astro';
-import CustomCursor from './effects/CustomCursor.astro';
 import ParallaxScroll from './effects/ParallaxScroll.astro';
 import MeshGradientBackground from './backgrounds/MeshGradientBackground.astro';
 import DotMatrixBackground from './backgrounds/DotMatrixBackground.astro';
@@ -36,7 +35,6 @@ const defaultTheme = {
   bodyFont: 'Plus Jakarta Sans',
   borderRadius: 'md' as const,
   mode: 'dark' as const,
-  enableCursor: false,
   backgroundEffect: 'none' as const,
   enableParallax: true
 };
@@ -104,9 +102,6 @@ const fontBodyParam = encodeURIComponent(bodyFontName).replace(/%20/g, '+');
   {theme.backgroundEffect === 'mesh' && <MeshGradientBackground />}
   {theme.backgroundEffect === 'dots' && <DotMatrixBackground />}
   {theme.backgroundEffect === 'prism' && <PrismBackground />}
-
-  <!-- Cursor Personalizado Opcional -->
-  {theme.enableCursor && <CustomCursor color={theme.accentColor} />}
 
   <!-- Efeitos de Parallax e Scroll-Reveal -->
   {theme.enableParallax && <ParallaxScroll />}

@@ -27,7 +27,6 @@ const client: ClientConfig = {
     bodyFont: 'Plus Jakarta Sans',
     borderRadius: 'md',
     mode: 'dark',
-    enableCursor: true,
     backgroundEffect: 'mesh',
     enableParallax: true
   },

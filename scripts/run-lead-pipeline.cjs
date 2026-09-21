@@ -340,7 +340,6 @@ const client: ClientConfig = {
     bodyFont: '${artDirection.bodyFont}',
     borderRadius: 'md',
     mode: 'dark',
-    enableCursor: true,
     backgroundEffect: 'mesh',
     enableParallax: true
   },

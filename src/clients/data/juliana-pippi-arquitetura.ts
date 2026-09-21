@@ -28,7 +28,6 @@ const client: ClientConfig = {
     bodyFont: 'Inter',
     borderRadius: 'md',
     mode: 'dark',
-    enableCursor: true,
     backgroundEffect: 'mesh',
     enableParallax: true
   },

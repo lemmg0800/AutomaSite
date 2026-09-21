@@ -94,8 +94,6 @@ function deriveThemeTokens(entry: RawCatalogEntry): ThemeTokens {
     backgroundEffect = 'prism';
   }
 
-  const enableCursor = allTags.some((t) => t.includes('luxo') || t.includes('cursor') || t.includes('interat'));
-
   const candidateTokens = {
     primaryColor: primary,
     secondaryColor: secondary,
@@ -106,7 +104,6 @@ function deriveThemeTokens(entry: RawCatalogEntry): ThemeTokens {
     bodyFont,
     borderRadius,
     mode: isDark ? ('dark' as const) : ('light' as const),
-    enableCursor,
     backgroundEffect,
     enableParallax: true
   };

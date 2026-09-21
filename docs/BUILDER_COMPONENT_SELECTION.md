@@ -185,6 +185,5 @@ Antes de gerar a configuração do cliente em `src/clients/data/[slug].ts`:
 | **Effects** | `effects/BendingMarquee` | Efeito Marquee Curvo de Logos/Textos (ReactBits Starter) | `subtle` | Prova social, Logos de clientes |
 | **Effects** | `effects/FrameBorder` | Moldura Decorativa com Gradiente Dinâmico (ReactBits Starter) | `none` | Moldura para fotos e cards |
 | **Effects** | `effects/ParallaxPills` | Tags/Pills Flutuantes em Profundidade (ReactBits Starter) | `interactive-hover` | Tags de diferenciais e skills |
-| **Effects** | `effects/CustomCursor` | Cursor Magnético com Halo de Brilho| `interactive-hover`| Luxo, Portfólios |
 | **Effects** | `effects/ParallaxScroll` | Motor de Revelação e 3D Tilt | `complex-scroll` | Sites com pretensão premium |
 | **UI**      | `ui/FloatingWhatsApp` | Widget Flutuante com Mensagem Dinâmica | `interactive-hover` | Conversão direta em todas as páginas |

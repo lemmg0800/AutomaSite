@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2026-09-20T23:15:06.311Z",
-  "totalComponents": 100,
+  "generatedAt": "2026-09-21T01:14:48.864Z",
+  "totalComponents": 99,
   "components": [
     {
       "id": "header/Header01",
@@ -1150,44 +1150,6 @@
           "required": false,
           "description": "Intensidade da dispersão prismática",
           "default": 0.4
-        }
-      }
-    },
-    {
-      "id": "effects/CustomCursor",
-      "name": "Custom Magnetic Glow Cursor",
-      "category": "effects",
-      "filePath": "src/components/effects/CustomCursor.astro",
-      "style_tags": [
-        "luxury-minimal",
-        "high-tech"
-      ],
-      "motion_level": "interactive-hover",
-      "best_suited_niches": [
-        "arquitetura",
-        "portfolios-de-luxo",
-        "estudios-criativos",
-        "moda-e-design"
-      ],
-      "visual_personality": "Cursor com anel e ponto magnético de alta suavidade física em desktop. Transforma a navegação comum em uma experiência sensorial diferenciada.",
-      "props_schema": {
-        "color": {
-          "type": "string",
-          "required": false,
-          "description": "Cor principal do cursor",
-          "default": "var(--color-accent, #6366f1)"
-        },
-        "glowColor": {
-          "type": "string",
-          "required": false,
-          "description": "Cor do halo de brilho",
-          "default": "rgba(99, 102, 241, 0.35)"
-        },
-        "size": {
-          "type": "number",
-          "required": false,
-          "description": "Diâmetro do anel externo",
-          "default": 32
         }
       }
     },

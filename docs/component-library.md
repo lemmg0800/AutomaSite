@@ -26,5 +26,5 @@ npm run components:index
 | **Contact** | 4 | `Contact01` a `Contact04` (Hub multicanal, formulários, split de agendamento) |
 | **Footer** | 8 | `Footer01` a `Footer08` (Minimalista, corporativo OAB/CRM, multi-colunas) |
 | **Backgrounds** | 3 | `DotMatrixBackground`, `MeshGradientBackground`, `PrismBackground` |
-| **Effects** | 6 | `CustomCursor`, `ParallaxScroll`, `DepthCard`, `BendingMarquee`, `FrameBorder`, `ParallaxPills` |
+| **Effects** | 5 | `ParallaxScroll`, `DepthCard`, `BendingMarquee`, `FrameBorder`, `ParallaxPills` |
 | **Outros Módulos** | 5 | `About01`, `Team01`, `Process01`, `Stats01`, `FAQ01`, `Map01`, `Products01`, `Gallery01`, `FloatingWhatsApp` |
