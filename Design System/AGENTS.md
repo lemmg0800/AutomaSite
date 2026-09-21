@@ -2,27 +2,62 @@
 
 Este diretório contém **61 Design Systems prontos para produção** com assets locais, Tailwind CSS, ícones Lucide/Iconify e layouts responsivos completos.
 
-Como agente encarregado de criar ou prototipar sites, **você deve consultar este catálogo antes de começar a codificar**.
+Como agente encarregado de criar ou prototipar sites (**Diretor de Arte 2A** e **Platform Builder 2B**), **você deve consultar este catálogo antes de começar a codificar**.
 
 ---
 
-## 🛠️ Como o Agente Deve Operar (Passo a Passo)
+## 🛠️ Como o Agente Deve Operar (Opções Disponíveis)
 
-### 1. Encontrar o Design System Ideal
+### Opção 1 (Recomendada no Pipeline Astro / Node): Consulta Programática TypeScript
 
-Você tem duas formas rápidas de encontrar a referência perfeita:
+Utilize a biblioteca unificada que já extrai os `ThemeTokens` validados por Zod e sugere os componentes Astro ideais:
 
-#### Opção A (Recomendada): Busca via Linha de Comando
-Execute o script `search.py` informando os termos do projeto ou cliente:
+```typescript
+import { 
+  queryDesignSystems, 
+  getDesignSystemTokens, 
+  recommendDesignSystemAndComponents 
+} from '@/lib/design-systems.ts';
+
+// 1. Busca semântica
+const matches = queryDesignSystems({
+  niche: 'arquitetura',
+  vibe: 'luxo contemporâneo',
+  theme: 'escuro',
+  limit: 3
+});
+
+// 2. Recomendação completa unificada
+const layout = recommendDesignSystemAndComponents({
+  niche: 'odontologia',
+  vibe: 'clean acolhedor',
+  themePreference: 'claro'
+});
+
+// layout.tokens -> ThemeTokens prontos para o client.theme
+// layout.recommendedComponents -> Hero, Services, Projects, CTA e Footer correspondentes
+```
+
+---
+
+### Opção 2: Busca via CLI (Python ou NPM)
+
+#### Via NPM (Integrado ao projeto Astro):
+```bash
+npm run design-systems:index
+```
+
+#### Via Python:
 ```bash
 python "search.py" --query "clinica de fisioterapia acolhedora e moderna" --json
 python "search.py" --query "saas b2b logistica dashboard escuro" --top 3
 python "search.py" --nicho "gastronomia" --tema claro
 ```
-O script analisa nicho, clima, estilo visual, componentes e retorna os templates ranqueados com score de relevância.
 
-#### Opção B: Consulta Direta a `catalog.json` ou `CATALOG.md`
-Se não quiser rodar comandos, leia o arquivo `catalog.json` (apenas ~25KB) ou consulte a tabela resumida em `CATALOG.md`.
+---
+
+### Opção 3: Consulta Direta a `catalog.json` ou `CATALOG.md`
+Consulte o arquivo [`catalog.json`](file:///D:/projetos%20antigravity/Site%20automatico/Design%20System/catalog.json) enriquecido com o campo `tokens` (compatível com `src/clients/schema.ts`) ou a tabela em [`CATALOG.md`](file:///D:/projetos%20antigravity/Site%20automatico/Design%20System/CATALOG.md).
 
 ---
 
@@ -49,17 +84,28 @@ Se não quiser rodar comandos, leia o arquivo `catalog.json` (apenas ~25KB) ou c
 
 ---
 
-## 🎨 Como Reutilizar o Código dos Templates
+## 🎨 Como Reutilizar os Tokens no Client Config
 
-1. **Tokens e Estilos:** Abra o arquivo `design-system.html` do template escolhido para ver:
-   - Paleta de cores CSS (`:root` ou Tailwind config)
-   - Fontes carregadas e tamanhos
-   - Classes de efeito (ex: `.glass-panel`, `.glow`, sombras, bordas)
-2. **Componentes e Seções:** Abra o arquivo `index.html` (ou `design-system.html`) e copie a marcação estrutural:
-   - Header / Navbar responsiva
-   - Hero Section com CTAs
-   - Features / Grade de Benefícios
-   - Prova Social / Depoimentos
-   - Tabela de Preços / Planos
-   - Footer e formulários
-3. **Assets:** Verifique a pasta `assets/` de cada template para ícones e fontes já cacheados localmente.
+Os tokens gerados pelo `design-system-selector.ts` já satisfazem diretamente o schema de `theme` em `src/clients/data/[slug].ts`:
+
+```typescript
+export default {
+  slug: "exemplo-cliente",
+  status: "draft",
+  business: { ... },
+  theme: {
+    primaryColor: "#262626",
+    secondaryColor: "#141414",
+    accentColor: "#e5e5e5",
+    backgroundColor: "#0a0a0a",
+    textColor: "#f8fafc",
+    headingFont: "Plus Jakarta Sans",
+    bodyFont: "Inter",
+    borderRadius: "none",
+    mode: "dark",
+    backgroundEffect: "prism",
+    enableParallax: true
+  },
+  pages: [ ... ]
+};
+```

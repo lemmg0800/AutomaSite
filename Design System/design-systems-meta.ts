@@ -1,4 +1,39 @@
-[
+/**
+ * Design Systems Catalog & Semantic Registry
+ * Mapeamento dos 61 Design Systems de Produção com tokens e componentes integrados.
+ * Gerado automaticamente por scripts/index-design-systems.ts
+ */
+
+import type { ThemeTokens } from '../src/clients/schema.ts';
+
+export interface EnrichedDesignSystem {
+  id: string;
+  tema: 'claro' | 'escuro';
+  caminho: string;
+  pagina_principal: string;
+  design_system_page: string;
+  titulo: string;
+  subtitulo: string;
+  nichos: string[];
+  estilo_visual: string[];
+  clima_sensacao: string[];
+  paleta_predominante: string[];
+  efeitos_visuais: string[];
+  componentes_chave: string[];
+  fontes: string[];
+  melhor_para: string;
+  tokens: ThemeTokens;
+  recommended_components: {
+    hero: string;
+    services: string;
+    projects?: string;
+    cta: string;
+    footer: string;
+    background: string;
+  };
+}
+
+export const DESIGN_SYSTEMS_CATALOG: EnrichedDesignSystem[] = [
   {
     "id": "aex.aura.build",
     "tema": "claro",
@@ -4421,4 +4456,8 @@
       "background": "backgrounds/MeshGradientBackground"
     }
   }
-]
+];
+
+export const DESIGN_SYSTEMS_MAP: Record<string, EnrichedDesignSystem> = Object.fromEntries(
+  DESIGN_SYSTEMS_CATALOG.map((ds) => [ds.id, ds])
+);

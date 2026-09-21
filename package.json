@@ -18,6 +18,7 @@
         "client:eject": "tsx scripts/clone-component-to-client.ts",
         "handoff:validate": "tsx scripts/validate-handoff.ts",
         "components:index": "tsx scripts/index-components.ts",
+        "design-systems:index": "tsx scripts/index-design-systems.ts",
         "pipeline:top5": "tsx scripts/run-top5-pipeline.ts",
         "pipeline:run": "node scripts/run-autonomous-pipeline.cjs"
     },
