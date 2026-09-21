@@ -1,0 +1,45 @@
+{
+  "client": "Cadas Arquitetura",
+  "slug": "cadas-arquitetura",
+  "logo": {
+    "primary": "/assets/clients/cadas-arquitetura/cadas_logo.png",
+    "publicPath": "/assets/clients/cadas-arquitetura/cadas_logo.png"
+  },
+  "founderPhoto": {
+    "name": "Cadas Abranches",
+    "publicPath": "/assets/clients/cadas-arquitetura/perfil.jpg"
+  },
+  "heroImages": [
+    "/assets/clients/cadas-arquitetura/obra_lw.jpg"
+  ],
+  "projects": [
+    {
+      "name": "Projeto LW",
+      "publicPath": "/assets/clients/cadas-arquitetura/obra_lw.jpg"
+    },
+    {
+      "name": "Projeto EB Leblon",
+      "publicPath": "/assets/clients/cadas-arquitetura/obra_eb.jpg"
+    },
+    {
+      "name": "Projeto PD Leblon",
+      "publicPath": "/assets/clients/cadas-arquitetura/obra_pd.jpg"
+    },
+    {
+      "name": "Projeto BC",
+      "publicPath": "/assets/clients/cadas-arquitetura/obra_bc.jpg"
+    },
+    {
+      "name": "Apartamento Urbano Leblon",
+      "publicPath": "/assets/clients/cadas-arquitetura/obra_urbano.png"
+    },
+    {
+      "name": "Apartamento São Paulo",
+      "publicPath": "/assets/clients/cadas-arquitetura/obra_sp.png"
+    },
+    {
+      "name": "Projeto Fisher Island",
+      "publicPath": "/assets/clients/cadas-arquitetura/obra_fisher.jpg"
+    }
+  ]
+}

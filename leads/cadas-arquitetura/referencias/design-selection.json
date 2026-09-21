@@ -1,0 +1,18 @@
+{
+  "client": "Cadas Arquitetura",
+  "slug": "cadas-arquitetura",
+  "selectedDesignSystems": [
+    {
+      "name": "nexus-architecture.aura.build",
+      "path": "D:\\projetos antigravity\\Site automatico\\Design System\\temas_claros\\nexus-architecture.aura.build\\nexus-architecture.aura.build\\design-system.html"
+    },
+    {
+      "name": "elicyon.com",
+      "path": "D:\\projetos antigravity\\Site automatico\\Design System\\temas_claros\\elicyon.com\\elicyon.com\\design-system.html"
+    },
+    {
+      "name": "architecture-studio.aura.build",
+      "path": "D:\\projetos antigravity\\Site automatico\\Design System\\temas_claros\\architecture-studio.aura.build\\architecture-studio.aura.build\\design-system.html"
+    }
+  ]
+}

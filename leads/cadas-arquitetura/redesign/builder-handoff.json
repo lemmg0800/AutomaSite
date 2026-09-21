@@ -1,0 +1,50 @@
+{
+  "cliente": "Cadas Arquitetura",
+  "slug": "cadas-arquitetura",
+  "siteOriginal": "https://cadas.com.br/",
+  "siteAtualMdUtilizado": "leads/cadas-arquitetura/referencias/site-atual.md",
+  "designDirectionMd": "leads/cadas-arquitetura/referencias/art-direction.json",
+  "paginasConsultadas": [
+    "https://cadas.com.br/",
+    "https://cadas.com.br/perfil/",
+    "https://cadas.com.br/projetos/",
+    "https://cadas.com.br/contato/"
+  ],
+  "logoUtilizado": "/assets/clients/cadas-arquitetura/cadas_logo.png",
+  "assetsUtilizados": [
+    "/assets/clients/cadas-arquitetura/cadas_logo.png",
+    "/assets/clients/cadas-arquitetura/perfil.jpg",
+    "/assets/clients/cadas-arquitetura/obra_lw.jpg",
+    "/assets/clients/cadas-arquitetura/obra_eb.jpg",
+    "/assets/clients/cadas-arquitetura/obra_pd.jpg",
+    "/assets/clients/cadas-arquitetura/obra_bc.jpg",
+    "/assets/clients/cadas-arquitetura/obra_urbano.png",
+    "/assets/clients/cadas-arquitetura/obra_sp.png",
+    "/assets/clients/cadas-arquitetura/obra_fisher.jpg"
+  ],
+  "designSystemsConsultados": [
+    {
+      "name": "nexus-architecture.aura.build"
+    },
+    {
+      "name": "elicyon.com"
+    },
+    {
+      "name": "architecture-studio.aura.build"
+    }
+  ],
+  "secoesUtilizadas": [
+    "Header05 (Editorial Double Deck)",
+    "Hero04 (Hero Bento Showcase 3D Tilt com Foto e Stats)",
+    "Showcase01 (Minimalist Project Showcase com Fotos 1920px)",
+    "About01 (História e Perfil do Fundador)",
+    "Features04 (Asymmetric Spotlight)",
+    "SocialProof04 (Compact Trust Columns)",
+    "Contact02 (Split Form & Direct Channel no Leblon)",
+    "CTA03 (Gradient Ambient Glow)",
+    "Footer04 (Brand Statement & Nav)"
+  ],
+  "urlPreview": "http://127.0.0.1:4321/cadas-arquitetura/",
+  "criterioAutenticidade": "APROVADO: Construído com os 100 componentes compartilhados do Design System e dados 100% autênticos do cliente.",
+  "status": "APROVADO_BUILDER"
+}

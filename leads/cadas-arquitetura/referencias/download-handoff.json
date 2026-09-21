@@ -1,0 +1,16 @@
+{
+  "empresa": "Cadas Arquitetura",
+  "slug": "cadas-arquitetura",
+  "urlOficial": "https://cadas.com.br/",
+  "paginasBaixadas": [
+    "Home",
+    "Perfil",
+    "Projetos",
+    "Contato"
+  ],
+  "caminhoSiteAtualMd": "D:\\projetos antigravity\\Site automatico\\leads\\cadas-arquitetura\\referencias\\site-atual.md",
+  "caminhoAssetsManifest": "D:\\projetos antigravity\\Site automatico\\leads\\cadas-arquitetura\\referencias\\assets-manifest.json",
+  "caminhoPagesManifest": "D:\\projetos antigravity\\Site automatico\\leads\\cadas-arquitetura\\referencias\\pages-manifest.json",
+  "caminhoLogoPrincipal": "/assets/clients/cadas-arquitetura/cadas_logo.png",
+  "raizSiteBaixado": "D:\\projetos antigravity\\Site automatico\\leads\\cadas-arquitetura\\referencias\\site-baixado"
+}
